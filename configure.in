@@ -33,11 +33,7 @@ AM_GLIB_GNU_GETTEXT
 dnl
 dnl Start of pkg-config checks
 dnl
-PKG_CHECK_MODULES(GEDIT, libgnomeui-2.0 >= 2.2.0 libglade-2.0 >= 2.0.0
-                         libgnomeprintui-2.2 >= 2.2.0 
-                         eel-2.0 >= 2.2.0
-			 gedit-2.4 >= 2.3.1
-			 gtksourceview-1.0 >= 0.1.0)
+PKG_CHECK_MODULES(GEDIT, gedit-2.4 >= 2.3.1)
 AC_SUBST(GEDIT_CFLAGS)
 
 dnl
