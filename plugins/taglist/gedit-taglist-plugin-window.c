@@ -479,6 +479,12 @@ tag_list_window_key_press_event_cb (GtkTreeView *tag_list, GdkEventKey *event)
 		return TRUE;
 	}
 
+	if ((event->keyval == GDK_F8) && (event->state & GDK_SHIFT_MASK))
+	{
+		taglist_window_close ();
+		return TRUE;
+	}
+
 	if (event->keyval == GDK_F1)
 	{
 		GError *error = NULL;
