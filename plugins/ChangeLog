@@ -1,3 +1,13 @@
+2003-08-23  Paolo Maggi  <paolo.maggi@polito.it>
+
+	* diff/diff.c (diff_execute): fixed #117439 (build fails)
+	added NULL parameter to gedit_document_save_a_copy_as
+
+2003-08-23  Eric Ritezel <eisenwulf@inductiveart.net>
+
+	* cvschangelog/cvschangelog.c (cvs_changelogs_cb): fixed #117439
+	added NULL parameter to gedit_file_open_single_uri call.
+
 2003-05-23  Eric Ritezel <eisenwulf@inductiveart.net>
 
 	* indent/indent.c (indent_cb): fixed #113350

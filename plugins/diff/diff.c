@@ -706,7 +706,7 @@ diff_execute (DiffDialog *dialog)
 		uri = gnome_vfs_get_uri_from_local_path (file_name_1);
 		g_return_val_if_fail (uri != NULL, FALSE);
 		
-		if (!gedit_document_save_a_copy_as (document, uri, NULL))
+		if (!gedit_document_save_a_copy_as (document, uri, NULL, NULL))
 		{
 			g_free (file_name_1);
 			file_name_1 = NULL;
@@ -741,7 +741,7 @@ diff_execute (DiffDialog *dialog)
 		uri = gnome_vfs_get_uri_from_local_path (file_name_2);
 		g_return_val_if_fail (uri != NULL, FALSE);
 
-		if (!gedit_document_save_a_copy_as (document, uri, NULL))
+		if (!gedit_document_save_a_copy_as (document, uri, NULL, NULL))
 		{
 			g_free (file_name_2);
 			file_name_2 = NULL;

@@ -184,7 +184,7 @@ cvs_changelogs_cb (BonoboUIComponent *uic, gpointer user_data, const gchar *verb
 
 	tmp = list;
 	while (tmp) {
-		gedit_file_open_single_uri ((gchar *)tmp->data);
+		gedit_file_open_single_uri ((gchar *)tmp->data, NULL);
 
 		tmp = tmp->next;
 	}
