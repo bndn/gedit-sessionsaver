@@ -1,10 +1,5 @@
 # Sort plugin
-
 plugindir = $(libdir)/gedit-2/plugins
-
-plugin_LTLIBRARIES = libsort.la
-
-libsort_la_SOURCES = sort.c
 
 INCLUDES = \
 	-I$(top_srcdir)/src 				\
@@ -15,7 +10,12 @@ INCLUDES = \
 	-DGDK_DISABLE_DEPRECATED			\
 	-DGTK_DISABLE_DEPRECATED			\
 	-DGDK_PIXBUF_DISABLE_DEPRECATED			\
-	-DGNOME_DISABLE_DEPRECATED			
+	-DGNOME_DISABLE_DEPRECATED
+	
+plugin_LTLIBRARIES = libsort.la
+
+libsort_la_SOURCES = sort.c
+libsort_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 
 gladedir = $(datadir)/gedit-2/glade
 glade_DATA = sort.glade2
