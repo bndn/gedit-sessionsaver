@@ -8,8 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins 2.2\n"
-"POT-Creation-Date: 2003-05-11 12:19+0200\n"
-"PO-Revision-Date: 2003-05-11 00:55+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-01-02 17:58+0100\n"
+"PO-Revision-Date: 2004-01-02 17:59+0100\n"
 "Last-Translator: Бранко Ивановић <popeye@one.ekof.bg.ac.yu>\n"
 "Language-Team: Serbian (sr) <serbiangnome-lista@nongnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -50,8 +51,8 @@ msgstr "ASCII Табела"
 msgid "_Insert char"
 msgstr "_Убаци слово"
 
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
 #: plugins/ASCII/asciitable.glade2.h:1
+#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
 msgid "ASCII table"
 msgstr "ASCII табела"
 
@@ -77,32 +78,32 @@ msgstr ""
 msgid "CVS ChangeLog"
 msgstr "CVS Дневник Промена"
 
-#: plugins/diff/diff.c:65
+#: plugins/diff/diff.c:64
 msgid "Co_mpare Files..."
 msgstr "Упо_реди датотеке..."
 
-#: plugins/diff/diff.c:68
+#: plugins/diff/diff.c:67
 msgid "Makes a diff file from two documents or files"
 msgstr "Прави diff датотеку од два документа или датотеке."
 
 #. Create the dialog
-#: plugins/diff/diff.c:271 plugins/diff/diff.gedit-plugin.desktop.in.h:1
+#: plugins/diff/diff.c:270 plugins/diff/diff.gedit-plugin.desktop.in.h:1
 msgid "Compare Files"
 msgstr "Упореди Датотеке"
 
-#: plugins/diff/diff.c:285
+#: plugins/diff/diff.c:284
 msgid "C_ompare"
 msgstr "У_пореди"
 
-#: plugins/diff/diff.c:513
+#: plugins/diff/diff.c:511
 msgid "Executed command"
 msgstr "Изврши команду"
 
-#: plugins/diff/diff.c:654
+#: plugins/diff/diff.c:652
 msgid "The two documents you selected are the same."
 msgstr "Два селектована документа су исти"
 
-#: plugins/diff/diff.c:662
+#: plugins/diff/diff.c:660
 msgid ""
 "The \"first\" file you selected does not exist.\n"
 "\n"
@@ -112,7 +113,7 @@ msgstr ""
 "\n"
 "Молим Вас, унесите исправну датотеку."
 
-#: plugins/diff/diff.c:671
+#: plugins/diff/diff.c:669
 msgid ""
 "The \"second\" file you selected does not exist.\n"
 "\n"
@@ -122,20 +123,20 @@ msgstr ""
 "\n"
 "Молим Вас, унесите исправну датотеку."
 
-#: plugins/diff/diff.c:679
+#: plugins/diff/diff.c:677
 msgid "The two files you selected are the same."
 msgstr "Две селектоване датотеке су исте."
 
-#: plugins/diff/diff.c:696
+#: plugins/diff/diff.c:694
 msgid "The \"first\" document contains no text."
 msgstr "„Први“ селектовани документ не садржи никакав текст."
 
-#: plugins/diff/diff.c:730
+#: plugins/diff/diff.c:728
 msgid "The \"second\" document contains no text."
 msgstr "„Други“ селектовани документ не садржи никакав текст."
 
 #. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:756
+#: plugins/diff/diff.c:754
 msgid ""
 "Impossible to compare the selected documents.\n"
 "\n"
@@ -145,7 +146,7 @@ msgstr ""
 "\n"
 "Гедит није могао да направи привремену датотеку."
 
-#: plugins/diff/diff.c:780 plugins/diff/diff.c:793
+#: plugins/diff/diff.c:778 plugins/diff/diff.c:791
 msgid ""
 "Impossible to compare the selected documents.\n"
 "\n"
@@ -155,11 +156,11 @@ msgstr ""
 "\n"
 "Грешка код извршавања команде diff."
 
-#: plugins/diff/diff.c:815
+#: plugins/diff/diff.c:813
 msgid "No differences were found between the selected documents."
 msgstr "Није нађена разлика између изабраних докумената."
 
-#: plugins/diff/diff.c:856
+#: plugins/diff/diff.c:854
 msgid ""
 "Impossible to compare the selected documents.\n"
 "\n"
@@ -169,7 +170,7 @@ msgstr ""
 "\n"
 "Резултат садржи неисправне UTF-8 податке."
 
-#: plugins/diff/diff.glade2.h:1 plugins/shell_output/shell_output.glade2.h:1
+#: plugins/diff/diff.glade2.h:1
 msgid "*"
 msgstr "*"
 
@@ -259,213 +260,156 @@ msgstr "Користи јединствен излазни формат (-u оп
 
 #: plugins/diff/diff.gedit-plugin.desktop.in.h:2
 msgid ""
-"The Compare Files plugin uses the <tt>diff</tt> program to compare two "
-"documents or files on disk.\n"
-"\n"
-"For more info on <tt>diff</tt> program, type <tt>man diff</tt> in a shell "
-"prompt."
-msgstr ""
-"Додатак за поређење датотека користи <tt>diff</tt> програм за поређење два "
-"документа или датотеке на диску.\n"
-"\n"
-"За више информација о <tt>diff</tt> програму, куцајте <tt>man diff</tt> у "
-"конзоли."
+"The Compare Files plugin uses the \"diff\" program to compare two documents "
+"or files on disk."
+msgstr "Додатак за поређење датотека користи програм <tt>diff</tt> за поређење два документа или датотеке на диску."
 
-#: plugins/shell_output/shell_output.c:56
-msgid "_Run Command..."
-msgstr "Изв_рши команду..."
+#~ msgid "_Run Command..."
+#~ msgstr "Изв_рши команду..."
 
-#: plugins/shell_output/shell_output.c:59
-msgid "Run a command"
-msgstr "Изврши команду"
+#~ msgid "Run a command"
+#~ msgstr "Изврши команду"
 
-#: plugins/shell_output/shell_output.c:161
-#: plugins/shell_output/shell_output.c:516
-msgid "Stopped"
-msgstr "Заустављено"
+#~ msgid "Stopped"
+#~ msgstr "Заустављено"
 
-#: plugins/shell_output/shell_output.c:246
-msgid "An error occurs while running the selected command."
-msgstr "Грешка се појавила приликом извршења изабране команде"
+#~ msgid "An error occurs while running the selected command."
+#~ msgstr "Грешка се појавила приликом извршења изабране команде"
 
-#: plugins/shell_output/shell_output.c:302
-msgid "Run Command"
-msgstr "Изврши команду"
+#~ msgid "Run Command"
+#~ msgstr "Изврши команду"
 
-#: plugins/shell_output/shell_output.c:318
-msgid "_Run"
-msgstr "Изв_рши"
+#~ msgid "_Run"
+#~ msgstr "Изв_рши"
 
-#: plugins/shell_output/shell_output.c:522
-msgid "Done"
-msgstr "Урађено"
+#~ msgid "Done"
+#~ msgstr "Урађено"
 
-#: plugins/shell_output/shell_output.c:524
-msgid "Failed"
-msgstr "Неуспело"
+#~ msgid "Failed"
+#~ msgstr "Неуспело"
 
-#: plugins/shell_output/shell_output.c:696
-msgid ""
-"The shell command entry is empty.\n"
-"\n"
-"Please, insert a valid shell command."
-msgstr ""
-"Поље за унос команде је празно.\n"
-"\n"
-"Унесите исправну команду."
+#~ msgid ""
+#~ "The shell command entry is empty.\n"
+#~ "\n"
+#~ "Please, insert a valid shell command."
+#~ msgstr ""
+#~ "Поље за унос команде је празно.\n"
+#~ "\n"
+#~ "Унесите исправну команду."
 
-#: plugins/shell_output/shell_output.c:729
-msgid ""
-"Error parsing the shell command.\n"
-"\n"
-"Please, insert a valid shell command."
-msgstr ""
-"Грешка при одређивању команде.\n"
-"\n"
-"Унесите исправну команду."
+#~ msgid ""
+#~ "Error parsing the shell command.\n"
+#~ "\n"
+#~ "Please, insert a valid shell command."
+#~ msgstr ""
+#~ "Грешка при одређивању команде.\n"
+#~ "\n"
+#~ "Унесите исправну команду."
 
-#: plugins/shell_output/shell_output.c:815
-msgid "Executing command"
-msgstr "Извршавам команду"
+#~ msgid "Executing command"
+#~ msgstr "Извршавам команду"
 
-#: plugins/shell_output/shell_output.glade2.h:2
-msgid "Co_mmand:"
-msgstr "Ко_манда:"
+#~ msgid "Co_mmand:"
+#~ msgstr "Ко_манда:"
 
-#: plugins/shell_output/shell_output.glade2.h:3
-msgid "Select the working directory..."
-msgstr "Изабери радни директоријум..."
+#~ msgid "Select the working directory..."
+#~ msgstr "Изабери радни директоријум..."
 
-#: plugins/shell_output/shell_output.glade2.h:4
-msgid "_Show results in Output Window"
-msgstr "И_спиши резултате у излазном прозору"
+#~ msgid "_Show results in Output Window"
+#~ msgstr "И_спиши резултате у излазном прозору"
 
-#: plugins/shell_output/shell_output.glade2.h:5
-msgid "_Working directory:"
-msgstr "Радни директоријум:"
+#~ msgid "_Working directory:"
+#~ msgstr "Радни директоријум:"
 
-#: plugins/shell_output/shell_output.glade2.h:6
-msgid "gedit: Shell Output plugin"
-msgstr "гедит: додатак за испис shell излаза"
+#~ msgid "gedit: Shell Output plugin"
+#~ msgstr "гедит: додатак за испис shell излаза"
 
-#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:1
-msgid ""
-"Execute an external program and eventually grabs its output in the output "
-"window."
-msgstr "Изврши екстерни програм и ухвати излаз у излазном прозору."
+#~ msgid ""
+#~ "Execute an external program and eventually grabs its output in the output "
+#~ "window."
+#~ msgstr "Изврши екстерни програм и ухвати излаз у излазном прозору."
 
-#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:2
-msgid "Shell command"
-msgstr "Shell наредба"
+#~ msgid "Shell command"
+#~ msgstr "Shell наредба"
 
-#: plugins/taglist/gedit-taglist-plugin-window.c:136
-msgid "Tag list plugin"
-msgstr "Додатак за листе ознака"
+#~ msgid "Tag list plugin"
+#~ msgstr "Додатак за листе ознака"
 
-#: plugins/taglist/gedit-taglist-plugin-window.c:154
-msgid "Select the group of tags you want to use"
-msgstr "Изаберите групу ознака коју желите да користите"
+#~ msgid "Select the group of tags you want to use"
+#~ msgstr "Изаберите групу ознака коју желите да користите"
 
-#: plugins/taglist/gedit-taglist-plugin-window.c:176
-msgid "Tag Groups Combo"
-msgstr "Комбинација група ознака"
+#~ msgid "Tag Groups Combo"
+#~ msgstr "Комбинација група ознака"
 
-#: plugins/taglist/gedit-taglist-plugin-window.c:178
-msgid "Tags Name List"
-msgstr "Списак назива ознака"
+#~ msgid "Tags Name List"
+#~ msgstr "Списак назива ознака"
 
-#: plugins/taglist/gedit-taglist-plugin-window.c:188
-msgid "Double-click on a tag to insert it in the current document"
-msgstr "Кликните двапута на ознаку коју желите да убаците у текући документ"
+#~ msgid "Double-click on a tag to insert it in the current document"
+#~ msgstr "Кликните двапута на ознаку коју желите да убаците у текући документ"
 
-#: plugins/taglist/gedit-taglist-plugin-window.c:199
-msgid "Tags"
-msgstr "Oznake"
+#~ msgid "Tags"
+#~ msgstr "Oznake"
 
-#: plugins/taglist/gedit-taglist-plugin.c:46
-msgid "Tag _List"
-msgstr "Списак _Ознака"
+#~ msgid "Tag _List"
+#~ msgstr "Списак _Ознака"
 
-#.
-#. #define MENU_ITEM_NAME		"TagList"
-#.
-#: plugins/taglist/gedit-taglist-plugin.c:51
-msgid "Show the tag list window"
-msgstr "Прикажи прозор са списком ознака"
+#~ msgid "Show the tag list window"
+#~ msgstr "Прикажи прозор са списком ознака"
 
-#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:1
-msgid "Tag list"
-msgstr "Списак ознака"
+#~ msgid "Tag list"
+#~ msgstr "Списак ознака"
 
-#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:2
-msgid ""
-"The tag list plugin provides a method to easily insert into a document "
-"commonly used tags/strings without having to type them."
-msgstr ""
-"Додатак за списак ознака обезбеђује начин за лако убацивање у документ често "
-"коришћене ознаке/речи без потребе да их укуцавате."
+#~ msgid ""
+#~ "The tag list plugin provides a method to easily insert into a document "
+#~ "commonly used tags/strings without having to type them."
+#~ msgstr ""
+#~ "Додатак за списак ознака обезбеђује начин за лако убацивање у документ "
+#~ "често коришћене ознаке/речи без потребе да их укуцавате."
 
-#: plugins/indent/indent.c:45
-msgid "_Indent"
-msgstr "_Увуци"
+#~ msgid "_Indent"
+#~ msgstr "_Увуци"
 
-#: plugins/indent/indent.c:47
-msgid "Indent selected lines"
-msgstr "Увуци изабране линије"
+#~ msgid "Indent selected lines"
+#~ msgstr "Увуци изабране линије"
 
-#: plugins/indent/indent.c:49
-msgid "U_nindent"
-msgstr "_Извуци"
+#~ msgid "U_nindent"
+#~ msgstr "_Извуци"
 
-#: plugins/indent/indent.c:51
-msgid "Unindent selected lines"
-msgstr "Извуци изабране линије"
+#~ msgid "Unindent selected lines"
+#~ msgstr "Извуци изабране линије"
 
-#: plugins/indent/indent.gedit-plugin.desktop.in.h:1
-msgid "Indent lines"
-msgstr "Увуци линије"
+#~ msgid "Indent lines"
+#~ msgstr "Увуци линије"
 
-#: plugins/indent/indent.gedit-plugin.desktop.in.h:2
-msgid "Indent or un-indent selected lines."
-msgstr "Увуци или извуци изабране линије."
+#~ msgid "Indent or un-indent selected lines."
+#~ msgstr "Увуци или извуци изабране линије."
 
-#: plugins/sort/sort.glade2.h:1
-msgid "R_emove duplicates"
-msgstr "_Обриши дупликате"
+#~ msgid "R_emove duplicates"
+#~ msgstr "_Обриши дупликате"
 
-#: plugins/sort/sort.glade2.h:2
-msgid "S_tart at column:"
-msgstr "_Почни од колоне:"
+#~ msgid "S_tart at column:"
+#~ msgstr "_Почни од колоне:"
 
-#: plugins/sort/sort.gedit-plugin.desktop.in.h:1 plugins/sort/sort.glade2.h:3
-msgid "Sort"
-msgstr "Разврстај"
+#~ msgid "Sort"
+#~ msgstr "Разврстај"
 
-#: plugins/sort/sort.glade2.h:4
-msgid "You cannot undo a sort operation"
-msgstr "Не можете поништити операцију разврставања"
+#~ msgid "You cannot undo a sort operation"
+#~ msgstr "Не можете поништити операцију разврставања"
 
-#: plugins/sort/sort.glade2.h:5
-msgid "_Ignore case"
-msgstr "_Игнориши случај"
+#~ msgid "_Ignore case"
+#~ msgstr "_Игнориши случај"
 
-#: plugins/sort/sort.glade2.h:6
-msgid "_Reverse order"
-msgstr "_Обрнути редослед"
+#~ msgid "_Reverse order"
+#~ msgstr "_Обрнути редослед"
 
-#: plugins/sort/sort.glade2.h:7
-msgid "_Sort"
-msgstr "_Разврстај"
+#~ msgid "_Sort"
+#~ msgstr "_Разврстај"
 
-#: plugins/sort/sort.gedit-plugin.desktop.in.h:2
-msgid "Sorts a document or selected text."
-msgstr "Разврстава документ или изабран текст."
+#~ msgid "Sorts a document or selected text."
+#~ msgstr "Разврстава документ или изабран текст."
 
-#. Key in case the plugin ever needs any settings
-#: plugins/sort/sort.c:26
-msgid "S_ort..."
-msgstr "_Разврстај..."
+#~ msgid "S_ort..."
+#~ msgstr "_Разврстај..."
 
-#: plugins/sort/sort.c:29
-msgid "Sort the current document or selection."
-msgstr "Разврстава тренутни документ или селекцију."
+#~ msgid "Sort the current document or selection."
+#~ msgstr "Разврстава тренутни документ или селекцију."
