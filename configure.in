@@ -2,7 +2,7 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.52)
 
-AC_INIT(gedit-plugins, 2.3.1, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
+AC_INIT(gedit-plugins, 2.3.2, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
 AC_CONFIG_SRCDIR(plugins)
 AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
 
@@ -33,7 +33,7 @@ AM_GLIB_GNU_GETTEXT
 dnl
 dnl Start of pkg-config checks
 dnl
-PKG_CHECK_MODULES(GEDIT, gedit-2.4 >= 2.3.1)
+PKG_CHECK_MODULES(GEDIT, gedit-2.4 >= 2.3.2)
 AC_SUBST(GEDIT_CFLAGS)
 
 dnl
