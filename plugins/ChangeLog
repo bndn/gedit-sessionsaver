@@ -1,3 +1,11 @@
+2003-09-26  Paolo Maggi  <paolo.maggi@polito.it>
+
+	* diff/diff.c (diff_real): show the right help page when the help
+	button is pressed
+	(configure_real): use the new gedit_plugin_locate_program function 
+	to fix bug #117443 (thanks to Leena Gunda) and #117365 (Thanks to
+	Balamurali Viswanathan)
+	
 2003-08-23  Paolo Maggi  <paolo.maggi@polito.it>
 
 	* diff/diff.c (diff_execute): fixed #117439 (build fails)

@@ -56,7 +56,6 @@
 #include <gedit/gedit-mdi.h>
 #include <gedit/gedit-output-window.h>
 
-
 #define DIFF_BASE_KEY 		"/apps/gedit-2/plugins/diff"
 #define DIFF_LOCATION_KEY	"/diff-program-location"
 #define UNIFIED_FORMAT_KEY	"/use-unified-format"
@@ -437,8 +436,7 @@ diff_real (void)
 				break;
 
 			case GTK_RESPONSE_HELP:
-				/* FIXME: choose a better link id */
-				gnome_help_display ("gedit.xml", "gedit-use-plugins", &error);
+				gnome_help_display ("gedit.xml", "gedit-compare-files-plugin", &error);
 	
 				if (error != NULL)
 				{
@@ -951,29 +949,15 @@ error_dialog (const gchar* str, GtkWindow *parent)
 static gboolean
 configure_real (GtkWindow *parent)
 {
-	gchar *temp;
-	
 	gedit_debug (DEBUG_PLUGINS, "");
 
 	g_return_val_if_fail (diff_gconf_client != NULL, FALSE);
 	
-	temp = gedit_plugin_locate_program (DIFF_PROGRAM_NAME,
-					    plugin_name, 
-					    parent);
-
-	if (temp != NULL)
-	{
-		if (diff_program_location != NULL)
-			g_free (diff_program_location);
-		
-		diff_program_location = temp;
-
-		gconf_client_set_string (
-				diff_gconf_client,
-				DIFF_BASE_KEY DIFF_LOCATION_KEY,
-				diff_program_location,
-		      		NULL);
-	}
+	diff_program_location = gedit_plugin_locate_program (DIFF_PROGRAM_NAME,
+							     plugin_name,
+							     parent,
+							     DIFF_BASE_KEY DIFF_LOCATION_KEY,
+							     "gedit-compare-files-configure");
 	
 	return (diff_program_location != NULL);
 }
