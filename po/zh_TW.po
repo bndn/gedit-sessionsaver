@@ -1,0 +1,3309 @@
+# traditional Chinese translation of gedit.
+# Copyright (C) 2000-2002 Free Software Foundation, Inc.
+# Jing-Jong Shyue <shyue@sonoma.com.tw>, 2000
+# Abel Cheung <maddog@linux.org.hk>, 2001-2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gedit 2.1.5\n"
+"POT-Creation-Date: 2003-01-02 07:48+0800\n"
+"PO-Revision-Date: 2003-01-03 05:45+0800\n"
+"Last-Translator: Abel Cheung <maddog@linux.org.hk>\n"
+"Language-Team: traditional Chinese <zh-l10n@linux.org.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/GNOME_Gedit.server.in.h:1
+msgid "gedit application"
+msgstr "gedit 應用程式"
+
+#: data/GNOME_Gedit.server.in.h:2
+msgid "gedit automation factory"
+msgstr "gedit 自動化工廠"
+
+#: data/gedit.desktop.in.h:1
+msgid "Edit text files"
+msgstr "編輯文字檔"
+
+#: data/gedit.desktop.in.h:2 src/gedit2.c:336
+msgid "Text Editor"
+msgstr "文字編輯器"
+
+#: data/gedit.schemas.in.h:1
+msgid ""
+"A custom font that will be used for the editing area. This will only take "
+"effect if the \"Use Default Font\" option is turned off."
+msgstr ""
+"編輯區域中自定指定使用的字型。本選項只有在關閉「使用預設字型」選項後才會生"
+"效。"
+
+#: data/gedit.schemas.in.h:2
+msgid "Auto Save"
+msgstr "自動儲存"
+
+#: data/gedit.schemas.in.h:3
+msgid "Auto Save Interval"
+msgstr "自動儲存相隔時間"
+
+#: data/gedit.schemas.in.h:4
+msgid "Auto indent"
+msgstr "自動縮排"
+
+#: data/gedit.schemas.in.h:5
+msgid "Background Color"
+msgstr "背景顏色"
+
+#: data/gedit.schemas.in.h:6
+msgid ""
+"Background color for selected text in the editing area. This will only take "
+"effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+"在編輯區域中，被選取的文字的背景顏色。本選項只有在「使用預設色彩」選項關閉後"
+"才會生效。"
+
+#: data/gedit.schemas.in.h:7
+msgid ""
+"Background color for unselected text in the editing area. This will only "
+"take effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+"在編輯區域中，未被選取的文字的背景顏色。本選項只有在「使用預設色彩」選項關閉"
+"後才會生效。"
+
+#: data/gedit.schemas.in.h:8
+msgid "Backup Copy Extension"
+msgstr "備份檔延伸檔名"
+
+#: data/gedit.schemas.in.h:9
+msgid "Body Font for Printing"
+msgstr "列印時使用的內文字型"
+
+#: data/gedit.schemas.in.h:10
+msgid "Create Backup Copies"
+msgstr "製作備份"
+
+#: data/gedit.schemas.in.h:11
+msgid "Display Line Numbers"
+msgstr "顯示行號"
+
+#: data/gedit.schemas.in.h:12
+msgid "Editor Font"
+msgstr "編輯器字型"
+
+#: data/gedit.schemas.in.h:13
+msgid "Encoding for Saving"
+msgstr "儲存時使用的文字編碼"
+
+#: data/gedit.schemas.in.h:14 src/dialogs/gedit-preferences-dialog.c:2290
+#: src/dialogs/gedit-encodings-dialog.c:257
+#: src/dialogs/gedit-encodings-dialog.glade2.h:2
+msgid "Encodings"
+msgstr "編碼"
+
+#: data/gedit.schemas.in.h:15
+msgid ""
+"Extension or suffix to use for backup file names. This will only take effect "
+"if the \"Create Backup Copies\" option is turned on."
+msgstr ""
+"備份檔案名稱的延伸檔名或後置字串。本選項只有在「製作備份」選項開啟後才會生"
+"效。"
+
+#: data/gedit.schemas.in.h:16
+msgid ""
+"Foreground color for selected text in the editing area. This will only take "
+"effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+"在編輯區域中，被選取的文字的顏色。本選項只有在「使用預設色彩」選項關閉後才會"
+"生效。"
+
+#: data/gedit.schemas.in.h:17
+msgid ""
+"Foreground color for the unselected text in the editing area. This will only "
+"take effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+"在編輯區域中，未被選取的文字的顏色。本選項只有在「使用預設色彩」選項關閉後才"
+"會生效。"
+
+#: data/gedit.schemas.in.h:18
+msgid "Header Font for Printing"
+msgstr "列印時使用的頁首字型"
+
+#: data/gedit.schemas.in.h:19
+msgid ""
+"If this value is 0, then no line numbers will be inserted when printing a "
+"document. Otherwise, gedit will print line numbers every such number of "
+"lines."
+msgstr ""
+"如果數值是 0，當列印文件時不會列印行號。否則，gedit 會每隔指定的行數列印行"
+"號。"
+
+#: data/gedit.schemas.in.h:20
+msgid "Insert spaces"
+msgstr "插入空格"
+
+#: data/gedit.schemas.in.h:21
+msgid "Line Number Font for Printing"
+msgstr "列印行號時使用的字型"
+
+#: data/gedit.schemas.in.h:22
+msgid "Line Wrapping Mode"
+msgstr "換行模式"
+
+#: data/gedit.schemas.in.h:23
+msgid ""
+"List of encodings used by gedit for reading files not encoded in UTF-8 or in "
+"the current locale encoding."
+msgstr ""
+"當檔案不是 UTF-8 編碼或目前語系的編碼時，gedit 會使用清單中指定的文字編碼來讀"
+"入檔案。"
+
+#: data/gedit.schemas.in.h:24
+msgid "Maximum Recent Files"
+msgstr "最近使用的檔案的數目上限"
+
+#: data/gedit.schemas.in.h:25
+msgid "Maximum number of actions that gedit will be able to undo or redo."
+msgstr "gedit 中可復原或取消復原的操作數目上限。"
+
+#: data/gedit.schemas.in.h:26
+msgid ""
+"Number of minutes after which gedit will automatically save modified files. "
+"This will only take effect if the \"Auto Save\" option is turned on."
+msgstr ""
+"gedit 會在每隔指定的時間[分鐘]後自動儲存檔案。本選項只有在「自動儲存」選項開"
+"啟後才會生效。"
+
+#: data/gedit.schemas.in.h:27
+msgid "Print Header"
+msgstr "列印頁首"
+
+#: data/gedit.schemas.in.h:28
+msgid "Print Line Numbers"
+msgstr "列印行號"
+
+#: data/gedit.schemas.in.h:29
+msgid "Printing Line Wrapping Mode"
+msgstr "列印換行模式"
+
+#: data/gedit.schemas.in.h:30
+msgid "Selected Text Color"
+msgstr "被選取的文字顏色"
+
+#: data/gedit.schemas.in.h:31
+msgid "Selection Color"
+msgstr "選擇區域的顏色"
+
+#: data/gedit.schemas.in.h:32
+msgid "Show Cursor Position"
+msgstr "顯示游標位置"
+
+#: data/gedit.schemas.in.h:33
+msgid "Show Overwrite Mode"
+msgstr "顯示覆寫模式"
+
+#: data/gedit.schemas.in.h:34
+msgid ""
+"Specifies how to wrap long lines for printing. Use \"GTK_WRAP_NONE\" for no "
+"wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
+"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
+"the values are case-sensitive, so make sure they appear exactly as mentioned "
+"here."
+msgstr ""
+"指定列印時如何換行。使用“GTK_WRAP_NONE”代表不會換行，“GTK_WRAP_WORD”代表在字"
+"詞間換行，及“GTK_WRAP_CHAR”代表在個別字元間換行。請注意，設定值是會分辨大小寫"
+"的，所以請確保設定值和上面所列出的完全一致。"
+
+#: data/gedit.schemas.in.h:35
+msgid ""
+"Specifies how to wrap long lines in the editing area. Use \"GTK_WRAP_NONE\" "
+"for no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
+"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
+"the values are case-sensitive, so make sure they appear exactly as mentioned "
+"here."
+msgstr ""
+"指定編輯區域如何換行。使用“GTK_WRAP_NONE”代表不會換行，“GTK_WRAP_WORD”代表在"
+"字詞間換行，及“GTK_WRAP_CHAR”代表在個別字元間換行。請注意，設定值是會分辨大小"
+"寫的，所以請確保設定值和上面所列出的完全一致。"
+
+#: data/gedit.schemas.in.h:36
+msgid ""
+"Specifies the font to use for a document's body when printing documents."
+msgstr "指定列印文件時文件內容所用的字型。"
+
+#: data/gedit.schemas.in.h:37
+msgid ""
+"Specifies the font to use for line numbers when printing. This will only "
+"take effect if the \"Print Line Numbers\" option is non-zero."
+msgstr ""
+"指定列印時行號所用的字型。本選項只有在「列印行號」選項的值不是零的時候生效。"
+
+#: data/gedit.schemas.in.h:38
+msgid ""
+"Specifies the font to use for page headers when printing a document. This "
+"will only take effect if the \"Print Header\" option is turned on."
+msgstr ""
+"指定列印文件時頁首所用的字型。本選項只有在「列印頁首」選項的值開啟的時候生"
+"效。"
+
+#: data/gedit.schemas.in.h:39
+msgid ""
+"Specifies the maximum number of recently opened files that will be displayed "
+"in the \"Recent Files\" submenu."
+msgstr "指定在「最近使用的檔案」副選單中最多可以顯示多少個最近開啟的檔案。"
+
+#: data/gedit.schemas.in.h:40
+msgid ""
+"Specifies the number of spaces that should be displayed instead of Tab "
+"characters."
+msgstr "指定顯示 Tab(定位)字元時會以多少個空格代替。"
+
+#: data/gedit.schemas.in.h:41
+msgid "Status Bar is Visible"
+msgstr "顯示狀態列"
+
+#: data/gedit.schemas.in.h:42
+msgid ""
+"Style for the toolbar buttons. Possible values are \"GEDIT_TOOLBAR_SYSTEM\" "
+"to use the system's default style, \"GEDIT_TOOLBAR_ICONS\" to display icons "
+"only, \"GEDIT_TOOLBAR_ICONS_AND_TEXT\" to display both icons and text, and "
+"\"GEDIT_TOOLBAR_ICONS_BOTH_HORIZ\" to display prioritized text beside icons. "
+"Note that the values are case-sensitive, so make sure they appear exactly as "
+"mentioned here."
+msgstr ""
+"工具列按鈕的樣式。可使用的值為：\n"
+"“GEDIT_TOOLBAR_SYSTEM”表示使用系統預設的樣式，\n"
+"“GEDIT_TOOLBAR_ICONS”表示只顯示圖示，\n"
+"“GEDIT_TOOLBAR_ICONS_AND_TEXT”表示同時顯示圖示及文字，及\n"
+"“GEDIT_TOOLBAR_ICONS_BOTH_HORIZ”表示一部份的圖示旁邊會加上文字。\n"
+"請注意，設定值是會分辨大小寫的，所以請確保設定值和上面所列出的完全一致。"
+
+#: data/gedit.schemas.in.h:43
+msgid "Tab Size"
+msgstr "Tab 字元寬度"
+
+#: data/gedit.schemas.in.h:44
+msgid "Text Color"
+msgstr "文字顏色"
+
+#: data/gedit.schemas.in.h:45
+msgid ""
+"The encoding method to use for saving files. Possible values are "
+"\"GEDIT_SAVE_ALWAYS_UTF8\" for mandatory UTF-8 saving, "
+"\"GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE\" if you want gedit to try to "
+"convert the document it is saving to your current locale's encoding, "
+"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE\" if you want gedit to try "
+"to use the original file encoding (new files in UTF8) and "
+"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" if you want gedit to "
+"try to use the original file encoding (new files in current locale's "
+"encoding). If the conversion is successful, it will be used. Otherwise, UTF-"
+"8 will be used. Note that the values are case-sensitive, so make sure they "
+"appear exactly as mentioned here."
+msgstr ""
+"儲存檔案時使用的文字編碼。可使用的值為：\n"
+"“GEDIT_SAVE_ALWAYS_UTF8”表示強制使用 UTF-8，\n"
+"“GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE”表示會將儲存的文件的編碼轉換為目前語系"
+"的編碼，\n"
+"“GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE”表示會使用文件原來的文字編碼 "
+"(但新的檔案會以 UTF-8 編碼儲存)，及\n"
+"“GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL”表示會使用文件原來的文字編"
+"碼 (新的檔案會以目前語系的編碼儲存)。如果轉換成功，就會使用該編碼，否則會使"
+"用 UTF-8。\n"
+"請注意，設定值是會分辨大小寫的，所以請確保設定值和上面所列出的完全一致。"
+
+#: data/gedit.schemas.in.h:46
+msgid "Toolbar Buttons Style"
+msgstr "工具列按鈕樣式"
+
+#: data/gedit.schemas.in.h:47
+msgid "Toolbar is Visible"
+msgstr "顯示工具列"
+
+#: data/gedit.schemas.in.h:48
+msgid "Undo Actions Limit"
+msgstr "復原次數上限"
+
+#: data/gedit.schemas.in.h:49
+msgid "Use Default Colors"
+msgstr "使用預設色彩"
+
+#: data/gedit.schemas.in.h:50
+msgid "Use Default Font"
+msgstr "使用預設字型"
+
+#: data/gedit.schemas.in.h:51
+msgid ""
+"Whether gedit should automatically save modified files after a time "
+"interval. You can set the time interval with the \"Auto Save Interval\" "
+"option."
+msgstr ""
+"gedit 應否每隔某段時間自動儲存修改過的檔案。您可以在「自動儲存相隔時間」選項"
+"中設定時間。"
+
+#: data/gedit.schemas.in.h:52
+msgid ""
+"Whether gedit should create backup copies for the files it saves. You can "
+"set the backup file extension with the \"Backup Copy Extension\" option."
+msgstr ""
+"gedit 應否在儲存檔案時製作備份。您可以在「備份檔延伸檔名」中設定備份檔的延伸"
+"檔名。"
+
+#: data/gedit.schemas.in.h:53
+msgid "Whether gedit should display line numbers in the editing area."
+msgstr "gedit 應否在編輯區域中顯示行號。"
+
+#: data/gedit.schemas.in.h:54
+msgid "Whether gedit should enable auto indentation."
+msgstr "gedit 應否啟用自動縮排的功能。"
+
+#: data/gedit.schemas.in.h:55
+msgid "Whether gedit should include a document header when printing documents."
+msgstr "gedit 應否在列印文件時加上頁首。"
+
+#: data/gedit.schemas.in.h:56
+msgid "Whether gedit should insert spaces instead of tabs."
+msgstr "gedit 應否使用空格來代替 tab 字元。"
+
+#: data/gedit.schemas.in.h:57
+msgid ""
+"Whether the status bar at the bottom of editing windows should be visible."
+msgstr "編輯視窗的底部應否顯示狀態列。"
+
+#: data/gedit.schemas.in.h:58
+msgid ""
+"Whether the status bar should show the cursor position in editing windows. "
+"Make sure you turn on the \"Status Bar is Visible\" option for this to take "
+"effect."
+msgstr ""
+"編輯視窗中的狀態列會否顯示游標目前的位置。請確在本選項生效前先開啟「顯示狀態"
+"列」選項。"
+
+#: data/gedit.schemas.in.h:59
+msgid ""
+"Whether the status bar should show the insert/overwrite mode in editing "
+"windows. Make sure you turn on the \"Status Bar is Visible\" option for this "
+"to take effect."
+msgstr ""
+"編輯視窗中的狀態列會否顯示插入/覆寫模式。請確在本選項生效前先開啟「顯示狀態"
+"列」選項。"
+
+#: data/gedit.schemas.in.h:60
+msgid "Whether the toolbar should be visible in editing windows."
+msgstr "編輯視窗應否顯示工具列。"
+
+#: data/gedit.schemas.in.h:61
+msgid ""
+"Whether to use the system's default colors for the editing area. If this "
+"option is turned off, then the colors of the editing area will be those "
+"specified in the \"Background Color\", \"Text Color\", \"Selected Text Color"
+"\", and \"Selection Color\" options."
+msgstr ""
+"編輯區域是否使用系統預設的色彩。如果關閉本選項，那麼會根據「背景顏色」、「文"
+"字顏色」、「被選取的文字顏色」及「選擇區域的顏色」選項來決定編輯區域的顏色。"
+
+#: data/gedit.schemas.in.h:62
+msgid ""
+"Whether to use the system's default font for editing text instead of a font "
+"specific to gedit. If this option is turned off, then the font named in the "
+"\"Editor Font\" option will be used instead of the system font."
+msgstr ""
+"gedit 是否使用系統預設的字型作為編輯文字使用，而不用 gedit 本身指定的字型。如"
+"果關閉本選項，則會使用「編輯器字型」選項中的字型，而不用系統字型。"
+
+#: plugins/ASCII/ascii.c:43
+msgid "_ASCII Table"
+msgstr "_ASCII 對照表"
+
+#: plugins/ASCII/ascii.c:46
+msgid "Pop-up a dialog containing an ASCII Table"
+msgstr "顯示附有 ASCII 對照表的對話窗"
+
+#: plugins/ASCII/ascii.c:303
+msgid "Char"
+msgstr "字元"
+
+#: plugins/ASCII/ascii.c:310
+msgid "Dec#"
+msgstr "Dec#"
+
+#: plugins/ASCII/ascii.c:317
+msgid "Hex#"
+msgstr "Hex#"
+
+#: plugins/ASCII/ascii.c:324
+msgid "Name"
+msgstr "名稱"
+
+#: plugins/ASCII/ascii.c:369
+msgid "ASCII Table"
+msgstr "ASCII 對照表"
+
+#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
+msgid "_Insert char"
+msgstr "插入字元(_I)"
+
+#: plugins/ASCII/asciitable.glade2.h:1
+#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
+msgid "ASCII table"
+msgstr "ASCII 對照表"
+
+#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
+msgid "Copyright (C) 2001-2002 Paolo Maggi"
+msgstr "版權所有 (C) 2001-2002 Paolo Maggi"
+
+#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:3
+#: plugins/sample/sample.gedit-plugin.desktop.in.h:3
+#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:3
+#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:2
+#: plugins/indent/indent.gedit-plugin.desktop.in.h:4
+#: plugins/spell/spell.gedit-plugin.desktop.in.h:3
+msgid "Paolo Maggi <maggi@athena.polito.it>"
+msgstr "Paolo Maggi <maggi@athena.polito.it>"
+
+#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:4
+msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+msgstr "此增效模組顯示附有 ASCII 對照表的視窗。"
+
+#. AFAIK, all cvs commit messages start with this
+#: plugins/cvschangelog/cvschangelog.c:49
+msgid "Open CVS Chan_geLogs"
+msgstr "開啟 CVS Chan_geLog"
+
+#: plugins/cvschangelog/cvschangelog.c:52
+msgid "Searches for ChangeLogs in the current document and opens them"
+msgstr "搜尋並開啟目前文件中的 ChangeLog"
+
+#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
+msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+msgstr "一個可開啟 CVS commit 訊息中的 ChangeLog 的增效模組。"
+
+#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
+msgid "CVS ChangeLog"
+msgstr "CVS ChangeLog"
+
+#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:3
+msgid "Copyright (C) 2002 James Willcox"
+msgstr "版權所有 (C) 2002 James Willcox"
+
+#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:4
+msgid "James Willcox <jwillcox@cs.indiana.edu>"
+msgstr "James Willcox <jwillcox@cs.indiana.edu>"
+
+#: plugins/diff/diff.c:65
+msgid "Co_mpare Files..."
+msgstr "比較檔案(_M)..."
+
+#: plugins/diff/diff.c:68
+msgid "Makes a diff file from two documents or files"
+msgstr "由兩份文件或檔案產生 diff 檔"
+
+#. Create the dialog
+#: plugins/diff/diff.c:271 plugins/diff/diff.gedit-plugin.desktop.in.h:2
+msgid "Compare Files"
+msgstr "比較檔案"
+
+#: plugins/diff/diff.c:285
+msgid "C_ompare"
+msgstr "比較(_O)"
+
+#: plugins/diff/diff.c:513
+msgid "Executed command"
+msgstr "執行的指令"
+
+#: plugins/diff/diff.c:652
+msgid "The two documents you selected are the same."
+msgstr "已選取的兩份文件是相同的。"
+
+#: plugins/diff/diff.c:660
+msgid ""
+"The \"first\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+"選取的第一個檔案不存在。\n"
+"\n"
+"請提供正確的檔案。"
+
+#: plugins/diff/diff.c:669
+msgid ""
+"The \"second\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+"選取的第二個檔案不存在。\n"
+"\n"
+"請提供正確的檔案。"
+
+#: plugins/diff/diff.c:677
+msgid "The two files you selected are the same."
+msgstr "已選取的兩個檔案是相同的。"
+
+#: plugins/diff/diff.c:695
+msgid "The \"first\" document contains no text."
+msgstr "第一份文件沒有文字。"
+
+#: plugins/diff/diff.c:730
+msgid "The \"second\" document contains no text."
+msgstr "第二份文件沒有文字。"
+
+#. FIXME: do better error reporting ... . Chema
+#: plugins/diff/diff.c:756
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"gedit could not create a temporary file."
+msgstr ""
+"無法比較已選取的文件。\n"
+"\n"
+"gedit 無法建立暫存檔。"
+
+#: plugins/diff/diff.c:776 plugins/diff/diff.c:789
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"Error executing the diff command."
+msgstr ""
+"無法比較已選取的文件。\n"
+"\n"
+"執行 diff 指令時出現錯誤。"
+
+#: plugins/diff/diff.c:811
+msgid "No differences were found between the selected documents."
+msgstr "已選取的文件之間沒有任何差異。"
+
+#: plugins/diff/diff.c:852
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"The result contains invalid UTF-8 data."
+msgstr ""
+"無法比較已選取的文件。\n"
+"\n"
+"結果中出現無效的 UTF-8 數據。"
+
+#: plugins/diff/diff.glade2.h:1 plugins/shell_output/shell_output.glade2.h:1
+#: plugins/time/time.glade2.h:2 plugins/spell/spell-checker.glade2.h:1
+#: src/dialogs/replace.glade2.h:1 src/dialogs/uri.glade2.h:1
+msgid "*"
+msgstr "*"
+
+#: plugins/diff/diff.glade2.h:2
+msgid "Choose the files to compare."
+msgstr "請選擇準備比較的檔案。"
+
+#: plugins/diff/diff.glade2.h:3
+msgid "Compare files..."
+msgstr "比較檔案..."
+
+#: plugins/diff/diff.glade2.h:4
+msgid "F_rom document"
+msgstr "從文件(_R)"
+
+#: plugins/diff/diff.glade2.h:5
+msgid "First"
+msgstr "第一"
+
+#: plugins/diff/diff.glade2.h:6
+msgid "First file from disk"
+msgstr "從磁碟讀取第一個檔案"
+
+#: plugins/diff/diff.glade2.h:7
+msgid "First file from open document"
+msgstr "從已開啟的文件作為第一個檔案的來源"
+
+#: plugins/diff/diff.glade2.h:8
+msgid "From _document"
+msgstr "從文件(_D)"
+
+#: plugins/diff/diff.glade2.h:9
+msgid "From a _file on disk"
+msgstr "從檔案(_F)"
+
+#: plugins/diff/diff.glade2.h:10
+msgid "From a file o_n disk"
+msgstr "從檔案(_N)"
+
+#: plugins/diff/diff.glade2.h:11
+msgid "Ignore _blanks (-b option)"
+msgstr "忽略空格 [-b 選項] (_B)"
+
+#: plugins/diff/diff.glade2.h:12
+msgid "Note that this option is only supported by GNU diff"
+msgstr "請注意本選項只有 GNU diff 方可支援"
+
+#: plugins/diff/diff.glade2.h:13
+msgid "Second"
+msgstr "第二"
+
+#: plugins/diff/diff.glade2.h:14
+msgid "Second file from disk"
+msgstr "從磁碟讀取第二個檔案"
+
+#: plugins/diff/diff.glade2.h:15
+msgid "Second file from open document"
+msgstr "從已開啟的文件作為第二個檔案的來源"
+
+#: plugins/diff/diff.glade2.h:16
+msgid "Select the \"first\" file..."
+msgstr "請選擇第一個檔案..."
+
+#: plugins/diff/diff.glade2.h:17
+msgid "Select the \"second\" file..."
+msgstr "請選擇第二個檔案..."
+
+#: plugins/diff/diff.glade2.h:18
+msgid "Select the first file to compare"
+msgstr "請選擇第一個準備比較的檔案"
+
+#: plugins/diff/diff.glade2.h:19
+msgid "Select the first open document to compare"
+msgstr "請選擇第一份已開啟的文件作比較"
+
+#: plugins/diff/diff.glade2.h:20
+msgid "Select the second file to compare"
+msgstr "請選擇第二個準備比較的檔案"
+
+#: plugins/diff/diff.glade2.h:21
+msgid "Select the second open document to compare"
+msgstr "請選擇第二份已開啟的文件作比較"
+
+#: plugins/diff/diff.glade2.h:22
+msgid "Use the _unified output format (-u option)"
+msgstr "使用 _unified 輸出格式 (-u 選項)"
+
+#: plugins/diff/diff.gedit-plugin.desktop.in.h:1
+msgid ""
+"Chema Celorio <chema@celorio.com> and Paolo Maggi <maggi@athena.polito.it>"
+msgstr ""
+"Chema Celorio <chema@celorio.com> 及 Paolo Maggi <maggi@athena.polito.it>"
+
+#: plugins/diff/diff.gedit-plugin.desktop.in.h:3
+msgid ""
+"Copyright (C) 2000 - 2001 Chema Celorio\n"
+"Copyright (C) 2002 Paolo Maggi"
+msgstr ""
+"版權所有 (C) 2000 - 2001 Chema Celorio\n"
+"版權所有 (C) 2002 Paolo Maggi"
+
+#: plugins/diff/diff.gedit-plugin.desktop.in.h:4
+msgid ""
+"The Compare Files plugin uses the <tt>diff</tt> program to compare two "
+"documents or files on disk.\n"
+"\n"
+"For more info on <tt>diff</tt> program, type <tt>man diff</tt> in a shell "
+"prompt."
+msgstr ""
+"「比較檔案」增效模組透過 <tt>diff</tt> 程式來比較兩份文件或檔案。\n"
+"\n"
+"如果想獲得 <tt>diff</tt> 程式的其它資訊，請在指令提示號中輸入 <tt>man diff</"
+"tt>。"
+
+#: plugins/docinfo/docinfo.c:46
+msgid "_Document Statistics"
+msgstr "文件統計(_D)"
+
+#: plugins/docinfo/docinfo.c:49
+msgid "Get statistic info on current document"
+msgstr "獲取有關目前文件的資訊"
+
+#: plugins/docinfo/docinfo.c:142
+#: plugins/docinfo/docinfo.gedit-plugin.desktop.in.h:2
+msgid "Document Statistics"
+msgstr "文件統計"
+
+#: plugins/docinfo/docinfo.c:153
+msgid "_Update"
+msgstr "更新(_U)"
+
+#: plugins/docinfo/docinfo.glade2.h:1
+msgid "0"
+msgstr "0"
+
+#: plugins/docinfo/docinfo.glade2.h:2
+msgid "Bytes"
+msgstr "位元組"
+
+#: plugins/docinfo/docinfo.glade2.h:3
+msgid "Characters (no spaces)"
+msgstr "字元 (不包括空格)"
+
+#: plugins/docinfo/docinfo.glade2.h:4
+msgid "Characters (with spaces)"
+msgstr "字元 (包括空格)"
+
+#: plugins/docinfo/docinfo.glade2.h:5
+msgid "File Name"
+msgstr "檔案名稱"
+
+#: plugins/docinfo/docinfo.glade2.h:6 src/gedit-print.c:315
+msgid "Lines"
+msgstr "行"
+
+#: plugins/docinfo/docinfo.glade2.h:7
+msgid "Update"
+msgstr "更新"
+
+#: plugins/docinfo/docinfo.glade2.h:8
+msgid "Words"
+msgstr "字"
+
+#: plugins/docinfo/docinfo.glade2.h:9
+msgid "gedit: Document Info plugin"
+msgstr "gedit：文件資訊增效模組"
+
+#: plugins/docinfo/docinfo.gedit-plugin.desktop.in.h:1
+#: plugins/sample/sample.gedit-plugin.desktop.in.h:1
+#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:1
+#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:1
+#: plugins/indent/indent.gedit-plugin.desktop.in.h:1
+#: plugins/spell/spell.gedit-plugin.desktop.in.h:2
+msgid "Copyright (C) 2002 Paolo Maggi"
+msgstr "版權所有 (C) 2002 Paolo Maggi"
+
+#: plugins/docinfo/docinfo.gedit-plugin.desktop.in.h:3
+msgid "Paolo Maggi <paolo.maggi@polito.it>"
+msgstr "Paolo Maggi <paolo.maggi@polito.it>"
+
+#: plugins/docinfo/docinfo.gedit-plugin.desktop.in.h:4
+msgid ""
+"The Document Statistics plugin analyzes the current document and determines "
+"the number of words, lines, characters and non-space characters in it and "
+"displays the result."
+msgstr ""
+"「文件統計」增效模組可分析目前的文件並計算字數、行數、字元數目及非空格的字元"
+"數目，並顯示結果。"
+
+#: plugins/sample/sample.c:43
+msgid "Insert User Na_me"
+msgstr "加入用戶名稱(_M)"
+
+#: plugins/sample/sample.c:46
+msgid "Insert the user name at the cursor position"
+msgstr "在游標目前的位置加入用戶名稱"
+
+#: plugins/sample/sample.c:172
+#: plugins/sample/sample.gedit-plugin.desktop.in.h:4
+msgid "User name"
+msgstr "用戶名稱"
+
+#: plugins/sample/sample.c:173
+#: plugins/sample/sample.gedit-plugin.desktop.in.h:2
+msgid "Inserts the user name at the cursor position."
+msgstr "在游標目前的位置加入用戶名稱"
+
+#: plugins/shell_output/shell_output.c:56
+msgid "_Run Command..."
+msgstr "執行指令(_R)..."
+
+#: plugins/shell_output/shell_output.c:59
+msgid "Run a command"
+msgstr "執行指令"
+
+#: plugins/shell_output/shell_output.c:161
+#: plugins/shell_output/shell_output.c:516
+msgid "Stopped"
+msgstr "停止"
+
+#: plugins/shell_output/shell_output.c:246
+msgid "An error occurs while running the selected command."
+msgstr "執行選取的指令時出現錯誤。"
+
+#: plugins/shell_output/shell_output.c:302
+msgid "Run Command"
+msgstr "執行指令"
+
+#: plugins/shell_output/shell_output.c:318
+msgid "_Run"
+msgstr "執行(_R)"
+
+#: plugins/shell_output/shell_output.c:522
+msgid "Done"
+msgstr "完成"
+
+#: plugins/shell_output/shell_output.c:524
+msgid "Failed"
+msgstr "失敗"
+
+#: plugins/shell_output/shell_output.c:696
+msgid ""
+"The shell command entry is empty.\n"
+"\n"
+"Please, insert a valid shell command."
+msgstr ""
+"指令一欄是空的。\n"
+"\n"
+"請輸入有效的指令。"
+
+#: plugins/shell_output/shell_output.c:729
+msgid ""
+"Error parsing the shell command.\n"
+"\n"
+"Please, insert a valid shell command."
+msgstr ""
+"分析指令時出現錯誤。\n"
+"\n"
+"請輸入有效的指令。"
+
+#: plugins/shell_output/shell_output.c:815
+msgid "Executing command"
+msgstr "執行指令"
+
+#: plugins/shell_output/shell_output.glade2.h:2
+msgid "Co_mmand:"
+msgstr "指令(_M)："
+
+#: plugins/shell_output/shell_output.glade2.h:3
+msgid "Select the working directory..."
+msgstr "請選擇執行指令的目錄..."
+
+#: plugins/shell_output/shell_output.glade2.h:4
+msgid "_Show results in Output Window"
+msgstr "在輸出視窗中顯示結果(_S)"
+
+#: plugins/shell_output/shell_output.glade2.h:5
+msgid "_Working directory:"
+msgstr "執行指令的目錄(_W)："
+
+#: plugins/shell_output/shell_output.glade2.h:6
+msgid "gedit: Shell Output plugin"
+msgstr "gedit：指令輸出增效模組"
+
+#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:2
+msgid ""
+"Execute an external program and eventually grabs its output in the output "
+"window."
+msgstr "執行外部的程式，並在輸出視窗中顯示結果。"
+
+#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:4
+msgid "Shell command"
+msgstr "指令"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:136
+msgid "Tag list plugin"
+msgstr "速成標記增效模組"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:154
+msgid "Select the group of tags you want to use"
+msgstr "請選擇準備使用哪一組標記"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:176
+msgid "Tag Groups Combo"
+msgstr "速成標記分組"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:178
+msgid "Tags Name List"
+msgstr "速成標記名稱清單"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:188
+msgid "Double-click on a tag to insert it in the current document"
+msgstr "在標記上 double-click 可在文件中加入該標記"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:199
+msgid "Tags"
+msgstr "標記"
+
+#: plugins/taglist/gedit-taglist-plugin.c:46
+msgid "Tag _List"
+msgstr "標記清單(_L)"
+
+#.
+#. #define MENU_ITEM_NAME		"TagList"
+#.
+#: plugins/taglist/gedit-taglist-plugin.c:51
+msgid "Show the tag list window"
+msgstr "顯示標記清單"
+
+#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:3
+msgid "Tag list"
+msgstr "標記清單"
+
+#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:4
+msgid ""
+"The tag list plugin provides a method to easily insert into a document "
+"commonly used tags/strings without having to type them."
+msgstr ""
+"「速成標記」增效模組提供一種不需使用鍵盤的簡易方式來在文件中加入常用的標記或"
+"字串。"
+
+#: plugins/time/time.c:48
+msgid "In_sert Date and Time..."
+msgstr "加入日期及時間(_S)..."
+
+#: plugins/time/time.c:51
+msgid "Insert current date and time at the cursor position"
+msgstr "在游標目前的位置加入現在的日期及時間"
+
+#: plugins/time/time.c:448
+msgid "Available formats"
+msgstr "可用的格式"
+
+#: plugins/time/time.c:552
+msgid "Configure insert date/time plugin..."
+msgstr "設定「加入日期及時間」增效模組..."
+
+#: plugins/time/time.glade2.h:1 src/dialogs/gedit-preferences.glade2.h:1
+msgid "    "
+msgstr "    "
+
+#: plugins/time/time.glade2.h:3
+msgid "<span size=\"small\">01/11/2002 17:52:00</span>"
+msgstr "<span size=\"small\">01/11/2002 17:52:00</span>"
+
+#: plugins/time/time.glade2.h:4
+msgid "<span weight=\"bold\"> When inserting date/time...</span>"
+msgstr "<span weight=\"bold\">當加入現在的日期/時間...</span>"
+
+#: plugins/time/time.glade2.h:5
+msgid "Configure date/time plugin"
+msgstr "設定「加入日期及時間」增效模組"
+
+#: plugins/time/time.glade2.h:6
+msgid "Insert Date and Time"
+msgstr "加入日期及時間"
+
+#: plugins/time/time.glade2.h:7
+msgid "Use the _selected format"
+msgstr "使用選定的格式(_S)"
+
+#: plugins/time/time.glade2.h:8
+msgid "_Insert"
+msgstr "加入(_I)"
+
+#: plugins/time/time.glade2.h:9
+msgid "_Prompt for a format"
+msgstr "提示可使用的格式(_P)"
+
+#: plugins/time/time.glade2.h:10
+msgid "_Use custom format"
+msgstr "使用自選的格式(_U)"
+
+#: plugins/time/time.gedit-plugin.desktop.in.h:1
+msgid "Copyright (C) 2002 - Paolo Maggi"
+msgstr "版權所有 (C) 2002 - Paolo Maggi"
+
+#: plugins/time/time.gedit-plugin.desktop.in.h:2
+msgid "Insert Date/Time"
+msgstr "加入日期及時間"
+
+#: plugins/time/time.gedit-plugin.desktop.in.h:3
+msgid "Inserts current date and time at the cursor position."
+msgstr "在游標目前的位置加入現在的日期及時間。"
+
+#: plugins/time/time.gedit-plugin.desktop.in.h:4
+msgid ""
+"Paolo Maggi <maggi@athena.polito.it> and Lee Mallabone <gnome@fonicmonkey."
+"net>"
+msgstr ""
+"Paolo Maggi <maggi@athena.polito.it> 及 Lee Mallabone <gnome@fonicmonkey.net>"
+
+#: plugins/indent/indent.c:45
+msgid "_Indent"
+msgstr "增加縮排(_I)"
+
+#: plugins/indent/indent.c:47
+msgid "Indent selected lines"
+msgstr "增加選定的行數的縮排程度"
+
+#: plugins/indent/indent.c:49
+msgid "U_nindent"
+msgstr "減少縮排(_N)"
+
+#: plugins/indent/indent.c:51
+msgid "Unindent selected lines"
+msgstr "減少選定的行數的縮排程度"
+
+#: plugins/indent/indent.gedit-plugin.desktop.in.h:2
+msgid "Indent lines"
+msgstr "縮排"
+
+#: plugins/indent/indent.gedit-plugin.desktop.in.h:3
+msgid "Indent or un-indent selected lines."
+msgstr "增加或減少選定的行數的縮排程度。"
+
+#: plugins/sort/sort.glade2.h:1
+msgid "R_emove duplicates"
+msgstr "刪除所有重複的內容(_E)"
+
+#: plugins/sort/sort.glade2.h:2
+msgid "S_tart at column:"
+msgstr "由指定字元開始排序(_T)："
+
+#: plugins/sort/sort.glade2.h:3 plugins/sort/sort.gedit-plugin.desktop.in.h:3
+msgid "Sort"
+msgstr "排列"
+
+#: plugins/sort/sort.glade2.h:4
+msgid "You cannot undo a sort operation"
+msgstr "您不可以將排列後的內容復原"
+
+#: plugins/sort/sort.glade2.h:5
+msgid "_Ignore case"
+msgstr "忽略大小寫(_I)"
+
+#: plugins/sort/sort.glade2.h:6
+msgid "_Reverse order"
+msgstr "相反次序排列(_R)"
+
+#: plugins/sort/sort.glade2.h:7
+msgid "_Sort"
+msgstr "排列(_S)"
+
+#: plugins/sort/sort.gedit-plugin.desktop.in.h:1
+msgid ""
+"Carlo Borreo <borreo@softhome.net>, Lee Mallabone <gnome@fonicmonkey.net> "
+"and Paolo Maggi <maggi@athena.polito.it>"
+msgstr ""
+"Carlo Borreo <borreo@softhome.net>、Lee Mallabone <gnome@fonicmonkey.net> 及 "
+"Paolo Maggi <maggi@athena.polito.it>"
+
+#: plugins/sort/sort.gedit-plugin.desktop.in.h:2
+msgid ""
+"Copyright (C) 2001 Carlo Borreo\n"
+"Copyright (C) 2002 Lee Mallabone and Paolo Maggi"
+msgstr ""
+"版權所有 (C) 2001 Carlo Borreo\n"
+"版權所有 (C) 2002 Lee Mallabone 及 Paolo Maggi"
+
+#: plugins/sort/sort.gedit-plugin.desktop.in.h:4
+msgid "Sorts a document or selected text."
+msgstr "將整份文件或將已選定的文字排序。"
+
+#: plugins/spell/gedit-automatic-spell-checker.c:318
+#: plugins/spell/gedit-spell-checker-dialog.c:504
+msgid "(no suggested words)"
+msgstr "(不提供任何建議)"
+
+#: plugins/spell/gedit-automatic-spell-checker.c:342
+msgid "_More..."
+msgstr "還有(_M)..."
+
+#. Ignore all
+#: plugins/spell/gedit-automatic-spell-checker.c:395
+msgid "_Ignore All"
+msgstr "全部忽略(_I)"
+
+#. + Add to Dictionary
+#: plugins/spell/gedit-automatic-spell-checker.c:408
+msgid "_Add"
+msgstr "新增(_A)"
+
+#: plugins/spell/gedit-automatic-spell-checker.c:445
+msgid "_Spelling Suggestions..."
+msgstr "拼字建議(_S)..."
+
+#: plugins/spell/gedit-spell-checker-dialog.c:285
+msgid "Check Spelling"
+msgstr "檢查拼字"
+
+#: plugins/spell/gedit-spell-checker-dialog.c:296
+msgid "Suggestions"
+msgstr "建議"
+
+#: plugins/spell/gedit-spell-checker-dialog.c:608
+msgid "(correct spelling)"
+msgstr "(拼字正確)"
+
+#: plugins/spell/gedit-spell-checker-dialog.c:785
+msgid "Completed spell checking"
+msgstr "完成檢查錯字"
+
+#: plugins/spell/gedit-spell-checker.c:73
+msgid "Breton"
+msgstr "不列塔尼文"
+
+#: plugins/spell/gedit-spell-checker.c:74
+msgid "Catalan"
+msgstr "嘉泰羅尼亞文"
+
+#: plugins/spell/gedit-spell-checker.c:75
+msgid "Czech"
+msgstr "捷克文"
+
+#: plugins/spell/gedit-spell-checker.c:76
+msgid "Danish"
+msgstr "丹麥文"
+
+#: plugins/spell/gedit-spell-checker.c:77
+msgid "German (Germany)"
+msgstr "德文 (德國)"
+
+#: plugins/spell/gedit-spell-checker.c:78
+msgid "German (Swiss)"
+msgstr "德文 (瑞士)"
+
+#: plugins/spell/gedit-spell-checker.c:79
+msgid "English (American)"
+msgstr "英文 (美式)"
+
+#: plugins/spell/gedit-spell-checker.c:80
+msgid "English (British)"
+msgstr "英文 (英式)"
+
+#: plugins/spell/gedit-spell-checker.c:81
+msgid "English (Canadian)"
+msgstr "英文 (加拿大式)"
+
+#: plugins/spell/gedit-spell-checker.c:82
+msgid "Esperanto"
+msgstr "世界語"
+
+#: plugins/spell/gedit-spell-checker.c:83
+msgid "Spanish"
+msgstr "西班牙文"
+
+#: plugins/spell/gedit-spell-checker.c:84
+msgid "Faroese"
+msgstr "法羅文"
+
+#: plugins/spell/gedit-spell-checker.c:85
+msgid "French (France)"
+msgstr "法文 (法式)"
+
+#: plugins/spell/gedit-spell-checker.c:86
+msgid "French (Swiss)"
+msgstr "法文 (瑞士式)"
+
+#: plugins/spell/gedit-spell-checker.c:87
+msgid "Italian"
+msgstr "意大利文"
+
+#: plugins/spell/gedit-spell-checker.c:88
+msgid "Dutch"
+msgstr "荷蘭文"
+
+#: plugins/spell/gedit-spell-checker.c:89
+msgid "Norwegian"
+msgstr "挪威文"
+
+#: plugins/spell/gedit-spell-checker.c:90
+msgid "Polish"
+msgstr "波蘭文"
+
+#: plugins/spell/gedit-spell-checker.c:91
+msgid "Portuguese (Portugal)"
+msgstr "葡萄牙文 (葡式)"
+
+#: plugins/spell/gedit-spell-checker.c:92
+msgid "Portuguese (Brazilian)"
+msgstr "葡萄牙文 (巴西式)"
+
+#: plugins/spell/gedit-spell-checker.c:93
+msgid "Russian"
+msgstr "俄文"
+
+#: plugins/spell/gedit-spell-checker.c:94
+msgid "Swedish"
+msgstr "瑞典文"
+
+#: plugins/spell/gedit-spell-checker.c:653
+msgid "Default"
+msgstr "預設"
+
+#: plugins/spell/gedit-spell-language-dialog.c:229
+#: src/dialogs/gedit-dialog-goto-line.c:165
+#: src/dialogs/gedit-plugin-program-location-dialog.c:96
+#: src/dialogs/gedit-encodings-dialog.c:238
+#, c-format
+msgid "Could not find the required widgets inside %s."
+msgstr "無法在 %s 中找到所需的視窗元件。"
+
+#: plugins/spell/gedit-spell-language-dialog.c:249
+msgid "Languages"
+msgstr "語言"
+
+#: plugins/spell/spell.gedit-plugin.desktop.in.h:1
+msgid "Checks the spelling of the current document."
+msgstr "檢查目前文件中的拼字。"
+
+#: plugins/spell/spell.gedit-plugin.desktop.in.h:4
+msgid "Spell checker"
+msgstr "拼字檢查"
+
+#: plugins/spell/languages-dialog.glade2.h:1
+msgid "Select the _language of the current document."
+msgstr "請選擇目前文件所使的語言(_L)"
+
+#: plugins/spell/languages-dialog.glade2.h:2
+msgid "Set language"
+msgstr "設定語言"
+
+#: plugins/spell/spell-checker.glade2.h:2
+msgid "<b>Language</b>"
+msgstr "<b>語言</b>"
+
+#: plugins/spell/spell-checker.glade2.h:3
+msgid "<b>word</b>"
+msgstr "<b>字詞</b>"
+
+#: plugins/spell/spell-checker.glade2.h:4
+msgid "Add w_ord"
+msgstr "加入字詞(_O)"
+
+#: plugins/spell/spell-checker.glade2.h:5
+msgid "Cha_nge"
+msgstr "更改(_N)"
+
+#: plugins/spell/spell-checker.glade2.h:6
+msgid "Change A_ll"
+msgstr "全部更改(_L)"
+
+#: plugins/spell/spell-checker.glade2.h:7
+msgid "Change _to:"
+msgstr "更改為(_T)："
+
+#: plugins/spell/spell-checker.glade2.h:8
+msgid "Check _Word"
+msgstr "檢查字詞(_W)"
+
+#: plugins/spell/spell-checker.glade2.h:9
+msgid "Check spelling"
+msgstr "檢查拼字"
+
+#: plugins/spell/spell-checker.glade2.h:10
+msgid "Ignore _All"
+msgstr "全部忽略(_A)"
+
+#: plugins/spell/spell-checker.glade2.h:11
+msgid "Language:"
+msgstr "語言："
+
+#: plugins/spell/spell-checker.glade2.h:12
+msgid "Mispelled word:"
+msgstr "錯誤的字詞："
+
+#: plugins/spell/spell-checker.glade2.h:13
+msgid "User dictionary:"
+msgstr "個人的字典："
+
+#: plugins/spell/spell-checker.glade2.h:14
+msgid "_Ignore"
+msgstr "忽略(_I)"
+
+#: plugins/spell/spell-checker.glade2.h:15
+msgid "_Suggestions:"
+msgstr "建議(_S)："
+
+#. Key in case the plugin ever needs any settings
+#: plugins/sort/sort.c:26
+msgid "S_ort..."
+msgstr "排列(_O)..."
+
+#: plugins/sort/sort.c:29
+msgid "Sort the current document or selection."
+msgstr "將目前的文件或選擇區域排序。"
+
+#: plugins/spell/spell.c:51
+msgid "_Check Spelling"
+msgstr "檢查拼字(_C)"
+
+#: plugins/spell/spell.c:54
+msgid "Check the current document for incorrect spelling"
+msgstr "為目前的文件檢查拼字"
+
+#: plugins/spell/spell.c:56
+msgid "_Autocheck Spelling"
+msgstr "自動檢查拼字(_A)"
+
+#: plugins/spell/spell.c:59
+msgid "Automatically spell-check the current document"
+msgstr "自動為目前文件進行拼字檢查"
+
+#: plugins/spell/spell.c:61
+msgid "Set _Language"
+msgstr "設定語言(_L)"
+
+#: plugins/spell/spell.c:64
+msgid "Set the language of the current document"
+msgstr "設定目前文件所用的語言"
+
+#: plugins/spell/spell.c:549
+msgid "The document is empty."
+msgstr "文件是空白的。"
+
+#: plugins/spell/spell.c:567
+msgid "The selected text does not contain mispelled words."
+msgstr "已選取的文字中並沒有任何錯字。"
+
+#: plugins/spell/spell.c:568
+msgid "The document does not contain mispelled words."
+msgstr "文件中並沒有任何錯字。"
+
+#: src/bonobo-mdi.c:549 src/bonobo-mdi.c:1962
+#, c-format
+msgid "Activate %s"
+msgstr "啟用 %s"
+
+#: src/dialogs/gedit-dialog-goto-line.c:139
+msgid "Go to Line"
+msgstr "移至指定行數"
+
+#. Add Goto Line button
+#: src/dialogs/gedit-dialog-goto-line.c:149
+msgid "_Go to Line"
+msgstr "移至指定行數(_G)"
+
+#: src/dialogs/gedit-dialog-replace.c:132
+#: src/dialogs/gedit-dialog-replace.c:1025 src/gedit-commands.c:362
+#, c-format
+msgid "The text \"%s\" was not found."
+msgstr "找不到文字“%s”。"
+
+#: src/dialogs/gedit-dialog-replace.c:240 src/dialogs/replace.glade2.h:4
+#: src/gedit-ui.xml.h:51
+msgid "Replace"
+msgstr "取代"
+
+#: src/dialogs/gedit-dialog-replace.c:251
+msgid "Replace _All"
+msgstr "全部取代(_A)"
+
+#. Add Replace button
+#: src/dialogs/gedit-dialog-replace.c:254 src/gedit-file-selector-util.c:129
+msgid "_Replace"
+msgstr "取代(_R)"
+
+#: src/dialogs/gedit-dialog-replace.c:376 src/gedit-ui.xml.h:22
+msgid "Find"
+msgstr "搜尋"
+
+#: src/dialogs/gedit-dialog-replace.c:1034
+#, c-format
+msgid "Found and replaced %d occurences."
+msgstr "找到並取代了 %d 個字串。"
+
+#: src/dialogs/gedit-dialog-uri.c:83
+msgid "Open Location"
+msgstr "開啟位置"
+
+#: src/dialogs/gedit-plugin-manager.c:53
+msgid "Plugin"
+msgstr "增效模組"
+
+#: src/dialogs/gedit-plugin-manager.c:54
+msgid "Load"
+msgstr "載入"
+
+#: src/dialogs/gedit-plugin-manager.c:320
+msgid "Module file name"
+msgstr "模組檔案名稱"
+
+#: src/dialogs/gedit-plugin-manager.c:321
+msgid "Author(s)"
+msgstr "作者"
+
+#: src/dialogs/gedit-plugin-manager.c:488
+msgid "Could not find plugin-manager.glade2, reinstall gedit.\n"
+msgstr "找不到 plugin-manager.glade2，請重新安裝 gedit。\n"
+
+#: src/dialogs/gedit-plugin-manager.c:511
+msgid "Invalid glade file for plugin manager -- not all widgets found.\n"
+msgstr "增效模組管理員的 glade 檔案無效 ─ 沒法完全找到所有視窗元件。\n"
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:74
+#: src/dialogs/program-location-dialog.glade2.h:1
+msgid "Set program location..."
+msgstr "設定程式位置..."
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:102
+#, c-format
+msgid ""
+"The %s plugin uses an external program, called <tt>%s</tt>, to perform its "
+"task.\n"
+"\n"
+"Please, specify the location of the <tt>%s</tt> program."
+msgstr ""
+"%s 增效模組使用稱為 <tt>%s</tt> 的外部指令來進行工作。\n"
+"\n"
+"請指定 <tt>%s</tt> 程式的位置。"
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:148
+msgid "The selected file is not executable."
+msgstr "所選的檔案是不可執行的。"
+
+#: src/dialogs/gedit-preferences-dialog.c:232
+msgid "Font & Colors"
+msgstr "字型及顏色"
+
+#: src/dialogs/gedit-preferences-dialog.c:234
+#: src/dialogs/gedit-preferences.glade2.h:47
+msgid "Tabs"
+msgstr "Tab 字元"
+
+#: src/dialogs/gedit-preferences-dialog.c:235
+msgid "Wrap Mode"
+msgstr "換行模式"
+
+#: src/dialogs/gedit-preferences-dialog.c:236
+msgid "Auto Indent"
+msgstr "自動縮排"
+
+#: src/dialogs/gedit-preferences-dialog.c:237
+msgid "Line Numbers"
+msgstr "行號"
+
+#: src/dialogs/gedit-preferences-dialog.c:239 src/gedit-ui.xml.h:32
+msgid "Open"
+msgstr "開啟"
+
+#: src/dialogs/gedit-preferences-dialog.c:240
+#: src/dialogs/gedit-preferences.glade2.h:42 src/gedit-ui.xml.h:55
+msgid "Save"
+msgstr "儲存"
+
+#: src/dialogs/gedit-preferences-dialog.c:241
+#: src/dialogs/gedit-preferences.glade2.h:50 src/gedit-ui.xml.h:72
+msgid "Undo"
+msgstr "復原"
+
+#: src/dialogs/gedit-preferences-dialog.c:249
+msgid "Page"
+msgstr "列印頁面"
+
+#: src/dialogs/gedit-preferences-dialog.c:251
+msgid "Fonts"
+msgstr "字型"
+
+#: src/dialogs/gedit-preferences-dialog.c:258
+msgid "Manager"
+msgstr "增效模組管理員"
+
+#: src/dialogs/gedit-preferences-dialog.c:266
+msgid "Editor"
+msgstr "編輯器"
+
+#: src/dialogs/gedit-preferences-dialog.c:267
+#: src/dialogs/gedit-preferences.glade2.h:38 src/gedit-print.c:306
+#: src/gedit-ui.xml.h:41
+msgid "Print"
+msgstr "列印"
+
+#: src/dialogs/gedit-preferences-dialog.c:268
+msgid "Plugins"
+msgstr "增效模組"
+
+#: src/dialogs/gedit-preferences-dialog.c:341
+msgid "Cat_egories:"
+msgstr "分類(_E)："
+
+#: src/dialogs/gedit-preferences-dialog.c:363
+msgid "Preferences"
+msgstr "偏好設定"
+
+#: src/dialogs/gedit-preferences-dialog.c:602
+msgid "Categories"
+msgstr "分類"
+
+#: src/dialogs/gedit-preferences-dialog.c:835
+msgid "Push this button to select the font to be used by the editor"
+msgstr "按下此按鈕後可選擇編輯器所用的字型"
+
+#: src/dialogs/gedit-preferences-dialog.c:838
+msgid "Push this button to configure text color"
+msgstr "按下此按鈕後可設定文字的顏色"
+
+#: src/dialogs/gedit-preferences-dialog.c:840
+msgid "Push this button to configure background color"
+msgstr "按下此按鈕後可設定背景的顏色"
+
+#: src/dialogs/gedit-preferences-dialog.c:842
+msgid ""
+"Push this button to configure the color in which the selected text should "
+"appear"
+msgstr "按下此按鈕後可設定已選取的文字顏色"
+
+#: src/dialogs/gedit-preferences-dialog.c:845
+msgid ""
+"Push this button to configure the color in which the selected text should be "
+"marked"
+msgstr "按下此按鈕後可設定選取文字用的區域顏色"
+
+#: src/dialogs/gedit-preferences-dialog.c:1850
+msgid "Push this button to select the font to be used to print the body"
+msgstr "按下此按鈕後可選擇列印文件內容所用的字型"
+
+#: src/dialogs/gedit-preferences-dialog.c:1852
+msgid "Push this button to select the font to be used to print the headers"
+msgstr "按下此按鈕後可選擇列印文件頁首所用的字型"
+
+#: src/dialogs/gedit-preferences-dialog.c:1854
+msgid "Push this button to select the font to be used to print line numbers"
+msgstr "按下此按鈕後可選擇列印文件行號所用的字型"
+
+#: src/dialogs/gedit-preferences.glade2.h:2
+msgid "<b>Font</b>"
+msgstr "<b>字型</b>"
+
+#: src/dialogs/gedit-preferences.glade2.h:3
+msgid "<span weight=\"bold\" size=\"x-large\">Auto Indent</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">自動縮排</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:4
+msgid "<span weight=\"bold\" size=\"x-large\">Font &amp; Colors</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">字型及顏色</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:5
+msgid "<span weight=\"bold\" size=\"x-large\">Fonts</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">字型</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:6
+msgid "<span weight=\"bold\" size=\"x-large\">Line Numbers</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">行號</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:7
+msgid "<span weight=\"bold\" size=\"x-large\">Manager</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">管理員</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:8
+msgid "<span weight=\"bold\" size=\"x-large\">Open</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">開啟</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:9
+msgid "<span weight=\"bold\" size=\"x-large\">Page</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">頁面</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:10
+msgid "<span weight=\"bold\" size=\"x-large\">Save</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">儲存</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:11
+msgid "<span weight=\"bold\" size=\"x-large\">Tabs</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Tab 字元</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:12
+msgid "<span weight=\"bold\" size=\"x-large\">Undo</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">復原</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:13
+msgid "<span weight=\"bold\" size=\"x-large\">Wrap Mode</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">換行模式</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:14
+msgid "<span weight=\"bold\">Colors</span>"
+msgstr "<span weight=\"bold\">色彩</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:15
+msgid "<span weight=\"bold\">When saving a new file...</span>"
+msgstr "<span weight=\"bold\">當儲存新的檔案時...</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:16
+msgid "<span weight=\"bold\">When saving an existing file...</span>"
+msgstr "<span weight=\"bold\">當儲存已經存在的檔案時...</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:17
+msgid "Add new encodings"
+msgstr "加入新的編碼"
+
+#: src/dialogs/gedit-preferences.glade2.h:18
+msgid "Always use U_TF-8 encoding (faster)"
+msgstr "一定使用 U_TF-8 編碼 (會較快)"
+
+#: src/dialogs/gedit-preferences.glade2.h:19
+msgid "Always use _UTF-8 encoding (faster)"
+msgstr "一定使用 _UTF-8 編碼 (會較快)"
+
+#: src/dialogs/gedit-preferences.glade2.h:20
+msgid "Create a _backup copy of files before saving"
+msgstr "儲存前先建立暫存檔案(_B)"
+
+#: src/dialogs/gedit-preferences.glade2.h:21
+msgid "Do not _split words over two lines"
+msgstr "換行時不將字詞拆開(_S)"
+
+#: src/dialogs/gedit-preferences.glade2.h:22
+msgid "Editor _font: "
+msgstr "編輯器字型(_F)："
+
+#: src/dialogs/gedit-preferences.glade2.h:23
+msgid "Enable _auto indentation"
+msgstr "啟用自動縮排(_A)"
+
+#: src/dialogs/gedit-preferences.glade2.h:24
+msgid "Enable text _wrapping"
+msgstr "啟用換行功能(_W)"
+
+#: src/dialogs/gedit-preferences.glade2.h:25
+msgid "Fonts & Colors"
+msgstr "字型及顏色"
+
+#: src/dialogs/gedit-preferences.glade2.h:26
+msgid "Insert _spaces instead of tabs"
+msgstr "插入空格代替 Tab 字元(_S)"
+
+#: src/dialogs/gedit-preferences.glade2.h:27
+msgid "LOGO"
+msgstr "標誌"
+
+#: src/dialogs/gedit-preferences.glade2.h:28
+msgid "Line _numbers:"
+msgstr "行號(_N)："
+
+#: src/dialogs/gedit-preferences.glade2.h:29
+msgid "Line numbers"
+msgstr "行號"
+
+#: src/dialogs/gedit-preferences.glade2.h:30
+msgid "Move down"
+msgstr "向下移"
+
+#: src/dialogs/gedit-preferences.glade2.h:31
+msgid "Move up"
+msgstr "向上移"
+
+#: src/dialogs/gedit-preferences.glade2.h:32
+msgid "Page he_aders:"
+msgstr "頁首(_A)："
+
+#: src/dialogs/gedit-preferences.glade2.h:33
+msgid "Pick the background color"
+msgstr "請選取背景顏色"
+
+#: src/dialogs/gedit-preferences.glade2.h:34
+msgid "Pick the selected text color"
+msgstr "請選取選擇區域中文字的顏色"
+
+#: src/dialogs/gedit-preferences.glade2.h:35
+msgid "Pick the selection color"
+msgstr "請選取選擇區域的顏色"
+
+#: src/dialogs/gedit-preferences.glade2.h:36
+msgid "Pick the text color"
+msgstr "請選取文字的顏色"
+
+#: src/dialogs/gedit-preferences.glade2.h:37
+msgid "Plugin manager"
+msgstr "增效模組管理員"
+
+#: src/dialogs/gedit-preferences.glade2.h:39
+msgid "Print _line numbers every"
+msgstr "每次印出行號相隔的行數(_L)："
+
+#: src/dialogs/gedit-preferences.glade2.h:40
+msgid "Print fonts"
+msgstr "列印字型"
+
+#: src/dialogs/gedit-preferences.glade2.h:41
+msgid "Remove an encoding"
+msgstr "移除編碼"
+
+#: src/dialogs/gedit-preferences.glade2.h:43
+msgid "Se_lection color:"
+msgstr "選擇區域的顏色(_L)："
+
+#: src/dialogs/gedit-preferences.glade2.h:44
+msgid "Selecte_d text color:"
+msgstr "選擇區域的文字顏色(_D)："
+
+#: src/dialogs/gedit-preferences.glade2.h:45
+msgid "Set _tabs width equivalent to"
+msgstr "tab 字元的寬度為(_T)"
+
+#: src/dialogs/gedit-preferences.glade2.h:46
+msgid "Set limit on _undo actions to"
+msgstr "復原的次數限制為(_U)"
+
+#: src/dialogs/gedit-preferences.glade2.h:48
+msgid "U_se default theme colors"
+msgstr "使用預設的佈景主題色彩(_S)"
+
+#: src/dialogs/gedit-preferences.glade2.h:49
+msgid "U_se original file encoding if possible"
+msgstr "盡可能使用檔案原有的文字編碼(_S)"
+
+#: src/dialogs/gedit-preferences.glade2.h:51
+msgid "Use cu_rrent locale's encoding if possible"
+msgstr "盡可能使用目前語系的編碼(_R)"
+
+#: src/dialogs/gedit-preferences.glade2.h:52
+msgid "Use current _locale's encoding if possible"
+msgstr "盡可能使用目前語系的編碼(_L)"
+
+#: src/dialogs/gedit-preferences.glade2.h:53
+msgid "Wrap mode"
+msgstr "換行模式"
+
+#: src/dialogs/gedit-preferences.glade2.h:54
+msgid "_Autosave current file every"
+msgstr "自動儲存目前檔案的時間間隔(_A)："
+
+#: src/dialogs/gedit-preferences.glade2.h:55
+msgid "_Background color:"
+msgstr "背景顏色(_B)："
+
+#: src/dialogs/gedit-preferences.glade2.h:56
+msgid "_Body:"
+msgstr "內容(_B)："
+
+#: src/dialogs/gedit-preferences.glade2.h:57
+msgid "_Display line numbers"
+msgstr "顯示行號(_D)"
+
+#: src/dialogs/gedit-preferences.glade2.h:58
+msgid "_Print page headers"
+msgstr "列印頁首(_P)"
+
+#: src/dialogs/gedit-preferences.glade2.h:59
+msgid "_Restore Default Fonts"
+msgstr "還原為預設字型(_R)"
+
+#: src/dialogs/gedit-preferences.glade2.h:60
+msgid "_Supported encodings:"
+msgstr "支援的編碼(_S)"
+
+#: src/dialogs/gedit-preferences.glade2.h:61
+msgid "_Text color:"
+msgstr "文字顏色(_T)："
+
+#: src/dialogs/gedit-preferences.glade2.h:62
+msgid "_Use default theme font"
+msgstr "使用預設佈景主題中的字型(_U)"
+
+#: src/dialogs/gedit-preferences.glade2.h:63
+msgid "_action(s)"
+msgstr "次(_A)"
+
+#: src/dialogs/gedit-preferences.glade2.h:64
+msgid "_minutes"
+msgstr "分鐘(_M)"
+
+#: src/dialogs/gedit-preferences.glade2.h:65
+msgid "character(s)"
+msgstr "字元"
+
+#: src/dialogs/gedit-preferences.glade2.h:66
+msgid "li_ne(s)"
+msgstr "行(_N)"
+
+#: src/dialogs/gnome-print-font-dialog.c:107
+msgid "_Insert a new preview phrase."
+msgstr "加入新的預覽用字串(_I)"
+
+#: src/dialogs/gnome-print-font-dialog.c:113
+msgid "Modify preview phrase..."
+msgstr "修改預覽所用的字串..."
+
+#: src/dialogs/gnome-print-font-dialog.c:167
+msgid "Preview"
+msgstr "預覽"
+
+#: src/dialogs/gnome-print-font-dialog.c:180
+msgid "_Modify preview phrase..."
+msgstr "修改預覽所用的字串(_M)..."
+
+#: src/dialogs/gnome-print-font-dialog.c:243
+msgid "Font Selection"
+msgstr "字型選擇"
+
+#: src/dialogs/gnome-print-font-picker.c:89
+msgid "Sans Regular 12"
+msgstr "AR PL KaitiM Big5 14"
+
+#: src/dialogs/gnome-print-font-picker.c:90
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+msgstr "中文測試 English font test"
+
+#: src/dialogs/gnome-print-font-picker.c:91
+msgid "Pick a Font"
+msgstr "選擇字型"
+
+#: src/dialogs/gnome-print-font-picker.c:176
+msgid "Title"
+msgstr "標題"
+
+#: src/dialogs/gnome-print-font-picker.c:177
+msgid "The title of the selection dialog box"
+msgstr "字型選擇對話窗的標題"
+
+#: src/dialogs/gnome-print-font-picker.c:197
+msgid "Font name"
+msgstr "字型名稱"
+
+#: src/dialogs/gnome-print-font-picker.c:198
+msgid "Name of the selected font"
+msgstr "已選取的字型的名稱"
+
+#: src/dialogs/gnome-print-font-picker.c:206
+msgid "Preview text"
+msgstr "預覽文字"
+
+#: src/dialogs/gnome-print-font-picker.c:207
+msgid "Preview text shown in the dialog"
+msgstr "預覽對話窗中的文字"
+
+#: src/dialogs/gnome-print-font-picker.c:215
+msgid "Use font in label"
+msgstr "字型本身反映在標籤內"
+
+#: src/dialogs/gnome-print-font-picker.c:216
+msgid "Use font in the label in font info mode"
+msgstr "在字型資訊模式中，使用字型本身來繪畫代表該字型的標籤"
+
+#: src/dialogs/gnome-print-font-picker.c:224
+msgid "Font size for label"
+msgstr "字型大小反映在標籤內"
+
+#: src/dialogs/gnome-print-font-picker.c:225
+msgid "Font size for label in font info mode"
+msgstr "在字型資訊模式中，使用選定的字型大小來繪畫代表該字型的標籤"
+
+#: src/dialogs/gnome-print-font-picker.c:235
+msgid "Show size"
+msgstr "顯示大小"
+
+#: src/dialogs/gnome-print-font-picker.c:236
+msgid "Show size in font info mode"
+msgstr "在字型資訊模式中顯示字型大小"
+
+#: src/dialogs/gnome-print-font-picker.c:1015
+msgid "Font"
+msgstr "字型"
+
+#. gnome_print_font_picker_update_font_info
+#: src/dialogs/goto-line.glade2.h:1
+msgid "Goto Line"
+msgstr "移至指定行數"
+
+#: src/dialogs/goto-line.glade2.h:2
+msgid "_Line number:"
+msgstr "行號(_L)："
+
+#: src/dialogs/plugin-manager.glade2.h:1
+msgid "C_onfigure plugin"
+msgstr "設定增效模組(_O)"
+
+#: src/dialogs/plugin-manager.glade2.h:2
+msgid "Configure the selected plugin"
+msgstr "設定選定的增效模組"
+
+#: src/dialogs/plugin-manager.glade2.h:3
+msgid "De_tails"
+msgstr "詳細資料(_T)"
+
+#: src/dialogs/plugin-manager.glade2.h:4
+msgid "_Description"
+msgstr "描述(_D)"
+
+#: src/dialogs/plugin-manager.glade2.h:5
+msgid "dialog1"
+msgstr "dialog1"
+
+#: src/dialogs/program-location-dialog.glade2.h:2
+msgid "_Location to search for:"
+msgstr "搜尋的位置(_L)："
+
+#: src/dialogs/program-location-dialog.glade2.h:3
+msgid "label"
+msgstr "標籤"
+
+#: src/dialogs/replace.glade2.h:2
+msgid "Find Next"
+msgstr "繼續搜尋"
+
+#: src/dialogs/replace.glade2.h:3
+msgid "Match _entire word only"
+msgstr "只符合整個字詞(_E)"
+
+#: src/dialogs/replace.glade2.h:5
+msgid "Replace All"
+msgstr "全部取代"
+
+#: src/dialogs/replace.glade2.h:6
+msgid "Replace _with: "
+msgstr "取代為(_W)："
+
+#: src/dialogs/replace.glade2.h:7
+msgid "_Match case"
+msgstr "符合大小寫(_M)"
+
+#: src/dialogs/replace.glade2.h:8
+msgid "_Search for: "
+msgstr "搜尋(_S)："
+
+#: src/dialogs/replace.glade2.h:9
+msgid "_Wrap around"
+msgstr "回到檔案開始部份再搜尋(_W)"
+
+#: src/dialogs/uri.glade2.h:2
+msgid "Enter the _location (URI) of the file you would like to open:"
+msgstr "輸入準備開啟的檔案的位置[URI](_L)："
+
+#: src/dialogs/uri.glade2.h:3
+msgid "Open from URI"
+msgstr "從 URI 開啟"
+
+#: src/gedit-commands.c:471
+msgid "translator_credits"
+msgstr ""
+"i18n 程式中文化計劃\n"
+"http://i18n.linux.org.tw/\n"
+"\n"
+"Abel Cheung <maddog@linux.org.hk>, 2001-2003\n"
+"Jing-Jong Shyue <shyue@sonoma.com.tw>, 2000"
+
+#: src/gedit-commands.c:496
+msgid "gedit"
+msgstr "gedit"
+
+#: src/gedit-commands.c:499
+msgid "gedit is a small and lightweight text editor for Gnome"
+msgstr "gedit 是適用於 GNOME 的小型文字編輯器"
+
+#: src/gedit-document.c:545 src/gedit-document.c:563
+#, c-format
+msgid "%s %d"
+msgstr "%s %d"
+
+#: src/gedit-document.c:545 src/gedit-document.c:563
+msgid "Untitled"
+msgstr "未命名"
+
+#: src/gedit-document.c:551 src/gedit-document.c:598
+msgid "Invalid file name"
+msgstr "無效的檔案名稱"
+
+#: src/gedit-document.c:710 src/gedit-document.c:794
+msgid "Invalid UTF-8 data"
+msgstr "無效的 UTF-8 數據"
+
+#: src/gedit-document.c:1024
+#, c-format
+msgid "Could not read symbolic link information for %s"
+msgstr "無法讀取 %s 的符號連結資訊"
+
+#: src/gedit-document.c:1070
+msgid "The file has too many symbolic links."
+msgstr "跟隨符號連結的層數太多。"
+
+#: src/gedit-document.c:1126
+#, c-format
+msgid "gedit cannot handle %s: locations in write mode."
+msgstr "在寫入模式中 gedit 無法處理 %s: 位置。"
+
+#: src/gedit-document.c:1133
+msgid "gedit cannot handle this kind of location in write mode."
+msgstr "在寫入模式中 gedit 無法處理這種位置。"
+
+#: src/gedit-document.c:1146
+msgid "Invalid filename."
+msgstr "檔案名稱無效。"
+
+#: src/gedit-document.c:1286
+msgid ""
+"There is not enough disk space to save the file.\n"
+"Please free some disk space and try again."
+msgstr ""
+"剩餘的磁碟空間不足以儲存檔案。\n"
+"請先騰空一部份磁碟空間並再嘗試。"
+
+#: src/gedit-document.c:1291
+msgid ""
+"The disk where you are trying to save the file has a limitation on file "
+"sizes.  Please try saving a smaller file or saving it to a disk that does "
+"not have this limitation."
+msgstr ""
+"準備用來儲存檔案的磁碟加上了有關檔案大小的限制。請嘗試儲存較小的檔案或儲存至"
+"另一個沒有檔案大小限制的磁碟。"
+
+#: src/gedit-document.c:1330
+msgid "Could not create a backup file."
+msgstr "無法建立備份檔。"
+
+#: src/gedit-document.c:1448
+msgid "It is not possible to revert an Untitled document"
+msgstr "不可能還原未命名的文件"
+
+#: src/gedit-file-selector-util.c:147
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"Do you want to replace it with the one you are saving?"
+msgstr ""
+"另一個名稱為“%s”的檔案已經存在。\n"
+"是否要用準備儲存的版本覆寫該檔案？"
+
+#: src/gedit-file-selector-util.c:158
+#, c-format
+msgid ""
+"The file \"%s\" is read-only.\n"
+"Do you want to try to replace it with the one you are saving?"
+msgstr ""
+"檔案“%s”是唯讀檔案。\n"
+"是否要用準備儲存的版本覆寫該檔案？"
+
+#: src/gedit-file-selector-util.c:544
+msgid "Select a filename to save"
+msgstr "請選擇準備儲存的檔案的名稱"
+
+#: src/gedit-file.c:151
+msgid "Open File..."
+msgstr "開啟檔案..."
+
+#: src/gedit-file.c:177 src/gedit-file.c:887
+#, c-format
+msgid "Loaded file '%s'"
+msgstr "已載入檔案‘%s’"
+
+#: src/gedit-file.c:309 src/gedit-file.c:455
+#, c-format
+msgid "Saving file '%s'..."
+msgstr "正在儲存檔案‘%s’..."
+
+#: src/gedit-file.c:337 src/gedit-file.c:470
+msgid "The document has not been saved."
+msgstr "該文件並未儲存。"
+
+#: src/gedit-file.c:351 src/gedit-file.c:467
+#, c-format
+msgid "File '%s' saved."
+msgstr "檔案‘%s’已儲存。"
+
+#: src/gedit-file.c:434
+msgid "Save as..."
+msgstr "另存新檔 ..."
+
+#: src/gedit-file.c:628
+#, c-format
+msgid ""
+"Do you want to revert to saved the document '%s'?\n"
+"\n"
+"You will not be able to undo this operation."
+msgstr ""
+"是否要將文件‘%s’還原為已儲存的版本？\n"
+"\n"
+"這種操作是不能夠復原的。"
+
+#: src/gedit-file.c:638 src/gedit-ui.xml.h:99
+msgid "_Revert"
+msgstr "還原(_R)"
+
+#: src/gedit-file.c:672
+#, c-format
+msgid "Reverting file '%s'..."
+msgstr "正在還原檔案‘%s’..."
+
+#: src/gedit-file.c:685
+msgid "The document has not been reverted."
+msgstr "該文件並未還原。"
+
+#: src/gedit-file.c:695
+#, c-format
+msgid "File '%s' reverted."
+msgstr "檔案‘%s’已還原。"
+
+#: src/gedit-file.c:721
+#, c-format
+msgid "Loading %d files..."
+msgstr "正在載入 %d 個檔案..."
+
+#: src/gedit-file.c:757
+#, c-format
+msgid "The file \"%s\" does not exist. Would you like to create it?"
+msgstr "檔案“%s”不存在。是否現在建立該檔案？"
+
+#: src/gedit-file.c:812
+#, c-format
+msgid "Loaded %i files"
+msgstr "已載入 %i 個檔案"
+
+#: src/gedit-file.c:945
+msgid "Could not read data from stdin."
+msgstr "無法由標準輸入讀取資料。"
+
+#. Read only
+#: src/gedit-mdi-child.c:215
+msgid "RO"
+msgstr "唯讀"
+
+#. Add the detach tab button
+#: src/gedit-mdi-child.c:539 src/gedit-ui.xml.h:89
+msgid "_Move to New Window"
+msgstr "移至新的視窗(_M)"
+
+#: src/gedit-mdi.c:446
+msgid "Open a file."
+msgstr "開啟檔案。"
+
+#: src/gedit-mdi.c:1032
+#, c-format
+msgid ""
+"Do you want to save the changes you made to the document \"%s\"? \n"
+"\n"
+"Your changes will be lost if you don't save them."
+msgstr ""
+"是否要儲存對文件“%s”所作的修改？\n"
+"\n"
+"如果不儲存，將會失去修改後的資料。"
+
+#: src/gedit-mdi.c:1037
+msgid "Do_n't save"
+msgstr "不要儲存(_N)"
+
+#: src/gedit-mdi.c:1056
+msgid "_Don't quit"
+msgstr "不要離開(_D)"
+
+#: src/gedit-mdi.c:1060
+msgid "_Don't close"
+msgstr "不要關閉(_D)"
+
+#: src/gedit-mdi.c:1150
+msgid "(modified)"
+msgstr "(已更改)"
+
+#: src/gedit-mdi.c:1156
+msgid "(readonly)"
+msgstr "(唯讀)"
+
+#: src/gedit-plugins-engine.c:352
+#, c-format
+msgid "Error, unable to open module file '%s'\n"
+msgstr "發生錯誤，無法開啟模組檔案‘%s’\n"
+
+#: src/gedit-plugins-engine.c:362
+#, c-format
+msgid "Error, plugin '%s' does not contain init function."
+msgstr "發生錯誤，增效模組‘%s’沒有包含 init 函式。"
+
+#: src/gedit-plugins-engine.c:372
+#, c-format
+msgid "Error, plugin '%s' does not contain activate function."
+msgstr "發生錯誤，增效模組‘%s’沒有包含 activate 函式。"
+
+#: src/gedit-plugins-engine.c:382
+#, c-format
+msgid "Error, plugin '%s' does not contain deactivate function."
+msgstr "發生錯誤，增效模組‘%s’沒有包含 deactivate 函式。"
+
+#: src/gedit-plugins-engine.c:407
+#, c-format
+msgid "Error, impossible to initialize plugin '%s'"
+msgstr "發生錯誤，無法初始化增效模組‘%s’"
+
+#: src/gedit-plugins-engine.c:458
+#, c-format
+msgid "Error, impossible to destroy plugin '%s'"
+msgstr "發生錯誤，無法去除增效模組‘%s’"
+
+#: src/gedit-plugins-engine.c:541 src/gedit-plugins-engine.c:629
+#, c-format
+msgid "Error, impossible to activate plugin '%s'"
+msgstr "發生錯誤，無法啟用增效模組‘%s’"
+
+#: src/gedit-plugins-engine.c:580
+#, c-format
+msgid "Error, impossible to deactivate plugin '%s'"
+msgstr "發生錯誤，無法停用增效模組‘%s’"
+
+#: src/gedit-plugins-engine.c:673
+#, c-format
+msgid "Error, impossible to update ui of the plugin '%s'"
+msgstr "發生錯誤，無法更新增效模組‘%s’的使用者介面"
+
+#: src/gedit-prefs-manager.c:335
+msgid "Cannot initialize preferences manager."
+msgstr "無法初始化偏好設定管理員。"
+
+#: src/gedit-prefs-manager.c:1756
+#, c-format
+msgid "Expected `%s' got `%s' for key %s"
+msgstr "設定鍵 %3$s 的應該是‘%1$s’但實際上是‘%2$s’"
+
+#: src/gedit-print.c:188
+msgid ""
+"gedit is unable to print since it cannot find\n"
+"one of the required fonts."
+msgstr "gedit 無法列印，因為它找不到其中一款必須使用的字型。"
+
+#: src/gedit-print.c:374
+#, c-format
+msgid "File: %s"
+msgstr "檔案：%s"
+
+#. Print right text
+#: src/gedit-print.c:381
+#, c-format
+msgid "Page: %d"
+msgstr "頁數：%d"
+
+#: src/gedit-print.c:522
+msgid "gedit - Print Preview"
+msgstr "gedit ─ 列印預覽"
+
+#: src/gedit-print.c:600
+#, c-format
+msgid ""
+"An error occurred while printing.\n"
+"\n"
+"%s,"
+msgstr ""
+"當列印時發生錯誤。\n"
+"\n"
+"%s，"
+
+#: src/gedit-ui.xml.h:1
+msgid "About this application"
+msgstr "關於本應用軟件"
+
+#: src/gedit-ui.xml.h:2
+msgid "C_ustomize Statusbar"
+msgstr "自選狀態列樣式(_U)"
+
+#: src/gedit-ui.xml.h:3
+msgid "Change the visibility of the output window in the current window"
+msgstr "切換目前視窗中是否顯示輸出視窗"
+
+#: src/gedit-ui.xml.h:4
+msgid "Change the visibility of the statusbar in the current window"
+msgstr "切換目前視窗中是否顯示狀態列"
+
+#: src/gedit-ui.xml.h:5
+msgid "Change the visibility of the toolbar in the current window"
+msgstr "切換目前視窗中是否顯示工具列"
+
+#: src/gedit-ui.xml.h:6
+msgid "Close"
+msgstr "關閉"
+
+#: src/gedit-ui.xml.h:7
+msgid "Close all open files"
+msgstr "關閉所有開啟的檔案"
+
+#: src/gedit-ui.xml.h:8
+msgid "Close the current file"
+msgstr "關閉目前的檔案"
+
+#: src/gedit-ui.xml.h:9
+msgid "Configure the application"
+msgstr "設定應用軟件"
+
+#: src/gedit-ui.xml.h:10
+msgid "Copy"
+msgstr "複製"
+
+#: src/gedit-ui.xml.h:11
+msgid "Copy the selection"
+msgstr "複製選擇區域"
+
+#: src/gedit-ui.xml.h:12
+msgid "Create a new document"
+msgstr "新增文件"
+
+#: src/gedit-ui.xml.h:13
+msgid "Cu_t"
+msgstr "剪下(_T)"
+
+#: src/gedit-ui.xml.h:14
+msgid "Customize"
+msgstr "自選"
+
+#: src/gedit-ui.xml.h:15
+msgid "Customize toolbars"
+msgstr "自選工具列樣式"
+
+#: src/gedit-ui.xml.h:16
+msgid "Cut"
+msgstr "剪下"
+
+#: src/gedit-ui.xml.h:17
+msgid "Cut the selection"
+msgstr "剪下選擇區域"
+
+#: src/gedit-ui.xml.h:18
+msgid "Delete"
+msgstr "刪除"
+
+#: src/gedit-ui.xml.h:19
+msgid "Delete the selected text"
+msgstr "刪除選取的文字"
+
+#: src/gedit-ui.xml.h:20
+msgid "Dump XML"
+msgstr "傾印 XML"
+
+#: src/gedit-ui.xml.h:21
+msgid "Dump the UI Xml description"
+msgstr "傾印使用者介面的 XML 描述"
+
+#: src/gedit-ui.xml.h:23
+msgid "Find Again"
+msgstr "繼續搜尋"
+
+#: src/gedit-ui.xml.h:24
+msgid "Find Ne_xt"
+msgstr "繼續搜尋(_X)"
+
+#: src/gedit-ui.xml.h:25
+msgid "Go to _Line..."
+msgstr "移至指定行數(_L)..."
+
+#: src/gedit-ui.xml.h:26
+msgid "Go to a specific line number"
+msgstr "移至指定的行號"
+
+#: src/gedit-ui.xml.h:27
+msgid "Icon and _Text"
+msgstr "圖示及文字(_T)"
+
+#: src/gedit-ui.xml.h:28
+msgid "Main toolbar"
+msgstr "主工具列"
+
+#: src/gedit-ui.xml.h:29
+msgid "Move the current document to a new window"
+msgstr "將目前的文件移至新的視窗"
+
+#: src/gedit-ui.xml.h:30
+msgid "New"
+msgstr "新增"
+
+#: src/gedit-ui.xml.h:31
+msgid "Only show icons in the toolbar"
+msgstr "工具列上只顯示圖示"
+
+#: src/gedit-ui.xml.h:33
+msgid "Open Location..."
+msgstr "開啟位置..."
+
+#: src/gedit-ui.xml.h:34
+msgid "Open _Location..."
+msgstr "開啟位置(_L)..."
+
+#: src/gedit-ui.xml.h:35
+msgid "Open a file"
+msgstr "開啟檔案"
+
+#: src/gedit-ui.xml.h:36
+msgid "Open a file from a specified location"
+msgstr "開啟指定位置的檔案"
+
+#: src/gedit-ui.xml.h:37
+msgid "Open the gedit manual"
+msgstr "開啟 gedit 手冊"
+
+#: src/gedit-ui.xml.h:38
+msgid "Paste"
+msgstr "貼上"
+
+#: src/gedit-ui.xml.h:39
+msgid "Paste the clipboard"
+msgstr "貼上剪貼簿的內容"
+
+#: src/gedit-ui.xml.h:40
+msgid "Pr_eferences"
+msgstr "偏好設定(_E)"
+
+#: src/gedit-ui.xml.h:42
+msgid "Print Previe_w..."
+msgstr "列印預覽(_W)..."
+
+#: src/gedit-ui.xml.h:43
+msgid "Print Preview"
+msgstr "列印預覽"
+
+#: src/gedit-ui.xml.h:44
+msgid "Print Setup"
+msgstr "列印設定"
+
+#: src/gedit-ui.xml.h:45
+msgid "Print preview"
+msgstr "列印預覽"
+
+#: src/gedit-ui.xml.h:46
+msgid "Print the current file"
+msgstr "列印目前的檔案"
+
+#: src/gedit-ui.xml.h:47
+msgid "Quit"
+msgstr "離開"
+
+#: src/gedit-ui.xml.h:48
+msgid "Quit the program"
+msgstr "離開本程式"
+
+#: src/gedit-ui.xml.h:49
+msgid "Redo"
+msgstr "取消復原"
+
+#: src/gedit-ui.xml.h:50
+msgid "Redo the undone action"
+msgstr "重新進行上次被復原的操作"
+
+#: src/gedit-ui.xml.h:52
+msgid "Replace a string"
+msgstr "取代字串"
+
+#: src/gedit-ui.xml.h:53
+msgid "Revert"
+msgstr "還原"
+
+#: src/gedit-ui.xml.h:54
+msgid "Revert to a saved version of the file"
+msgstr "將檔案還原為已儲存的版本"
+
+#: src/gedit-ui.xml.h:56
+msgid "Save As"
+msgstr "另存新檔"
+
+#: src/gedit-ui.xml.h:57
+msgid "Save _As..."
+msgstr "另存新檔(_A)..."
+
+#: src/gedit-ui.xml.h:58
+msgid "Save all open files"
+msgstr "儲存所有開啟的檔案"
+
+#: src/gedit-ui.xml.h:59
+msgid "Save the current file"
+msgstr "儲存目前的檔案"
+
+#: src/gedit-ui.xml.h:60
+msgid "Save the current file with a different name"
+msgstr "以另一個檔案名稱儲存目前的檔案"
+
+#: src/gedit-ui.xml.h:61
+msgid "Search again for the same string"
+msgstr "再尋找同一個字串"
+
+#: src/gedit-ui.xml.h:62
+msgid "Search for a string"
+msgstr "尋找一個字串"
+
+#: src/gedit-ui.xml.h:63
+msgid "Select All"
+msgstr "全部選取"
+
+#: src/gedit-ui.xml.h:64
+msgid "Select _All"
+msgstr "全部選取(_A)"
+
+#: src/gedit-ui.xml.h:65
+msgid "Select the entire document"
+msgstr "選取整份文件"
+
+#: src/gedit-ui.xml.h:66
+msgid "Set toolbar button style according to desktop default"
+msgstr "根據桌面預設的佈置設置工具列按鈕的樣式"
+
+#: src/gedit-ui.xml.h:67
+msgid "Setup the page settings for your current printer"
+msgstr "更改目前印表機的頁面設定"
+
+#: src/gedit-ui.xml.h:68
+msgid "Show _Cursor Position"
+msgstr "顯示游標位置(_C)"
+
+#: src/gedit-ui.xml.h:69
+msgid "Show _Overwrite Mode"
+msgstr "顯示覆寫模式(_O)"
+
+#: src/gedit-ui.xml.h:70
+msgid "Show cursor position in the statusbar"
+msgstr "在狀態列顯示游標位置"
+
+#: src/gedit-ui.xml.h:71
+msgid "Show overwrite mode in the statusbar"
+msgstr "在狀態列顯示覆寫模式"
+
+#: src/gedit-ui.xml.h:73
+msgid "Undo the last action"
+msgstr "復原上次的操作"
+
+#: src/gedit-ui.xml.h:74
+msgid "_About"
+msgstr "關於(_A)"
+
+#: src/gedit-ui.xml.h:75
+msgid "_Close"
+msgstr "關閉(_C)"
+
+#: src/gedit-ui.xml.h:76
+msgid "_Close All"
+msgstr "全部關閉(_C)"
+
+#: src/gedit-ui.xml.h:77
+msgid "_Contents"
+msgstr "內容(_C)"
+
+#: src/gedit-ui.xml.h:78
+msgid "_Copy"
+msgstr "複製(_C)"
+
+#: src/gedit-ui.xml.h:79
+msgid "_Customize Toolbar"
+msgstr "自選工具列樣式(_C)"
+
+#: src/gedit-ui.xml.h:80
+msgid "_Debug"
+msgstr "偵錯(_D)"
+
+#: src/gedit-ui.xml.h:81
+msgid "_Delete"
+msgstr "刪除(_D)"
+
+#: src/gedit-ui.xml.h:82
+msgid "_Desktop Default"
+msgstr "桌面預設佈置(_D)"
+
+#: src/gedit-ui.xml.h:83
+msgid "_Documents"
+msgstr "文件(_D)"
+
+#: src/gedit-ui.xml.h:84
+msgid "_Edit"
+msgstr "編輯(_E)"
+
+#: src/gedit-ui.xml.h:85
+msgid "_File"
+msgstr "檔案(_F)"
+
+#: src/gedit-ui.xml.h:86
+msgid "_Find..."
+msgstr "搜尋(_F)..."
+
+#: src/gedit-ui.xml.h:87
+msgid "_Help"
+msgstr "求助(_H)"
+
+#: src/gedit-ui.xml.h:88
+msgid "_Icon"
+msgstr "圖示(_I)"
+
+#: src/gedit-ui.xml.h:90
+msgid "_New"
+msgstr "新增(_N)"
+
+#: src/gedit-ui.xml.h:91
+msgid "_Open..."
+msgstr "開啟(_O)..."
+
+#: src/gedit-ui.xml.h:92
+msgid "_Output Window"
+msgstr "輸出視窗(_O)"
+
+#: src/gedit-ui.xml.h:93
+msgid "_Paste"
+msgstr "貼上(_P)..."
+
+#: src/gedit-ui.xml.h:94
+msgid "_Print..."
+msgstr "列印(_P)..."
+
+#: src/gedit-ui.xml.h:95
+msgid "_Priority Text beside Icons"
+msgstr "文字在圖示旁邊(_P)"
+
+#: src/gedit-ui.xml.h:96
+msgid "_Quit"
+msgstr "離開(_Q)"
+
+#: src/gedit-ui.xml.h:97
+msgid "_Redo"
+msgstr "取消復原(_R)"
+
+#: src/gedit-ui.xml.h:98
+msgid "_Replace..."
+msgstr "取代(_R)..."
+
+#: src/gedit-ui.xml.h:100
+msgid "_Save"
+msgstr "儲存(_S)"
+
+#: src/gedit-ui.xml.h:101
+msgid "_Save All"
+msgstr "全部儲存(_S)"
+
+#: src/gedit-ui.xml.h:102
+msgid "_Search"
+msgstr "搜尋(_S)"
+
+#: src/gedit-ui.xml.h:103
+msgid "_Statusbar"
+msgstr "狀態列(_S)"
+
+#: src/gedit-ui.xml.h:104
+msgid "_Toolbar"
+msgstr "工具列(_T)"
+
+#: src/gedit-ui.xml.h:105
+msgid "_Tools"
+msgstr "工具(_T)"
+
+#: src/gedit-ui.xml.h:106
+msgid "_Undo"
+msgstr "復原(_U)"
+
+#: src/gedit-ui.xml.h:107
+msgid "_View"
+msgstr "檢視(_V)"
+
+#: src/gedit-utils.c:795
+#, c-format
+msgid ""
+"Could not find the file \"%s\".\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"找不到檔案“%s”。\n"
+"\n"
+"請檢查所輸入的位置是否正確，並再試一次。"
+
+#: src/gedit-utils.c:802
+#, c-format
+msgid "Could not open the file \"%s\" because it contains corrupted data."
+msgstr "無法開啟檔案“%s”，因為它含有損壞的資料。"
+
+#: src/gedit-utils.c:813
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because gedit cannot handle %s: locations."
+msgstr "無法開啟檔案“%s”，因為 gedit 不能處理 %s: 方式的位置。"
+
+#: src/gedit-utils.c:819
+#, c-format
+msgid "Could not open the file \"%s\""
+msgstr "無法開啟檔案“%s”"
+
+#: src/gedit-utils.c:829
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because it contains data in an invalid format."
+msgstr "無法開啟檔案“%s”，因為它包含無效格式的資料。"
+
+#: src/gedit-utils.c:836
+#, c-format
+msgid "Could not open the file \"%s\" because it is too big."
+msgstr "無法開啟檔案“%s”，因為檔案太大。"
+
+#: src/gedit-utils.c:843
+#, c-format
+msgid ""
+"\"%s\" is not a valid location.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"“%s”不是有效的位置。\n"
+"\n"
+"請檢查所輸入的位置是否正確，並再試一次。"
+
+#: src/gedit-utils.c:850
+#, c-format
+msgid "Could not open the file \"%s\" because access was denied."
+msgstr "無法開啟檔案“%s”，因為已被拒絕存取檔案。"
+
+#: src/gedit-utils.c:857
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because there are too many open files.\n"
+"\n"
+"Please, close some open file and try again."
+msgstr ""
+"無法開啟檔案“%s”，因為已開啟的檔案太多。\n"
+"\n"
+"請先關閉一部份已開啟的檔案並再嘗試。"
+
+#: src/gedit-utils.c:865
+#, c-format
+msgid ""
+"\"%s\" is a directory.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"“%s”是一個目錄。\n"
+"\n"
+"請檢查所輸入的位置是否正確並再嘗試。"
+
+#: src/gedit-utils.c:872
+#, c-format
+msgid ""
+"Not enough available memory to open the file \"%s\". Please, close some "
+"running application and try again."
+msgstr ""
+"剩下的記憶體不足以開啟檔案“%s”。請先關閉一部份執行中的應用程式並再嘗試。"
+
+#: src/gedit-utils.c:898
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because no host \"%s\" could be found.\n"
+"\n"
+"Please, check that you typed the location correctly and that your proxy "
+"settings are correct and then try again."
+msgstr ""
+"無法開啟檔案“%s”，因為找不到主機“%s”。\n"
+"\n"
+"請檢查所輸入的位置和代理伺服器的設定是否正確並再嘗試。"
+
+#: src/gedit-utils.c:913
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the host name was invalid.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"無法開啟檔案“%s”，因為主機名稱無效。\n"
+"\n"
+"請檢查所輸入的位置是否正確並再嘗試。"
+
+#: src/gedit-utils.c:920
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the host name was empty.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+"無法開啟檔案“%s”，因為主機名稱是空白的。\n"
+"\n"
+"請檢查代理伺服器的設定是否正確並再嘗試。"
+
+#: src/gedit-utils.c:927
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the attempt to log in failed.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"無法開啟檔案“%s”，因為登入的嘗試已經失敗。\n"
+"\n"
+"請檢查所輸入的位置是否正確並再嘗試。"
+
+#: src/gedit-utils.c:935
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because it contains invalid UTF-8 data.\n"
+"\n"
+"Probably, you are trying to open a binary file."
+msgstr ""
+"無法開啟檔案“%s”，因為它含有無效的 UTF-8 資料。\n"
+"\n"
+"您可能是在嘗試開啟二元碼檔案。"
+
+#: src/gedit-utils.c:973
+#, c-format
+msgid "Could not open the file \"%s\"."
+msgstr "無法開啟檔案“%s”。"
+
+#: src/gedit-utils.c:1024
+#, c-format
+msgid "Could not save the file \"%s\"."
+msgstr "無法儲存檔案“%s”。"
+
+#: src/gedit-utils.c:1028
+#, c-format
+msgid ""
+"Could not save the file \"%s\".\n"
+"\n"
+"%s"
+msgstr ""
+"無法儲存檔案“%s”。\n"
+"\n"
+"%s。"
+
+#: src/gedit-utils.c:1081
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because gedit cannot find it.\n"
+"\n"
+"Perhaps, it has recently been deleted."
+msgstr ""
+"無法還原檔案“%s”，因為 gedit 找不到該檔案。\n"
+"\n"
+"可能該檔案最近已被刪除。"
+
+#: src/gedit-utils.c:1088
+#, c-format
+msgid "Could not revert the file \"%s\" because it contains corrupted data."
+msgstr "無法還原檔案“%s”，因為它含有損壞的資料。"
+
+#: src/gedit-utils.c:1099
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because gedit cannot handle %s: locations."
+msgstr "無法還原檔案“%s”，因為 gedit 不能處理 %s: 方式的位置。"
+
+#: src/gedit-utils.c:1105 src/gedit-utils.c:1245
+#, c-format
+msgid "Could not revert the file \"%s\"."
+msgstr "無法還原檔案“%s”。"
+
+#: src/gedit-utils.c:1115
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because it contains data in an invalid "
+"format."
+msgstr "無法還原檔案“%s”，因為它包含無效格式的資料。"
+
+#: src/gedit-utils.c:1122
+#, c-format
+msgid "Could not revert the file \"%s\" because it is too big."
+msgstr "無法還原檔案“%s”，因為檔案太大。"
+
+#: src/gedit-utils.c:1129
+#, c-format
+msgid "Could not revert the file \"%s\" because access was denied."
+msgstr "無法還原檔案“%s”，因為已被拒絕存取檔案。"
+
+#: src/gedit-utils.c:1136
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because there are too many open files.\n"
+"\n"
+"Please, close some open file and try again."
+msgstr ""
+"無法還原檔案“%s”，因為已開啟的檔案太多。\n"
+"\n"
+"請先關閉一部份已開啟的檔案並再嘗試。"
+
+#: src/gedit-utils.c:1144
+#, c-format
+msgid ""
+"Not enough available memory to revert the file \"%s\". Please, close some "
+"running application and try again."
+msgstr ""
+"剩下的記憶體不足以還原檔案“%s”。請先關閉一部份執行中的應用程式並再嘗試。"
+
+#: src/gedit-utils.c:1170
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because no host \"%s\" could be found.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+"無法還原檔案“%s”，因為找不到主機“%s”。\n"
+"\n"
+"請檢查代理伺服器的設定是否正確並再嘗試。"
+
+#: src/gedit-utils.c:1184
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because the host name was empty.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+"無法還原檔案“%s”，因為主機名稱是空白的。\n"
+"\n"
+"請檢查代理伺服器的設定是否正確並再嘗試。"
+
+#: src/gedit-utils.c:1191
+#, c-format
+msgid "Could not revert the file \"%s\" because the attempt to log in failed."
+msgstr "無法還原檔案“%s”，因為登入的嘗試已經失敗。"
+
+#: src/gedit-utils.c:1198
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because it contains invalid UTF-8 data.\n"
+"\n"
+"Probably, you are trying to revert a binary file."
+msgstr ""
+"無法還原檔案“%s”，因為它含有無效的 UTF-8 資料。\n"
+"\n"
+"你可能是在嘗試還原二元碼檔案。"
+
+#: src/gedit-utils.c:1207
+msgid "It is not possible to revert an Untitled document."
+msgstr "不可能還原未命名的文件"
+
+#: src/gedit-utils.c:1296
+#, c-format
+msgid "The file \"%s\" already exists."
+msgstr "檔案“%s”已經存在。"
+
+#: src/gedit-utils.c:1302
+#, c-format
+msgid ""
+"\"%s\" is a directory.\n"
+"\n"
+"Please, check that you typed the location correctly."
+msgstr ""
+"“%s”是一個目錄。\n"
+"\n"
+"請檢查所輸入的位置是否正確。"
+
+#: src/gedit-utils.c:1311
+#, c-format
+msgid ""
+"Cannot create the file \"%s\".\n"
+"\n"
+"Make sure you have the appropriate write permissions."
+msgstr ""
+"無法建立檔案“%s”。\n"
+"\n"
+"請確定您有正確的權限寫入檔案。"
+
+#: src/gedit-utils.c:1318
+#, c-format
+msgid ""
+"Cannot create the file \"%s\".\n"
+"\n"
+"The file name is too long."
+msgstr ""
+"無法建立檔案“%s”。\n"
+"\n"
+"檔案名稱太長。"
+
+#: src/gedit-utils.c:1325
+#, c-format
+msgid ""
+"Cannot create the file \"%s\".\n"
+"\n"
+"A directory component in the file name does not exist or is a dangling "
+"symbolic link."
+msgstr ""
+"無法建立檔案“%s”。\n"
+"\n"
+"檔案名稱中的部份目錄不存在，或只是錯誤的符號連結。"
+
+#: src/gedit-utils.c:1334
+#, c-format
+msgid ""
+"There is not enough disk space to create the file \"%s\".\n"
+"\n"
+"Please free some disk space and try again."
+msgstr ""
+"剩餘的磁碟空間不足以儲存檔案“%s”。\n"
+"\n"
+"請先騰空一部份磁碟空間並再嘗試。"
+
+#: src/gedit-utils.c:1340
+#, c-format
+msgid "Could not create the file \"%s\"."
+msgstr "無法建立檔案“%s”。"
+
+#.
+#. if (col == chars)
+#. msg = g_strdup_printf (_("  Ln %d, Col. %d"), row + 1, col + 1);
+#. else
+#. msg = g_strdup_printf (_("  Ln %d, Col. %d-%d"), row + 1, chars + 1, col + 1);
+#.
+#: src/gedit-view.c:1072
+#, c-format
+msgid "  Ln %d, Col. %d"
+msgstr "第 %d 行，%d 字元"
+
+#: src/gedit-view.c:1110
+msgid "  OVR"
+msgstr "覆寫"
+
+#: src/gedit-view.c:1112
+msgid "  INS"
+msgstr "插入"
+
+#: src/gedit2.c:77
+msgid "Show utility debugging messages."
+msgstr "顯示公用程式的除錯訊息。"
+
+#: src/gedit2.c:80
+msgid "Show mdi debugging messages."
+msgstr "顯示 MDI 除錯訊息。"
+
+#: src/gedit2.c:83
+msgid "Show commands debugging messages."
+msgstr "顯示指令的除錯訊息。"
+
+#: src/gedit2.c:86
+msgid "Show document debugging messages."
+msgstr "顯示文件的除錯訊息。"
+
+#: src/gedit2.c:89
+msgid "Show file debugging messages."
+msgstr "顯示檔案的除錯訊息。"
+
+#: src/gedit2.c:92
+msgid "Show plugin debugging messages."
+msgstr "顯示增效模組的除錯訊息。"
+
+#: src/gedit2.c:95
+msgid "Show prefs debugging messages."
+msgstr "顯示偏好的偵錯訊息。"
+
+#: src/gedit2.c:98
+msgid "Show printing debugging messages."
+msgstr "顯示列印的偵錯訊息。"
+
+#: src/gedit2.c:101
+msgid "Show search debugging messages."
+msgstr "顯示搜尋的偵錯訊息。"
+
+#: src/gedit2.c:104
+msgid "Show undo debugging messages."
+msgstr "顯示還原操作的偵錯訊息。"
+
+#: src/gedit2.c:107
+msgid "Show view debugging messages."
+msgstr "顯示檢視的偵錯訊息。"
+
+#: src/gedit2.c:110
+msgid "Show recent debugging messages."
+msgstr "顯示有關最近開啟的檔案的偵錯訊息。"
+
+#: src/gedit2.c:113
+msgid "Show session management debugging messages."
+msgstr "顯示有關作業階段管理的除錯訊息。"
+
+#: src/gedit2.c:116
+msgid "Turn on all debugging messages."
+msgstr "顯示所有的偵錯訊息。"
+
+#: src/gedit2.c:119
+msgid "Quit an existing instance of gedit"
+msgstr "關閉所有正在執行的 gedit"
+
+#: src/gedit2.c:122
+msgid "Create a new toplevel window in an existing instance of gedit"
+msgstr "開啟一個屬於已執行的 gedit 的新視窗"
+
+#: src/gedit2.c:125
+msgid "Create a new document in an existing instance of gedit"
+msgstr "在已執行的 gedit 中開啟新的文件"
+
+#: src/gedit-output-window.c:278
+msgid "Close the output window"
+msgstr "關閉輸出視窗"
+
+#: src/gedit-output-window.c:316
+msgid "Copy selected lines"
+msgstr "複製選擇區域"
+
+#: src/gedit-output-window.c:336
+msgid "Clear the output window"
+msgstr "清除輸出視窗"
+
+#: src/gedit-output-window.c:374
+msgid "Output Lines"
+msgstr "輸出結果"
+
+#: src/dialogs/gedit-encodings-dialog.glade2.h:1
+msgid "Choose one or more e_ncodings:"
+msgstr "請選擇一個或以上的編碼(_N)："
+
+#: src/gedit-encodings.c:143 src/gedit-encodings.c:169
+#: src/gedit-encodings.c:210 src/gedit-encodings.c:260
+#: src/gedit-encodings.c:285
+msgid "Western"
+msgstr "西方"
+
+#: src/gedit-encodings.c:145 src/gedit-encodings.c:212
+#: src/gedit-encodings.c:240 src/gedit-encodings.c:281
+msgid "Central European"
+msgstr "中歐"
+
+#: src/gedit-encodings.c:147
+msgid "South European"
+msgstr "南歐"
+
+#: src/gedit-encodings.c:149 src/gedit-encodings.c:165
+#: src/gedit-encodings.c:295
+msgid "Baltic"
+msgstr "波羅的海語系"
+
+#: src/gedit-encodings.c:151 src/gedit-encodings.c:214
+#: src/gedit-encodings.c:227 src/gedit-encodings.c:231
+#: src/gedit-encodings.c:244 src/gedit-encodings.c:283
+msgid "Cyrillic"
+msgstr "古代斯拉夫文"
+
+#: src/gedit-encodings.c:153 src/gedit-encodings.c:220
+#: src/gedit-encodings.c:238 src/gedit-encodings.c:293
+msgid "Arabic"
+msgstr "阿拉伯文"
+
+#: src/gedit-encodings.c:155 src/gedit-encodings.c:250
+#: src/gedit-encodings.c:287
+msgid "Greek"
+msgstr "希臘文"
+
+#: src/gedit-encodings.c:157
+msgid "Hebrew Visual"
+msgstr "希伯來文"
+
+#: src/gedit-encodings.c:159 src/gedit-encodings.c:218
+#: src/gedit-encodings.c:256 src/gedit-encodings.c:291
+msgid "Hebrew"
+msgstr "希伯來文 [左至右]"
+
+#: src/gedit-encodings.c:161 src/gedit-encodings.c:216
+#: src/gedit-encodings.c:264 src/gedit-encodings.c:289
+msgid "Turkish"
+msgstr "土耳其文"
+
+#: src/gedit-encodings.c:163
+msgid "Nordic"
+msgstr "北歐"
+
+#: src/gedit-encodings.c:167
+msgid "Celtic"
+msgstr "凱爾特文"
+
+#: src/gedit-encodings.c:171 src/gedit-encodings.c:262
+msgid "Romanian"
+msgstr "羅馬尼亞文"
+
+#: src/gedit-encodings.c:174 src/gedit-encodings.c:176
+#: src/gedit-encodings.c:178 src/gedit-encodings.c:180
+msgid "Unicode"
+msgstr "Unicode"
+
+#: src/gedit-encodings.c:183
+msgid "Armenian"
+msgstr "阿美尼亞文"
+
+#: src/gedit-encodings.c:185 src/gedit-encodings.c:187
+#: src/gedit-encodings.c:196
+msgid "Chinese Traditional"
+msgstr "繁體中文"
+
+#: src/gedit-encodings.c:189
+msgid "Cyrillic/Russian"
+msgstr "古代斯拉夫文/俄文"
+
+#: src/gedit-encodings.c:192 src/gedit-encodings.c:223
+#: src/gedit-encodings.c:270
+msgid "Japanese"
+msgstr "日文"
+
+#: src/gedit-encodings.c:194 src/gedit-encodings.c:225
+#: src/gedit-encodings.c:229 src/gedit-encodings.c:276
+msgid "Korean"
+msgstr "韓文"
+
+#: src/gedit-encodings.c:199 src/gedit-encodings.c:201
+#: src/gedit-encodings.c:203 src/gedit-encodings.c:207
+msgid "Chinese Simplified"
+msgstr "簡體中文"
+
+#: src/gedit-encodings.c:205
+msgid "Georgian"
+msgstr "格魯吉亞文"
+
+#: src/gedit-encodings.c:233 src/gedit-encodings.c:266
+msgid "Cyrillic/Ukrainian"
+msgstr "古代斯拉夫文/烏克蘭文"
+
+#: src/gedit-encodings.c:242
+msgid "Croatian"
+msgstr "克羅地亞文"
+
+#: src/gedit-encodings.c:246
+msgid "Hindi"
+msgstr "北印度文"
+
+#: src/gedit-encodings.c:248
+msgid "Farsi"
+msgstr "波斯文"
+
+#: src/gedit-encodings.c:252
+msgid "Gujarati"
+msgstr "古吉拉特文"
+
+#: src/gedit-encodings.c:254
+msgid "Gurmukhi"
+msgstr "古爾穆希文"
+
+#: src/gedit-encodings.c:258
+msgid "Icelandic"
+msgstr "冰島文"
+
+#: src/gedit-encodings.c:272 src/gedit-encodings.c:278
+#: src/gedit-encodings.c:297
+msgid "Vietnamese"
+msgstr "越南文"
+
+#: src/gedit-encodings.c:274
+msgid "Thai"
+msgstr "泰文"
+
+#: src/recent-files/egg-recent-vfs-utils.c:90
+msgid " (invalid Unicode)"
+msgstr " (無效的 Unicode)"
+
+#~ msgid ""
+#~ "If you wish to insert any of the characters in to the active \n"
+#~ "document, select the character and click the \"Insert Char\" \n"
+#~ "button or double click the character in the table."
+#~ msgstr ""
+#~ "如果想在目前的文件中插入任何字元，請選取該字元並按「插入字元」\n"
+#~ "按鈕，或是在對照表中 double click 該字元一次。"
+
+#~ msgid "Insert char"
+#~ msgstr "插入字元"
+
+#~ msgid "Compare two files..."
+#~ msgstr "比較兩個檔案..."
+
+#~ msgid ""
+#~ "Execute a program and insert its output in the current document at the "
+#~ "current cursor position"
+#~ msgstr "執行程式並在游標目前的位置加入程式的輸出結果"
+
+#~ msgid "Could not create the Plugin Manager dialog"
+#~ msgstr "無法建立增效模組管理員的對話窗"
+
+#~ msgid "Set program location ..."
+#~ msgstr "設定程式位置..."
+
+#~ msgid ""
+#~ "Could not find the required widgets inside program-location-dialog."
+#~ "glade2.\n"
+#~ msgstr "program-location-dialog.glade2 中找不到所需的視窗元件。\n"
+
+#~ msgid "Bottom"
+#~ msgstr "底"
+
+#~ msgid "Left"
+#~ msgstr "左"
+
+#~ msgid "Right"
+#~ msgstr "右"
+
+#~ msgid "Sho_w tooltips"
+#~ msgstr "顯示工具列(_W)"
+
+#~ msgid "Show cursor _position"
+#~ msgstr "顯示游標位置(_P)"
+
+#~ msgid "Show overwrite _mode"
+#~ msgstr "顯示覆寫模式(_M)"
+
+#~ msgid "Top"
+#~ msgstr "頂"
+
+#~ msgid ""
+#~ "This is the Plugin Manager. Plugins are extra pieces of software that "
+#~ "extend gedit capabilities. From here, you can choose which plugins you "
+#~ "want to have loaded."
+#~ msgstr ""
+#~ "這是增效模組管理員。增效模組是一些額外的程式，用來擴展 gedit 的功能。你可"
+#~ "以在這裡選擇載入哪些增效模組。"
+
+#~ msgid "Case sensi_tive"
+#~ msgstr "區分大小寫(_T)"
+
+#~ msgid "Search fro_m the beginning of the document"
+#~ msgstr "由文件的開頭開始搜尋(_M)"
+
+#~ msgid "Search from the c_ursor position"
+#~ msgstr "由游標位置開始搜尋(_U)"
+
+#~ msgid "Error, the plugin '%s' did not specified a name"
+#~ msgstr "錯誤，增效模組‘%s’沒有指定名稱"
+
+#~ msgid "Error, impossible to save settings of the plugin '%s'"
+#~ msgstr "錯誤，無法儲存有關增效模組‘%s’的設定"
+
+#~ msgid "Show _Tooltips"
+#~ msgstr "顯示工具列提示(_T)"
+
+#~ msgid "Show tooltips in the toolbar"
+#~ msgstr "在狀態列顯示工具列提示"
+
+#~ msgid "Could not open backup file %s."
+#~ msgstr "無法開啟備份檔 %s。"
+
+#~ msgid "Could not open file %s."
+#~ msgstr "無法開啟檔案 %s。"
+
+#~ msgid "Could not write backup file."
+#~ msgstr "無法寫入備份檔。"
+
+#~ msgid "Error when creating backup file."
+#~ msgstr "建立備份檔時發生錯誤。"
+
+#~ msgid "Could not save the file."
+#~ msgstr "無法儲存檔案。"

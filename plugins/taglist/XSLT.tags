@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+
+<!--
+	XSLT Tags for gedit
+	Jens Askengren <jensus@linux.nu>
+-->
+<gedit:TagList xmlns:gedit="http://gedit.sourceforge.net/some-location">
+  
+	<gedit:TagGroup name="XSLT - Elements">
+		<gedit:Tag name="apply-imports">
+			<gedit:Begin>&lt;xsl:apply-imports&gt;</gedit:Begin>
+			<gedit:End>&lt;/xsl:apply-imports&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="apply-templates">
+			<gedit:Begin>&lt;xsl:apply-templates select="</gedit:Begin>
+			<gedit:End>"/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="attribute">
+			<gedit:Begin>&lt;xsl:attribute name="</gedit:Begin>
+			<gedit:End>"&gt;&lt;/xsl:attribute&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="attribute-set">
+			<gedit:Begin>&lt;xsl:attribute-set name="</gedit:Begin>
+			<gedit:End>"&gt;&lt;/xsl:attribute-set&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="call-template">
+			<gedit:Begin>&lt;xsl:call-template name="</gedit:Begin>
+			<gedit:End>"/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="choose">
+			<gedit:Begin>&lt;xsl:choose&gt;&#10;</gedit:Begin>
+			<gedit:End>&#10;&lt;/xsl:choose&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="comment">
+			<gedit:Begin>&lt;xsl:comment&gt;</gedit:Begin>
+			<gedit:End>&lt;/xsl:comment&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="copy">
+			<gedit:Begin>&lt;xsl:copy/&gt;</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="copy-of">
+			<gedit:Begin>&lt;xsl:copy-of select="</gedit:Begin>
+			<gedit:End>"/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="decimal-format">
+			<gedit:Begin>&lt;xsl:decimal-format/&gt;</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="element">
+			<gedit:Begin>&lt;xsl:element name="</gedit:Begin>
+			<gedit:End>"&gt;&lt;/xsl:element&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="fallback">
+			<gedit:Begin>&lt;xsl:fallback&gt;</gedit:Begin>
+			<gedit:End>&lt;/xsl:fallback&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="for-each">
+			<gedit:Begin>&lt;xsl:for-each select="</gedit:Begin>
+			<gedit:End>"&gt;&#10;&lt;/xsl:for-each&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="if">
+			<gedit:Begin>&lt;xsl:if test="</gedit:Begin>
+			<gedit:End>"&gt;&#10;&#10;&lt;/xsl:if&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="import">
+			<gedit:Begin>&lt;xsl:import href="</gedit:Begin>
+			<gedit:End>"/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="include">
+			<gedit:Begin>&lt;xsl:include href="</gedit:Begin>
+			<gedit:End>"/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="key">
+			<gedit:Begin>&lt;xsl:key name="</gedit:Begin>
+			<gedit:End>" match="" use=""/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="message">
+			<gedit:Begin>&lt;xsl:message&gt;</gedit:Begin>
+			<gedit:End>&lt;/xsl:message&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="namespace-alias">
+			<gedit:Begin>&lt;xsl:namespace-alias stylesheet-prefix="</gedit:Begin>
+			<gedit:End>" result-prefix=""/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="number">
+			<gedit:Begin>&lt;xsl:number/&gt;</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="otherwise">
+			<gedit:Begin>&lt;xsl:otherwise&gt;</gedit:Begin>
+			<gedit:End>&lt;/xsl:otherwise&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="output">
+			<gedit:Begin>&lt;xsl:output encoding="utf-8" method="</gedit:Begin>
+			<gedit:End>"/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="param">
+			<gedit:Begin>&lt;xsl:param name="</gedit:Begin>
+			<gedit:End>"&gt;&lt;/xsl:param&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="preserve-space">
+			<gedit:Begin>&lt;xsl:preserve-space elements="</gedit:Begin>
+			<gedit:End>"&gt;&lt;/xsl:preserve-space&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="processing-instruction">
+			<gedit:Begin>&lt;xsl:processing-instruction name="</gedit:Begin>
+			<gedit:End>"&gt;&lt;/xsl:processing-instruction&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="sort">
+			<gedit:Begin>&lt;xsl:sort/&gt;</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="strip-space">
+			<gedit:Begin>&lt;xsl:strip-space elements="</gedit:Begin>
+			<gedit:End>"&gt;&lt;/xsl:strip-space&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="stylesheet">
+			<gedit:Begin>&lt;xsl:stylesheet version="</gedit:Begin>
+			<gedit:End>"/&gt;&#10;&#10;&lt;/xsl:stylesheet&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="template">
+			<gedit:Begin>&lt;xsl:template match="</gedit:Begin>
+			<gedit:End>"&gt;&#10;&#10;&lt;/xsl:template&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="text">
+			<gedit:Begin>&lt;xsl:text/&gt;</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="value-of">
+			<gedit:Begin>&lt;xsl:value-of select="</gedit:Begin>
+			<gedit:End>"/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="variable">
+			<gedit:Begin>&lt;xsl:variable select="</gedit:Begin>
+			<gedit:End>"/&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="when">
+			<gedit:Begin>&lt;xsl:when test="</gedit:Begin>
+			<gedit:End>&gt;&#10;&#10;&lt;/xsl:when&gt;</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="with-param">
+			<gedit:Begin>&lt;xsl:with-param name="</gedit:Begin>
+			<gedit:End>"&gt;&lt;/xsl:with-param&gt;</gedit:End>
+		</gedit:Tag>
+	</gedit:TagGroup>
+	
+	<gedit:TagGroup name="XSLT - Functions">
+		<gedit:Tag name="boolean">
+			<gedit:Begin>boolean(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="ceiling">
+			<gedit:Begin>ceiling(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="comment">
+			<gedit:Begin>comment()</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="concat">
+			<gedit:Begin>concat(</gedit:Begin>
+			<gedit:End>,,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="contains">
+			<gedit:Begin>contains(</gedit:Begin>
+			<gedit:End>,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="count">
+			<gedit:Begin>count(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="current">
+			<gedit:Begin>current()</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="document">
+			<gedit:Begin>document(</gedit:Begin>
+			<gedit:End>,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="element-available">
+			<gedit:Begin>element-available(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="false">
+			<gedit:Begin>false()</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="floor">
+			<gedit:Begin>floor(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="format-number">
+			<gedit:Begin>format-number(</gedit:Begin>
+			<gedit:End>,,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="function-available">
+			<gedit:Begin>function-available(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="generate-id">
+			<gedit:Begin>generate-id(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="id">
+			<gedit:Begin>id(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="key">
+			<gedit:Begin>key(</gedit:Begin>
+			<gedit:End>,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="lang">
+			<gedit:Begin>lang(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="last">
+			<gedit:Begin>last()</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="local-name">
+			<gedit:Begin>local-name(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="name">
+			<gedit:Begin>name(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="namespace-uri">
+			<gedit:Begin>namespace-uri(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="node">
+			<gedit:Begin>node()</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="normalize-space">
+			<gedit:Begin>normalize-space(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="not">
+			<gedit:Begin>not(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="number">
+			<gedit:Begin>number(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="position">
+			<gedit:Begin>position()</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="processing-instruction">
+			<gedit:Begin>processing-instruction(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="round">
+			<gedit:Begin>round(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="starts-with">
+			<gedit:Begin>starts-with(</gedit:Begin>
+			<gedit:End>,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="string">
+			<gedit:Begin>string(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="string-length">
+			<gedit:Begin>string-length(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="substring">
+			<gedit:Begin>substring(</gedit:Begin>
+			<gedit:End>,,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="substring-after">
+			<gedit:Begin>substring-after(</gedit:Begin>
+			<gedit:End>,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="substring-before">
+			<gedit:Begin>substring-before(</gedit:Begin>
+			<gedit:End>,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="sum">
+			<gedit:Begin>sum(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="system-property">
+			<gedit:Begin>system-property(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="text">
+			<gedit:Begin>text()</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="translate">
+			<gedit:Begin>translate(</gedit:Begin>
+			<gedit:End>,,)</gedit:End>
+		</gedit:Tag>
+		<gedit:Tag name="true">
+			<gedit:Begin>true()</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="unparsed-entity-uri">
+			<gedit:Begin>unparsed-entity-uri(</gedit:Begin>
+			<gedit:End>)</gedit:End>
+		</gedit:Tag>	
+	</gedit:TagGroup>
+	
+	<gedit:TagGroup name="XSLT - Axes">	
+		<gedit:Tag name="ancestor">
+			<gedit:Begin>ancestor::</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="ancestor-or-self">
+			<gedit:Begin>ancestor-or-self::</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="attribute">
+			<gedit:Begin>@</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="child">
+			<gedit:Begin>child::</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="descendant">
+			<gedit:Begin>descendant::</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="descendant-or-self">
+			<gedit:Begin>//</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="following">
+			<gedit:Begin>following::</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="following-sibling">
+			<gedit:Begin>following-sibling::</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="namespace">
+			<gedit:Begin>namespace::</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="parent">
+			<gedit:Begin>..</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="preceding">
+			<gedit:Begin>preceding::</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="preceding-sibling">
+			<gedit:Begin>preceding-sibling::</gedit:Begin>
+		</gedit:Tag>
+		<gedit:Tag name="self">
+			<gedit:Begin>.</gedit:Begin>
+		</gedit:Tag>
+	</gedit:TagGroup>
+	
+</gedit:TagList>

@@ -1,0 +1,269 @@
+2001-11-15  Chema Celorio  <chema@celorio.com>
+
+	* added cvslog pluging from James Willcox
+
+2001-06-04  Chema Celorio  <chema@celorio.com>
+
+	* sort/sort.c: added the sort plugin by Carlo Borreo <borreo@softhome.net>
+
+2001-05-15  Paolo Maggi  <maggi@athena.polito.it>
+
+	* shell_output/shell_output.c: #included "utils.h" to silent
+	a warning
+
+2001-05-15  Paolo Maggi  <maggi@athena.polito.it>
+
+	* ascii/ascii.c (destroy_plugin): don't free pd->name
+	* browse/browse.c (gedit_plugin_destroy): ditto
+	* convert/convert.c (destroy_plugin): ditto
+	* diff/diff.c (gedit_plugin_destroy): ditto
+	* docinfo/docinfo.c (destroy_plugin): ditto
+	* email/email.c (gedit_plugin_destroy): ditto
+	* shell_output/shell_output.c (destroy_plugin): ditto
+	* spell/spell.c (destroy_plugin): ditto
+	* time/time.c (destroy_plugin): ditto
+
+	Thanks to Carlo Borreo for reporting this bug.
+
+2001-05-12  Chema Celorio  <chema@celorio.com>
+
+	* sample/sample.c (destroy_plugin): don't free pd->name
+	* reverse/reverse.c (destroy_plugin): ditto
+
+2001-03-19  Paolo Maggi  <maggi@athnea.polito.it>
+	
+	* Makefile.am (SUBDIRS): include ASCII and docinfo
+
+	* ASCII/Makefile.am:
+	* ASCII/ascii.c:
+	* ASCII/asciitable.glade:
+	* ASCII/asciitable.glade.h: new ASCII table plugin
+
+	* docinfo/Makefile.am:
+	* docinfo/docinfo.c
+	* docinfo/docinfo.glade:
+	* docinfo/docinfo.glade.h: new Document Info plugin
+
+	* sample/sample.c: typo
+
+2001-02-28  Paolo Maggi  <maggi@athnea.polito.it>
+
+	* diff/diff.c:
+	* diff/diff.glade: added a check button: Use the unified
+	output format (-u option)	
+
+2001-02-28  Chema Celorio  <chema@celorio.com>
+
+	* diff/diff.c (gedit_plugin_execute): fix a small typo
+
+2001-02-25  Chema Celorio  <chema@celorio.com>
+
+	* diff/diff.c (gedit_plugin_execute): remove the -u since
+	solaris diff does not support it. #ifdef out the code with :
+	
+	#ifdef WHEN_WILL_SOLARIS_UPGRADE_THEIR_OS_TO_GNU_SOLARIS_I_ASK_MYSELF_CONSTANTLY	
+
+2001-02-21  Paolo Maggi <maggi@athena.polito.it>
+
+	* convert/convert.glade:
+	* convert/convert.c : embellishment of the dialog
+
+2001-02-20  Paolo Maggi <maggi@athena.polito.it>
+
+	* browse, email, diff and shell_output
+	  plugins .c and .glade files: embellishment of the dialogs
+  
+2001-01-26  Paolo Maggi <maggi@athena.polito.it>
+
+	* email/email.c (init_plugin): added pd->modifies_an_existing_doc = FALSE;
+	
+	* reverse/reverse.c (init_plugin): added 
+	pd->modifies_an_existing_doc = TRUE;
+
+	* sample/sample.c (init_plugin): added 
+	pd->modifies_an_existing_doc = TRUE;
+
+	* shell_output/shell_output.c (init_plugin): added 
+	pd->modifies_an_existing_doc = TRUE;
+
+	* time/time.c (init_plugin): added 
+	pd->modifies_an_existing_doc = TRUE;
+	
+2000-11-20  Chema Celorio  <chema@celorio.com>
+
+	* shell_output/shell_output.c: dont' crash if there isn't
+	a document open.
+
+2000-10-10  Chema Celorio  <chema@celorio.com>
+
+	* all plugins .c files : Rename to GeditDocument & GeditView
+
+2000-10-10  Chema Celorio  <chema@celorio.com>
+
+	* email/email.c (gedit_plugin_create_dialog): mem leak
+
+	* browse/browse.c (gedit_plugin_browse_create_dialog): leak
+
+	* email/email.c (gedit_plugin_create_dialog): mem leak
+
+	* diff/diff.c (gedit_plugin_create_dialog): mem leak
+
+	* shell_output/shell_output.c: kill a memleak
+
+2000-08-01  Chema Celorio  <chema@celorio.com>
+
+	* shell_output/shell_output.c (shell_output_scan_text): check for
+	strlen == 0, before executing.
+
+2000-06-30  Chema Celorio  <chema@celorio.com>
+
+	* (init_plugin): add long_desc to all plugins
+
+2000-06-29  Chema Celorio  <chema@celorio.com>
+
+	* shell_output/shell_output.c (init_plugin): install by default
+	* diff/diff.c (init_plugin): ditto
+	* email/email.c (init_plugin): ditto
+	* time/time.c (init_plugin): ditto
+
+2000-06-25  Chema Celorio  <chema@celorio.com>
+
+	* shell_output/shell_output.c (shell_output_scan_text): set pos to 0
+	after insertion.
+	* browse/browse.c (gedit_plugin_execute): ditto
+
+	* plugins :  set pd->needs_a_document in all the plugins
+
+2000-06-25  Chema Celorio  <chema@celorio.com>
+
+	* diff/diff.c (gedit_plugin_execute): continue fixing this plugin
+
+	* reverse/reverse.c (reverse): aplied patch from :
+	Alexandre Owen Muniz <munizao@xprt.net>
+	the reverse action now works with a selection, if it is
+	active.
+
+2000-06-23  Chema Celorio  <chema@celorio.com>
+
+	* email/email.c: rename some function
+
+	* diff/diff.c: rewrote, with glade and added new functions.
+	It is still unfinished.
+
+2000-06-23  Roberto Majadas   <phoenix@nova.es>
+
+	* Makefile.am (SUBDIRS): add spell directory
+
+2000-06-22  Chema Celorio  <chema@celorio.com>
+
+	* email/email.c (email.glade): cosmeticfixes
+
+	* browse/browse.c: libgladify, search for lynx before runing and
+	clean the code a bit, beter error reporting and stuf.
+
+	* email/email.c (change_location_cb): remove the g_prints
+
+2000-06-20  Chema Celorio  <chema@celorio.com>
+
+	* email/email.c (gedit_plugin_email_sendmail_location_dialog): moved to
+	plugin.c to be used in other pluggins
+
+
+2000-06-22  Roberto Majadas  <phoenix@nova.es>
+
+	* shell_output/shell_output.c : Change BUFFER_SIZE -> GEDIT_PLUGIN_SHELL_BUFFER_SIZE 
+	* spell/* : Spell Check code , but don't use it . It's crash
+	
+2000-06-20  Chema Celorio  <chema@celorio.com>
+
+	* email/email.c (gedit_util_is_program): move to util
+
+2000-06-19  Chema Celorio  <chema@celorio.com>
+
+	* email/email.c (gedit_plugin_email_sendmail_location_dialog): check for the location
+	of sendmail before using the plugin. If sendmail is not found, display a dialog box
+	so that sendmail could be located.
+	(gedit_plugin_email_get_sendmail): new function
+	(gedit_is_program): new function.
+	( We should move this functions to a gnome-libs )
+
+	* sendmail.glade: new file
+	* sendmail.glade.h : new file
+
+	* time/time.c: use view_active not view_current
+	* sample/sample.c (insert_hello): ditto
+	* shell_output/shell_output.c (shell_output_scan_text): ditto
+
+2000-06-18  Chema Celorio  <chema@celorio.com>
+
+	* sample/Makefile.am (INCLUDES): ditto
+
+	* time/Makefile.am (INCLUDES): --> DO not use ../../src in
+	the INCLUDES, use -I$(top_srcdir)/src
+
+2000-06-15  Roberto Majadas  <phoenix@nova.es>
+
+	* shell_output/shell_output.c : Fix memory problem
+	and config problem . The plugin It's OK .
+
+2000-06-15  Roberto Majadas <phoenix@nova.es>
+
+	* shell_output/shell_output.c : Fix the undo problem
+	* shell_output/shell_output.glade : changes in the gui
+
+2000-06-13  Roberto Majadas  <phoenix@nova.es>
+
+	* shell_output/*: New plugin . print shell output in the
+	current doc .
+
+2000-06-11  Chema Celorio  <chema@celorio.com>
+
+	* email/email.c: use abstraction function. add
+	window.h
+
+	* reverse/reverse.c (reverse): fix a bit
+
+2000-06-10  Chema Celorio  <chema@celorio.com>
+
+	* convert/convert.c (conv_oct): fix a bit
+	use non-constant stings. and g_srtdup's
+
+2000-06-08  Chema Celorio  <chema@celorio.com>
+
+	* time/time.c (get_time): use new functions to get
+	and instert text to the documents. Do not call mdi
+	functions here, they are called by gedit_document_new_*
+	* diff/diff.c: ditto
+	* browse/browse.c (goLynx): ditto & fix
+	* sample/sample.c (insert_hello): ditto
+	* email/email.c (email_clicked): ditto
+
+2000-06-01  Chema Celorio  <chema@celorio.com>
+
+	* diff/diff.c (call_diff): do not depend on the
+	doc->buff info use the view->text buffer by calling
+	gedit_document_get_buffer function.
+	* email/email.c (email_clicked): ditto
+	* browse/browse.c (goLynx): ditto
+	( The browser plugin is broken )
+
+
+2000-05-01  Chema Celorio  <chema@celorio.com>
+
+	* email/email.c (email): memleak.
+
+2000-05-01  Jason Leach  <leach@wam.umd.edu>
+
+	* email/email.c (email_clicked): removed 4 lines of dealing with
+	gchar *buffer and instead refer to doc->buf->str like the one time
+	where it's needed.
+
+2000-04-21  Alex Roberts  <bse@error.fsnet.co.uk>
+
+	* convert/convert.glade[.h]: New files.
+
+	* convert/convert.c:
+	  convert/Makefile.am: Converted to use LibGlade
+	
+	* Makefile.am: Let's compile and install Convert now.
+

@@ -1,0 +1,3630 @@
+# GNOME gedit Greek translation.
+# Copyright (C) 2000, 2001, 2002 Free Software Foundation, Inc.
+# Spiros Papadimitriou <spapadim+@cs.cmu.edu>, 2000.
+# Simos Xenitellis <simos@hellug.gr>, 2000, 2001, 2002.
+# Kostas Papadimas <pkst@gmx.net>, 2002.
+#
+# spyros:
+#   initial translation
+# simos:
+#   updated: 37 translated messages, 52 fuzzy translations, 116 untranslated messages.
+# simos: 248 messages, 02Mar2001.
+# kostas: 523 messages, 30Oct2002, completed translation.
+# kostas: updated and finished translation for Gnome 2.1x, 02Dec2002
+# kostas: 666 (uh?..) messages, 06Jan2003, one more update.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gedit 2.0.5\n"
+"POT-Creation-Date: 2003-01-06 09:54+0200\n"
+"PO-Revision-Date: 2003-01-06 09:53+0200\n"
+"Last-Translator: Kostas Papadimas <pkst@gmx.net>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.6\n"
+
+#: data/GNOME_Gedit.server.in.h:1
+msgid "gedit application"
+msgstr "εφαρμογή gedit "
+
+#: data/GNOME_Gedit.server.in.h:2
+msgid "gedit automation factory"
+msgstr "Αυτοματοποιήσεις gedit "
+
+#: data/gedit.desktop.in.h:1
+msgid "Edit text files"
+msgstr "Επεξεργασία αρχείων κειμένου"
+
+#: data/gedit.desktop.in.h:2 src/gedit2.c:340
+msgid "Text Editor"
+msgstr "Επεξεργαστής κειμένου"
+
+#: data/gedit.schemas.in.h:1
+msgid ""
+"A custom font that will be used for the editing area. This will only take "
+"effect if the \"Use Default Font\" option is turned off."
+msgstr ""
+"Ένα προσαρμοσμένο χρώμα για χρήση στην περιοχή επεξεργασίας. Αυτό "
+"πραγματοποιείται μόνο όταν είναι απενεργοποιημένη η \"Χρήση Εξ'ορισμού "
+"Χρωμάτων\"."
+
+#: data/gedit.schemas.in.h:2
+msgid "Auto Save"
+msgstr "Αυτόματη αποθήκευση"
+
+#: data/gedit.schemas.in.h:3
+msgid "Auto Save Interval"
+msgstr "Μεσοδιάστημα αυτόματης αποθήκευσης"
+
+#: data/gedit.schemas.in.h:4
+msgid "Auto indent"
+msgstr "Αυτόματη εσοχή"
+
+#: data/gedit.schemas.in.h:5
+msgid "Background Color"
+msgstr "Χρώμα παρασκηνίου "
+
+#: data/gedit.schemas.in.h:6
+msgid ""
+"Background color for selected text in the editing area. This will only take "
+"effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+"Χρώμα παρασκηνίου για το επιλεγμένο κείμενο στην περιοχή επεξεργασίας. Αυτό "
+"πραγματοποιείται μόνο όταν είναι απενεργοποιημένη η \"Χρήση Εξ'ορισμού "
+"Χρωμάτων\"."
+
+#: data/gedit.schemas.in.h:7
+msgid ""
+"Background color for unselected text in the editing area. This will only "
+"take effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+"Χρώμα παρασκηνίου για το μή επιλεγμένο κείμενο στην περιοχή επεξεργασίας. "
+"Αυτό πραγματοποιείται μόνο όταν είναι απενεργοποιημένη η \"Χρήση Εξ'ορισμού "
+"Χρωμάτων\"."
+
+#: data/gedit.schemas.in.h:8
+msgid "Backup Copy Extension"
+msgstr "Επέκταση αντιγράφου ασφαλείας"
+
+#: data/gedit.schemas.in.h:9
+msgid "Body Font for Printing"
+msgstr "Χρώμα κυρίως κειμένου για εκτύπωση"
+
+#: data/gedit.schemas.in.h:10
+msgid "Create Backup Copies"
+msgstr "Δημιουργία αντιγράφων ασφαλείας"
+
+#: data/gedit.schemas.in.h:11
+msgid "Display Line Numbers"
+msgstr "Προβολή αριθμών γραμμής"
+
+#: data/gedit.schemas.in.h:12
+msgid "Editor Font"
+msgstr "Γραμματοσειρά επεξεργαστή"
+
+#: data/gedit.schemas.in.h:13
+msgid "Encoding for Saving"
+msgstr "Κωδικοποίηση για αποθήκευση"
+
+#: data/gedit.schemas.in.h:14 src/dialogs/gedit-preferences-dialog.c:2290
+#: src/dialogs/gedit-encodings-dialog.c:257
+#: src/dialogs/gedit-encodings-dialog.glade2.h:2
+msgid "Encodings"
+msgstr "Κωδικοποιήσεις"
+
+#: data/gedit.schemas.in.h:15
+msgid ""
+"Extension or suffix to use for backup file names. This will only take effect "
+"if the \"Create Backup Copies\" option is turned on."
+msgstr ""
+"Επέκταση ή επίθεμα για τα ονόματα αρχείων ασφαλείας. Αυτό πραγματοποιείται "
+"μόνο όταν είναι ενεργοποιημένη η \"Δημιουργία Αντιγράφων Ασφαλείας\" ."
+
+#: data/gedit.schemas.in.h:16
+msgid ""
+"Foreground color for selected text in the editing area. This will only take "
+"effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+"Χρώμα προσκηνίου για το επιλεγμένο κείμενο στην περιοχή επεξεργασίας. Αυτό "
+"πραγματοποιείται μόνο όταν είναι απενεργοποιημένη η \"Χρήση Εξ'ορισμού "
+"Χρωμάτων\"."
+
+#: data/gedit.schemas.in.h:17
+msgid ""
+"Foreground color for the unselected text in the editing area. This will only "
+"take effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+"Χρώμα προσκηνίου για το μή επιλεγμένο κείμενο στην περιοχή επεξεργασίας. "
+"Αυτό πραγματοποιείται μόνο όταν είναι απενεργοποιημένη η \"Χρήση Εξ'ορισμού "
+"Χρωμάτων\"."
+
+#: data/gedit.schemas.in.h:18
+msgid "Header Font for Printing"
+msgstr "Γραμματοσειρά κεφαλίδας για εκτύπωση"
+
+#: data/gedit.schemas.in.h:19
+msgid ""
+"If this value is 0, then no line numbers will be inserted when printing a "
+"document. Otherwise, gedit will print line numbers every such number of "
+"lines."
+msgstr ""
+"Αν η τιμή είναι 0, δεν θα εισαχθούν αριθμοί γραμμών κατά την εκτύπωση ενός "
+"εγγράφου. Στην αντίθετη περίπτωση, το gedit θα εκτυπώνει αριθμούς γραμμών "
+"για κάθε τέτοια γραμμή."
+
+#: data/gedit.schemas.in.h:20
+msgid "Insert spaces"
+msgstr "Εισαγωγή διαστημάτων"
+
+#: data/gedit.schemas.in.h:21
+msgid "Line Number Font for Printing"
+msgstr "Γραμματοσειρά αριθμού γραμμής για εκτύπωση"
+
+#: data/gedit.schemas.in.h:22
+msgid "Line Wrapping Mode"
+msgstr "Κατάσταση αναδίπλωσης γραμμών"
+
+#: data/gedit.schemas.in.h:23
+msgid ""
+"List of encodings used by gedit for reading files not encoded in UTF-8 or in "
+"the current locale encoding."
+msgstr ""
+"Λίστα από κωδικοποιήσεις που χρησιμοποεί το gedit για την ανάγνωση αρχείων "
+"που δεν είναι σε UTF-8 ή σε κωδικοποίηση του τρέχοντος locale."
+
+#: data/gedit.schemas.in.h:24
+msgid "Maximum Recent Files"
+msgstr "Μέγιστος αριθμός πρόσφατων αρχείων"
+
+#: data/gedit.schemas.in.h:25
+msgid "Maximum number of actions that gedit will be able to undo or redo."
+msgstr "Μέγιστος αριθμός ενεργειών για αναίρεση ή ακύρωση αναίρεσης."
+
+#: data/gedit.schemas.in.h:26
+msgid ""
+"Number of minutes after which gedit will automatically save modified files. "
+"This will only take effect if the \"Auto Save\" option is turned on."
+msgstr ""
+"Αριθμός λεπτών που θα μεσολαβεί μέχρι το gedit να αποθηκεύει αυτόματα "
+"τροποποιημένα αρχεία.Αυτό πραγματοποιείται μόνο όταν είναι ενεργοποιημένη η "
+"\"Αυτόματη Αποθήκευση\"."
+
+#: data/gedit.schemas.in.h:27
+msgid "Print Header"
+msgstr "Εκτύπωση κεφαλίδας"
+
+#: data/gedit.schemas.in.h:28
+msgid "Print Line Numbers"
+msgstr "Εκτύπωση αριθμών γραμμής"
+
+#: data/gedit.schemas.in.h:29
+msgid "Printing Line Wrapping Mode"
+msgstr "Κατάσταση αναδίπλωσης γραμμής εκτύπωσης"
+
+#: data/gedit.schemas.in.h:30
+msgid "Selected Text Color"
+msgstr "Χρώμα επιλεγμένου κειμένου"
+
+#: data/gedit.schemas.in.h:31
+msgid "Selection Color"
+msgstr "Χρώμα επιλογής"
+
+#: data/gedit.schemas.in.h:32
+msgid "Show Cursor Position"
+msgstr "Προβολή θέσεως δρομέα"
+
+#: data/gedit.schemas.in.h:33
+msgid "Show Overwrite Mode"
+msgstr "Προβολή Λειτουργίας Αντικατάστασης"
+
+#: data/gedit.schemas.in.h:34
+msgid ""
+"Specifies how to wrap long lines for printing. Use \"GTK_WRAP_NONE\" for no "
+"wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
+"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
+"the values are case-sensitive, so make sure they appear exactly as mentioned "
+"here."
+msgstr ""
+"Καθορίζει τον τρόπο αναδίπλωσης των γραμμών για εκτύπωση. Χρησιμοποιήστε το "
+"\"GTK_WRAP_NONE\"  για μή αναδίπλωση, το \"GTK_WRAP_WORD\" στα όρια λέξεων "
+"και \"GTK_WRAP_CHAR\"  για αναδίπλωση σε όρια ανεξάρτητων χαρακτήρων. "
+"Σημειώστε ότι στις τιμές υπάρχει διάκριση πεζών-κεφαλαίων και πρέπει να "
+"εμφανιστούν όπως ακριβώς αναφέρονται εδώ."
+
+#: data/gedit.schemas.in.h:35
+msgid ""
+"Specifies how to wrap long lines in the editing area. Use \"GTK_WRAP_NONE\" "
+"for no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
+"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
+"the values are case-sensitive, so make sure they appear exactly as mentioned "
+"here."
+msgstr ""
+"Καθορίζει τον τρόπο αναδίπλωσης των γραμμών στην περιοχή επεξεργασίας. "
+"Χρησιμοποιήστε το \"GTK_WRAP_NONE\" για μή αναδίπλωση, το \"GTK_WRAP_WORD\"  "
+"στα όρια λέξεων και \"GTK_WRAP_CHAR\"  για αναδίπλωση σε όρια ανεξάρτητων "
+"χαρακτήρων. Σημειώστε ότι στις τιμές υπάρχει διάκριση πεζών-κεφαλαίων και "
+"πρέπει να εμφανιστούν όπως ακριβώς αναφέρονται εδώ."
+
+#: data/gedit.schemas.in.h:36
+msgid ""
+"Specifies the font to use for a document's body when printing documents."
+msgstr ""
+"Καθορίζει τη χρήση της γραμματοσειράς στο σώμα του εγγράφου κατά την "
+"εκτύπωση. "
+
+#: data/gedit.schemas.in.h:37
+msgid ""
+"Specifies the font to use for line numbers when printing. This will only "
+"take effect if the \"Print Line Numbers\" option is non-zero."
+msgstr ""
+"Καθορίζει τον τρόπο χρήσης της γραμματοσειράς στους αριθμούς γραμμών κατά "
+"την εκτύπωση. Αυτό πραγματοποιείται μόνο αν δεν είναι μηδενική η τιμή στην "
+"\"Εκτύπωση Αριθμών Γραμμών\"."
+
+#: data/gedit.schemas.in.h:38
+msgid ""
+"Specifies the font to use for page headers when printing a document. This "
+"will only take effect if the \"Print Header\" option is turned on."
+msgstr ""
+"Καθορίζει τη χρήσης της γραμματοσειράς στις κεφαλίδες σελίδας κατά την "
+"εκτύπωση. Αυτό πραγματοποιείται μόνο αν είναι ενεργοποιημένη η \"Εκτύπωση "
+"Κεφαλίδας\" ."
+
+#: data/gedit.schemas.in.h:39
+msgid ""
+"Specifies the maximum number of recently opened files that will be displayed "
+"in the \"Recent Files\" submenu."
+msgstr ""
+"Καθορίζει το μέγιστο αριθμό των πρόσφατα ανοιγμένων εγγράφων που θα "
+"εμφανίζονται στο υπομενού  \"Πρόσφατα Έγγραφα\"."
+
+#: data/gedit.schemas.in.h:40
+msgid ""
+"Specifies the number of spaces that should be displayed instead of Tab "
+"characters."
+msgstr ""
+"Καθορίζει τον αριθμό των διαστημάτων που θα πρέπει να εμφανίζονται αντί για "
+"χαρακτήρες Tab."
+
+#: data/gedit.schemas.in.h:41
+msgid "Status Bar is Visible"
+msgstr "Η Γραμμή κατάστασης είναι ορατή"
+
+#: data/gedit.schemas.in.h:42
+msgid ""
+"Style for the toolbar buttons. Possible values are \"GEDIT_TOOLBAR_SYSTEM\" "
+"to use the system's default style, \"GEDIT_TOOLBAR_ICONS\" to display icons "
+"only, \"GEDIT_TOOLBAR_ICONS_AND_TEXT\" to display both icons and text, and "
+"\"GEDIT_TOOLBAR_ICONS_BOTH_HORIZ\" to display prioritized text beside icons. "
+"Note that the values are case-sensitive, so make sure they appear exactly as "
+"mentioned here."
+msgstr ""
+"Στύλ για κουμπιά εργαλειοθήκης. Οι πιθανές τιμές είναι \"GEDIT_TOOLBAR_SYSTEM"
+"\"  για χρήση του εξ ορισμού στύλ του συστήματος, \"GEDIT_TOOLBAR_ICONS\" "
+"για την προβολή μόνο των εικονιδίων, και \"GEDIT_TOOLBAR_ICONS_AND_TEXT\"  "
+"για προβολή εικονιδίων και κειμένου και \"GEDIT_TOOLBAR_ICONS_BOTH_HORIZ\" "
+"για προβολή κειμένου προτεραιότητας δίπλα σε εικόνες. Σημειώστε ότι στις "
+"τιμές υπάρχει διάκριση πεζών-κεφαλαίων και πρέπει να εμφανιστούν όπως "
+"ακριβώς αναφέρονται εδώ."
+
+#: data/gedit.schemas.in.h:43
+msgid "Tab Size"
+msgstr "Μέγεθος στήλης"
+
+#: data/gedit.schemas.in.h:44
+msgid "Text Color"
+msgstr "Χρώμα κειμένου"
+
+#: data/gedit.schemas.in.h:45
+msgid ""
+"The encoding method to use for saving files. Possible values are "
+"\"GEDIT_SAVE_ALWAYS_UTF8\" for mandatory UTF-8 saving, "
+"\"GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE\" if you want gedit to try to "
+"convert the document it is saving to your current locale's encoding, "
+"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE\" if you want gedit to try "
+"to use the original file encoding (new files in UTF8) and "
+"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" if you want gedit to "
+"try to use the original file encoding (new files in current locale's "
+"encoding). If the conversion is successful, it will be used. Otherwise, UTF-"
+"8 will be used. Note that the values are case-sensitive, so make sure they "
+"appear exactly as mentioned here."
+msgstr ""
+"Η μέθοδος κωδικοποίησης που χρησιμοποιείται για την αποθήκευση αρχείων. "
+"Πιθανές τιμές είναι \"GEDIT_SAVE_ALWAYS_UTF8\" για υποχρεωτική αποθήκευση "
+"σε  UTF-8, \"GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE\" αν θέλετε το gedit να "
+"προσπαθήσει να μετατρέψει το έγγραφο αποθηκεύοντας το με το τρέχον locale, "
+"\"GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE\" αν θέλετε το gedit να προσπαθήσει "
+"να χρησιμοποιήσει την αρχική κωδικοποίηση του αρχείου (νέα αρχεία σε UTF8) "
+"και \"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" αν θέλετε το gedit "
+"να προσπαθήσει να χρησιμοποιήσει την αρχική κωδικοποίηση του αρχείου (νέα "
+"αρχεία σε κωδικοποίηση τρέχοντος locale) . Αν η μετατροπή είναι επιτυχημένη "
+"θα χρησιμοποιηθεί. Αλλιώς θα χρησιμοποιηθεί UTF-8. Σημειώστε ότι στις τιμές "
+"υπάρχει διάκριση πεζών-κεφαλαίων και πρέπει να εμφανιστούν όπως ακριβώς "
+"αναφέρονται εδώ."
+
+#: data/gedit.schemas.in.h:46
+msgid "Toolbar Buttons Style"
+msgstr "Στύλ κουμπιών εργαλειοθήκης"
+
+#: data/gedit.schemas.in.h:47
+msgid "Toolbar is Visible"
+msgstr "Η εργαλειοθήκη είναι ορατή"
+
+#: data/gedit.schemas.in.h:48
+msgid "Undo Actions Limit"
+msgstr "Όριο ενεργειών αναίρεσης"
+
+#: data/gedit.schemas.in.h:49
+msgid "Use Default Colors"
+msgstr "Χρήση Εξ'ορισμού Χρωμάτων"
+
+#: data/gedit.schemas.in.h:50
+msgid "Use Default Font"
+msgstr "Χρήση Εξ'ορισμού Γραμματοσειράς: "
+
+#: data/gedit.schemas.in.h:51
+msgid ""
+"Whether gedit should automatically save modified files after a time "
+"interval. You can set the time interval with the \"Auto Save Interval\" "
+"option."
+msgstr ""
+"Αν η εφαρμογή θα αποθηκεύει αυτόματα τροποιημένα αρχεία μετά από κάποιο "
+"χρονικό διάστημα. Μπορείτε να ορίσετε αυτό το διάστημα στην επιλογή "
+"\"Μεσοδιάστημα Αυτόματης Αποθήκευσης\"."
+
+#: data/gedit.schemas.in.h:52
+msgid ""
+"Whether gedit should create backup copies for the files it saves. You can "
+"set the backup file extension with the \"Backup Copy Extension\" option."
+msgstr ""
+"Αν η εφαρμογή θα δημιουργεί αντίγραφα ασφαλείας για τα αρχεία που "
+"αποθηκεύει. Μπορελιτε να ορίσετε την επέκταση των αρχείων ασφαλείας στην "
+"επιλογή \"Επέκταση Αρχείου Ασφαλείας\" "
+
+#: data/gedit.schemas.in.h:53
+msgid "Whether gedit should display line numbers in the editing area."
+msgstr ""
+"Αν η εφαρμογή θα προβάλλει τους αριθμούς γραμμών στην περιοχή επεξεργασίας."
+
+#: data/gedit.schemas.in.h:54
+msgid "Whether gedit should enable auto indentation."
+msgstr "Αν η εφαρμογή θα ενεργοποιεί αυτόματη εσοχή."
+
+#: data/gedit.schemas.in.h:55
+msgid "Whether gedit should include a document header when printing documents."
+msgstr "Αν η εφαρμογή θα περιλαμβάνει μια κεφαλίδα εγγράφου κατά την εκτύπωση."
+
+#: data/gedit.schemas.in.h:56
+msgid "Whether gedit should insert spaces instead of tabs."
+msgstr "Αν το gedit θα εισάγει διαστήματα αντί για tabs."
+
+#: data/gedit.schemas.in.h:57
+msgid ""
+"Whether the status bar at the bottom of editing windows should be visible."
+msgstr ""
+"Αν η γραμμή κατάστασης στο κάτω μέρος του ενεργού παραθύρου θα είναι ορατή."
+
+#: data/gedit.schemas.in.h:58
+msgid ""
+"Whether the status bar should show the cursor position in editing windows. "
+"Make sure you turn on the \"Status Bar is Visible\" option for this to take "
+"effect."
+msgstr ""
+"Αν η γραμμή κατάστασης θα δείχνει τη θέση του δρομέα στα παράθυρα "
+"επεξεργασίας. Βεβαιωθείτε ότι είναι ενεργοποιημένη η επιλογή \"Η Γραμμή "
+"Κατάστασης είναι Ορατή\" για να πραγματοποιηθεί."
+
+#: data/gedit.schemas.in.h:59
+msgid ""
+"Whether the status bar should show the insert/overwrite mode in editing "
+"windows. Make sure you turn on the \"Status Bar is Visible\" option for this "
+"to take effect."
+msgstr ""
+"Αν η γραμμή κατάστασης θα δείχνει τη λειτουργία εισαγωγής/αντικατάστασης στα "
+"παράθυρα επεξεργασίας. Βεβαιωθείτε ότι είναι ενεργοποιημένη η επιλογή \"Η "
+"Γραμμή Κατάστασης είναι Ορατή\" για να πραγματοποιηθεί."
+
+#: data/gedit.schemas.in.h:60
+msgid "Whether the toolbar should be visible in editing windows."
+msgstr "Αν η εργαλειοθήκη θα είναι ορατή στα παράθυρα επεξεργασίας."
+
+#: data/gedit.schemas.in.h:61
+msgid ""
+"Whether to use the system's default colors for the editing area. If this "
+"option is turned off, then the colors of the editing area will be those "
+"specified in the \"Background Color\", \"Text Color\", \"Selected Text Color"
+"\", and \"Selection Color\" options."
+msgstr ""
+"Αν θα χρησιμοποιούνται τα εξ ορισμού χρώματα του συστήματος για την περιοχή "
+"επεξεργασίας. Αν αυτή η επιλογή απενεργοποιηθεί τότε τα χρώματα της περιοχής "
+"επεξεργασίας θα καθορίζονται από τις ρυθμίσεις των επιλογών \"Χρώμα "
+"Παρασκηνίου\", \"Χρώμα Κειμένου\", \"Χρώμα Επιλεγμένου Κειμένου\", και "
+"\"Χρώμα Επιλογής\"."
+
+#: data/gedit.schemas.in.h:62
+msgid ""
+"Whether to use the system's default font for editing text instead of a font "
+"specific to gedit. If this option is turned off, then the font named in the "
+"\"Editor Font\" option will be used instead of the system font."
+msgstr ""
+"Αν θα χρησιμοποιούνται οι εξ ορισμού γραμματοσειρές του συστήματος για την "
+"επεξεργασία κειμένου αντί για μια συγκεκριμένη γραμματοσειρά. Αν αυτή η "
+"επιλογή απενεργοποιηθεί τότε θα χρησιμοποιηθεί η γραμματοσειρά που ορίζεται "
+"στην επιλογή \"Γραμματοσειρά Επεξεργαστή\"."
+
+#: plugins/ASCII/ascii.c:43
+msgid "_ASCII Table"
+msgstr "_Πίνακας ASCII "
+
+#: plugins/ASCII/ascii.c:46
+msgid "Pop-up a dialog containing an ASCII Table"
+msgstr "Ανάδυση διαλόγου που περιέχει τον Πίνακα ASCII "
+
+#: plugins/ASCII/ascii.c:303
+msgid "Char"
+msgstr "Χαρακτήρ."
+
+#: plugins/ASCII/ascii.c:310
+msgid "Dec#"
+msgstr "Dec#"
+
+#: plugins/ASCII/ascii.c:317
+msgid "Hex#"
+msgstr "Hex#"
+
+#: plugins/ASCII/ascii.c:324
+msgid "Name"
+msgstr "Όνομα"
+
+#: plugins/ASCII/ascii.c:369
+msgid "ASCII Table"
+msgstr "Πίνακας ASCII "
+
+#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
+msgid "_Insert char"
+msgstr "_Εισαγωγή χαρακτήρα"
+
+#: plugins/ASCII/asciitable.glade2.h:1
+#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
+msgid "ASCII table"
+msgstr "Πίνακας ASCII "
+
+#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
+msgid "Copyright (C) 2001-2002 Paolo Maggi"
+msgstr "Copyright (C) 2001-2002 Paolo Maggi"
+
+#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:3
+#: plugins/sample/sample.gedit-plugin.desktop.in.h:3
+#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:3
+#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:2
+#: plugins/indent/indent.gedit-plugin.desktop.in.h:4
+#: plugins/spell/spell.gedit-plugin.desktop.in.h:3
+msgid "Paolo Maggi <maggi@athena.polito.it>"
+msgstr "Paolo Maggi <maggi@athena.polito.it>"
+
+#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:4
+msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+msgstr ""
+"Η πρόσθετη λειτουργία προβάλλει ένα αναδυόμενο παράθυρο που περιέχει τον "
+"Πίνακα ASCII "
+
+#. AFAIK, all cvs commit messages start with this
+#: plugins/cvschangelog/cvschangelog.c:49
+msgid "Open CVS Chan_geLogs"
+msgstr "'Ανοιγμα CVS Chan_geLogs"
+
+#: plugins/cvschangelog/cvschangelog.c:52
+msgid "Searches for ChangeLogs in the current document and opens them"
+msgstr "Αναζητά για  ChangeLogs στο τρέχον έγγραφο και τα ανοίγει"
+
+#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
+msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+msgstr ""
+"Μια πρόσθετη λειτουργία που ανοίγει τα ChangeLogs που βρίσκονται στα "
+"μηνύματα CVS."
+
+#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
+msgid "CVS ChangeLog"
+msgstr "CVS ChangeLog"
+
+#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:3
+msgid "Copyright (C) 2002 James Willcox"
+msgstr "Copyright (C) 2002 James Willcox"
+
+#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:4
+msgid "James Willcox <jwillcox@cs.indiana.edu>"
+msgstr "James Willcox <jwillcox@cs.indiana.edu>"
+
+#: plugins/diff/diff.c:65
+msgid "Co_mpare Files..."
+msgstr "Σύ_γκριση αρχείων..."
+
+#: plugins/diff/diff.c:68
+msgid "Makes a diff file from two documents or files"
+msgstr "Δημιουργεί ένα έγγραφο διαφορών μεταξύ δύο εγγράφων ή αρχείων"
+
+#. Create the dialog
+#: plugins/diff/diff.c:271 plugins/diff/diff.gedit-plugin.desktop.in.h:2
+msgid "Compare Files"
+msgstr "Σύγκριση αρχείων"
+
+#: plugins/diff/diff.c:285
+msgid "C_ompare"
+msgstr "Σύ_γκριση"
+
+#: plugins/diff/diff.c:513
+msgid "Executed command"
+msgstr "Εκτελεσθείσα εντολή"
+
+#: plugins/diff/diff.c:652
+msgid "The two documents you selected are the same."
+msgstr "Τα δύο έγγραφα που επιλέχθηκαν είναι τα ίδια."
+
+#: plugins/diff/diff.c:660
+msgid ""
+"The \"first\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+"Το \"πρώτο\" αρχείο που επιλέχθηκε δεν υπάρχει.\n"
+"\n"
+"Παρακαλώ επιλέξτε ένα έγκυρο αρχείο."
+
+#: plugins/diff/diff.c:669
+msgid ""
+"The \"second\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+"Το \"δεύτερο\" αρχείο που επιλέχθηκε δεν υπάρχει\n"
+"\n"
+"Παρακαλώ επιλέξτε ένα έγκυρο αρχείο."
+
+#: plugins/diff/diff.c:677
+msgid "The two files you selected are the same."
+msgstr "Τα δύο έγγραφα που επιλέχθηκαν είναι τα ίδια."
+
+#: plugins/diff/diff.c:695
+msgid "The \"first\" document contains no text."
+msgstr "Το \"πρώτο\" έγγραφο δεν περιέχει κείμενο."
+
+#: plugins/diff/diff.c:730
+msgid "The \"second\" document contains no text."
+msgstr "Το \"δεύτερο\" έγγραφο δεν περιέχει κείμενο."
+
+#. FIXME: do better error reporting ... . Chema
+#: plugins/diff/diff.c:756
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"gedit could not create a temporary file."
+msgstr ""
+"Αδυναμία σύγκρισης των επιλεγμένων εγγράφων.\n"
+"\n"
+"Το gedit δεν μπορεί να δημιουργήσει ένα προσωρινό αρχείο."
+
+#: plugins/diff/diff.c:776 plugins/diff/diff.c:789
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"Error executing the diff command."
+msgstr ""
+"Αδυναμία σύγκρισης των επιλεγμένων εγγράφων.\n"
+"\n"
+"Σφάλμα εκτέλεσης της εντολής diff."
+
+#: plugins/diff/diff.c:811
+msgid "No differences were found between the selected documents."
+msgstr "Δε βρέθηκαν διαφορές μεταξύ των επιλεγμένων εγγράφων."
+
+#: plugins/diff/diff.c:852
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"The result contains invalid UTF-8 data."
+msgstr ""
+"Δεν είναι δυνατή η σύγκριση των επιλεγμένων εγγράφων.\n"
+"\n"
+"Το αποτέλεσμα περιέχει μή έγκυρα δεδομένα UTF-8."
+
+#: plugins/diff/diff.glade2.h:1 plugins/shell_output/shell_output.glade2.h:1
+#: plugins/time/time.glade2.h:2 plugins/spell/spell-checker.glade2.h:1
+#: src/dialogs/replace.glade2.h:1 src/dialogs/uri.glade2.h:1
+msgid "*"
+msgstr "*"
+
+#: plugins/diff/diff.glade2.h:2
+msgid "Choose the files to compare."
+msgstr "Επιλέξτε αρχεία προς σύγκριση."
+
+#: plugins/diff/diff.glade2.h:3
+msgid "Compare files..."
+msgstr "Σύγκριση αρχείων..."
+
+#: plugins/diff/diff.glade2.h:4
+msgid "F_rom document"
+msgstr "Α_πό έγγραφο"
+
+#: plugins/diff/diff.glade2.h:5
+msgid "First"
+msgstr "Πρώτο"
+
+#: plugins/diff/diff.glade2.h:6
+msgid "First file from disk"
+msgstr "Πρώτο αρχείο από δίσκο"
+
+#: plugins/diff/diff.glade2.h:7
+msgid "First file from open document"
+msgstr "Πρώτο αρχείο από ανοικτό έγγραφο"
+
+#: plugins/diff/diff.glade2.h:8
+msgid "From _document"
+msgstr "Από _έγγραφο"
+
+#: plugins/diff/diff.glade2.h:9
+msgid "From a _file on disk"
+msgstr "Από αρ_χείο στο δίσκο"
+
+#: plugins/diff/diff.glade2.h:10
+msgid "From a file o_n disk"
+msgstr "Από αρχείο σ_το δίσκο"
+
+#: plugins/diff/diff.glade2.h:11
+msgid "Ignore _blanks (-b option)"
+msgstr "Να αγνοούνται _κενά (-b επιλογή)"
+
+#: plugins/diff/diff.glade2.h:12
+msgid "Note that this option is only supported by GNU diff"
+msgstr "Σημειώστε ότι αυτή η επιλογή υποστηρίζεται μόνο από το GNU diff"
+
+#: plugins/diff/diff.glade2.h:13
+msgid "Second"
+msgstr "Δεύτερο"
+
+#: plugins/diff/diff.glade2.h:14
+msgid "Second file from disk"
+msgstr "Δεύτερο αρχείο από δίσκο"
+
+#: plugins/diff/diff.glade2.h:15
+msgid "Second file from open document"
+msgstr "Δεύτερο αρχείο από ανοικτό έγγραφο"
+
+#: plugins/diff/diff.glade2.h:16
+msgid "Select the \"first\" file..."
+msgstr "Επιλέξτε το \"πρώτο\" αρχείο..."
+
+#: plugins/diff/diff.glade2.h:17
+msgid "Select the \"second\" file..."
+msgstr "Επιλέξτε το \"δεύτερο\" αρχείο..."
+
+#: plugins/diff/diff.glade2.h:18
+msgid "Select the first file to compare"
+msgstr "Επιλογή του πρώτου αρχείου για σύγκριση"
+
+#: plugins/diff/diff.glade2.h:19
+msgid "Select the first open document to compare"
+msgstr "Επιλογή του πρώτου ανοικτού εγγράφου για σύγκριση"
+
+#: plugins/diff/diff.glade2.h:20
+msgid "Select the second file to compare"
+msgstr "Επιλογή του δεύτερου αρχείου για σύγκριση"
+
+#: plugins/diff/diff.glade2.h:21
+msgid "Select the second open document to compare"
+msgstr "Επιλογή του δεύτερου ανοικτού εγγράφου για σύγκριση"
+
+#: plugins/diff/diff.glade2.h:22
+msgid "Use the _unified output format (-u option)"
+msgstr "Χρήση του _ενοποιημένου τύπου αποτελέσματος (-u επιλογή)"
+
+#: plugins/diff/diff.gedit-plugin.desktop.in.h:1
+msgid ""
+"Chema Celorio <chema@celorio.com> and Paolo Maggi <maggi@athena.polito.it>"
+msgstr ""
+"Chema Celorio <chema@celorio.com> and Paolo Maggi <maggi@athena.polito.it>"
+
+#: plugins/diff/diff.gedit-plugin.desktop.in.h:3
+msgid ""
+"Copyright (C) 2000 - 2001 Chema Celorio\n"
+"Copyright (C) 2002 Paolo Maggi"
+msgstr ""
+"Copyright (C) 2000 - 2001 Chema Celorio\n"
+"Copyright (C) 2002 Paolo Maggi"
+
+#: plugins/diff/diff.gedit-plugin.desktop.in.h:4
+msgid ""
+"The Compare Files plugin uses the <tt>diff</tt> program to compare two "
+"documents or files on disk.\n"
+"\n"
+"For more info on <tt>diff</tt> program, type <tt>man diff</tt> in a shell "
+"prompt."
+msgstr ""
+"Η πρόσθετη λειτουργία της Σύγκρισης αρχείων χρησιμοποιεί το πρόγγραμμα  "
+"<tt>diff</tt> για την σύγκριση δύο εγγράφων ή αρχείων στον δίσκο\n"
+"\n"
+"Για περισσότερες πληροφορίες για το <tt>diff</tt, γράψτε <tt>man diff</tt> "
+"στη γραμμή εντολών."
+
+#: plugins/docinfo/docinfo.c:46
+msgid "_Document Statistics"
+msgstr "_Στατιστικά εγγράφων"
+
+#: plugins/docinfo/docinfo.c:49
+msgid "Get statistic info on current document"
+msgstr "Λήψη στατιστικών πληροφοριών στο τρέχον έγγραφο"
+
+#: plugins/docinfo/docinfo.c:142
+#: plugins/docinfo/docinfo.gedit-plugin.desktop.in.h:2
+msgid "Document Statistics"
+msgstr "Στατιστικά εγγράφου"
+
+#: plugins/docinfo/docinfo.c:153
+msgid "_Update"
+msgstr "_Ενημέρωση"
+
+#: plugins/docinfo/docinfo.glade2.h:1
+msgid "0"
+msgstr "0"
+
+#: plugins/docinfo/docinfo.glade2.h:2
+msgid "Bytes"
+msgstr "Bytes"
+
+#: plugins/docinfo/docinfo.glade2.h:3
+msgid "Characters (no spaces)"
+msgstr "Χαρακτήρες (χωρίς κενά)"
+
+#: plugins/docinfo/docinfo.glade2.h:4
+msgid "Characters (with spaces)"
+msgstr "Χαρακτήρες (με κενά)"
+
+#: plugins/docinfo/docinfo.glade2.h:5
+msgid "File Name"
+msgstr "Όνομα αρχείου"
+
+#: plugins/docinfo/docinfo.glade2.h:6 src/gedit-print.c:373
+msgid "Lines"
+msgstr "Γραμμές"
+
+#: plugins/docinfo/docinfo.glade2.h:7
+msgid "Update"
+msgstr "Ενημέρωση"
+
+#: plugins/docinfo/docinfo.glade2.h:8
+msgid "Words"
+msgstr "Λέξεις"
+
+#: plugins/docinfo/docinfo.glade2.h:9
+msgid "gedit: Document Info plugin"
+msgstr "gedit: Document Info plugin"
+
+#: plugins/docinfo/docinfo.gedit-plugin.desktop.in.h:1
+#: plugins/sample/sample.gedit-plugin.desktop.in.h:1
+#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:1
+#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:1
+#: plugins/indent/indent.gedit-plugin.desktop.in.h:1
+#: plugins/spell/spell.gedit-plugin.desktop.in.h:2
+msgid "Copyright (C) 2002 Paolo Maggi"
+msgstr "Copyright (C) 2002 Paolo Maggi"
+
+#: plugins/docinfo/docinfo.gedit-plugin.desktop.in.h:3
+msgid "Paolo Maggi <paolo.maggi@polito.it>"
+msgstr "Paolo Maggi <paolo.maggi@polito.it>"
+
+#: plugins/docinfo/docinfo.gedit-plugin.desktop.in.h:4
+msgid ""
+"The Document Statistics plugin analyzes the current document and determines "
+"the number of words, lines, characters and non-space characters in it and "
+"displays the result."
+msgstr ""
+"Η πρόσθετη λετουργία Στατιστικής Εγγράφου αναλύει το τρέχον έγγραφο και "
+"υπολογίζει τον αριθμό των λέξεων, γραμμών, χαρακτήρων και χαρακτήρων χωρίς "
+"κενά σε αυτό και προβάλλει το αποτέλεσμα."
+
+#: plugins/sample/sample.c:43
+msgid "Insert User Na_me"
+msgstr "Εισαγωγή ονόμ-ατος χρήστη "
+
+#: plugins/sample/sample.c:46
+msgid "Insert the user name at the cursor position"
+msgstr "Εισαγωγή του ονόματος χρήστη στη θέση δρομέα"
+
+#: plugins/sample/sample.c:172
+#: plugins/sample/sample.gedit-plugin.desktop.in.h:4
+msgid "User name"
+msgstr "Όνομα χρήστη"
+
+#: plugins/sample/sample.c:173
+#: plugins/sample/sample.gedit-plugin.desktop.in.h:2
+msgid "Inserts the user name at the cursor position."
+msgstr "Εισαγωγή του ονόματος χρήστη στη θέση δρομέα."
+
+#: plugins/shell_output/shell_output.c:56
+msgid "_Run Command..."
+msgstr "_Εκτέλεση εντολής..."
+
+#: plugins/shell_output/shell_output.c:59
+msgid "Run a command"
+msgstr "Εκτέλεση μιας εντολής"
+
+#: plugins/shell_output/shell_output.c:161
+#: plugins/shell_output/shell_output.c:516
+msgid "Stopped"
+msgstr "Διακόπηκε"
+
+#: plugins/shell_output/shell_output.c:246
+msgid "An error occurs while running the selected command."
+msgstr "Παρουσιάστηκε σφάλμα κατά τηυν εκτέλεση της επιλεγμένης εντολής."
+
+#: plugins/shell_output/shell_output.c:302
+msgid "Run Command"
+msgstr "Εκτέλεση εντολής"
+
+#: plugins/shell_output/shell_output.c:318
+msgid "_Run"
+msgstr "_Εκτέλεση"
+
+#: plugins/shell_output/shell_output.c:522
+msgid "Done"
+msgstr "Έγινε"
+
+#: plugins/shell_output/shell_output.c:524
+msgid "Failed"
+msgstr "Απέτυχε"
+
+#: plugins/shell_output/shell_output.c:696
+msgid ""
+"The shell command entry is empty.\n"
+"\n"
+"Please, insert a valid shell command."
+msgstr ""
+"Η εισαγωγή εντολής φλοιού είναι κενή.\n"
+"\n"
+"Παρακαλώ, εισάγετε μια έγκυρη εντολή φλοιού."
+
+#: plugins/shell_output/shell_output.c:729
+msgid ""
+"Error parsing the shell command.\n"
+"\n"
+"Please, insert a valid shell command."
+msgstr ""
+"Σφάλμα κατά την εκτέλεση εντολής φλοιού .\n"
+"\n"
+"Παρακαλώ, εισάγετε μια έγκυρη εντολή φλοιού."
+
+#: plugins/shell_output/shell_output.c:815
+msgid "Executing command"
+msgstr "Εκτέλεση εντολής"
+
+#: plugins/shell_output/shell_output.glade2.h:2
+msgid "Co_mmand:"
+msgstr "Εν_τολή:"
+
+#: plugins/shell_output/shell_output.glade2.h:3
+msgid "Select the working directory..."
+msgstr "Επιλέξτε τον κατάλογο εργασίας..."
+
+#: plugins/shell_output/shell_output.glade2.h:4
+msgid "_Show results in Output Window"
+msgstr "_Προβολή αποτελεσμάτων στο παράθυρο αποτελέσματος"
+
+#: plugins/shell_output/shell_output.glade2.h:5
+msgid "_Working directory:"
+msgstr "Κατάλογος _Εργασίας:"
+
+#: plugins/shell_output/shell_output.glade2.h:6
+msgid "gedit: Shell Output plugin"
+msgstr "gedit: Άρθρωμα Αποτελέσματος Φλοιού"
+
+#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:2
+msgid ""
+"Execute an external program and eventually grabs its output in the output "
+"window."
+msgstr ""
+"Εκτέλεση ενός εξωτερικού προγράμματος και εισαγωγή του αποτελέσματος του στο "
+"παράθυρο αποτελέσματος."
+
+#: plugins/shell_output/shell_output.gedit-plugin.desktop.in.h:4
+msgid "Shell command"
+msgstr "Εντολή φλοιού"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:136
+msgid "Tag list plugin"
+msgstr "Λίστα προσθέτων λειτουργιών"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:154
+msgid "Select the group of tags you want to use"
+msgstr "Επιλέξτε την ομάδα  tags που επιθυμείτε να χρησιμοποιήσετε"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:176
+msgid "Tag Groups Combo"
+msgstr "Συνδυασμός Ομάδων Tag"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:178
+msgid "Tags Name List"
+msgstr "Ονομαστική λίστα Tags "
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:188
+msgid "Double-click on a tag to insert it in the current document"
+msgstr "Διπλό κλίκ σε tag για την εισαγωγή της στο τρέχον έγγραφο"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:199
+msgid "Tags"
+msgstr "Tags"
+
+#: plugins/taglist/gedit-taglist-plugin.c:46
+msgid "Tag _List"
+msgstr "Λίστα_Tag "
+
+#.
+#. #define MENU_ITEM_NAME		"TagList"
+#.
+#: plugins/taglist/gedit-taglist-plugin.c:51
+msgid "Show the tag list window"
+msgstr "Εμφάνιση παραθύρου λίστας tag "
+
+#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:3
+msgid "Tag list"
+msgstr "Λίστα Tag "
+
+#: plugins/taglist/taglist.gedit-plugin.desktop.in.h:4
+msgid ""
+"The tag list plugin provides a method to easily insert into a document "
+"commonly used tags/strings without having to type them."
+msgstr ""
+"Η πρόσθετη λειτουργία λίστας tag παρέχει μια μέθοδο για την εύκολη εισαγωγή "
+"συχνά χρησιμοποιημένων tabs/αλφαριθμητικών χωρίς να χρειάζεται η "
+"πληκτρολόγηση τους."
+
+#: plugins/time/time.c:48
+msgid "In_sert Date and Time..."
+msgstr "Ει_σαγωγή Ώρας/Ημερομηνίας..."
+
+#: plugins/time/time.c:51
+msgid "Insert current date and time at the cursor position"
+msgstr "Εισαγωγή τρέχουσας ημ/νίας και ώρας στη θέση του δρομέα"
+
+#: plugins/time/time.c:448
+msgid "Available formats"
+msgstr "Διαθέσιμοι τύποι"
+
+#: plugins/time/time.c:552
+msgid "Configure insert date/time plugin..."
+msgstr "Ρύθμιση πρόσθετης λειτουργίας εισαγωγής ημερομηνίας/ώρας..."
+
+#: plugins/time/time.glade2.h:1 src/dialogs/gedit-preferences.glade2.h:1
+msgid "    "
+msgstr "    "
+
+#: plugins/time/time.glade2.h:3
+msgid "<span size=\"small\">01/11/2002 17:52:00</span>"
+msgstr "<span size=\"small\">01/11/2002 17:52:00</span>"
+
+#: plugins/time/time.glade2.h:4
+msgid "<span weight=\"bold\"> When inserting date/time...</span>"
+msgstr "<span weight=\"bold\">Κατά την εισαγωγή ημερομηνίας/ώρας...</span>"
+
+#: plugins/time/time.glade2.h:5
+msgid "Configure date/time plugin"
+msgstr "Ρύθμιση πρόσθετης λειτουργίας  ημερομηνίας/ώρας"
+
+#: plugins/time/time.glade2.h:6
+msgid "Insert Date and Time"
+msgstr "Εισαγωγή Ώρας/Ημερομηνίας"
+
+#: plugins/time/time.glade2.h:7
+msgid "Use the _selected format"
+msgstr "Χρήση του _επιλεγμένου τύπου"
+
+#: plugins/time/time.glade2.h:8
+msgid "_Insert"
+msgstr "_Εισαγωγή"
+
+#: plugins/time/time.glade2.h:9
+msgid "_Prompt for a format"
+msgstr "_Ερώτηση για τύπο"
+
+#: plugins/time/time.glade2.h:10
+msgid "_Use custom format"
+msgstr "_Χρήση προσαρμοσμένου τύπου"
+
+#: plugins/time/time.gedit-plugin.desktop.in.h:1
+msgid "Copyright (C) 2002 - Paolo Maggi"
+msgstr "Copyright (C) 2002 - Paolo Maggi"
+
+#: plugins/time/time.gedit-plugin.desktop.in.h:2
+msgid "Insert Date/Time"
+msgstr "Εισαγωγή Ώρας/Ημερομηνίας"
+
+#: plugins/time/time.gedit-plugin.desktop.in.h:3
+msgid "Inserts current date and time at the cursor position."
+msgstr "Εισαγωγή τρέχουσας ημ/νίας και ώρας στη θέση του δρομέα."
+
+#: plugins/time/time.gedit-plugin.desktop.in.h:4
+msgid ""
+"Paolo Maggi <maggi@athena.polito.it> and Lee Mallabone <gnome@fonicmonkey."
+"net>"
+msgstr ""
+"Paolo Maggi <maggi@athena.polito.it> and Lee Mallabone <gnome@fonicmonkey."
+"net>"
+
+#: plugins/indent/indent.c:45
+msgid "_Indent"
+msgstr "_Εσοχή"
+
+#: plugins/indent/indent.c:47
+msgid "Indent selected lines"
+msgstr "Εσοχή σε επιλεγμένες γραμμές"
+
+#: plugins/indent/indent.c:49
+msgid "U_nindent"
+msgstr "Α_ποεσοχή"
+
+#: plugins/indent/indent.c:51
+msgid "Unindent selected lines"
+msgstr "Αποεσοχή σε επιλεγμένες γραμμές"
+
+#: plugins/indent/indent.gedit-plugin.desktop.in.h:2
+msgid "Indent lines"
+msgstr "Εσοχή σε γραμμές"
+
+#: plugins/indent/indent.gedit-plugin.desktop.in.h:3
+msgid "Indent or un-indent selected lines."
+msgstr "Εσοχή ή αποεσοχή σε επιλεγμένες γραμμές."
+
+#: plugins/sort/sort.glade2.h:1
+msgid "R_emove duplicates"
+msgstr "Απο_μάκρυνση διπλοεγγραφών"
+
+#: plugins/sort/sort.glade2.h:2
+msgid "S_tart at column:"
+msgstr "Ένα_ρξη στη στήλη"
+
+#: plugins/sort/sort.glade2.h:3 plugins/sort/sort.gedit-plugin.desktop.in.h:3
+msgid "Sort"
+msgstr "Ταξινόμηση"
+
+#: plugins/sort/sort.glade2.h:4
+msgid "You cannot undo a sort operation"
+msgstr "Δεν θα μπορείτε να αναιρέσετε την ενέργεια ταξινόμησης"
+
+#: plugins/sort/sort.glade2.h:5
+msgid "_Ignore case"
+msgstr "Α_γνόηση χαρακτήρα"
+
+#: plugins/sort/sort.glade2.h:6
+msgid "_Reverse order"
+msgstr "_Αναστροφή σειράς"
+
+#: plugins/sort/sort.glade2.h:7
+msgid "_Sort"
+msgstr "_Ταξινόμηση"
+
+#: plugins/sort/sort.gedit-plugin.desktop.in.h:1
+msgid ""
+"Carlo Borreo <borreo@softhome.net>, Lee Mallabone <gnome@fonicmonkey.net> "
+"and Paolo Maggi <maggi@athena.polito.it>"
+msgstr ""
+"Carlo Borreo <borreo@softhome.net>, Lee Mallabone <gnome@fonicmonkey.net> "
+"and Paolo Maggi <maggi@athena.polito.it>"
+
+#: plugins/sort/sort.gedit-plugin.desktop.in.h:2
+msgid ""
+"Copyright (C) 2001 Carlo Borreo\n"
+"Copyright (C) 2002 Lee Mallabone and Paolo Maggi"
+msgstr ""
+"Copyright (C) 2001 Carlo Borreo\n"
+"Copyright (C) 2002 Lee Mallabone and Paolo Maggi"
+
+#: plugins/sort/sort.gedit-plugin.desktop.in.h:4
+msgid "Sorts a document or selected text."
+msgstr "Ταξινόμηση του εγγράφου ή της επιλογής."
+
+#: plugins/spell/gedit-automatic-spell-checker.c:318
+#: plugins/spell/gedit-spell-checker-dialog.c:504
+msgid "(no suggested words)"
+msgstr "(όχι προτεινόμενες λέξεις)"
+
+#: plugins/spell/gedit-automatic-spell-checker.c:342
+msgid "_More..."
+msgstr "_Περισσότερα..."
+
+#. Ignore all
+#: plugins/spell/gedit-automatic-spell-checker.c:395
+msgid "_Ignore All"
+msgstr "_Αγνόηση Όλων"
+
+#. + Add to Dictionary
+#: plugins/spell/gedit-automatic-spell-checker.c:408
+msgid "_Add"
+msgstr "_Προσθήκη"
+
+#: plugins/spell/gedit-automatic-spell-checker.c:445
+msgid "_Spelling Suggestions..."
+msgstr "_Συμβουλές ορθογραφίας..."
+
+#: plugins/spell/gedit-spell-checker-dialog.c:285
+msgid "Check Spelling"
+msgstr "Έλεγχος Ορθογραφίας"
+
+#: plugins/spell/gedit-spell-checker-dialog.c:296
+msgid "Suggestions"
+msgstr "Συμβουλές"
+
+#: plugins/spell/gedit-spell-checker-dialog.c:608
+msgid "(correct spelling)"
+msgstr "(διόρθωση ορθογραφίας)"
+
+#: plugins/spell/gedit-spell-checker-dialog.c:785
+msgid "Completed spell checking"
+msgstr "Ο έλεγχος ορθογραφίας ολοκληρώθηκε"
+
+#: plugins/spell/gedit-spell-checker.c:73
+msgid "Breton"
+msgstr "Breton"
+
+#: plugins/spell/gedit-spell-checker.c:74
+msgid "Catalan"
+msgstr "Catalan"
+
+#: plugins/spell/gedit-spell-checker.c:75
+msgid "Czech"
+msgstr "Czech"
+
+#: plugins/spell/gedit-spell-checker.c:76
+msgid "Danish"
+msgstr "Danish"
+
+#: plugins/spell/gedit-spell-checker.c:77
+msgid "German (Germany)"
+msgstr "German (Germany)"
+
+#: plugins/spell/gedit-spell-checker.c:78
+msgid "German (Swiss)"
+msgstr "German (Swiss)"
+
+#: plugins/spell/gedit-spell-checker.c:79
+msgid "English (American)"
+msgstr "English (American)"
+
+#: plugins/spell/gedit-spell-checker.c:80
+msgid "English (British)"
+msgstr "English (British)"
+
+#: plugins/spell/gedit-spell-checker.c:81
+msgid "English (Canadian)"
+msgstr "English (Canadian)"
+
+#: plugins/spell/gedit-spell-checker.c:82
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#: plugins/spell/gedit-spell-checker.c:83
+msgid "Spanish"
+msgstr "Spanish"
+
+#: plugins/spell/gedit-spell-checker.c:84
+msgid "Faroese"
+msgstr "Faroese"
+
+#: plugins/spell/gedit-spell-checker.c:85
+msgid "French (France)"
+msgstr "French (France)"
+
+#: plugins/spell/gedit-spell-checker.c:86
+msgid "French (Swiss)"
+msgstr "French (Swiss)"
+
+#: plugins/spell/gedit-spell-checker.c:87
+msgid "Italian"
+msgstr "Italian"
+
+#: plugins/spell/gedit-spell-checker.c:88
+msgid "Dutch"
+msgstr "Dutch"
+
+#: plugins/spell/gedit-spell-checker.c:89
+msgid "Norwegian"
+msgstr "Norwegian"
+
+#: plugins/spell/gedit-spell-checker.c:90
+msgid "Polish"
+msgstr "Polish"
+
+#: plugins/spell/gedit-spell-checker.c:91
+msgid "Portuguese (Portugal)"
+msgstr "Portuguese (Portugal)"
+
+#: plugins/spell/gedit-spell-checker.c:92
+msgid "Portuguese (Brazilian)"
+msgstr "Portuguese (Brazilian)"
+
+#: plugins/spell/gedit-spell-checker.c:93
+msgid "Russian"
+msgstr "Russian"
+
+#: plugins/spell/gedit-spell-checker.c:94
+msgid "Swedish"
+msgstr "Swedish"
+
+#: plugins/spell/gedit-spell-checker.c:653
+msgid "Default"
+msgstr "Εξ ορισμού"
+
+#: plugins/spell/gedit-spell-language-dialog.c:229
+#: src/dialogs/gedit-dialog-goto-line.c:165
+#: src/dialogs/gedit-plugin-program-location-dialog.c:96
+#: src/dialogs/gedit-encodings-dialog.c:238
+#, c-format
+msgid "Could not find the required widgets inside %s."
+msgstr "Αδυναμία εύρεσης απαιτούμενων γραφικών συστατικών μέσα σε %s. "
+
+#: plugins/spell/gedit-spell-language-dialog.c:249
+msgid "Languages"
+msgstr "Γλώσσες"
+
+#: plugins/spell/spell.gedit-plugin.desktop.in.h:1
+msgid "Checks the spelling of the current document."
+msgstr "Ελέγχει την ορθογραφία του τρέχοντος εγγράφου."
+
+#: plugins/spell/spell.gedit-plugin.desktop.in.h:4
+msgid "Spell checker"
+msgstr "Έλεγχος ορθογραφίας"
+
+#: plugins/spell/languages-dialog.glade2.h:1
+msgid "Select the _language of the current document."
+msgstr "Επιλξτε την γ_λώσσα του τρέχοντος εγγράφου."
+
+#: plugins/spell/languages-dialog.glade2.h:2
+msgid "Set language"
+msgstr "Ορισμός γλώσσας "
+
+#: plugins/spell/spell-checker.glade2.h:2
+msgid "<b>Language</b>"
+msgstr "<b>Γλώσσα</b>"
+
+#: plugins/spell/spell-checker.glade2.h:3
+msgid "<b>word</b>"
+msgstr "<b>λέξη</b>"
+
+#: plugins/spell/spell-checker.glade2.h:4
+msgid "Add w_ord"
+msgstr "Προσθήκη λέ_ξης"
+
+#: plugins/spell/spell-checker.glade2.h:5
+msgid "Cha_nge"
+msgstr "Αλλα_γή"
+
+#: plugins/spell/spell-checker.glade2.h:6
+msgid "Change A_ll"
+msgstr "Αλλαγή Ό_λων"
+
+#: plugins/spell/spell-checker.glade2.h:7
+msgid "Change _to:"
+msgstr "Αλλαγή _σε:"
+
+#: plugins/spell/spell-checker.glade2.h:8
+msgid "Check _Word"
+msgstr "Έλεγχος _λέξης"
+
+#: plugins/spell/spell-checker.glade2.h:9
+msgid "Check spelling"
+msgstr "Έλεγχος ορθογραφίας"
+
+#: plugins/spell/spell-checker.glade2.h:10
+msgid "Ignore _All"
+msgstr "Αγνόηση ό_λων"
+
+#: plugins/spell/spell-checker.glade2.h:11
+msgid "Language:"
+msgstr "Γλώσσα:"
+
+#: plugins/spell/spell-checker.glade2.h:12
+msgid "Mispelled word:"
+msgstr "Ανορθόγραφη λέξη:"
+
+#: plugins/spell/spell-checker.glade2.h:13
+msgid "User dictionary:"
+msgstr "Λεξικό χρήστη:"
+
+#: plugins/spell/spell-checker.glade2.h:14
+msgid "_Ignore"
+msgstr "Α_γνόηση"
+
+#: plugins/spell/spell-checker.glade2.h:15
+msgid "_Suggestions:"
+msgstr "_Συμβουλές:"
+
+#. Key in case the plugin ever needs any settings
+#: plugins/sort/sort.c:26
+msgid "S_ort..."
+msgstr "Τα_ξινόμηση..."
+
+#: plugins/sort/sort.c:29
+msgid "Sort the current document or selection."
+msgstr "Ταγινόμηση του τρέχοντος εγγράφου ή της επιλογής."
+
+#: plugins/spell/spell.c:51
+msgid "_Check Spelling"
+msgstr "Έ_λεγχος Ορθογραφίας"
+
+#: plugins/spell/spell.c:54
+msgid "Check the current document for incorrect spelling"
+msgstr "Αναζητά στο τρέχον έγγραφο ορθογραφικά λάθη"
+
+#: plugins/spell/spell.c:56
+msgid "_Autocheck Spelling"
+msgstr "_Αυτόματος έλεγχος ορθογραφίας"
+
+#: plugins/spell/spell.c:59
+msgid "Automatically spell-check the current document"
+msgstr "Αυτόματος έλεγχος ορθογραφίας στο τρέχον έγγραφο"
+
+#: plugins/spell/spell.c:61
+msgid "Set _Language"
+msgstr "Ορισμός Γ_λώσσας"
+
+#: plugins/spell/spell.c:64
+msgid "Set the language of the current document"
+msgstr "Ορισμός γλώσσας για το τρέχον έγγραφο"
+
+#: plugins/spell/spell.c:549
+msgid "The document is empty."
+msgstr "Το έγγραφο είναι κενό."
+
+#: plugins/spell/spell.c:567
+msgid "The selected text does not contain mispelled words."
+msgstr "Το επιλεγμένο αρχείο δεν περιέχει ανορθόγραφες λέξεις."
+
+#: plugins/spell/spell.c:568
+msgid "The document does not contain mispelled words."
+msgstr "Το έγγραφο δεν περιέχει ανορθόγραφες λέξεις."
+
+#: src/bonobo-mdi.c:549 src/bonobo-mdi.c:1962
+#, c-format
+msgid "Activate %s"
+msgstr "Ενεργοποίηση %s"
+
+#: src/dialogs/gedit-dialog-goto-line.c:139
+msgid "Go to Line"
+msgstr "Μετάβαση σε Γραμμή"
+
+#. Add Goto Line button
+#: src/dialogs/gedit-dialog-goto-line.c:149
+msgid "_Go to Line"
+msgstr "_Μετάβαση σε Γραμμή"
+
+#: src/dialogs/gedit-dialog-replace.c:132
+#: src/dialogs/gedit-dialog-replace.c:1025 src/gedit-commands.c:362
+#, c-format
+msgid "The text \"%s\" was not found."
+msgstr "Το κείμενο \"%s\" δε βρέθηκε."
+
+#: src/dialogs/gedit-dialog-replace.c:240 src/dialogs/replace.glade2.h:4
+#: src/gedit-ui.xml.h:51
+msgid "Replace"
+msgstr "Αντικατάσταση"
+
+#: src/dialogs/gedit-dialog-replace.c:251
+msgid "Replace _All"
+msgstr "Αντικατάσταση _Όλων"
+
+#. Add Replace button
+#: src/dialogs/gedit-dialog-replace.c:254 src/gedit-file-selector-util.c:129
+msgid "_Replace"
+msgstr "_Αντικατάσταση"
+
+#: src/dialogs/gedit-dialog-replace.c:376 src/gedit-ui.xml.h:22
+msgid "Find"
+msgstr "Αναζήτηση"
+
+#: src/dialogs/gedit-dialog-replace.c:1034
+#, c-format
+msgid "Found and replaced %d occurences."
+msgstr "Βρέθηκαν και αντικαταστάθηκαν %d εμφανίσεις."
+
+#: src/dialogs/gedit-dialog-uri.c:83
+msgid "Open Location"
+msgstr "Άνοιγμα Τοποθεσίας"
+
+#: src/dialogs/gedit-plugin-manager.c:53
+msgid "Plugin"
+msgstr "Πρόσθετη Λειτουργία"
+
+#: src/dialogs/gedit-plugin-manager.c:54
+msgid "Load"
+msgstr "Φόρτωση"
+
+#: src/dialogs/gedit-plugin-manager.c:320
+msgid "Module file name"
+msgstr "Όνομα αρχείου λειτουργικής μονάδας"
+
+#: src/dialogs/gedit-plugin-manager.c:321
+msgid "Author(s)"
+msgstr "Συγγραφέας(είς)"
+
+#: src/dialogs/gedit-plugin-manager.c:488
+msgid "Could not find plugin-manager.glade2, reinstall gedit.\n"
+msgstr ""
+"Αδυναμία εύρεσης διαχείρισης πρόσθετων λειτουργιών.glade2,  επανεγκαταστήστε "
+"το gedit.\n"
+
+#: src/dialogs/gedit-plugin-manager.c:511
+msgid "Invalid glade file for plugin manager -- not all widgets found.\n"
+msgstr ""
+"Μή έγκυρο αρχείο glade  για τη διαχείριση πρόσθετων λειτουργιών -- δεν "
+"βρέθηκαν όλα τα γραφικά συστατικά.\n"
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:74
+#: src/dialogs/program-location-dialog.glade2.h:1
+msgid "Set program location..."
+msgstr "Καθορισμός θέσης προγράμματος..."
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:102
+#, c-format
+msgid ""
+"The %s plugin uses an external program, called <tt>%s</tt>, to perform its "
+"task.\n"
+"\n"
+"Please, specify the location of the <tt>%s</tt> program."
+msgstr ""
+"Η πρόσθετη λειτουργία %s χρησιμοποιεί ένα εξωτερικό πρόγραμμα, το <tt>%s</"
+"tt>, για να εκτελέσει την εργασία της.\n"
+"\n"
+"Καθορίστε την τοποθεσία του προγράμματος <tt>%s</tt>."
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:148
+msgid "The selected file is not executable."
+msgstr "Το επιλεγμένο αρχείο δεν είναι εκτελέσιμο."
+
+#: src/dialogs/gedit-preferences-dialog.c:232
+msgid "Font & Colors"
+msgstr "Γραμματοσειρές & Χρώματα"
+
+#: src/dialogs/gedit-preferences-dialog.c:234
+#: src/dialogs/gedit-preferences.glade2.h:47
+msgid "Tabs"
+msgstr "Στήλες"
+
+#: src/dialogs/gedit-preferences-dialog.c:235
+msgid "Wrap Mode"
+msgstr "Λειτουργία Αναδίπλωσης"
+
+#: src/dialogs/gedit-preferences-dialog.c:236
+msgid "Auto Indent"
+msgstr "Αυτόματη εσοχή"
+
+#: src/dialogs/gedit-preferences-dialog.c:237
+msgid "Line Numbers"
+msgstr "Αριθμοί γραμμής"
+
+#: src/dialogs/gedit-preferences-dialog.c:239 src/gedit-ui.xml.h:32
+msgid "Open"
+msgstr "Άνοιγμα"
+
+#: src/dialogs/gedit-preferences-dialog.c:240
+#: src/dialogs/gedit-preferences.glade2.h:42 src/gedit-ui.xml.h:55
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: src/dialogs/gedit-preferences-dialog.c:241
+#: src/dialogs/gedit-preferences.glade2.h:50 src/gedit-ui.xml.h:72
+msgid "Undo"
+msgstr "Ακύρωση"
+
+#: src/dialogs/gedit-preferences-dialog.c:249
+msgid "Page"
+msgstr "Σελίδα"
+
+#: src/dialogs/gedit-preferences-dialog.c:251
+msgid "Fonts"
+msgstr "Γραμματοσειρές"
+
+#: src/dialogs/gedit-preferences-dialog.c:258
+msgid "Manager"
+msgstr "Διαχειριστής"
+
+#: src/dialogs/gedit-preferences-dialog.c:266
+msgid "Editor"
+msgstr "Επεξεργαστής"
+
+#: src/dialogs/gedit-preferences-dialog.c:267
+#: src/dialogs/gedit-preferences.glade2.h:38 src/gedit-print.c:364
+#: src/gedit-ui.xml.h:41
+msgid "Print"
+msgstr "Εκτύπωση"
+
+#: src/dialogs/gedit-preferences-dialog.c:268
+msgid "Plugins"
+msgstr "Πρόσθετες Λειτουργίες"
+
+#: src/dialogs/gedit-preferences-dialog.c:341
+msgid "Cat_egories:"
+msgstr "Κατη_γορίες:"
+
+#: src/dialogs/gedit-preferences-dialog.c:363
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+
+#: src/dialogs/gedit-preferences-dialog.c:602
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+#: src/dialogs/gedit-preferences-dialog.c:835
+msgid "Push this button to select the font to be used by the editor"
+msgstr ""
+"Πατήστε αυτό το κουμπί για να επιλέξετε τη γραμματοσειρά που θα "
+"χρησιμοποιείται από τον επεξεργαστή"
+
+#: src/dialogs/gedit-preferences-dialog.c:838
+msgid "Push this button to configure text color"
+msgstr "Πατήστε αυτό το κουμπί για να ρυθμίσετε το χρώμα κειμένου"
+
+#: src/dialogs/gedit-preferences-dialog.c:840
+msgid "Push this button to configure background color"
+msgstr "Πιέστε αυτό το κουμπί για τη ρύθμιση χρώματος παρασκηνίου"
+
+#: src/dialogs/gedit-preferences-dialog.c:842
+msgid ""
+"Push this button to configure the color in which the selected text should "
+"appear"
+msgstr ""
+"Πατήστε αυτό το κουμπί για να ρυθμίσετε το χρώμα στο οποίο θα εμφανίζεται το "
+"κείμενο"
+
+#: src/dialogs/gedit-preferences-dialog.c:845
+msgid ""
+"Push this button to configure the color in which the selected text should be "
+"marked"
+msgstr ""
+"Πατήστε αυτό το κουμπί για να ρυθμίσετε το χρώμα στο οποίο θα σημειώνεται το "
+"επιλεγμένο κείμενο"
+
+#: src/dialogs/gedit-preferences-dialog.c:1850
+msgid "Push this button to select the font to be used to print the body"
+msgstr ""
+"Πατήστε αυτό το κουμπί για να επιλέξετε τη γραμματοσειρά που θα "
+"χρησιμοποιείται για την εκτύπωση του σώματος"
+
+#: src/dialogs/gedit-preferences-dialog.c:1852
+msgid "Push this button to select the font to be used to print the headers"
+msgstr ""
+"Πατήστε αυτό το κουμπί για να επιλέξετε την γραμματοσειρά που θα "
+"χρησιμοποιείται για την εκτύπωση των κεφαλίδων"
+
+#: src/dialogs/gedit-preferences-dialog.c:1854
+msgid "Push this button to select the font to be used to print line numbers"
+msgstr ""
+"Πατήστε αυτό το κουμπί για να επιλέξετε τη γραμματοσειρά που θα "
+"χρησιμοποιείται για την εκτύπωση αριθμών γραμμής"
+
+#: src/dialogs/gedit-preferences.glade2.h:2
+msgid "<b>Font</b>"
+msgstr "<b>Γραμματοσειρά</b>"
+
+#: src/dialogs/gedit-preferences.glade2.h:3
+msgid "<span weight=\"bold\" size=\"x-large\">Auto Indent</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Αυτόματη Εσοχή</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:4
+msgid "<span weight=\"bold\" size=\"x-large\">Font &amp; Colors</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"x-large\">Γραμματοσειρά &amp; Χρώματα</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:5
+msgid "<span weight=\"bold\" size=\"x-large\">Fonts</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Γραμματοσειρές</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:6
+msgid "<span weight=\"bold\" size=\"x-large\">Line Numbers</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Αριθμοί Γραμμής</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:7
+msgid "<span weight=\"bold\" size=\"x-large\">Manager</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Διαχειριστής</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:8
+msgid "<span weight=\"bold\" size=\"x-large\">Open</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Άνοιγμα</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:9
+msgid "<span weight=\"bold\" size=\"x-large\">Page</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Σελίδα</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:10
+msgid "<span weight=\"bold\" size=\"x-large\">Save</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Αποθήκευση</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:11
+msgid "<span weight=\"bold\" size=\"x-large\">Tabs</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Tabs</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:12
+msgid "<span weight=\"bold\" size=\"x-large\">Undo</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Αναίρεση</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:13
+msgid "<span weight=\"bold\" size=\"x-large\">Wrap Mode</span>"
+msgstr "<span weight=\"bold\" size=\"x-large\">Λειτουργία Αναδίπλωσης</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:14
+msgid "<span weight=\"bold\">Colors</span>"
+msgstr "<span weight=\"bold\">Χρώματα</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:15
+msgid "<span weight=\"bold\">When saving a new file...</span>"
+msgstr "<span weight=\"bold\">Κατά την αποθήκευση ενός νέου αρχείου...</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:16
+msgid "<span weight=\"bold\">When saving an existing file...</span>"
+msgstr ""
+"<span weight=\"bold\">Κατά την αποθήκευση ενός υπάρχοντος αρχείου...</span>"
+
+#: src/dialogs/gedit-preferences.glade2.h:17
+msgid "Add new encodings"
+msgstr "Προσθήκη νέων κωδικοποιήσεων"
+
+#: src/dialogs/gedit-preferences.glade2.h:18
+msgid "Always use U_TF-8 encoding (faster)"
+msgstr "Να γίνεται πάντα χρήση κωδικοποίησης U_TF-8 (γρηγορότερο) "
+
+#: src/dialogs/gedit-preferences.glade2.h:19
+msgid "Always use _UTF-8 encoding (faster)"
+msgstr "Να γίνεται πάντα χρήση κωδικοποίησης _UTF-8 (γρηγορότερο) "
+
+#: src/dialogs/gedit-preferences.glade2.h:20
+msgid "Create a _backup copy of files before saving"
+msgstr "Δημιουργία_αντίγραφου ασφαλείας πριν την αποθήκευση"
+
+#: src/dialogs/gedit-preferences.glade2.h:21
+msgid "Do not _split words over two lines"
+msgstr "Να μην χωρίζονται λέξεις σε πάνω από δύο γραμμές"
+
+#: src/dialogs/gedit-preferences.glade2.h:22
+msgid "Editor _font: "
+msgstr "Γ_ραμματοσειρά επεξεργαστή:"
+
+#: src/dialogs/gedit-preferences.glade2.h:23
+msgid "Enable _auto indentation"
+msgstr "Ενεργοποίηση _αυτόματης εσοχής"
+
+#: src/dialogs/gedit-preferences.glade2.h:24
+msgid "Enable text _wrapping"
+msgstr "Ενεργοποίηση αναδίπλ_ωσης κειμένου"
+
+#: src/dialogs/gedit-preferences.glade2.h:25
+msgid "Fonts & Colors"
+msgstr "Γραμματοσειρές & Χρώματα"
+
+#: src/dialogs/gedit-preferences.glade2.h:26
+msgid "Insert _spaces instead of tabs"
+msgstr "Εισαγωγή _διαστημάτων αντί για tabs"
+
+#: src/dialogs/gedit-preferences.glade2.h:27
+msgid "LOGO"
+msgstr "ΛΟΓΟΤΥΠΟ"
+
+#: src/dialogs/gedit-preferences.glade2.h:28
+msgid "Line _numbers:"
+msgstr "Αριθμοί _γραμμής"
+
+#: src/dialogs/gedit-preferences.glade2.h:29
+msgid "Line numbers"
+msgstr "Αριθμοί γραμμής"
+
+#: src/dialogs/gedit-preferences.glade2.h:30
+msgid "Move down"
+msgstr "Μετακίνηση κάτω"
+
+#: src/dialogs/gedit-preferences.glade2.h:31
+msgid "Move up"
+msgstr "Μετακίνηση πάνω"
+
+#: src/dialogs/gedit-preferences.glade2.h:32
+msgid "Page he_aders:"
+msgstr "Κεφ_αλίδες σελίδας:"
+
+#: src/dialogs/gedit-preferences.glade2.h:33
+msgid "Pick the background color"
+msgstr "Επιλογή του χρώματος παρασκηνίου"
+
+#: src/dialogs/gedit-preferences.glade2.h:34
+msgid "Pick the selected text color"
+msgstr "Επιλογή του επιλεγμένου χρώματος κειμένου"
+
+#: src/dialogs/gedit-preferences.glade2.h:35
+msgid "Pick the selection color"
+msgstr "Επιλογή χρώματος της επιλογής"
+
+#: src/dialogs/gedit-preferences.glade2.h:36
+msgid "Pick the text color"
+msgstr "Επιλογή χρώματος κειμένου"
+
+#: src/dialogs/gedit-preferences.glade2.h:37
+msgid "Plugin manager"
+msgstr "Διαχειριστής Προσθέτων Λειτουργιών"
+
+#: src/dialogs/gedit-preferences.glade2.h:39
+msgid "Print _line numbers every"
+msgstr "Εκτύπωση αρι_θμών γραμμής κάθε"
+
+#: src/dialogs/gedit-preferences.glade2.h:40
+msgid "Print fonts"
+msgstr "Εκτύπωση γραμματοσειρών"
+
+#: src/dialogs/gedit-preferences.glade2.h:41
+msgid "Remove an encoding"
+msgstr "Απομάκρυνση κωδικοποίησης"
+
+#: src/dialogs/gedit-preferences.glade2.h:43
+msgid "Se_lection color:"
+msgstr "Χρώμα επ_ιλογής:"
+
+#: src/dialogs/gedit-preferences.glade2.h:44
+msgid "Selecte_d text color:"
+msgstr "Επιλεγμέ_νο χρώμα κειμένου:"
+
+#: src/dialogs/gedit-preferences.glade2.h:45
+msgid "Set _tabs width equivalent to"
+msgstr "Ορισμός πλάτους _στηλών ίσο με"
+
+#: src/dialogs/gedit-preferences.glade2.h:46
+msgid "Set limit on _undo actions to"
+msgstr "Καθορισμός ορίου των επιπέδων _αναιρέσεων σε"
+
+#: src/dialogs/gedit-preferences.glade2.h:48
+msgid "U_se default theme colors"
+msgstr "Χρή_ση εξ ορισμού χρωμάτων θέματος"
+
+#: src/dialogs/gedit-preferences.glade2.h:49
+msgid "U_se original file encoding if possible"
+msgstr "Χρή_ση της αρχικής κωδικοποίησης αρχείου αν είναι δυνατόν"
+
+#: src/dialogs/gedit-preferences.glade2.h:51
+msgid "Use cu_rrent locale's encoding if possible"
+msgstr "Χρήση της τρέ_χουσας κωδικοποίησης locale αν είναι δυνατόν"
+
+#: src/dialogs/gedit-preferences.glade2.h:52
+msgid "Use current _locale's encoding if possible"
+msgstr "Χρήση της τρέχουσας _κωδικοποίησης locale αν είναι δυνατόν"
+
+#: src/dialogs/gedit-preferences.glade2.h:53
+msgid "Wrap mode"
+msgstr "Κατάσταση αναδίπλωσης"
+
+#: src/dialogs/gedit-preferences.glade2.h:54
+msgid "_Autosave current file every"
+msgstr "_Αυτόματη αποθήκευση τρέχοντος αρχείου κάθε"
+
+#: src/dialogs/gedit-preferences.glade2.h:55
+msgid "_Background color:"
+msgstr "_Χρώμα παρασκηνίου: "
+
+#: src/dialogs/gedit-preferences.glade2.h:56
+msgid "_Body:"
+msgstr "_Σώμα κειμένου:"
+
+#: src/dialogs/gedit-preferences.glade2.h:57
+msgid "_Display line numbers"
+msgstr "_Προβολή αριθμών γραμμής:"
+
+#: src/dialogs/gedit-preferences.glade2.h:58
+msgid "_Print page headers"
+msgstr "Εκτύ_πωση κεφαλίδων σελίδας"
+
+#: src/dialogs/gedit-preferences.glade2.h:59
+msgid "_Restore Default Fonts"
+msgstr "Επαναφο_ρά εξ ορισμού γραμματοσειρών"
+
+#: src/dialogs/gedit-preferences.glade2.h:60
+msgid "_Supported encodings:"
+msgstr "Υπο_στηριζόμενες κωδικοποιήσεις:"
+
+#: src/dialogs/gedit-preferences.glade2.h:61
+msgid "_Text color:"
+msgstr "_Χρώμα κειμένου"
+
+#: src/dialogs/gedit-preferences.glade2.h:62
+msgid "_Use default theme font"
+msgstr "_Χρήση εξ ορισμού θέματος γραμματοσειράς: "
+
+#: src/dialogs/gedit-preferences.glade2.h:63
+msgid "_action(s)"
+msgstr "ε_νέργεια(ες)"
+
+#: src/dialogs/gedit-preferences.glade2.h:64
+msgid "_minutes"
+msgstr "_λεπτά"
+
+#: src/dialogs/gedit-preferences.glade2.h:65
+msgid "character(s)"
+msgstr " χαρακτήρες"
+
+#: src/dialogs/gedit-preferences.glade2.h:66
+msgid "li_ne(s)"
+msgstr "γρ_αμμή(ές)"
+
+#: src/dialogs/gnome-print-font-dialog.c:107
+msgid "_Insert a new preview phrase."
+msgstr "_Εισαγωγή μια νέας φράσης προεπισκόπησης."
+
+#: src/dialogs/gnome-print-font-dialog.c:113
+msgid "Modify preview phrase..."
+msgstr "Τροποποίηση φράσης προεπισκόπησης..."
+
+#: src/dialogs/gnome-print-font-dialog.c:167
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+#: src/dialogs/gnome-print-font-dialog.c:180
+msgid "_Modify preview phrase..."
+msgstr "_Τροποποίηση φράσης προεπισκόπησης..."
+
+#: src/dialogs/gnome-print-font-dialog.c:243
+msgid "Font Selection"
+msgstr "Επιλογή Γραμματοσειράς"
+
+#: src/dialogs/gnome-print-font-picker.c:89
+msgid "Sans Regular 12"
+msgstr "Sans Regular 12"
+
+#: src/dialogs/gnome-print-font-picker.c:90
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+msgstr "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσΤτΥυΦφΧχΨψΩω"
+
+#: src/dialogs/gnome-print-font-picker.c:91
+msgid "Pick a Font"
+msgstr "Επιλογή Γραμματοσειράς"
+
+#: src/dialogs/gnome-print-font-picker.c:176
+msgid "Title"
+msgstr "Τίτλος"
+
+#: src/dialogs/gnome-print-font-picker.c:177
+msgid "The title of the selection dialog box"
+msgstr "Ο τίτλος του κουτιού διαλόγου επιλογής"
+
+#: src/dialogs/gnome-print-font-picker.c:197
+msgid "Font name"
+msgstr "Όνομα γραμματοσειράς"
+
+#: src/dialogs/gnome-print-font-picker.c:198
+msgid "Name of the selected font"
+msgstr "Όνομα επιλεγμένης γραμματοσειράς"
+
+#: src/dialogs/gnome-print-font-picker.c:206
+msgid "Preview text"
+msgstr "Προεπισκόπηση κειμένου"
+
+#: src/dialogs/gnome-print-font-picker.c:207
+msgid "Preview text shown in the dialog"
+msgstr "Προεπισκόπηση κειμένου που προβάλλεται στο κουτί διαλόγου"
+
+#: src/dialogs/gnome-print-font-picker.c:215
+msgid "Use font in label"
+msgstr "Χρήση γραμματοσειράς στην ετικέτα"
+
+#: src/dialogs/gnome-print-font-picker.c:216
+msgid "Use font in the label in font info mode"
+msgstr ""
+"Χρήση γραμματοσειράς στην ετικέτα σε λειτουργία πληροφ. γραμματοσειράς."
+
+#: src/dialogs/gnome-print-font-picker.c:224
+msgid "Font size for label"
+msgstr "Μέγεθος γραμματοσειράς για ετικέτα"
+
+#: src/dialogs/gnome-print-font-picker.c:225
+msgid "Font size for label in font info mode"
+msgstr ""
+"Μέγεθος γραμματοσειράς για ετικέτα σε λειτουργία πληροφ. γραμματοσειράς."
+
+#: src/dialogs/gnome-print-font-picker.c:235
+msgid "Show size"
+msgstr "Προβολή μεγέθους"
+
+#: src/dialogs/gnome-print-font-picker.c:236
+msgid "Show size in font info mode"
+msgstr "Προβολή μεγέθους σε λειτουργία πληροφ. γραμματοσειράς."
+
+#: src/dialogs/gnome-print-font-picker.c:1015
+msgid "Font"
+msgstr "Γραμματοσειρά"
+
+#. gnome_print_font_picker_update_font_info
+#: src/dialogs/goto-line.glade2.h:1
+msgid "Goto Line"
+msgstr "Μετάβαση σε Γραμμή"
+
+#: src/dialogs/goto-line.glade2.h:2
+msgid "_Line number:"
+msgstr "_Αριθμός γραμμής:"
+
+#: src/dialogs/plugin-manager.glade2.h:1
+msgid "C_onfigure plugin"
+msgstr "Ρύθ_μιση πρόσθετης λειτουργίας"
+
+#: src/dialogs/plugin-manager.glade2.h:2
+msgid "Configure the selected plugin"
+msgstr "Ρύθμιση επιλεγμένης πρόσθετης λειτουργίας"
+
+#: src/dialogs/plugin-manager.glade2.h:3
+msgid "De_tails"
+msgstr "Λεπτο_μέρειες"
+
+#: src/dialogs/plugin-manager.glade2.h:4
+msgid "_Description"
+msgstr "_Περιγραφή"
+
+#: src/dialogs/plugin-manager.glade2.h:5
+msgid "dialog1"
+msgstr "διάλογος1"
+
+#: src/dialogs/program-location-dialog.glade2.h:2
+msgid "_Location to search for:"
+msgstr "_Θέση προς αναζήτηση:"
+
+#: src/dialogs/program-location-dialog.glade2.h:3
+msgid "label"
+msgstr "ετικέτα"
+
+#: src/dialogs/replace.glade2.h:2
+msgid "Find Next"
+msgstr "Εύρεση επομένου"
+
+#: src/dialogs/replace.glade2.h:3
+msgid "Match _entire word only"
+msgstr "Ταίριασμα _ολόκληρης λέξης μόνο"
+
+#: src/dialogs/replace.glade2.h:5
+msgid "Replace All"
+msgstr "Αντικατάσταση Όλων"
+
+#: src/dialogs/replace.glade2.h:6
+msgid "Replace _with: "
+msgstr "Αντικατάσταση_με:"
+
+#: src/dialogs/replace.glade2.h:7
+msgid "_Match case"
+msgstr "_Ταίριασμα χαρακτήρα"
+
+#: src/dialogs/replace.glade2.h:8
+msgid "_Search for: "
+msgstr "_Εύρεση του: "
+
+#: src/dialogs/replace.glade2.h:9
+msgid "_Wrap around"
+msgstr "Αναδίπλ_ωση γύρω"
+
+#: src/dialogs/uri.glade2.h:2
+msgid "Enter the _location (URI) of the file you would like to open:"
+msgstr "Εισάγετε την τοποθεσία (URI) του αρχείου που θέλετε να ανοίξετε:"
+
+#: src/dialogs/uri.glade2.h:3
+msgid "Open from URI"
+msgstr "Άνοιγμα από URI"
+
+#: src/gedit-commands.c:471
+msgid "translator_credits"
+msgstr ""
+"Σπύρος Παπαδημητρίου <spapadim+@cs.cmu.edu>\n"
+"Συμεών (σίμος) Ξενιτέλλης <simos@hellug.gr>\n"
+"Κώστας Παπαδήμας <pkst@gmx.net>"
+
+#: src/gedit-commands.c:496
+msgid "gedit"
+msgstr "gedit"
+
+#: src/gedit-commands.c:499
+msgid "gedit is a small and lightweight text editor for Gnome"
+msgstr ""
+"Το gedit είναι ένας μικρός και ελαφρύς διορθωτής κειμένου για το GNOME."
+
+#: src/gedit-document.c:545 src/gedit-document.c:563
+#, c-format
+msgid "%s %d"
+msgstr "%s %d"
+
+#: src/gedit-document.c:545 src/gedit-document.c:563
+msgid "Untitled"
+msgstr "Ανώνυμο"
+
+#: src/gedit-document.c:551 src/gedit-document.c:598
+msgid "Invalid file name"
+msgstr "Μή έγκυρο όνομα αρχείου"
+
+#: src/gedit-document.c:710 src/gedit-document.c:794
+msgid "Invalid UTF-8 data"
+msgstr "Μη έγκυρα δεδομένα UTF-8 "
+
+#: src/gedit-document.c:1024
+#, c-format
+msgid "Could not read symbolic link information for %s"
+msgstr "Δεν είναι δυνατή η ανάγνωση πληροφοριών συμβολικού δεσμού για %s"
+
+#: src/gedit-document.c:1070
+msgid "The file has too many symbolic links."
+msgstr "Το αρχείο έχει πάρα πολλούς συμβολικούς δεσμούς."
+
+#: src/gedit-document.c:1126
+#, c-format
+msgid "gedit cannot handle %s: locations in write mode."
+msgstr ""
+"Η εφαρμογή δεν μπορεί να χειριστεί τοποθεσίες %s: σε λειτουργία εγγραφής."
+
+#: src/gedit-document.c:1133
+msgid "gedit cannot handle this kind of location in write mode."
+msgstr ""
+"Η εφαρμογή δεν μπορεί να χειριστεί αυτό το είδος της τοποθεσίας σε "
+"λειτουργία εγγραφής."
+
+#: src/gedit-document.c:1146
+msgid "Invalid filename."
+msgstr "Μή έγκυρο όνομα αρχείου."
+
+#: src/gedit-document.c:1286
+msgid ""
+"There is not enough disk space to save the file.\n"
+"Please free some disk space and try again."
+msgstr ""
+"Δεν υπάρχει αρκετός χώρος στο δίσκο για την αποθήκευση του αρχείου.\n"
+"Ελευθερώστε κάποιο χώρο στο δίσκο και προσπαθήστε ξανά."
+
+#: src/gedit-document.c:1291
+msgid ""
+"The disk where you are trying to save the file has a limitation on file "
+"sizes.  Please try saving a smaller file or saving it to a disk that does "
+"not have this limitation."
+msgstr ""
+"Ο δίσκος στον οποίο προσπαθείτε να αποθηκεύσετε το αρχείο έχει περιορισμό "
+"στα μεγέθη αρχείων. Προσπαθείστε να αποθηκεύσετε ένα μικρότερο αρχείο ή "
+"διαλέξτε ένα δίσκο χωρίς περιορισμούς."
+
+#: src/gedit-document.c:1330
+msgid "Could not create a backup file."
+msgstr "Αδυναμία δημιουργίας αρχείου ασφαλείας."
+
+#: src/gedit-document.c:1448
+msgid "It is not possible to revert an Untitled document"
+msgstr "Δε μπορείτε να επαναφέρετε ένα Ανώνυμο έγγραφο"
+
+#: src/gedit-file-selector-util.c:147
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"Do you want to replace it with the one you are saving?"
+msgstr ""
+"Ένα αρχείο με όνομα \"%s\" υπάρχει ήδη.\n"
+"Θέλετε να γίνει προσπάθεια να το αντικαταστήσετε με αυτό που αποθηκεύετε?"
+
+#: src/gedit-file-selector-util.c:158
+#, c-format
+msgid ""
+"The file \"%s\" is read-only.\n"
+"Do you want to try to replace it with the one you are saving?"
+msgstr ""
+"Το αρχείο  \"%s\"  είναι μόνο για ανάγνωση.\n"
+"Θέλετε να γίνει προσπάθεια να το αντικαταστήσετε με αυτό που αποθηκεύετε?"
+
+#: src/gedit-file-selector-util.c:544
+msgid "Select a filename to save"
+msgstr "Επιλογή ενός ονόματος αρχείου για αποθήκευση"
+
+#: src/gedit-file.c:151
+msgid "Open File..."
+msgstr "Άνοιγμα Αρχείου ..."
+
+#: src/gedit-file.c:177 src/gedit-file.c:887
+#, c-format
+msgid "Loaded file '%s'"
+msgstr "Φόρτωμένο αρχείο '%s'"
+
+#: src/gedit-file.c:309 src/gedit-file.c:455
+#, c-format
+msgid "Saving file '%s'..."
+msgstr "Αποθήκευση αρχείου '%s' ... "
+
+#: src/gedit-file.c:337 src/gedit-file.c:470
+msgid "The document has not been saved."
+msgstr "Το έγγραφο δεν αποθηκεύτηκε."
+
+#: src/gedit-file.c:351 src/gedit-file.c:467
+#, c-format
+msgid "File '%s' saved."
+msgstr "Το αρχείο '%s' αποθηκεύτηκε."
+
+#: src/gedit-file.c:434
+msgid "Save as..."
+msgstr "Αποθήκευση ως..."
+
+#: src/gedit-file.c:628
+#, c-format
+msgid ""
+"Do you want to revert to saved the document '%s'?\n"
+"\n"
+"You will not be able to undo this operation."
+msgstr ""
+"Θέλετε να γίνει επαναφορά για να αποθηκεύσετε το έγγραφο '%s'?\n"
+"\n"
+"Δεν θα μπορέσετε να αναιρέσετε αυτή την ενέργεια."
+
+#: src/gedit-file.c:638 src/gedit-ui.xml.h:99
+msgid "_Revert"
+msgstr "_Επαναφορά"
+
+#: src/gedit-file.c:672
+#, c-format
+msgid "Reverting file '%s'..."
+msgstr "Γίνεται επαναφορά αρχείου '%s' ..."
+
+#: src/gedit-file.c:685
+msgid "The document has not been reverted."
+msgstr "Το έγγραφο δεν επαναφέρθηκε."
+
+#: src/gedit-file.c:695
+#, c-format
+msgid "File '%s' reverted."
+msgstr "Έγινε επαναφορά του αρχείου '%s' ."
+
+#: src/gedit-file.c:721
+#, c-format
+msgid "Loading %d files..."
+msgstr "Φόρτωση %d αρχείων..."
+
+#: src/gedit-file.c:757
+#, c-format
+msgid "The file \"%s\" does not exist. Would you like to create it?"
+msgstr "Το αρχείο \"%s\" δεν υπάρχει. Θέλετε να το δημιουργήσετε;"
+
+#: src/gedit-file.c:812
+#, c-format
+msgid "Loaded %i files"
+msgstr "Φορτώθηκαν %i αρχεία"
+
+#: src/gedit-file.c:945
+msgid "Could not read data from stdin."
+msgstr "Αδυναμία ανάγνωσης δεδομένων από stdin."
+
+#. Read only
+#: src/gedit-mdi-child.c:215
+msgid "RO"
+msgstr "RO"
+
+#. Add the detach tab button
+#: src/gedit-mdi-child.c:539 src/gedit-ui.xml.h:89
+msgid "_Move to New Window"
+msgstr "_Μετακίνηση σε Νέο Παράθυρο"
+
+#: src/gedit-mdi.c:446
+msgid "Open a file."
+msgstr "Άνοιγμα αρχείου."
+
+#: src/gedit-mdi.c:1032
+#, c-format
+msgid ""
+"Do you want to save the changes you made to the document \"%s\"? \n"
+"\n"
+"Your changes will be lost if you don't save them."
+msgstr ""
+"Θέλετε να αποθηκεύσετε τις αλλαγές που κάνατε στο αρχείο \"%s\"? \n"
+"\n"
+"Οι αλλαγές θα χαθούν αν δεν τις αποθηκεύσετε."
+
+#: src/gedit-mdi.c:1037
+msgid "Do_n't save"
+msgstr "Ό_χι αποθήκευση"
+
+#: src/gedit-mdi.c:1056
+msgid "_Don't quit"
+msgstr "_Όχι έξοδος"
+
+#: src/gedit-mdi.c:1060
+msgid "_Don't close"
+msgstr "_Όχι κλείσιμο"
+
+#: src/gedit-mdi.c:1150
+msgid "(modified)"
+msgstr "(τροποποιήθηκε)"
+
+#: src/gedit-mdi.c:1156
+msgid "(readonly)"
+msgstr "(μόνο ανάγνωση)"
+
+#: src/gedit-plugins-engine.c:362
+#, c-format
+msgid "Error, unable to open module file '%s'\n"
+msgstr "Σφάλμα, αδυναμία ανοίγματος αρχείου μονάδας '%s'\n"
+
+#: src/gedit-plugins-engine.c:372
+#, c-format
+msgid "Error, plugin '%s' does not contain init function."
+msgstr "Σφάλμα, η πρόσθετη εφαρμογή '%s'  δεν περιέχει τη συνάρτηση init."
+
+#: src/gedit-plugins-engine.c:382
+#, c-format
+msgid "Error, plugin '%s' does not contain activate function."
+msgstr ""
+"Σφάλμα, η πρόσθετη εφαρμογή '%s'  δεν περιέχει τη συνάρτηση ενεργοποίησης."
+
+#: src/gedit-plugins-engine.c:392
+#, c-format
+msgid "Error, plugin '%s' does not contain deactivate function."
+msgstr ""
+"Σφάλμα, η πρόσθετη εφαρμογή '%s'  δεν περιέχει τη συνάρτηση απενεργοποίησης."
+
+#: src/gedit-plugins-engine.c:417
+#, c-format
+msgid "Error, impossible to initialize plugin '%s'"
+msgstr "Σφάλμα, αδύνατη η αρχικοποίηση πρόσθετης λειτουργίας '%s' "
+
+#: src/gedit-plugins-engine.c:468
+#, c-format
+msgid "Error, impossible to destroy plugin '%s'"
+msgstr "Σφάλμα, αδύνατη η καταστροφή πρόσθετης λειτουργίας '%s' "
+
+#: src/gedit-plugins-engine.c:551 src/gedit-plugins-engine.c:639
+#: src/gedit-plugins-engine.c:764
+#, c-format
+msgid "Error, impossible to activate plugin '%s'"
+msgstr "Σφάλμα, αδύνατη η ενεργοποίηση πρόσθετης λειτουργίας %s'"
+
+#: src/gedit-plugins-engine.c:590 src/gedit-plugins-engine.c:782
+#, c-format
+msgid "Error, impossible to deactivate plugin '%s'"
+msgstr "Σφάλμα, αδύνατη η απενεργοποίηση πρόσθετης λειτουργίας '%s' "
+
+#: src/gedit-plugins-engine.c:683
+#, c-format
+msgid "Error, impossible to update ui of the plugin '%s'"
+msgstr "Σφάλμα, αδύνατη η ενημέρωση ui της πρόσθετης λειτουργίας '%s' "
+
+#: src/gedit-prefs-manager.c:335
+msgid "Cannot initialize preferences manager."
+msgstr "Αδύνατη η αρχικοποίηση της διαχείρισης προτιμήσεων."
+
+#: src/gedit-prefs-manager.c:1756
+#, c-format
+msgid "Expected `%s' got `%s' for key %s"
+msgstr "Το αναμενόμενο `%s' έλαβε `%s' για το κλειδί %s"
+
+#: src/gedit-print.c:254
+msgid ""
+"gedit is unable to print since it cannot find\n"
+"one of the required fonts."
+msgstr ""
+"Το gedit  δεν μπορεί να εκτυπώσει επειδή δεν μπορεί να βρεί\n"
+"μια από τις απαιτούμενες γραμματοσειρές."
+
+#: src/gedit-print.c:432
+#, c-format
+msgid "File: %s"
+msgstr "Αρχείο: %s"
+
+#. Print right text
+#: src/gedit-print.c:439
+#, c-format
+msgid "Page: %d"
+msgstr "Σελίδα: %d"
+
+#: src/gedit-print.c:580
+msgid "gedit - Print Preview"
+msgstr "gedit: Προεπισκόπιση Εκτύπωσης"
+
+#: src/gedit-print.c:658
+#, c-format
+msgid ""
+"An error occurred while printing.\n"
+"\n"
+"%s,"
+msgstr ""
+"Παρουσιάστηκε σφάλμα κατά την εκτύπωση.\n"
+"\n"
+"%s"
+
+#: src/gedit-ui.xml.h:1
+msgid "About this application"
+msgstr "Περί της εφαρμογής"
+
+#: src/gedit-ui.xml.h:2
+msgid "C_ustomize Statusbar"
+msgstr "Προ_σαρμογή Γραμμής Κατάστασης"
+
+#: src/gedit-ui.xml.h:3
+msgid "Change the visibility of the output window in the current window"
+msgstr "Αλλαγή της ορατότητας του παραθύρου αποτελέσματος στο τρέχον παράθυρο"
+
+#: src/gedit-ui.xml.h:4
+msgid "Change the visibility of the statusbar in the current window"
+msgstr "Αλλαγή της ορατότητας της γραμμής κατάστασης στο τρέχον παράθυρο"
+
+#: src/gedit-ui.xml.h:5
+msgid "Change the visibility of the toolbar in the current window"
+msgstr "Αλλαγή της ορατότητας της εργαλειοθήκης στο τρέχον παράθυρο"
+
+#: src/gedit-ui.xml.h:6
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: src/gedit-ui.xml.h:7
+msgid "Close all open files"
+msgstr "Κλείσιμο όλων των ανοιχτών εγγράφων"
+
+#: src/gedit-ui.xml.h:8
+msgid "Close the current file"
+msgstr "Κλείσιμο του τρέχοντος αρχείου"
+
+#: src/gedit-ui.xml.h:9
+msgid "Configure the application"
+msgstr "Ρύθμιση της εφαρμογής"
+
+#: src/gedit-ui.xml.h:10
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: src/gedit-ui.xml.h:11
+msgid "Copy the selection"
+msgstr "Αντιγραφή επιλεγμένου"
+
+#: src/gedit-ui.xml.h:12
+msgid "Create a new document"
+msgstr "Δημιουργία νέου εγγράφου"
+
+#: src/gedit-ui.xml.h:13
+msgid "Cu_t"
+msgstr "Απο_κοπή"
+
+#: src/gedit-ui.xml.h:14
+msgid "Customize"
+msgstr "Προσαρμογή"
+
+#: src/gedit-ui.xml.h:15
+msgid "Customize toolbars"
+msgstr "Προσαρμογή εργαλειοθηκών"
+
+#: src/gedit-ui.xml.h:16
+msgid "Cut"
+msgstr "Αποκοπή"
+
+#: src/gedit-ui.xml.h:17
+msgid "Cut the selection"
+msgstr "Αποκοπή επιλεγμένου"
+
+#: src/gedit-ui.xml.h:18
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: src/gedit-ui.xml.h:19
+msgid "Delete the selected text"
+msgstr "Διαγραφή επιλεγμένου κειμένου"
+
+#: src/gedit-ui.xml.h:20
+msgid "Dump XML"
+msgstr "Dump XML"
+
+#: src/gedit-ui.xml.h:21
+msgid "Dump the UI Xml description"
+msgstr "Dump the UI Xml description"
+
+#: src/gedit-ui.xml.h:23
+msgid "Find Again"
+msgstr "Επανάληψη αναζήτησης"
+
+#: src/gedit-ui.xml.h:24
+msgid "Find Ne_xt"
+msgstr "Εύρεση Επό_μενου"
+
+#: src/gedit-ui.xml.h:25
+msgid "Go to _Line..."
+msgstr "Μετάβαση σε γρα_μμή..."
+
+#: src/gedit-ui.xml.h:26
+msgid "Go to a specific line number"
+msgstr "Επίσκεψη του δοσμένου αριθμού γραμμής"
+
+#: src/gedit-ui.xml.h:27
+msgid "Icon and _Text"
+msgstr "Εικονίδιο και _Κείμενο"
+
+#: src/gedit-ui.xml.h:28
+msgid "Main toolbar"
+msgstr "Κύρια εργαλειοθήκη"
+
+#: src/gedit-ui.xml.h:29
+msgid "Move the current document to a new window"
+msgstr "Μετακίνηση του τρέχοντος εγγράφου σε νέο παράθυρο"
+
+#: src/gedit-ui.xml.h:30
+msgid "New"
+msgstr "Νέο"
+
+#: src/gedit-ui.xml.h:31
+msgid "Only show icons in the toolbar"
+msgstr "Προβολή μόνο των εικονιδίων στην εργαλειθήκη"
+
+#: src/gedit-ui.xml.h:33
+msgid "Open Location..."
+msgstr "Άνοιγμα Τοποθεσίας..."
+
+#: src/gedit-ui.xml.h:34
+msgid "Open _Location..."
+msgstr "Άνοιγμα _Τοποθεσίας..."
+
+#: src/gedit-ui.xml.h:35
+msgid "Open a file"
+msgstr "Άνοιγμα αρχείου"
+
+#: src/gedit-ui.xml.h:36
+msgid "Open a file from a specified location"
+msgstr "Άνοιγμα αρχείου από  καθορισμένη τοποθεσία"
+
+#: src/gedit-ui.xml.h:37
+msgid "Open the gedit manual"
+msgstr "'Ανοιγμα του εγχειριδίου του gedit"
+
+#: src/gedit-ui.xml.h:38
+msgid "Paste"
+msgstr "Επικόλληση"
+
+#: src/gedit-ui.xml.h:39
+msgid "Paste the clipboard"
+msgstr "Επικόλληση στο τεμάχιο"
+
+#: src/gedit-ui.xml.h:40
+msgid "Pr_eferences"
+msgstr "Π_ροτιμήσεις"
+
+#: src/gedit-ui.xml.h:42
+msgid "Print Previe_w..."
+msgstr "Προεπισκόπηση εκτύπ_ωσης..."
+
+#: src/gedit-ui.xml.h:43
+msgid "Print Preview"
+msgstr "Προεπισκόπηση εκτύπωσης"
+
+#: src/gedit-ui.xml.h:44
+msgid "Print Setup"
+msgstr "Διαμόρφωση Εκτύπωσης"
+
+#: src/gedit-ui.xml.h:45
+msgid "Print preview"
+msgstr "Προεπισκόπιση εκτύπωσης"
+
+#: src/gedit-ui.xml.h:46
+msgid "Print the current file"
+msgstr "Εκτύπωση του τρέχοντος αρχείου"
+
+#: src/gedit-ui.xml.h:47
+msgid "Quit"
+msgstr "Έξοδος"
+
+#: src/gedit-ui.xml.h:48
+msgid "Quit the program"
+msgstr "Έξοδος από το πρόγραμμα"
+
+#: src/gedit-ui.xml.h:49
+msgid "Redo"
+msgstr "Επανεκτέλεση"
+
+#: src/gedit-ui.xml.h:50
+msgid "Redo the undone action"
+msgstr "Ακύρωση της ανηρημένης ενέργειας"
+
+#: src/gedit-ui.xml.h:52
+msgid "Replace a string"
+msgstr "Αντικατάσταση αλφαριθμητικού"
+
+#: src/gedit-ui.xml.h:53
+msgid "Revert"
+msgstr "Επαναφορά"
+
+#: src/gedit-ui.xml.h:54
+msgid "Revert to a saved version of the file"
+msgstr "Επαναφορά σε μια προσφάτως αποθηκευμένη έκδοση του αρχείου"
+
+#: src/gedit-ui.xml.h:56
+msgid "Save As"
+msgstr "Αποθήκευση Ως"
+
+#: src/gedit-ui.xml.h:57
+msgid "Save _As..."
+msgstr "Αποθήκευση _Ως..."
+
+#: src/gedit-ui.xml.h:58
+msgid "Save all open files"
+msgstr "Αποθήκευση όλων των ανοιχτών εγγράφων"
+
+#: src/gedit-ui.xml.h:59
+msgid "Save the current file"
+msgstr "Αποθήκευση του τρέχοντος αρχείου"
+
+#: src/gedit-ui.xml.h:60
+msgid "Save the current file with a different name"
+msgstr "Αποθήκευση του τρέχοντος αρχείου με διαφορετικό όνομα"
+
+#: src/gedit-ui.xml.h:61
+msgid "Search again for the same string"
+msgstr "Επανάληψη αναζήτησης για το ίδιο αλφαριθμητικό"
+
+#: src/gedit-ui.xml.h:62
+msgid "Search for a string"
+msgstr "Αναζήτηση αλφαριθμητικού"
+
+#: src/gedit-ui.xml.h:63
+msgid "Select All"
+msgstr "Επιλογή Όλων"
+
+#: src/gedit-ui.xml.h:64
+msgid "Select _All"
+msgstr "Επιλογή _Όλων"
+
+#: src/gedit-ui.xml.h:65
+msgid "Select the entire document"
+msgstr "Επιλογή ολόκληρου του εγγράφου"
+
+#: src/gedit-ui.xml.h:66
+msgid "Set toolbar button style according to desktop default"
+msgstr "Ορισμός κουμπί εργαλειοθήκηςί βάσει των ρυθμίσεων της επιφάνειας"
+
+#: src/gedit-ui.xml.h:67
+msgid "Setup the page settings for your current printer"
+msgstr "Διαμόρφωση ρυθμίσεων σελίδας για τον τρέχοντα εκτυπωτή σας."
+
+#: src/gedit-ui.xml.h:68
+msgid "Show _Cursor Position"
+msgstr "Προβολή _θέσης δρομέα"
+
+#: src/gedit-ui.xml.h:69
+msgid "Show _Overwrite Mode"
+msgstr "Προβολή Λειτουργίας _Αντικατάστασης"
+
+#: src/gedit-ui.xml.h:70
+msgid "Show cursor position in the statusbar"
+msgstr "Προβολή εμφάνισης θέσης δρομέα στη γραμμή κατάστασης"
+
+#: src/gedit-ui.xml.h:71
+msgid "Show overwrite mode in the statusbar"
+msgstr "Προβολή λειτουργίας αντικατάστασης στη γραμμή κατάστασης"
+
+#: src/gedit-ui.xml.h:73
+msgid "Undo the last action"
+msgstr "Αναίρεση της τελευταίας ενέργειας"
+
+#: src/gedit-ui.xml.h:74
+msgid "_About"
+msgstr "_Περί"
+
+#: src/gedit-ui.xml.h:75
+msgid "_Close"
+msgstr "_Κλείσιμο"
+
+#: src/gedit-ui.xml.h:76
+msgid "_Close All"
+msgstr "_Κλείσιμο Όλων"
+
+#: src/gedit-ui.xml.h:77
+msgid "_Contents"
+msgstr "_Περιεχόμενα"
+
+#: src/gedit-ui.xml.h:78
+msgid "_Copy"
+msgstr "_Αντιγραφή"
+
+#: src/gedit-ui.xml.h:79
+msgid "_Customize Toolbar"
+msgstr "_Προσαρμογή Εργαλειθήκης"
+
+#: src/gedit-ui.xml.h:80
+msgid "_Debug"
+msgstr "_Εκσφαλμάτωση"
+
+#: src/gedit-ui.xml.h:81
+msgid "_Delete"
+msgstr "_Διαγραφή"
+
+#: src/gedit-ui.xml.h:82
+msgid "_Desktop Default"
+msgstr "_Εξ'ορισμού Επιφάνειας"
+
+#: src/gedit-ui.xml.h:83
+msgid "_Documents"
+msgstr "_Έγγραφα"
+
+#: src/gedit-ui.xml.h:84
+msgid "_Edit"
+msgstr "_Επεξεργασία"
+
+#: src/gedit-ui.xml.h:85
+msgid "_File"
+msgstr "_Αρχείο"
+
+#: src/gedit-ui.xml.h:86
+msgid "_Find..."
+msgstr "_Εύρεση..."
+
+#: src/gedit-ui.xml.h:87
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: src/gedit-ui.xml.h:88
+msgid "_Icon"
+msgstr "_Εικονίδιο"
+
+#: src/gedit-ui.xml.h:90
+msgid "_New"
+msgstr "_Νέο"
+
+#: src/gedit-ui.xml.h:91
+msgid "_Open..."
+msgstr "_Άνοιγμα..."
+
+#: src/gedit-ui.xml.h:92
+msgid "_Output Window"
+msgstr "_Παράθυρο αποτελέσματος"
+
+#: src/gedit-ui.xml.h:93
+msgid "_Paste"
+msgstr "_Επικόλληση"
+
+#: src/gedit-ui.xml.h:94
+msgid "_Print..."
+msgstr "_Εκτύπωση"
+
+#: src/gedit-ui.xml.h:95
+msgid "_Priority Text beside Icons"
+msgstr "_Κείμενο Προτεραιότητας Δίπλα στα Εικονίδια"
+
+#: src/gedit-ui.xml.h:96
+msgid "_Quit"
+msgstr "_Έξοδος"
+
+#: src/gedit-ui.xml.h:97
+msgid "_Redo"
+msgstr "_Ακύρωση αναίρεσης"
+
+#: src/gedit-ui.xml.h:98
+msgid "_Replace..."
+msgstr "_Αντικατάσταση..."
+
+#: src/gedit-ui.xml.h:100
+msgid "_Save"
+msgstr "_Αποθήκευση"
+
+#: src/gedit-ui.xml.h:101
+msgid "_Save All"
+msgstr "_Αποθήκευση Όλων"
+
+#: src/gedit-ui.xml.h:102
+msgid "_Search"
+msgstr "_Εύρεση"
+
+#: src/gedit-ui.xml.h:103
+msgid "_Statusbar"
+msgstr "_Γραμμή κατάστασης"
+
+#: src/gedit-ui.xml.h:104
+msgid "_Toolbar"
+msgstr "_Εργαλειοθήκη"
+
+#: src/gedit-ui.xml.h:105
+msgid "_Tools"
+msgstr "_Εργαλεία"
+
+#: src/gedit-ui.xml.h:106
+msgid "_Undo"
+msgstr "_Αναίρεση"
+
+#: src/gedit-ui.xml.h:107
+msgid "_View"
+msgstr "_Προβολή"
+
+#: src/gedit-utils.c:795
+#, c-format
+msgid ""
+"Could not find the file \"%s\".\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"Δεν είναι δυνατή η εύρεση του αρχείου \"%s\".\n"
+"\n"
+"Βεβαιωθείτε ότι έχετε πληκτρολογήσει σωστά την τοποθεσία."
+
+#: src/gedit-utils.c:802
+#, c-format
+msgid "Could not open the file \"%s\" because it contains corrupted data."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή περιέχει κατεστραμμένα "
+"δεδομένα."
+
+#: src/gedit-utils.c:813
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because gedit cannot handle %s: locations."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" η εφαρμογή δεν μπορεί να "
+"χειριστεί τοποθεσίες %s:."
+
+#: src/gedit-utils.c:819
+#, c-format
+msgid "Could not open the file \"%s\""
+msgstr "Αδυναμία ανοίγματος του αρχείου \"%s\""
+
+#: src/gedit-utils.c:829
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because it contains data in an invalid format."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή περιέχει μη έγκυρο "
+"τύπο δεδομένων."
+
+#: src/gedit-utils.c:836
+#, c-format
+msgid "Could not open the file \"%s\" because it is too big."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή είναι πολύ μεγάλο."
+
+#: src/gedit-utils.c:843
+#, c-format
+msgid ""
+"\"%s\" is not a valid location.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"Το \"%s\" δεν είναι έγκυρη τοποθεσία.\n"
+"\n"
+"Βεβαιωθείτε ότι έχετε πληκτρολογήσει σωστά την τοποθεσία."
+
+#: src/gedit-utils.c:850
+#, c-format
+msgid "Could not open the file \"%s\" because access was denied."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή υπήρξε άρνηση "
+"πρόσβασης."
+
+#: src/gedit-utils.c:857
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because there are too many open files.\n"
+"\n"
+"Please, close some open file and try again."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή  υπάρχουν πολλά "
+"ανοικτά αρχεία.\n"
+"\n"
+"Κλείστε κάποια ανοικτά αρχεία και προσπαθείστε ξανά."
+
+#: src/gedit-utils.c:865
+#, c-format
+msgid ""
+"\"%s\" is a directory.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"Το \"%s\" είναι ένας κατάλογος.\n"
+"\n"
+"Βεβαιωθείτε ότι έχετε πληκτρολογήσει σωστά την τοποθεσία."
+
+#: src/gedit-utils.c:872
+#, c-format
+msgid ""
+"Not enough available memory to open the file \"%s\". Please, close some "
+"running application and try again."
+msgstr ""
+"Δεν υπάρχει αρκετή διαθέσιμη μνήμη για το άνοιγμα του αρχείου \"%s\".  "
+"Κλείστε μερικές εφαρμογές και προσπαθείστε ξανά."
+
+#: src/gedit-utils.c:898
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because no host \"%s\" could be found.\n"
+"\n"
+"Please, check that you typed the location correctly and that your proxy "
+"settings are correct and then try again."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή δεν μπορεί να βρεθεί "
+"το σύστημα \"%s\".\n"
+"\n"
+"Βεβαιωθείτε ότι πληκτρολογήσατε την τοποθεσία σωστά και ότι οι ρυθμίσεις "
+"διαμεσολαβητή είναι σωστές και προσπαθείστε ξανά."
+
+#: src/gedit-utils.c:913
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the host name was invalid.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή το όνομα συστήματος "
+"δεν ήταν έγκυρο.\n"
+"\n"
+"Βεβαιωθείτε ότι οι ρυθμίσεις διαμεσολαβητή είναι σωστές και προσπαθείστε "
+"ξανά."
+
+#: src/gedit-utils.c:920
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the host name was empty.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή το όνομα συστήματος "
+"ήταν άδειο.\n"
+"\n"
+"Βεβαιωθείτε ότι οι ρυθμίσεις διαμεσολαβητή είναι σωστές και προσπαθείστε "
+"ξανά."
+
+#: src/gedit-utils.c:927
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the attempt to log in failed.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή  απέτυχε η προσπάθεια "
+"εισόδου.\n"
+"\n"
+"Βεβαιωθείτε ότι πληκτρολογήσατε σωστά την τοποθεσία και προσπαθήστε ξανά."
+
+#: src/gedit-utils.c:935
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because it contains invalid UTF-8 data.\n"
+"\n"
+"Probably, you are trying to open a binary file."
+msgstr ""
+"Δεν είναι δυνατό το άνοιγμα του αρχείου \"%s\" επειδή περιέχει μή έγκυρα "
+"δεδομένα UTF-8.\n"
+"\n"
+"Πιθανόν να προσπαθείτε να επαναφέρεται ένα αρχείο binary."
+
+#: src/gedit-utils.c:973
+#, c-format
+msgid "Could not open the file \"%s\"."
+msgstr "Αδυναμία ανοίγματος του αρχείου \"%s\"."
+
+#: src/gedit-utils.c:1024
+#, c-format
+msgid "Could not save the file \"%s\"."
+msgstr "Αδυναμία αποθήκευσης του αρχείου \"%s\""
+
+#: src/gedit-utils.c:1028
+#, c-format
+msgid ""
+"Could not save the file \"%s\".\n"
+"\n"
+"%s"
+msgstr ""
+"Αδυναμία αποθήκευσης του αρχείου \"%s\".\n"
+"\n"
+"%s"
+
+#: src/gedit-utils.c:1081
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because gedit cannot find it.\n"
+"\n"
+"Perhaps, it has recently been deleted."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή δεν μπορεί να βρεθεί "
+"από την εφαρμογή.\n"
+"\n"
+"Πιθανόν να έχει διαγραφεί πρόσφατα."
+
+#: src/gedit-utils.c:1088
+#, c-format
+msgid "Could not revert the file \"%s\" because it contains corrupted data."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή περιέχει "
+"κατεστραμμένα δεδομένα."
+
+#: src/gedit-utils.c:1099
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because gedit cannot handle %s: locations."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή η εφαρμογή δεν μπορεί "
+"να χειριστεί τοποθεσίες%s:."
+
+#: src/gedit-utils.c:1105 src/gedit-utils.c:1245
+#, c-format
+msgid "Could not revert the file \"%s\"."
+msgstr "Αδυναμία επαναφοράς του αρχείου \"%s\"."
+
+#: src/gedit-utils.c:1115
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because it contains data in an invalid "
+"format."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή περιέχει μη έγκυρο "
+"τύπο δεδομένων."
+
+#: src/gedit-utils.c:1122
+#, c-format
+msgid "Could not revert the file \"%s\" because it is too big."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή είναι πολύ μεγάλο."
+
+#: src/gedit-utils.c:1129
+#, c-format
+msgid "Could not revert the file \"%s\" because access was denied."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή υπήρξε άρνηση "
+"πρόσβασης."
+
+#: src/gedit-utils.c:1136
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because there are too many open files.\n"
+"\n"
+"Please, close some open file and try again."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή  υπάρχουν πολλά "
+"ανοικτά αρχεία.\n"
+"\n"
+"Κλείστε κάποια ανοικτά αρχεία και προσπαθείστε ξανά."
+
+#: src/gedit-utils.c:1144
+#, c-format
+msgid ""
+"Not enough available memory to revert the file \"%s\". Please, close some "
+"running application and try again."
+msgstr ""
+"Δεν υπάρχει αρκετή διαθέσιμη μνήμη για την επαναφορά του αρχείου \"%s\".  "
+"Κλείστε μερικές εφαρμογές και προσπαθείστε ξανά."
+
+#: src/gedit-utils.c:1170
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because no host \"%s\" could be found.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή δεν μπορεί να βρεθεί "
+"το σύστημα \"%s\".\n"
+"\n"
+"Βεβαιωθείτε ότι οι ρυθμίσεις διαμεσολαβητή είναι σωστές και προσπαθείστε "
+"ξανά."
+
+#: src/gedit-utils.c:1184
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because the host name was empty.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή το όνομα συστήματος "
+"ήταν άδειο.\n"
+"\n"
+"Βεβαιωθείτε ότι οι ρυθμίσεις διαμεσολαβητή είναι σωστές και προσπαθείστε "
+"ξανά."
+
+#: src/gedit-utils.c:1191
+#, c-format
+msgid "Could not revert the file \"%s\" because the attempt to log in failed."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή  απέτυχε η προσπάθεια "
+"εισόδου."
+
+#: src/gedit-utils.c:1198
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because it contains invalid UTF-8 data.\n"
+"\n"
+"Probably, you are trying to revert a binary file."
+msgstr ""
+"Δεν είναι δυνατή η επαναφορά του αρχείου \"%s\" επειδή περιέχει μή έγκυρα "
+"δεδομένα UTF-8.\n"
+"\n"
+"Πιθανόν να προσπαθείτε να επαναφέρεται ένα αρχείο binary."
+
+#: src/gedit-utils.c:1207
+msgid "It is not possible to revert an Untitled document."
+msgstr "Δε μπορείτε να επαναφέρετε ένα Ανώνυμο έγγραφο."
+
+#: src/gedit-utils.c:1296
+#, c-format
+msgid "The file \"%s\" already exists."
+msgstr "Το αρχείο \"%s\" υπάρχει ήδη."
+
+#: src/gedit-utils.c:1302
+#, c-format
+msgid ""
+"\"%s\" is a directory.\n"
+"\n"
+"Please, check that you typed the location correctly."
+msgstr ""
+"Το \"%s\" είναι ένας κατάλογος.\n"
+"\n"
+"Βεβαιωθείτε ότι έχετε πληκτρολογήσει σωστά την τοποθεσία."
+
+#: src/gedit-utils.c:1311
+#, c-format
+msgid ""
+"Cannot create the file \"%s\".\n"
+"\n"
+"Make sure you have the appropriate write permissions."
+msgstr ""
+"Αδυναμία δημιουργίας του αρχείου \"%s\".\n"
+"\n"
+"Επιβεβαιώστε ότι έχετε τα κατάλληλα δικαιώματα εγγραφής."
+
+#: src/gedit-utils.c:1318
+#, c-format
+msgid ""
+"Cannot create the file \"%s\".\n"
+"\n"
+"The file name is too long."
+msgstr ""
+"Δεν είναι δυνατή η δημιουργία του αρχείου \"%s\".\n"
+"\n"
+"Το όνομα αρχείου είναι πολύ μακρύ."
+
+#: src/gedit-utils.c:1325
+#, c-format
+msgid ""
+"Cannot create the file \"%s\".\n"
+"\n"
+"A directory component in the file name does not exist or is a dangling "
+"symbolic link."
+msgstr ""
+"Δεν είναι δυνατή η δημιουργία του αρχείου \"%s\".\n"
+"\n"
+"Ένα στοιχείο καταλόγου στο όνομα αρχείου δεν υπάρχει ή υπάρχει ποροβλημα στο "
+"symbolic link."
+
+#: src/gedit-utils.c:1334
+#, c-format
+msgid ""
+"There is not enough disk space to create the file \"%s\".\n"
+"\n"
+"Please free some disk space and try again."
+msgstr ""
+"Δεν υπάρχει αρκετός ελεύθερος χώρος για τη δημιουργία του αρχείου \"%s\".\n"
+"\n"
+"Ελευθερώστε κάποιο χώρο στο δίσκο και προσπαθήστε ξανά."
+
+#: src/gedit-utils.c:1340
+#, c-format
+msgid "Could not create the file \"%s\"."
+msgstr "Αδυναμία δημιουργίας του αρχείου \"%s\"."
+
+#.
+#. if (col == chars)
+#. msg = g_strdup_printf (_("  Ln %d, Col. %d"), row + 1, col + 1);
+#. else
+#. msg = g_strdup_printf (_("  Ln %d, Col. %d-%d"), row + 1, chars + 1, col + 1);
+#.
+#: src/gedit-view.c:1072
+#, c-format
+msgid "  Ln %d, Col. %d"
+msgstr "  Γρ %d, Στηλ. %d"
+
+#: src/gedit-view.c:1110
+msgid "  OVR"
+msgstr "  ΑΝΤ"
+
+#: src/gedit-view.c:1112
+msgid "  INS"
+msgstr "  ΕΙΣ"
+
+#: src/gedit2.c:77
+msgid "Show utility debugging messages."
+msgstr "Εμφάνιση εφαρμογής μηνυμάτων εκσφαλμάτωσης."
+
+#: src/gedit2.c:80
+msgid "Show mdi debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης mdi."
+
+#: src/gedit2.c:83
+msgid "Show commands debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης εντολών."
+
+#: src/gedit2.c:86
+msgid "Show document debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης εγγράφων."
+
+#: src/gedit2.c:89
+msgid "Show file debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης αρχείων."
+
+#: src/gedit2.c:92
+msgid "Show plugin debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης αρθρωμάτων."
+
+#: src/gedit2.c:95
+msgid "Show prefs debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης προτιμήσεων."
+
+#: src/gedit2.c:98
+msgid "Show printing debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης εκτυπώσεων."
+
+#: src/gedit2.c:101
+msgid "Show search debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης αναζήτησης."
+
+#: src/gedit2.c:104
+msgid "Show undo debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης ακυρώσεων."
+
+#: src/gedit2.c:107
+msgid "Show view debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης προβολών."
+
+#: src/gedit2.c:110
+msgid "Show recent debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης προσφάτων."
+
+#: src/gedit2.c:113
+msgid "Show session management debugging messages."
+msgstr "Εμφάνιση μηνυμάτων εκσφαλμάτωσης διαχείρισης συνεδρίας."
+
+#: src/gedit2.c:116
+msgid "Turn on all debugging messages."
+msgstr "Ενεργοποίηση όλων των μηνυμάτων εκσφαλμάτωσης."
+
+#: src/gedit2.c:119
+msgid "Quit an existing instance of gedit"
+msgstr "Έξοδος από υπάρχουσα εκτέλεση του gedit"
+
+#: src/gedit2.c:122
+msgid "Create a new toplevel window in an existing instance of gedit"
+msgstr "Δημιουργία νέου παραθύρου σε υπάρχουσα εκτέλεση του gedit"
+
+#: src/gedit2.c:125
+msgid "Create a new document in an existing instance of gedit"
+msgstr "Δημιουργία νέου εγγράφου σε υπάρχουσα εκτέλεση του gedit"
+
+#: src/gedit-output-window.c:329
+msgid "Close the output window"
+msgstr "Κλείσιμο του παραθύρου αποτελέσματος"
+
+#: src/gedit-output-window.c:367
+msgid "Copy selected lines"
+msgstr "Αντιγραφή επιλεγμένων γραμμών"
+
+#: src/gedit-output-window.c:387
+msgid "Clear the output window"
+msgstr "Εκκαθάριση του παράθυρου αποτελέσματος"
+
+#: src/gedit-output-window.c:427
+msgid "Output Lines"
+msgstr "Γραμμές αποτελέσματος."
+
+#: src/dialogs/gedit-encodings-dialog.glade2.h:1
+msgid "Choose one or more e_ncodings:"
+msgstr "Επιλέξτε μια ή περισσότερες κω_δικοποίησεις:"
+
+#: src/gedit-encodings.c:143 src/gedit-encodings.c:169
+#: src/gedit-encodings.c:210 src/gedit-encodings.c:260
+#: src/gedit-encodings.c:285
+msgid "Western"
+msgstr "Δυτική"
+
+#: src/gedit-encodings.c:145 src/gedit-encodings.c:212
+#: src/gedit-encodings.c:240 src/gedit-encodings.c:281
+msgid "Central European"
+msgstr "Central European"
+
+#: src/gedit-encodings.c:147
+msgid "South European"
+msgstr "Νότιας Ευρώπης"
+
+#: src/gedit-encodings.c:149 src/gedit-encodings.c:165
+#: src/gedit-encodings.c:295
+msgid "Baltic"
+msgstr "Baltic"
+
+#: src/gedit-encodings.c:151 src/gedit-encodings.c:214
+#: src/gedit-encodings.c:227 src/gedit-encodings.c:231
+#: src/gedit-encodings.c:244 src/gedit-encodings.c:283
+msgid "Cyrillic"
+msgstr "Cyrillic"
+
+#: src/gedit-encodings.c:153 src/gedit-encodings.c:220
+#: src/gedit-encodings.c:238 src/gedit-encodings.c:293
+msgid "Arabic"
+msgstr "Arabic"
+
+#: src/gedit-encodings.c:155 src/gedit-encodings.c:250
+#: src/gedit-encodings.c:287
+msgid "Greek"
+msgstr "Ελληνική"
+
+#: src/gedit-encodings.c:157
+msgid "Hebrew Visual"
+msgstr "Hebrew Visual"
+
+#: src/gedit-encodings.c:159 src/gedit-encodings.c:218
+#: src/gedit-encodings.c:256 src/gedit-encodings.c:291
+msgid "Hebrew"
+msgstr "Hebrew"
+
+#: src/gedit-encodings.c:161 src/gedit-encodings.c:216
+#: src/gedit-encodings.c:264 src/gedit-encodings.c:289
+msgid "Turkish"
+msgstr "Τουρκική"
+
+#: src/gedit-encodings.c:163
+msgid "Nordic"
+msgstr "Nordic"
+
+#: src/gedit-encodings.c:167
+msgid "Celtic"
+msgstr "Κελτικά"
+
+#: src/gedit-encodings.c:171 src/gedit-encodings.c:262
+msgid "Romanian"
+msgstr "Romanian"
+
+#: src/gedit-encodings.c:174 src/gedit-encodings.c:176
+#: src/gedit-encodings.c:178 src/gedit-encodings.c:180
+msgid "Unicode"
+msgstr "Unicode"
+
+#: src/gedit-encodings.c:183
+msgid "Armenian"
+msgstr "Αρμενική"
+
+#: src/gedit-encodings.c:185 src/gedit-encodings.c:187
+#: src/gedit-encodings.c:196
+msgid "Chinese Traditional"
+msgstr "Chinese Traditional"
+
+#: src/gedit-encodings.c:189
+msgid "Cyrillic/Russian"
+msgstr "Cyrillic/Russian"
+
+#: src/gedit-encodings.c:192 src/gedit-encodings.c:223
+#: src/gedit-encodings.c:270
+msgid "Japanese"
+msgstr "Japanese"
+
+#: src/gedit-encodings.c:194 src/gedit-encodings.c:225
+#: src/gedit-encodings.c:229 src/gedit-encodings.c:276
+msgid "Korean"
+msgstr "Korean"
+
+#: src/gedit-encodings.c:199 src/gedit-encodings.c:201
+#: src/gedit-encodings.c:203 src/gedit-encodings.c:207
+msgid "Chinese Simplified"
+msgstr "Chinese Simplified"
+
+#: src/gedit-encodings.c:205
+msgid "Georgian"
+msgstr "Γεωργιανή"
+
+#: src/gedit-encodings.c:233 src/gedit-encodings.c:266
+msgid "Cyrillic/Ukrainian"
+msgstr "Cyrillic/Ukrainian"
+
+#: src/gedit-encodings.c:242
+msgid "Croatian"
+msgstr "Croatian"
+
+#: src/gedit-encodings.c:246
+msgid "Hindi"
+msgstr "Hindi"
+
+#: src/gedit-encodings.c:248
+msgid "Farsi"
+msgstr "Farsi"
+
+#: src/gedit-encodings.c:252
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: src/gedit-encodings.c:254
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: src/gedit-encodings.c:258
+msgid "Icelandic"
+msgstr "Icelandic"
+
+#: src/gedit-encodings.c:272 src/gedit-encodings.c:278
+#: src/gedit-encodings.c:297
+msgid "Vietnamese"
+msgstr "Vietnamese"
+
+#: src/gedit-encodings.c:274
+msgid "Thai"
+msgstr "Ταϊλανδέζικη"
+
+#: src/recent-files/egg-recent-vfs-utils.c:90
+msgid " (invalid Unicode)"
+msgstr " (μη έγκυρο Unicode)"
+
+#~ msgid "Compare two files..."
+#~ msgstr "Σύγκριση δύο αρχείων..."
+
+#~ msgid "_Word Count"
+#~ msgstr "_Αρίθμηση Λέξεων"
+
+#~ msgid "Word count"
+#~ msgstr "Αρίθμηση Λέξεων"
+
+#~ msgid "Execute a shell command"
+#~ msgstr "Εκτέλεση μιας εντολής φλοιού."
+
+#~ msgid "Shell output"
+#~ msgstr "Αποτέλεσμα Φλοιού"
+
+#~ msgid "Capture the command _output"
+#~ msgstr "Σύλληψη του αποτελέσματος _εντολής"
+
+#~ msgid "Specify the working directory and the command you want to run."
+#~ msgstr ""
+#~ "Καθορίστε τον κατάλογο εργασίας και την εντολή που θέλετε να εκτελέσετε."
+
+#~ msgid "Select a format"
+#~ msgstr "Επιλογή ενός τύπου"
+
+#~ msgid "<span weight=\"bold\">Sort Order</span>"
+#~ msgstr "<span weight=\"bold\">Σειρά ταξινόμησης</span>"
+
+#~ msgid "Cas_e sensitive"
+#~ msgstr "Ταίριασμα πεζών - κεφαλαίων"
+
+#~ msgid "_Ascending"
+#~ msgstr "_Αύξουσα"
+
+#~ msgid "_Descending"
+#~ msgstr "_Φθίνουσα"
+
+#~ msgid ""
+#~ "Could not find the required widgets inside languages-dialog.glade2.\n"
+#~ msgstr ""
+#~ "Αδυναμία εύρεσης απαιτούμενων γραφικών συστατικών μέσα στο διάλογο-"
+#~ "γλωσσών.glade2.\n"
+
+#~ msgid "_Spelling..."
+#~ msgstr "_Ορθογραφία..."
+
+#~ msgid "_Check Spelling..."
+#~ msgstr "_Έλεγχος Ορθογραφίας..."
+
+#~ msgid "_Goto line"
+#~ msgstr "_Μετάβαση σε γραμμή"
+
+#~ msgid ""
+#~ "Could not find the required widgets inside program-location-dialog."
+#~ "glade2.\n"
+#~ msgstr ""
+#~ "Αδυναμία εύρεσης απαιτούμενων γραφικών συστατικών μέσα στο διάλογο-"
+#~ "τοποθεσίας-προγράμματος.glade2.\n"
+
+#~ msgid " _Wrap lines (at character boundaries)"
+#~ msgstr "_Αναδίπλωση γραμμών (στα όρια χαρακτήρων)"
+
+#~ msgid "<span weight=\"bold\" size=\"x-large\">Load</span>"
+#~ msgstr "<span weight=\"bold\" size=\"x-large\">Φόρτωση</span>"
+
+#~ msgid "<span weight=\"bold\">When saving...</span>"
+#~ msgstr "<span weight=\"bold\">Κατά την αποθήκευση......</span>"
+
+#~ msgid "Font used to print line _numbers:"
+#~ msgstr ""
+#~ "Γραμματοσειρά που θα χρησιμοποείται για την εκτύπωση αριθμών_γραμμής"
+
+#~ msgid "Font used to print the _body:"
+#~ msgstr "Γραμματοσειρά που χρησιμοποιείται για εκτύπωση_σώματος"
+
+#~ msgid "_Font used by the editor: "
+#~ msgstr "_Γραμματοσειρά που χρησιμοποιείται από τον επεξεργαστή: "
+
+#~ msgid "_Font used to print headers:"
+#~ msgstr "_Γραμματοσειρά που χρησιμοποιείται για την εκτύπωση κεφαλίδων:"
+
+#~ msgid "sans 12"
+#~ msgstr "sans 12"
+
+#~ msgid "<span weight=\"bold\">Search from</span>"
+#~ msgstr "<span weight=\"bold\">Αναζήτηση από</span>"
+
+#~ msgid "C_ursor position"
+#~ msgstr "Θέση  _δείκτη"
+
+#~ msgid "Case sensi_tive"
+#~ msgstr "Διάκ_ριση κεφαλαίων/πεζών"
+
+#~ msgid "_Beginning of the document"
+#~ msgstr "Από αρ_χή του εγγράφου"
+
+#~ msgid "Not yet implemented."
+#~ msgstr "Δεν έχει ακόμα εφαρμοστεί."
+
+#~ msgid "The string \"%s\" has not been found."
+#~ msgstr "Το αλφαριθμητικό  \"%s\" δεν βρέθηκε."
+
+#~ msgid ""
+#~ "(C) 1998-2000 Evan Lawrence and Alex Robert\n"
+#~ "(C) 2000-2002 Chema Celorio and Paolo Maggi"
+#~ msgstr ""
+#~ "(C) 1998-2000 Έβαν Λώρενς και Άλεξ Ρόμπερτ\n"
+#~ "(C) 2000-2002 Τσέμα Σελόριο και Πάολο Μάγκι"
+
+#~ msgid "Close All"
+#~ msgstr "Κλείσιμο Όλων"
+
+#~ msgid "Goto _Line"
+#~ msgstr "Μετάβαση σε_Γραμμή"
+
+#~ msgid "Pr_eferences..."
+#~ msgstr "Προτιμήσεις"
+
+#~ msgid "Save All"
+#~ msgstr "Αποθήκευση Όλων"
+
+#~ msgid ""
+#~ "Could not find the required widgets inside gedit-encodings-dialog."
+#~ "glade2.\n"
+#~ msgstr ""
+#~ "Αδυναμία εύρεσης απαιτούμενων γραφικών συστατικών μέσα gedit-encodings-"
+#~ "dialog.glade2.\n"
+
+#~ msgid ""
+#~ "If you wish to insert any of the characters in to the active \n"
+#~ "document, select the character and click the \"Insert Char\" \n"
+#~ "button or double click the character in the table."
+#~ msgstr ""
+#~ "Αν θέλετε να εισάγετε κάποιο από τους χαρακτήρες στο ενεργό \n"
+#~ "έγγραφο, επιλέξτε το χαρακτήρα και πατήστε το κουμπί \"Εισαγωγή Χαρακτήρα"
+#~ "\" \n"
+#~ "ή κάντε διπλό κλίκ στο χαρακτήρα του πίνακα."
+
+#~ msgid "gedit: ASCII table"
+#~ msgstr "gedit:Πίνακας ASCII "
+
+#~ msgid "Insert Shell _Output"
+#~ msgstr "Εισαγωγής του αποτελέσματος_φλοιού"
+
+#~ msgid "_Insert Date/Time"
+#~ msgstr "_Εισαγωγή Ώρας/Ημερομηνίας"
+
+#~ msgid "Select the format to use when inserting date/time."
+#~ msgstr ""
+#~ "Επιλέξτε το τύπο που θα χρησιμοποιείται κατά την εισαγωγή ημερομηνίας/"
+#~ "ώρας."
+
+#~ msgid "Set program location ..."
+#~ msgstr "Καθορισμός θέσης προγράμματος..."
+
+#~ msgid "Courier 9"
+#~ msgstr "Courier 9"
+
+#~ msgid "Helvetica 11"
+#~ msgstr "Helvetica 11"
+
+#~ msgid "Helvetica 8"
+#~ msgstr "Helvetica 8"
+
+#~ msgid ""
+#~ "Always use UTF-8 encoding (faster) when creating a new file\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Να γίνεται πάντα χρήση κωδικοποίησης UTF-8 (γρηγορότερο) κατά τη "
+#~ "δημιουργία νέου αρχείου\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Always use UTF-8 encoding (faster) when saving\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Να γίνεται πάντα χρήση κωδικοποίησης UTF-8 (γρηγορότερο) κατά την "
+#~ "αποθήκευση\n"
+#~ "\n"
+
+#~ msgid "Colors"
+#~ msgstr "Χρώματα"
+
+#~ msgid ""
+#~ "The font & colors settings let you choose the font and the colors to be "
+#~ "used in the editor windows."
+#~ msgstr ""
+#~ "Οι ρυθμίσεις γραμματοσειράς & χρωμάτων σας επιτρέπουν να επιλέξετε την "
+#~ "γραμματοσειρά και τα χρώματα που θα χρησιμοποιούνται στα παράθυρα του "
+#~ "επεξεργαστή."
+
+#~ msgid ""
+#~ "The line numbers setting lets you choose to display the line numbers on "
+#~ "the left hand side of the window."
+#~ msgstr ""
+#~ "Η ρύθμιση αριθμών γραμμής σας επιτρέπουν να επιλέξετε την προβολή αριθμών "
+#~ "γραμμής στο αριστερό μέρος του παραθύρου."
+
+#~ msgid ""
+#~ "The plugin manager settings let you choose which plugins you want to have "
+#~ "loaded."
+#~ msgstr ""
+#~ "Οι ρυθμίσεις διαχείρισης πρόσθετων λειτουργιών σας επιτρέπουν να "
+#~ "επιλέξετε ποιές πρόσθετες λειτουργίες επιθυμείτε να φορτωθούν."
+
+#~ msgid ""
+#~ "The print fonts settings let you choose the fonts to be used to print "
+#~ "documents."
+#~ msgstr ""
+#~ "Οι ρυθμίσεις εκτύπωσης γραμματοσειρών σας επιτρέπουν να επιλέξετε τις "
+#~ "γραμματοσειρές που χρησιμοποιούνται για την εκτύπωση εγγράφων."
+
+#~ msgid ""
+#~ "The print page settings let you customize how gedit prints documents."
+#~ msgstr ""
+#~ "Οι ρυθμίσεις εκτύπωσης σελίδας σας επιτρέπουν να καθορίσετε τον τρόπο που "
+#~ "το gedit εκτυπώνει αρχεία."
+
+#~ msgid "The save settings let you customize how gedit saves files."
+#~ msgstr ""
+#~ "Οι ρυθμίσεις αποθήκευσης σας επιτρέπουν να καθορίσετε τον τρόπο που το "
+#~ "gedit αποθηκεύει αρχεία."
+
+#~ msgid "The tabs settings let you customize the tabs width."
+#~ msgstr ""
+#~ "Οι ρυθμίσεις στηλών σας επιυτέπουν να προσαρμόσετε το πλάτος των στηλών."
+
+#~ msgid ""
+#~ "The undo settings let you set the maximum number of actions that gedit "
+#~ "can undo."
+#~ msgstr ""
+#~ "Οι ρυθμίσεις λειτουργίας αναίρεσης σας επιτρέπουν να ρυθμίσετε το μέγιστο "
+#~ "αριθμό των ενεργειών που η εφαρμογή μπορεί να αναιρέσει."
+
+#~ msgid ""
+#~ "The wrap mode settings let you customize how lines have to be wrapped."
+#~ msgstr ""
+#~ "Οι ρυθμίσεις λειτουργίας αναδίπλωσης σας επιτρέπουν να προσαρμόσετε το "
+#~ "τρόπο αναδίπλωσης των γραμμών."
+
+#~ msgid ""
+#~ "Use current locale's encoding if possible when creating a new file\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Χρήση της τρέχουσας κωδικοποίησης locale αν είναι δυνατόν κατά τη "
+#~ "δημιουργία νέου αρχείου\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Use current locale's encoding if possible when saving\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Χρήση της τρέ_χουσας κωδικοποίησης locale αν είναι δυνατόν κατά την "
+#~ "αποθήκευση\n"
+#~ "\n"
+
+#~ msgid "When saving..."
+#~ msgstr "Κατά την αποθήκευση..."
+
+#~ msgid "Wrap lines at _word boundaries"
+#~ msgstr "Αναδίπλωση γραμμών στα όρια_λέξης"
+
+#~ msgid "Wrap lines at ch_aracter boundaries"
+#~ msgstr "Αναδίπλωση γραμμών στα όρια χαρα_κτήρα"
+
+#~ msgid "_Never wrap lines"
+#~ msgstr "_Να μη γίνεται ποτέ αναδίπλωση γραμμών"
+
+#~ msgid "Search from the c_ursor position"
+#~ msgstr "Αναζήτηση από τη θέση του _δείκτη"
+
+#~ msgid "Do_n't replace"
+#~ msgstr "Να _μη γίνει αντικατάσταση"
+
+#~ msgid "Error, the plugin '%s' did not specified a name"
+#~ msgstr "Σφάλμα, η πρόσθετη λειτουργία '%s' δεν καθόρισε ένα όνομα"
+
+#~ msgid "Error, impossible to save settings of the plugin '%s'"
+#~ msgstr ""
+#~ "Σφάλμα, αδύνατη η αποθήκευση ρυθμίσεων της πρόσθετης λειτουργίας %s'"
+
+#~ msgid "Clos_e All"
+#~ msgstr "Κλεί_σιμο Όλων"
+
+#~ msgid "Recent _Files"
+#~ msgstr "Πρόσφατα_Αρχεία"
+
+#~ msgid "Sa_ve All"
+#~ msgstr "Απο_θήκευση Όλων"
+
+#~ msgid "Open %s"
+#~ msgstr "Άνοιγμα %s"

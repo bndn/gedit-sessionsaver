@@ -1,0 +1,2045 @@
+# Galician translation of gedit.
+# Copyright (C) 1999-2001 Free Software Foundation, Inc.
+# Ruben Lopez Gomez <ryu@mundivia.es>, 1999.
+# Manuel A. FernÃ¡ndez Montecelo <manuel@sindominio.net>, 2001.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gedit\n"
+"POT-Creation-Date: 2002-03-04 16:09+0100\n"
+"PO-Revision-Date: 2001-12-19 20:47+0100\n"
+"Last-Translator: Manuel A. FernÃ¡ndez Montecelo <manuel@sindominio.net>\n"
+"Language-Team: Galician <proxecto@trasno.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gedit.desktop.in.h:1
+msgid "Edit text files"
+msgstr ""
+
+#: gedit.desktop.in.h:2
+#, fuzzy
+msgid "Text Editor"
+msgstr "Editor de Texto de GNOME"
+
+#: plugins/ASCII/ascii.c:42
+msgid "_ASCII Table"
+msgstr ""
+
+#: plugins/ASCII/ascii.c:45
+msgid "Pop-up a dialog containing an ASCII Table"
+msgstr ""
+
+#: plugins/ASCII/ascii.c:325
+msgid "Char"
+msgstr ""
+
+#: plugins/ASCII/ascii.c:332
+msgid "Dec#"
+msgstr ""
+
+#: plugins/ASCII/ascii.c:339
+msgid "Hex#"
+msgstr ""
+
+#: plugins/ASCII/ascii.c:346
+msgid "Name"
+msgstr ""
+
+#: plugins/ASCII/ascii.c:391 plugins/ASCII/ascii.c:512
+msgid "ASCII table"
+msgstr ""
+
+#: plugins/ASCII/ascii.c:404
+msgid "_Insert char"
+msgstr ""
+
+#: plugins/ASCII/ascii.c:513
+msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+msgstr ""
+
+#: plugins/ASCII/ascii.c:515
+msgid "Copyright (C) 2001-2002 Paolo Maggi"
+msgstr ""
+
+#: plugins/ASCII/asciitable.glade2.h:1
+msgid ""
+"If you wish to insert any of the characters in to the active \n"
+"document, select the character and click the \"Insert Char\" \n"
+"button or double click the character in the table."
+msgstr ""
+
+#: plugins/ASCII/asciitable.glade2.h:4
+msgid "Insert char"
+msgstr ""
+
+#: plugins/ASCII/asciitable.glade2.h:5
+msgid "gedit: ASCII table"
+msgstr ""
+
+#: plugins/cvschangelog/cvschangelog.c:44
+msgid "Open CVS Chan_geLogs"
+msgstr ""
+
+#: plugins/cvschangelog/cvschangelog.c:47
+msgid "Searches for ChangeLogs in the current document and opens them"
+msgstr ""
+
+#: plugins/cvschangelog/cvschangelog.c:235
+msgid "CVS ChangeLog"
+msgstr ""
+
+#: plugins/cvschangelog/cvschangelog.c:236
+msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+msgstr ""
+
+#: plugins/cvschangelog/cvschangelog.c:238
+msgid "Copyright (C) 2002 - James Willcox"
+msgstr ""
+
+#: plugins/diff/diff.c:61
+#, fuzzy
+msgid "Co_mpare Files..."
+msgstr "Abrir ficheiro ..."
+
+#: plugins/diff/diff.c:64
+msgid "Makes a diff file from two documents or files"
+msgstr ""
+
+#: plugins/diff/diff.c:66
+#, fuzzy
+msgid "Compare files"
+msgstr "Cargado o ficheiro %s"
+
+#. Create the dialog
+#: plugins/diff/diff.c:267
+msgid "Compare two files..."
+msgstr ""
+
+#: plugins/diff/diff.c:281
+msgid "C_ompare"
+msgstr ""
+
+#: plugins/diff/diff.c:491
+#, fuzzy
+msgid "The two documents you selected are the same."
+msgstr "O documento non foi gardado."
+
+#: plugins/diff/diff.c:499
+msgid ""
+"The \"first\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+
+#: plugins/diff/diff.c:508
+msgid ""
+"The \"second\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+
+#: plugins/diff/diff.c:516
+#, fuzzy
+msgid "The two files you selected are the same."
+msgstr "O documento non foi gardado."
+
+#: plugins/diff/diff.c:533
+#, fuzzy
+msgid "The \"first\" document contains no text."
+msgstr "O documento non foi recuperado."
+
+#: plugins/diff/diff.c:562
+#, fuzzy
+msgid "The \"second\" document contains no text."
+msgstr "O documento non foi recuperado."
+
+#. FIXME: do better error reporting ... . Chema
+#: plugins/diff/diff.c:583
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"gedit could not create a temporary file."
+msgstr ""
+
+#: plugins/diff/diff.c:601 plugins/diff/diff.c:614
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"Error executing the diff command."
+msgstr ""
+
+#: plugins/diff/diff.c:636
+msgid "No differences were found between the selected documents."
+msgstr ""
+
+#: plugins/diff/diff.c:677
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"The result contains invalid UTF-8 data."
+msgstr ""
+
+#: plugins/diff/diff.c:901
+msgid ""
+"Makes a diff file from two documents or files on disk.\n"
+"\n"
+"For more info on \"diff\" program, type \"man diff\" in a shell prompt.\n"
+msgstr ""
+
+#: plugins/diff/diff.c:904
+msgid ""
+"Copyright (C) 2000 - 2001 Chema Celorio \n"
+"Copyright (C) 2002 Paolo Maggi"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:1
+msgid "Choose the files to compare."
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:2
+#, fuzzy
+msgid "Compare files..."
+msgstr "Abrir ficheiro ..."
+
+#: plugins/diff/diff.glade2.h:3
+msgid "F_rom document"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:4
+msgid "First"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:5
+msgid "From _document"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:6
+msgid "From a _file on disk"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:7
+msgid "From a file o_n disk"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:8
+msgid "Ignore _blanks (-b option)"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:9
+msgid "Note that this option is only supported by GNU diff"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:10
+msgid "Second"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:11
+msgid "Use the _unified output format (-u option)"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:12 plugins/time/time.glade2.h:3
+#: src/dialogs/gedit-preferences.glade2.h:70 src/dialogs/goto-line.glade2.h:3
+#: src/dialogs/program-location-dialog.glade2.h:3 src/dialogs/uri.glade2.h:3
+msgid "gtk-cancel"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:13 plugins/shell_output/shell_output.glade2.h:6
+#: plugins/time/time.glade2.h:4 src/dialogs/gedit-preferences.glade2.h:71
+#: src/dialogs/uri.glade2.h:4
+msgid "gtk-help"
+msgstr ""
+
+#: plugins/diff/diff.glade2.h:14 plugins/shell_output/shell_output.glade2.h:7
+#: plugins/time/time.glade2.h:5 src/dialogs/gedit-preferences.glade2.h:72
+#: src/dialogs/goto-line.glade2.h:4
+#: src/dialogs/program-location-dialog.glade2.h:4
+msgid "gtk-ok"
+msgstr ""
+
+#: plugins/docinfo/docinfo.c:46
+msgid "_Word Count"
+msgstr ""
+
+#: plugins/docinfo/docinfo.c:49
+msgid "Get info on current document"
+msgstr ""
+
+#: plugins/docinfo/docinfo.c:145 plugins/docinfo/docinfo.c:365
+msgid "Word count"
+msgstr ""
+
+#: plugins/docinfo/docinfo.c:156
+msgid "_Update"
+msgstr ""
+
+#: plugins/docinfo/docinfo.c:366
+msgid ""
+"The word count plugin analyzes the current document and determines the "
+"number of words, lines, characters and non-space characters in it and "
+"display the result."
+msgstr ""
+
+#: plugins/docinfo/docinfo.c:370 plugins/sample/sample.c:151
+#: plugins/shell_output/shell_output.c:424
+#: plugins/taglist/gedit-taglist-plugin.c:144 plugins/time/time.c:540
+msgid "Copyright (C) 2002 - Paolo Maggi"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:1
+msgid "0"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:2
+msgid "Bytes"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:3
+msgid "Characters (no spaces)"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:4
+msgid "Characters (with spaces)"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:5
+msgid "File Name"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:6 src/gedit-print.c:282
+msgid "Lines"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:7
+msgid "Update"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:8
+msgid "Words"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:9
+msgid "gedit: Document Info plugin"
+msgstr ""
+
+#: plugins/docinfo/docinfo.glade2.h:10
+#: plugins/shell_output/shell_output.glade2.h:5 src/dialogs/replace.glade2.h:9
+msgid "gtk-close"
+msgstr ""
+
+#: plugins/sample/sample.c:41
+msgid "Insert User _Name"
+msgstr ""
+
+#: plugins/sample/sample.c:44
+msgid "Insert the user name at the cursor position"
+msgstr ""
+
+#: plugins/sample/sample.c:148
+msgid "User name"
+msgstr ""
+
+#: plugins/sample/sample.c:149
+msgid "Inserts the user name at the cursor position."
+msgstr ""
+
+#: plugins/shell_output/shell_output.c:44
+msgid "Insert Shell _Output"
+msgstr ""
+
+#: plugins/shell_output/shell_output.c:47
+msgid "Insert the shell output in the current document"
+msgstr ""
+
+#: plugins/shell_output/shell_output.c:151
+#: plugins/shell_output/shell_output.c:420
+msgid "Shell output"
+msgstr ""
+
+#: plugins/shell_output/shell_output.c:164
+msgid "_Run"
+msgstr ""
+
+#: plugins/shell_output/shell_output.c:252
+msgid ""
+"The shell command entry is empty.\n"
+"\n"
+"Please, insert a valid shell command."
+msgstr ""
+
+#: plugins/shell_output/shell_output.c:281
+msgid ""
+"Error parsing the shell command.\n"
+"\n"
+"Please, insert a valid shell command."
+msgstr ""
+
+#: plugins/shell_output/shell_output.c:334
+#, fuzzy
+msgid "An error occurs while running the selected command."
+msgstr ""
+"Atopouse un erro abrindo o ficheiro \"%s\".\n"
+"\n"
+"%s."
+
+#: plugins/shell_output/shell_output.c:421
+msgid ""
+"Execute a program and insert its output in the current document at the "
+"current cursor position"
+msgstr ""
+
+#: plugins/shell_output/shell_output.glade2.h:1
+msgid "Specify the working directory and the command you want to run."
+msgstr ""
+
+#: plugins/shell_output/shell_output.glade2.h:2
+msgid "_Shell command:"
+msgstr ""
+
+#: plugins/shell_output/shell_output.glade2.h:3
+msgid "_Working directory:"
+msgstr ""
+
+#: plugins/shell_output/shell_output.glade2.h:4
+msgid "gedit: Shell Output plugin"
+msgstr ""
+
+#: plugins/taglist/gedit-taglist-plugin.c:44
+msgid "Tag _List"
+msgstr ""
+
+#: plugins/taglist/gedit-taglist-plugin.c:47
+msgid "Show the tag list window"
+msgstr ""
+
+#: plugins/taglist/gedit-taglist-plugin.c:140
+msgid "Tag list"
+msgstr ""
+
+#: plugins/taglist/gedit-taglist-plugin.c:141
+msgid ""
+"The tag list plugin provides a method to easily insert into a document "
+"commonly used tabs/strings without having to type them."
+msgstr ""
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:116
+msgid "Tag list plugin"
+msgstr ""
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:134
+msgid "Select the group of tab you want to use."
+msgstr ""
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:158
+msgid "Double-click on a tag to insert it in the current document."
+msgstr ""
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:169
+msgid "Tags"
+msgstr ""
+
+#: plugins/time/time.c:44
+msgid "_Insert Date/Time"
+msgstr ""
+
+#: plugins/time/time.c:47
+msgid "Insert current date and time at the cursor position"
+msgstr ""
+
+#: plugins/time/time.c:256
+msgid "Available formats"
+msgstr ""
+
+#: plugins/time/time.c:297 plugins/time/time.glade2.h:1
+msgid "Configure insert date/time plugin"
+msgstr ""
+
+#: plugins/time/time.c:537
+msgid "Insert Date/Time"
+msgstr ""
+
+#: plugins/time/time.c:538
+msgid "Inserts current date and time at the cursor position."
+msgstr ""
+
+#: plugins/time/time.glade2.h:2
+msgid "Select the format to use when inserting date/time."
+msgstr ""
+
+#: src/bonobo-mdi.c:525 src/bonobo-mdi.c:601 src/bonobo-mdi.c:1997
+#, c-format
+msgid "Activate %s"
+msgstr "Activar %s"
+
+#: src/dialogs/gedit-dialog-goto-line.c:114
+msgid "Goto line..."
+msgstr ""
+
+#. Add Goto Line button
+#: src/dialogs/gedit-dialog-goto-line.c:124
+msgid "_Goto line"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-goto-line.c:140
+msgid "Could not find the required widgets inside goto-line.glade2.\n"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-plugin-manager.c:47
+msgid "Plugin"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-plugin-manager.c:48
+msgid "Load"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-plugin-manager.c:314
+msgid "Module file name"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-plugin-manager.c:315
+msgid "Author(s)"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-plugin-manager.c:446
+msgid "Could not find plugin-manager.glade2, reinstall gedit.\n"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-plugin-manager.c:454
+msgid "Plugin Manager"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-plugin-manager.c:481
+msgid "Invalid glade file for plugin manager -- not all widgets found.\n"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-plugin-manager.c:571
+msgid "Could not create the Plugin Manager dialog"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-replace.c:167 src/dialogs/replace.glade2.h:3
+#: src/gedit-ui.xml.h:56
+#, fuzzy
+msgid "Replace"
+msgstr "_Remprazar"
+
+#: src/dialogs/gedit-dialog-replace.c:178
+#, fuzzy
+msgid "Replace _All"
+msgstr "_Remprazar"
+
+#. Add Replace button
+#: src/dialogs/gedit-dialog-replace.c:181 src/gedit-file-selector-util.c:109
+#: src/gedit-ui.xml.h:105
+msgid "_Replace"
+msgstr "_Remprazar"
+
+#: src/dialogs/gedit-dialog-replace.c:270 src/gedit-ui.xml.h:26
+msgid "Find"
+msgstr ""
+
+#: src/dialogs/gedit-dialog-replace.c:469
+#: src/dialogs/gedit-dialog-replace.c:540
+#: src/dialogs/gedit-dialog-replace.c:695
+#, fuzzy, c-format
+msgid "The text \"%s\" was not found."
+msgstr "Non se atopou a cadea \"%s\"."
+
+#: src/dialogs/gedit-dialog-replace.c:704
+#, c-format
+msgid "Found and replaced %d occurences."
+msgstr "Atopadas e remprazadas %d ocurrencias."
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:73
+msgid "Set program location ..."
+msgstr ""
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:95
+msgid ""
+"Could not find the required widgets inside program-location-dialog.glade2.\n"
+msgstr ""
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:101
+#, c-format
+msgid ""
+"The %s plugin uses an external program, called <tt>%s</tt>, to perform its "
+"task.\n"
+"\n"
+"Please, specify the location of the <tt>%s</tt> program."
+msgstr ""
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:145
+msgid "The selected file is not executable."
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:202
+msgid "Toolbar"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:203
+#: src/dialogs/gedit-preferences.glade2.h:34
+msgid "Status bar"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:206
+#: src/dialogs/gedit-preferences.glade2.h:14
+msgid "MDI"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:215
+msgid "Font & Colors"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:217
+#: src/dialogs/gedit-preferences.glade2.h:35
+msgid "Tabs"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:218
+#: src/dialogs/gedit-preferences.glade2.h:57
+msgid "Wrap mode"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:219
+#: src/dialogs/gedit-preferences.glade2.h:13
+msgid "Line numbers"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:221
+#: src/dialogs/gedit-preferences.glade2.h:27 src/gedit-ui.xml.h:61
+msgid "Save"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:222
+#: src/dialogs/gedit-preferences.glade2.h:52 src/gedit-ui.xml.h:81
+msgid "Undo"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:230
+msgid "Page"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:237
+msgid "Editor"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:238
+#: src/dialogs/gedit-preferences.glade2.h:22 src/gedit-ui.xml.h:45
+msgid "Print"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:240
+msgid "User interface"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:307
+msgid "Cat_egories:"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:331 src/gedit-ui.xml.h:44
+msgid "Preferences"
+msgstr ""
+
+#: src/dialogs/gedit-preferences-dialog.c:498
+msgid "Categories"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:1
+msgid " _Wrap lines (at character boundaries)"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:2
+msgid " character(s)"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:3
+msgid "Always use _UTF-8 encoding (faster)"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:4
+msgid "Bottom"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:5
+msgid "Button style"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:6
+msgid "Colors"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:7
+msgid "Create a _backup copy of files before saving"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:8
+msgid "Font"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:9
+msgid "Fonts & Colors"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:10
+msgid "Icon and _text"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:11
+msgid "LOGO"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:12
+msgid "Left"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:15
+msgid "Modal"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:16
+msgid "Notebook"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:17
+msgid "Notebook _tab position:"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:18
+msgid "Pick the background color"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:19
+msgid "Pick the selected text color"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:20
+msgid "Pick the selection color"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:21
+msgid "Pick the text color"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:23
+msgid "Print _line numbers every"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:24
+msgid "Print _page headers"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:25
+msgid "Right"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:26
+msgid "S_elected text color:"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:28
+msgid "Se_lection color:"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:29
+msgid "Set _tabs width equivalent to  "
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:30
+msgid "Set limit on _undo levels to"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:31
+msgid "Sho_w tooltips"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:32
+msgid "Show cursor _position"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:33
+msgid "Show overwrite _mode"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:36
+msgid ""
+"The Font & Colors settings let you choose the font and the colors to be used "
+"in the editor windows."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:37
+msgid ""
+"The MDI (Multiple Document Interface) mode refers to the way more than one "
+"text document is displayed in gedit. \n"
+"If you choose the Notebook mode, you may then decide where you want the tabs "
+"to appear in the gedit window."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:39
+msgid ""
+"The line numbers setting lets you choose to display the line numbers on the "
+"left hand side of the window."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:40
+msgid "The print settings let you customize how gedit prints documents."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:41
+msgid "The save settings let you customize how gedit saves files."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:42
+msgid ""
+"The status bar settings let you show or hide status bar and customize its "
+"appearance."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:43
+msgid "The tabs settings let you customize the tabs width."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:44
+msgid ""
+"The toolbar settings let you show or hide toolbar and customize its "
+"appearance."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:45
+msgid ""
+"The undo settings let you set the maximum number of actions that gedit can "
+"undo."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:46
+msgid "The wrap mode settings let you customize how lines have to be wrapped."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:47
+msgid "Toolbars"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:48
+msgid "Top"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:49
+msgid "Toplevel"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:50
+msgid "U_se current locale only if the file already use it"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:51
+msgid "U_se default theme colors"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:53
+msgid "Use current _locale when possible"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:54
+#, fuzzy
+msgid "When saving..."
+msgstr "Abrir ficheiro ..."
+
+#: src/dialogs/gedit-preferences.glade2.h:55
+msgid "Wrap lines at _word boundaries"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:56
+msgid "Wrap lines at ch_aracter boundaries"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:58
+msgid "_According to system settings"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:59
+msgid "_Auto save current file every"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:60
+msgid "_Background color:"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:61
+msgid "_Display line numbers"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:62
+msgid "_Font used by the editor: "
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:63 src/gedit-ui.xml.h:96
+msgid "_Icon"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:64
+msgid "_MDI Mode:"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:65
+msgid "_Never wrap lines"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:66
+msgid "_Show status bar"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:67
+msgid "_Show toolbar"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:68
+#, fuzzy
+msgid "_Text color:"
+msgstr "Editor de Texto de GNOME"
+
+#: src/dialogs/gedit-preferences.glade2.h:69
+msgid "_Use default theme font"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:73
+msgid "level(s)"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:74
+msgid "line(s)"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:75
+msgid "minutes"
+msgstr ""
+
+#: src/dialogs/goto-line.glade2.h:1
+msgid "Goto Line"
+msgstr ""
+
+#: src/dialogs/goto-line.glade2.h:2
+msgid "_Line number:"
+msgstr ""
+
+#: src/dialogs/plugin-manager.glade2.h:1
+msgid "C_onfigure plugin"
+msgstr ""
+
+#: src/dialogs/plugin-manager.glade2.h:2
+msgid "Configure the selected plugin"
+msgstr ""
+
+#: src/dialogs/plugin-manager.glade2.h:3
+msgid "D_etails"
+msgstr ""
+
+#: src/dialogs/plugin-manager.glade2.h:4
+msgid ""
+"This is the Plugin Manager. Plugins are extra pieces of software that extend "
+"gedit capabilities. From here, you can choose which plugins you want to have "
+"loaded."
+msgstr ""
+
+#: src/dialogs/plugin-manager.glade2.h:5
+msgid "_Description"
+msgstr ""
+
+#: src/dialogs/plugin-manager.glade2.h:6
+msgid "dialog1"
+msgstr ""
+
+#: src/dialogs/program-location-dialog.glade2.h:1
+#, fuzzy
+msgid "Set program location..."
+msgstr "Abrir ficheiro ..."
+
+#: src/dialogs/program-location-dialog.glade2.h:2
+msgid "_Location to search for:"
+msgstr ""
+
+#: src/dialogs/program-location-dialog.glade2.h:5
+msgid "label"
+msgstr ""
+
+#: src/dialogs/replace.glade2.h:1
+msgid "Case sensi_tive"
+msgstr ""
+
+#: src/dialogs/replace.glade2.h:2
+msgid "Find Next"
+msgstr ""
+
+#: src/dialogs/replace.glade2.h:4
+#, fuzzy
+msgid "Replace All"
+msgstr "_Remprazar"
+
+#: src/dialogs/replace.glade2.h:5
+#, fuzzy
+msgid "Replace _with: "
+msgstr "_Remprazar"
+
+#: src/dialogs/replace.glade2.h:6
+msgid "Search fro_m the beginning of the document"
+msgstr ""
+
+#: src/dialogs/replace.glade2.h:7
+msgid "Search from the c_ursor position"
+msgstr ""
+
+#: src/dialogs/replace.glade2.h:8
+msgid "_Search for: "
+msgstr ""
+
+#: src/dialogs/uri.glade2.h:1
+msgid "Enter the location (URI) of the file you would like to open:"
+msgstr ""
+
+#: src/dialogs/uri.glade2.h:2
+#, fuzzy
+msgid "Open from URI"
+msgstr "Abrir ficheiro ..."
+
+#: src/dialogs/uri.glade2.h:5
+msgid "gtk-open"
+msgstr ""
+
+#: src/gedit2.c:68
+msgid "Show mdi debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de MDI."
+
+#: src/gedit2.c:71
+msgid "Show commands debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de comandos."
+
+#: src/gedit2.c:74
+msgid "Show document debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de documentos."
+
+#: src/gedit2.c:77
+msgid "Show file debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de ficheiros."
+
+#: src/gedit2.c:80
+msgid "Show plugin debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de conectores (plugins)."
+
+#: src/gedit2.c:83
+msgid "Show prefs debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de preferencias."
+
+#: src/gedit2.c:86
+msgid "Show printing debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de impresiÃ³n."
+
+#: src/gedit2.c:89
+msgid "Show search debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de busca."
+
+#: src/gedit2.c:92
+msgid "Show undo debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de desfacer."
+
+#: src/gedit2.c:95
+msgid "Show view debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de vista."
+
+#: src/gedit2.c:98
+msgid "Show recent debugging messages."
+msgstr "Amosar mensaxes de depuraciÃ³n de recentes."
+
+#: src/gedit2.c:101
+msgid "Turn on all debugging messages."
+msgstr "Activar todas as mensaxes de depuraciÃ³n."
+
+#: src/gedit2.c:159
+#, fuzzy
+msgid "The GNOME text editor"
+msgstr "O editor de texto de GNOME"
+
+#: src/gedit-commands.c:56
+msgid "Not yet implemented."
+msgstr "AÃ­nda non implementado."
+
+#: src/gedit-commands.c:339
+#, c-format
+msgid "The string \"%s\" has not been found."
+msgstr "Non se atopou a cadea \"%s\"."
+
+#: src/gedit-commands.c:419
+msgid "Impossible to update gedit settings."
+msgstr "Non se pode actualizar a configuraciÃ³n de gedit."
+
+#: src/gedit-commands.c:508
+msgid "gedit"
+msgstr "gedit"
+
+#: src/gedit-commands.c:511
+#, fuzzy
+msgid "gedit is a small and lightweight text editor for Gnome"
+msgstr "Un pequeno e lixeiro editor de textos para GNOME"
+
+#: src/gedit-document.c:521 src/gedit-document.c:532
+#, c-format
+msgid "%s %d"
+msgstr "%s %d"
+
+#: src/gedit-document.c:521 src/gedit-document.c:532
+msgid "Untitled"
+msgstr "Sen tÃ­tulo"
+
+#: src/gedit-document.c:648 src/gedit-document.c:754
+msgid "Invalid UTF-8 data"
+msgstr ""
+
+#: src/gedit-document.c:948
+#, c-format
+msgid "gedit cannot handle %s: locations in write mode."
+msgstr ""
+
+#: src/gedit-document.c:955
+msgid "gedit cannot handle this kind of location in write mode."
+msgstr ""
+
+#: src/gedit-document.c:972
+msgid "Could not create the backup copy of the file."
+msgstr ""
+
+#: src/gedit-document.c:991
+msgid ""
+"Make sure that the path you provided exists, and that you have the "
+"appropriate write permissions."
+msgstr ""
+
+#: src/gedit-document.c:1029
+msgid ""
+"There is no enough disk space to save the file.\n"
+"Please, free some space on the disk and try again."
+msgstr ""
+
+#: src/gedit-document.c:1034
+msgid "The file is too big."
+msgstr ""
+
+#: src/gedit-document.c:1184
+msgid "It is not possible to revert an Untitled document"
+msgstr "Non se pode recuperar un documento Sen TÃ­tulo"
+
+#: src/gedit-file.c:121
+msgid "Open File ..."
+msgstr "Abrir ficheiro ..."
+
+#: src/gedit-file.c:131 src/gedit-file.c:638
+#, fuzzy, c-format
+msgid "Loaded file '%s'"
+msgstr "Cargado o ficheiro %s"
+
+#: src/gedit-file.c:241 src/gedit-file.c:315
+#, c-format
+msgid "Saving file '%s' ..."
+msgstr "Gardando ficheiro '%s' ..."
+
+#: src/gedit-file.c:262 src/gedit-file.c:322
+msgid "The document has not been saved."
+msgstr "O documento non foi gardado."
+
+#: src/gedit-file.c:275 src/gedit-file.c:320
+#, c-format
+msgid "File '%s' saved."
+msgstr "Ficheiro '%s' gardado."
+
+#: src/gedit-file.c:307
+#, fuzzy
+msgid "Save as ..."
+msgstr "Gardar Como..."
+
+#: src/gedit-file.c:473
+#, c-format
+msgid "Reverting file '%s' ..."
+msgstr "Recuperando ficheiro '%s' ..."
+
+#: src/gedit-file.c:486
+msgid "The document has not been reverted."
+msgstr "O documento non foi recuperado."
+
+#: src/gedit-file.c:496
+#, c-format
+msgid "File '%s' reverted."
+msgstr "Ficheiro '%s' recuperado."
+
+#: src/gedit-file.c:539
+#, fuzzy, c-format
+msgid "Loading %d file..."
+msgstr "Cargados %i ficheiros"
+
+#: src/gedit-file.c:575
+#, c-format
+msgid "Loaded %i files"
+msgstr "Cargados %i ficheiros"
+
+#: src/gedit-file.c:692
+#, fuzzy
+msgid "Could not read data from stdin."
+msgstr ""
+"Atopouse un erro lendo datos desde a entrada estÃ¡ndar (stdin).\n"
+"\n"
+"%s."
+
+#: src/gedit-file-selector-util.c:97
+#, fuzzy, c-format
+msgid ""
+"A file named ''%s'' already exists.\n"
+"Do you want to replace it with the one you are saving?"
+msgstr ""
+"Xa existe un ficheiro chamado \"%s\" neste lugar. Â¿Queres remprazalo con "
+"este que estÃ¡s gardando?"
+
+#: src/gedit-file-selector-util.c:105
+#, fuzzy
+msgid "Do_n't replace"
+msgstr "_Non gardar"
+
+#: src/gedit-file-selector-util.c:459
+msgid "Select a filename to save"
+msgstr ""
+
+#: src/gedit-mdi.c:766
+#, fuzzy, c-format
+msgid ""
+"Do you want to save the changes you made to the document \"%s\"? \n"
+"\n"
+"Your changes will be lost if you don't save them."
+msgstr ""
+"Â¿Queres gardar os cambios que fixeches ao documento \"%s\"? \n"
+"\n"
+"Os cambios perderanse se non se gardan."
+
+#: src/gedit-mdi.c:771
+#, fuzzy
+msgid "Do_n't save"
+msgstr "_Non gardar"
+
+#: src/gedit-mdi.c:790
+#, fuzzy
+msgid "_Don't quit"
+msgstr "_Non gardar"
+
+#: src/gedit-mdi.c:794
+#, fuzzy
+msgid "_Don't close"
+msgstr "_Non gardar"
+
+#: src/gedit-mdi.c:881
+msgid "(modified)"
+msgstr "(modificado)"
+
+#: src/gedit-mdi.c:887
+msgid "(readonly)"
+msgstr "(sÃ³ lectura)"
+
+#: src/gedit-plugins-engine.c:159
+#, fuzzy, c-format
+msgid "Error, unable to open module file '%s'\n"
+msgstr "Non se puido abrir o ficheiro recente: %s"
+
+#: src/gedit-plugins-engine.c:174
+#, c-format
+msgid "Error, plugin '%s' does not contain init function."
+msgstr ""
+
+#: src/gedit-plugins-engine.c:184
+#, c-format
+msgid "Error, plugin '%s' does not contain activate function."
+msgstr ""
+
+#: src/gedit-plugins-engine.c:194
+#, c-format
+msgid "Error, plugin '%s' does not contain deactivate function."
+msgstr ""
+
+#: src/gedit-plugins-engine.c:224
+#, c-format
+msgid "Error, impossible to initialize plugin '%s'"
+msgstr ""
+
+#: src/gedit-plugins-engine.c:232
+#, c-format
+msgid "Error, the plugin '%s' did not specified a name"
+msgstr ""
+
+#: src/gedit-plugins-engine.c:312
+#, fuzzy, c-format
+msgid "Error, impossible to save settings of the plugin '%s'"
+msgstr "Non se pode actualizar a configuraciÃ³n de gedit."
+
+#: src/gedit-plugins-engine.c:384 src/gedit-plugins-engine.c:442
+#, c-format
+msgid "Error, impossible to activate plugin '%s'"
+msgstr ""
+
+#: src/gedit-plugins-engine.c:411
+#, c-format
+msgid "Error, impossible to deactivate plugin '%s'"
+msgstr ""
+
+#: src/gedit-plugins-engine.c:483
+#, fuzzy, c-format
+msgid "Error, impossible to update ui of the plugin '%s'"
+msgstr "Non se pode actualizar a configuraciÃ³n de gedit."
+
+#: src/gedit-print.c:166
+msgid ""
+"gedit is unable to print since it cannot find\n"
+"one of the required fonts."
+msgstr ""
+
+#: src/gedit-print.c:273
+msgid "gedit - Print Document"
+msgstr ""
+
+#: src/gedit-print.c:338
+#, fuzzy, c-format
+msgid "File: %s"
+msgstr "Abrir ficheiro %s"
+
+#. Print right text
+#: src/gedit-print.c:343
+#, c-format
+msgid "Page: %d"
+msgstr ""
+
+#: src/gedit-print.c:476
+msgid "gedit - Print Preview"
+msgstr ""
+
+#: src/gedit-print.c:552
+#, fuzzy, c-format
+msgid ""
+"An error occurred while printing.\n"
+"\n"
+"%s,"
+msgstr ""
+"Atopouse un erro lendo datos desde a entrada estÃ¡ndar (stdin).\n"
+"\n"
+"%s."
+
+#: src/gedit-recent.c:486
+#, fuzzy, c-format
+msgid "Open %s"
+msgstr "Abrir ficheiro %s"
+
+#: src/gedit-ui.xml.h:1
+msgid "About this application"
+msgstr ""
+
+#: src/gedit-ui.xml.h:2
+msgid "About..."
+msgstr ""
+
+#: src/gedit-ui.xml.h:3
+msgid "Add/Remove plugins"
+msgstr ""
+
+#: src/gedit-ui.xml.h:4
+msgid "C_ustomize Status Bar"
+msgstr ""
+
+#: src/gedit-ui.xml.h:5
+msgid "Change the visibility of the status bar in the current window"
+msgstr ""
+
+#: src/gedit-ui.xml.h:6
+msgid "Change the visibility of the toolbar in the current window"
+msgstr ""
+
+#: src/gedit-ui.xml.h:7
+#, fuzzy
+msgid "Clos_e All"
+msgstr "Gardar Como..."
+
+#: src/gedit-ui.xml.h:8
+msgid "Close"
+msgstr ""
+
+#: src/gedit-ui.xml.h:9
+msgid "Close All"
+msgstr ""
+
+#: src/gedit-ui.xml.h:10
+msgid "Close all open files"
+msgstr ""
+
+#: src/gedit-ui.xml.h:11
+msgid "Close the current file"
+msgstr ""
+
+#: src/gedit-ui.xml.h:12
+msgid "Configure the application"
+msgstr ""
+
+#: src/gedit-ui.xml.h:13
+msgid "Contents"
+msgstr ""
+
+#: src/gedit-ui.xml.h:14
+msgid "Copy"
+msgstr ""
+
+#: src/gedit-ui.xml.h:15
+msgid "Copy the selection"
+msgstr ""
+
+#: src/gedit-ui.xml.h:16
+msgid "Create a new document"
+msgstr ""
+
+#: src/gedit-ui.xml.h:17
+msgid "Cu_t"
+msgstr ""
+
+#: src/gedit-ui.xml.h:18
+msgid "Customize"
+msgstr ""
+
+#: src/gedit-ui.xml.h:19
+msgid "Customize toolbars"
+msgstr ""
+
+#: src/gedit-ui.xml.h:20
+msgid "Cut"
+msgstr ""
+
+#: src/gedit-ui.xml.h:21
+msgid "Cut the selection"
+msgstr ""
+
+#: src/gedit-ui.xml.h:22
+msgid "Delete the selected text"
+msgstr ""
+
+#: src/gedit-ui.xml.h:23
+msgid "Deleted"
+msgstr ""
+
+#: src/gedit-ui.xml.h:24
+msgid "Dump XML"
+msgstr ""
+
+#: src/gedit-ui.xml.h:25
+msgid "Dump the UI Xml description"
+msgstr ""
+
+#: src/gedit-ui.xml.h:27
+msgid "Find Again"
+msgstr ""
+
+#: src/gedit-ui.xml.h:28
+msgid "Find Ne_xt"
+msgstr ""
+
+#: src/gedit-ui.xml.h:29
+msgid "Go to a specific line number"
+msgstr ""
+
+#: src/gedit-ui.xml.h:30
+msgid "Goto _Line"
+msgstr ""
+
+#: src/gedit-ui.xml.h:31
+msgid "Icon and _Text"
+msgstr ""
+
+#: src/gedit-ui.xml.h:32
+msgid "Main toolbar"
+msgstr ""
+
+#: src/gedit-ui.xml.h:33
+msgid "New"
+msgstr ""
+
+#: src/gedit-ui.xml.h:34
+msgid "Only show icons in the toolbar"
+msgstr ""
+
+#: src/gedit-ui.xml.h:35
+msgid "Open"
+msgstr ""
+
+#: src/gedit-ui.xml.h:36
+#, fuzzy
+msgid "Open Location..."
+msgstr "Abrir ficheiro ..."
+
+#: src/gedit-ui.xml.h:37
+#, fuzzy
+msgid "Open _Location..."
+msgstr "Abrir ficheiro ..."
+
+#: src/gedit-ui.xml.h:38
+#, fuzzy
+msgid "Open a file"
+msgstr "Abrir ficheiro %s"
+
+#: src/gedit-ui.xml.h:39
+msgid "Open a file from a specified location"
+msgstr ""
+
+#: src/gedit-ui.xml.h:40
+msgid "Open the gedit manual"
+msgstr ""
+
+#: src/gedit-ui.xml.h:41
+msgid "Paste"
+msgstr ""
+
+#: src/gedit-ui.xml.h:42
+msgid "Paste the clipboard"
+msgstr ""
+
+#: src/gedit-ui.xml.h:43
+msgid "Pr_eferences..."
+msgstr ""
+
+#: src/gedit-ui.xml.h:46
+msgid "Print Previe_w"
+msgstr ""
+
+#: src/gedit-ui.xml.h:47
+msgid "Print Preview"
+msgstr ""
+
+#: src/gedit-ui.xml.h:48
+msgid "Print Setup"
+msgstr ""
+
+#: src/gedit-ui.xml.h:49
+msgid "Print preview"
+msgstr ""
+
+#: src/gedit-ui.xml.h:50
+msgid "Print the current file"
+msgstr ""
+
+#: src/gedit-ui.xml.h:51
+msgid "Quit"
+msgstr ""
+
+#: src/gedit-ui.xml.h:52
+msgid "Quit the program"
+msgstr ""
+
+#: src/gedit-ui.xml.h:53
+msgid "Recent _Files"
+msgstr ""
+
+#: src/gedit-ui.xml.h:54
+msgid "Redo"
+msgstr ""
+
+#: src/gedit-ui.xml.h:55
+msgid "Redo the undone action"
+msgstr ""
+
+#: src/gedit-ui.xml.h:57
+#, fuzzy
+msgid "Replace a string"
+msgstr "_Remprazar"
+
+#: src/gedit-ui.xml.h:58
+msgid "Revert"
+msgstr ""
+
+#: src/gedit-ui.xml.h:59
+msgid "Revert to a saved version of the file"
+msgstr ""
+
+#: src/gedit-ui.xml.h:60
+#, fuzzy
+msgid "Sa_ve All"
+msgstr "Gardar Como..."
+
+#: src/gedit-ui.xml.h:62
+#, fuzzy
+msgid "Save All"
+msgstr "Gardar Como..."
+
+#: src/gedit-ui.xml.h:63
+#, fuzzy
+msgid "Save As"
+msgstr "Gardar Como..."
+
+#: src/gedit-ui.xml.h:64
+#, fuzzy
+msgid "Save _As..."
+msgstr "Gardar Como..."
+
+#: src/gedit-ui.xml.h:65
+msgid "Save all open files"
+msgstr ""
+
+#: src/gedit-ui.xml.h:66
+msgid "Save the current file"
+msgstr ""
+
+#: src/gedit-ui.xml.h:67
+msgid "Save the current file with a different name"
+msgstr ""
+
+#: src/gedit-ui.xml.h:68
+msgid "Search again for the same string"
+msgstr ""
+
+#: src/gedit-ui.xml.h:69
+msgid "Search for a string"
+msgstr ""
+
+#: src/gedit-ui.xml.h:70
+#, fuzzy
+msgid "Select All"
+msgstr "_Remprazar"
+
+#: src/gedit-ui.xml.h:71
+#, fuzzy
+msgid "Select _All"
+msgstr "_Remprazar"
+
+#: src/gedit-ui.xml.h:72
+msgid "Select the entire document"
+msgstr ""
+
+#: src/gedit-ui.xml.h:73
+msgid "Set toolbar button style according to desktop default"
+msgstr ""
+
+#: src/gedit-ui.xml.h:74
+msgid "Setup the page settings for your current printer"
+msgstr ""
+
+#: src/gedit-ui.xml.h:75
+msgid "Show _Cursor Position"
+msgstr ""
+
+#: src/gedit-ui.xml.h:76
+msgid "Show _Overwrite Mode"
+msgstr ""
+
+#: src/gedit-ui.xml.h:77
+msgid "Show _Tooltips"
+msgstr ""
+
+#: src/gedit-ui.xml.h:78
+msgid "Show cursor position in the statusbar"
+msgstr ""
+
+#: src/gedit-ui.xml.h:79
+msgid "Show overwrite mode in the statusbar"
+msgstr ""
+
+#: src/gedit-ui.xml.h:80
+msgid "Show tooltips in the toolbar"
+msgstr ""
+
+#: src/gedit-ui.xml.h:82
+msgid "Undo the last action"
+msgstr ""
+
+#: src/gedit-ui.xml.h:83
+msgid "_About..."
+msgstr ""
+
+#: src/gedit-ui.xml.h:84
+msgid "_Close"
+msgstr ""
+
+#: src/gedit-ui.xml.h:85
+msgid "_Contents"
+msgstr ""
+
+#: src/gedit-ui.xml.h:86
+msgid "_Copy"
+msgstr ""
+
+#: src/gedit-ui.xml.h:87
+msgid "_Customize Toolbar"
+msgstr ""
+
+#: src/gedit-ui.xml.h:88
+msgid "_Debug"
+msgstr ""
+
+#: src/gedit-ui.xml.h:89
+msgid "_Delete"
+msgstr ""
+
+#: src/gedit-ui.xml.h:90
+msgid "_Desktop Default"
+msgstr ""
+
+#: src/gedit-ui.xml.h:91
+msgid "_Documents"
+msgstr ""
+
+#: src/gedit-ui.xml.h:92
+#, fuzzy
+msgid "_Edit"
+msgstr "gedit"
+
+#: src/gedit-ui.xml.h:93
+msgid "_File"
+msgstr ""
+
+#: src/gedit-ui.xml.h:94
+msgid "_Find"
+msgstr ""
+
+#: src/gedit-ui.xml.h:95
+msgid "_Help"
+msgstr ""
+
+#: src/gedit-ui.xml.h:97
+msgid "_New"
+msgstr ""
+
+#: src/gedit-ui.xml.h:98
+#, fuzzy
+msgid "_Open..."
+msgstr "Abrir ficheiro ..."
+
+#: src/gedit-ui.xml.h:99
+msgid "_Paste"
+msgstr ""
+
+#: src/gedit-ui.xml.h:100
+msgid "_Plugin Manager"
+msgstr ""
+
+#: src/gedit-ui.xml.h:101
+msgid "_Plugin Manager..."
+msgstr ""
+
+#: src/gedit-ui.xml.h:102
+msgid "_Print..."
+msgstr ""
+
+#: src/gedit-ui.xml.h:103
+#, fuzzy
+msgid "_Quit"
+msgstr "gedit"
+
+#: src/gedit-ui.xml.h:104
+msgid "_Redo"
+msgstr ""
+
+#: src/gedit-ui.xml.h:106
+msgid "_Revert"
+msgstr ""
+
+#: src/gedit-ui.xml.h:107
+msgid "_Save"
+msgstr ""
+
+#: src/gedit-ui.xml.h:108
+msgid "_Search"
+msgstr ""
+
+#: src/gedit-ui.xml.h:109
+msgid "_Status Bar"
+msgstr ""
+
+#: src/gedit-ui.xml.h:110
+msgid "_Toolbar"
+msgstr ""
+
+#: src/gedit-ui.xml.h:111
+msgid "_Tools"
+msgstr ""
+
+#: src/gedit-ui.xml.h:112
+msgid "_Undo"
+msgstr ""
+
+#: src/gedit-ui.xml.h:113
+msgid "_View"
+msgstr ""
+
+#: src/gedit-utils.c:840
+#, c-format
+msgid ""
+"Could not find the file \"%s\".\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+
+#: src/gedit-utils.c:847
+#, c-format
+msgid "Could not open the file \"%s\" because it contains corrupted data."
+msgstr ""
+
+#: src/gedit-utils.c:858
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because gedit cannot handle %s: locations."
+msgstr ""
+
+#: src/gedit-utils.c:866
+#, fuzzy, c-format
+msgid "Could not open the file \"%s\""
+msgstr "Non se puido abrir o ficheiro recente: %s"
+
+#: src/gedit-utils.c:873
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because it contains data in an invalid format."
+msgstr ""
+
+#: src/gedit-utils.c:880
+#, c-format
+msgid "Could not open the file \"%s\" because it is too big."
+msgstr ""
+
+#: src/gedit-utils.c:887
+#, c-format
+msgid ""
+"\"%s\" is not a valid location.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+
+#: src/gedit-utils.c:894
+#, c-format
+msgid "Could not open the file \"%s\" because access was denied."
+msgstr ""
+
+#: src/gedit-utils.c:901
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because there are too many open files\n"
+"\n"
+".Please, close some open file and try again."
+msgstr ""
+
+#: src/gedit-utils.c:909
+#, c-format
+msgid ""
+"\"%s\" is a directory.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+
+#: src/gedit-utils.c:916
+#, c-format
+msgid ""
+"Not enough available memory to open the file \"%s\".Please, close some "
+"running application and try again."
+msgstr ""
+
+#: src/gedit-utils.c:929
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because no host \"%s\" could be found. \n"
+"\n"
+"Please, check that you typed the location correctly and that your proxy "
+"settings are correct and then try again"
+msgstr ""
+
+#: src/gedit-utils.c:942
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the host name was invalid.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+
+#: src/gedit-utils.c:949
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the host name was empty.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+
+#: src/gedit-utils.c:956
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the attempt to log in failed.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+
+#: src/gedit-utils.c:964
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because it contains invalid UTF-8 data.\n"
+"\n"
+"Probably, you are trying to open a binary file."
+msgstr ""
+
+#: src/gedit-utils.c:1002
+#, fuzzy, c-format
+msgid "Could not open the file \"%s\"."
+msgstr "Non se puido abrir o ficheiro recente: %s"
+
+#: src/gedit-utils.c:1053
+#, c-format
+msgid "Could not save the file \"%s\"."
+msgstr ""
+
+#: src/gedit-utils.c:1057
+#, fuzzy, c-format
+msgid ""
+"Could not save the file \"%s\".\n"
+"\n"
+"%s"
+msgstr ""
+"Atopouse un erro gardando o ficheiro \"%s\".\n"
+"\n"
+"%s."
+
+#: src/gedit-utils.c:1110
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because gedit cannot find it.\n"
+"\n"
+"Perhaps, it has recently been deleted."
+msgstr ""
+
+#: src/gedit-utils.c:1117
+#, c-format
+msgid "Could not revert the file \"%s\" because it contains corrupted data."
+msgstr ""
+
+#: src/gedit-utils.c:1128
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because gedit cannot handle %s: locations."
+msgstr ""
+
+#: src/gedit-utils.c:1136
+#, fuzzy, c-format
+msgid "Could not revert the file \"%s\""
+msgstr ""
+"Atopouse un erro recuperando o ficheiro \"%s\".\n"
+"\n"
+"%s."
+
+#: src/gedit-utils.c:1143
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because it contains data in an invalid "
+"format."
+msgstr ""
+
+#: src/gedit-utils.c:1150
+#, c-format
+msgid "Could not revert the file \"%s\" because it is too big."
+msgstr ""
+
+#: src/gedit-utils.c:1157
+#, c-format
+msgid "Could not revert the file \"%s\" because access was denied."
+msgstr ""
+
+#: src/gedit-utils.c:1164
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because there are too many open files\n"
+"\n"
+".Please, close some open file and try again."
+msgstr ""
+
+#: src/gedit-utils.c:1172
+#, c-format
+msgid ""
+"Not enough available memory to revert the file \"%s\".Please, close some "
+"running application and try again."
+msgstr ""
+
+#: src/gedit-utils.c:1185
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because no host \"%s\" could be found. \n"
+"\n"
+"Please, check that your proxy settings are correct and try again"
+msgstr ""
+
+#: src/gedit-utils.c:1197
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because the host name was empty.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+
+#: src/gedit-utils.c:1204
+#, c-format
+msgid "Could not revert the file \"%s\" because the attempt to log in failed."
+msgstr ""
+
+#: src/gedit-utils.c:1211
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because it contains invalid UTF-8 data.\n"
+"\n"
+"Probably, you are trying to revert a binary file."
+msgstr ""
+
+#: src/gedit-utils.c:1220
+#, fuzzy
+msgid "It is not possible to revert an Untitled document."
+msgstr "Non se pode recuperar un documento Sen TÃ­tulo"
+
+#: src/gedit-utils.c:1258
+#, fuzzy, c-format
+msgid "Could not revert the file \"%s\"."
+msgstr ""
+"Atopouse un erro recuperando o ficheiro \"%s\".\n"
+"\n"
+"%s."
+
+#: src/gedit-view.c:878
+#, c-format
+msgid "  Ln %d, Col. %d"
+msgstr ""
+
+#: src/gedit-view.c:916
+msgid "  OVR"
+msgstr ""
+
+#: src/gedit-view.c:918
+msgid "  INS"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Loaded file %s"
+#~ msgstr "Cargado o ficheiro %s"
+
+#~ msgid "Unable to open recent file: %s"
+#~ msgstr "Non se puido abrir o ficheiro recente: %s"
+
+#~ msgid "Invalid UTF-8 data encountered reading file"
+#~ msgstr "AtopÃ¡ronse datos UTF-8 non vÃ¡lidos lendo o ficheiro"
+
+#~ msgid ""
+#~ "An error occurred while opening the file \"%s\".\n"
+#~ "\n"
+#~ "%s."
+#~ msgstr ""
+#~ "Atopouse un erro abrindo o ficheiro \"%s\".\n"
+#~ "\n"
+#~ "%s."
+
+#~ msgid "Unknown error"
+#~ msgstr "Erro descoÃ±ecido"
+
+#~ msgid "Save As..."
+#~ msgstr "Gardar Como..."
+
+#~ msgid ""
+#~ "A file named ``%s'' already exists in this location. Do you want to "
+#~ "replace it with the one you are saving?"
+#~ msgstr ""
+#~ "Xa existe un ficheiro chamado \"%s\" neste lugar. Â¿Queres remprazalo con "
+#~ "este que estÃ¡s gardando?"
+
+#, fuzzy
+#~ msgid "Untitled %i"
+#~ msgstr "Sen tÃ­tulo"

@@ -1,0 +1,2687 @@
+# Translation into the walloon language.
+#
+# Si vos voloz donner on côp di spale pol ratournaedje di Gnome (ou des
+# ôtes libes programes) sicrijhoz-mu a l' adresse emile
+# <srtxg@chanae.alphanet.ch>; nos avons co bråmint di l' ovraedje a fé.
+#
+# Copyright (C) 1999 Free Software Foundation, Inc.
+# Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999-2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gedit 1.118.0\n"
+"POT-Creation-Date: 2002-08-26 10:33+0200\n"
+"PO-Revision-Date: 2002-06-17 16:08MET\n"
+"Last-Translator: Pablo Saratxaga <pablo@mandrakesoft.com>\n"
+"Language-Team: Walon <linux-wa@chanae.alphanet.ch>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
+
+#: data/GNOME_Gedit.server.in.h:1
+msgid "gedit application"
+msgstr "Programe gedit"
+
+#: data/GNOME_Gedit.server.in.h:2
+msgid "gedit automation factory"
+msgstr "oujhene d' otomatijhaedje gedit"
+
+#: data/gedit.desktop.in.h:1
+msgid "Edit text files"
+msgstr "Asspougnî des fitchîs tecses"
+
+#: data/gedit.desktop.in.h:2 src/gedit2.c:297
+msgid "Text Editor"
+msgstr "Aspougneu di tecse"
+
+#: data/gedit.schemas.in.h:1
+msgid ""
+"A custom font that will be used for the editing area. This will only take "
+"effect if the \"Use Default Font\" option is turned off."
+msgstr ""
+
+#: data/gedit.schemas.in.h:2
+msgid "Auto Save"
+msgstr "Schaper otomaticmint"
+
+#: data/gedit.schemas.in.h:3
+msgid "Auto Save Interval"
+msgstr "Tins inte deus schapaedjes otomatikes"
+
+#: data/gedit.schemas.in.h:4
+msgid "Background Color"
+msgstr "Coleur do fond"
+
+#: data/gedit.schemas.in.h:5
+msgid ""
+"Background color for selected text in the editing area. This will only take "
+"effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+
+#: data/gedit.schemas.in.h:6
+msgid ""
+"Background color for unselected text in the editing area. This will only "
+"take effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+
+#: data/gedit.schemas.in.h:7
+msgid "Backup Copy Extension"
+msgstr ""
+
+#: data/gedit.schemas.in.h:8
+msgid "Body Font for Printing"
+msgstr ""
+
+#: data/gedit.schemas.in.h:9
+msgid "Create Backup Copies"
+msgstr ""
+
+#: data/gedit.schemas.in.h:10
+msgid "Display Line Numbers"
+msgstr "Håyner les limeros di roye"
+
+#: data/gedit.schemas.in.h:11
+msgid "Editor Font"
+msgstr "Fonte po l' aspougneu"
+
+#: data/gedit.schemas.in.h:12
+msgid "Encoding for Saving"
+msgstr "Ecôdaedje po schaper"
+
+#: data/gedit.schemas.in.h:13
+msgid ""
+"Extension or suffix to use for backup file names. This will only take effect "
+"if the \"Create Backup Copies\" option is turned on."
+msgstr ""
+
+#: data/gedit.schemas.in.h:14
+msgid ""
+"Foreground color for selected text in the editing area. This will only take "
+"effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+
+#: data/gedit.schemas.in.h:15
+msgid ""
+"Foreground color for the unselected text in the editing area. This will only "
+"take effect if the \"Use Default Colors\" option is turned off."
+msgstr ""
+
+#: data/gedit.schemas.in.h:16
+msgid "Header Font for Printing"
+msgstr ""
+
+#: data/gedit.schemas.in.h:17
+msgid ""
+"If this value is 0, then no line numbers will be inserted when printing a "
+"document. Otherwise, gedit will print line numbers every such number of "
+"lines."
+msgstr ""
+
+#: data/gedit.schemas.in.h:18
+msgid "Line Number Font for Printing"
+msgstr ""
+
+#: data/gedit.schemas.in.h:19
+msgid "Line Wrapping Mode"
+msgstr "Môde côpaedje di royes"
+
+#: data/gedit.schemas.in.h:20
+msgid "Maximum Recent Files"
+msgstr "Dierins fitchîs macsimom"
+
+#: data/gedit.schemas.in.h:21
+msgid "Maximum number of actions that gedit will be able to undo or redo."
+msgstr ""
+
+#: data/gedit.schemas.in.h:22
+msgid ""
+"Number of minutes after which gedit will automatically save modified files. "
+"This will only take effect if the \"Auto Save\" option is turned on."
+msgstr ""
+
+#: data/gedit.schemas.in.h:23
+msgid "Print Header"
+msgstr "Eprimî les tiestires"
+
+#: data/gedit.schemas.in.h:24
+msgid "Print Line Numbers"
+msgstr "Eprimî les limeros des royes"
+
+#: data/gedit.schemas.in.h:25
+msgid "Printing Line Wrapping Mode"
+msgstr "Môde di côpaedje des royes po l' eprimaedje"
+
+#: data/gedit.schemas.in.h:26
+msgid "Selected Text Color"
+msgstr "Coleur pol tecse tchoezi"
+
+#: data/gedit.schemas.in.h:27
+msgid "Selection Color"
+msgstr "Coleur pol boket tchoezi"
+
+#: data/gedit.schemas.in.h:28
+msgid "Show Cursor Position"
+msgstr "Mostrer l' eplaeçmint do cursoe"
+
+#: data/gedit.schemas.in.h:29
+msgid "Show Overwrite Mode"
+msgstr "Mostrer li môde sipotchaedje"
+
+#: data/gedit.schemas.in.h:30
+msgid ""
+"Specifies how to wrap long lines for printing. Use \"GTK_WRAP_NONE\" for no "
+"wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
+"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
+"the values are case-sensitive, so make sure they appear exactly as mentioned "
+"here."
+msgstr ""
+
+#: data/gedit.schemas.in.h:31
+msgid ""
+"Specifies how to wrap long lines in the editing area. Use \"GTK_WRAP_NONE\" "
+"for no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
+"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
+"the values are case-sensitive, so make sure they appear exactly as mentioned "
+"here."
+msgstr ""
+
+#: data/gedit.schemas.in.h:32
+msgid ""
+"Specifies the font to use for a document's body when printing documents."
+msgstr ""
+
+#: data/gedit.schemas.in.h:33
+msgid ""
+"Specifies the font to use for line numbers when printing. This will only "
+"take effect if the \"Print Line Numbers\" option is non-zero."
+msgstr ""
+
+#: data/gedit.schemas.in.h:34
+msgid ""
+"Specifies the font to use for page headers when printing a document. This "
+"will only take effect if the \"Print Header\" option is turned on."
+msgstr ""
+
+#: data/gedit.schemas.in.h:35
+msgid ""
+"Specifies the maximum number of recently opened files that will be displayed "
+"in the \"Recent Files\" submenu."
+msgstr ""
+
+#: data/gedit.schemas.in.h:36
+msgid ""
+"Specifies the number of spaces that should be displayed instead of Tab "
+"characters."
+msgstr ""
+
+#: data/gedit.schemas.in.h:37
+msgid "Status Bar is Visible"
+msgstr ""
+
+#: data/gedit.schemas.in.h:38
+msgid ""
+"Style for the toolbar buttons. Possible values are \"GEDIT_TOOLBAR_SYSTEM\" "
+"to use the system's default style, \"GEDIT_TOOLBAR_ICONS\" to display icons "
+"only, and \"GEDIT_TOOLBAR_ICONS_AND_TEXT\" to display both icons and text. "
+"Note that the values are case-sensitive, so make sure they appear exactly as "
+"mentioned here."
+msgstr ""
+
+#: data/gedit.schemas.in.h:39
+msgid "Tab Size"
+msgstr "Grandeu des linwetes"
+
+#: data/gedit.schemas.in.h:40
+msgid "Text Color"
+msgstr "Coleur pol tecse"
+
+#: data/gedit.schemas.in.h:41
+msgid ""
+"The encoding method to use for saving files. Possible values are "
+"\"GEDIT_SAVE_ALWAYS_UTF8\" for mandatory UTF-8 saving, "
+"\"GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE\" if you want gedit to try to "
+"convert the document it is saving to your current locale's encoding, "
+"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE\" if you want gedit to try "
+"to use the original file encoding (new files in UTF8) and "
+"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" if you want gedit to "
+"try to use the original file encoding (new files in current locale's "
+"encoding). If the conversion is successful, it will be used. Otherwise, UTF-"
+"8 will be used. Note that the values are case-sensitive, so make sure they "
+"appear exactly as mentioned here."
+msgstr ""
+
+#: data/gedit.schemas.in.h:42
+msgid "Toolbar Buttons Style"
+msgstr "Stîle des botons delk bår di botons"
+
+#: data/gedit.schemas.in.h:43
+msgid "Toolbar is Visible"
+msgstr "Bår ås usteyes veyåve"
+
+#: data/gedit.schemas.in.h:44
+msgid "Undo Actions Limit"
+msgstr "Limite d' accions a disfé"
+
+#: data/gedit.schemas.in.h:45
+msgid "Use Default Colors"
+msgstr "Eployî les prémetowès coleurs"
+
+#: data/gedit.schemas.in.h:46
+msgid "Use Default Font"
+msgstr "Eployî li prémetowe fonte"
+
+#: data/gedit.schemas.in.h:47
+msgid ""
+"Whether gedit should automatically save modified files after a time "
+"interval. You can set the time interval with the \"Auto Save Interval\" "
+"option."
+msgstr ""
+
+#: data/gedit.schemas.in.h:48
+msgid ""
+"Whether gedit should create backup copies for the files it saves. You can "
+"set the backup file extension with the \"Backup Copy Extension\" option."
+msgstr ""
+
+#: data/gedit.schemas.in.h:49
+msgid "Whether gedit should display line numbers in the editing area."
+msgstr ""
+
+#: data/gedit.schemas.in.h:50
+msgid "Whether gedit should include a document header when printing documents."
+msgstr ""
+
+#: data/gedit.schemas.in.h:51
+msgid ""
+"Whether the status bar at the bottom of editing windows should be visible."
+msgstr ""
+
+#: data/gedit.schemas.in.h:52
+msgid ""
+"Whether the status bar should show the cursor position in editing windows. "
+"Make sure you turn on the \"Status Bar is Visible\" option for this to take "
+"effect."
+msgstr ""
+
+#: data/gedit.schemas.in.h:53
+msgid ""
+"Whether the status bar should show the insert/overwrite mode in editing "
+"windows. Make sure you turn on the \"Status Bar is Visible\" option for this "
+"to take effect."
+msgstr ""
+
+#: data/gedit.schemas.in.h:54
+msgid "Whether the toolbar should be visible in editing windows."
+msgstr ""
+
+#: data/gedit.schemas.in.h:55
+msgid ""
+"Whether to use the system's default colors for the editing area. If this "
+"option is turned off, then the colors of the editing area will be those "
+"specified in the \"Background Color\", \"Text Color\", \"Selected Text Color"
+"\", and \"Selection Color\" options."
+msgstr ""
+
+#: data/gedit.schemas.in.h:56
+msgid ""
+"Whether to use the system's default font for editing text instead of a font "
+"specific to gedit. If this option is turned off, then the font named in the "
+"\"Editor Font\" option will be used instead of the system font."
+msgstr ""
+
+#: plugins/ASCII/ascii.c:43
+msgid "_ASCII Table"
+msgstr "Tåvlea _ASCII"
+
+#: plugins/ASCII/ascii.c:46
+msgid "Pop-up a dialog containing an ASCII Table"
+msgstr "Mostrer on purnea avou li tåvlea des caracteres ASCII"
+
+#: plugins/ASCII/ascii.c:336
+msgid "Char"
+msgstr "Char"
+
+#: plugins/ASCII/ascii.c:343
+msgid "Dec#"
+msgstr "Dec#"
+
+#: plugins/ASCII/ascii.c:350
+msgid "Hex#"
+msgstr "Hex#"
+
+#: plugins/ASCII/ascii.c:357
+msgid "Name"
+msgstr "No"
+
+#: plugins/ASCII/ascii.c:402 plugins/ASCII/ascii.c:523
+msgid "ASCII table"
+msgstr "Tåvlea ASCII"
+
+#: plugins/ASCII/ascii.c:415
+msgid "_Insert char"
+msgstr "_Sititchî caractere"
+
+#: plugins/ASCII/ascii.c:524
+msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+msgstr ""
+"Ci tchoûke-didins chal mostere on purnea avou li tåvlea des caracteres ASCII."
+
+#: plugins/ASCII/ascii.c:526
+msgid "Copyright (C) 2001-2002 Paolo Maggi"
+msgstr "Copyright © 2001-2002 Paolo Maggi"
+
+#: plugins/ASCII/asciitable.glade2.h:1
+msgid ""
+"If you wish to insert any of the characters in to the active \n"
+"document, select the character and click the \"Insert Char\" \n"
+"button or double click the character in the table."
+msgstr ""
+"Si vos vloz stitchî tot l' minme ké caractere el documint \n"
+"do moumint, tchoezixhoz l' et clitchîz sol boton «Sititchî caractere» \n"
+"oudonbén dobe-clitchîz sol caractere el tåvlea."
+
+#: plugins/ASCII/asciitable.glade2.h:4
+msgid "Insert char"
+msgstr "Sititchî caractere"
+
+#: plugins/ASCII/asciitable.glade2.h:5
+msgid "gedit: ASCII table"
+msgstr "gedit: Tåvlea ASCII"
+
+#. AFAIK, all cvs commit messages start with this
+#: plugins/cvschangelog/cvschangelog.c:49
+msgid "Open CVS Chan_geLogs"
+msgstr "Drovi les fitchîs Chan_geLog do CVS"
+
+#: plugins/cvschangelog/cvschangelog.c:52
+msgid "Searches for ChangeLogs in the current document and opens them"
+msgstr ""
+"Cweri après des fitchîs ChangeLog el documint do moumint et s' les drovi"
+
+#: plugins/cvschangelog/cvschangelog.c:269
+msgid "CVS ChangeLog"
+msgstr "CVS ChangeLog"
+
+#: plugins/cvschangelog/cvschangelog.c:270
+msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+msgstr ""
+"On tchoûke-didins po drovi les fitchîs ChangeLog do CVS po les messaedjes di "
+"«commit»"
+
+#: plugins/cvschangelog/cvschangelog.c:272
+msgid "Copyright (C) 2002 - James Willcox"
+msgstr "Copyright © 2002 - James Willcox"
+
+#: plugins/diff/diff.c:62
+msgid "Co_mpare Files..."
+msgstr "Comparer fitchîs..."
+
+#: plugins/diff/diff.c:65
+msgid "Makes a diff file from two documents or files"
+msgstr ""
+"Fwait on diff (diferince des royes di tecse) inte deus fitchîs ou documints"
+
+#: plugins/diff/diff.c:67
+msgid "Compare files"
+msgstr "Comparer fitchîs"
+
+#. Create the dialog
+#: plugins/diff/diff.c:268
+msgid "Compare two files..."
+msgstr "Comparer deus fitchîs..."
+
+#: plugins/diff/diff.c:282
+msgid "C_ompare"
+msgstr "C_omparer"
+
+#: plugins/diff/diff.c:503
+msgid "The two documents you selected are the same."
+msgstr "Les deus documints tchoezis sont li minme."
+
+#: plugins/diff/diff.c:511
+msgid ""
+"The \"first\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+"Li «prumî» fitchî tchoezi n' egzisteye nén.\n"
+"\n"
+"Dinez on no d' fitchî valåbe s' i vos plait"
+
+#: plugins/diff/diff.c:520
+msgid ""
+"The \"second\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+"Li «deujhinme» fitchî tchoezi n' egzisteye nén.\n"
+"\n"
+"Dinez on no d' fitchî valåbe s' i vos plait"
+
+#: plugins/diff/diff.c:528
+msgid "The two files you selected are the same."
+msgstr "Les deus fitchîs tchoezis sont li minme."
+
+#: plugins/diff/diff.c:546
+msgid "The \"first\" document contains no text."
+msgstr "Li «prumî» documint n' a nou tecse å dvins."
+
+#: plugins/diff/diff.c:581
+msgid "The \"second\" document contains no text."
+msgstr "Li «deujhinme» documint n' a nou tecse å dvins."
+
+#. FIXME: do better error reporting ... . Chema
+#: plugins/diff/diff.c:607
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"gedit could not create a temporary file."
+msgstr ""
+"Dj' a nén polou comparer les documints tchoezis.\n"
+"\n"
+"gedit èn pout nén fé on fitchî timporaire."
+
+#: plugins/diff/diff.c:625 plugins/diff/diff.c:638
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"Error executing the diff command."
+msgstr ""
+"Dj' a nén polou comparer les documints tchoezis.\n"
+"\n"
+"Åk n' a nén stî tot-z enondant li comande «diff»."
+
+#: plugins/diff/diff.c:660
+msgid "No differences were found between the selected documents."
+msgstr "Nole diferince di trovêye inte les deus documints tchoezis."
+
+#: plugins/diff/diff.c:701
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"The result contains invalid UTF-8 data."
+msgstr ""
+"C' est nén possibe di comparer les documints tchoezis.\n"
+"\n"
+"Li rzultat contént des dnêyes UTF-8 nén valides."
+
+#: plugins/diff/diff.c:925
+msgid ""
+"Makes a diff file from two documents or files on disk.\n"
+"\n"
+"For more info on \"diff\" program, type \"man diff\" in a shell prompt.\n"
+msgstr ""
+"Fwait on fitchî di diferinces «diff» di deus documints ou fitchîs sol deure "
+"plake\n"
+"\n"
+"Po pus d' informåcions so «diff», tapez «man diff» al roye di comande\n"
+
+#: plugins/diff/diff.c:928
+msgid ""
+"Copyright (C) 2000 - 2001 Chema Celorio \n"
+"Copyright (C) 2002 Paolo Maggi"
+msgstr ""
+"Copyright © 2000 - 2001 Chema Celorio \n"
+"Copyright © 2002 Paolo Maggi"
+
+#: plugins/diff/diff.glade2.h:1
+msgid "*"
+msgstr "*"
+
+#: plugins/diff/diff.glade2.h:2
+msgid "Choose the files to compare."
+msgstr "Tchoezixhoz les fitchîs a comparer."
+
+#: plugins/diff/diff.glade2.h:3
+msgid "Compare files..."
+msgstr "Comparer fitchîs..."
+
+#: plugins/diff/diff.glade2.h:4
+msgid "F_rom document"
+msgstr "A _pårti d' on documint"
+
+#: plugins/diff/diff.glade2.h:5
+msgid "First"
+msgstr "Prumî"
+
+#: plugins/diff/diff.glade2.h:6
+msgid "First file from disk"
+msgstr "Prumî fitchî del deure plake"
+
+#: plugins/diff/diff.glade2.h:7
+msgid "First file from open document"
+msgstr "Prumî fitchî do drovaedje di documint"
+
+#: plugins/diff/diff.glade2.h:8
+msgid "From _document"
+msgstr "A pårti d' on _documint"
+
+#: plugins/diff/diff.glade2.h:9
+msgid "From a _file on disk"
+msgstr "A pårti d' on _fitchî del deure plake"
+
+#: plugins/diff/diff.glade2.h:10
+msgid "From a file o_n disk"
+msgstr "A pårti d' on fitchî del _deure plake"
+
+#: plugins/diff/diff.glade2.h:11
+msgid "Ignore _blanks (-b option)"
+msgstr "Passer hoûte des _blancs (tchuze -b)"
+
+#: plugins/diff/diff.glade2.h:12
+msgid "Note that this option is only supported by GNU diff"
+msgstr "Note ki cisse tchuze chal ni va k' avou l' «diff» di GNU"
+
+#: plugins/diff/diff.glade2.h:13
+msgid "Second"
+msgstr "Deujhinme"
+
+#: plugins/diff/diff.glade2.h:14
+msgid "Second file from disk"
+msgstr "Deujhinme fitchî del deure plake"
+
+#: plugins/diff/diff.glade2.h:15
+msgid "Second file from open document"
+msgstr "Deujhinme fitchî do drovaedje di documint"
+
+#: plugins/diff/diff.glade2.h:16
+msgid "Select the \"first\" file..."
+msgstr "Tchoezi li «prumî» fitchî..."
+
+#: plugins/diff/diff.glade2.h:17
+msgid "Select the \"second\" file..."
+msgstr "Tchoezi li «deujhinme» fitchî..."
+
+#: plugins/diff/diff.glade2.h:18
+msgid "Select the first file to compare"
+msgstr "Tchoezi li prumî fitchî po comparer"
+
+#: plugins/diff/diff.glade2.h:19
+msgid "Select the first open document to compare"
+msgstr "Tchoezi li prumî documint po comparer"
+
+#: plugins/diff/diff.glade2.h:20
+msgid "Select the second file to compare"
+msgstr "Tchoezi li deujhinme fitchî po comparer"
+
+#: plugins/diff/diff.glade2.h:21
+msgid "Select the second open document to compare"
+msgstr "Tchoezi li deujhinme documint po comparer"
+
+
+#: plugins/diff/diff.glade2.h:22
+msgid "Use the _unified output format (-u option)"
+msgstr "Eployî li cogne _unifieye pol rexhowe (tchuze -u)"
+
+#: plugins/docinfo/docinfo.c:46
+msgid "_Word Count"
+msgstr "Contaedje des _mots"
+
+#: plugins/docinfo/docinfo.c:49
+msgid "Get info on current document"
+msgstr "Aveur des informåcions sol documint do moumint"
+
+#: plugins/docinfo/docinfo.c:145 plugins/docinfo/docinfo.c:365
+msgid "Word count"
+msgstr "Contaedje des mots"
+
+#: plugins/docinfo/docinfo.c:156
+msgid "_Update"
+msgstr "_Mete a djoû"
+
+#: plugins/docinfo/docinfo.c:366
+msgid ""
+"The word count plugin analyzes the current document and determines the "
+"number of words, lines, characters and non-space characters in it and "
+"display the result."
+msgstr ""
+"Li tchoûke-didins di contaedjes des mots analijhe li documint do moumint po "
+"determiner li nombe di mots, di royes, di caracteres et di caracteres ki "
+"n' sont nén des blancs k' i gn a dvins, et håyner les rzultats."
+
+#: plugins/docinfo/docinfo.c:370 plugins/sample/sample.c:175
+#: plugins/shell_output/shell_output.c:553
+#: plugins/taglist/gedit-taglist-plugin.c:164 plugins/time/time.c:571
+msgid "Copyright (C) 2002 - Paolo Maggi"
+msgstr "Copyright © 2002 - Paolo Maggi"
+
+#: plugins/docinfo/docinfo.glade2.h:1
+msgid "0"
+msgstr "0"
+
+#: plugins/docinfo/docinfo.glade2.h:2
+msgid "Bytes"
+msgstr "Octets"
+
+#: plugins/docinfo/docinfo.glade2.h:3
+msgid "Characters (no spaces)"
+msgstr "Caracteres (sins les vudes)"
+
+#: plugins/docinfo/docinfo.glade2.h:4
+msgid "Characters (with spaces)"
+msgstr "Caracteres (avou les vudes)"
+
+#: plugins/docinfo/docinfo.glade2.h:5
+msgid "File Name"
+msgstr "No d' fitchî"
+
+#: plugins/docinfo/docinfo.glade2.h:6 src/gedit-print.c:318
+msgid "Lines"
+msgstr "Royes"
+
+#: plugins/docinfo/docinfo.glade2.h:7
+msgid "Update"
+msgstr "Mete a djoû"
+
+#: plugins/docinfo/docinfo.glade2.h:8
+msgid "Words"
+msgstr "Mots"
+
+#: plugins/docinfo/docinfo.glade2.h:9
+msgid "gedit: Document Info plugin"
+msgstr "gedit: Tchoûke-didins d' informåcion sol documint"
+
+#: plugins/sample/sample.c:43
+msgid "Insert User Na_me"
+msgstr "Sititchî l' no d' l' _uzeu"
+
+#: plugins/sample/sample.c:46
+msgid "Insert the user name at the cursor position"
+msgstr "Sititchî l' no di l' uzeu a l' eplaeçmint do cursoe"
+
+#: plugins/sample/sample.c:172
+msgid "User name"
+msgstr "No d' l' uzeu"
+
+#: plugins/sample/sample.c:173
+msgid "Inserts the user name at the cursor position."
+msgstr "Sititche li no di l' uzeu a l' eplaeçmint do cursoe"
+
+#: plugins/shell_output/shell_output.c:49
+msgid "Insert Shell _Output"
+msgstr "Sititche li re_xhowe do shell"
+
+#: plugins/shell_output/shell_output.c:52
+msgid "Insert the shell output in the current document"
+msgstr "Sititche li rexhowe do shell el documint do moumint"
+
+#: plugins/shell_output/shell_output.c:137
+msgid "An error occurs while running the selected command."
+msgstr "Åk n' a nén stî tot enondant li tchoezeye comande."
+
+#: plugins/shell_output/shell_output.c:187
+#: plugins/shell_output/shell_output.c:550
+msgid "Shell output"
+msgstr "Rexhowe do shell"
+
+#: plugins/shell_output/shell_output.c:200
+msgid "_Run"
+msgstr "_Enonder"
+
+#: plugins/shell_output/shell_output.c:360
+msgid ""
+"The shell command entry is empty.\n"
+"\n"
+"Please, insert a valid shell command."
+msgstr ""
+"Nole comande d' intrêye.\n"
+"\n"
+"Tapez ene comande valide s' i vs plait."
+
+#: plugins/shell_output/shell_output.c:389
+msgid ""
+"Error parsing the shell command.\n"
+"\n"
+"Please, insert a valid shell command."
+msgstr ""
+"Åk n' a nén stî tot-z analijhant li comande shell.\n"
+"\n"
+"Dinez ene comande valide, s' i vs plait."
+
+#: plugins/shell_output/shell_output.c:551
+msgid "Execute an external program and insert its output in a new document."
+msgstr ""
+"Enonder on programe eyet stitchî si rexhowe dins on novea documint."
+
+#: plugins/shell_output/shell_output.glade2.h:1
+msgid "Capture the command _output"
+msgstr ""
+
+#: plugins/shell_output/shell_output.glade2.h:2
+msgid "Specify the working directory and the command you want to run."
+msgstr "Sipecifyî li ridant d' ovraedje et li documint ki vos vloz enonder."
+
+#: plugins/shell_output/shell_output.glade2.h:3
+msgid "_Shell command:"
+msgstr "Comande _shell:"
+
+#: plugins/shell_output/shell_output.glade2.h:4
+msgid "_Working directory:"
+msgstr "_Ridant d' ovraedje:"
+
+#: plugins/shell_output/shell_output.glade2.h:5
+msgid "gedit: Shell Output plugin"
+msgstr "gedit: Tchoûke-didins di rexhowe do shell"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:136
+msgid "Tag list plugin"
+msgstr "Tchoûke-didins djivêye d' etiketes (tags)"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:154
+msgid "Select the group of tab you want to use"
+msgstr "Tchoezixhoz li groupe di linwetes ki vos vloz eployî"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:176
+msgid "Tag Groups Combo"
+msgstr "Combo groupe di linwetes"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:178
+msgid "Tags Name List"
+msgstr "Djivêye di nos des etiketes"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:187
+msgid "Double-click on a tag to insert it in the current document"
+msgstr "Dobe-clitchîz so ene etikete pol sititchî el documint do moumint"
+
+#: plugins/taglist/gedit-taglist-plugin-window.c:198
+msgid "Tags"
+msgstr "Etiketes"
+
+#: plugins/taglist/gedit-taglist-plugin.c:46
+msgid "Tag _List"
+msgstr "_Djivêye des etiketes"
+
+#.
+#. #define MENU_ITEM_NAME		"TagList"
+#.
+#: plugins/taglist/gedit-taglist-plugin.c:51
+msgid "Show the tag list window"
+msgstr "Mostrer l' purnea avou l' djivêye des etiketes"
+
+#: plugins/taglist/gedit-taglist-plugin.c:160
+msgid "Tag list"
+msgstr "Djivêye des etiketes"
+
+#: plugins/taglist/gedit-taglist-plugin.c:161
+msgid ""
+"The tag list plugin provides a method to easily insert into a document "
+"commonly used tabs/strings without having to type them."
+msgstr ""
+"Li tchoûke-didins di djivêye des etiketes dene ene metode po stitchî "
+"åjheymint dins on documint des etiketes ou tchinnes corantes, sins dveur les "
+"taper en etir."
+
+#: plugins/time/time.c:45
+msgid "In_sert Date/Time"
+msgstr "_Sititchî li date et l' eure"
+
+#: plugins/time/time.c:48
+msgid "Insert current date and time at the cursor position"
+msgstr "Sititche l' eure et l' date do moumint a l' eplaeçmint do cursoe"
+
+#: plugins/time/time.c:274
+msgid "Available formats"
+msgstr "Cognes k' i gn a"
+
+#: plugins/time/time.c:315 plugins/time/time.glade2.h:1
+msgid "Configure insert date/time plugin"
+msgstr "Apontyî li tchoûke-didins di stitchaedje del date et l' eure"
+
+#: plugins/time/time.c:568
+msgid "Insert Date/Time"
+msgstr "Sititchî li date et l' eure"
+
+#: plugins/time/time.c:569
+msgid "Inserts current date and time at the cursor position."
+msgstr "Sititche l' eure et l' date do moumint a l' eplaeçmint do cursoe."
+
+#: plugins/time/time.glade2.h:2
+msgid "Select the format to use when inserting date/time."
+msgstr "Tchoezixhoz li cogne a-z eployî pol sititchaedje del date et l' eure."
+
+#: src/bonobo-mdi.c:532 src/bonobo-mdi.c:622 src/bonobo-mdi.c:1858
+#, c-format
+msgid "Activate %s"
+msgstr "Activer %s"
+
+#: src/dialogs/gedit-dialog-goto-line.c:139
+msgid "Goto line..."
+msgstr "Potchî al roye..."
+
+#. Add Goto Line button
+#: src/dialogs/gedit-dialog-goto-line.c:149
+msgid "_Goto line"
+msgstr "_Potchî al roye"
+
+#: src/dialogs/gedit-dialog-goto-line.c:165
+msgid "Could not find the required widgets inside goto-line.glade2.\n"
+msgstr ""
+"Dji n' a savou trover dins goto-line.glade2 les ahesses k' i gn a mezåjhe.\n"
+
+#: src/dialogs/gedit-dialog-replace.c:172 src/dialogs/replace.glade2.h:2
+#: src/gedit-ui.xml.h:53
+msgid "Replace"
+msgstr "Mete el plaece"
+
+#: src/dialogs/gedit-dialog-replace.c:183
+msgid "Replace _All"
+msgstr "Mete el plaece _tot costé"
+
+#. Add Replace button
+#: src/dialogs/gedit-dialog-replace.c:186 src/gedit-file-selector-util.c:129
+#: src/gedit-ui.xml.h:98
+msgid "_Replace"
+msgstr "_Mete el plaece"
+
+#: src/dialogs/gedit-dialog-replace.c:275 src/gedit-ui.xml.h:23
+msgid "Find"
+msgstr "Trover"
+
+#: src/dialogs/gedit-dialog-replace.c:474
+#: src/dialogs/gedit-dialog-replace.c:545
+#: src/dialogs/gedit-dialog-replace.c:722
+#, c-format
+msgid "The text \"%s\" was not found."
+msgstr "Li fitchî «%s» n' a nén stî trové."
+
+#: src/dialogs/gedit-dialog-replace.c:731
+#, c-format
+msgid "Found and replaced %d occurences."
+msgstr "Dj' a trové (et candjî) «%d» côps li patron."
+
+#: src/dialogs/gedit-dialog-uri.c:90 src/dialogs/uri.glade2.h:2
+msgid "Open from URI"
+msgstr "Drovi a pårti d' ene hårdêye"
+
+#: src/dialogs/gedit-plugin-manager.c:53
+msgid "Plugin"
+msgstr "Tchoûke-didins"
+
+#: src/dialogs/gedit-plugin-manager.c:54
+msgid "Load"
+msgstr "Tcherdjî"
+
+#: src/dialogs/gedit-plugin-manager.c:320
+msgid "Module file name"
+msgstr "No do fitchî môdule"
+
+#: src/dialogs/gedit-plugin-manager.c:321
+msgid "Author(s)"
+msgstr "Oteur(s)"
+
+#: src/dialogs/gedit-plugin-manager.c:488
+msgid "Could not find plugin-manager.glade2, reinstall gedit.\n"
+msgstr "Dji n' a savou trover plugin-manager.glade2, rastalez gedit.\n"
+
+#: src/dialogs/gedit-plugin-manager.c:511
+msgid "Invalid glade file for plugin manager -- not all widgets found.\n"
+msgstr ""
+"Fitchî glade nén valide pol manaedjeu di tchoûke-didins -- totes les ahesses "
+"n' ont nén stî trovêyes.\n"
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:74
+msgid "Set program location ..."
+msgstr "Defini l' eplaeçmint do programe..."
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:96
+msgid ""
+"Could not find the required widgets inside program-location-dialog.glade2.\n"
+msgstr ""
+"Dji n' a savou trover les ahesses k' i fåt dvins program-location-dialog."
+"glade2.\n"
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:102
+#, c-format
+msgid ""
+"The %s plugin uses an external program, called <tt>%s</tt>, to perform its "
+"task.\n"
+"\n"
+"Please, specify the location of the <tt>%s</tt> program."
+msgstr ""
+"Li tchoûke-didins %s eploye on dfoûtrin programe, lomé <tt>%s</tt>, po fé "
+"s' bouye.\n"
+"\n"
+"Dinez l' eplaeçmint do programe <tt>%s</tt> s' i vs plait."
+
+#: src/dialogs/gedit-plugin-program-location-dialog.c:148
+msgid "The selected file is not executable."
+msgstr "Li fitchî tchoezi n' est nén enondåve."
+
+#: src/dialogs/gedit-preferences-dialog.c:207
+msgid "Font & Colors"
+msgstr "Fontes et coleurs"
+
+#: src/dialogs/gedit-preferences-dialog.c:209
+#: src/dialogs/gedit-preferences.glade2.h:30
+msgid "Tabs"
+msgstr "Linwetes"
+
+#: src/dialogs/gedit-preferences-dialog.c:210
+#: src/dialogs/gedit-preferences.glade2.h:51
+msgid "Wrap mode"
+msgstr "Môde côpaedje di roye"
+
+#: src/dialogs/gedit-preferences-dialog.c:211
+#: src/dialogs/gedit-preferences.glade2.h:15
+msgid "Line numbers"
+msgstr "Limeros di roye"
+
+#: src/dialogs/gedit-preferences-dialog.c:213
+#: src/dialogs/gedit-preferences.glade2.h:25 src/gedit-ui.xml.h:58
+msgid "Save"
+msgstr "Schaper"
+
+#: src/dialogs/gedit-preferences-dialog.c:214
+#: src/dialogs/gedit-preferences.glade2.h:42 src/gedit-ui.xml.h:76
+msgid "Undo"
+msgstr "Disfé"
+
+#: src/dialogs/gedit-preferences-dialog.c:222
+msgid "Page"
+msgstr "Pådje"
+
+#: src/dialogs/gedit-preferences-dialog.c:224
+msgid "Fonts"
+msgstr "Fontes"
+
+#: src/dialogs/gedit-preferences-dialog.c:231
+msgid "Manager"
+msgstr "Manaedjeu"
+
+#: src/dialogs/gedit-preferences-dialog.c:239
+msgid "Editor"
+msgstr "Aspougneu"
+
+#: src/dialogs/gedit-preferences-dialog.c:240
+#: src/dialogs/gedit-preferences.glade2.h:21 src/gedit-print.c:309
+#: src/gedit-ui.xml.h:42
+msgid "Print"
+msgstr "Rexhe"
+
+#: src/dialogs/gedit-preferences-dialog.c:241
+msgid "Plugins"
+msgstr "Tchoûke-didins"
+
+#: src/dialogs/gedit-preferences-dialog.c:308
+msgid "Cat_egories:"
+msgstr "Cat_egoreyes:"
+
+#: src/dialogs/gedit-preferences-dialog.c:330 src/gedit-ui.xml.h:41
+msgid "Preferences"
+msgstr "Preferinces"
+
+#: src/dialogs/gedit-preferences-dialog.c:569
+msgid "Categories"
+msgstr "Categoreyes"
+
+#: src/dialogs/gedit-preferences-dialog.c:800
+msgid "Push this button to select the font to be used by the editor"
+msgstr ""
+"Tchôkîz so ç' boton chal po tchoezi l' fonte a-z eployî po l' aspougneu."
+
+#: src/dialogs/gedit-preferences-dialog.c:803
+msgid "Push this button to configure text color"
+msgstr "Tchôkîz so ç' boton chal po-z apontyî l' coleur do tecse"
+
+#: src/dialogs/gedit-preferences-dialog.c:805
+msgid "Push this button to configure background color"
+msgstr "Tchôkîz ci boton chal po-z apontyî li coleur do fond"
+
+#: src/dialogs/gedit-preferences-dialog.c:807
+msgid ""
+"Push this button to configure the color in which the selected text should "
+"appear"
+msgstr ""
+"Tchôkîz so ç' boton chal po-z apontyî l' coleur po mostrer k' on tecse a stî "
+"tchoezi"
+
+#: src/dialogs/gedit-preferences-dialog.c:810
+msgid ""
+"Push this button to configure the color in which the selected text should be "
+"marked"
+msgstr ""
+"Tchôkîz so ç' boton chal po-z apontyî l' coleur ki l' tecse tchoezi dvreut "
+"esse marké"
+
+#: src/dialogs/gedit-preferences-dialog.c:1592
+#: src/dialogs/gedit-preferences-dialog.c:1594
+msgid "Courier 9"
+msgstr "Courier 9"
+
+#: src/dialogs/gedit-preferences-dialog.c:1601
+#: src/dialogs/gedit-preferences-dialog.c:1603
+msgid "Helvetica 11"
+msgstr "Helvetica 11"
+
+#: src/dialogs/gedit-preferences-dialog.c:1610
+#: src/dialogs/gedit-preferences-dialog.c:1612
+msgid "Helvetica 8"
+msgstr "Helvetica 8"
+
+#: src/dialogs/gedit-preferences-dialog.c:1733
+msgid "Push this button to select the font to be used to print the body"
+msgstr ""
+"Tchôkîz so ç' boton chal po tchoezi l' fonte a-z eployî po-z eprimî l' coir "
+"do tecse"
+
+#: src/dialogs/gedit-preferences-dialog.c:1735
+msgid "Push this button to select the font to be used to print the headers"
+msgstr ""
+"Tchôkîz so ç' boton chal po tchoezi l' fonte a-z eployî po-z eprimî les "
+"tiestires"
+
+#: src/dialogs/gedit-preferences-dialog.c:1737
+msgid "Push this button to select the font to be used to print line numbers"
+msgstr ""
+"Tchôkîz so ç' boton chal po tchoezi l' fonte a-z eployî po-z eprimî les "
+"limeros d' roye"
+
+#: src/dialogs/gedit-preferences.glade2.h:1
+msgid " _Wrap lines (at character boundaries)"
+msgstr " _Côper les royes (åzès limites des caracteres)"
+
+#: src/dialogs/gedit-preferences.glade2.h:2
+msgid " character(s)"
+msgstr " caractere(s)"
+
+#: src/dialogs/gedit-preferences.glade2.h:3
+msgid " line(s)"
+msgstr " roye(s)"
+
+#: src/dialogs/gedit-preferences.glade2.h:4
+msgid "Always use UTF-8 encoding (faster) when creating a new file"
+msgstr "Tofer eployî l' ecôdaedje UTF-8 (pus rapide) po les noveas fitchîs"
+
+#: src/dialogs/gedit-preferences.glade2.h:5
+msgid "Always use UTF-8 encoding (faster) when saving"
+msgstr "Tofer eployî l' ecôdaedje UTF-8 (pus rapide) po schaper"
+
+#: src/dialogs/gedit-preferences.glade2.h:6
+msgid "Always use U_TF-8 encoding (faster)"
+msgstr "Tofer eployî l' ecôdaedje UTF-8 (pus rapide)"
+
+#: src/dialogs/gedit-preferences.glade2.h:7
+msgid "Always use _UTF-8 encoding (faster)"
+msgstr "Tofer eployî l' ecôdaedje _UTF-8 (pus rapide)"
+
+#: src/dialogs/gedit-preferences.glade2.h:8
+msgid "Colors"
+msgstr "Coleurs"
+
+#: src/dialogs/gedit-preferences.glade2.h:9
+msgid "Create a _backup copy of files before saving"
+msgstr "Fé ene copeye di _såvrité des fitchîs dvant delzès schaper"
+
+#: src/dialogs/gedit-preferences.glade2.h:10
+#: src/dialogs/gnome-print-font-picker.c:1014
+msgid "Font"
+msgstr "Fonte"
+
+#: src/dialogs/gedit-preferences.glade2.h:11
+msgid "Font used to print line _numbers:"
+msgstr "Fonte eployeye po-z eprimî les _limeros des royes:"
+
+#: src/dialogs/gedit-preferences.glade2.h:12
+msgid "Font used to print the _body:"
+msgstr "Fonte eployeye po-z eprimî l' _coir:"
+
+#: src/dialogs/gedit-preferences.glade2.h:13
+msgid "Fonts & Colors"
+msgstr "Fontes et coleurs"
+
+#: src/dialogs/gedit-preferences.glade2.h:14
+msgid "LOGO"
+msgstr "LOGO"
+
+#: src/dialogs/gedit-preferences.glade2.h:16
+msgid "Pick the background color"
+msgstr "Tchoezixhoz l' coleur pol fond"
+
+#: src/dialogs/gedit-preferences.glade2.h:17
+msgid "Pick the selected text color"
+msgstr "Tchoezixhoz l' coleur pol tchoezi tecse"
+
+#: src/dialogs/gedit-preferences.glade2.h:18
+msgid "Pick the selection color"
+msgstr "Tchoezixhoz l' coleur di fond pol boket tchoezi"
+
+#: src/dialogs/gedit-preferences.glade2.h:19
+msgid "Pick the text color"
+msgstr "Tchoezixhoz l' coleur pol tecse"
+
+#: src/dialogs/gedit-preferences.glade2.h:20
+msgid "Plugin manager"
+msgstr "Manaedjeu di tchoûke-didins"
+
+#: src/dialogs/gedit-preferences.glade2.h:22
+msgid "Print _line numbers every"
+msgstr "Eprimî les limeros des _royes totes les"
+
+#: src/dialogs/gedit-preferences.glade2.h:23
+msgid "Print _page headers"
+msgstr "Eprimî les tiestires so les _pådjes"
+
+#: src/dialogs/gedit-preferences.glade2.h:24
+msgid "Print fonts"
+msgstr "Fontes po l' eprimaedje"
+
+#: src/dialogs/gedit-preferences.glade2.h:26
+msgid "Se_lection color:"
+msgstr "Coleur pol _boket tchoezi:"
+
+#: src/dialogs/gedit-preferences.glade2.h:27
+msgid "Selecte_d text color:"
+msgstr "Coleur pol tecse _tchoezi:"
+
+#: src/dialogs/gedit-preferences.glade2.h:28
+msgid "Set _tabs width equivalent to  "
+msgstr "Defini li lårdjeu des _linwetes ewale a "
+
+#: src/dialogs/gedit-preferences.glade2.h:29
+msgid "Set limit on _undo actions to"
+msgstr "Defini l' limite po _disfé les accions a"
+
+#: src/dialogs/gedit-preferences.glade2.h:31
+msgid ""
+"The font & colors settings let you choose the font and the colors to be used "
+"in the editor windows."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:32
+msgid ""
+"The line numbers setting lets you choose to display the line numbers on the "
+"left hand side of the window."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:33
+msgid ""
+"The plugin manager settings let you choose which plugins you want to have "
+"loaded."
+msgstr ""
+"L' apontiaedje do manaedjeu di tchoûke-didins vos permete di tchoezi "
+"les kés tchoûke-didins ki vos vloz k' i soeyénxhe tcherdjîs."
+
+#: src/dialogs/gedit-preferences.glade2.h:34
+msgid ""
+"The print fonts settings let you choose the fonts to be used to print "
+"documents."
+msgstr ""
+"L' apontiaedje des fontes po l' eprimaedje vos permete di tchoezi les fontes "
+"a-z eployî po fé rexhe les documints sol sicrirece."
+
+#: src/dialogs/gedit-preferences.glade2.h:35
+msgid "The print page settings let you customize how gedit prints documents."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:36
+msgid "The save settings let you customize how gedit saves files."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:37
+msgid "The tabs settings let you customize the tabs width."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:38
+msgid ""
+"The undo settings let you set the maximum number of actions that gedit can "
+"undo."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:39
+msgid "The wrap mode settings let you customize how lines have to be wrapped."
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:40
+msgid "U_se default theme colors"
+msgstr "_Eployî les prémetowès coleurs do tinme"
+
+#: src/dialogs/gedit-preferences.glade2.h:41
+msgid "U_se original file encoding if possible"
+msgstr ""
+
+#: src/dialogs/gedit-preferences.glade2.h:43
+msgid "Use cu_rrent locale's encoding if possible"
+msgstr "Eployî l' ecôdaedje del _locåle cwand c' est possibe"
+
+#: src/dialogs/gedit-preferences.glade2.h:44
+msgid "Use current _locale's encoding if possible"
+msgstr "Eployî l' ecôdaedje del _locåle cwand c' est possibe"
+
+#: src/dialogs/gedit-preferences.glade2.h:45
+msgid "Use current locale's encoding if possible when creating a new file"
+msgstr "Eployî l' ecôdaedje del _locåle si c' est possibe po les noveas fitchîs"
+
+#: src/dialogs/gedit-preferences.glade2.h:46
+msgid "Use current locale's encoding if possible when saving"
+msgstr "Eployî l' ecôdaedje del _locåle si c' est possibe po schaper"
+
+#: src/dialogs/gedit-preferences.glade2.h:47
+msgid "When creating a new file..."
+msgstr "Po les noveas fitchîs..."
+
+#: src/dialogs/gedit-preferences.glade2.h:48
+msgid "When saving..."
+msgstr "Å moumint d' schaper..."
+
+#: src/dialogs/gedit-preferences.glade2.h:49
+msgid "Wrap lines at _word boundaries"
+msgstr "Côper les royes ås limites des _mots"
+
+#: src/dialogs/gedit-preferences.glade2.h:50
+msgid "Wrap lines at ch_aracter boundaries"
+msgstr "Côper les rôyes ås limites des _caracteres"
+
+#: src/dialogs/gedit-preferences.glade2.h:52
+msgid "_Autosave current file every"
+msgstr "Schaper _otomaticmint li fitchî do moumint tos les"
+
+#: src/dialogs/gedit-preferences.glade2.h:53
+msgid "_Background color:"
+msgstr "Coleur do _fond:"
+
+#: src/dialogs/gedit-preferences.glade2.h:54
+msgid "_Display line numbers"
+msgstr "_Håyner les limeros di roye"
+
+#: src/dialogs/gedit-preferences.glade2.h:55
+msgid "_Font used by the editor: "
+msgstr "_Fonte eployeye po l' aspougneu: "
+
+#: src/dialogs/gedit-preferences.glade2.h:56
+msgid "_Font used to print headers:"
+msgstr "_Fonte eployeye po-z eprimî les tiestires:"
+
+#: src/dialogs/gedit-preferences.glade2.h:57
+msgid "_Never wrap lines"
+msgstr "_Måy côper les royes"
+
+#: src/dialogs/gedit-preferences.glade2.h:58
+msgid "_Restore default fonts"
+msgstr "_Rimete les prémetowès fontes"
+
+#: src/dialogs/gedit-preferences.glade2.h:59
+msgid "_Text color:"
+msgstr "Coleur pol _tecse:"
+
+#: src/dialogs/gedit-preferences.glade2.h:60
+msgid "_Use default theme font"
+msgstr "_Eployî li prémetowe fonte do tinme"
+
+#: src/dialogs/gedit-preferences.glade2.h:61
+msgid "action(s)"
+msgstr "accion(s)"
+
+#: src/dialogs/gedit-preferences.glade2.h:62
+msgid "minutes"
+msgstr "munutes"
+
+#: src/dialogs/gnome-print-font-dialog.c:107
+msgid "_Insert a new preview phrase."
+msgstr "_Sititchî on novea tecse d' egzimpe."
+
+#: src/dialogs/gnome-print-font-dialog.c:113
+msgid "Modify preview phrase..."
+msgstr "Candjî l' tecse d' egzimpe..."
+
+#: src/dialogs/gnome-print-font-dialog.c:167
+msgid "Preview"
+msgstr "Vey divant"
+
+#: src/dialogs/gnome-print-font-dialog.c:180
+msgid "_Modify preview phrase..."
+msgstr "_Candjî l' tecse d' egzimpe..."
+
+#: src/dialogs/gnome-print-font-dialog.c:243
+msgid "Font Selection"
+msgstr "Tchoezi les fontes"
+
+#: src/dialogs/gnome-print-font-picker.c:89
+msgid "sans 12"
+msgstr "sans 12"
+
+#: src/dialogs/gnome-print-font-picker.c:90
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+msgstr ""
+"Mi trûte a les balzins, co pés ki l' grijhe cawe di m' pôve fayé vexhåd!"
+
+#: src/dialogs/gnome-print-font-picker.c:91
+msgid "Pick a Font"
+msgstr "Tchoezixhoz ene fonte"
+
+#: src/dialogs/gnome-print-font-picker.c:176
+msgid "Title"
+msgstr "Tite"
+
+#: src/dialogs/gnome-print-font-picker.c:177
+msgid "The title of the selection dialog box"
+msgstr "Li tite do purnea di tchoezixhaedje"
+
+#: src/dialogs/gnome-print-font-picker.c:197
+msgid "Font name"
+msgstr "No del fonte"
+
+#: src/dialogs/gnome-print-font-picker.c:198
+msgid "Name of the selected font"
+msgstr "No del tchoezeye fonte"
+
+#: src/dialogs/gnome-print-font-picker.c:206
+msgid "Preview text"
+msgstr "Vey tecse divant"
+
+#: src/dialogs/gnome-print-font-picker.c:207
+msgid "Preview text shown in the dialog"
+msgstr "Tecse d' egzimpe ki mostere çou ki l' fonte ravize"
+
+#: src/dialogs/gnome-print-font-picker.c:215
+msgid "Use font in label"
+msgstr "Eployî fonte po l' etikete"
+
+#: src/dialogs/gnome-print-font-picker.c:216
+msgid "Use font in the label in font info mode"
+msgstr "Eployî fonte po l' etikete en on môde d' informåcion sol fonte"
+
+#: src/dialogs/gnome-print-font-picker.c:224
+msgid "Font size for label"
+msgstr "Grandeu del fonte po l' etikete"
+
+#: src/dialogs/gnome-print-font-picker.c:225
+msgid "Font size for label in font info mode"
+msgstr "Grandeu del fonte po l' etikete en on môde d' informåcion sol fonte"
+
+#: src/dialogs/gnome-print-font-picker.c:235
+msgid "Show size"
+msgstr "Mostrer l' grandeu"
+
+#: src/dialogs/gnome-print-font-picker.c:236
+msgid "Show size in font info mode"
+msgstr "Mostrer l' grandeu en on môde d' informåcion sol fonte"
+
+#. gnome_print_font_picker_update_font_info
+#: src/dialogs/goto-line.glade2.h:1
+msgid "Goto Line"
+msgstr "Potchî al roye"
+
+#: src/dialogs/goto-line.glade2.h:2
+msgid "_Line number:"
+msgstr "Roye _limero:"
+
+#: src/dialogs/plugin-manager.glade2.h:1
+msgid "C_onfigure plugin"
+msgstr "A_pontyî l' tchoûke-didins"
+
+#: src/dialogs/plugin-manager.glade2.h:2
+msgid "Configure the selected plugin"
+msgstr "Apontyî li tchoûke-didins tchoezi"
+
+#: src/dialogs/plugin-manager.glade2.h:3
+msgid "De_tails"
+msgstr "De_tays"
+
+#: src/dialogs/plugin-manager.glade2.h:4
+msgid "_Description"
+msgstr "_Discrijhaedje"
+
+#: src/dialogs/plugin-manager.glade2.h:5
+msgid "dialog1"
+msgstr "purnea1"
+
+#: src/dialogs/program-location-dialog.glade2.h:1
+msgid "Set program location..."
+msgstr "Defini l' eplaeçmint do programe..."
+
+#: src/dialogs/program-location-dialog.glade2.h:2
+msgid "_Location to search for:"
+msgstr "_Eplaeçmint po cweri:"
+
+#: src/dialogs/program-location-dialog.glade2.h:3
+msgid "label"
+msgstr "etikete"
+
+#: src/dialogs/replace.glade2.h:1
+msgid "Case sensi_tive"
+msgstr ""
+
+#: src/dialogs/replace.glade2.h:3
+msgid "Replace _with: "
+msgstr "Replaecî _avou: "
+
+#: src/dialogs/replace.glade2.h:4
+msgid "Search fro_m the beginning of the document"
+msgstr "Cweri a pårti do _cminçmint do documint"
+
+#: src/dialogs/replace.glade2.h:5
+msgid "Search from the c_ursor position"
+msgstr "Cweri a pårti di l' _eplaeçmint do cursoe"
+
+#: src/dialogs/replace.glade2.h:6
+msgid "_Search for: "
+msgstr "_Cweri après: "
+
+#: src/dialogs/uri.glade2.h:1
+msgid "Enter the location (URI) of the file you would like to open:"
+msgstr "Intrez l' eplaeçmint (URI) do fitchî ki vos vloz drovi:"
+
+#: src/gedit-commands.c:56
+msgid "Not yet implemented."
+msgstr "Nén co epleminté."
+
+#: src/gedit-commands.c:339
+#, c-format
+msgid "The string \"%s\" has not been found."
+msgstr "Li tchinne cwerowe «%s» n' a nén stî trovêye."
+
+#: src/gedit-commands.c:437
+msgid "translator_credits"
+msgstr ""
+"Ratournaedje e walon:\n"
+"Pablo Saratxaga <pablo@mandrakesoft.com>"
+
+#: src/gedit-commands.c:462
+msgid "gedit"
+msgstr "gedit"
+
+#: src/gedit-commands.c:463
+msgid ""
+"(C) 1998-2000 Evan Lawrence and Alex Robert\n"
+"(C) 2000-2002 Chema Celorio and Paolo Maggi"
+msgstr ""
+
+#: src/gedit-commands.c:465
+msgid "gedit is a small and lightweight text editor for Gnome"
+msgstr "gedit est on pitit et ahessåve aspougneu di tecse po Gnome"
+
+#: src/gedit-document.c:573 src/gedit-document.c:591
+#, c-format
+msgid "%s %d"
+msgstr "%s %d"
+
+#: src/gedit-document.c:573 src/gedit-document.c:591
+msgid "Untitled"
+msgstr "Sins no"
+
+#: src/gedit-document.c:579 src/gedit-document.c:626
+msgid "Invalid file name"
+msgstr "No d' fitchî nén valide."
+
+#: src/gedit-document.c:756 src/gedit-document.c:914
+msgid "Invalid UTF-8 data"
+msgstr "Dinêyes UTF-8 nén valides"
+
+#: src/gedit-document.c:1149
+#, c-format
+msgid "Could not read symbolic link information for %s"
+msgstr "Dji n' a savou lere les informåcions pol loyén simbolike %s"
+
+#: src/gedit-document.c:1195
+msgid "The file has too many symbolic links."
+msgstr "Li fitchî a d' trop di loyéns simbolikes."
+
+#: src/gedit-document.c:1249
+#, c-format
+msgid "gedit cannot handle %s: locations in write mode."
+msgstr "gedit èn pout nén manaedjî les eplaeçmints «%s:» e môde sicrijhaedje."
+
+#: src/gedit-document.c:1256
+msgid "gedit cannot handle this kind of location in write mode."
+msgstr ""
+"gedit èn pout nén manaedjî cisse sôre d' eplaeçmints e môde sicrijhaedje."
+
+#: src/gedit-document.c:1269
+msgid "Invalid filename."
+msgstr "No d' fitchî nén valide."
+
+#: src/gedit-document.c:1382
+msgid ""
+"There is not enough disk space to save the file.\n"
+"Please free some disk space and try again."
+msgstr ""
+"I gn a nén del plaece assez sol deure plake po schaper l' fitchî.\n"
+"Fijhoz ene miete di plaece divant di rsayî s' i vs plait."
+
+#: src/gedit-document.c:1387
+msgid ""
+"The disk where you are trying to save the file has a limitation on file "
+"sizes.  Please try saving a smaller file or saving it to a disk that does "
+"not have this limitation."
+msgstr ""
+"Li deure plake wice ki vos sayîz di schaper l' fitchî a-st ene limitåcion "
+"sol grandeu des fitchîs. Sayîz di schaper on fitchî pus ptit, oudonbén del "
+"schaper so ene deure plake ki n' a nén cisse limitåcion la."
+
+#: src/gedit-document.c:1426
+msgid "Could not create a backup file."
+msgstr "Dji n' a nén savou fé on fitchî copeye di såvrité."
+
+#: src/gedit-document.c:1574
+msgid "It is not possible to revert an Untitled document"
+msgstr "Vos n' poloz nén rimete come divant avou on documint sins tite"
+
+#: src/gedit-file-selector-util.c:125
+msgid "Do_n't replace"
+msgstr "Èn _nén mete el plaece"
+
+#: src/gedit-file-selector-util.c:147
+msgid ""
+"A file named \"%s\" already exists.\n"
+"Do you want to replace it with the one you are saving?"
+msgstr ""
+"Il egzisteye dedja on fitchî lomé «%s».\n"
+"Voloz vs vormint mete e s' plaece li ci ki vos schapez pol moumint?"
+
+#: src/gedit-file-selector-util.c:158
+msgid ""
+"The file \"%s\" is read-only.\n"
+"Do you want to try to replace it with the one you are saving?"
+msgstr ""
+
+#: src/gedit-file-selector-util.c:544
+msgid "Select a filename to save"
+msgstr "Tchoezixhoz on no d' fitchî po schaper"
+
+#: src/gedit-file.c:151
+msgid "Open File ..."
+msgstr "Drovi on fitchî..."
+
+#: src/gedit-file.c:177 src/gedit-file.c:853
+#, c-format
+msgid "Loaded file '%s'"
+msgstr "Fitchî «%s» tcherdjî"
+
+#: src/gedit-file.c:305 src/gedit-file.c:434
+#, c-format
+msgid "Saving file '%s' ..."
+msgstr "Dji schape et rlomer «%s»..."
+
+#: src/gedit-file.c:333 src/gedit-file.c:449
+msgid "The document has not been saved."
+msgstr "Li documint n' a nén stî schapé."
+
+#: src/gedit-file.c:346 src/gedit-file.c:446
+#, c-format
+msgid "File '%s' saved."
+msgstr "Fitchî «%s» schapé."
+
+#: src/gedit-file.c:413
+msgid "Save as ..."
+msgstr "Schaper et rlomer..."
+
+#: src/gedit-file.c:604
+msgid ""
+"Do you want to revert to saved the document \"%s\" ?\n"
+"\n"
+"You will not be able to undo this operation."
+msgstr ""
+
+#: src/gedit-file.c:614 src/gedit-ui.xml.h:99
+msgid "_Revert"
+msgstr "_Rimete come divant"
+
+#: src/gedit-file.c:648
+#, c-format
+msgid "Reverting file '%s' ..."
+msgstr "Dji rmete come divant l' fitchî «%s»..."
+
+#: src/gedit-file.c:661
+msgid "The document has not been reverted."
+msgstr "Li documint n' a nén stî rmetou come divant."
+
+#: src/gedit-file.c:671
+#, c-format
+msgid "File '%s' reverted."
+msgstr "Fitchî «%s» rimetou come divant."
+
+#: src/gedit-file.c:697
+#, c-format
+msgid "Loading %d files..."
+msgstr "Dji tchedje %d fitchîs..."
+
+#: src/gedit-file.c:733
+#, c-format
+msgid "The file \"%s\" does not exist. Would you like to create it?"
+msgstr ""
+
+#: src/gedit-file.c:788
+#, c-format
+msgid "Loaded %i files"
+msgstr "%i fitchîs tcherdjîs"
+
+#: src/gedit-file.c:911
+msgid "Could not read data from stdin."
+msgstr "Dji n' a savou lere les dnêyes del intrêye sitandård (stdin)."
+
+#: src/gedit-mdi.c:850
+#, c-format
+msgid ""
+"Do you want to save the changes you made to the document \"%s\"? \n"
+"\n"
+"Your changes will be lost if you don't save them."
+msgstr ""
+"Voloz vs schaper les candjmints ki vos fjhîz avou l' documint «%s»? \n"
+"\n"
+"Vos candjmints sront pierdous si vos nels schapez nén."
+
+#: src/gedit-mdi.c:855
+msgid "Do_n't save"
+msgstr "Èn _nén schaper"
+
+#: src/gedit-mdi.c:874
+msgid "_Don't quit"
+msgstr "Èn _nén moussî foû"
+
+#: src/gedit-mdi.c:878
+msgid "_Don't close"
+msgstr "Èn _nén clôre"
+
+#: src/gedit-mdi.c:968
+msgid "(modified)"
+msgstr "(candjî)"
+
+#: src/gedit-mdi.c:974
+msgid "(readonly)"
+msgstr "(seulmint lere)"
+
+#: src/gedit-plugins-engine.c:159
+#, c-format
+msgid "Error, unable to open module file '%s'\n"
+msgstr "Aroke, dji n' sai nén drovi l' fitchî di module «%s»\n"
+
+#: src/gedit-plugins-engine.c:174
+#, c-format
+msgid "Error, plugin '%s' does not contain init function."
+msgstr "Aroke, li tchoûke-didins «%s» n' a nole fonccion d' enondaedje (init)."
+
+#: src/gedit-plugins-engine.c:184
+#, c-format
+msgid "Error, plugin '%s' does not contain activate function."
+msgstr ""
+"Aroke, li tchoûke-didins «%s» n' a nole fonccion di metaedje en alaedje "
+"(activate)."
+
+#: src/gedit-plugins-engine.c:194
+#, c-format
+msgid "Error, plugin '%s' does not contain deactivate function."
+msgstr ""
+"Aroke, li tchoûke-didins «%s» n' a nole fonccion d' essoctaedje (deactivate)."
+
+#: src/gedit-plugins-engine.c:224
+#, c-format
+msgid "Error, impossible to initialize plugin '%s'"
+msgstr "Aroke, impossibe d' inicyî l' tchoûke-didins «%s»"
+
+#: src/gedit-plugins-engine.c:232
+#, c-format
+msgid "Error, the plugin '%s' did not specified a name"
+msgstr "Aroke, li tchoûke-didins «%s» n' a nén specifyî d' no."
+
+#: src/gedit-plugins-engine.c:312
+#, c-format
+msgid "Error, impossible to save settings of the plugin '%s'"
+msgstr "Aroke, nén possibe di schaper les apontiaedjes pol tchoûke-didins «%s»"
+
+#: src/gedit-plugins-engine.c:384 src/gedit-plugins-engine.c:442
+#, c-format
+msgid "Error, impossible to activate plugin '%s'"
+msgstr "Aroke, nén possibe di mete en alaedje li tchoûke-didins «%s»"
+
+#: src/gedit-plugins-engine.c:411
+#, c-format
+msgid "Error, impossible to deactivate plugin '%s'"
+msgstr "Aroke, nén possibe d' essocter l' tchoûke-didins «%s»"
+
+#: src/gedit-plugins-engine.c:486
+#, c-format
+msgid "Error, impossible to update ui of the plugin '%s'"
+msgstr "Aroke, nén possibe di mete a djoû l' eterface do tchoûke-didins «%s»"
+
+#: src/gedit-prefs-manager.c:323
+msgid "Cannot initialize preferences manager."
+msgstr ""
+
+#: src/gedit-prefs-manager.c:1589
+#, c-format
+msgid "Expected `%s' got `%s' for key %s"
+msgstr ""
+
+#: src/gedit-print.c:191
+msgid ""
+"gedit is unable to print since it cannot find\n"
+"one of the required fonts."
+msgstr ""
+"gedit ni såreut eprimî, ca i n' a nén savou\n"
+"trover ene des fontes k' i gn a mezåjhe."
+
+#: src/gedit-print.c:377
+#, c-format
+msgid "File: %s"
+msgstr "Fitchî: %s"
+
+#. Print right text
+#: src/gedit-print.c:384
+#, c-format
+msgid "Page: %d"
+msgstr "Pådje: %d"
+
+#: src/gedit-print.c:517
+msgid "gedit - Print Preview"
+msgstr "gedit: Vey divant d' eprimî"
+
+#: src/gedit-print.c:595
+#, c-format
+msgid ""
+"An error occurred while printing.\n"
+"\n"
+"%s,"
+msgstr ""
+"Åk n' a nén stî tot-z eprimant.\n"
+"\n"
+"%s,"
+
+#: src/gedit-ui.xml.h:1
+msgid "About this application"
+msgstr "Å dfait di ç' programe chal"
+
+#: src/gedit-ui.xml.h:2
+msgid "C_ustomize Statusbar"
+msgstr "Bår ås messaedjes a _vosse môde"
+
+#: src/gedit-ui.xml.h:3
+msgid "Change the visibility of the statusbar in the current window"
+msgstr "Candjî li veyåvisté del bår ås messaedjes el purnea do moumint"
+
+#: src/gedit-ui.xml.h:4
+msgid "Change the visibility of the toolbar in the current window"
+msgstr "Candjî li veyåvisté del bår ås usteyes el purnea do moumint"
+
+#: src/gedit-ui.xml.h:5
+msgid "Clos_e All"
+msgstr "C_lôre tot"
+
+#: src/gedit-ui.xml.h:6
+msgid "Close"
+msgstr "Clôre"
+
+#: src/gedit-ui.xml.h:7
+msgid "Close All"
+msgstr "Clôre tot"
+
+#: src/gedit-ui.xml.h:8
+msgid "Close all open files"
+msgstr "Clôre tos les fitchîs drovous"
+
+#: src/gedit-ui.xml.h:9
+msgid "Close the current file"
+msgstr "Clôre li fitchî do moumint"
+
+#: src/gedit-ui.xml.h:10
+msgid "Configure the application"
+msgstr "Apontyî l' programe"
+
+#: src/gedit-ui.xml.h:11
+msgid "Copy"
+msgstr "Copyî"
+
+#: src/gedit-ui.xml.h:12
+msgid "Copy the selection"
+msgstr "Copyî li tchuze"
+
+#: src/gedit-ui.xml.h:13
+msgid "Create a new document"
+msgstr "Fé on novea documint"
+
+#: src/gedit-ui.xml.h:14
+msgid "Cu_t"
+msgstr "Cô_per"
+
+#: src/gedit-ui.xml.h:15
+msgid "Customize"
+msgstr "A vosse môde"
+
+#: src/gedit-ui.xml.h:16
+msgid "Customize toolbars"
+msgstr "Bår d' usteyes a vosse môde"
+
+#: src/gedit-ui.xml.h:17
+msgid "Cut"
+msgstr "Côper"
+
+#: src/gedit-ui.xml.h:18
+msgid "Cut the selection"
+msgstr "Côper li tchuze"
+
+#: src/gedit-ui.xml.h:19
+msgid "Delete"
+msgstr "Disfacer"
+
+#: src/gedit-ui.xml.h:20
+msgid "Delete the selected text"
+msgstr "Disfacer li tchoezi tecse"
+
+#: src/gedit-ui.xml.h:21
+msgid "Dump XML"
+msgstr ""
+
+#: src/gedit-ui.xml.h:22
+msgid "Dump the UI Xml description"
+msgstr ""
+
+#: src/gedit-ui.xml.h:24
+msgid "Find Again"
+msgstr "Trover co ene feye"
+
+#: src/gedit-ui.xml.h:25
+msgid "Find Ne_xt"
+msgstr "Trover _shuvant"
+
+#: src/gedit-ui.xml.h:26
+msgid "Go to a specific line number"
+msgstr "Potchî å limerô di roye specifyî"
+
+#: src/gedit-ui.xml.h:27
+msgid "Goto _Line"
+msgstr "Potchî al _roye"
+
+#: src/gedit-ui.xml.h:28
+msgid "Icon and _Text"
+msgstr "Imådjete eyet _tecse"
+
+#: src/gedit-ui.xml.h:29
+msgid "Main toolbar"
+msgstr "Mwaisse bår ås usteyes"
+
+#: src/gedit-ui.xml.h:30
+msgid "New"
+msgstr "Novea"
+
+#: src/gedit-ui.xml.h:31
+msgid "Only show icons in the toolbar"
+msgstr "Mostrer rén k' les imådjetes el bår ås usteyes"
+
+#: src/gedit-ui.xml.h:32
+msgid "Open"
+msgstr "Drovi"
+
+#: src/gedit-ui.xml.h:33
+msgid "Open Location..."
+msgstr "Drovi l' eplaeçmint..."
+
+#: src/gedit-ui.xml.h:34
+msgid "Open _Location..."
+msgstr "Drovi l' _eplaeçmint..."
+
+#: src/gedit-ui.xml.h:35
+msgid "Open a file"
+msgstr "Drovi on fitchî"
+
+#: src/gedit-ui.xml.h:36
+msgid "Open a file from a specified location"
+msgstr "Drovi on fitchî a pårti do dné eplaeçmint"
+
+#: src/gedit-ui.xml.h:37
+msgid "Open the gedit manual"
+msgstr "Drovi li manuel di gedit"
+
+#: src/gedit-ui.xml.h:38
+msgid "Paste"
+msgstr "Aclaper"
+
+#: src/gedit-ui.xml.h:39
+msgid "Paste the clipboard"
+msgstr "Aclaper çu k' i gn a e tchapea emacralé"
+
+#: src/gedit-ui.xml.h:40
+msgid "Pr_eferences..."
+msgstr "_Preferinces..."
+
+#: src/gedit-ui.xml.h:43
+msgid "Print Previe_w"
+msgstr "_Vey divant"
+
+#: src/gedit-ui.xml.h:44
+msgid "Print Preview"
+msgstr "Vey divant"
+
+#: src/gedit-ui.xml.h:45
+msgid "Print Setup"
+msgstr "Apontiaedje del sicrirece"
+
+#: src/gedit-ui.xml.h:46
+msgid "Print preview"
+msgstr "Vey divant"
+
+#: src/gedit-ui.xml.h:47
+msgid "Print the current file"
+msgstr "Eprimer li fitchî do moumint"
+
+#: src/gedit-ui.xml.h:48
+msgid "Quit"
+msgstr "Cwiter"
+
+#: src/gedit-ui.xml.h:49
+msgid "Quit the program"
+msgstr "Moussî foû do programe"
+
+#: src/gedit-ui.xml.h:50
+msgid "Recent _Files"
+msgstr "Dierins _fitchîs"
+
+#: src/gedit-ui.xml.h:51
+msgid "Redo"
+msgstr "Rifé"
+
+#: src/gedit-ui.xml.h:52
+msgid "Redo the undone action"
+msgstr "Rifé li dierinne accion disfwaite"
+
+#: src/gedit-ui.xml.h:54
+msgid "Replace a string"
+msgstr "Mete el plaece d' ene tchinne"
+
+#: src/gedit-ui.xml.h:55
+msgid "Revert"
+msgstr "Rimete come divant"
+
+#: src/gedit-ui.xml.h:56
+msgid "Revert to a saved version of the file"
+msgstr "Rivni a ene modêye dedja schapêye do fitchî"
+
+#: src/gedit-ui.xml.h:57
+msgid "Sa_ve All"
+msgstr "Scha_per tot..."
+
+#: src/gedit-ui.xml.h:59
+msgid "Save All"
+msgstr "Schaper tot..."
+
+#: src/gedit-ui.xml.h:60
+msgid "Save As"
+msgstr "Schaper et rlomer"
+
+#: src/gedit-ui.xml.h:61
+msgid "Save _As..."
+msgstr "Schaper et r_lomer"
+
+#: src/gedit-ui.xml.h:62
+msgid "Save all open files"
+msgstr "Schaper tos les fitchîs drovous"
+
+#: src/gedit-ui.xml.h:63
+msgid "Save the current file"
+msgstr "Schaper li fitchî do moumint"
+
+#: src/gedit-ui.xml.h:64
+msgid "Save the current file with a different name"
+msgstr "Schaper li fitchî do moumint dizo on ôte no"
+
+#: src/gedit-ui.xml.h:65
+msgid "Search again for the same string"
+msgstr "Cweri co ene feye après li minme tchinne"
+
+#: src/gedit-ui.xml.h:66
+msgid "Search for a string"
+msgstr "Cweri après ene tchinne"
+
+#: src/gedit-ui.xml.h:67
+msgid "Select All"
+msgstr "Tchoezi totafwait"
+
+#: src/gedit-ui.xml.h:68
+msgid "Select _All"
+msgstr "Tchoezi _totafwait"
+
+#: src/gedit-ui.xml.h:69
+msgid "Select the entire document"
+msgstr "Tchoezi tot l' documint en etir"
+
+#: src/gedit-ui.xml.h:70
+msgid "Set toolbar button style according to desktop default"
+msgstr ""
+"Defini li stîle del bår ås usteyes sorlon les prémetowès valixhance do "
+"scribanne"
+
+#: src/gedit-ui.xml.h:71
+msgid "Setup the page settings for your current printer"
+msgstr "Apontiaedjes del pådje po vosse sicrirece do moumint"
+
+#: src/gedit-ui.xml.h:72
+msgid "Show _Cursor Position"
+msgstr "Mostrer l' eplaeçmint do _cursoe"
+
+#: src/gedit-ui.xml.h:73
+msgid "Show _Overwrite Mode"
+msgstr "Mostrer li môde _sipotchaedje"
+
+#: src/gedit-ui.xml.h:74
+msgid "Show cursor position in the statusbar"
+msgstr "Mostrer l' eplaeçmint do cursoe el bår ås messaedjes"
+
+#: src/gedit-ui.xml.h:75
+msgid "Show overwrite mode in the statusbar"
+msgstr "Mostrer l' môde sipotchaedje el bår ås messaedjes"
+
+#: src/gedit-ui.xml.h:77
+msgid "Undo the last action"
+msgstr "Disfé li dierinne accion"
+
+#: src/gedit-ui.xml.h:78
+msgid "_About"
+msgstr "Å _dfait"
+
+#: src/gedit-ui.xml.h:79
+msgid "_Close"
+msgstr "_Clôre"
+
+#: src/gedit-ui.xml.h:80
+msgid "_Contents"
+msgstr "Å_dvins"
+
+#: src/gedit-ui.xml.h:81
+msgid "_Copy"
+msgstr "_Copyî"
+
+#: src/gedit-ui.xml.h:82
+msgid "_Customize Toolbar"
+msgstr "Bår ås usteyes a _vosse môde"
+
+#: src/gedit-ui.xml.h:83
+msgid "_Debug"
+msgstr "_Disbuguer"
+
+#: src/gedit-ui.xml.h:84
+msgid "_Delete"
+msgstr "_Disfacer"
+
+#: src/gedit-ui.xml.h:85
+msgid "_Desktop Default"
+msgstr "_Prémetou scribanne"
+
+#: src/gedit-ui.xml.h:86
+msgid "_Documents"
+msgstr "_Documints"
+
+#: src/gedit-ui.xml.h:87
+msgid "_Edit"
+msgstr "_Aspougnî"
+
+#: src/gedit-ui.xml.h:88
+msgid "_File"
+msgstr "_Fitchî"
+
+#: src/gedit-ui.xml.h:89
+msgid "_Find"
+msgstr "_Trover"
+
+#: src/gedit-ui.xml.h:90
+msgid "_Help"
+msgstr "_Aidance"
+
+#: src/gedit-ui.xml.h:91
+msgid "_Icon"
+msgstr "_Imådjete"
+
+#: src/gedit-ui.xml.h:92
+msgid "_New"
+msgstr "_Novea"
+
+#: src/gedit-ui.xml.h:93
+msgid "_Open..."
+msgstr "_Drovi..."
+
+#: src/gedit-ui.xml.h:94
+msgid "_Paste"
+msgstr "C_laper"
+
+#: src/gedit-ui.xml.h:95
+msgid "_Print..."
+msgstr "_Eprimî..."
+
+#: src/gedit-ui.xml.h:96
+msgid "_Quit"
+msgstr "Moussî _foû"
+
+#: src/gedit-ui.xml.h:97
+msgid "_Redo"
+msgstr "_Rifé"
+
+#: src/gedit-ui.xml.h:100
+msgid "_Save"
+msgstr "_Schaper"
+
+#: src/gedit-ui.xml.h:101
+msgid "_Search"
+msgstr "C_weri"
+
+#: src/gedit-ui.xml.h:102
+msgid "_Statusbar"
+msgstr "Bår ås _messaedjes"
+
+#: src/gedit-ui.xml.h:103
+msgid "_Toolbar"
+msgstr "Bår ås _usteyes"
+
+#: src/gedit-ui.xml.h:104
+msgid "_Tools"
+msgstr "_Usteyes"
+
+#: src/gedit-ui.xml.h:105
+msgid "_Undo"
+msgstr "_Disfé"
+
+#: src/gedit-ui.xml.h:106
+msgid "_View"
+msgstr "_Vey"
+
+#: src/gedit-utils.c:792
+#, c-format
+msgid ""
+"Could not find the file \"%s\".\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"Dji n' a savou trover l' fitchî «%s».\n"
+"\n"
+"Verifyîz ki vs avoz tapé l' eplaeçmint comufåt et rsayîz s' i vs plait."
+
+#: src/gedit-utils.c:799
+#, c-format
+msgid "Could not open the file \"%s\" because it contains corrupted data."
+msgstr ""
+"Dji n' a savou drovi l' fitchî «%s» ca il a å dvins des crombès dnêyes."
+
+#: src/gedit-utils.c:810
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because gedit cannot handle %s: locations."
+msgstr ""
+"Dji n' a savou drovi l' fitchî «%s» cåze ki gedit èn sait nén manaedjî les "
+"eplaeçmints «%s:»."
+
+#: src/gedit-utils.c:816
+#, c-format
+msgid "Could not open the file \"%s\""
+msgstr "Dji n' pout drovi l' fitchî «%s»"
+
+#: src/gedit-utils.c:826
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because it contains data in an invalid format."
+msgstr ""
+"Dji n' a savou drovi l' fitchî «%s» ca i contént des dnêyes dins ene cogne "
+"nén valide."
+
+#: src/gedit-utils.c:833
+#, c-format
+msgid "Could not open the file \"%s\" because it is too big."
+msgstr "Dji n' a savou drovi l' fitchî «%s» ca il est pår trop gros."
+
+#: src/gedit-utils.c:840
+#, c-format
+msgid ""
+"\"%s\" is not a valid location.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"«%s» n' est nén on eplaeçmint valide.\n"
+"\n"
+"Verifyîz ki vs avoz tapé l' eplaeçmint comufåt et rsayîz s' i vs plait."
+
+#: src/gedit-utils.c:847
+#, c-format
+msgid "Could not open the file \"%s\" because access was denied."
+msgstr "Dji n' a savou drovi l' fitchî «%s», dj' a nén l' droet d' accès."
+
+#: src/gedit-utils.c:854
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because there are too many open files.\n"
+"\n"
+"Please, close some open file and try again."
+msgstr ""
+"Dji n' a savou drovi l' fitchî «%s» cåze k' i gn a di trop d' fitchîs "
+"d' drovous.\n"
+"\n"
+"I vs è fåt clôre sacwants et rsayî, s' i vs plait."
+
+#: src/gedit-utils.c:862
+#, c-format
+msgid ""
+"\"%s\" is a directory.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"«%s» e-st on ridant.\n"
+"\n"
+"Verifyîz ki vs avoz tapé l' eplaeçmint comufåt et rsayîz s' i vs plait."
+
+#: src/gedit-utils.c:869
+#, c-format
+msgid ""
+"Not enough available memory to open the file \"%s\". Please, close some "
+"running application and try again."
+msgstr ""
+"Nén del memwere libe assez po drovi l' fitchî «%s». I vs fåt clôre sacwants "
+"programes et rsayî, s' i vs plait."
+
+#: src/gedit-utils.c:895
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because no host \"%s\" could be found.\n"
+"\n"
+"Please, check that you typed the location correctly and that your proxy "
+"settings are correct and then try again."
+msgstr ""
+"Dji n' a savou drovi l' fitchî «%s» ca dji n' trova nou lodjoe «%s».\n"
+"\n"
+"Verifyîz ki vos avoz tapé l' eplaeçmint comufåt et ki l' apontiaedje di "
+"vosse proxy est corek, poy rissayîz s' i vs plait."
+
+#: src/gedit-utils.c:910
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the host name was invalid.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"Dji n' a polou drovi l' fitchî «%s» ca l' no d' lodjoe n' est nén valide.\n"
+"\n"
+"Verifyîz ki vos avoz tapé l' eplaeçmint comufåt et rsayîz, s' i vs plait."
+
+#: src/gedit-utils.c:917
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the host name was empty.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+"Dji n' a savou drovi l' fitchî «%s» ca l' no d' lodjoe esteut vude.\n"
+"\n"
+"Verifyîz ki l' apontiaedje di vosse proxy est corek, poy rissayîz s' i vs "
+"plait."
+
+#: src/gedit-utils.c:924
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because the attempt to log in failed.\n"
+"\n"
+"Please, check that you typed the location correctly and try again."
+msgstr ""
+"Dji n' a savou drovi l' fitchî «%s» ca l' saye d' elodjaedje a fwait "
+"berwete.\n"
+"\n"
+"Verifyîz ki vos avoz tapé l' eplaeçmint comufåt et rissayîz, s' i vs plait."
+
+#: src/gedit-utils.c:932
+#, c-format
+msgid ""
+"Could not open the file \"%s\" because it contains invalid UTF-8 data.\n"
+"\n"
+"Probably, you are trying to open a binary file."
+msgstr ""
+"Dji n' a savou drovi l' fitchî «%s» ca i gn a-st å dvins des dnêyes UTF-8 "
+"nén valides.\n"
+"\n"
+"Motoit bén ki vos sayîz d' drovi on fitchî binaire."
+
+#: src/gedit-utils.c:970
+#, c-format
+msgid "Could not open the file \"%s\"."
+msgstr "Dji n' a savou drovi l' fitchî «%s»."
+
+#: src/gedit-utils.c:1021
+#, c-format
+msgid "Could not save the file \"%s\"."
+msgstr "Dji n' pout schaper l' fitchî «%s»."
+
+#: src/gedit-utils.c:1025
+#, c-format
+msgid ""
+"Could not save the file \"%s\".\n"
+"\n"
+"%s"
+msgstr ""
+"Dji n' pout schaper l' fitchî «%s».\n"
+"\n"
+"%s"
+
+#: src/gedit-utils.c:1078
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because gedit cannot find it.\n"
+"\n"
+"Perhaps, it has recently been deleted."
+msgstr ""
+
+#: src/gedit-utils.c:1085
+#, c-format
+msgid "Could not revert the file \"%s\" because it contains corrupted data."
+msgstr ""
+
+#: src/gedit-utils.c:1096
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because gedit cannot handle %s: locations."
+msgstr ""
+
+#: src/gedit-utils.c:1102 src/gedit-utils.c:1242
+#, c-format
+msgid "Could not revert the file \"%s\"."
+msgstr "Dji n' pout rimete come divant l' fitchî «%s»."
+
+#: src/gedit-utils.c:1112
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because it contains data in an invalid "
+"format."
+msgstr ""
+
+#: src/gedit-utils.c:1119
+#, c-format
+msgid "Could not revert the file \"%s\" because it is too big."
+msgstr ""
+
+#: src/gedit-utils.c:1126
+#, c-format
+msgid "Could not revert the file \"%s\" because access was denied."
+msgstr ""
+
+#: src/gedit-utils.c:1133
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because there are too many open files.\n"
+"\n"
+"Please, close some open file and try again."
+msgstr ""
+
+#: src/gedit-utils.c:1141
+#, c-format
+msgid ""
+"Not enough available memory to revert the file \"%s\". Please, close some "
+"running application and try again."
+msgstr ""
+
+#: src/gedit-utils.c:1167
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because no host \"%s\" could be found.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+
+#: src/gedit-utils.c:1181
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because the host name was empty.\n"
+"\n"
+"Please, check that your proxy settings are correct and try again."
+msgstr ""
+
+#: src/gedit-utils.c:1188
+#, c-format
+msgid "Could not revert the file \"%s\" because the attempt to log in failed."
+msgstr ""
+
+#: src/gedit-utils.c:1195
+#, c-format
+msgid ""
+"Could not revert the file \"%s\" because it contains invalid UTF-8 data.\n"
+"\n"
+"Probably, you are trying to revert a binary file."
+msgstr ""
+
+#: src/gedit-utils.c:1204
+msgid "It is not possible to revert an Untitled document."
+msgstr "Vos n' poloz nén rimete come divant on documint sins tite."
+
+#: src/gedit-utils.c:1293
+#, c-format
+msgid "The file \"%s\" already exists."
+msgstr ""
+
+#: src/gedit-utils.c:1299
+msgid ""
+"\"%s\" is a directory.\n"
+"\n"
+"Please, check that you typed the location correctly."
+msgstr ""
+"«%s» e-st on ridant.\n"
+"\n"
+"Verifyîz ki vs avoz tapé l' eplaeçmint comufåt, s' i vs plait."
+
+#: src/gedit-utils.c:1308
+#, c-format
+msgid ""
+"Cannot create the file \"%s\".\n"
+"\n"
+"Make sure you have the appropriate write permissions."
+msgstr ""
+
+#: src/gedit-utils.c:1315
+#, c-format
+msgid ""
+"Cannot create the file \"%s\".\n"
+"\n"
+"The file name is too long."
+msgstr "Dji n' a savou askepyî l' fitchî «%s».\n\n"
+"Li no d' fitchî est pår trop long."
+
+#: src/gedit-utils.c:1322
+#, c-format
+msgid ""
+"Cannot create the file \"%s\".\n"
+"\n"
+"A directory component in the file name does not exist or is a dangling "
+"symbolic link."
+msgstr ""
+
+#: src/gedit-utils.c:1331
+msgid ""
+"There is not enough disk space to create the file \"%s\".\n"
+"\n"
+"Please free some disk space and try again."
+msgstr ""
+"I gn a nén del plaece assez sol deure plake po-z askepyî l' fitchî «%s».\n"
+"\n"
+"Fijhoz ene miete di plaece divant di rsayî s' i vs plait."
+
+#: src/gedit-utils.c:1337
+
+#: src/gedit-view.c:904
+#, c-format
+msgid "  Ln %d, Col. %d"
+msgstr "  roye %d, colone %d"
+
+#: src/gedit-view.c:942
+msgid "  OVR"
+msgstr "  SIPOTCHÎ"
+
+#: src/gedit-view.c:944
+msgid "  INS"
+msgstr "  SITITCHÎ"
+
+#: src/gedit2.c:75
+msgid "Show mdi debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje MDI."
+
+#: src/gedit2.c:78
+msgid "Show commands debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje des comandes."
+
+#: src/gedit2.c:81
+msgid "Show document debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje des documints."
+
+#: src/gedit2.c:84
+msgid "Show file debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje des fitchîs."
+
+#: src/gedit2.c:87
+msgid "Show plugin debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje des tchoûke-didins."
+
+#: src/gedit2.c:90
+msgid "Show prefs debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje des preferinces."
+
+#: src/gedit2.c:93
+msgid "Show printing debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje di l' eprimaedje."
+
+#: src/gedit2.c:96
+msgid "Show search debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje des cweraedjes."
+
+#: src/gedit2.c:99
+msgid "Show undo debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje del fonccion «disfé»."
+
+#: src/gedit2.c:102
+msgid "Show view debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje del fonccion «vey»."
+
+#: src/gedit2.c:105
+msgid "Show recent debugging messages."
+msgstr "Mostrer les dierins messaedjes di disbugaedje."
+
+#: src/gedit2.c:108
+msgid "Show session management debugging messages."
+msgstr "Mostrer les messaedjes di disbugaedje do manaedjmint del session."
+
+#: src/gedit2.c:111
+msgid "Turn on all debugging messages."
+msgstr "Mostrer tos les messaedjes di disbugaedje."
+
+#: src/gedit2.c:114
+msgid "Quit an existing instance of gedit"
+msgstr ""
+
+#: src/gedit2.c:117
+msgid "Create a new toplevel window in an existing instance of gedit"
+msgstr ""
+
+#: src/gedit2.c:120
+msgid "Create a new document in an existing instance of gedit"
+msgstr ""
+
+#: src/gnome-recent-view-bonobo.c:218
+#, c-format
+msgid "Open %s"
+msgstr "Drovi %s"
+
+#~ msgid "Insert User _Name"
+#~ msgstr "Sititchî l' no d' l' _uzeu"
+
+#~ msgid ""
+#~ "Execute a program and insert its output in the current document at the "
+#~ "current cursor position"
+#~ msgstr ""
+#~ "Enonder on programe eyet stitchî si rexhowe el documint do moumint a "
+#~ "l' eplaeçmint do cursoe"
+
+#~ msgid "_Insert Date/Time"
+#~ msgstr "_Sititchî li date et l' eure"
+
+#~ msgid "Could not create the Plugin Manager dialog"
+#~ msgstr "Dji n' a savou ahiver li purnea do manaedjeu di tchoûke-didins"
+
+#~ msgid "Toolbar"
+#~ msgstr "Bår ås usteyes"
+
+#~ msgid "Status bar"
+#~ msgstr "Bår ås messaedjes"
+
+#~ msgid "MDI"
+#~ msgstr "MDI"
+
+#~ msgid "User interface"
+#~ msgstr "Eterface avou l' uzeu"
+
+#~ msgid ""
+#~ "Push this button to configure color in which selected text should appear"
+#~ msgstr ""
+#~ "Tchôkîz so ç' boton chal po-z apontyî l' coleur po mostrer k' on tecse a "
+#~ "stî tchoezi"
+
+#~ msgid ""
+#~ "Push this button to configure color in which selected text should be "
+#~ "marked"
+#~ msgstr ""
+#~ "Tchôkîz so ç' boton chal po-z apontyî l' coleur ki l' tecse tchoezi "
+#~ "dvreut esse marké"
+
+#~ msgid "Bottom"
+#~ msgstr "Al valeye"
+
+#~ msgid "Button style"
+#~ msgstr "Stîle des botons"
+
+#~ msgid "Icon and _text"
+#~ msgstr "Imådjete eyet _tecse"
+
+#~ msgid "Left"
+#~ msgstr "Hintche"
+
+#~ msgid "Modal"
+#~ msgstr "Modå"
+
+#~ msgid "Notebook"
+#~ msgstr "Bloc di notes"
+
+#~ msgid "Notebook _tab position:"
+#~ msgstr "Eplaeçmint des _linwetes bloc di notes:"
+
+#~ msgid "Right"
+#~ msgstr "Droete"
+
+#~ msgid "S_elected text color:"
+#~ msgstr "Coleur pol tecse _tchoezi:"
+
+#~ msgid "Sho_w tooltips"
+#~ msgstr "Mostrer _racsegnes"
+
+#~ msgid "Show cursor _position"
+#~ msgstr "Mostrer l' eplaeçmint do _cursoe"
+
+#~ msgid "Show overwrite _mode"
+#~ msgstr "Mostrer li môde _sipotchaedje"
+
+#~ msgid "Top"
+#~ msgstr "Al copete"
+
+#~ msgid "Toplevel"
+#~ msgstr "Fene copete"
+
+#~ msgid "_According to system settings"
+#~ msgstr "_Sorlon les apontiaedjes do sistinme"
+
+#~ msgid "_MDI Mode:"
+#~ msgstr "Môde _MDI:"
+
+#~ msgid "_Show status bar"
+#~ msgstr "_Mostrer li bår ås messaedjes"
+
+#~ msgid "_Show toolbar"
+#~ msgstr "_Mostrer li bår ås usteyes"
+
+#~ msgid "Impossible to update gedit settings."
+#~ msgstr "Nén possibe di mete a djoû les apontiaedjes di gedit."
+
+#~ msgid "Add/Remove plugins"
+#~ msgstr "Radjouter/oister des tchoûke-didins"
+
+#~ msgid "Plugin _Manager"
+#~ msgstr "_Manaedjeu di tchoûke-didins"
+
+#~ msgid "Plugin _Manager..."
+#~ msgstr "_Manaedjeu di tchoûke-didins..."
+
+#~ msgid "The GNOME text editor"
+#~ msgstr "L' aspougneu di tecse di Gnome"
+
+#~ msgid "gedit - Print Document"
+#~ msgstr "gedit - Eprimer l' documint"
+
+#~ msgid "About..."
+#~ msgstr "Å dfait..."
+
+#~ msgid "Show tooltips in the toolbar"
+#~ msgstr "Mostrer les racsegnes el bår ås usteyes"
