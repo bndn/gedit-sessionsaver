@@ -1,5 +1,5 @@
-DIST_SUBDIRS = ASCII diff cvschangelog indent taglist shell_output sort
+DIST_SUBDIRS = ASCII diff cvschangelog
 
-SUBDIRS =  ASCII diff cvschangelog indent taglist shell_output sort
+SUBDIRS =  ASCII diff cvschangelog
 
 EXTRA_DIST = ChangeLog
