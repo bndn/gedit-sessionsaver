@@ -65,6 +65,7 @@ indent_cb (BonoboUIComponent *uic, gpointer user_data, const gchar* verbname)
 	GeditView *view;
 	GtkTextIter start, end, iter;
 	gint i, start_line, end_line;
+	gchar *tab_buffer = NULL;
 
 	gedit_debug (DEBUG_PLUGINS, "");
 
@@ -81,13 +82,24 @@ indent_cb (BonoboUIComponent *uic, gpointer user_data, const gchar* verbname)
 	start_line = gtk_text_iter_get_line (&start);
 	end_line = gtk_text_iter_get_line (&end);
 
+	if (gedit_prefs_manager_get_insert_spaces ())
+	{
+		gint tabs_size;
+
+		tabs_size = gedit_prefs_manager_get_tabs_size ();
+		tab_buffer = g_strnfill (tabs_size, ' ');
+	} else {
+		tab_buffer = g_strdup("\t");
+	}
+
 	for (i = start_line; i <= end_line; i++) 
 	{
 		gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER (doc), &iter, i);
-		gtk_text_buffer_insert (GTK_TEXT_BUFFER (doc), &iter, "\t", 1);
+		gtk_text_buffer_insert (GTK_TEXT_BUFFER (doc), &iter, tab_buffer, -1);
 	}
 	
 	gedit_document_end_user_action (doc);
+	g_free(tab_buffer);
 }
 
 static void
