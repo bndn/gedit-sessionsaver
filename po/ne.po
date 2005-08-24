@@ -1,0 +1,264 @@
+# translation of gedit-plugins.HEAD.po to Nepali
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Pawan Chitrakar <pawan@mpp.org.np>, 2005.
+# Shiva Pokharel <pokharelshiva@hotmail.com>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gedit-plugins.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-08-24 19:27+0545\n"
+"PO-Revision-Date: 2005-07-08 10:06+0545\n"
+"Last-Translator: Shiva Pokharel <pokharelshiva@hotmail.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplural=2;plural=(n!=1)\n"
+
+#: ../plugins/ASCII/ascii.c:43
+msgid "_ASCII Table"
+msgstr "_ए एस सि आई आई तालिका"
+
+#: ../plugins/ASCII/ascii.c:46
+msgid "Pop-up a dialog containing an ASCII Table"
+msgstr "ए एस सि आई आई तालिका भएको पप-अप संवाद निकाल्नुहोस"
+
+#: ../plugins/ASCII/ascii.c:303
+msgid "Char"
+msgstr "वर्ण"
+
+#: ../plugins/ASCII/ascii.c:310
+msgid "Dec#"
+msgstr "डेस#"
+
+#: ../plugins/ASCII/ascii.c:317
+msgid "Hex#"
+msgstr "हेक्स#"
+
+#: ../plugins/ASCII/ascii.c:324
+msgid "Name"
+msgstr "नाम"
+
+#: ../plugins/ASCII/ascii.c:369
+msgid "ASCII Table"
+msgstr "एएससिआईआई तालिका"
+
+#: ../plugins/ASCII/ascii.c:382 ../plugins/ASCII/asciitable.glade2.h:2
+msgid "_Insert char"
+msgstr "_वर्ण तान्नुहोस"
+
+#: ../plugins/ASCII/asciitable.glade2.h:1
+#: ../plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
+msgid "ASCII table"
+msgstr "ए एस सि आई आई तालिका"
+
+#: ../plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
+msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+msgstr "यो प्लगईनले त ए एस सि आई आई तालि समाहित एउटा पप-अप संवाद देखाउछका."
+
+#: ../plugins/cvschangelog/cvschangelog.c:49
+msgid "Open CVS Chan_geLogs"
+msgstr " सिभिए _परिवर्तन लगहरु खोल्नुहोसस"
+
+#: ../plugins/cvschangelog/cvschangelog.c:52
+msgid "Searches for ChangeLogs in the current document and opens them"
+msgstr "लग परिवर्तनको लागी चालु कागजातमा खोज्छ र तिनिहरुलाई खोल्छत्र र"
+
+#: ../plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
+msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+msgstr "सिभिएस अन्त्य सन्देशमा भेटाउने लग परिवर्तनमा खुल्ने प्लगिन."
+
+#: ../plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
+msgid "CVS ChangeLog"
+msgstr "सिभिएस लग परिवर्तन"
+
+#: ../plugins/diff/diff.c:64
+msgid "Co_mpare Files..."
+msgstr "फाईलहरू तुलना गर्नुहोस..."
+
+#: ../plugins/diff/diff.c:67
+msgid "Makes a diff file from two documents or files"
+msgstr " दु कागजातई वा फाइलहर वाट एउटा डिफ फाईल वनाउनुहोसु"
+
+#. Create the dialog
+#: ../plugins/diff/diff.c:270 ../plugins/diff/diff.gedit-plugin.desktop.in.h:1
+msgid "Compare Files"
+msgstr "फाईलहरू तुलना गर्नुहोस"
+
+#: ../plugins/diff/diff.c:284
+msgid "C_ompare"
+msgstr "_तुलना गर्नुहोसि"
+
+#: ../plugins/diff/diff.c:511
+msgid "Executed command"
+msgstr "कार्यान्वयन गरियको आदेश"
+
+#: ../plugins/diff/diff.c:652
+msgid "The two documents you selected are the same."
+msgstr "तपाईले छनौट गरेका दुई कागजातहरु उस्तै छन."
+
+#: ../plugins/diff/diff.c:660
+msgid ""
+"The \"first\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+"तपाईले छानेको \"पहिलो\" फाईल मिलेन.\n"
+"\n"
+"कृपया वैध फाईल प्रदान गर्नुहोस."
+
+#: ../plugins/diff/diff.c:669
+msgid ""
+"The \"second\" file you selected does not exist.\n"
+"\n"
+"Please provide a valid file."
+msgstr ""
+"तपाईले छानेको \"दोस्रोलो\" फाईल मिलेन.\n"
+"\n"
+"कृपया वैध फाईल प्रदान गर्नुहोस."
+
+#: ../plugins/diff/diff.c:677
+msgid "The two files you selected are the same."
+msgstr "तपाईले छानौट गरेका दुई फाइलहरु उस्तै छन."
+
+#: ../plugins/diff/diff.c:694
+msgid "The \"first\" document contains no text."
+msgstr "\"पहिलो\" कागजातमा कुनै पाठ छैन।"
+
+#: ../plugins/diff/diff.c:728
+msgid "The \"second\" document contains no text."
+msgstr "\"दोस्रोलो\" कागजातमा कुनै पाठ छैन।"
+
+#. FIXME: do better error reporting ... . Chema
+#: ../plugins/diff/diff.c:754
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"gedit could not create a temporary file."
+msgstr ""
+"छानियका कागजातहरुलाई तुलना गर्न असम्भव।\n"
+"\n"
+"जेडिटले अस्थाई फाइल सृजना गर्न सकेन।"
+
+#: ../plugins/diff/diff.c:778 ../plugins/diff/diff.c:791
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"Error executing the diff command."
+msgstr ""
+"छानियका कागजातहरुलाई तुलना गर्न असम्भव।\n"
+"\n"
+"डिफ आज्ञा पुरा गर्दा गल्ती।आदेश."
+
+#: ../plugins/diff/diff.c:813
+msgid "No differences were found between the selected documents."
+msgstr "छानियका कागजातहरुमा कुनै फरकहरु भेटाउन सकेन।ायो."
+
+#: ../plugins/diff/diff.c:854
+msgid ""
+"Impossible to compare the selected documents.\n"
+"\n"
+"The result contains invalid UTF-8 data."
+msgstr ""
+"छानियका कागजातहरुलाई तुलना गर्न असम्भव।\n"
+"\n"
+"परिणाममा अवैध यु टि एफ-८ पाठ समाहित छ।"
+
+#: ../plugins/diff/diff.glade2.h:1
+msgid "*"
+msgstr "*"
+
+#: ../plugins/diff/diff.glade2.h:2
+msgid "Choose the files to compare."
+msgstr "तुलना गर्नको लागी फाफाइलहरछनौट गर्नुहोस।ाई."
+
+#: ../plugins/diff/diff.glade2.h:3
+msgid "Compare files..."
+msgstr "ज्नु फा तुलना गर्नुहोस..इलहरु."
+
+#: ../plugins/diff/diff.glade2.h:4
+msgid "F_rom document"
+msgstr "कागजात वाट"
+
+#: ../plugins/diff/diff.glade2.h:5
+msgid "First"
+msgstr "पहिलो"
+
+#: ../plugins/diff/diff.glade2.h:6
+msgid "First file from disk"
+msgstr "डिक्सवाट पहिलो फाइल "
+
+#: ../plugins/diff/diff.glade2.h:7
+msgid "First file from open document"
+msgstr "खुला कागजात क्सवाट पहिलो फाइल "
+
+#: ../plugins/diff/diff.glade2.h:8
+msgid "From _document"
+msgstr "_कागजात बाट"
+
+#: ../plugins/diff/diff.glade2.h:9
+msgid "From a _file on disk"
+msgstr "डिक्समा भएको एउटा _फाइलबाट"
+
+#: ../plugins/diff/diff.glade2.h:10
+msgid "From a file o_n disk"
+msgstr "डिक्समा भएको एउटा _फाइलबाट"
+
+#: ../plugins/diff/diff.glade2.h:11
+msgid "Ignore _blanks (-b option)"
+msgstr "_खालीस्थानहरुलाई उपेक्षा गर्नुहोस् (-वि विकल्प)ि"
+
+#: ../plugins/diff/diff.glade2.h:12
+msgid "Note that this option is only supported by GNU diff"
+msgstr "याद गर्नुहोस यो विकल्प जि एन यु डिफ वाट मात्र मान्य हुन्छ"
+
+#: ../plugins/diff/diff.glade2.h:13
+msgid "Second"
+msgstr "दोस्रोेण्ड"
+
+#: ../plugins/diff/diff.glade2.h:14
+msgid "Second file from disk"
+msgstr "डिक्सवाट दोस्रोेण्ड फाइल "
+
+#: ../plugins/diff/diff.glade2.h:15
+msgid "Second file from open document"
+msgstr "खुला कागजातवाट दोस्रोेण्ड फाइल ल"
+
+#: ../plugins/diff/diff.glade2.h:16
+msgid "Select the \"first\" file..."
+msgstr "\"पहिलो\" फाईल छनौट गर्नुहोस..."
+
+#: ../plugins/diff/diff.glade2.h:17
+msgid "Select the \"second\" file..."
+msgstr "\"दोस्रोलो\" फाईल छनौट गर्नुहोस..."
+
+#: ../plugins/diff/diff.glade2.h:18
+msgid "Select the first file to compare"
+msgstr "तुलनाको लागी पहिलो फाइल छनोट गर्नुहोस"
+
+#: ../plugins/diff/diff.glade2.h:19
+msgid "Select the first open document to compare"
+msgstr "तुलनाको लागी पहिलो खुला फाइल छनोट गर्नुहोस"
+
+#: ../plugins/diff/diff.glade2.h:20
+msgid "Select the second file to compare"
+msgstr "तुलनाको लागी दोस्रोो फाइल छनोट गर्नुहोस"
+
+#: ../plugins/diff/diff.glade2.h:21
+msgid "Select the second open document to compare"
+msgstr "तुलनाको लागी दोस्रो खुला फाइल छनोट गर्नुहोस"
+
+#: ../plugins/diff/diff.glade2.h:22
+msgid "Use the _unified output format (-u option)"
+msgstr "_एकिकृत निर्गत खाका प्रयोग गर्नुहोस  (-यु विकल्प)"
+
+#: ../plugins/diff/diff.gedit-plugin.desktop.in.h:2
+msgid ""
+"The Compare Files plugin uses the \"diff\" program to compare two documents "
+"or files on disk."
+msgstr ""
+"तुलना फाईलको प्लगिनलेु \"डिफ\" कार्यक्र ,दुई कागजातहरु वा डिस्कमा फाईलहरु तुलना गर्न "
+"प्रयोग गर्दछ।ाइलहरु मा डिक्स."
