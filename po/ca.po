@@ -2,281 +2,232 @@
 # Copyright (C) 2000, 2001, 2002, 2003, 2005 Free Software Foundation, Inc.
 # Softcatalà <gnome@softcatala.net>, 2000, 2001, 2002.
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003.
-# Josep Puigdemont <josep@imatge-sintetica.com>, 2005
+# Josep Puigdemont <josep.puigdemont@gmail.com>, 2005
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-27 05:49+0200\n"
-"PO-Revision-Date: 2005-03-27 05:50+0200\n"
-"Last-Translator: Josep Puigdemont <josep@imatge-sintetica.com>\n"
+"POT-Creation-Date: 2005-12-02 22:40+0100\n"
+"PO-Revision-Date: 2005-12-02 22:41+0100\n"
+"Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "Taula _ASCII"
+#: ../quickies/quickies.glade.h:1
+msgid "Execute"
+msgstr "Executta"
 
-#: ../plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Mostra un diàleg que contingui una taula ASCII"
+#: ../quickies/quickies.glade.h:2
+msgid "Quick Script:"
+msgstr "Seqüència ràpida:"
 
-#
-#: ../plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Caràcter"
+#~ msgid "_ASCII Table"
+#~ msgstr "Taula _ASCII"
 
-#: ../plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "Dec#"
-
-#: ../plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "Hex#"
-
-#: ../plugins/ASCII/ascii.c:324
-msgid "Name"
-msgstr "Nom"
-
-#: ../plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
-msgstr "Taula ASCII"
+#~ msgid "Pop-up a dialog containing an ASCII Table"
+#~ msgstr "Mostra un diàleg que contingui una taula ASCII"
 
 #
-#: ../plugins/ASCII/ascii.c:382 ../plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "_Inserta el caràcter"
+#~ msgid "Char"
+#~ msgstr "Caràcter"
 
-#: ../plugins/ASCII/asciitable.glade2.h:1
-#: ../plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
-msgid "ASCII table"
-msgstr "Taula ASCII"
+#~ msgid "Dec#"
+#~ msgstr "Dec#"
 
-#: ../plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
-msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-msgstr "Aquest connector mostra un diàleg emergent que conté una taula ASCII."
+#~ msgid "Hex#"
+#~ msgstr "Hex#"
 
-#: ../plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "Obre el re_gistre de canvis CVS"
+#~ msgid "Name"
+#~ msgstr "Nom"
 
-#: ../plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "En el document actual, cerca els registres de canvis i obre'ls"
-
-#: ../plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
-msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-msgstr "Connector que obre el registre de canvis dels missatges del CVS."
-
-#: ../plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
-msgid "CVS ChangeLog"
-msgstr "Registre de canvis CVS"
+#~ msgid "ASCII Table"
+#~ msgstr "Taula ASCII"
 
 #
-#: ../plugins/diff/diff.c:64
-msgid "Co_mpare Files..."
-msgstr "Compara els fitxers..."
+#~ msgid "_Insert char"
+#~ msgstr "_Inserta el caràcter"
 
-#: ../plugins/diff/diff.c:67
-msgid "Makes a diff file from two documents or files"
-msgstr "Crea un fitxer diff a partir de dos documents o fitxers"
+#~ msgid "ASCII table"
+#~ msgstr "Taula ASCII"
 
-#
-#. Create the dialog
-#: ../plugins/diff/diff.c:270 ../plugins/diff/diff.gedit-plugin.desktop.in.h:1
-msgid "Compare Files"
-msgstr "Compara fitxers"
+#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+#~ msgstr ""
+#~ "Aquest connector mostra un diàleg emergent que conté una taula ASCII."
 
-#: ../plugins/diff/diff.c:284
-msgid "C_ompare"
-msgstr "C_ompara"
+#~ msgid "Open CVS Chan_geLogs"
+#~ msgstr "Obre el re_gistre de canvis CVS"
 
-#: ../plugins/diff/diff.c:511
-msgid "Executed command"
-msgstr "S'ha executat l'ordre"
+#~ msgid "Searches for ChangeLogs in the current document and opens them"
+#~ msgstr "En el document actual, cerca els registres de canvis i obre'ls"
 
-#: ../plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "Els dos documents seleccionats són iguals."
+#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+#~ msgstr "Connector que obre el registre de canvis dels missatges del CVS."
 
-#: ../plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"El \"primer\" fitxer que heu seleccionat no existeix.\n"
-"\n"
-"Si us plau, indiqueu un fitxer vàlid."
-
-#: ../plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"El \"segon\" fitxer que heu seleccionat no existeix.\n"
-"\n"
-"Si us plau, indiqueu un fitxer vàlid."
+#~ msgid "CVS ChangeLog"
+#~ msgstr "Registre de canvis CVS"
 
 #
-#: ../plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "Els dos fitxers seleccionats són iguals."
+#~ msgid "Co_mpare Files..."
+#~ msgstr "Compara els fitxers..."
 
-#: ../plugins/diff/diff.c:694
-msgid "The \"first\" document contains no text."
-msgstr "El \"primer\" document no conté text."
-
-#: ../plugins/diff/diff.c:728
-msgid "The \"second\" document contains no text."
-msgstr "El \"segon\" document no conté text."
-
-#. FIXME: do better error reporting ... . Chema
-#: ../plugins/diff/diff.c:754
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"No es poden comparar els documents seleccionats.\n"
-"\n"
-"El gedit no pot crear un fitxer temporal."
-
-#: ../plugins/diff/diff.c:778 ../plugins/diff/diff.c:791
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"No es poden comparar els documents seleccionats.\n"
-"\n"
-"S'ha produït un error a l'executar una ordre diff."
-
-#: ../plugins/diff/diff.c:813
-msgid "No differences were found between the selected documents."
-msgstr "No s'han trobat diferències entre els documents seleccionats."
-
-#: ../plugins/diff/diff.c:854
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"No es poden comparar els documents seleccionats.\n"
-"\n"
-"El resultat conté dades UTF-8 invàlides."
-
-#: ../plugins/diff/diff.glade2.h:1
-msgid "*"
-msgstr "*"
+#~ msgid "Makes a diff file from two documents or files"
+#~ msgstr "Crea un fitxer diff a partir de dos documents o fitxers"
 
 #
-#: ../plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Seleccioneu els fitxers a comparar."
+#~ msgid "Compare Files"
+#~ msgstr "Compara fitxers"
+
+#~ msgid "C_ompare"
+#~ msgstr "C_ompara"
+
+#~ msgid "The two documents you selected are the same."
+#~ msgstr "Els dos documents seleccionats són iguals."
+
+#~ msgid ""
+#~ "The \"first\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "El \"primer\" fitxer que heu seleccionat no existeix.\n"
+#~ "\n"
+#~ "Si us plau, indiqueu un fitxer vàlid."
+
+#~ msgid ""
+#~ "The \"second\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "El \"segon\" fitxer que heu seleccionat no existeix.\n"
+#~ "\n"
+#~ "Si us plau, indiqueu un fitxer vàlid."
 
 #
-#: ../plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Compara els fitxers..."
+#~ msgid "The two files you selected are the same."
+#~ msgstr "Els dos fitxers seleccionats són iguals."
+
+#~ msgid "The \"first\" document contains no text."
+#~ msgstr "El \"primer\" document no conté text."
+
+#~ msgid "The \"second\" document contains no text."
+#~ msgstr "El \"segon\" document no conté text."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "gedit could not create a temporary file."
+#~ msgstr ""
+#~ "No es poden comparar els documents seleccionats.\n"
+#~ "\n"
+#~ "El gedit no pot crear un fitxer temporal."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "Error executing the diff command."
+#~ msgstr ""
+#~ "No es poden comparar els documents seleccionats.\n"
+#~ "\n"
+#~ "S'ha produït un error a l'executar una ordre diff."
+
+#~ msgid "No differences were found between the selected documents."
+#~ msgstr "No s'han trobat diferències entre els documents seleccionats."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "The result contains invalid UTF-8 data."
+#~ msgstr ""
+#~ "No es poden comparar els documents seleccionats.\n"
+#~ "\n"
+#~ "El resultat conté dades UTF-8 invàlides."
+
+#~ msgid "*"
+#~ msgstr "*"
 
 #
-#: ../plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "Des d'un document"
-
-#: ../plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Primer"
+#~ msgid "Choose the files to compare."
+#~ msgstr "Seleccioneu els fitxers a comparar."
 
 #
-#: ../plugins/diff/diff.glade2.h:6
-msgid "First file from disk"
-msgstr "Primer fitxer del disc"
+#~ msgid "Compare files..."
+#~ msgstr "Compara els fitxers..."
 
 #
-#: ../plugins/diff/diff.glade2.h:7
-msgid "First file from open document"
-msgstr "Primer fitxer del document obert"
+#~ msgid "F_rom document"
+#~ msgstr "Des d'un document"
+
+#~ msgid "First"
+#~ msgstr "Primer"
 
 #
-#: ../plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "Des d'un _document"
+#~ msgid "First file from disk"
+#~ msgstr "Primer fitxer del disc"
 
 #
-#: ../plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "Des d'un _fitxer del disc"
+#~ msgid "First file from open document"
+#~ msgstr "Primer fitxer del document obert"
 
 #
-#: ../plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "Des d'un fitxer del disc"
-
-#: ../plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "Ignora els _buits (opció -b)"
-
-#: ../plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr "Aquesta opció només està implementada en el diff GNU"
-
-#: ../plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Segon"
+#~ msgid "From _document"
+#~ msgstr "Des d'un _document"
 
 #
-#: ../plugins/diff/diff.glade2.h:14
-msgid "Second file from disk"
-msgstr "Segon fitxer del disc"
-
-#: ../plugins/diff/diff.glade2.h:15
-msgid "Second file from open document"
-msgstr "Segon fitxer del document obert"
-
-#: ../plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr "Seleccioneu el \"primer\" fitxer..."
-
-#: ../plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr "Seleccioneu el \"segon\" fitxer..."
-
-#: ../plugins/diff/diff.glade2.h:18
-msgid "Select the first file to compare"
-msgstr "Seleccioneu el primer fitxer a comparar"
+#~ msgid "From a _file on disk"
+#~ msgstr "Des d'un _fitxer del disc"
 
 #
-#: ../plugins/diff/diff.glade2.h:19
-msgid "Select the first open document to compare"
-msgstr "Seleccioneu el primer document obert a comparar"
+#~ msgid "From a file o_n disk"
+#~ msgstr "Des d'un fitxer del disc"
 
-#: ../plugins/diff/diff.glade2.h:20
-msgid "Select the second file to compare"
-msgstr "Seleccioneu el segon fitxer a comparar"
+#~ msgid "Ignore _blanks (-b option)"
+#~ msgstr "Ignora els _buits (opció -b)"
 
-#
-#: ../plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr "Seleccioneu el segon document obert a comparar"
+#~ msgid "Note that this option is only supported by GNU diff"
+#~ msgstr "Aquesta opció només està implementada en el diff GNU"
 
-#: ../plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Utilitza el format de sortida _unificat (opció -u)"
+#~ msgid "Second"
+#~ msgstr "Segon"
 
 #
-#: ../plugins/diff/diff.gedit-plugin.desktop.in.h:2
-msgid ""
-"The Compare Files plugin uses the \"diff\" program to compare two documents "
-"or files on disk."
-msgstr ""
-"El connector per a comparar fitxers usa el programa <tt>diff</tt> per a "
-"comparar dos documents o fitxers del disc."
+#~ msgid "Second file from disk"
+#~ msgstr "Segon fitxer del disc"
+
+#~ msgid "Second file from open document"
+#~ msgstr "Segon fitxer del document obert"
+
+#~ msgid "Select the \"first\" file..."
+#~ msgstr "Seleccioneu el \"primer\" fitxer..."
+
+#~ msgid "Select the \"second\" file..."
+#~ msgstr "Seleccioneu el \"segon\" fitxer..."
+
+#~ msgid "Select the first file to compare"
+#~ msgstr "Seleccioneu el primer fitxer a comparar"
+
+#
+#~ msgid "Select the first open document to compare"
+#~ msgstr "Seleccioneu el primer document obert a comparar"
+
+#~ msgid "Select the second file to compare"
+#~ msgstr "Seleccioneu el segon fitxer a comparar"
+
+#
+#~ msgid "Select the second open document to compare"
+#~ msgstr "Seleccioneu el segon document obert a comparar"
+
+#~ msgid "Use the _unified output format (-u option)"
+#~ msgstr "Utilitza el format de sortida _unificat (opció -u)"
+
+#
+#~ msgid ""
+#~ "The Compare Files plugin uses the \"diff\" program to compare two "
+#~ "documents or files on disk."
+#~ msgstr ""
+#~ "El connector per a comparar fitxers usa el programa <tt>diff</tt> per a "
+#~ "comparar dos documents o fitxers del disc."
 
 #
 #~ msgid "gedit application"
