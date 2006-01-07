@@ -1,266 +1,217 @@
-# gedit Finnish Translation
-# Suomennos: http://gnome.fi/
+# Finnish messages for gedit-plugins
 # Copyright (C) 1999-2004 Free Software Foundation, Inc.
+#
+# Ilkka Tuohela <hile@iki.fi>, 2005.
 # Jarkko Ranta <jjranta@cc.joensuu.fi>, 2000-2004.
+# Suomennos: http://gnome.fi/
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit (gnome-2-6)\n"
+"Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-06 11:50+0200\n"
-"PO-Revision-Date: 2004-01-06 05:00+0300\n"
-"Last-Translator: Jarkko Ranta <jjranta@cc.joensuu.fi>\n"
+"POT-Creation-Date: 2006-01-07 18:46+0200\n"
+"PO-Revision-Date: 2006-01-07 18:50+0200\n"
+"Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "_ASCII-taulu"
+#: ../quickies/quickies.glade.h:1
+msgid "Execute"
+msgstr "Suorita"
 
-#: plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Näytä ASCII-taulun sisältävä valintaikkuna"
+#: ../quickies/quickies.glade.h:2
+msgid "Quick Script:"
+msgstr "Pikaskripti:"
 
-#: plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Merkki"
+#~ msgid "_ASCII Table"
+#~ msgstr "_ASCII-taulu"
 
-#: plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "Desim#"
+#~ msgid "Pop-up a dialog containing an ASCII Table"
+#~ msgstr "Näytä ASCII-taulun sisältävä valintaikkuna"
 
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "Heks#"
+#~ msgid "Char"
+#~ msgstr "Merkki"
 
-#: plugins/ASCII/ascii.c:324
-msgid "Name"
-msgstr "Nimi"
+#~ msgid "Dec#"
+#~ msgstr "Desim#"
 
-#: plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
-msgstr "ASCII-taulu"
+#~ msgid "Hex#"
+#~ msgstr "Heks#"
 
-#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "L_isää merkki"
+#~ msgid "Name"
+#~ msgstr "Nimi"
 
-#: plugins/ASCII/asciitable.glade2.h:1
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
-msgid "ASCII table"
-msgstr "ASCII-taulu"
+#~ msgid "ASCII Table"
+#~ msgstr "ASCII-taulu"
 
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
-msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-msgstr "Tämä liitännäinen näyttää ASCII-taulun valintaikkunana"
+#~ msgid "_Insert char"
+#~ msgstr "L_isää merkki"
 
-#. AFAIK, all cvs commit messages start with this
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "Avaa CVS-_muutoslokit"
+#~ msgid "ASCII table"
+#~ msgstr "ASCII-taulu"
 
-#: plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "Etsii kyseisen asiakirjan ChangeLogeja ja avaa ne"
+#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+#~ msgstr "Tämä liitännäinen näyttää ASCII-taulun valintaikkunana"
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
-msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-msgstr "Liitännäinen joka avaa CVS-lähetyksissä esiintyviä muutoslokeja."
+#~ msgid "Open CVS Chan_geLogs"
+#~ msgstr "Avaa CVS-_muutoslokit"
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
-msgid "CVS ChangeLog"
-msgstr "CVS-muutosloki"
+#~ msgid "Searches for ChangeLogs in the current document and opens them"
+#~ msgstr "Etsii kyseisen asiakirjan ChangeLogeja ja avaa ne"
 
-#: plugins/diff/diff.c:64
-msgid "Co_mpare Files..."
-msgstr "Ve_rtaile tiedostoja..."
+#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+#~ msgstr "Liitännäinen joka avaa CVS-lähetyksissä esiintyviä muutoslokeja."
 
-#: plugins/diff/diff.c:67
-msgid "Makes a diff file from two documents or files"
-msgstr "Luo diff-tiedoston kahdesta asiakirjasta tai tiedostosta"
+#~ msgid "CVS ChangeLog"
+#~ msgstr "CVS-muutosloki"
 
-#. Create the dialog
-#: plugins/diff/diff.c:270 plugins/diff/diff.gedit-plugin.desktop.in.h:1
-msgid "Compare Files"
-msgstr "Vertaile tiedostoja"
+#~ msgid "Co_mpare Files..."
+#~ msgstr "Ve_rtaile tiedostoja..."
 
-#: plugins/diff/diff.c:284
-msgid "C_ompare"
-msgstr "_Vertaile"
+#~ msgid "Makes a diff file from two documents or files"
+#~ msgstr "Luo diff-tiedoston kahdesta asiakirjasta tai tiedostosta"
 
-#: plugins/diff/diff.c:511
-msgid "Executed command"
-msgstr "Suoritettu komento"
+#~ msgid "Compare Files"
+#~ msgstr "Vertaile tiedostoja"
 
-#: plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "Valitut asiakirjat ovat samoja"
+#~ msgid "C_ompare"
+#~ msgstr "_Vertaile"
 
-#: plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Valitsemistasi tiedostoista ensimmäistä ei ole olemassa.\n"
-"\n"
-"Anna kelvollinen tiedosto."
+#~ msgid "The two documents you selected are the same."
+#~ msgstr "Valitut asiakirjat ovat samoja"
 
-#: plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Valitsemistasi tiedostoista jälkimmäistä ei ole olemassa.\n"
-"\n"
-"Anna kelvollinen tiedosto."
+#~ msgid ""
+#~ "The \"first\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Valitsemistasi tiedostoista ensimmäistä ei ole olemassa.\n"
+#~ "\n"
+#~ "Anna kelvollinen tiedosto."
 
-#: plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "Valitsemasi kaksi tiedostoa ovat samoja."
+#~ msgid ""
+#~ "The \"second\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Valitsemistasi tiedostoista jälkimmäistä ei ole olemassa.\n"
+#~ "\n"
+#~ "Anna kelvollinen tiedosto."
 
-#: plugins/diff/diff.c:694
-msgid "The \"first\" document contains no text."
-msgstr "Asiakirjoista ensimmäinen ei sisällä tekstiä."
+#~ msgid "The two files you selected are the same."
+#~ msgstr "Valitsemasi kaksi tiedostoa ovat samoja."
 
-#: plugins/diff/diff.c:728
-msgid "The \"second\" document contains no text."
-msgstr "Asiakirjoista jälkimmäinen ei sisällä tekstiä"
+#~ msgid "The \"first\" document contains no text."
+#~ msgstr "Asiakirjoista ensimmäinen ei sisällä tekstiä."
 
-#. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:754
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"Valittujen asiakirjojen vertaileminen ei onnistunut.\n"
-"\n"
-"gedit ei onnistunut luomaan väliaikaistiedostoa."
+#~ msgid "The \"second\" document contains no text."
+#~ msgstr "Asiakirjoista jälkimmäinen ei sisällä tekstiä"
 
-#: plugins/diff/diff.c:778 plugins/diff/diff.c:791
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"Valittujen asiakirjojen vertaileminen ei onnistunut.\n"
-"\n"
-"Virhe suoritettaessa diff-komentoa."
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "gedit could not create a temporary file."
+#~ msgstr ""
+#~ "Valittujen asiakirjojen vertaileminen ei onnistunut.\n"
+#~ "\n"
+#~ "gedit ei onnistunut luomaan väliaikaistiedostoa."
 
-#: plugins/diff/diff.c:813
-msgid "No differences were found between the selected documents."
-msgstr "Valittujen asiakirjojen välillä ei huomattu eroja."
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "Error executing the diff command."
+#~ msgstr ""
+#~ "Valittujen asiakirjojen vertaileminen ei onnistunut.\n"
+#~ "\n"
+#~ "Virhe suoritettaessa diff-komentoa."
 
-#: plugins/diff/diff.c:854
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"Valittujen asiakirjojen vertaileminen ei onnistunut.\n"
-"\n"
-"Tulos sisältää viallista UTF-8 dataa."
+#~ msgid "No differences were found between the selected documents."
+#~ msgstr "Valittujen asiakirjojen välillä ei huomattu eroja."
 
-#: plugins/diff/diff.glade2.h:1
-msgid "*"
-msgstr "*"
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "The result contains invalid UTF-8 data."
+#~ msgstr ""
+#~ "Valittujen asiakirjojen vertaileminen ei onnistunut.\n"
+#~ "\n"
+#~ "Tulos sisältää viallista UTF-8 dataa."
 
-#: plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Valitse verrattavat tiedostot."
+#~ msgid "*"
+#~ msgstr "*"
 
-#: plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Vertaile tiedostoja..."
+#~ msgid "Choose the files to compare."
+#~ msgstr "Valitse verrattavat tiedostot."
 
-#: plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "Asiaki_rjasta"
+#~ msgid "Compare files..."
+#~ msgstr "Vertaile tiedostoja..."
 
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Ensimmäinen"
+#~ msgid "F_rom document"
+#~ msgstr "Asiaki_rjasta"
 
-#: plugins/diff/diff.glade2.h:6
-msgid "First file from disk"
-msgstr "Ensimmäinen tiedosto levyltä"
+#~ msgid "First"
+#~ msgstr "Ensimmäinen"
 
-#: plugins/diff/diff.glade2.h:7
-msgid "First file from open document"
-msgstr "Ensimmäinen tiedosto avoimesta asiakirjasta"
+#~ msgid "First file from disk"
+#~ msgstr "Ensimmäinen tiedosto levyltä"
 
-#: plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "_Asiakirjasta"
+#~ msgid "First file from open document"
+#~ msgstr "Ensimmäinen tiedosto avoimesta asiakirjasta"
 
-#: plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "_Levyllä olevasta tiedostosta"
+#~ msgid "From _document"
+#~ msgstr "_Asiakirjasta"
 
-#: plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "Lev_yllä olevasta tiedostosta"
+#~ msgid "From a _file on disk"
+#~ msgstr "_Levyllä olevasta tiedostosta"
 
-#: plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "Älä huomioi _tyhjeitä (-b valinta)"
+#~ msgid "From a file o_n disk"
+#~ msgstr "Lev_yllä olevasta tiedostosta"
 
-#: plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr "Huomaa että tämä toiminto toimii vain GNU diffillä"
+#~ msgid "Ignore _blanks (-b option)"
+#~ msgstr "Älä huomioi _tyhjeitä (-b valinta)"
 
-#: plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Toinen"
+#~ msgid "Note that this option is only supported by GNU diff"
+#~ msgstr "Huomaa että tämä toiminto toimii vain GNU diffillä"
 
-#: plugins/diff/diff.glade2.h:14
-msgid "Second file from disk"
-msgstr "Toinen tiedosto levyllä olevasta tiedostosta"
+#~ msgid "Second"
+#~ msgstr "Toinen"
 
-#: plugins/diff/diff.glade2.h:15
-msgid "Second file from open document"
-msgstr "Toinen tiedosto avoimesta asiakirjasta"
+#~ msgid "Second file from disk"
+#~ msgstr "Toinen tiedosto levyllä olevasta tiedostosta"
 
-#: plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr "Valitse \"ensimmäinen\" tiedosto..."
+#~ msgid "Second file from open document"
+#~ msgstr "Toinen tiedosto avoimesta asiakirjasta"
 
-#: plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr "Valitse \"toinen\" tiedosto..."
+#~ msgid "Select the \"first\" file..."
+#~ msgstr "Valitse \"ensimmäinen\" tiedosto..."
 
-#: plugins/diff/diff.glade2.h:18
-msgid "Select the first file to compare"
-msgstr "Valitse ensimmäinen verrattava tiedosto"
+#~ msgid "Select the \"second\" file..."
+#~ msgstr "Valitse \"toinen\" tiedosto..."
 
-#: plugins/diff/diff.glade2.h:19
-msgid "Select the first open document to compare"
-msgstr "Valitse ensimmäinen avoin asiakirja verrattavaksi"
+#~ msgid "Select the first file to compare"
+#~ msgstr "Valitse ensimmäinen verrattava tiedosto"
 
-#: plugins/diff/diff.glade2.h:20
-msgid "Select the second file to compare"
-msgstr "Valitse toinen verrattava tiedosto"
+#~ msgid "Select the first open document to compare"
+#~ msgstr "Valitse ensimmäinen avoin asiakirja verrattavaksi"
 
-#: plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr "Valitse toinen avoin asiakirja verrattavaksi"
+#~ msgid "Select the second file to compare"
+#~ msgstr "Valitse toinen verrattava tiedosto"
 
-#: plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Käytä _unified-tulostemuotoilua (-u valinta)"
+#~ msgid "Select the second open document to compare"
+#~ msgstr "Valitse toinen avoin asiakirja verrattavaksi"
+
+#~ msgid "Use the _unified output format (-u option)"
+#~ msgstr "Käytä _unified-tulostemuotoilua (-u valinta)"
 
 #
-#: plugins/diff/diff.gedit-plugin.desktop.in.h:2
-msgid ""
-"The Compare Files plugin uses the \"diff\" program to compare two documents "
-"or files on disk."
-msgstr ""
-"Vertaa tiedostoja -liitännäinen käyttää \"diff\"-ohjelmaa vertaamaan kahta "
-"asiakirjaa tai levylle tallennettua tiedostoa keskenään."
+#~ msgid ""
+#~ "The Compare Files plugin uses the \"diff\" program to compare two "
+#~ "documents or files on disk."
+#~ msgstr ""
+#~ "Vertaa tiedostoja -liitännäinen käyttää \"diff\"-ohjelmaa vertaamaan "
+#~ "kahta asiakirjaa tai levylle tallennettua tiedostoa keskenään."
 
 #~ msgid "gedit application"
 #~ msgstr "gedit-sovellus"
