@@ -1,265 +1,28 @@
-# Brazilian Portuguese translation of gEdit
+# Brazilian Portuguese translation of gedit-plugins.HEAD
 # Copyright (C) 1999 Free Software Foundation, Inc.
-# Frederic L.W.Meunier <linux@urbi.com.br>, 1999.
-# Evandro Fernandes Giovanini <evandrofg@ig.com.br>, 2004
 #
+# Frederic L.W.Meunier <linux@urbi.com.br>, 1999.
+# Evandro Fernandes Giovanini <evandrofg@ig.com.br>, 2004.
+# Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-0.5.5\n"
+"Project-Id-Version: gedit-plugins.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-10 12:49-0500\n"
-"PO-Revision-Date: 2004-03-10 12:50-0500\n"
-"Last-Translator: Raphael Higino <raphaelh@uai.com.br>\n"
-"Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>, Debian-"
-"BR <debian-l10n-portuguese@lists.debian.org>, Brazilian Portuguese <gnome-"
-"l10n-br@listas.cipsga.org.br>\n"
+"POT-Creation-Date: 2006-03-22 18:46+0100\n"
+"PO-Revision-Date: 2006-03-22 20:53-0300\n"
+"Last-Translator: Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "Tabela _ASCII"
+#: ../quickies/quickies.glade.h:1
+msgid "Execute"
+msgstr "Executar"
 
-#: plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Mostra uma caixa de diálogo com uma tabela ASCII."
+#: ../quickies/quickies.glade.h:2
+msgid "Quick Script:"
+msgstr "Script rápido:"
 
-#: plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Caractere"
-
-#: plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "Dec"
-
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "Hexa"
-
-#: plugins/ASCII/ascii.c:324
-msgid "Name"
-msgstr "Nome"
-
-#: plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
-msgstr "Tabela ASCII"
-
-#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "_Inserir caractere"
-
-#: plugins/ASCII/asciitable.glade2.h:1
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
-msgid "ASCII table"
-msgstr "Tabela ASCII"
-
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
-msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-msgstr "Este plugin mostra uma caixa de diálogo com uma tabela ASCII."
-
-#. AFAIK, all cvs commit messages start with this
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "Abrir Chan_geLogs do CVS"
-
-#: plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "Procura por ChangeLogs no documento atual e os abre"
-
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
-msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-msgstr ""
-"Um plugin que abre ChangeLogs encontrados em mensagens de commit de CVS."
-
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
-msgid "CVS ChangeLog"
-msgstr "ChangeLog CVS"
-
-#: plugins/diff/diff.c:64
-msgid "Co_mpare Files..."
-msgstr "Co_mparar Arquivos..."
-
-#: plugins/diff/diff.c:67
-msgid "Makes a diff file from two documents or files"
-msgstr "Cria um arquivo diff apartir de dois documentos ou arquivos"
-
-#. Create the dialog
-#: plugins/diff/diff.c:270 plugins/diff/diff.gedit-plugin.desktop.in.h:1
-msgid "Compare Files"
-msgstr "Comparar Arquivos"
-
-#: plugins/diff/diff.c:284
-msgid "C_ompare"
-msgstr "C_omparar"
-
-#: plugins/diff/diff.c:511
-msgid "Executed command"
-msgstr "Executando o comando: %s"
-
-#: plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "Os documentos selecionados são o mesmo."
-
-#: plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"O primeiro arquivo selecionado não existe.\n"
-"\n"
-"Digite um nome de arquivo válido."
-
-#: plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"O segundo arquivo selecionado não existe.\n"
-"\n"
-"Digite um nome de arquivo válido."
-
-#: plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "Os dois arquivos que você selecionou são o mesmo."
-
-#: plugins/diff/diff.c:694
-msgid "The \"first\" document contains no text."
-msgstr "O primeiro documento não contem texto."
-
-#: plugins/diff/diff.c:728
-msgid "The \"second\" document contains no text."
-msgstr "O segundo documento não contém texto."
-
-#. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:754
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"Impossível comparar os documentos selecionados.\n"
-"\n"
-"O gedit não pôde criar um arquivo temporário."
-
-#: plugins/diff/diff.c:778 plugins/diff/diff.c:791
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"Impossível comparar os documentos selecionados.\n"
-"\n"
-"Erro ao executar o comando diff."
-
-#: plugins/diff/diff.c:813
-msgid "No differences were found between the selected documents."
-msgstr "Não foram encontradas diferenças entre os documentos selecionados."
-
-#: plugins/diff/diff.c:854
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"Impossível comparar os documentos selecionados.\n"
-"\n"
-"O resultado contém dados UTF-8 inválidos."
-
-#: plugins/diff/diff.glade2.h:1
-msgid "*"
-msgstr "*"
-
-#: plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Escolha os arquivos a comparar"
-
-#: plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Comparar arquivos..."
-
-#: plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "A _partir do documento"
-
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Primeiro"
-
-#: plugins/diff/diff.glade2.h:6
-msgid "First file from disk"
-msgstr "Primeiro arquivo de disco"
-
-#: plugins/diff/diff.glade2.h:7
-msgid "First file from open document"
-msgstr "Primeiro arquivo de documento aberto"
-
-#: plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "A partir do _documento"
-
-#: plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "A partir de um _arquivo em disco"
-
-#: plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "A partir de um arquiv_o em disco"
-
-#: plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "Ignorar em _branco (opção -b)"
-
-#: plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr "Note que essa opção só é suportada pelo diff GNU"
-
-#: plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Segundo"
-
-#: plugins/diff/diff.glade2.h:14
-msgid "Second file from disk"
-msgstr "Segundo arquivo de disco"
-
-#: plugins/diff/diff.glade2.h:15
-msgid "Second file from open document"
-msgstr "Segundo arquivo de documento aberto"
-
-#: plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr "Selecione o primeiro arquivo..."
-
-#: plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr "Selecione o \"segundo\" arquivo..."
-
-#: plugins/diff/diff.glade2.h:18
-msgid "Select the first file to compare"
-msgstr "Selecione o primeiro arquivo a comparar"
-
-#: plugins/diff/diff.glade2.h:19
-msgid "Select the first open document to compare"
-msgstr "Selecione o primeiro documento aberto a comparar"
-
-#: plugins/diff/diff.glade2.h:20
-msgid "Select the second file to compare"
-msgstr "Selecione o segundo arquivo para comparar"
-
-#: plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr "Selecione o segundo documento aberto para comparar"
-
-#: plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Usar o formato de saída _unificado (opção -u)"
-
-#: plugins/diff/diff.gedit-plugin.desktop.in.h:2
-msgid ""
-"The Compare Files plugin uses the \"diff\" program to compare two documents "
-"or files on disk."
-msgstr ""
-"O plugin Comparar Arquivos usa o programa \"diff\" para comparar dois "
-"documentos ou arquivos no disco."
