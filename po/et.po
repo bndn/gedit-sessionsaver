@@ -1,260 +1,28 @@
-# GEdit eesti keele tõlge.
-# Copyright (C) 2002 Free Software Foundation, Inc.
+# Gedit'i pluginate eesti keele tõlge.
+# Estonian translation of Gedit-plugins.
+#
+# Copyright (C) 2002, 2003, 2006 Free Software Foundation, Inc.
 # Ilmar Kerm <ikerm@hot.ee>, 2002.
 # Tõivo Leedjärv <toivo@linux.ee>, 2002, 2003.
+# Ivar Smolin, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit2\n"
-"POT-Creation-Date: 2004-02-02 14:43+0100\n"
-"PO-Revision-Date: 2004-03-27 18:31+0300\n"
-"Last-Translator: Priit Laes <amd@tt.ee>\n"
+"Project-Id-Version: gedit-plugins HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-03-27 10:47+0200\n"
+"PO-Revision-Date: 2006-03-27 12:19+0300\n"
+"Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "_ASCII tabel"
+#: ../quickies/quickies.glade.h:1
+msgid "Execute"
+msgstr "Käivita"
 
-#: plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Ava dialoogiaken ASCII tabeliga"
-
-#: plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Märk"
-
-#: plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "10nd"
-
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "16nd"
-
-#: plugins/ASCII/ascii.c:324
-msgid "Name"
-msgstr "Nimi"
-
-#: plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
-msgstr "ASCII tabel"
-
-#: plugins/ASCII/ascii.c:382
-#: plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "_Lisa märk"
-
-#: plugins/ASCII/asciitable.glade2.h:1
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
-msgid "ASCII table"
-msgstr "ASCII tabel"
-
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
-msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-msgstr "See plugin avab dialoogiakna ASCII tabeliga."
-
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "Ava CVSi lo_giraamatud (ChangeLog)"
-
-#: plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "Otsib aktiivsest dokumendist logiraamatu kirjed (ChangeLog) ja avab need"
-
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
-msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-msgstr "Plugin, mis avab CVSi sissekannete teadetes leitud logiraamatu kirjed (ChangeLog)."
-
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
-msgid "CVS ChangeLog"
-msgstr "CVS logiraamat"
-
-#: plugins/diff/diff.c:64
-msgid "Co_mpare Files..."
-msgstr "_Võrdle faile..."
-
-#: plugins/diff/diff.c:67
-msgid "Makes a diff file from two documents or files"
-msgstr "Loob diff faili (erinevused) kahest dokumendist või failist"
-
-#. Create the dialog
-#: plugins/diff/diff.c:270
-#: plugins/diff/diff.gedit-plugin.desktop.in.h:1
-msgid "Compare Files"
-msgstr "Võrdle faile"
-
-#: plugins/diff/diff.c:284
-msgid "C_ompare"
-msgstr "_Võrdle"
-
-#: plugins/diff/diff.c:511
-msgid "Executed command"
-msgstr "Käivitatud käsk"
-
-#: plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "Sinu valitud dokumendid on üks ja sama."
-
-#: plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Sinu valitud \"esimest\" faili pole olemas.\n"
-"\n"
-"Palun vali korrektne fail."
-
-#: plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Sinu valitud \"teist\" faili pole olemas.\n"
-"\n"
-"Palun vali korrektne fail."
-
-#: plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "Sinu valitud failid on üks ja sama."
-
-#: plugins/diff/diff.c:694
-msgid "The \"first\" document contains no text."
-msgstr "\"Esimene\" dokument ei sisalda teksti."
-
-#: plugins/diff/diff.c:728
-msgid "The \"second\" document contains no text."
-msgstr "\"Teine\" dokument ei sisalda teksti."
-
-#  FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:754
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"Valitud dokumentide võrldemine on võimatu.\n"
-"\n"
-"gedit ei saa luua ajutist faili."
-
-#: plugins/diff/diff.c:778
-#: plugins/diff/diff.c:791
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"Valitud dokumentide võrldemine on võimatu.\n"
-"\n"
-"Viga diff käsu täitmisel."
-
-#: plugins/diff/diff.c:813
-msgid "No differences were found between the selected documents."
-msgstr "Valitud dokumentide vahel ei ole ühtegi erinevust."
-
-#: plugins/diff/diff.c:854
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"Valitud dokumentide võrldemine on võimatu.\n"
-"\n"
-"Tulemis on vigased UTF-8 andmed."
-
-#: plugins/diff/diff.glade2.h:1
-msgid "*"
-msgstr "*"
-
-#: plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Vali võrreldavad failid."
-
-#: plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Võrdle faile..."
-
-#: plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "_Dokument"
-
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Esimene"
-
-#: plugins/diff/diff.glade2.h:6
-msgid "First file from disk"
-msgstr "Esimene fail kettal"
-
-#: plugins/diff/diff.glade2.h:7
-msgid "First file from open document"
-msgstr "Esimene fail avatud dokumentide hulgast"
-
-#: plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "D_okument"
-
-#: plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "_Fail kettal"
-
-#: plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "F_ail kettal"
-
-#: plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "Ignoreeri _tühikuid (-b parameeter)"
-
-#: plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr "Pane tähele, et see parameeter on ainult GNU diffi poolt toetatud"
-
-#: plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Teine"
-
-#: plugins/diff/diff.glade2.h:14
-msgid "Second file from disk"
-msgstr "Teine fail kettal"
-
-#: plugins/diff/diff.glade2.h:15
-msgid "Second file from open document"
-msgstr "Teine fail avatud dokumentide hulgast"
-
-#: plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr "Vali \"esimene\" fail..."
-
-#: plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr "Vali \"teine\" fail..."
-
-#: plugins/diff/diff.glade2.h:18
-msgid "Select the first file to compare"
-msgstr "Vali esimene võrreldav fail."
-
-#: plugins/diff/diff.glade2.h:19
-msgid "Select the first open document to compare"
-msgstr "Vali esimene võrreldav avatud dokument"
-
-#: plugins/diff/diff.glade2.h:20
-msgid "Select the second file to compare"
-msgstr "Vali teine võrreldav fail."
-
-#: plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr "Vali teine võrreldav avatud dokuent"
-
-#: plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Kasuta _ühtlustatud väljundvormingut (-u parameeter)"
-
-#: plugins/diff/diff.gedit-plugin.desktop.in.h:2
-msgid "The Compare Files plugin uses the \"diff\" program to compare two documents or files on disk."
-msgstr "Failide võrdlemise plugin kasutab \"diff\" programmi, et võrrelda omavahel kahte kettal asuvat dokumenti või faili."
+#: ../quickies/quickies.glade.h:2
+msgid "Quick Script:"
+msgstr "Kiirskript:"
 
