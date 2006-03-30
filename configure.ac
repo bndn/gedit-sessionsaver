@@ -40,7 +40,7 @@ AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS -I m4")
 GETTEXT_PACKAGE=gedit-plugins
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
-ALL_LINGUAS="af am ar az be bg bn br bs ca cs cy da de dz el en_CA en_GB es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kn ko lt lv mi mk ml mn mr ms nb ne nl nn no or pa pl pt pt_BR ro ru sk sl sq sr sr@Latn sv ta th tk tr uk vi wa zh_CN zh_TW"
+ALL_LINGUAS=""
 AM_GLIB_GNU_GETTEXT
 
 # ================================================================
@@ -70,11 +70,11 @@ GEDIT_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="savecopy"
-USEFUL_PLUGINS="savecopy"
-DEFAULT_PLUGINS="savecopy"
+ALL_PLUGINS=""
+USEFUL_PLUGINS=""
+DEFAULT_PLUGINS=""
 
-PYTHON_ALL_PLUGINS="quickies joinlines"
+PYTHON_ALL_PLUGINS="joinlines"
 PYTHON_USEFUL_PLUGINS="joinlines"
 PYTHON_DEFAULT_PLUGINS="joinlines"
 
@@ -332,8 +332,7 @@ AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 AC_CONFIG_FILES([
 Makefile
 plugins/Makefile
-plugins/quickies/Makefile
-plugins/savecopy/Makefile
+plugins/joinlines/Makefile
 po/Makefile.in])
 
 AC_OUTPUT
