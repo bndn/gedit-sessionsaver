@@ -130,9 +130,12 @@ def join_lines(window):
 	document.end_user_action()			
 
 def split_lines(window):
-	document = window.get_active_document()
-	if document is None:
+	view = window.get_active_view()
+	if view is None:
 		return
+
+	document = view.get_buffer()
+	tabsize = view.get_tabs_width()
 
 	document.begin_user_action()
 
@@ -140,19 +143,28 @@ def split_lines(window):
 		start, end = document.get_selection_bounds()
 	except ValueError:
 		start, end = document.get_bounds()
-	
+
 	end_mark = document.create_mark(None, end)
 	width = window.get_active_view().get_margin()
 
 	# split lines
+	pos = 0
 	while document.get_iter_at_mark(end_mark).compare(start) == 1:
-		if start.get_chars_in_line() > width:
-			start.set_line_offset(width)
+		start.forward_char()
+		char = start.get_char()
+
+		if char in ('\r','\n'):
+			pos = 0
+		elif char == '\t':
+			pos = pos + tabsize
+		else:
+			pos = pos + 1
+
+		if pos >= width:
+			pos = 0
 			if start.inside_word() and not start.starts_word():
 				start.backward_word_start()
 			document.insert(start, '\n')
-		else:
-			start.forward_line()
 
 	document.delete_mark(end_mark)
 	document.end_user_action()
