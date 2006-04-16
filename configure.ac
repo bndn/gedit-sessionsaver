@@ -74,9 +74,9 @@ ALL_PLUGINS="showtabbar"
 USEFUL_PLUGINS="showtabbar"
 DEFAULT_PLUGINS="showtabbar"
 
-PYTHON_ALL_PLUGINS="joinlines"
-PYTHON_USEFUL_PLUGINS="joinlines"
-PYTHON_DEFAULT_PLUGINS="joinlines"
+PYTHON_ALL_PLUGINS="joinlines terminal"
+PYTHON_USEFUL_PLUGINS="joinlines terminal"
+PYTHON_DEFAULT_PLUGINS="joinlines terminal"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
@@ -334,6 +334,7 @@ Makefile
 plugins/Makefile
 plugins/joinlines/Makefile
 plugins/showtabbar/Makefile
+plugins/terminal/Makefile
 po/Makefile.in])
 
 AC_OUTPUT
