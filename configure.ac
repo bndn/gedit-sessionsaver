@@ -21,7 +21,7 @@ AM_CONFIG_HEADER([config.h])
 AM_DISABLE_STATIC
 
 AC_PATH_PROG(GCONFTOOL, gconftool-2)
-AC_PROG_INTLTOOL([0.31])
+IL_PROG_INTLTOOL([0.34.90])
 
 AM_PROG_LIBTOOL
 
@@ -39,9 +39,7 @@ AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS -I m4")
 
 GETTEXT_PACKAGE=gedit-plugins
 AC_SUBST(GETTEXT_PACKAGE)
-AC_SUBST([CONFIG_STATUS_DEPENDENCIES],['$(top_srcdir)/po/LINGUAS'])
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
-ALL_LINGUAS="`cat "$srcdir/po/LINGUAS" | grep -v '^#'`"
 AM_GLIB_GNU_GETTEXT
 
 # ================================================================
@@ -52,6 +50,7 @@ PKG_CHECK_MODULES(GEDIT, [
 	glib-2.0 >= 2.8.0
 	gtk+-2.0 >= 2.8.0
 	gtksourceview-1.0 >= 1.2.0
+	gedit-2.14 >= 2.14.0
 	libgnomeui-2.0 >= 2.13.0
 	libglade-2.0 >= 2.4.0
 	libgnomeprintui-2.2 >= 2.6.0
@@ -334,6 +333,7 @@ AC_CONFIG_FILES([
 Makefile
 plugins/Makefile
 plugins/joinlines/Makefile
+plugins/showtabbar/Makefile
 po/Makefile.in])
 
 AC_OUTPUT
