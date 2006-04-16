@@ -70,9 +70,9 @@ GEDIT_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS=""
-USEFUL_PLUGINS=""
-DEFAULT_PLUGINS=""
+ALL_PLUGINS="showtabbar"
+USEFUL_PLUGINS="showtabbar"
+DEFAULT_PLUGINS="showtabbar"
 
 PYTHON_ALL_PLUGINS="joinlines"
 PYTHON_USEFUL_PLUGINS="joinlines"
