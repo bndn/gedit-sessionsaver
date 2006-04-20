@@ -308,7 +308,7 @@ AM_CONDITIONAL([ENABLE_PYTHON],[test "x$enable_python" = "xyes"])
 # ================================================================
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 			      
-GNOME_COMPILE_WARNINGS(yes)
+#GNOME_COMPILE_WARNINGS(yes)
 
 AC_ARG_ENABLE(deprecations,
               [AC_HELP_STRING([--enable-deprecations],
