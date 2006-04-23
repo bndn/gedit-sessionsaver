@@ -1,3 +1,17 @@
+2006-04-23  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/charmap/.cvsignore:
+	* plugins/charmap/Makefile.am:
+	* plugins/charmap/charmap.gedit-plugin.desktop.in:
+	* plugins/charmap/gedit-charmap-panel.[ch]:
+	* plugins/charmap/gedit-charmap-plugin.[ch]:
+	
+	New Character Map Panel plugin.
+
+	* configure.ac: Add above plugin to plugin list. Remove useless
+	dependencies. Remove unused GEDIT_DATA_DIR definition. Add conditional
+	dependency for libgucharmap.
+
 2006-04-20  Steve Frécinaux  <steve@istique.net>
 
 	* autogen.sh: updated package name to gedit-plugins

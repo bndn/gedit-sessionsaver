@@ -51,9 +51,7 @@ PKG_CHECK_MODULES(GEDIT, [
 	gtk+-2.0 >= 2.8.0
 	gtksourceview-1.0 >= 1.2.0
 	gedit-2.14 >= 2.14.0
-	libgnomeui-2.0 >= 2.13.0
 	libglade-2.0 >= 2.4.0
-	libgnomeprintui-2.2 >= 2.6.0
 	gnome-vfs-2.0 >= 2.13.4
 ])
 GEDIT_LIBS="${GEDIT_LIBS}"
@@ -70,9 +68,9 @@ GEDIT_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="showtabbar"
-USEFUL_PLUGINS="showtabbar"
-DEFAULT_PLUGINS="showtabbar"
+ALL_PLUGINS="showtabbar charmap"
+USEFUL_PLUGINS="showtabbar charmap"
+DEFAULT_PLUGINS="showtabbar charmap"
 
 PYTHON_ALL_PLUGINS="joinlines terminal"
 PYTHON_USEFUL_PLUGINS="joinlines terminal"
@@ -139,35 +137,22 @@ AC_SUBST([BUILD_PLUGINS],[`echo $PLUGINS | tr ' ' '\n' | sort | uniq | tr '\n' '
 
 AC_MSG_RESULT([$PLUGINS])
 
+# =========
+# gucharmap
+# =========
+
+if echo "$PLUGINS" | egrep '(^| )(charmap)($| )' > /dev/null; then
+	PKG_CHECK_MODULES([GUCHARMAP], [
+		gucharmap >= 1.6.0
+	])
+fi
+
 # ================================================================
 # GConf related settings
 # ================================================================
 
 AM_GCONF_SOURCE_2
 
-# ================================================================
-# GEDIT_DATA_DIR - Sets the location of the data directory, where we install
-# source files added to projects (such as all the Gnome m4 macros).
-# This will substitute GEDIT_DATA_DIR in config.h.
-# ================================================================
-
-if test "x${datadir}" = 'x${prefix}/share'
-then
-	if test "x${prefix}" = "xNONE";
-	then
-		AC_DEFINE_UNQUOTED(GEDIT_DATA_DIR,
-				   "${ac_default_prefix}/share/${PACKAGE}",
-				   [Directory of data files])
-	else
-		AC_DEFINE_UNQUOTED(GEDIT_DATA_DIR,
-				   "${prefix}/share/${PACKAGE}",
-				   [Directory of data files])
-	fi
-else
-	AC_DEFINE_UNQUOTED(GEDIT_DATA_DIR,
-			   "${datadir}/${PACKAGE}",
-			   [Directory of data files])
-fi
 
 # ================================================================
 # Python
@@ -332,6 +317,7 @@ AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 AC_CONFIG_FILES([
 Makefile
 plugins/Makefile
+plugins/charmap/Makefile
 plugins/joinlines/Makefile
 plugins/showtabbar/Makefile
 plugins/terminal/Makefile
