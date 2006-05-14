@@ -34,7 +34,7 @@
 #include <gucharmap/gucharmap-table.h>
 #include <gucharmap/gucharmap-unicode-info.h>
 
-#define WINDOW_DATA_KEY	"GeditCharmapWindowData"
+#define WINDOW_DATA_KEY	"GeditCharmapPluginWindowData"
 
 #define GEDIT_CHARMAP_PLUGIN_GET_PRIVATE(object) \
 				(G_TYPE_INSTANCE_GET_PRIVATE ((object),	\
@@ -44,6 +44,7 @@
 typedef struct
 {
 	GtkWidget	*panel;
+	guint		 context_id;
 } WindowData;
 
 GEDIT_PLUGIN_REGISTER_TYPE (GeditCharmapPlugin, gedit_charmap_plugin)
@@ -72,10 +73,84 @@ free_window_data (WindowData *data)
 }
 
 static void
+on_table_status_message (GucharmapTable *chartable,
+			 const gchar    *message,
+			 GeditWindow    *window)
+{
+	GtkStatusbar *statusbar;
+	WindowData *data;
+
+	statusbar = GTK_STATUSBAR (gedit_window_get_statusbar (window));
+	data = (WindowData *) g_object_get_data (G_OBJECT (window),
+						 WINDOW_DATA_KEY);
+	g_return_if_fail (data != NULL);
+
+	gtk_statusbar_pop (statusbar, data->context_id);
+
+	if (message)
+		gtk_statusbar_push (statusbar, data->context_id, message);
+}
+
+on_table_set_active_char (GucharmapTable *chartable,
+			  gunichar        wc,
+			  GeditWindow    *window)
+{
+	GString *gs;
+	const gchar *temp;
+	const gchar **temps;
+	gint i;
+
+	gs = g_string_new (NULL);
+	g_string_append_printf (gs, "U+%4.4X %s", wc, 
+				gucharmap_get_unicode_name (wc));
+
+	temps = gucharmap_get_nameslist_equals (wc);
+	if (temps)
+	{
+		g_string_append_printf (gs, "   = %s", temps[0]);
+		for (i = 1;  temps[i];  i++)
+			g_string_append_printf (gs, "; %s", temps[i]);
+		g_free (temps);
+	}
+
+	temps = gucharmap_get_nameslist_stars (wc);
+	if (temps)
+	{
+		g_string_append_printf (gs, "   \342\200\242 %s", temps[0]);
+		for (i = 1;  temps[i];  i++)
+			g_string_append_printf (gs, "; %s", temps[i]);
+		g_free (temps);
+	}
+
+	on_table_status_message (chartable, gs->str, window);
+	g_string_free (gs, TRUE);
+}
+
+static gboolean
+on_table_focus_out_event (GtkWidget      *drawing_area,
+			  GdkEventFocus  *event,
+			  GeditWindow    *window)
+{
+	GucharmapTable *chartable;
+	WindowData *data;
+	
+	data = (WindowData *) g_object_get_data (G_OBJECT (window),
+						 WINDOW_DATA_KEY);
+	g_return_val_if_fail (data != NULL, FALSE);
+
+	chartable = gedit_charmap_panel_get_table
+					(GEDIT_CHARMAP_PANEL (data->panel));
+
+	on_table_status_message (chartable, NULL, window);
+	return FALSE;
+}
+
+static void
 on_table_activate (GucharmapTable *chartable, 
 		   gunichar        wc, 
 		   GeditWindow    *window)
 {
+	GtkTextView   *view;
 	GtkTextBuffer *document;
 	GtkTextIter start, end;
 	gchar buffer[6];
@@ -83,11 +158,14 @@ on_table_activate (GucharmapTable *chartable,
 	
 	g_return_if_fail (gucharmap_unichar_validate (wc));
 	
-	document = GTK_TEXT_BUFFER (gedit_window_get_active_document (window));
+	view = GTK_TEXT_VIEW (gedit_window_get_active_view (window));
 	
-	if (!document ||
-	    gedit_document_get_readonly (GEDIT_DOCUMENT (document)))
+	if (!view || !gtk_text_view_get_editable (view))
 		return;
+	
+	document = gtk_text_view_get_buffer (view);
+	
+	g_return_if_fail (document != NULL);
 	
 	length = g_unichar_to_utf8 (wc, buffer);
 
@@ -116,6 +194,22 @@ create_charmap_panel (GeditWindow *window)
 				  gedit_prefs_manager_get_editor_font ());
 	
 	g_signal_connect (table,
+			  "status-message",
+			  G_CALLBACK (on_table_status_message),
+			  window);
+
+	g_signal_connect (table,
+			  "set-active-char",
+			  G_CALLBACK (on_table_set_active_char),
+			  window);
+
+	/* Note: GucharmapTable does not provide focus-out-event ... */
+	g_signal_connect (table->drawing_area,
+			  "focus-out-event",
+			  G_CALLBACK (on_table_focus_out_event),
+			  window);
+
+	g_signal_connect (table,
 			  "activate", 
 			  G_CALLBACK (on_table_activate),
 			  window);
@@ -132,6 +226,7 @@ impl_activate (GeditPlugin *plugin,
 	GeditPanel *panel;
 	GtkWidget *image;
 	GtkIconTheme *theme;
+	GtkStatusbar *statusbar;
 	WindowData *data;
 
 	gedit_debug (DEBUG_PLUGINS);
@@ -157,6 +252,10 @@ impl_activate (GeditPlugin *plugin,
 			      image);
 
 	gtk_object_sink (GTK_OBJECT (image));
+
+	statusbar = GTK_STATUSBAR (gedit_window_get_statusbar (window));
+	data->context_id = gtk_statusbar_get_context_id (statusbar,
+							 "Character Description");
 
 	g_object_set_data_full (G_OBJECT (window),
 				WINDOW_DATA_KEY,

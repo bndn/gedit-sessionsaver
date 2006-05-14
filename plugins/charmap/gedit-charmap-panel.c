@@ -34,7 +34,6 @@ struct _GeditCharmapPanelPrivate
 {
 	GtkWidget	*table;
 	GtkWidget	*chapters;
-	GtkTooltips	*tooltips;
 };
 
 G_DEFINE_TYPE(GeditCharmapPanel, gedit_charmap_panel, GTK_TYPE_VBOX)
