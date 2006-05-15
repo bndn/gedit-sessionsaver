@@ -42,7 +42,7 @@ else
 install-data-local:
 endif
 
-EXTRA_DIST = $(plugin_in_files)
+EXTRA_DIST = $(plugin_in_files) $(schemas_in_files)
 
-CLEANFILES = $(plugin_DATA)
-DISTCLEANFILES = $(plugin_DATA)
+CLEANFILES = $(plugin_DATA) $(schemas_DATA)
+DISTCLEANFILES = $(plugin_DATA) $(schemas_DATA)
