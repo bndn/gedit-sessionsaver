@@ -1,6 +1,6 @@
 # Process this file with autoconf to produce a configure script.
 
-GEDIT_MAJOR=2.14
+GEDIT_MAJOR=2.15
 GEDIT_PLUGINS_MAJOR=2.15
 
 AC_INIT(gedit-plugins, 2.15.2, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
@@ -21,7 +21,7 @@ AM_CONFIG_HEADER([config.h])
 AM_DISABLE_STATIC
 
 AC_PATH_PROG(GCONFTOOL, gconftool-2)
-IT_PROG_INTLTOOL([0.34.90])
+IT_PROG_INTLTOOL([0.35.0])
 
 AM_PROG_LIBTOOL
 
@@ -50,7 +50,7 @@ PKG_CHECK_MODULES(GEDIT, [
 	glib-2.0 >= 2.8.0
 	gtk+-2.0 >= 2.8.0
 	gtksourceview-1.0 >= 1.2.0
-	gedit-2.14 >= 2.14.0
+	gedit-2.14 >= 2.15.2
 	libglade-2.0 >= 2.4.0
 	gnome-vfs-2.0 >= 2.13.4
 ])
