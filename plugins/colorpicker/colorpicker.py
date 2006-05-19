@@ -115,7 +115,7 @@ class ColorPickerPlugin(gedit.Plugin):
 
 			if not char.lower() in \
 					('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
-					'a', 'b', 'c', 'd', 'e', 'f', '#'):
+					'a', 'b', 'c', 'd', 'e', 'f'):
 				return
 			
 			if not next_char(iter):
@@ -133,8 +133,6 @@ class ColorPickerPlugin(gedit.Plugin):
 			
 			self.skip_hex(buf, start, lambda iter: iter.backward_char())
 			self.skip_hex(buf, end, lambda iter: iter.forward_char())
-			
-			start.forward_char()
 		else:
 			start, end = bounds
 			

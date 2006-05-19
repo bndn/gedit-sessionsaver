@@ -1,5 +1,11 @@
 2006-05-19  Jesse van den Kieboom  <jesse@icecrew.nl>
 
+	* plugins/colorpicker/colorpicker.py: fixed finding color from cursor
+	position (it no longer accepts # as a hex color token, which it 
+	shouldn't have in the first place)
+
+2006-05-19  Jesse van den Kieboom  <jesse@icecrew.nl>
+
 	* configure.ac: added checks for plugin dependencies. When dependencies
 	are not met the plugin will be disabled. When the plugin is explicitely
 	defined with --enable-plugins then the missing dependency will generate
