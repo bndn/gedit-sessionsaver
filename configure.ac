@@ -105,6 +105,7 @@ then
 fi
 
 need_python=no
+explicit_plugins=
 PLUGINS=
 IFS="${IFS=	}"; geditpl_save_ifs="$IFS"; IFS=","
 for pl in $plugins
@@ -112,6 +113,7 @@ do
 	if echo "$ALL_PLUGINS" | egrep "(^| )$pl(\$| )" > /dev/null
 	then
 		PLUGINS="$PLUGINS $pl"
+		explicit_plugins="$explicit_plugins $pl"
 	elif test "x$pl" = "xdefault"
 	then
 		PLUGINS="$PLUGINS $DEFAULT_PLUGINS"
@@ -132,20 +134,7 @@ do
 done
 IFS="$geditpl_save_ifs"
 
-AC_SUBST([DIST_PLUGINS])
-AC_SUBST([BUILD_PLUGINS],[`echo $PLUGINS | tr ' ' '\n' | sort | uniq | tr '\n' ' '`])
-
 AC_MSG_RESULT([$PLUGINS])
-
-# =========
-# gucharmap
-# =========
-
-if echo "$PLUGINS" | egrep '(^| )(charmap)($| )' > /dev/null; then
-	PKG_CHECK_MODULES([GUCHARMAP], [
-		gucharmap >= 1.6.0
-	])
-fi
 
 # ================================================================
 # GConf related settings
@@ -288,6 +277,112 @@ fi
 
 AM_CONDITIONAL([ENABLE_PYTHON],[test "x$enable_python" = "xyes"])
 
+disabled_plugins=
+# ================================================================
+# Plugin specific checks
+# ================================================================
+function check_plugin_defined() {
+	if echo "$2" | egrep "\b($1)\b" > /dev/null;
+	then
+		return 1
+	else
+		return 0
+	fi
+}
+
+function plugin_defined() {
+	check_plugin_defined "$1" "$PLUGINS"
+	return $?
+}
+
+function plugin_defined_explicit() {
+	check_plugin_defined "$1" "$explicit_plugins"
+	return $?
+}
+
+function undef_plugin() {
+	if test -z "$disabled_plugins"
+	then
+		disabled_plugins="$1 ($2)"
+	else
+		disabled_plugins="$disabled_plugins, $1 ($2)"
+	fi
+	
+	PLUGINS=$(echo "$PLUGINS" | sed "s/\(\W\|^\)$1\b//")
+}
+
+# ================================================================
+# disable all python plugins if there is no python support
+# ================================================================
+if test "x$enable_python" == "xno"
+then
+	for pl in $PYTHON_ALL_PLUGINS
+	do
+		undef_plugin "$pl" "no python support"
+	done
+fi
+
+# ================================================================
+# gucharmap
+# ================================================================
+plugin_defined charmap
+if test "$?" == 1
+then
+	PKG_CHECK_MODULES([GUCHARMAP], [
+		gucharmap >= 1.6.0
+	], have_gucharmap=yes, have_gucharmap=no)
+	
+	if test "x$have_gucharmap" == "xno"
+	then
+		plugin_defined_explicit charmap
+		if test "$?" == 1
+		then
+			AC_MSG_ERROR([gucharmap could not be found, needed to built charmap plugin])
+		else
+			AC_MSG_WARN([gucharmap could not be found, charmap plugin will be disabled])
+
+			undef_plugin charmap "libgucharmap not found"
+		fi
+	fi
+fi
+
+# ================================================================
+# Terminal plugin vte check
+# ================================================================
+plugin_defined terminal
+if test "$?" == 1
+then
+	AC_MSG_CHECKING([for python-vte module])
+
+	if $PYTHON -c "import vte" &>/dev/null; 
+	then
+		AC_MSG_RESULT([yes])
+	else
+		# Disable the terminal plugin because it needs vte
+		AC_MSG_RESULT([no])
+		
+		plugin_defined_explicit terminal
+		if test "$?" == 1
+		then
+			AC_MSG_ERROR([the python vte module could not be found, needed to built terminal plugin])
+		else
+			AC_MSG_WARN([the python vte module could not be found, terminal plugin will be disabled])
+			
+			undef_plugin terminal "python vte module not found"
+		fi
+
+	fi		
+fi
+
+if test -z "$disabled_plugins"
+then
+	disabled_plugins="none"
+fi
+
+PLUGINS=$(echo $PLUGINS | tr ' ' '\n' | sort | uniq | tr '\n' ' ')
+AC_SUBST([DIST_PLUGINS])
+AC_SUBST([BUILD_PLUGINS],[$PLUGINS])
+
 # ================================================================
 # Misc
 # ================================================================
@@ -330,9 +425,11 @@ echo "
 
 Configuration:
 
-	Source code location:	${srcdir}
-	Compiler:		${CC}
+	Source code location:   ${srcdir}
+	Compiler:               ${CC}
 	Python Plugins Support: $enable_python
-	Plugins:               $PLUGINS
+	Plugins:                $PLUGINS
+	
+	Disabled plugins:       $disabled_plugins
 
 "

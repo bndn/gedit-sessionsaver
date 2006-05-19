@@ -1,3 +1,13 @@
+2006-05-19  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac: added checks for plugin dependencies. When dependencies
+	are not met the plugin will be disabled. When the plugin is explicitely
+	defined with --enable-plugins then the missing dependency will generate
+	an error, otherwise it will only generate a warning so plugins can
+	still be built, but without that specific plugin. Added python vte 
+	module check for the terminal plugin. Disable all python plugins when
+	there is no python support.
+
 2006-05-15  Steve Frécinaux  <steve@istique.net>
 
 	* configure.ac: bumped intltool requirement to 0.35.0, and gedit
