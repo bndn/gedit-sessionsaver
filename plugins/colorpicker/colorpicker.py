@@ -78,7 +78,12 @@ class ColorPickerPluginInstance:
 		manager.ensure_update()
 
 	def update(self):
-		return
+		tab = self._window.get_active_tab()
+		self._action_group.set_sensitive(tab != None)
+		
+		if not tab and self._plugin._dialog and \
+				self._plugin._dialog.get_transient_for() == self._window:
+			self._plugin._dialog.response(gtk.RESPONSE_CLOSE)
 	
 	def on_window_activate(self, window, event):
 		self._plugin.dialog_transient_for(window)
