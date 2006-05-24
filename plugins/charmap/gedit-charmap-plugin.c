@@ -185,7 +185,7 @@ create_charmap_panel (GeditWindow *window)
 {
 	GtkWidget      *panel;
 	GucharmapTable *table;
-	gcahr          *font;
+	gchar          *font;
 
 	panel = gedit_charmap_panel_new ();
 	table = gedit_charmap_panel_get_table (GEDIT_CHARMAP_PANEL (panel));
