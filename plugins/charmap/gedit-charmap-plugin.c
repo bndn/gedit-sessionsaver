@@ -185,14 +185,16 @@ create_charmap_panel (GeditWindow *window)
 {
 	GtkWidget      *panel;
 	GucharmapTable *table;
-	
+	gcahr          *font;
+
 	panel = gedit_charmap_panel_new ();
 	table = gedit_charmap_panel_get_table (GEDIT_CHARMAP_PANEL (panel));
 
 	/* Use the same font as the document */
-	gucharmap_table_set_font (table, 
-				  gedit_prefs_manager_get_editor_font ());
-	
+	font = gedit_prefs_manager_get_editor_font ();
+	gucharmap_table_set_font (table, font);
+	g_free (font);
+
 	g_signal_connect (table,
 			  "status-message",
 			  G_CALLBACK (on_table_status_message),
