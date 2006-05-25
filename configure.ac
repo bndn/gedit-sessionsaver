@@ -1,6 +1,6 @@
 # Process this file with autoconf to produce a configure script.
 
-GEDIT_MAJOR=2.15
+GEDIT_MAJOR=2.14.2
 GEDIT_PLUGINS_MAJOR=2.15
 
 AC_INIT(gedit-plugins, 2.15.2, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
@@ -431,5 +431,9 @@ Configuration:
 	Plugins:                $PLUGINS
 	
 	Disabled plugins:       $disabled_plugins
+
+Note: you have to install these plugins into the same prefix than your gedit
+installation (probably /usr if you're using your distro packages, /usr/local
+if you have compiled it on your own).
 
 "

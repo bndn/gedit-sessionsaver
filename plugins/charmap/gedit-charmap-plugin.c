@@ -270,6 +270,7 @@ impl_deactivate	(GeditPlugin *plugin,
 		 GeditWindow *window)
 {
 	GeditPanel *panel;
+	GucharmapTable *chartable;
 	WindowData *data;
 
 	gedit_debug (DEBUG_PLUGINS);
@@ -277,6 +278,10 @@ impl_deactivate	(GeditPlugin *plugin,
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
+
+	chartable = gedit_charmap_panel_get_table
+					(GEDIT_CHARMAP_PANEL (data->panel));
+	on_table_status_message (chartable, NULL, window);
 
 	panel = gedit_window_get_side_panel (window);
 	gedit_panel_remove_item (panel, data->panel);

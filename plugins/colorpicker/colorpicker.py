@@ -19,6 +19,8 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
+# FIXME: gedit API update (for 2.16 release)
+
 import gedit, gtk
 from gettext import gettext as _
 import re
@@ -155,7 +157,7 @@ class ColorPickerPlugin(gedit.Plugin):
 		return start, end		
 	
 	def insert_color(self, text):
-		window = gedit.app_get_default().get_active_window()
+		window = gedit.gedit_app_get_default().get_active_window()
 		view = window.get_active_view()
 		
 		if not view or not view.get_editable():
@@ -189,7 +191,7 @@ class ColorPickerPlugin(gedit.Plugin):
 		color.blue = self.scale_color_component(color.blue)
 
 	def get_current_color(self):
-		window = gedit.app_get_default().get_active_window()
+		window = gedit.gedit_app_get_default().get_active_window()
 		doc = window.get_active_document()
 		
 		if not doc:
