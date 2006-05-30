@@ -1,3 +1,10 @@
+2006-05-31  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/terminal/terminal.py: move the scrollbar into the terminal
+	widget; get the most part of terminal configuration from GConf (Default
+	gnome-terminal profile); add a terminal popup menu containing copy and
+	paste entries.
+
 2006-05-30  Steve Frécinaux  <steve@istique.net>
 
 	* plugins/terminal/terminal.py: adapt to use a window helper. Converted
@@ -5,15 +12,15 @@
 
 2006-05-25  Steve Frécinaux  <steve@istique.net>
 
-        * plugins/charmap/gedit-charmap-plugin.c: remove statusbar text on
-        plugin removal.
+	* plugins/charmap/gedit-charmap-plugin.c: remove statusbar text on
+	plugin removal.
 
-        * configure.ac: set gedit requirement to 2.14 since people have been
-        asking for it several times. Added a note about prefix.
-        
-        * plugins/colorpicker/colorpicker.py: reverted API update to make it
-        run with gedit 2.14
-        
+	* configure.ac: set gedit requirement to 2.14 since people have been
+	asking for it several times. Added a note about prefix.
+
+	* plugins/colorpicker/colorpicker.py: reverted API update to make it
+	run with gedit 2.14
+
 2006-05-24  Paolo Borelli  <pborelli@katamail.com>
 
 	* plugins/charmap/gedit-charmap-plugin.c: fix leak.
