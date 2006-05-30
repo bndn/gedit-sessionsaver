@@ -37,91 +37,114 @@ def_transparent = 0
 def_visible = 0
 
 class GeditTerminal(vte.Terminal):
-	"""VTE terminal which follows gnome-terminal default profile options"""
-	
-	def __init__(self):
-		vte.Terminal.__init__(self)
+    """VTE terminal which follows gnome-terminal default profile options"""
 
-		self.gconf = gconf.client_get_default()
+    GCONF_PROFILE_DIR = "/apps/gnome-terminal/profiles/Default"
+    
+    def __init__(self):
+        vte.Terminal.__init__(self)
 
-		# TODO: retrieve the profile from GConf
+        self.gconf = gconf.client_get_default()
 
-		self.gconf.add_dir("/apps/gnome-terminal/profiles/Default",
-				   gconf.CLIENT_PRELOAD_RECURSIVE)
+        # TODO: retrieve the profile from GConf
 
-		if not self.gconf.get_bool("/apps/gnome-terminal/profiles/Default/use_system_font"):
-			self.set_font(self.gconf.get_string("/apps/gnome-terminal/profiles/Default/font"))
-		else:
-			self.set_font(self.gconf.get_string("/desktop/gnome/interface/monospace_font"))
+        self.gconf.add_dir(self.GCONF_PROFILE_DIR,
+                   gconf.CLIENT_PRELOAD_RECURSIVE)
+
+        if not self.gconf.get_bool(self.GCONF_PROFILE_DIR + "/use_system_font"):
+            self.set_font(self.gconf.get_string(self.GCONF_PROFILE_DIR + "/font"))
+        else:
+            self.set_font(self.gconf.get_string("/desktop/gnome/interface/monospace_font"))
 
 #TODO:
-#		if not self.gconf.get_bool("/apps/gnome-terminal/profiles/Default/use_theme_colors"):
-#			self.set_colors(gtk.gdk.color_parse (self.gconf.get_string("/apps/gnome-terminal/profiles/Default/foregound_color")),
-#					gtk.gdk.color_parse (self.gconf.get_string("/apps/gnome-terminal/profiles/Default/backgound_color")))
-#		else:
-#			...
+#        if not self.gconf.get_bool("/apps/gnome-terminal/profiles/Default/use_theme_colors"):
+#            self.set_colors(gtk.gdk.color_parse (self.gconf.get_string("/apps/gnome-terminal/profiles/Default/foregound_color")),
+#                    gtk.gdk.color_parse (self.gconf.get_string("/apps/gnome-terminal/profiles/Default/backgound_color")))
+#        else:
+#            ...
 
-		self.set_colors(gtk.gdk.color_parse (self.gconf.get_string("/apps/gnome-terminal/profiles/Default/foreground_color")),
-				gtk.gdk.color_parse (self.gconf.get_string("/apps/gnome-terminal/profiles/Default/background_color")))
+        self.set_colors(gtk.gdk.color_parse (self.gconf.get_string(self.GCONF_PROFILE_DIR + "/foreground_color")),
+                gtk.gdk.color_parse (self.gconf.get_string(self.GCONF_PROFILE_DIR + "/background_color")))
 
 
-		# TODO: more GConf getting
-		self.set_cursor_blinks(def_blink)
-		self.set_emulation(def_emulation)
-		self.set_scrollback_lines(def_scrollback)
-		self.set_audible_bell(def_audible)
-		self.set_visible_bell(def_visible)
+        # TODO: more GConf getting
+        self.set_cursor_blinks(def_blink)
+        self.set_emulation(def_emulation)
+        self.set_scrollback_lines(def_scrollback)
+        self.set_audible_bell(def_audible)
+        self.set_visible_bell(def_visible)
 
-		# GConf notification
-		self.gconf.notify_add("/apps/gnome-terminal/profiles/Default/font",
-				      lambda x, y, z, a: self.set_font(z.value.get_string())) #is this bad if the value isn't a string?
+        # GConf notification
+        self.gconf.notify_add(self.GCONF_PROFILE_DIR + "/font",
+                      lambda x, y, z, a: self.set_font(z.value.get_string())) #is this bad if the value isn't a string?
 
-		# TODO: add more notofications
+        # TODO: add more notofications
 
-		# set a reasonably small size... this is ugly but it seems
-		# the only way to make vte behave.
-		self.set_size(30, 5)
-	        self.set_size_request(200, 50)
+        # set a reasonably small size... this is ugly but it seems
+        # the only way to make vte behave.
+        self.set_size(30, 5)
+            self.set_size_request(200, 50)
 
-		# Start up the default command, the user's shell.
-		self.fork_command()
-		self.connect("child-exited", lambda t: t.fork_command())
+        # Start up the default command, the user's shell.
+        self.fork_command()
+        self.connect("child-exited", lambda t: t.fork_command())
 
-	def set_font(self, font_name):
-		try:
-			font = pango.FontDescription(font_name)
-		except:
-			font = pango.FontDescription(def_font_name)
-		vte.Terminal.set_font(self, font)
+    def set_font(self, font_name):
+        try:
+            font = pango.FontDescription(font_name)
+        except:
+            font = pango.FontDescription(def_font_name)
+        vte.Terminal.set_font(self, font)
 
-	def set_colors(self, fg_col, bg_col):
-		vte.Terminal.set_colors(self, fg_col, bg_col, [])
+    def set_colors(self, fg_col, bg_col):
+        vte.Terminal.set_colors(self, fg_col, bg_col, [])
+
+class TerminalWindowHelper(object):
+    def __init__(self, window):
+        self._window = window
+
+        self._panel = self.create_terminal()
+
+        image = gtk.Image()
+        image.set_from_icon_name("utilities-terminal", gtk.ICON_SIZE_MENU)
+
+        bottom = window.get_bottom_panel()
+        bottom.add_item(self._panel, "Terminal", image)
+
+    def deactivate(self):
+        bottom = window.get_bottom_panel()
+        bottom.remove_item(self._panel)
+    
+    def update_ui(self):
+        pass
+
+    def create_terminal(self):
+        panel = gtk.HBox(0)
+        panel.set_resize_mode(gtk.RESIZE_IMMEDIATE)
+    
+        terminal = GeditTerminal()
+        panel.pack_start(terminal)
+
+        scrollbar = gtk.VScrollbar(terminal.get_adjustment())
+        panel.pack_start(scrollbar, False, False, 0)
+        panel.show_all()
+        return panel
 
 class TerminalPlugin(gedit.Plugin):
-	def __init__(self):
-		gedit.Plugin.__init__(self)
+    WINDOW_DATA_KEY = "TerminalPluginWindowData"
 
-	def activate(self, window):
-		terminal = GeditTerminal()
+    def __init__(self):
+        gedit.Plugin.__init__(self)
 
-		window.terminal_pane = gtk.HBox(0)
-		window.terminal_pane.set_resize_mode(gtk.RESIZE_IMMEDIATE)
+    def activate(self, window):
+        helper = TerminalWindowHelper(window)
+        window.set_data(self.WINDOW_DATA_KEY, helper)
 
-		window.terminal_pane.pack_start(terminal)
+    def deactivate(self, window):
+        window.get_data(self.WINDOW_DATA_KEY).deactivate()
+        window.set_data(self.WINDOW_DATA_KEY, None)
 
-		scrollbar = gtk.VScrollbar(terminal.get_adjustment())
-		window.terminal_pane.pack_start(scrollbar, False, False, 0)
+    def update_ui(self, window):
+        window.get_data(self.WINDOW_DATA_KEY).update_ui()
 
-		window.terminal_pane.show_all()
-
-		image = gtk.Image()
-		image.set_from_icon_name("gnome-terminal", gtk.ICON_SIZE_MENU)
-		bottom = window.get_bottom_panel()
-		bottom.add_item(window.terminal_pane, "Terminal", image)
-
-	def deactivate(self, window):
-		bottom = window.get_bottom_panel()
-		bottom.remove_item(window.terminal_pane)
-
-	def update_ui(self, window):
-		pass
+# ex:ts=4:et: Let's conform to PEP8
