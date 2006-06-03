@@ -72,9 +72,9 @@ ALL_PLUGINS="showtabbar charmap"
 USEFUL_PLUGINS="showtabbar charmap"
 DEFAULT_PLUGINS="showtabbar charmap"
 
-PYTHON_ALL_PLUGINS="colorpicker joinlines terminal"
-PYTHON_USEFUL_PLUGINS="colorpicker joinlines terminal"
-PYTHON_DEFAULT_PLUGINS="colorpicker joinlines terminal"
+PYTHON_ALL_PLUGINS="colorpicker joinlines smartspaces terminal"
+PYTHON_USEFUL_PLUGINS="colorpicker joinlines smartspaces terminal"
+PYTHON_DEFAULT_PLUGINS="colorpicker joinlines smartspaces terminal"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
@@ -416,6 +416,7 @@ plugins/charmap/Makefile
 plugins/colorpicker/Makefile
 plugins/joinlines/Makefile
 plugins/showtabbar/Makefile
+plugins/smartspaces/Makefile
 plugins/terminal/Makefile
 po/Makefile.in])
 
