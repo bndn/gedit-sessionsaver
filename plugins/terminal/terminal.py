@@ -148,9 +148,8 @@ class GeditTerminal(gtk.HBox):
         if event is not None:
 	        menu.popup(None, None, None, event.button, event.time)
         else:
-            # FIXME: that util function is not binded correctly -> exception
             menu.popup(None, None,
-                       gedit.utils.menu_position_under_widget,
+                       lambda m: gedit.utils.menu_position_under_widget(m, self),
                        0, gtk.get_current_event_time())
             menu.select_first(False)        
 
