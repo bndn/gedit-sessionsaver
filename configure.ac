@@ -7,6 +7,7 @@ AC_INIT(gedit-plugins, 2.15.2, http://bugzilla.gnome.org/enter_bug.cgi?product=g
 
 AC_CONFIG_SRCDIR([plugins])
 AC_CONFIG_MACRO_DIR([m4])
+AC_PREFIX_PROGRAM([gedit])
 
 AC_SUBST(GEDIT_PLUGINS_MAJOR)
 
@@ -50,7 +51,7 @@ PKG_CHECK_MODULES(GEDIT, [
 	glib-2.0 >= 2.8.0
 	gtk+-2.0 >= 2.8.0
 	gtksourceview-1.0 >= 1.2.0
-	gedit-2.14 >= 2.15.2
+	gedit-2.14 >= 2.14.2
 	libglade-2.0 >= 2.4.0
 	gnome-vfs-2.0 >= 2.13.4
 ])
@@ -94,8 +95,9 @@ fi
 AC_ARG_WITH([plugins],
 [  --with-plugins=plugin1,plugin2,...
 			  build the specified plugins. Available:
-			  $ALL_PLUGINS,
-			  as well as the aliases default, all, and really-all],
+			  charmap, colorpicker, joinlines, showtabbar,
+			  smartspaces, terminal, as well as the aliases
+			  default, all, and really-all],
 			  [plugins=$with_plugins],
 			  [plugins="default"])
 
@@ -428,6 +430,7 @@ Configuration:
 
 	Source code location:   ${srcdir}
 	Compiler:               ${CC}
+	Prefix:			${prefix}
 	Python Plugins Support: $enable_python
 	Plugins:                $PLUGINS
 	
