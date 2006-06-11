@@ -283,7 +283,7 @@ disabled_plugins=
 # ================================================================
 # Plugin specific checks
 # ================================================================
-function check_plugin_defined() {
+check_plugin_defined() {
 	if echo "$2" | egrep "\b($1)\b" > /dev/null;
 	then
 		return 1
@@ -292,17 +292,17 @@ function check_plugin_defined() {
 	fi
 }
 
-function plugin_defined() {
+plugin_defined() {
 	check_plugin_defined "$1" "$PLUGINS"
 	return $?
 }
 
-function plugin_defined_explicit() {
+plugin_defined_explicit() {
 	check_plugin_defined "$1" "$explicit_plugins"
 	return $?
 }
 
-function undef_plugin() {
+undef_plugin() {
 	if test -z "$disabled_plugins"
 	then
 		disabled_plugins="$1 ($2)"
