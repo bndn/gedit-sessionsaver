@@ -310,13 +310,13 @@ undef_plugin() {
 		disabled_plugins="$disabled_plugins, $1 ($2)"
 	fi
 	
-	PLUGINS=$(echo "$PLUGINS" | sed "s/\(\W\|^\)$1\b//")
+	PLUGINS=$(echo "$PLUGINS" | sed -e "s/[^a-zA-Z0-9_]$1[ \t\r\n\f]\{1,\}/ /" -e "s/[^a-zA-Z0-9_]$1$//" -e "s/^$1[ \t\r\n\f]\{1,\}//")
 }
 
 # ================================================================
 # disable all python plugins if there is no python support
 # ================================================================
-if test "x$enable_python" == "xno"
+if test "x$enable_python" = "xno"
 then
 	for pl in $PYTHON_ALL_PLUGINS
 	do
@@ -328,16 +328,16 @@ fi
 # gucharmap
 # ================================================================
 plugin_defined charmap
-if test "$?" == 1
+if test "$?" = 1
 then
 	PKG_CHECK_MODULES([GUCHARMAP], [
 		gucharmap >= 1.6.0
 	], have_gucharmap=yes, have_gucharmap=no)
 	
-	if test "x$have_gucharmap" == "xno"
+	if test "x$have_gucharmap" = "xno"
 	then
 		plugin_defined_explicit charmap
-		if test "$?" == 1
+		if test "$?" = 1
 		then
 			AC_MSG_ERROR([gucharmap could not be found, needed to built charmap plugin])
 		else
@@ -352,11 +352,11 @@ fi
 # Terminal plugin vte check
 # ================================================================
 plugin_defined terminal
-if test "$?" == 1
+if test "$?" = 1
 then
 	AC_MSG_CHECKING([for python-vte module])
 
-	if $PYTHON -c "import vte" &>/dev/null; 
+	if $PYTHON -c "import vte" >/dev/null 2>&1; 
 	then
 		AC_MSG_RESULT([yes])
 	else
@@ -364,7 +364,7 @@ then
 		AC_MSG_RESULT([no])
 		
 		plugin_defined_explicit terminal
-		if test "$?" == 1
+		if test "$?" = 1
 		then
 			AC_MSG_ERROR([the python vte module could not be found, needed to built terminal plugin])
 		else
