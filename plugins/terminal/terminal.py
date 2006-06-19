@@ -133,6 +133,7 @@ class GeditTerminal(gtk.HBox):
 
         item = gtk.ImageMenuItem(gtk.STOCK_COPY)
         item.connect("activate", lambda menu_item: self._vte.copy_clipboard())
+        item.set_sensitive(self._vte.get_has_selection())
         menu.append(item)
 
         item = gtk.ImageMenuItem(gtk.STOCK_PASTE)
