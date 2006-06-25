@@ -1,5 +1,6 @@
 # Swedish messages for gedit-plugins. 
-# Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004 Free Software Foundation, Inc.
+# Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2006 Free Software Foundation, Inc.
+# Daniel Nylander <po@danielnylander.se>, 2006.
 # Martin Wahlen <mva@sslug.dk>, 1998.
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 1999, 2000.
 # Andreas Hyden <a.hyden@cyberpoint.se>, 2000.
@@ -10,275 +11,254 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
-"POT-Creation-Date: 2004-02-24 21:43+0100\n"
-"PO-Revision-Date: 2004-02-24 21:44+0100\n"
-"Last-Translator: Christian Rose <menthos@menthos.com>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-06-25 10:41+0200\n"
+"PO-Revision-Date: 2006-06-25 17:20+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "_ASCII-tabell"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:253
+msgid "Character Map"
+msgstr "Teckenkarta"
 
-#: plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Visa ett dialogfönster som innehåller en ASCII-tabell"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr "Infoga specialtecken genom att klicka på dem."
 
-#: plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Tecken"
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+msgid "Color Picker"
+msgstr "Färgväljare"
 
-#: plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "Dec"
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
+msgstr "Välj en färg från en dialog och infoga dess hexadecimala motsvarighet."
 
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "Hex"
+#: ../plugins/colorpicker/colorpicker.py:68
+msgid "_Color picker"
+msgstr "_Färgväljare"
 
-#: plugins/ASCII/ascii.c:324
-msgid "Name"
-msgstr "Namn"
+#: ../plugins/colorpicker/colorpicker.py:69
+msgid "Pick a color from a dialog"
+msgstr "Välj en färg från en dialog"
 
-#: plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
-msgstr "ASCII-tabell"
+#: ../plugins/colorpicker/colorpicker.py:215
+msgid "Color picker"
+msgstr "Färgväljare"
 
-#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "_Infoga tecken"
+#: ../plugins/colorpicker/colorpicker.py:223
+msgid "_Insert"
+msgstr "_Infoga"
 
-#: plugins/ASCII/asciitable.glade2.h:1
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
-msgid "ASCII table"
-msgstr "ASCII-tabell"
+#: ../plugins/joinlines/joinlines.py:60
+msgid "_Join Lines"
+msgstr "_Sammanfoga rader"
 
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
-msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-msgstr ""
-"Denna insticksmodul visar ett popupfönster som innehåller en ASCII-tabell."
+#: ../plugins/joinlines/joinlines.py:61
+msgid "Join the selected lines"
+msgstr "Sammanfoga de markerade raderna"
 
-#. AFAIK, all cvs commit messages start with this
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "Öppna CVS Chan_geLog-filer"
+#: ../plugins/joinlines/joinlines.py:63
+msgid "_Split Lines"
+msgstr "_Dela rader"
 
-#: plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "Söker efter ChangeLog-filer i det aktuella dokumentet och öppnar dem"
+#: ../plugins/joinlines/joinlines.py:64
+msgid "Split the selected lines"
+msgstr "Dela upp de markerade rader"
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
-msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-msgstr ""
-"En insticksmodul som öppnar ChangeLog-filer som hittas i CVS commit-"
-"meddelanden."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+msgid "Tab_bar"
+msgstr "Tabulator_rad"
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
-msgid "CVS ChangeLog"
-msgstr "CVS-ChangeLog"
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+msgid "Show or hide the tabbar in the current window"
+msgstr "Visa eller dölj tabulatorraden i det aktuella fönstret"
 
-#: plugins/diff/diff.c:64
-msgid "Co_mpare Files..."
-msgstr "_Jämför filer..."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+msgid "Tabbar is Visible"
+msgstr "Tabulatorraden är synlig"
 
-#: plugins/diff/diff.c:67
-msgid "Makes a diff file from two documents or files"
-msgstr "Gör en diff-fil från två dokument eller filer"
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+msgid "Whether the tabbar should be visible in editing windows."
+msgstr "Huruvida tabulatorraden ska vara synlig i redigeringsfönster."
 
-#. Create the dialog
-#: plugins/diff/diff.c:270 plugins/diff/diff.gedit-plugin.desktop.in.h:1
-msgid "Compare Files"
-msgstr "Jämför filer"
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+msgid "Add a menu entry to show/hide the tabbar."
+msgstr "Lägg till en menypost för att visa/dölja tabulatorraden."
 
-#: plugins/diff/diff.c:284
-msgid "C_ompare"
-msgstr "J_ämför"
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+msgid "Show/Hide Tabbar"
+msgstr "Visa/Dölj tabulatorrad"
 
-#: plugins/diff/diff.c:511
-msgid "Executed command"
-msgstr "Kört kommando"
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr "Glöm att du inte använder tabulatorer."
 
-#: plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "De två dokument du markerade är samma."
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+msgid "Smart Spaces"
+msgstr "Smarta blanksteg"
 
-#: plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Den \"första\" filen du valde finns inte.\n"
-"\n"
-"Var vänlig och ange en giltig fil."
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr "Bädda in en terminal i bottenpanelen."
 
-#: plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Den \"andra\" filen du valde finns inte.\n"
-"\n"
-"Var vänlig och ange en giltig fil."
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+msgid "Embedded Terminal"
+msgstr "Inbäddad terminal"
 
-#: plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "De två filerna du valde är samma."
-
-#: plugins/diff/diff.c:694
-msgid "The \"first\" document contains no text."
-msgstr "Det \"första\" dokumentet innehåller ingen text."
-
-#: plugins/diff/diff.c:728
-msgid "The \"second\" document contains no text."
-msgstr "Det \"andra\" dokumentet innehåller ingen text."
-
-#. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:754
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"Kan inte jämföra de valda dokumenten.\n"
-"\n"
-"gedit kunde inte skapa en temporär fil."
-
-#: plugins/diff/diff.c:778 plugins/diff/diff.c:791
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"Kan inte jämföra de valda dokumenten.\n"
-"\n"
-"Fel vid körning av diff-kommandot."
-
-#: plugins/diff/diff.c:813
-msgid "No differences were found between the selected documents."
-msgstr "Inga skillnader hittades mellan de valda dokumenten."
-
-#: plugins/diff/diff.c:854
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"Kan inte jämföra de valda dokumenten.\n"
-"\n"
-"Resultatet innehåller ogiltig UTF-8-data."
-
-#: plugins/diff/diff.glade2.h:1
-msgid "*"
-msgstr "*"
-
-#: plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Välj filerna som ska jämföras."
-
-#: plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Jämför filer..."
-
-#: plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "F_rån dokument"
-
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Första"
-
-#: plugins/diff/diff.glade2.h:6
-msgid "First file from disk"
-msgstr "Första fil från disk"
-
-#: plugins/diff/diff.glade2.h:7
-msgid "First file from open document"
-msgstr "Första fil från öppet dokument"
-
-#: plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "Från _dokument"
-
-#: plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "Från en _fil på disk"
-
-#: plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "Från en fil _på disk"
-
-#: plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "Ignorera _blanksteg (flaggan -b)"
-
-#: plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr "Observera att denna flagga endast stöds av GNU diff"
-
-#: plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Andra"
-
-#: plugins/diff/diff.glade2.h:14
-msgid "Second file from disk"
-msgstr "Andra fil från disk"
-
-#: plugins/diff/diff.glade2.h:15
-msgid "Second file from open document"
-msgstr "Andra fil från öppet dokument"
-
-#: plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr "Välj den \"första\" filen..."
-
-#: plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr "Välj den \"andra\" filen..."
-
-#: plugins/diff/diff.glade2.h:18
-msgid "Select the first file to compare"
-msgstr "Välj första filen att jämföra"
-
-#: plugins/diff/diff.glade2.h:19
-msgid "Select the first open document to compare"
-msgstr "Välj första öppna dokumentet att jämföra"
-
-#: plugins/diff/diff.glade2.h:20
-msgid "Select the second file to compare"
-msgstr "Välj den andra filen att jämföra"
-
-#: plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr "Välj det andra öppna dokumentet att jämföra"
-
-#: plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Använd det _universella utdataformatet (flaggan -u)"
-
-#: plugins/diff/diff.gedit-plugin.desktop.in.h:2
-msgid ""
-"The Compare Files plugin uses the \"diff\" program to compare two documents "
-"or files on disk."
-msgstr ""
-"Insticksmodulen \"Jämför filer\" använder programmet \"diff\" för att "
-"jämföra två dokument eller filer på disken."
-
+#~ msgid "_ASCII Table"
+#~ msgstr "_ASCII-tabell"
+#~ msgid "Pop-up a dialog containing an ASCII Table"
+#~ msgstr "Visa ett dialogfönster som innehåller en ASCII-tabell"
+#~ msgid "Char"
+#~ msgstr "Tecken"
+#~ msgid "Dec#"
+#~ msgstr "Dec"
+#~ msgid "Hex#"
+#~ msgstr "Hex"
+#~ msgid "Name"
+#~ msgstr "Namn"
+#~ msgid "ASCII Table"
+#~ msgstr "ASCII-tabell"
+#~ msgid "_Insert char"
+#~ msgstr "_Infoga tecken"
+#~ msgid "ASCII table"
+#~ msgstr "ASCII-tabell"
+#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+#~ msgstr ""
+#~ "Denna insticksmodul visar ett popupfönster som innehåller en ASCII-tabell."
+#~ msgid "Open CVS Chan_geLogs"
+#~ msgstr "Öppna CVS Chan_geLog-filer"
+#~ msgid "Searches for ChangeLogs in the current document and opens them"
+#~ msgstr ""
+#~ "Söker efter ChangeLog-filer i det aktuella dokumentet och öppnar dem"
+#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+#~ msgstr ""
+#~ "En insticksmodul som öppnar ChangeLog-filer som hittas i CVS commit-"
+#~ "meddelanden."
+#~ msgid "CVS ChangeLog"
+#~ msgstr "CVS-ChangeLog"
+#~ msgid "Co_mpare Files..."
+#~ msgstr "_Jämför filer..."
+#~ msgid "Makes a diff file from two documents or files"
+#~ msgstr "Gör en diff-fil från två dokument eller filer"
+#~ msgid "Compare Files"
+#~ msgstr "Jämför filer"
+#~ msgid "C_ompare"
+#~ msgstr "J_ämför"
+#~ msgid "Executed command"
+#~ msgstr "Kört kommando"
+#~ msgid "The two documents you selected are the same."
+#~ msgstr "De två dokument du markerade är samma."
+#~ msgid ""
+#~ "The \"first\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Den \"första\" filen du valde finns inte.\n"
+#~ "\n"
+#~ "Var vänlig och ange en giltig fil."
+#~ msgid ""
+#~ "The \"second\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Den \"andra\" filen du valde finns inte.\n"
+#~ "\n"
+#~ "Var vänlig och ange en giltig fil."
+#~ msgid "The two files you selected are the same."
+#~ msgstr "De två filerna du valde är samma."
+#~ msgid "The \"first\" document contains no text."
+#~ msgstr "Det \"första\" dokumentet innehåller ingen text."
+#~ msgid "The \"second\" document contains no text."
+#~ msgstr "Det \"andra\" dokumentet innehåller ingen text."
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "gedit could not create a temporary file."
+#~ msgstr ""
+#~ "Kan inte jämföra de valda dokumenten.\n"
+#~ "\n"
+#~ "gedit kunde inte skapa en temporär fil."
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "Error executing the diff command."
+#~ msgstr ""
+#~ "Kan inte jämföra de valda dokumenten.\n"
+#~ "\n"
+#~ "Fel vid körning av diff-kommandot."
+#~ msgid "No differences were found between the selected documents."
+#~ msgstr "Inga skillnader hittades mellan de valda dokumenten."
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "The result contains invalid UTF-8 data."
+#~ msgstr ""
+#~ "Kan inte jämföra de valda dokumenten.\n"
+#~ "\n"
+#~ "Resultatet innehåller ogiltig UTF-8-data."
+#~ msgid "*"
+#~ msgstr "*"
+#~ msgid "Choose the files to compare."
+#~ msgstr "Välj filerna som ska jämföras."
+#~ msgid "Compare files..."
+#~ msgstr "Jämför filer..."
+#~ msgid "F_rom document"
+#~ msgstr "F_rån dokument"
+#~ msgid "First"
+#~ msgstr "Första"
+#~ msgid "First file from disk"
+#~ msgstr "Första fil från disk"
+#~ msgid "First file from open document"
+#~ msgstr "Första fil från öppet dokument"
+#~ msgid "From _document"
+#~ msgstr "Från _dokument"
+#~ msgid "From a _file on disk"
+#~ msgstr "Från en _fil på disk"
+#~ msgid "From a file o_n disk"
+#~ msgstr "Från en fil _på disk"
+#~ msgid "Ignore _blanks (-b option)"
+#~ msgstr "Ignorera _blanksteg (flaggan -b)"
+#~ msgid "Note that this option is only supported by GNU diff"
+#~ msgstr "Observera att denna flagga endast stöds av GNU diff"
+#~ msgid "Second"
+#~ msgstr "Andra"
+#~ msgid "Second file from disk"
+#~ msgstr "Andra fil från disk"
+#~ msgid "Second file from open document"
+#~ msgstr "Andra fil från öppet dokument"
+#~ msgid "Select the \"first\" file..."
+#~ msgstr "Välj den \"första\" filen..."
+#~ msgid "Select the \"second\" file..."
+#~ msgstr "Välj den \"andra\" filen..."
+#~ msgid "Select the first file to compare"
+#~ msgstr "Välj första filen att jämföra"
+#~ msgid "Select the first open document to compare"
+#~ msgstr "Välj första öppna dokumentet att jämföra"
+#~ msgid "Select the second file to compare"
+#~ msgstr "Välj den andra filen att jämföra"
+#~ msgid "Select the second open document to compare"
+#~ msgstr "Välj det andra öppna dokumentet att jämföra"
+#~ msgid "Use the _unified output format (-u option)"
+#~ msgstr "Använd det _universella utdataformatet (flaggan -u)"
+#~ msgid ""
+#~ "The Compare Files plugin uses the \"diff\" program to compare two "
+#~ "documents or files on disk."
+#~ msgstr ""
+#~ "Insticksmodulen \"Jämför filer\" använder programmet \"diff\" för att "
+#~ "jämföra två dokument eller filer på disken."
 #~ msgid "gedit application"
 #~ msgstr "gedit-program"
-
 #~ msgid "gedit automation factory"
 #~ msgstr "gedit-automatikfabrik"
-
 #~ msgid "Edit text files"
 #~ msgstr "Redigera textfiler"
-
 #~ msgid "Text Editor"
 #~ msgstr "Textredigerare"
-
 #~ msgid ""
 #~ "A custom font that will be used for the editing area. This will only take "
 #~ "effect if the \"Use Default Font\" option is turned off."
@@ -286,78 +266,60 @@ msgstr ""
 #~ "Ett anpassat typsnitt som används för redigeringsytan. Detta kommer "
 #~ "endast att ha effekt om alternativet \"Använd standardtypsnitt\" är "
 #~ "frånslaget."
-
 #~ msgid "Auto Save"
 #~ msgstr "Spara automatiskt"
-
 #~ msgid "Auto Save Interval"
 #~ msgstr "Intervall för automatiskt sparande"
-
 #~ msgid "Auto indent"
 #~ msgstr "Automatiskt indrag"
-
 #~ msgid "Background Color"
 #~ msgstr "Bakgrundsfärg"
-
 #~ msgid ""
 #~ "Background color for selected text in the editing area. This will only "
 #~ "take effect if the \"Use Default Colors\" option is turned off."
 #~ msgstr ""
 #~ "Bakgrundsfärg för markerad text i redigeringsytan. Detta kommer endast "
 #~ "att ha effekt om alternativet \"Använd standardfärger\" är frånslaget."
-
 #~ msgid ""
 #~ "Background color for unselected text in the editing area. This will only "
 #~ "take effect if the \"Use Default Colors\" option is turned off."
 #~ msgstr ""
 #~ "Bakgrundsfärg för omarkerad text i redigeringsytan. Detta kommer endast "
 #~ "att ha effekt om alternativet \"Använd standardfärger\" är frånslaget."
-
 #~ msgid "Backup Copy Extension"
 #~ msgstr "Ändelse på säkerhetskopior"
-
 #~ msgid "Body Font for Printing"
 #~ msgstr "Texttypsnitt för utskrift"
-
 #~ msgid "Create Backup Copies"
 #~ msgstr "Skapa säkerhetskopior"
-
 #~ msgid "Display Line Numbers"
 #~ msgstr "Visa radnummer"
-
 #~ msgid "Editor Font"
 #~ msgstr "Redigerartypsnitt"
-
 #~ msgid "Encoding for Saving"
 #~ msgstr "Kodning vid sparande"
-
 #~ msgid "Encodings"
 #~ msgstr "Kodningar"
-
 #~ msgid ""
 #~ "Extension or suffix to use for backup file names. This will only take "
 #~ "effect if the \"Create Backup Copies\" option is turned on."
 #~ msgstr ""
 #~ "Ändelse eller suffix att använda i filnamnen på säkerhetskopior. Detta "
 #~ "har endast effekt om alternativet \"Skapa säkerhetskopior\" är påslaget."
-
 #~ msgid ""
 #~ "Foreground color for selected text in the editing area. This will only "
 #~ "take effect if the \"Use Default Colors\" option is turned off."
 #~ msgstr ""
 #~ "Förgrundsfärg för markerad text i redigeringsytan. Detta har endast "
 #~ "effekt om alternativet \"Använd standardfärger\" är frånslaget."
-
 #~ msgid ""
 #~ "Foreground color for the unselected text in the editing area. This will "
 #~ "only take effect if the \"Use Default Colors\" option is turned off."
 #~ msgstr ""
 #~ "Förgrundsfärg för den omarkerade texten i redigeringsytan. Detta har "
 #~ "endast effekt om alternativet \"Använd standardfärger\" är frånslaget."
-
 #~ msgid "Header Font for Printing"
 #~ msgstr "Sidhuvudstypsnitt för utskrift"
-
 #~ msgid ""
 #~ "If this value is 0, then no line numbers will be inserted when printing a "
 #~ "document. Otherwise, gedit will print line numbers every such number of "
@@ -366,29 +328,20 @@ msgstr ""
 #~ "Om detta värde är 0 kommer inga radnummer att infogas vid utskrift av ett "
 #~ "dokument. Annars kommer gedit att skriva ut radnummer med detta "
 #~ "radintervall."
-
-#~ msgid "Insert spaces"
-#~ msgstr "Infoga blanksteg"
-
 #~ msgid "Line Number Font for Printing"
 #~ msgstr "Radnummerstypsnitt för utskrift"
-
 #~ msgid "Line Wrapping Mode"
 #~ msgstr "Radbrytningsläge"
-
 #~ msgid ""
 #~ "List of encodings used by gedit for reading files not encoded in UTF-8 or "
 #~ "in the current locale encoding."
 #~ msgstr ""
 #~ "Lista med kodningar som används av gedit för att läsa filer som inte är "
 #~ "kodade i UTF-8 eller kodningen för den aktuella lokalen."
-
 #~ msgid "Maximum Recent Files"
 #~ msgstr "Maximalt antal senaste filer"
-
 #~ msgid "Maximum number of actions that gedit will be able to undo or redo."
 #~ msgstr "Maximalt antal åtgärder som gedit kan ångra eller göra om."
-
 #~ msgid ""
 #~ "Number of minutes after which gedit will automatically save modified "
 #~ "files. This will only take effect if the \"Auto Save\" option is turned "
@@ -397,28 +350,20 @@ msgstr ""
 #~ "Antal minuter efter vilket gedit kommer att automatiskt spara ändrade "
 #~ "filer. Detta har endast effekt då alternativet \"Spara automatiskt\" är "
 #~ "påslaget."
-
 #~ msgid "Print Header"
 #~ msgstr "Skriv ut sidhuvud"
-
 #~ msgid "Print Line Numbers"
 #~ msgstr "Skriv ut radnummer"
-
 #~ msgid "Printing Line Wrapping Mode"
 #~ msgstr "Radbrytningsläge för utskrift"
-
 #~ msgid "Selected Text Color"
 #~ msgstr "Färg på markerad text"
-
 #~ msgid "Selection Color"
 #~ msgstr "Markeringsfärg"
-
 #~ msgid "Show Cursor Position"
 #~ msgstr "Visa markörposition"
-
 #~ msgid "Show Overwrite Mode"
 #~ msgstr "Visa överskrivningsläge"
-
 #~ msgid ""
 #~ "Specifies how to wrap long lines for printing. Use \"GTK_WRAP_NONE\" for "
 #~ "no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
@@ -431,7 +376,6 @@ msgstr ""
 #~ "ordgränser och \"GTK_WRAP_CHAR\" för radbrytning vid enskilda "
 #~ "teckengränser. Observera att det görs skillnad på versaler och gemener i "
 #~ "värdena, så försäkra dig om att de visas exakt som de visas här."
-
 #~ msgid ""
 #~ "Specifies how to wrap long lines in the editing area. Use \"GTK_WRAP_NONE"
 #~ "\" for no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, "
@@ -444,13 +388,11 @@ msgstr ""
 #~ "radbrytning vid ordgränser och \"GTK_WRAP_CHAR\" för radbrytning vid "
 #~ "enskilda teckengränser. Observera att det görs skillnad på versaler och "
 #~ "gemener i värdena, så försäkra dig om att de visas exakt som de visas här."
-
 #~ msgid ""
 #~ "Specifies the font to use for a document's body when printing documents."
 #~ msgstr ""
 #~ "Anger det typsnitt som ska användas för dokumentets text vid utskrift av "
 #~ "dokument."
-
 #~ msgid ""
 #~ "Specifies the font to use for line numbers when printing. This will only "
 #~ "take effect if the \"Print Line Numbers\" option is non-zero."
@@ -458,7 +400,6 @@ msgstr ""
 #~ "Anger det typsnitt som ska användas för radnummer vid utskrift. Detta "
 #~ "kommer endast att ha effekt om alternativet \"Skriv ut radnummer\" inte "
 #~ "är noll."
-
 #~ msgid ""
 #~ "Specifies the font to use for page headers when printing a document. This "
 #~ "will only take effect if the \"Print Header\" option is turned on."
@@ -466,22 +407,18 @@ msgstr ""
 #~ "Anger det typsnitt som ska användas för sidhuvud vid utskrift av ett "
 #~ "dokument. Detta kommer endast att ha effekt om alternativet \"Skriv ut "
 #~ "huvud\" är påslaget."
-
 #~ msgid ""
 #~ "Specifies the maximum number of recently opened files that will be "
 #~ "displayed in the \"Recent Files\" submenu."
 #~ msgstr ""
 #~ "Anger det maximala antalet senast öppnade filer som kommer att visas i "
 #~ "undermenyn \"Senaste filer\"."
-
 #~ msgid ""
 #~ "Specifies the number of spaces that should be displayed instead of Tab "
 #~ "characters."
 #~ msgstr "Anger antalet blanksteg som ska visas istället för tabulatortecken."
-
 #~ msgid "Status Bar is Visible"
 #~ msgstr "Statusrad är synlig"
-
 #~ msgid ""
 #~ "Style for the toolbar buttons. Possible values are \"GEDIT_TOOLBAR_SYSTEM"
 #~ "\" to use the system's default style, \"GEDIT_TOOLBAR_ICONS\" to display "
@@ -497,13 +434,10 @@ msgstr ""
 #~ "prioriterad text bredvid ikoner. Observera att det görs skillnad på "
 #~ "versaler och gemener i värdena, så försäkra dig om att de visas exakt som "
 #~ "de visas här."
-
 #~ msgid "Tab Size"
 #~ msgstr "Tabulatorstorlek"
-
 #~ msgid "Text Color"
 #~ msgstr "Textfärg"
-
 #~ msgid ""
 #~ "The encoding method to use for saving files. Possible values are "
 #~ "\"GEDIT_SAVE_ALWAYS_UTF8\" for mandatory UTF-8 saving, "
@@ -528,22 +462,14 @@ msgstr ""
 #~ "Om konverteringen lyckas kommer den att användas. Annars kommer UTF-8 att "
 #~ "användas. Observera att det görs skillnad på versaler och gemener i "
 #~ "värdena, så försäkra dig om att de visas exakt så som de visas här."
-
 #~ msgid "Toolbar Buttons Style"
 #~ msgstr "Stil på verktygsradsknappar"
-
-#~ msgid "Toolbar is Visible"
-#~ msgstr "Verktygsraden är synlig"
-
 #~ msgid "Undo Actions Limit"
 #~ msgstr "Gräns för ångraåtgärder"
-
 #~ msgid "Use Default Colors"
 #~ msgstr "Använd standardfärger"
-
 #~ msgid "Use Default Font"
 #~ msgstr "Använd standardtypsnitt"
-
 #~ msgid ""
 #~ "Whether gedit should automatically save modified files after a time "
 #~ "interval. You can set the time interval with the \"Auto Save Interval\" "
@@ -552,7 +478,6 @@ msgstr ""
 #~ "Huruvida gedit automatiskt ska spara ändrade filer efter ett "
 #~ "tidsintervall. Du kan ange tidsintervallet med alternativet \"Intervall "
 #~ "för automatiskt sparande\"."
-
 #~ msgid ""
 #~ "Whether gedit should create backup copies for the files it saves. You can "
 #~ "set the backup file extension with the \"Backup Copy Extension\" option."
@@ -560,26 +485,20 @@ msgstr ""
 #~ "Huruvida gedit ska skapa säkerhetskopior för de filer som det sparar. Du "
 #~ "kan ange filändelsen för säkerhetskopior med alternativet \"Ändelse på "
 #~ "säkerhetskopior\"."
-
 #~ msgid "Whether gedit should display line numbers in the editing area."
 #~ msgstr "Huruvida gedit ska visa radnummer i redigeringsytan."
-
 #~ msgid "Whether gedit should enable auto indentation."
 #~ msgstr "Huruvida gedit ska aktivera automatiskt indrag."
-
 #~ msgid ""
 #~ "Whether gedit should include a document header when printing documents."
 #~ msgstr ""
 #~ "Huruvida gedit ska inkludera ett dokumenthuvud vid utskrift av dokument."
-
 #~ msgid "Whether gedit should insert spaces instead of tabs."
 #~ msgstr "Huruvida gedit ska infoga blanksteg istället för tabulatortecken."
-
 #~ msgid ""
 #~ "Whether the status bar at the bottom of editing windows should be visible."
 #~ msgstr ""
 #~ "Huruvida statusraden i nederkanten på redigeringsfönster ska vara synlig."
-
 #~ msgid ""
 #~ "Whether the status bar should show the cursor position in editing "
 #~ "windows. Make sure you turn on the \"Status Bar is Visible\" option for "
@@ -588,7 +507,6 @@ msgstr ""
 #~ "Huruvida statusraden ska visa markörpositionen i redigeringsfönster. "
 #~ "Försäkra dig om att du slår på alternativet \"Statusrad är synlig\" för "
 #~ "att detta ska ha effekt."
-
 #~ msgid ""
 #~ "Whether the status bar should show the insert/overwrite mode in editing "
 #~ "windows. Make sure you turn on the \"Status Bar is Visible\" option for "
@@ -597,10 +515,6 @@ msgstr ""
 #~ "Huruvida statusraden ska visa infognings-/överskrivningsläget i "
 #~ "redigeringsfönster. Försäkra dig om att alternativet \"Statusraden är "
 #~ "synlig\" är påslaget för att detta ska ha effekt."
-
-#~ msgid "Whether the toolbar should be visible in editing windows."
-#~ msgstr "Huruvida verktygsraden ska vara synlig i redigeringsfönster."
-
 #~ msgid ""
 #~ "Whether to use the system's default colors for the editing area. If this "
 #~ "option is turned off, then the colors of the editing area will be those "
@@ -611,7 +525,6 @@ msgstr ""
 #~ "detta alternativ är frånslaget kommer färgerna i redigeringsytan att vara "
 #~ "de som är angivna i alternativen \"Bakgrundsfärg\", \"Textfärg\", \"Färg "
 #~ "på markerad text\" och \"Markeringsfärg\"."
-
 #~ msgid ""
 #~ "Whether to use the system's default font for editing text instead of a "
 #~ "font specific to gedit. If this option is turned off, then the font named "
@@ -621,46 +534,32 @@ msgstr ""
 #~ "istället för ett typsnitt som är specifikt för gedit. Om detta alternativ "
 #~ "är frånslaget kommer typsnittet som är angivet i alternativet "
 #~ "\"Redigerartypsnitt\" att användas istället för systemtypsnittet."
-
 #~ msgid "_Document Statistics"
 #~ msgstr "_Dokumentstatistik"
-
 #~ msgid "Get statistic info on current document"
 #~ msgstr "Få statistikinformation om det aktuella dokumentet"
-
 #~ msgid "Document Statistics"
 #~ msgstr "Dokumentstatistik"
-
 #~ msgid "_Update"
 #~ msgstr "_Uppdatera"
-
 #~ msgid "0"
 #~ msgstr "0"
-
 #~ msgid "Bytes"
 #~ msgstr "Byte"
-
 #~ msgid "Characters (no spaces)"
 #~ msgstr "Tecken (utan blanksteg)"
-
 #~ msgid "Characters (with spaces)"
 #~ msgstr "Tecken (inklusive blanksteg)"
-
 #~ msgid "File Name"
 #~ msgstr "Filnamn"
-
 #~ msgid "Lines"
 #~ msgstr "Rader"
-
 #~ msgid "Update"
 #~ msgstr "Uppdatera"
-
 #~ msgid "Words"
 #~ msgstr "Ord"
-
 #~ msgid "gedit: Document Info plugin"
 #~ msgstr "gedit: Insticksmodul för dokumentinformation"
-
 #~ msgid ""
 #~ "The Document Statistics plugin analyzes the current document and "
 #~ "determines the number of words, lines, characters and non-space "
@@ -669,43 +568,30 @@ msgstr ""
 #~ "Insticksmodulen för dokumentstatistik analyserar det aktuella dokumentet "
 #~ "och avgör antalet ord, rader, tecken och icke-blanka tecken i det och "
 #~ "visar resultatet."
-
 #~ msgid "Insert User Na_me"
 #~ msgstr "Infoga användarna_mn"
-
 #~ msgid "Insert the user name at the cursor position"
 #~ msgstr "Infoga användarnamnet vid markörpositionen"
-
 #~ msgid "Inserts the user name at the cursor position."
 #~ msgstr "Infogar användarnamnet vid markörpositionen."
-
 #~ msgid "User name"
 #~ msgstr "Användarnamn"
-
 #~ msgid "_Run Command..."
 #~ msgstr "_Kör kommando..."
-
 #~ msgid "Run a command"
 #~ msgstr "Kör ett kommando"
-
 #~ msgid "Stopped"
 #~ msgstr "Stoppad"
-
 #~ msgid "An error occurs while running the selected command."
 #~ msgstr "Ett fel uppstår vid körning av det valda kommandot."
-
 #~ msgid "Run Command"
 #~ msgstr "Kör kommando"
-
 #~ msgid "_Run"
 #~ msgstr "_Kör"
-
 #~ msgid "Done"
 #~ msgstr "Klar"
-
 #~ msgid "Failed"
 #~ msgstr "Misslyckades"
-
 #~ msgid ""
 #~ "The shell command entry is empty.\n"
 #~ "\n"
@@ -714,7 +600,6 @@ msgstr ""
 #~ "Fältet för skalkommando är tomt.\n"
 #~ "\n"
 #~ "Var vänlig och ange ett giltigt skalkommando."
-
 #~ msgid ""
 #~ "Error parsing the shell command.\n"
 #~ "\n"
@@ -723,397 +608,263 @@ msgstr ""
 #~ "Fel vid tolkning av skalkommandot.\n"
 #~ "\n"
 #~ "Ange ett giltigt skalkommando."
-
 #~ msgid "Executing command"
 #~ msgstr "Kör kommando"
-
 #~ msgid "Co_mmand:"
 #~ msgstr "Ko_mmando:"
-
 #~ msgid "Select the working directory..."
 #~ msgstr "Ange arbetskatalogen..."
-
 #~ msgid "_Show results in Output Window"
 #~ msgstr "_Visa resultat i utdatafönster"
-
 #~ msgid "_Working directory:"
 #~ msgstr "_Arbetskatalog:"
-
 #~ msgid "gedit: Shell Output plugin"
 #~ msgstr "gedit: Insticksmodul för skalutdata"
-
 #~ msgid ""
 #~ "Execute an external program and eventually grabs its output in the output "
 #~ "window."
 #~ msgstr "Kör ett externt program och infoga dess utdata i utdatafönstret."
-
 #~ msgid "Shell command"
 #~ msgstr "Skalkommando"
-
 #~ msgid "Tag list plugin"
 #~ msgstr "Insticksmodul för tagglistor"
-
 #~ msgid "Select the group of tags you want to use"
 #~ msgstr "Välj den grupp med taggar som du vill använda"
-
 #~ msgid "Tag Groups Combo"
 #~ msgstr "Taggruppskombo"
-
 #~ msgid "Tags Name List"
 #~ msgstr "Taggnamnslista"
-
 #~ msgid "Double-click on a tag to insert it in the current document"
 #~ msgstr ""
 #~ "Dubbelklicka på en tagg för att infoga det i det aktuella dokumentet"
-
 #~ msgid "Tags"
 #~ msgstr "Taggar"
-
 #~ msgid "Tag _List"
 #~ msgstr "Tagg_lista"
-
 #~ msgid "Show the tag list window"
 #~ msgstr "Visa tagglistefönstret"
-
 #~ msgid "Tag list"
 #~ msgstr "Tagglista"
-
 #~ msgid ""
 #~ "The tag list plugin provides a method to easily insert into a document "
 #~ "commonly used tags/strings without having to type them."
 #~ msgstr ""
 #~ "Tagglisteinsticksmodulen tillhandahåller en metod för att enkelt infoga "
 #~ "vanligt använda taggar/strängar i dokument utan att behöva skriva dem."
-
 #~ msgid "In_sert Date and Time..."
 #~ msgstr "In_foga datum och tid..."
-
 #~ msgid "Insert current date and time at the cursor position"
 #~ msgstr "Infoga aktuellt datum och tid vid markörpositionen"
-
 #~ msgid "Available formats"
 #~ msgstr "Tillgängliga format"
-
 #~ msgid "Configure insert date/time plugin..."
 #~ msgstr "Konfigurera insticksmodulen för infogande av datum/tid..."
-
 #~ msgid "    "
 #~ msgstr "    "
-
 #~ msgid "<span size=\"small\">01/11/2002 17:52:00</span>"
 #~ msgstr "<span size=\"small\">2002-11-01 17.52.00</span>"
-
 #~ msgid "<span weight=\"bold\"> When inserting date/time...</span>"
 #~ msgstr "<span weight=\"bold\"> Vid infogande av datum/tid...</span>"
-
 #~ msgid "Configure date/time plugin"
 #~ msgstr "Konfigurera insticksmodulen för infogande av datum/tid"
-
 #~ msgid "Insert Date and Time"
 #~ msgstr "Infoga datum och tid"
-
 #~ msgid "Use the _selected format"
 #~ msgstr "Använd det _valda formatet"
-
-#~ msgid "_Insert"
-#~ msgstr "_Infoga"
-
 #~ msgid "_Prompt for a format"
 #~ msgstr "_Fråga efter ett format"
-
 #~ msgid "_Use custom format"
 #~ msgstr "_Använd anpassat format"
-
 #~ msgid "Insert Date/Time"
 #~ msgstr "Infoga datum/tid"
-
 #~ msgid "Inserts current date and time at the cursor position."
 #~ msgstr "Infogar aktuellt datum och tid vid markörpositionen."
-
 #~ msgid "_Indent"
 #~ msgstr "_Gör indrag"
-
 #~ msgid "Indent selected lines"
 #~ msgstr "Dra in de markerade raderna"
-
 #~ msgid "U_nindent"
 #~ msgstr "Dra _ut"
-
-#~ msgid "Unindent selected lines"
-#~ msgstr "Dra ut de markerade raderna"
-
 #~ msgid "Indent lines"
 #~ msgstr "Dra in rader"
-
 #~ msgid "Indent or un-indent selected lines."
 #~ msgstr "Dra in eller dra ut de markerade raderna."
-
 #~ msgid "R_emove duplicates"
 #~ msgstr "_Ta bort dubletter"
-
 #~ msgid "S_tart at column:"
 #~ msgstr "_Börja vid kolumn:"
-
 #~ msgid "Sort"
 #~ msgstr "Sortera"
-
 #~ msgid "You cannot undo a sort operation"
 #~ msgstr "Du kan inte ångra en sorteringsåtgärd"
-
 #~ msgid "_Ignore case"
 #~ msgstr "_Gör ingen skillnad på gemener/VERSALER"
-
 #~ msgid "_Reverse order"
 #~ msgstr "_Baklänges"
-
 #~ msgid "_Sort"
 #~ msgstr "_Sortera"
-
 #~ msgid "Sorts a document or selected text."
 #~ msgstr "Sorterar ett dokument eller markerad text."
-
 #~ msgid "(no suggested words)"
 #~ msgstr "(inga föreslagna ord)"
-
 #~ msgid "_More..."
 #~ msgstr "_Mer..."
-
 #~ msgid "_Ignore All"
 #~ msgstr "_Ignorera alla"
-
 #~ msgid "_Add"
 #~ msgstr "_Lägg till"
-
 #~ msgid "_Spelling Suggestions..."
 #~ msgstr "_Stavningsförslag..."
-
 #~ msgid "Check Spelling"
 #~ msgstr "Kontrollera stavning"
-
 #~ msgid "Suggestions"
 #~ msgstr "Förslag"
-
 #~ msgid "(correct spelling)"
 #~ msgstr "(korrigera stavning)"
-
 #~ msgid "Completed spell checking"
 #~ msgstr "Stavningskontrollen färdig"
-
 #~ msgid "Breton"
 #~ msgstr "Bretonska"
-
 #~ msgid "Catalan"
 #~ msgstr "Katalanska"
-
 #~ msgid "Czech"
 #~ msgstr "Tjeckiska"
-
 #~ msgid "Danish"
 #~ msgstr "Danska"
-
 #~ msgid "German (Germany)"
 #~ msgstr "Tyska (Tyskland)"
-
 #~ msgid "German (Swiss)"
 #~ msgstr "Tyska (Schweiz)"
-
 #~ msgid "English (American)"
 #~ msgstr "Engelska (amerikansk)"
-
 #~ msgid "English (British)"
 #~ msgstr "Engelska (brittisk)"
-
 #~ msgid "English (Canadian)"
 #~ msgstr "Engelska (kanadensisk)"
-
 #~ msgid "Esperanto"
 #~ msgstr "Esperanto"
-
 #~ msgid "Spanish"
 #~ msgstr "Spanska"
-
 #~ msgid "Faroese"
 #~ msgstr "Färöiska"
-
 #~ msgid "French (France)"
 #~ msgstr "Franska (Frankrike)"
-
 #~ msgid "French (Swiss)"
 #~ msgstr "Franska (Schweiz)"
-
 #~ msgid "Italian"
 #~ msgstr "Italienska"
-
 #~ msgid "Dutch"
 #~ msgstr "Holländska"
-
 #~ msgid "Norwegian"
 #~ msgstr "Norska"
-
 #~ msgid "Polish"
 #~ msgstr "Polska"
-
 #~ msgid "Portuguese (Portugal)"
 #~ msgstr "Portugisiska (Portugal)"
-
 #~ msgid "Portuguese (Brazilian)"
 #~ msgstr "Portugisiska (brasiliansk)"
-
 #~ msgid "Russian"
 #~ msgstr "Ryska"
-
 #~ msgid "Swedish"
 #~ msgstr "Svenska"
-
 #~ msgid "Default"
 #~ msgstr "Standard"
-
 #~ msgid "Could not find the required widgets inside %s."
 #~ msgstr "Kunde inte hitta de nödvändiga widgetarna i %s."
-
 #~ msgid "Languages"
 #~ msgstr "Språk"
-
 #~ msgid "Checks the spelling of the current document."
 #~ msgstr "Kontrollerar stavningen i det aktuella dokumentet."
-
 #~ msgid "Spell checker"
 #~ msgstr "Stavningskontroll"
-
 #~ msgid "Select the _language of the current document."
 #~ msgstr "Välj _språket i det aktuella dokumentet."
-
 #~ msgid "Set language"
 #~ msgstr "Ställ in språk"
-
 #~ msgid "<b>Language</b>"
 #~ msgstr "<b>Språk</b>"
-
 #~ msgid "<b>word</b>"
 #~ msgstr "<b>ord</b>"
-
 #~ msgid "Add w_ord"
 #~ msgstr "Lägg till _ord"
-
 #~ msgid "Cha_nge"
 #~ msgstr "Ä_ndra"
-
 #~ msgid "Change A_ll"
 #~ msgstr "Ändra a_lla"
-
 #~ msgid "Change _to:"
 #~ msgstr "Ändra _till:"
-
 #~ msgid "Check _Word"
 #~ msgstr "Kontrollera o_rd"
-
 #~ msgid "Check spelling"
 #~ msgstr "Kontrollera stavning"
-
 #~ msgid "Ignore _All"
 #~ msgstr "Ignorera _alla"
-
 #~ msgid "Language:"
 #~ msgstr "Språk:"
-
 #~ msgid "Mispelled word:"
 #~ msgstr "Felstavat ord:"
-
 #~ msgid "User dictionary:"
 #~ msgstr "Användarordbok:"
-
 #~ msgid "_Ignore"
 #~ msgstr "_Ignorera"
-
 #~ msgid "_Suggestions:"
 #~ msgstr "_Förslag:"
-
 #~ msgid "S_ort..."
 #~ msgstr "S_ortera..."
-
 #~ msgid "Sort the current document or selection."
 #~ msgstr "Sortera det aktuella dokument eller markeringen."
-
 #~ msgid "_Check Spelling"
 #~ msgstr "_Kontrollera stavning"
-
 #~ msgid "Check the current document for incorrect spelling"
 #~ msgstr "Kontrollera det aktuella dokumentets stavning"
-
 #~ msgid "_Autocheck Spelling"
 #~ msgstr "Kontrollera stavning _automatiskt"
-
 #~ msgid "Automatically spell-check the current document"
 #~ msgstr "Stavningskontrollera automatiskt det aktuella dokumentet"
-
 #~ msgid "Set _Language"
 #~ msgstr "Ställ in _språk"
-
 #~ msgid "Set the language of the current document"
 #~ msgstr "Ställ in språket på det aktuella dokumentet"
-
 #~ msgid "The document is empty."
 #~ msgstr "Dokumentet är tomt."
-
 #~ msgid "The selected text does not contain mispelled words."
 #~ msgstr "Den markerade texten innehåller inga felstavade ord."
-
 #~ msgid "The document does not contain mispelled words."
 #~ msgstr "Dokumentet innehåller inga felstavade ord."
-
 #~ msgid "Activate %s"
 #~ msgstr "Aktivera %s"
-
 #~ msgid "Go to Line"
 #~ msgstr "Gå till rad"
-
-#~ msgid "_Go to Line"
-#~ msgstr "_Gå till rad"
-
 #~ msgid "The text \"%s\" was not found."
 #~ msgstr "Texten \"%s\" hittades inte."
-
 #~ msgid "Replace"
 #~ msgstr "Ersätt"
-
 #~ msgid "Replace _All"
 #~ msgstr "Ersätt _alla"
-
 #~ msgid "_Replace"
 #~ msgstr "_Ersätt"
-
 #~ msgid "Find"
 #~ msgstr "Sök"
-
 #~ msgid "Found and replaced %d occurences."
 #~ msgstr "Hittade och ersatte %d förekomster."
-
 #~ msgid "Open Location"
 #~ msgstr "Öppna plats"
-
 #~ msgid "Plugin"
 #~ msgstr "Insticksmodul"
-
 #~ msgid "Load"
 #~ msgstr "Läs in"
-
 #~ msgid "Module file name"
 #~ msgstr "Modulfilnamn"
-
 #~ msgid "Author(s)"
 #~ msgstr "Författare"
-
 #~ msgid "Could not find plugin-manager.glade2, reinstall gedit.\n"
 #~ msgstr "Kunde inte hitta plugin-manager.glade2. Installera om gedit.\n"
-
 #~ msgid "Invalid glade file for plugin manager -- not all widgets found.\n"
 #~ msgstr ""
 #~ "Ogiltig glade-fil för insticksmodulhanterare -- alla widgetar hittades "
 #~ "inte.\n"
-
 #~ msgid "Set program location..."
 #~ msgstr "Ställ in programplats..."
-
 #~ msgid ""
 #~ "The %s plugin uses an external program, called <tt>%s</tt>, to perform "
 #~ "its task.\n"
@@ -1124,2557 +875,187 @@ msgstr ""
 #~ "att utföra dess uppgift.\n"
 #~ "\n"
 #~ "Ange sökvägen till programmet <tt>%s</tt>."
-
 #~ msgid "The selected file is not executable."
 #~ msgstr "Den valda filen är inte körbar."
-
 #~ msgid "Font & Colors"
 #~ msgstr "Typsnitt och färger"
-
 #~ msgid "Tabs"
 #~ msgstr "Flikar"
-
 #~ msgid "Wrap Mode"
 #~ msgstr "Radbrytningsläge"
-
 #~ msgid "Auto Indent"
 #~ msgstr "Automatiskt indrag"
-
 #~ msgid "Line Numbers"
 #~ msgstr "Radnummer"
-
 #~ msgid "Open"
 #~ msgstr "Öppna"
-
 #~ msgid "Save"
 #~ msgstr "Spara"
-
 #~ msgid "Undo"
 #~ msgstr "Ångra"
-
 #~ msgid "Page"
 #~ msgstr "Sida"
-
 #~ msgid "Fonts"
 #~ msgstr "Typsnitt"
-
 #~ msgid "Manager"
 #~ msgstr "Hanterare"
-
 #~ msgid "Editor"
 #~ msgstr "Redigerare"
-
 #~ msgid "Print"
 #~ msgstr "Skriv ut"
-
 #~ msgid "Plugins"
 #~ msgstr "Insticksmoduler"
-
 #~ msgid "Cat_egories:"
 #~ msgstr "Kat_egorier:"
-
 #~ msgid "Preferences"
 #~ msgstr "Inställningar"
-
 #~ msgid "Categories"
 #~ msgstr "Kategorier"
-
 #~ msgid "Push this button to select the font to be used by the editor"
 #~ msgstr ""
 #~ "Tryck på denna knapp för att välja det typsnitt som används av redigeraren"
-
 #~ msgid "Push this button to configure text color"
 #~ msgstr "Tryck på denna knapp för att konfigurera textfärg"
-
 #~ msgid "Push this button to configure background color"
 #~ msgstr "Tryck på denna knapp för att konfigurera bakgrundsfärg"
-
 #~ msgid ""
 #~ "Push this button to configure the color in which the selected text should "
 #~ "appear"
 #~ msgstr ""
 #~ "Tryck på denna knapp för att konfigurera den färg som markerad text ska "
 #~ "visas med"
-
 #~ msgid ""
 #~ "Push this button to configure the color in which the selected text should "
 #~ "be marked"
 #~ msgstr ""
 #~ "Tryck på denna knapp för att konfigurera den färg som markerad text ska "
 #~ "vara markerad med"
-
 #~ msgid "Push this button to select the font to be used to print the body"
 #~ msgstr ""
 #~ "Tryck på denna knapp för att välja det typsnitt som ska användas för "
 #~ "utskrift av kroppen."
-
 #~ msgid "Push this button to select the font to be used to print the headers"
 #~ msgstr ""
 #~ "Tryck på denna knapp för att välja det typsnitt som används för utskrift "
 #~ "av huvudena"
-
 #~ msgid "Push this button to select the font to be used to print line numbers"
 #~ msgstr ""
 #~ "Tryck på denna knapp för att välja det typsnitt som används för att "
 #~ "skriva ut radnummer"
-
 #~ msgid "<b>Font</b>"
 #~ msgstr "<b>Typsnitt</b>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Auto Indent</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Automatiskt indrag</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Font &amp; Colors</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Typsnitt och färger</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Fonts</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Typsnitt</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Line Numbers</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Radnummer</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Manager</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Hanterare</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Open</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Öppna</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Page</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Sida</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Save</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Spara</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Tabs</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Flikar</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Undo</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Ångra</span>"
-
 #~ msgid "<span weight=\"bold\" size=\"x-large\">Wrap Mode</span>"
 #~ msgstr "<span weight=\"bold\" size=\"x-large\">Radbrytningsläge</span>"
-
 #~ msgid "<span weight=\"bold\">Colors</span>"
 #~ msgstr "<span weight=\"bold\">Färger</span>"
-
 #~ msgid "<span weight=\"bold\">When saving a new file...</span>"
 #~ msgstr "<span weight=\"bold\">Vid sparande av ny fil...</span>"
-
 #~ msgid "<span weight=\"bold\">When saving an existing file...</span>"
 #~ msgstr "<span weight=\"bold\">Vid sparande av befintlig fil...</span>"
-
 #~ msgid "Add new encodings"
 #~ msgstr "Lägg till nya kodningar"
-
 #~ msgid "Always use U_TF-8 encoding (faster)"
 #~ msgstr "Använd alltid U_TF-8-kodning (snabbare)"
-
 #~ msgid "Always use _UTF-8 encoding (faster)"
 #~ msgstr "Använd alltid _UTF-8-kodning (snabbare)"
-
 #~ msgid "Create a _backup copy of files before saving"
 #~ msgstr "Skapa en s_äkerhetskopia av filen innan den sparas"
-
 #~ msgid "Do not _split words over two lines"
 #~ msgstr "_Dela inte ord över två rader"
-
 #~ msgid "Editor _font: "
 #~ msgstr "Redigerar_typsnitt: "
-
 #~ msgid "Enable _auto indentation"
 #~ msgstr "Aktivera _automatiskt indrag"
-
 #~ msgid "Enable text _wrapping"
 #~ msgstr "Aktivera text_radbrytning"
-
 #~ msgid "Fonts & Colors"
 #~ msgstr "Typsnitt och färger"
-
 #~ msgid "Insert _spaces instead of tabs"
 #~ msgstr "Infoga _blanksteg istället för tabulatortecken"
-
 #~ msgid "LOGO"
 #~ msgstr "LOGOTYP"
-
 #~ msgid "Line _numbers:"
 #~ msgstr "Rad_nummer:"
-
 #~ msgid "Line numbers"
 #~ msgstr "Radnummer"
-
 #~ msgid "Move down"
 #~ msgstr "Flytta ned"
-
 #~ msgid "Move up"
 #~ msgstr "Flytta upp"
-
 #~ msgid "Page he_aders:"
 #~ msgstr "Sidh_uvud:"
-
 #~ msgid "Pick the background color"
 #~ msgstr "Välj bakgrundsfärg"
-
 #~ msgid "Pick the selected text color"
 #~ msgstr "Välj färgen på markerad text"
-
 #~ msgid "Pick the selection color"
 #~ msgstr "Välj markeringsfärgen"
-
 #~ msgid "Pick the text color"
 #~ msgstr "Välj textfärgen"
-
 #~ msgid "Plugin manager"
 #~ msgstr "Insticksmodulhanterare"
-
 #~ msgid "Print _line numbers every"
 #~ msgstr "Skriv ut _radnummer var"
-
 #~ msgid "Print fonts"
 #~ msgstr "Utskriftstypsnitt"
-
 #~ msgid "Remove an encoding"
 #~ msgstr "Ta bort en kodning"
-
 #~ msgid "Se_lection color:"
 #~ msgstr "Ma_rkeringsfärg:"
-
 #~ msgid "Selecte_d text color:"
 #~ msgstr "Färg på markera_d text:"
-
 #~ msgid "Set _tabs width equivalent to"
 #~ msgstr "Ställ in _tabulatorbredd lika med"
-
 #~ msgid "Set limit on _undo actions to"
 #~ msgstr "Sätt gräns på antalet _ångra-åtgärder till"
-
 #~ msgid "U_se default theme colors"
 #~ msgstr "Anv_änd standardtemafärger"
-
 #~ msgid "U_se original file encoding if possible"
 #~ msgstr "A_nvänd om möjligt originalfilens kodning"
-
 #~ msgid "Use cu_rrent locale's encoding if possible"
 #~ msgstr "Använd om möjligt a_ktuell lokals kodning"
-
 #~ msgid "Use current _locale's encoding if possible"
 #~ msgstr "Använd om möjligt aktuell _lokals kodning"
-
 #~ msgid "Wrap mode"
 #~ msgstr "Radbrytningsläge"
-
 #~ msgid "_Autosave current file every"
 #~ msgstr "Spara aktuell fil _automatiskt var"
-
 #~ msgid "_Background color:"
 #~ msgstr "_Bakgrundsfärg:"
-
 #~ msgid "_Body:"
 #~ msgstr "_Kropp:"
-
 #~ msgid "_Display line numbers"
 #~ msgstr "_Visa radnummer"
-
 #~ msgid "_Print page headers"
 #~ msgstr "Skriv _ut sidhuvud"
-
 #~ msgid "_Restore Default Fonts"
 #~ msgstr "_Återställ standardtypsnitt"
-
 #~ msgid "_Supported encodings:"
 #~ msgstr "_Kodningar som stöds:"
-
 #~ msgid "_Text color:"
 #~ msgstr "_Textfärg:"
-
 #~ msgid "_Use default theme font"
 #~ msgstr "_Använd standardtypsnitt i tema"
-
 #~ msgid "_action(s)"
 #~ msgstr "_åtgärd(er)"
 
-# Antar att detta är i "... var [ ] minut", alltså inte plural på svenska
-#~ msgid "_minutes"
-#~ msgstr "_minut"
-
-#~ msgid "character(s)"
-#~ msgstr "tecken"
-
-#~ msgid "li_ne(s)"
-#~ msgstr "ra_d(er)"
-
-#~ msgid "_Insert a new preview phrase."
-#~ msgstr "_Infoga en ny förhandsgranskningsfras."
-
-#~ msgid "Modify preview phrase..."
-#~ msgstr "Ändra förhandsgranskningsfras..."
-
-#~ msgid "Preview"
-#~ msgstr "Förhandsgranskning"
-
-#~ msgid "_Modify preview phrase..."
-#~ msgstr "_Ändra förhandsgranskningsfras..."
-
-#~ msgid "Font Selection"
-#~ msgstr "Typsnittsval"
-
-#~ msgid "Sans Regular 12"
-#~ msgstr "Sans Regular 12"
-
-#~ msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
-#~ msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÅåÄäÖö"
-
-#~ msgid "Pick a Font"
-#~ msgstr "Välj ett typsnitt"
-
-#~ msgid "Title"
-#~ msgstr "Titel"
-
-#~ msgid "The title of the selection dialog box"
-#~ msgstr "Titeln på väljardialogfönstret"
-
-#~ msgid "Font name"
-#~ msgstr "Typnsnittsnamn"
-
-#~ msgid "Name of the selected font"
-#~ msgstr "Namn på det valda typsnittet"
-
-#~ msgid "Preview text"
-#~ msgstr "Förhandsgranskningstext"
-
-#~ msgid "Preview text shown in the dialog"
-#~ msgstr "Förhandsgranskningstext som visas i dialogen"
-
-#~ msgid "Use font in label"
-#~ msgstr "Använd typsnitt i etikett"
-
-#~ msgid "Use font in the label in font info mode"
-#~ msgstr "Använd typsnitt i etiketten i typsnittsinformationsläge"
-
-#~ msgid "Font size for label"
-#~ msgstr "Typsnittstorlek för etikett"
-
-#~ msgid "Font size for label in font info mode"
-#~ msgstr "Typsnittsstorlek för etikett i typsnittsinformationsläge"
-
-#~ msgid "Show size"
-#~ msgstr "Visa storlek"
-
-#~ msgid "Show size in font info mode"
-#~ msgstr "Visa storlek i typsnittsinformationsläge"
-
-#~ msgid "Font"
-#~ msgstr "Typsnitt"
-
-#~ msgid "Goto Line"
-#~ msgstr "Gå till rad"
-
-#~ msgid "_Line number:"
-#~ msgstr "_Radnummer:"
-
-#~ msgid "C_onfigure plugin"
-#~ msgstr "K_onfigurera insticksmodul"
-
-#~ msgid "Configure the selected plugin"
-#~ msgstr "Konfigurera den valda insticksmodulen"
-
-#~ msgid "De_tails"
-#~ msgstr "De_taljer"
-
-#~ msgid "_Description"
-#~ msgstr "_Beskrivning"
-
-#~ msgid "dialog1"
-#~ msgstr "dialog1"
-
-#~ msgid "_Location to search for:"
-#~ msgstr "_Plats att leta i:"
-
-#~ msgid "label"
-#~ msgstr "etikett"
-
-#~ msgid "Find Next"
-#~ msgstr "Sök nästa"
-
-#~ msgid "Match _entire word only"
-#~ msgstr "Sök endast _hela ord"
-
-#~ msgid "Replace All"
-#~ msgstr "Ersätt alla"
-
-#~ msgid "Replace _with: "
-#~ msgstr "Ersätt _med: "
-
-#~ msgid "_Match case"
-#~ msgstr "_Gör skillnad på gemener/VERSALER"
-
-#~ msgid "_Search for: "
-#~ msgstr "_Sök efter: "
-
-#~ msgid "_Wrap around"
-#~ msgstr "_Börja om från början"
-
-#~ msgid "Enter the _location (URI) of the file you would like to open:"
-#~ msgstr "Ange _platsen (URI:n) för den fil som du vill öppna:"
-
-#~ msgid "Open from URI"
-#~ msgstr "Öppna från URI"
-
-#~ msgid "translator_credits"
-#~ msgstr ""
-#~ "Christian Rose\n"
-#~ "Andreas Hydén\n"
-#~ "Martin Norbäck\n"
-#~ "Martin Wahlén\n"
-#~ "Skicka synpunkter på översättningen till sv@li.org"
-
-#~ msgid "gedit"
-#~ msgstr "gedit"
-
-#~ msgid "gedit is a small and lightweight text editor for Gnome"
-#~ msgstr "gedit är en liten och enkel textredigerare för Gnome"
-
-#~ msgid "%s %d"
-#~ msgstr "%s %d"
-
-#~ msgid "Untitled"
-#~ msgstr "Namnlös"
-
-#~ msgid "Invalid file name"
-#~ msgstr "Ogiltigt filnamn"
-
-#~ msgid "Invalid UTF-8 data"
-#~ msgstr "Ogiltig UTF-8-data"
-
-#~ msgid "Could not read symbolic link information for %s"
-#~ msgstr "Kunde inte läsa information om symbolisk länken %s"
-
-#~ msgid "The file has too many symbolic links."
-#~ msgstr "Filen har för många symboliska länkar."
-
-#~ msgid "gedit cannot handle %s: locations in write mode."
-#~ msgstr "gedit kan inte hantera %s:-platser i skrivläge."
-
-#~ msgid "gedit cannot handle this kind of location in write mode."
-#~ msgstr "gedit kan inte hantera denna typ av plats i skrivlägre."
-
-#~ msgid "Invalid filename."
-#~ msgstr "Ogiltigt filnamn."
-
-#~ msgid ""
-#~ "There is not enough disk space to save the file.\n"
-#~ "Please free some disk space and try again."
-#~ msgstr ""
-#~ "Det finns inte tillräckligt med diskutrymme för att spara filen.\n"
-#~ "Frigör en del utrymme på disken och försök igen."
-
-#~ msgid ""
-#~ "The disk where you are trying to save the file has a limitation on file "
-#~ "sizes.  Please try saving a smaller file or saving it to a disk that does "
-#~ "not have this limitation."
-#~ msgstr ""
-#~ "Disken där du försöker spara filen har en begränsning på filstorlekar. "
-#~ "Försök att spara en mindre fil eller spara den på en disk som inte har "
-#~ "denna begränsning."
-
-#~ msgid "Could not create a backup file."
-#~ msgstr "Kunde inte skapa en säkerhetskopia."
-
-#~ msgid "It is not possible to revert an Untitled document"
-#~ msgstr "Det går inte att återställa ett namnlöst dokument"
-
-#~ msgid ""
-#~ "A file named \"%s\" already exists.\n"
-#~ "Do you want to replace it with the one you are saving?"
-#~ msgstr ""
-#~ "En fil med namnet \"%s\" finns redan.\n"
-#~ "Vill du ersätta den med den fil som du vill spara?"
-
-#~ msgid ""
-#~ "The file \"%s\" is read-only.\n"
-#~ "Do you want to try to replace it with the one you are saving?"
-#~ msgstr ""
-#~ "Filen \"%s\" är skrivskyddad.\n"
-#~ "Vill du försöka ersätta den med den fil som du vill spara?"
-
-#~ msgid "Select a filename to save"
-#~ msgstr "Välj ett filnamn att spara"
-
-#~ msgid "Open File..."
-#~ msgstr "Öppna fil..."
-
-#~ msgid "Loaded file '%s'"
-#~ msgstr "Läste in filen \"%s\""
-
-#~ msgid "Saving file '%s'..."
-#~ msgstr "Sparar filen \"%s\"..."
-
-#~ msgid "The document has not been saved."
-#~ msgstr "Dokumentet har inte sparats."
-
-#~ msgid "File '%s' saved."
-#~ msgstr "Filen \"%s\" sparades."
-
-#~ msgid "Save as..."
-#~ msgstr "Spara som..."
-
-#~ msgid ""
-#~ "Do you want to revert to saved the document '%s'?\n"
-#~ "\n"
-#~ "You will not be able to undo this operation."
-#~ msgstr ""
-#~ "Vill du återgå till det sparade dokumentet \"%s\"?\n"
-#~ "\n"
-#~ "Du kommer inte att kunna ångra denna åtgärd."
-
-#~ msgid "_Revert"
-#~ msgstr "_Återgå"
-
-#~ msgid "Reverting file '%s'..."
-#~ msgstr "Återställer filen \"%s\"..."
-
-#~ msgid "The document has not been reverted."
-#~ msgstr "Dokumentet har inte återställts."
-
-#~ msgid "File '%s' reverted."
-#~ msgstr "Filen \"%s\" återställdes."
-
-#~ msgid "Loading %d files..."
-#~ msgstr "Läser in %d filer..."
-
-#~ msgid "The file \"%s\" does not exist. Would you like to create it?"
-#~ msgstr "Filen \"%s\" finns inte. Vill du skapa den?"
-
-#~ msgid "Loaded %i files"
-#~ msgstr "Läste in %i filer"
-
-#~ msgid "Could not read data from stdin."
-#~ msgstr "Kunde inte läsa data från standard in."
-
-#~ msgid "RO"
-#~ msgstr "SKRIVSK"
-
-#~ msgid "_Move to New Window"
-#~ msgstr "_Flytta till nytt fönster"
-
-#~ msgid "Open a file."
-#~ msgstr "Öppna en fil."
-
-#~ msgid ""
-#~ "Do you want to save the changes you made to the document \"%s\"? \n"
-#~ "\n"
-#~ "Your changes will be lost if you don't save them."
-#~ msgstr ""
-#~ "Vill du spara ändringarna du gjorde i dokumentet \"%s\"?\n"
-#~ "\n"
-#~ "Dina ändringar kommer att gå förlorade om du inte sparar dem."
-
-#~ msgid "Do_n't save"
-#~ msgstr "Spara i_nte"
-
-#~ msgid "_Don't quit"
-#~ msgstr "Avsluta in_te"
-
-#~ msgid "_Don't close"
-#~ msgstr "St_äng inte"
-
-#~ msgid "(modified)"
-#~ msgstr "(ändrad)"
-
-#~ msgid "(readonly)"
-#~ msgstr "(skrivskyddad)"
-
-#~ msgid "Error, unable to open module file '%s'\n"
-#~ msgstr "Fel, kan inte öppna modulfilen \"%s\"\n"
-
-#~ msgid "Error, plugin '%s' does not contain init function."
-#~ msgstr "Fel, insticksmodulen \"%s\" innehåller inte initieringsfunktion."
-
-#~ msgid "Error, plugin '%s' does not contain activate function."
-#~ msgstr "Fel, insticksmodulen \"%s\" innehåller inte aktiveringsfunktion."
-
-#~ msgid "Error, plugin '%s' does not contain deactivate function."
-#~ msgstr "Fel, insticksmodulen \"%s\" innehåller inte inaktiveringsfunktion."
-
-#~ msgid "Error, impossible to initialize plugin '%s'"
-#~ msgstr "Fel, omöjligt att initiera insticksmodulen \"%s\""
-
-#~ msgid "Error, impossible to destroy plugin '%s'"
-#~ msgstr "Fel, omöjligt att förstöra insticksmodulen \"%s\""
-
-#~ msgid "Error, impossible to activate plugin '%s'"
-#~ msgstr "Fel, omöjligt att aktivera insticksmodulen \"%s\""
-
-#~ msgid "Error, impossible to deactivate plugin '%s'"
-#~ msgstr "Fel, omöjligt att inaktivera insticksmodulen \"%s\""
-
-#~ msgid "Error, impossible to update ui of the plugin '%s'"
-#~ msgstr ""
-#~ "Fel, omöjligt att aktivera användargränssnitt för insticksmodulen \"%s\""
-
-#~ msgid "Cannot initialize preferences manager."
-#~ msgstr "Kan inte initiera inställningshanteraren."
-
-#~ msgid "Expected `%s' got `%s' for key %s"
-#~ msgstr "\"%s\" förväntades men \"%s\" mottogs för nyckeln %s"
-
-#~ msgid ""
-#~ "gedit is unable to print since it cannot find\n"
-#~ "one of the required fonts."
-#~ msgstr ""
-#~ "gedit kan inte skriva ut eftersom det inte kan\n"
-#~ "hitta en av de nödvändiga typsnitten."
-
-#~ msgid "File: %s"
-#~ msgstr "Fil: %s"
-
-#~ msgid "Page: %d"
-#~ msgstr "Sida: %d"
-
-#~ msgid "gedit - Print Preview"
-#~ msgstr "gedit - Förhandsgranskning"
-
-#~ msgid ""
-#~ "An error occurred while printing.\n"
-#~ "\n"
-#~ "%s,"
-#~ msgstr ""
-#~ "Ett fel uppstod vid utskrift.\n"
-#~ "\n"
-#~ "%s,"
-
-#~ msgid "About this application"
-#~ msgstr "Om detta program"
-
-#~ msgid "C_ustomize Statusbar"
-#~ msgstr "An_passa statusrad"
-
-#~ msgid "Change the visibility of the output window in the current window"
-#~ msgstr "Ändra synligheten på utdatafönstret i det aktuella fönstret"
-
-#~ msgid "Change the visibility of the statusbar in the current window"
-#~ msgstr "Ändra synligheten på statusraden i det aktuella fönstret"
-
-#~ msgid "Change the visibility of the toolbar in the current window"
-#~ msgstr "Ändra synligheten på verktygsraden i det aktuella fönstret"
-
-#~ msgid "Close"
-#~ msgstr "Stäng"
-
-#~ msgid "Close all open files"
-#~ msgstr "Stäng alla öppna filer"
-
-#~ msgid "Close the current file"
-#~ msgstr "Stäng den aktiva filen"
-
-#~ msgid "Configure the application"
-#~ msgstr "Konfigurera programmet"
-
-#~ msgid "Copy"
-#~ msgstr "Kopiera"
-
-#~ msgid "Copy the selection"
-#~ msgstr "Kopiera markeringen"
-
-#~ msgid "Create a new document"
-#~ msgstr "Skapa nytt dokument"
-
-#~ msgid "Cu_t"
-#~ msgstr "Klipp _ut"
-
-#~ msgid "Customize"
-#~ msgstr "Anpassa"
-
-#~ msgid "Customize toolbars"
-#~ msgstr "Anpassa verktygsrader"
-
-#~ msgid "Cut"
-#~ msgstr "Klipp ut"
-
-#~ msgid "Cut the selection"
-#~ msgstr "Klipp ut markeringen"
-
-#~ msgid "Delete"
-#~ msgstr "Ta bort"
-
-#~ msgid "Delete the selected text"
-#~ msgstr "Ta bort den markerade texten"
-
-#~ msgid "Dump XML"
-#~ msgstr "Dumpa XML"
-
-#~ msgid "Dump the UI Xml description"
-#~ msgstr "Dumpa Xml-användargränssnittsbeskrivningen"
-
-#~ msgid "Find Again"
-#~ msgstr "Sök igen"
-
-#~ msgid "Find Ne_xt"
-#~ msgstr "Sök n_ästa"
-
-#~ msgid "Go to _Line..."
-#~ msgstr "Gå till _rad..."
-
-#~ msgid "Go to a specific line number"
-#~ msgstr "Gå till en specifik rad"
-
-#~ msgid "Icon and _Text"
-#~ msgstr "Ikon och _text"
-
-#~ msgid "Main toolbar"
-#~ msgstr "Huvudverktygsrad"
-
-#~ msgid "Move the current document to a new window"
-#~ msgstr "Flytta det aktuella dokument till ett nytt fönster"
-
-#~ msgid "New"
-#~ msgstr "Nytt"
-
-#~ msgid "Only show icons in the toolbar"
-#~ msgstr "Visa endast ikoner i verktygsraden"
-
-#~ msgid "Open Location..."
-#~ msgstr "Öppna plats..."
-
-#~ msgid "Open _Location..."
-#~ msgstr "Öppna _fil..."
-
-#~ msgid "Open a file"
-#~ msgstr "Öppna en fil"
-
-#~ msgid "Open a file from a specified location"
-#~ msgstr "Öppna en fil från en angiven plats"
-
-#~ msgid "Open the gedit manual"
-#~ msgstr "Öppna gedit-manualen"
-
-#~ msgid "Paste"
-#~ msgstr "Klistra in"
-
-#~ msgid "Paste the clipboard"
-#~ msgstr "Klistra in från urklipp"
-
-#~ msgid "Pr_eferences"
-#~ msgstr "_Inställningar"
-
-#~ msgid "Print Previe_w..."
-#~ msgstr "Förhands_granska..."
-
-#~ msgid "Print Preview"
-#~ msgstr "Förhandsgranska"
-
-#~ msgid "Print Setup"
-#~ msgstr "Skrivarkonfiguration"
-
-#~ msgid "Print preview"
-#~ msgstr "Förhandsgranskning"
-
-#~ msgid "Print the current file"
-#~ msgstr "Skriv ut aktiv fil"
-
-#~ msgid "Quit"
-#~ msgstr "Avsluta"
-
-#~ msgid "Quit the program"
-#~ msgstr "Avsluta programmet"
-
-#~ msgid "Redo"
-#~ msgstr "Gör om"
-
-#~ msgid "Redo the undone action"
-#~ msgstr "Gör om den senast ångrade åtgärden"
-
-#~ msgid "Replace a string"
-#~ msgstr "Ersätt en sträng"
-
-#~ msgid "Revert"
-#~ msgstr "Återgå"
-
-#~ msgid "Revert to a saved version of the file"
-#~ msgstr "Återgå till en sparad version av filen"
-
-#~ msgid "Save As"
-#~ msgstr "Spara som"
-
-#~ msgid "Save _As..."
-#~ msgstr "Spara so_m..."
-
-#~ msgid "Save all open files"
-#~ msgstr "Spara alla öppna filer"
-
-#~ msgid "Save the current file"
-#~ msgstr "Spara den aktiva filen"
-
-#~ msgid "Save the current file with a different name"
-#~ msgstr "Spara den aktuella filen med ett annat namn"
-
-#~ msgid "Search again for the same string"
-#~ msgstr "Sök igen efter samma sträng"
-
-#~ msgid "Search for a string"
-#~ msgstr "Sök efter en sträng"
-
-#~ msgid "Select All"
-#~ msgstr "Markera allt"
-
-#~ msgid "Select _All"
-#~ msgstr "Markera _allt"
-
-#~ msgid "Select the entire document"
-#~ msgstr "Markera hela dokumentet"
-
-#~ msgid "Set toolbar button style according to desktop default"
-#~ msgstr "Ställ in stilen på verktygsradsknappar enligt systeminställningarna"
-
-#~ msgid "Setup the page settings for your current printer"
-#~ msgstr "Konfigurera sidinställningarna för din aktuella skrivare"
-
-#~ msgid "Show _Cursor Position"
-#~ msgstr "Visa _markörposition"
-
-#~ msgid "Show _Overwrite Mode"
-#~ msgstr "Visa _överskrivningsläge"
-
-#~ msgid "Show cursor position in the statusbar"
-#~ msgstr "Visa markörposition i statusraden"
-
-#~ msgid "Show overwrite mode in the statusbar"
-#~ msgstr "Visa översrivningsläge i statusraden"
-
-#~ msgid "Undo the last action"
-#~ msgstr "Ångra den senaste åtgärden"
-
-#~ msgid "_About"
-#~ msgstr "_Om"
-
-#~ msgid "_Close"
-#~ msgstr "S_täng"
-
-#~ msgid "_Close All"
-#~ msgstr "S_täng alla"
-
-#~ msgid "_Contents"
-#~ msgstr "_Innehåll"
-
-#~ msgid "_Copy"
-#~ msgstr "_Kopiera"
-
-#~ msgid "_Customize Toolbar"
-#~ msgstr "_Anpassa verktygsrad"
-
-#~ msgid "_Debug"
-#~ msgstr "_Felsök"
-
-#~ msgid "_Delete"
-#~ msgstr "_Ta bort"
-
-#~ msgid "_Desktop Default"
-#~ msgstr "_Systemstandard"
-
-#~ msgid "_Documents"
-#~ msgstr "_Dokument"
-
-#~ msgid "_Edit"
-#~ msgstr "_Redigera"
-
-#~ msgid "_File"
-#~ msgstr "_Arkiv"
-
-#~ msgid "_Find..."
-#~ msgstr "_Sök..."
-
-#~ msgid "_Help"
-#~ msgstr "_Hjälp"
-
-#~ msgid "_Icon"
-#~ msgstr "_Ikon"
-
-#~ msgid "_New"
-#~ msgstr "_Ny"
-
-#~ msgid "_Open..."
-#~ msgstr "_Öppna..."
-
-#~ msgid "_Output Window"
-#~ msgstr "_Utdatafönster"
-
-#~ msgid "_Paste"
-#~ msgstr "Klistra _in"
-
-#~ msgid "_Print..."
-#~ msgstr "Skriv _ut..."
-
-#~ msgid "_Priority Text beside Icons"
-#~ msgstr "_Prioritetstext bredvid ikoner"
-
-#~ msgid "_Quit"
-#~ msgstr "_Avsluta"
-
-#~ msgid "_Redo"
-#~ msgstr "_Gör om"
-
-#~ msgid "_Replace..."
-#~ msgstr "_Ersätt..."
-
-#~ msgid "_Save"
-#~ msgstr "_Spara"
-
-#~ msgid "_Save All"
-#~ msgstr "_Spara alla"
-
-#~ msgid "_Search"
-#~ msgstr "_Sök"
-
-#~ msgid "_Statusbar"
-#~ msgstr "_Statusrad"
-
-#~ msgid "_Toolbar"
-#~ msgstr "_Verktygsrad"
-
-#~ msgid "_Tools"
-#~ msgstr "Verkty_g"
-
-#~ msgid "_Undo"
-#~ msgstr "_Ångra"
-
-#~ msgid "_View"
-#~ msgstr "_Visa"
-
-#~ msgid ""
-#~ "Could not find the file \"%s\".\n"
-#~ "\n"
-#~ "Please, check that you typed the location correctly and try again."
-#~ msgstr ""
-#~ "Kunde inte hitta filen \"%s\".\n"
-#~ "\n"
-#~ "Kontrollera att du har angivit platsen korrekt och försök igen."
-
-#~ msgid "Could not open the file \"%s\" because it contains corrupted data."
-#~ msgstr "Kunde inte öppna filen \"%s\" eftersom den innehåller trasig data."
-
-#~ msgid ""
-#~ "Could not open the file \"%s\" because gedit cannot handle %s: locations."
-#~ msgstr ""
-#~ "Kunde inte öppna filen \"%s\" eftersom gedit inte kan hantera %s:-platser."
-
-#~ msgid "Could not open the file \"%s\""
-#~ msgstr "Kunde inte öppna filen \"%s\""
-
-#~ msgid ""
-#~ "Could not open the file \"%s\" because it contains data in an invalid "
-#~ "format."
-#~ msgstr ""
-#~ "Kunde inte öppna filen \"%s\" eftersom den innehåller data i ett ogiltigt "
-#~ "format."
-
-#~ msgid "Could not open the file \"%s\" because it is too big."
-#~ msgstr "Kunde inte öppna filen \"%s\" eftersom den är för stor."
-
-#~ msgid ""
-#~ "\"%s\" is not a valid location.\n"
-#~ "\n"
-#~ "Please, check that you typed the location correctly and try again."
-#~ msgstr ""
-#~ "\"%s\" är ingen giltig plats.\n"
-#~ "\n"
-#~ "Kontrollera att du angav platsen korrekt och försök igen."
-
-#~ msgid "Could not open the file \"%s\" because access was denied."
-#~ msgstr "Kunde inte öppna filen \"%s\" eftersom åtkomst nekades."
-
-#~ msgid ""
-#~ "Could not open the file \"%s\" because there are too many open files.\n"
-#~ "\n"
-#~ "Please, close some open file and try again."
-#~ msgstr ""
-#~ "Kunde inte öppna filen \"%s\" eftersom det finns för många öppna filer.\n"
-#~ "\n"
-#~ "Stäng några öppna filer och försök igen."
-
-#~ msgid ""
-#~ "\"%s\" is a directory.\n"
-#~ "\n"
-#~ "Please, check that you typed the location correctly and try again."
-#~ msgstr ""
-#~ "\"%s\" är en katalog.\n"
-#~ "\n"
-#~ "Kontrollera att du angav platsen korrekt och försök igen."
-
-#~ msgid ""
-#~ "Not enough available memory to open the file \"%s\". Please, close some "
-#~ "running application and try again."
-#~ msgstr ""
-#~ "Det finns inte tillräckligt med minne för att öppna filen \"%s\". Stäng "
-#~ "några körande program och försök igen."
-
-#~ msgid ""
-#~ "Could not open the file \"%s\" because no host \"%s\" could be found.\n"
-#~ "\n"
-#~ "Please, check that you typed the location correctly and that your proxy "
-#~ "settings are correct and then try again."
-#~ msgstr ""
-#~ "Kunde inte öppna filen \"%s\" eftersom värden \"%s\" inte kunde hittas.\n"
-#~ "\n"
-#~ "Kontrollera att du angav platsen korrekt och att dina "
-#~ "proxyserverinställningar stämmer och försök igen."
-
-#~ msgid ""
-#~ "Could not open the file \"%s\" because the host name was invalid.\n"
-#~ "\n"
-#~ "Please, check that you typed the location correctly and try again."
-#~ msgstr ""
-#~ "Kunde inte öppna filen \"%s\" eftersom värdnamnet var ogiltigt.\n"
-#~ "\n"
-#~ "Kontrollera att du angav platsen korrekt och försök igen."
-
-#~ msgid ""
-#~ "Could not open the file \"%s\" because the host name was empty.\n"
-#~ "\n"
-#~ "Please, check that your proxy settings are correct and try again."
-#~ msgstr ""
-#~ "Kunde inte öppna filen \"%s\" eftersom värdnamnet var tomt.\n"
-#~ "\n"
-#~ "Kontrollera att dina proxyserverinställningar stämmer och försök igen."
-
-#~ msgid ""
-#~ "Could not open the file \"%s\" because the attempt to log in failed.\n"
-#~ "\n"
-#~ "Please, check that you typed the location correctly and try again."
-#~ msgstr ""
-#~ "Kunde inte öppna filen \"%s\" eftersom försöket att logga in "
-#~ "misslyckades.\n"
-#~ "\n"
-#~ "Kontrollera att du angav platsen korrekt och försök igen."
-
-#~ msgid ""
-#~ "Could not open the file \"%s\" because it contains invalid UTF-8 data.\n"
-#~ "\n"
-#~ "Probably, you are trying to open a binary file."
-#~ msgstr ""
-#~ "Kunde inte öppna filen \"%s\" eftersom den innehåller ogiltig UTF-8-"
-#~ "data.\n"
-#~ "\n"
-#~ "Du försöker troligtvis öppna en binär fil."
-
-#~ msgid "Could not open the file \"%s\"."
-#~ msgstr "Kunde inte öppna filen \"%s\"."
-
-#~ msgid "Could not save the file \"%s\"."
-#~ msgstr "Kunde inte spara filen \"%s\"."
-
-#~ msgid ""
-#~ "Could not save the file \"%s\".\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Kunde inte spara filen \"%s\".\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Could not revert the file \"%s\" because gedit cannot find it.\n"
-#~ "\n"
-#~ "Perhaps, it has recently been deleted."
-#~ msgstr ""
-#~ "Kunde inte återställa filen \"%s\" eftersom gedit inte kan hitta den.\n"
-#~ "\n"
-#~ "Den kanske har tagits bort nyligen."
-
-#~ msgid "Could not revert the file \"%s\" because it contains corrupted data."
-#~ msgstr ""
-#~ "Kunde inte återställa filen \"%s\" eftersom den innehåller trasig data."
-
-#~ msgid ""
-#~ "Could not revert the file \"%s\" because gedit cannot handle %s: "
-#~ "locations."
-#~ msgstr ""
-#~ "Kunde inte återställa filen \"%s\" eftersom gedit inte kan hantera %s:-"
-#~ "platser."
-
-#~ msgid "Could not revert the file \"%s\"."
-#~ msgstr "Kunde inte återställa filen \"%s\"."
-
-#~ msgid ""
-#~ "Could not revert the file \"%s\" because it contains data in an invalid "
-#~ "format."
-#~ msgstr ""
-#~ "Kunde inte återställa filen \"%s\" eftersom den innehåller data i ett "
-#~ "ogiltigt format."
-
-#~ msgid "Could not revert the file \"%s\" because it is too big."
-#~ msgstr "Kunde inte återställa filen \"%s\" eftersom den är för stor."
-
-#~ msgid "Could not revert the file \"%s\" because access was denied."
-#~ msgstr "Kunde inte återställa filen \"%s\" eftersom åtkomst nekades."
-
-#~ msgid ""
-#~ "Could not revert the file \"%s\" because there are too many open files.\n"
-#~ "\n"
-#~ "Please, close some open file and try again."
-#~ msgstr ""
-#~ "Kunde inte återställa filen \"%s\" eftersom det finns för många öppnade "
-#~ "filer.\n"
-#~ "\n"
-#~ "Stäng några öppna filer och försök igen."
-
-#~ msgid ""
-#~ "Not enough available memory to revert the file \"%s\". Please, close some "
-#~ "running application and try again."
-#~ msgstr ""
-#~ "Inte tillräckligt med minne för att återställa filen \"%s\". Stäng några "
-#~ "körande program och försök igen."
-
-#~ msgid ""
-#~ "Could not revert the file \"%s\" because no host \"%s\" could be found.\n"
-#~ "\n"
-#~ "Please, check that your proxy settings are correct and try again."
-#~ msgstr ""
-#~ "Kunde inte återställa filen \"%s\" eftersom värden \"%s\" inte kunde "
-#~ "hittas.\n"
-#~ "\n"
-#~ "Kontrollera att dina proxyserverinställningar stämmer och försök igen."
-
-#~ msgid ""
-#~ "Could not revert the file \"%s\" because the host name was empty.\n"
-#~ "\n"
-#~ "Please, check that your proxy settings are correct and try again."
-#~ msgstr ""
-#~ "Kunde inte återställa filen \"%s\" eftersom värden var tom.\n"
-#~ "\n"
-#~ "Kontrollera att dina proxyserverinställningar stämmer och försök igen."
-
-#~ msgid ""
-#~ "Could not revert the file \"%s\" because the attempt to log in failed."
-#~ msgstr ""
-#~ "Kunde inte återställa filen \"%s\" eftersom försöket att logga in "
-#~ "misslyckades."
-
-#~ msgid ""
-#~ "Could not revert the file \"%s\" because it contains invalid UTF-8 data.\n"
-#~ "\n"
-#~ "Probably, you are trying to revert a binary file."
-#~ msgstr ""
-#~ "Kunde inte återställa filen \"%s\" eftersom den innehåller ogiltig UTF-8-"
-#~ "data.\n"
-#~ "\n"
-#~ "Du försöker troligtvis återställa en binär fil."
-
-#~ msgid "It is not possible to revert an Untitled document."
-#~ msgstr "Det går inte att återställa ett namnlöst dokument."
-
-#~ msgid "The file \"%s\" already exists."
-#~ msgstr "Filen \"%s\" finns redan."
-
-#~ msgid ""
-#~ "\"%s\" is a directory.\n"
-#~ "\n"
-#~ "Please, check that you typed the location correctly."
-#~ msgstr ""
-#~ "\"%s\" är en katalog.\n"
-#~ "\n"
-#~ "Kontrollera att du angav platsen korrekt."
-
-#~ msgid ""
-#~ "Cannot create the file \"%s\".\n"
-#~ "\n"
-#~ "Make sure you have the appropriate write permissions."
-#~ msgstr ""
-#~ "Kan inte skapa filen \"%s\".\n"
-#~ "\n"
-#~ "Se till att du har de rätta skrivrättigheterna."
-
-#~ msgid ""
-#~ "Cannot create the file \"%s\".\n"
-#~ "\n"
-#~ "The file name is too long."
-#~ msgstr ""
-#~ "Kan inte skapa filen \"%s\".\n"
-#~ "\n"
-#~ "Filnamnet är för långt."
-
-#~ msgid ""
-#~ "Cannot create the file \"%s\".\n"
-#~ "\n"
-#~ "A directory component in the file name does not exist or is a dangling "
-#~ "symbolic link."
-#~ msgstr ""
-#~ "Kan inte skapa filen \"%s\".\n"
-#~ "\n"
-#~ "En katalogkomponent i filnamnet finns inte eller är en lös symbolisk länk."
-
-#~ msgid ""
-#~ "There is not enough disk space to create the file \"%s\".\n"
-#~ "\n"
-#~ "Please free some disk space and try again."
-#~ msgstr ""
-#~ "Det finns inte tillräckligt med diskutrymme för att spara filen \"%s\".\n"
-#~ "\n"
-#~ "Frigör en del utrymme på disken och försök igen."
-
-#~ msgid "Could not create the file \"%s\"."
-#~ msgstr "Kunde inte skapa filen \"%s\"."
-
-#~ msgid "  Ln %d, Col. %d"
-#~ msgstr "  Rad %d, kolumn %d"
-
-#~ msgid "  OVR"
-#~ msgstr "  ÖVR"
-
-#~ msgid "  INS"
-#~ msgstr "  INF"
-
-#~ msgid "Show utility debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för verktyg."
-
-#~ msgid "Show mdi debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för mdi."
-
-#~ msgid "Show commands debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för kommandon."
-
-#~ msgid "Show document debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för dokument."
-
-#~ msgid "Show file debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för filer."
-
-#~ msgid "Show plugin debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för insticksmoduler."
-
-#~ msgid "Show prefs debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för inställningar."
-
-#~ msgid "Show printing debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för utskrifter."
-
-#~ msgid "Show search debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för sökning."
-
-#~ msgid "Show undo debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för ångrande."
-
-#~ msgid "Show view debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för vyer."
-
-#~ msgid "Show recent debugging messages."
-#~ msgstr "Visa de senaste felsökningsmeddelandena."
-
-#~ msgid "Show session management debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för sessionshantering."
-
-#~ msgid "Turn on all debugging messages."
-#~ msgstr "Aktivera alla felsökningsmeddelanden."
-
-#~ msgid "Quit an existing instance of gedit"
-#~ msgstr "Avsluta en befintlig instans av gedit"
-
-#~ msgid "Create a new toplevel window in an existing instance of gedit"
-#~ msgstr "Skapa ett nytt topplagersfönster i en befintlig instans av gedit"
-
-#~ msgid "Create a new document in an existing instance of gedit"
-#~ msgstr "Skapa ett nytt dokument i en befintlig instans av gedit"
-
-#~ msgid "Close the output window"
-#~ msgstr "Stäng utdatafönstret"
-
-#~ msgid "Copy selected lines"
-#~ msgstr "Kopiera markerade rader"
-
-#~ msgid "Clear the output window"
-#~ msgstr "Töm utdatafönstret"
-
-#~ msgid "Output Lines"
-#~ msgstr "Utdatarader"
-
-#~ msgid "Choose one or more e_ncodings:"
-#~ msgstr "Välj en eller flera _kodningar:"
-
-#~ msgid "Western"
-#~ msgstr "Västerländsk"
-
-#~ msgid "Central European"
-#~ msgstr "Centraleuropeisk"
-
-#~ msgid "South European"
-#~ msgstr "Sydeuropeisk"
-
-#~ msgid "Baltic"
-#~ msgstr "Baltisk"
-
-#~ msgid "Cyrillic"
-#~ msgstr "Kyrillisk"
-
-#~ msgid "Arabic"
-#~ msgstr "Arabisk"
-
-#~ msgid "Greek"
-#~ msgstr "Grekisk"
-
-#~ msgid "Hebrew Visual"
-#~ msgstr "Synlig hebreisk"
-
-#~ msgid "Hebrew"
-#~ msgstr "Hebreisk"
-
-#~ msgid "Turkish"
-#~ msgstr "Turkisk"
-
-#~ msgid "Nordic"
-#~ msgstr "Nordisk"
-
-#~ msgid "Celtic"
-#~ msgstr "Keltisk"
-
-#~ msgid "Romanian"
-#~ msgstr "Rumänsk"
-
-#~ msgid "Unicode"
-#~ msgstr "Unicode"
-
-#~ msgid "Armenian"
-#~ msgstr "Armensk"
-
-#~ msgid "Chinese Traditional"
-#~ msgstr "Traditionell kinesisk"
-
-#~ msgid "Cyrillic/Russian"
-#~ msgstr "Kyrillisk/Rysk"
-
-#~ msgid "Japanese"
-#~ msgstr "Japansk"
-
-#~ msgid "Korean"
-#~ msgstr "Koreansk"
-
-#~ msgid "Chinese Simplified"
-#~ msgstr "Förenklad kinesisk"
-
-#~ msgid "Georgian"
-#~ msgstr "Georgisk"
-
-#~ msgid "Cyrillic/Ukrainian"
-#~ msgstr "Kyrillisk/Ukrainsk"
-
-#~ msgid "Croatian"
-#~ msgstr "Kroatisk"
-
-#~ msgid "Hindi"
-#~ msgstr "Hindi"
-
-#~ msgid "Farsi"
-#~ msgstr "Farsi"
-
-#~ msgid "Gujarati"
-#~ msgstr "Gujarati"
-
-#~ msgid "Gurmukhi"
-#~ msgstr "Gurmukhi"
-
-#~ msgid "Icelandic"
-#~ msgstr "Isländsk"
-
-#~ msgid "Vietnamese"
-#~ msgstr "Vietnamesisk"
-
-#~ msgid "Thai"
-#~ msgstr "Thai"
-
-#~ msgid " (invalid Unicode)"
-#~ msgstr " (ogiltig Unicode)"
-
-#~ msgid "  Line %d, Column %d"
-#~ msgstr "  Rad %d, kolumn %d"
-
-#~ msgid "Line %d, Column %d"
-#~ msgstr "Rad %d, kolumn %d"
-
-#~ msgid "OVR"
-#~ msgstr "ÖVR"
-
-#~ msgid "INS"
-#~ msgstr "INF"
-
-#~ msgid "Copyright (C) 2001-2002 Paolo Maggi"
-#~ msgstr "Copyright © 2001-2002 Paolo Maggi"
-
-#~ msgid "Paolo Maggi <maggi@athena.polito.it>"
-#~ msgstr "Paolo Maggi <maggi@athena.polito.it>"
-
-#~ msgid "Copyright (C) 2002 James Willcox"
-#~ msgstr "Copyright © 2002 James Willcox"
-
-#~ msgid "James Willcox <jwillcox@cs.indiana.edu>"
-#~ msgstr "James Willcox <jwillcox@cs.indiana.edu>"
-
-#~ msgid ""
-#~ "Chema Celorio <chema@celorio.com> and Paolo Maggi <maggi@athena.polito.it>"
-#~ msgstr ""
-#~ "Chema Celorio <chema@celorio.com> och Paolo Maggi <maggi@athena.polito.it>"
-
-#~ msgid ""
-#~ "Copyright (C) 2000 - 2001 Chema Celorio\n"
-#~ "Copyright (C) 2002 Paolo Maggi"
-#~ msgstr ""
-#~ "Copyright © 2000 - 2001 Chema Celorio\n"
-#~ "Copyright © 2002 Paolo Maggi"
-
-#~ msgid "Copyright (C) 2002 Paolo Maggi"
-#~ msgstr "Copyright © 2002 Paolo Maggi"
-
-#~ msgid "Paolo Maggi <paolo.maggi@polito.it>"
-#~ msgstr "Paolo Maggi <paolo.maggi@polito.it>"
-
-#~ msgid "Copyright (C) 2002 - Paolo Maggi"
-#~ msgstr "Copyright © 2002 - Paolo Maggi"
-
-#~ msgid ""
-#~ "Paolo Maggi <maggi@athena.polito.it> and Lee Mallabone <gnome@fonicmonkey."
-#~ "net>"
-#~ msgstr ""
-#~ "Paolo Maggi <maggi@athena.polito.it> och Lee Mallabone <gnome@fonicmonkey."
-#~ "net>"
-
-#~ msgid ""
-#~ "Carlo Borreo <borreo@softhome.net>, Lee Mallabone <gnome@fonicmonkey.net> "
-#~ "and Paolo Maggi <maggi@athena.polito.it>"
-#~ msgstr ""
-#~ "Carlo Borreo <borreo@softhome.net>, Lee Mallabone <gnome@fonicmonkey.net> "
-#~ "och Paolo Maggi <maggi@athena.polito.it>"
-
-#~ msgid ""
-#~ "Copyright (C) 2001 Carlo Borreo\n"
-#~ "Copyright (C) 2002 Lee Mallabone and Paolo Maggi"
-#~ msgstr ""
-#~ "Copyright © 2001 Carlo Borreo\n"
-#~ "Copyright © 2002 Lee Mallabone och Paolo Maggi"
-
-#~ msgid "sans 12"
-#~ msgstr "sans 12"
-
-#~ msgid ""
-#~ "(C) 1998-2000 Evan Lawrence and Alex Robert\n"
-#~ "(C) 2000-2002 Chema Celorio and Paolo Maggi"
-#~ msgstr ""
-#~ "© 1998-2000 Evan Lawrence och Alex Robert\n"
-#~ "© 2000-2002 Chema Celorio och Paolo Maggi"
-
-#~ msgid "action(s)"
-#~ msgstr "åtgärd(er)"
-
-#~ msgid "minutes"
-#~ msgstr "minut"
-
-#~ msgid "line(s)"
-#~ msgstr "rad(er)"
-
-#~ msgid "Compare two files..."
-#~ msgstr "Jämför två filer..."
-
-#~ msgid "_Word Count"
-#~ msgstr "_Ordräkning"
-
-#~ msgid "Word count"
-#~ msgstr "Ordräkning"
-
-#~ msgid "Execute a shell command"
-#~ msgstr "Kör ett skalkommando"
-
-#~ msgid "Shell output"
-#~ msgstr "Skalutdata"
-
-#~ msgid "Capture the command _output"
-#~ msgstr "Fånga kommando_utdata"
-
-#~ msgid "Specify the working directory and the command you want to run."
-#~ msgstr "Ange arbetskatalogen och det kommando som du vill köra."
-
-#~ msgid "Select a format"
-#~ msgstr "Välj ett format"
-
-#~ msgid "<i>You will not be able to undo the sort operation.</i>"
-#~ msgstr "<i>Du kommer inte att kunna ångra sorteringsåtgärden.</i>"
-
-#~ msgid "<span weight=\"bold\">Sort Order</span>"
-#~ msgstr "<span weight=\"bold\">Sorteringsordning</span>"
-
-#~ msgid "Cas_e sensitive"
-#~ msgstr "Gör skillnad på g_emener/VERSALER"
-
-#~ msgid "_Ascending"
-#~ msgstr "_Stigande"
-
-#~ msgid "_Descending"
-#~ msgstr "_Fallande"
-
-#~ msgid ""
-#~ "Could not find the required widgets inside languages-dialog.glade2.\n"
-#~ msgstr ""
-#~ "Kunde inte hitta de nödvändiga widgetarna i languages-dialog.glade2.\n"
-
-#~ msgid "_Spelling..."
-#~ msgstr "_Stavning..."
-
-#~ msgid "_Check Spelling..."
-#~ msgstr "_Kontrollera stavning..."
-
-#~ msgid "_Goto line"
-#~ msgstr "_Gå till rad"
-
-#~ msgid "Could not find the required widgets inside goto-line.glade2.\n"
-#~ msgstr "Kunde inte hitta de nödvändiga widgetarna i goto-line.glade2.\n"
-
-#~ msgid ""
-#~ "Could not find the required widgets inside program-location-dialog."
-#~ "glade2.\n"
-#~ msgstr ""
-#~ "Kunde inte hitta de nödvändiga widgetarna i program-location-dialog."
-#~ "glade2.\n"
-
-#~ msgid " _Wrap lines (at character boundaries)"
-#~ msgstr " _Radbryt rader (vid teckengränser)"
-
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Load</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Läs in</span>"
-
-#~ msgid "<span weight=\"bold\">When saving...</span>"
-#~ msgstr "<span weight=\"bold\">Vid sparande...</span>"
-
-#~ msgid "Font used to print line _numbers:"
-#~ msgstr "Typsnitt som används för rad_nummer:"
-
-#~ msgid "Font used to print the _body:"
-#~ msgstr "Typsnitt som används för _kroppen:"
-
-#~ msgid "_Font used by the editor: "
-#~ msgstr "_Typsnitt som används av redigeraren: "
-
-#~ msgid "_Font used to print headers:"
-#~ msgstr "_Typsnitt som används för att skriva ut huvuden:"
-
-#~ msgid "Goto _Line"
-#~ msgstr "Gå till _rad"
-
-#~ msgid "Pr_eferences..."
-#~ msgstr "_Inställningar..."
-
-#~ msgid ""
-#~ "Could not find the required widgets inside gedit-encodings-dialog."
-#~ "glade2.\n"
-#~ msgstr ""
-#~ "Kunde inte hitta de nödvändiga widgetarna i gedit-encodings-dialog."
-#~ "glade2.\n"
-
-#~ msgid "<span weight=\"bold\">Search from</span>"
-#~ msgstr "<span weight=\"bold\">Sök från</span>"
-
-#~ msgid "C_ursor position"
-#~ msgstr "_Markörposition"
-
-#~ msgid "Case sensi_tive"
-#~ msgstr "Gör skillnad på geme_ner/VERSALER"
-
-#~ msgid "_Beginning of the document"
-#~ msgstr "_Början av dokumentet"
-
-#~ msgid "Not yet implemented."
-#~ msgstr "Inte implementerat än."
-
-#~ msgid "The string \"%s\" has not been found."
-#~ msgstr "Strängen \"%s\" kunde inte hittas."
-
-#~ msgid "Close All"
-#~ msgstr "Stäng alla"
-
-#~ msgid "Save All"
-#~ msgstr "Spara alla"
-
-#~ msgid "%d/%m/%Y %H:%M:%S"
-#~ msgstr "%Y-%m-%d %H:%M:%S"
-
-#~ msgid "<b>Completed spell checking</b>"
-#~ msgstr "<b>Stavningskontrollen färdig</b>"
-
-#~ msgid "Set program location ..."
-#~ msgstr "Ställ in programplats..."
-
-#~ msgid "_Move to a New Window"
-#~ msgstr "_Flytta till ett nytt fönster"
-
-#~ msgid "%Y-%m-%d %H:%M:%S"
-#~ msgstr "%Y-%m-%d %H:%M:%S"
-
-#~ msgid "Sort Order"
-#~ msgstr "Sorteringsordning"
-
-#~ msgid "Language"
-#~ msgstr "Språk"
-
-#~ msgid "word"
-#~ msgstr "ord"
-
-#~ msgid "When creating a new file..."
-#~ msgstr "Vid skapande av ny fil..."
-
-#~ msgid "(invalid Unicode)"
-#~ msgstr "(ogiltig Unicode)"
-
-#~ msgid ""
-#~ "If you wish to insert any of the characters in to the active \n"
-#~ "document, select the character and click the \"Insert Char\" \n"
-#~ "button or double click the character in the table."
-#~ msgstr ""
-#~ "Om du vill infoga något av tecknen i det aktiva dokumentet\n"
-#~ "väljer du tecknet och klickar på knappen \"Infoga tecken\",\n"
-#~ "eller dubbelklickar på tecknet i tabellen."
-
-#~ msgid "Insert char"
-#~ msgstr "Infoga tecken"
-
-#~ msgid "gedit: ASCII table"
-#~ msgstr "gedit: ASCII-tabell"
-
-#~ msgid "Insert Shell _Output"
-#~ msgstr "Infoga skal_utdata"
-
-#~ msgid "Select the group of tab you want to use"
-#~ msgstr "Välj den grupp med flikar som du vill använda"
-
-#~ msgid ""
-#~ "The tag list plugin provides a method to easily insert into a document "
-#~ "commonly used tabs/strings without having to type them."
-#~ msgstr ""
-#~ "Tagglisteinsticksmodulen tillhandahåller en metod för att enkelt infoga "
-#~ "vanligt använda flikar/strängar i dokument utan att behöva skriva dem."
-
-#~ msgid "Select the format to use when inserting date/time."
-#~ msgstr "Välj det format som ska användas vid infogande av datum/tid."
-
-#~ msgid "Courier 9"
-#~ msgstr "Courier 9"
-
-#~ msgid "Helvetica 11"
-#~ msgstr "Helvetica 11"
-
-#~ msgid "Helvetica 8"
-#~ msgstr "Helvetica 8"
-
-#~ msgid ""
-#~ "Always use UTF-8 encoding (faster) when creating a new file\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Använd alltid UTF-8-kodning (snabbare) vid skapande av en ny fil\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "Always use UTF-8 encoding (faster) when saving\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Använd alltid UTF-8-kodning (snabbare) vid sparande\n"
-#~ "\n"
-
-#~ msgid "Colors"
-#~ msgstr "Färger"
-
-#~ msgid ""
-#~ "The font & colors settings let you choose the font and the colors to be "
-#~ "used in the editor windows."
-#~ msgstr ""
-#~ "Inställningarna för typsnitt och färger låter dig välja det typsnitt och "
-#~ "de färger som ska användas i redigerarfönstren."
-
-#~ msgid ""
-#~ "The line numbers setting lets you choose to display the line numbers on "
-#~ "the left hand side of the window."
-#~ msgstr ""
-#~ "Radnummersinställningen låter dig välja om radnummer ska visas på den "
-#~ "vänstra sidan av fönstret."
-
-#~ msgid ""
-#~ "The plugin manager settings let you choose which plugins you want to have "
-#~ "loaded."
-#~ msgstr ""
-#~ "Inställningarna för insticksmodulhanteraren låter dig välja vilka "
-#~ "insticksmoduler du vill ska läsas in."
-
-#~ msgid ""
-#~ "The print fonts settings let you choose the fonts to be used to print "
-#~ "documents."
-#~ msgstr ""
-#~ "Inställningarna för utskriftstypsnitt låter dig välja de typsnitt som "
-#~ "används för att skriva ut dokument."
-
-#~ msgid ""
-#~ "The print page settings let you customize how gedit prints documents."
-#~ msgstr ""
-#~ "Sidutskriftsinställningarna låter dig anpassa hur gedit skriver ut "
-#~ "dokument."
-
-#~ msgid "The save settings let you customize how gedit saves files."
-#~ msgstr "Sparandeinställningarna låter dig anpassa hur gedit sparar filer."
-
-#~ msgid "The tabs settings let you customize the tabs width."
-#~ msgstr "Flikinställningarna låter dig anpassa flikbredden."
-
-#~ msgid ""
-#~ "The undo settings let you set the maximum number of actions that gedit "
-#~ "can undo."
-#~ msgstr ""
-#~ "Ångrainställningarna låter dig ställa in det maximala antalet åtgärder "
-#~ "som gedit kan ångra."
-
-#~ msgid ""
-#~ "The wrap mode settings let you customize how lines have to be wrapped."
-#~ msgstr ""
-#~ "Radbrytningsinställningarna låter dig anpassa hur rader ska radbrytas."
-
-#~ msgid ""
-#~ "Use current locale's encoding if possible when creating a new file\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Använd om möjligt aktuell lokals kodning vid skapande av ny fil\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "Use current locale's encoding if possible when saving\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Använd om möjligt aktuell lokals kodning vid sparande\n"
-#~ "\n"
-
-#~ msgid "When saving..."
-#~ msgstr "Vid sparande..."
-
-#~ msgid "Wrap lines at _word boundaries"
-#~ msgstr "Radbryt rader vid _ordgränser"
-
-#~ msgid "Wrap lines at ch_aracter boundaries"
-#~ msgstr "Radbryt rader vid _teckengränser"
-
-#~ msgid "_Never wrap lines"
-#~ msgstr "Radbryt al_drig rader"
-
-#~ msgid "Search from the c_ursor position"
-#~ msgstr "Sök från mark_örpositionen"
-
-#~ msgid "Do_n't replace"
-#~ msgstr "Ersätt i_nte"
-
-#~ msgid "Error, the plugin '%s' did not specified a name"
-#~ msgstr "Fel, insticksmodulen \"%s\" angav inte ett namn"
-
-#~ msgid "Error, impossible to save settings of the plugin '%s'"
-#~ msgstr "Fel, omöjligt att spara inställningar för insticksmodulen \"%s\""
-
-#~ msgid "Clos_e All"
-#~ msgstr "St_äng alla"
-
-#~ msgid "Recent _Files"
-#~ msgstr "Senaste _filer"
-
-#~ msgid "Sa_ve All"
-#~ msgstr "Spa_ra alla"
-
-#~ msgid "Open %s"
-#~ msgstr "Öppna %s"
-
-#~ msgid "Always use UTF-8 encoding (faster) when creating a new file"
-#~ msgstr "Använd alltid UTF-8-kodning (snabbare) vid skapande av en ny fil"
-
-#~ msgid "Always use UTF-8 encoding (faster) when saving"
-#~ msgstr "Använd alltid UTF-8-kodning (snabbare) vid sparande"
-
-#~ msgid "Use current locale's encoding if possible when creating a new file"
-#~ msgstr "Använd om möjligt aktuell lokals kodning vid skapande av ny fil"
-
-#~ msgid "Use current locale's encoding if possible when saving"
-#~ msgstr "Använd om möjligt aktuell lokals kodning vid sparande"
-
-#~ msgid "Loading %d file..."
-#~ msgstr "Läser in %d fil..."
-
-#~ msgid "U_se current locale only if the file already uses it"
-#~ msgstr "Anv_änd aktuell lokal endast om filen redan använder den"
-
-#~ msgid ""
-#~ "Foreground color for unselected text in the editing area. This will only "
-#~ "take effect if the \"Use Default Colors\" option is turned off."
-#~ msgstr ""
-#~ "Förgrundsfärg för omarkerad text i redigeringsytan. Detta har endast "
-#~ "effekt om alternativet \"Använd standardfärger\" är frånslaget."
-
-#~ msgid "Use Default Fonts"
-#~ msgstr "Använd standardtypsnitt"
-
-#~ msgid "Plugin Manager"
-#~ msgstr "Insticksmodulhanterare"
-
-#~ msgid "Could not create the Plugin Manager dialog"
-#~ msgstr "Kunde inte skapa dialogen för insticksmodulhanteraren"
-
-#~ msgid "Bottom"
-#~ msgstr "Nederkant"
-
-#~ msgid "Icon and _text"
-#~ msgstr "Ikon och _text"
-
-#~ msgid "Left"
-#~ msgstr "Vänster"
-
-#~ msgid "MDI"
-#~ msgstr "MDI"
-
-#~ msgid "Modal"
-#~ msgstr "Modal"
-
-#~ msgid "Notebook"
-#~ msgstr "Flikhäfte"
-
-#~ msgid "Notebook _tab position:"
-#~ msgstr "Flikhäftens _flikposition: "
-
-#~ msgid "Right"
-#~ msgstr "Höger"
-
-#~ msgid "Sho_w tooltips"
-#~ msgstr "_Visa verktygstips"
-
-#~ msgid "Show cursor _position"
-#~ msgstr "Visa markör_position"
-
-#~ msgid "Show overwrite _mode"
-#~ msgstr "Visa överskrivnings_läge"
-
-#~ msgid "Status bar"
-#~ msgstr "Statusrad"
-
-#~ msgid ""
-#~ "The MDI (Multiple Document Interface) mode refers to the way more than "
-#~ "one text document is displayed in gedit. \n"
-#~ "If you choose the Notebook mode, you may then decide where you want the "
-#~ "tabs to appear in the gedit window."
-#~ msgstr ""
-#~ "MDI-läget (Multiple Document Interface) är det läge i vilket flera "
-#~ "textdokument kan visas samtidigt i gedit.\n"
-#~ "Om du väljer flikhäftesläget kan du sedan välja hur du vill att flikarna "
-#~ "ska visas i gedit-fönstret."
-
-#~ msgid ""
-#~ "The status bar settings let you show or hide status bar and customize its "
-#~ "appearance."
-#~ msgstr ""
-#~ "Statusradsinställningarna låter dig visa eller dölja statusraden och "
-#~ "anpassa dess utseende."
-
-#~ msgid ""
-#~ "The toolbar settings let you show or hide toolbar and customize its "
-#~ "appearance."
-#~ msgstr ""
-#~ "Verktygsradsinställningarna låter dig visa eller dölja verktygsraden och "
-#~ "anpassa dess utseende."
-
-#~ msgid "Top"
-#~ msgstr "Överkant"
-
-#~ msgid "Toplevel"
-#~ msgstr "Överst"
-
-#~ msgid "_According to system settings"
-#~ msgstr "_Enligt systeminställningar"
-
-#~ msgid "_MDI Mode:"
-#~ msgstr "_MDI-läge:"
-
-#~ msgid "_Show status bar"
-#~ msgstr "_Visa statusrad"
-
-#~ msgid "_Show toolbar"
-#~ msgstr "_Visa verktygsrad"
-
-#~ msgid ""
-#~ "This is the Plugin Manager. Plugins are extra pieces of software that "
-#~ "extend gedit capabilities. From here, you can choose which plugins you "
-#~ "want to have loaded."
-#~ msgstr ""
-#~ "Detta är insticksmodulhanteraren. Insticksmoduler är extraprogram som "
-#~ "utökar gedits funktionalitet. Härifrån kan du välja vilka insticksmoduler "
-#~ "du vill ska läsas in."
-
-#~ msgid "Add/Remove plugins"
-#~ msgstr "Lägg till/ta bort insticksmoduler"
-
-#~ msgid "Plugin _Manager"
-#~ msgstr "Insticksmodul_hanterare"
-
-#~ msgid "Plugin _Manager..."
-#~ msgstr "Insticksmodul_hanterare..."
-
-#~ msgid "The GNOME text editor"
-#~ msgstr "GNOME-textredigeraren"
-
-#~ msgid "Toolbar"
-#~ msgstr "Verktygsrad"
-
-#~ msgid "User interface"
-#~ msgstr "Användargränssnitt"
-
-#~ msgid "Impossible to update gedit settings."
-#~ msgstr "Omöjligt att uppdatera gedit-inställningar."
-
-#~ msgid "level(s)"
-#~ msgstr "nivå(er)"
-
-#~ msgid "gedit - Print Document"
-#~ msgstr "gedit - Skriv ut dokument"
-
-#~ msgid "About..."
-#~ msgstr "Om..."
-
-#~ msgid "Contents"
-#~ msgstr "Innehåll"
-
-#~ msgid "Show _Tooltips"
-#~ msgstr "Visa _verktygstips"
-
-#~ msgid "Show tooltips in the toolbar"
-#~ msgstr "Visa verktygstips i verktygsraden"
-
-#~ msgid "_Plugin Manager"
-#~ msgstr "_Insticksmodulhanterare"
-
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-
-#~ msgid "gtk-help"
-#~ msgstr "gtk-help"
-
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
-
-#~ msgid "gtk-close"
-#~ msgstr "gtk-close"
-
-#~ msgid "gtk-open"
-#~ msgstr "gtk-open"
-
-#~ msgid "Header:"
-#~ msgstr "Huvud:"
-
-#~ msgid "The print fonts setting lets you....."
-#~ msgstr "Inställningen utskriftstypsnitt låter dig..."
-
-#~ msgid "Could not revert the file \"%s\""
-#~ msgstr "Kunde inte återställa filen \"%s\""
-
-#~ msgid "Loaded file %s"
-#~ msgstr "Läste in filen %s"
-
-#~ msgid "Unable to open recent file: %s"
-#~ msgstr "Kunde inte öppna nyligen använda filen: %s"
-
-#~ msgid "_Hello World"
-#~ msgstr "_Hej världen"
-
-#~ msgid "Prints Hello World."
-#~ msgstr "Skriver ut \"Hej världen\"."
-
-#~ msgid "Hello World "
-#~ msgstr "Hej världen "
-
-#~ msgid "Hello World"
-#~ msgstr "Hej världen"
-
-#~ msgid "Sample 'hello world' plugin."
-#~ msgstr "\"Hej världen\"-exempelinsticksmodul."
-
-#~ msgid "Invalid UTF-8 data encountered reading file"
-#~ msgstr "Ogiltig UTF-8-data påträffades vid läsning av filen"
-
-#~ msgid ""
-#~ "An error occurred while opening the file \"%s\".\n"
-#~ "\n"
-#~ "%s."
-#~ msgstr ""
-#~ "Ett fel uppstod vid öppning av filen \"%s\".\n"
-#~ "\n"
-#~ "%s."
-
-#~ msgid "Unknown error"
-#~ msgstr "Okänt fel"
-
-#~ msgid "_Show tag list"
-#~ msgstr "_Visa tagglista"
-
-#~ msgid "C_lear"
-#~ msgstr "T_öm"
-
-#~ msgid "Clear"
-#~ msgstr "Töm"
-
-#~ msgid "E_xit"
-#~ msgstr "_Avsluta"
-
-#~ msgid "Exit"
-#~ msgstr "Avsluta"
-
-#~ msgid "Find _Again"
-#~ msgstr "Sök i_gen"
-
-#~ msgid "Open from _URI..."
-#~ msgstr "Öppna från _URI..."
-
-#~ msgid "Print Pre_view"
-#~ msgstr "Förhands_granska"
-
-#~ msgid "Revert to saved"
-#~ msgstr "Återgå till sparad"
-
-#~ msgid "Sav_e All"
-#~ msgstr "Spara _alla"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Inställningar"
-
-#~ msgid ""
-#~ "Exucute a program and insert its output in the current document at the "
-#~ "current cursor position"
-#~ msgstr ""
-#~ "Kör ett program och infoga dess utdata i det aktuella dokumentet vid "
-#~ "aktuell markörposition"
-
-#~ msgid "Save As..."
-#~ msgstr "Spara som..."
-
-#~ msgid ""
-#~ "A file named ``%s'' already exists in this location. Do you want to "
-#~ "replace it with the one you are saving?"
-#~ msgstr ""
-#~ "En fil med namnet \"%s\" finns redan på denna plats. Vill du ersätta den "
-#~ "med den fil som du vill spara?"
-
-#~ msgid "An error occured while running the selected command."
-#~ msgstr "Ett fel uppstod vid körning av det valda kommandot."
-
-#~ msgid "Error, plugin '%s' does not contain destroy function."
-#~ msgstr "Fel, insticksmodulen \"%s\" innehåller inte förstörelsefunktion."
-
-#~ msgid "_Manager"
-#~ msgstr "_Hanterare"
-
-#~ msgid "Web browse plugin"
-#~ msgstr "Webbläsarinsticksmodul"
-
-#~ msgid "Number Converter"
-#~ msgstr "Talkonverterare"
-
-#~ msgid "diff"
-#~ msgstr "diff"
-
-#~ msgid "Untitled %i"
-#~ msgstr "Namnlös %i"
-
-#~ msgid "Diff"
-#~ msgstr "Diff"
-
-#~ msgid ""
-#~ "No document exists.\n"
-#~ "The Document Info plugin is going be closed."
-#~ msgstr ""
-#~ "Det finns inget dokument.\n"
-#~ "Insticksmodulen för dokumentinformation kommer att stängas."
-
-#~ msgid "Document info"
-#~ msgstr "Dokumentinformation"
-
-#~ msgid ""
-#~ "This plugin displays a pop-up dialog which contains basic information on "
-#~ "current document."
-#~ msgstr ""
-#~ "Denna insticksmodul visar ett popupfönster som innehåller grundläggande "
-#~ "information om det aktuella dokumentet."
-
-#~ msgid "email"
-#~ msgstr "e-post"
-
-#~ msgid "Email"
-#~ msgstr "E-post"
-
-#~ msgid ""
-#~ "Email the current document to a specified email address\n"
-#~ "gedit searches for sendmail to use this plugin."
-#~ msgstr ""
-#~ "E-postar det aktuella dokumentet till en angiven e-postadress\n"
-#~ "gedit söker efter sendmail för att använda denna insticksmodul."
-
-#~ msgid "Sort a document."
-#~ msgstr "Sortera ett dokument."
-
-#~ msgid "The gEdit Web Browse Plugin"
-#~ msgstr "gEdit-webbläsarinsticksmodulen"
-
-#~ msgid "The Man Page Viewer Plugin"
-#~ msgstr "Manualsidevisarinsticksmodulen"
-
-#~ msgid "Unknow error"
-#~ msgstr "Okänt fel"
-
-#~ msgid "Enter the _URL to browse for:"
-#~ msgstr "Ange _URL:en att bläddra efter:"
-
-#~ msgid "Lynx found at: "
-#~ msgstr "Lynx hittades på: "
-
-#~ msgid " Decimal to _Hex "
-#~ msgstr " Decimalt till _hexadecimalt "
-
-#~ msgid " Decimal to _Octal "
-#~ msgstr " Decimalt till _oktalt "
-
-#~ msgid " Hex to Decima_l "
-#~ msgstr " Hexadecimalt till decima_lt "
-
-#~ msgid "_Converted value:"
-#~ msgstr "_Konverterat värde:"
-
-#~ msgid "_Value to be converted:"
-#~ msgstr "_Värde att konvertera:"
-
-#~ msgid "gedit: Number Converter plugin"
-#~ msgstr "gedit: Insticksmodul för talkonvertering"
-
-#~ msgid "Diff found at: "
-#~ msgstr "Diff hittades på: "
-
-#~ msgid "Current column"
-#~ msgstr "Aktuell kolumn"
-
-#~ msgid "Current line"
-#~ msgstr "Aktuell rad"
-
-#~ msgid "Paragraphs"
-#~ msgstr "Stycken"
-
-#~ msgid "F_rom:"
-#~ msgstr "F_rån:"
-
-#~ msgid "File to use as body of message: "
-#~ msgstr "Fil att använda som meddelandetext: "
-
-#~ msgid "From:"
-#~ msgstr "Från:"
-
-#~ msgid "Sendmail found at:"
-#~ msgstr "Sendmail hittades på:"
-
-#~ msgid "Subject:"
-#~ msgstr "Ämne:"
-
-#~ msgid "To:"
-#~ msgstr "Till:"
-
-#~ msgid "_Subject:"
-#~ msgstr "_Ämne:"
-
-#~ msgid "gedit: E-mail plugin"
-#~ msgstr "gedit: E-postinsticksmodul"
-
-#~ msgid "gedit: e-mail plugin"
-#~ msgstr "gedit: e-postinsticksmodul"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "Case Sensitive"
-#~ msgstr "Gör skillnad på gemener/VERSALER"
-
-#~ msgid "gedit: Sort plugin"
-#~ msgstr "gedit: Sorteringsinsticksmodul"
-
-#~ msgid "(C) 1998, 1999, 2000 Alex Roberts and Evan Lawrence"
-#~ msgstr "© 1998, 1999, 2000 Alex Roberts och Evan Lawrence"
-
-#~ msgid "To use the %s plugin, you need to specify a location for \"%s\"."
-#~ msgstr ""
-#~ "För att använda %s-insticksmodulen måste du ange en plats för \"%s\"."
-
-#~ msgid "gedit: Preferences"
-#~ msgstr "gedit: Inställningar"
-
-#~ msgid "Search string not found"
-#~ msgstr "Söksträngen kunde inte hittas"
-
-#~ msgid "Could not allocate the memory for the Replace all request."
-#~ msgstr "Kunde inte allokera det minne som krävs för Ersätt alla-begäran."
-
-#~ msgid "_Deactivate all"
-#~ msgstr "_Inaktivera alla"
-
-#~ msgid "Appearance"
-#~ msgstr "Utseende"
-
-#~ msgid "Editor Behavior"
-#~ msgstr "Redigerarbeteende"
-
-#~ msgid "General"
-#~ msgstr "Allmänt"
-
-#~ msgid "MDI (Multiple Document Interface)"
-#~ msgstr "MDI (Multiple Document Interface)"
-
-#~ msgid "Orientation"
-#~ msgstr "Orientering"
-
-#~ msgid "Paper"
-#~ msgstr "Papper"
-
-#~ msgid "Printing"
-#~ msgstr "Utskrift"
-
-#~ msgid "Set toolbar to _icons only"
-#~ msgstr "Visa endast _ikoner i verktygsraden"
-
-#~ msgid "Set toolbar to icons with _text"
-#~ msgstr "Visa ikoner och _text i verktygsraden"
-
-#~ msgid "Tab _width: "
-#~ msgstr "Ta_bbredd: "
-
-#~ msgid "_Foreground: "
-#~ msgstr "_Förgrund: "
-
-#~ msgid "_Landscape"
-#~ msgstr "_Liggande"
-
-#~ msgid "_Portrait"
-#~ msgstr "_Stående"
-
-#~ msgid "gedit: Browse for program location..."
-#~ msgstr "gedit: Bläddra efter programplats..."
-
-#~ msgid "RO - "
-#~ msgstr "SKRIVSK - "
-
-#~ msgid "%s %d*"
-#~ msgstr "%s %d*"
-
-#~ msgid "``%s'' has been modified.  Do you want to save the changes?"
-#~ msgstr "\"%s\" har ändrats. Vill du spara ändringarna?"
-
-#~ msgid "This file does not end with a valid extension\n"
-#~ msgstr "Denna fil slutar inte med en giltig filändelse\n"
-
-#~ msgid ""
-#~ "An error was encountered while opening the file \"%s\".\n"
-#~ "Please make sure the file exists."
-#~ msgstr ""
-#~ "Ett fel uppstod vid öppning av filen \"%s\".\n"
-#~ "Var vänlig och se till att filen finns."
-
-#~ msgid ""
-#~ "An error was encountered while opening the file \"%s\".\n"
-#~ "Could not allocate the required memory."
-#~ msgstr ""
-#~ "Ett fel uppstod vid öppning av filen \"%s\".\n"
-#~ "Kunde inte allokera det minne som krävs."
-
-#~ msgid ""
-#~ "An error was encountered while reading the file: \n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Make sure that you have permissions for opening the file. "
-#~ msgstr ""
-#~ "Ett fel uppstod vid läsning av filen: \n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Se till att du har rättigheter att öppna filen."
-
-#~ msgid ""
-#~ "Internal error reading the file: \n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Please, report this error to submit@bugs.gnome.org."
-#~ msgstr ""
-#~ "Internt fel vid läsning av filen: \n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Var vänlig och rapportera detta fel till submit@bugs.gnome.org."
-
-#~ msgid ""
-#~ "gedit was unable to save the file:\n"
-#~ "\n"
-#~ " %s \n"
-#~ "\n"
-#~ "Because of an unknown reason (1). Please report this Problem to "
-#~ "submit@bugs.gnome.org"
-#~ msgstr ""
-#~ "gedit kunde inte spara filen:\n"
-#~ "\n"
-#~ " %s \n"
-#~ "\n"
-#~ "på grund av en okänd orsak (1). Var vänlig och rapportera detta problem "
-#~ "till submit@bugs.gnome.org"
-
-#~ msgid ""
-#~ "gedit was unable to save the file:\n"
-#~ "\n"
-#~ " %s \n"
-#~ "\n"
-#~ "Because of an unknown reason (2). Please report this Problem to "
-#~ "submit@bugs.gnome.org"
-#~ msgstr ""
-#~ "gedit kunde inte spara filen:\n"
-#~ "\n"
-#~ " %s \n"
-#~ "\n"
-#~ "på grund av en okänd orsak (2). Var vänlig och rapportera detta problem "
-#~ "till submit@bugs.gnome.org"
-
-#~ msgid "Error in the pipe."
-#~ msgstr "Fel i röret."
-
-#~ msgid "``%s'' is about to be overwritten. Do you want to continue ?"
-#~ msgstr "\"%s\" kommer att skrivas över. Vill du fortsätta?"
-
-#~ msgid "Error saving file!"
-#~ msgstr "Fel vid sparande av fil!"
-
-#~ msgid ""
-#~ "Are you sure you want to revert all changes?\n"
-#~ "(%s)"
-#~ msgstr ""
-#~ "Är du säker att du vill återställa alla ändringar?\n"
-#~ "(%s)"
-
-#~ msgid "Show window debugging messages."
-#~ msgstr "Visa felsökningsmeddelanden för fönster."
-
-#~ msgid "Open (swap) .c/.h file"
-#~ msgstr "Öppna (byt) .c/.h-fil"
-
-#~ msgid "Print pre_view..."
-#~ msgstr "Förhands_granska..."
-
-#~ msgid "Preview data to be printed"
-#~ msgstr "Förhandsgranska data som ska skrivas ut"
-
-#~ msgid "Add a new view of the document"
-#~ msgstr "Lägg till en ny vy av dokumentet"
-
-#~ msgid "Manage available plugin modules"
-#~ msgstr "Hantera tillgängliga insticksmoduler"
-
-#~ msgid ""
-#~ "The program %s could not be found.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Programmet %s kunde inte hittas.\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "'%s' doesn't seem to exist.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\"%s\" verkar inte finnas.\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "'%s' seems to be a directory.\n"
-#~ "but '%s' could not be found inside it.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\"%s\" verkar vara en katalog\n"
-#~ "men \"%s\" kunde inte hittas i den.\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "'%s' doesn't seem to be a program.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\"%s\" verkar inte vara ett program.\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "%sYou won't be able to use the %s plugin without %s. \n"
-#~ " Do you want to specify a new location for %s?"
-#~ msgstr ""
-#~ "%sDu kommer inte att kunna använda insticksmodulen %s utan %s. \n"
-#~ " Vill du ange en ny plats för %s?"
-
-#~ msgid "Error, init_plugin returned an error"
-#~ msgstr "Fel, init_plugin retunerade ett fel"
-
-#~ msgid "Error, plugin is still in use"
-#~ msgstr "Fel, insticksmodulen används fortfarande"
-
-#~ msgid "-adobe-courier-medium-r-normal-*-*-120-*-*-m-*-iso8859-1"
-#~ msgstr "-adobe-courier-medium-r-normal-*-*-120-*-*-m-*-iso8859-1"
-
-#~ msgid ""
-#~ "gedit could not find the font \"%s\".\n"
-#~ "gedit is unable to print without this font installed."
-#~ msgstr ""
-#~ "gedit kunde inte hitta typsnittet \"%s\".\n"
-#~ "gedit kan inte skriva ut om inte det typsnittet är installerat."
-
-#~ msgid "Printing .."
-#~ msgstr "Skriver ut.."
-
-#~ msgid "Printing ..."
-#~ msgstr "Skriver ut..."
-
-#~ msgid "_File/"
-#~ msgstr "_Arkiv/"
-
-#~ msgid ""
-#~ "Can't count lines if another search operation is active, please close the "
-#~ "search dialog."
-#~ msgstr ""
-#~ "Kan inte beräkna antalet rader om en annan sökoperation är aktiv. Var "
-#~ "vänlig och stäng sökdialogen."
-
-#~ msgid ""
-#~ "Filename: %s\n"
-#~ "\n"
-#~ "Total Characters: %i\n"
-#~ "Total Words: %i\n"
-#~ "Total Lines: %i\n"
-#~ "Total Paragraphs: %i\n"
-#~ "Total Bytes: %i\n"
-#~ "\n"
-#~ "Current Line: %i\n"
-#~ "Current Column: %i"
-#~ msgstr ""
-#~ "Filnamn: %s\n"
-#~ "\n"
-#~ "Totalt antal tecken: %i\n"
-#~ "Totalt antal ord: %i\n"
-#~ "Totalt antal linjer: %i\n"
-#~ "Totalt antal stycken: %i\n"
-#~ "Totalt antal byte: %i\n"
-#~ "\n"
-#~ "Aktuell rad: %i\n"
-#~ "Aktuell kolumn: %i"
-
-#~ msgid "You can't remove the last view of a document."
-#~ msgstr "Du kan inte ta bort den sista vyn av ett dokument."
-
-#~ msgid "label12"
-#~ msgstr "label12"
-
-#~ msgid "label13"
-#~ msgstr "label13"
-
-#~ msgid ""
-#~ "Left\n"
-#~ "Right\n"
-#~ "Top\n"
-#~ "Bottom\n"
-#~ msgstr ""
-#~ "Vänster\n"
-#~ "Höger\n"
-#~ "Överst\n"
-#~ "Nederst\n"
-
-#~ msgid ""
-#~ "Notebook\n"
-#~ "Toplevel\n"
-#~ "Modal\n"
-#~ "Default\n"
-#~ msgstr ""
-#~ "Flikhäfte\n"
-#~ "Toppnivå\n"
-#~ "Modal\n"
-#~ "Standard\n"
-
-#~ msgid ""
-#~ "An error was encountered while opening the file: \n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Please make sure the file exists."
-#~ msgstr ""
-#~ "Ett fel uppstod vid öppning av filen: \n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Var vänlig och försäkra dig om att filen finns."
-
-#~ msgid ""
-#~ "Plugin Name: %s\n"
-#~ "Author: %s\n"
-#~ "Description: %s\n"
-#~ msgstr ""
-#~ "Namn på insticksmodul: %s\n"
-#~ "Författare: %s\n"
-#~ "Beskrivning: %s\n"
-
-#~ msgid "< Remove"
-#~ msgstr "< Ta bort"
-
-#~ msgid "Add All >>"
-#~ msgstr "Lägg till alla >>"
-
-#~ msgid "Installed Plugins"
-#~ msgstr "Installerade insticksmoduler"
-
-#~ msgid "Open as URI"
-#~ msgstr "Öppna som URI"
-
-#~ msgid "File _Info"
-#~ msgstr "Fil_information"
-
-#~ msgid "Get the basic file info"
-#~ msgstr "Hämta den grundläggande filinformationen."
-
-#~ msgid "File to use as body of message : "
-#~ msgstr "Fil att använda som kropp i meddelandet: "
-
-#~ msgid "Sendmail found at :"
-#~ msgstr "Sendmail hittades på:"
-
-#~ msgid "browse"
-#~ msgstr "bläddra"
-
-#~ msgid "don't translate this\n"
-#~ msgstr "översätt inte detta\n"
-
-#~ msgid "Directory  "
-#~ msgstr "Katalog  "
-
-#~ msgid ""
-#~ "An error was encountered while opening the file:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "\n"
-#~ "Please make sure the file is not being used by another application\n"
-#~ "and that the file is not empty."
-#~ msgstr ""
-#~ "Ett fel uppstod vid öppning av filen:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "\n"
-#~ "Var vänlig och se till att filen inte används av något annat program\n"
-#~ "och att filen inte är tom."
-
-#~ msgid "plugin allocation error"
-#~ msgstr "fel vid allokering av insticksmodul"
-
-#~ msgid "Error, the plugin did not specify a long description"
-#~ msgstr "Fel, insticksmodulen angav inte en lång beskrivning"
-
-#~ msgid "Text found at line :%i"
-#~ msgstr "Texten hittades vid rad: %i"
-
-#~ msgid "Get file info like characters, lines, words & paragraphs count."
-#~ msgstr ""
-#~ "Hämta filinformation som exempelvis antal tecken, rader, ord och stycken."
-
-#~ msgid "Can't find again. There is not a text string to search for."
-#~ msgstr "Kan inte söka igen. Det finns ingen textsträng att söka efter."
-
-#~ msgid "Enter the line number you wish to go to."
-#~ msgstr "Ange radnumret du vill gå till."
