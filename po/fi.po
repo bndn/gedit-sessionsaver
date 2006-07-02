@@ -9,21 +9,108 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-07 18:46+0200\n"
-"PO-Revision-Date: 2006-01-07 18:50+0200\n"
+"POT-Creation-Date: 2006-07-02 23:02+0300\n"
+"PO-Revision-Date: 2006-07-02 23:04+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../quickies/quickies.glade.h:1
-msgid "Execute"
-msgstr "Suorita"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:253
+msgid "Character Map"
+msgstr "Merkkikartta"
 
-#: ../quickies/quickies.glade.h:2
-msgid "Quick Script:"
-msgstr "Pikaskripti:"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr "Lisää erikoismerkkejä napsauttamalla niitä."
+
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+msgid "Color Picker"
+msgstr "Värinvalitsin"
+
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
+msgstr "Valitse väri ikkunasta ja syötä tekstiin sen heksadesimaaliesitys."
+
+#: ../plugins/colorpicker/colorpicker.py:68
+msgid "_Color picker"
+msgstr "_Värinvalitsin"
+
+#: ../plugins/colorpicker/colorpicker.py:69
+msgid "Pick a color from a dialog"
+msgstr "Valitse väri ikkunasta"
+
+#: ../plugins/colorpicker/colorpicker.py:215
+msgid "Color picker"
+msgstr "Värinvalitsin"
+
+#: ../plugins/colorpicker/colorpicker.py:223
+msgid "_Insert"
+msgstr "L_isää"
+
+#: ../plugins/joinlines/joinlines.py:60
+msgid "_Join Lines"
+msgstr "_Yhdistä rivit"
+
+#: ../plugins/joinlines/joinlines.py:61
+msgid "Join the selected lines"
+msgstr "Yhdistä valitut rivit"
+
+#: ../plugins/joinlines/joinlines.py:63
+msgid "_Split Lines"
+msgstr "_Jaa rivit"
+
+#: ../plugins/joinlines/joinlines.py:64
+msgid "Split the selected lines"
+msgstr "Jaa valitut rivit"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+msgid "Tab_bar"
+msgstr "Välilehti_palkki"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+msgid "Show or hide the tabbar in the current window"
+msgstr "Näytä tai piilota välilehtipalkki valitussa ikkunassa"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+msgid "Tabbar is Visible"
+msgstr "Välilehtipalkki näytetään"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+msgid "Whether the tabbar should be visible in editing windows."
+msgstr "Näytetäänkö välilehtipalkki muokkaimessa."
+
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+msgid "Add a menu entry to show/hide the tabbar."
+msgstr "Lisää valikon kohta välilehtipalkin piilottamiseksi ja näyttämiseksi"
+
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+msgid "Show/Hide Tabbar"
+msgstr "Näytä tai piilota välilehtipalkki"
+
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr "Unohda, että et käytä sarkaimia."
+
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+msgid "Smart Spaces"
+msgstr "Älykkääy tyhjeet"
+
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr "Upota pääteikkuna alapaneeliin."
+
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+msgid "Embedded Terminal"
+msgstr "Upotettu pääteikkuna"
+
+#~ msgid "Execute"
+#~ msgstr "Suorita"
+
+#~ msgid "Quick Script:"
+#~ msgstr "Pikaskripti:"
 
 #~ msgid "_ASCII Table"
 #~ msgstr "_ASCII-taulu"
@@ -312,9 +399,6 @@ msgstr "Pikaskripti:"
 #~ "Jos tämä arvo on 0, rivinumeroita ei lisätä asiakirjaa tulostettaessa "
 #~ "ollenkaan. Muutoin gedit tulostaa rivinumeron annetun arvon välein."
 
-#~ msgid "Insert spaces"
-#~ msgstr "Lisää tyhjeitä"
-
 #~ msgid "Line Number Font for Printing"
 #~ msgstr "Rivinumeron kirjasin tulostettaessa"
 
@@ -477,9 +561,6 @@ msgstr "Pikaskripti:"
 #~ msgid "Toolbar Buttons Style"
 #~ msgstr "Työkalupalkin painiketyyli"
 
-#~ msgid "Toolbar is Visible"
-#~ msgstr "Työkalupalkki näytetään"
-
 #~ msgid "Undo Actions Limit"
 #~ msgstr "Kumoamiskertojen määrä"
 
@@ -539,9 +620,6 @@ msgstr "Pikaskripti:"
 #~ msgstr ""
 #~ "Määrittää näytetäänkö tilarivillä lisäys-/ylikirjoitustila. Varmista että "
 #~ "asetus \"Tilarivi näytetään\" on päällä jotta tämä asetus tulisi voiman."
-
-#~ msgid "Whether the toolbar should be visible in editing windows."
-#~ msgstr "Määrittää näytetäänkö työkalupalkkia."
 
 #~ msgid ""
 #~ "Whether to use the system's default colors for the editing area. If this "
@@ -757,9 +835,6 @@ msgstr "Pikaskripti:"
 #~ msgid "Use the _selected format"
 #~ msgstr "Käytä _valittua muotoilua"
 
-#~ msgid "_Insert"
-#~ msgstr "L_isää"
-
 #~ msgid "_Prompt for a format"
 #~ msgstr "_Kysy muotoilua"
 
@@ -780,9 +855,6 @@ msgstr "Pikaskripti:"
 
 #~ msgid "U_nindent"
 #~ msgstr "Poista sise_nnys"
-
-#~ msgid "Unindent selected lines"
-#~ msgstr "Poista valittujen rivien sisennys"
 
 #~ msgid "Indent lines"
 #~ msgstr "Sisennä rivit"
@@ -1008,9 +1080,6 @@ msgstr "Pikaskripti:"
 
 #~ msgid "Go to Line"
 #~ msgstr "Siirry riville"
-
-#~ msgid "_Go to Line"
-#~ msgstr "_Siirry riville"
 
 #~ msgid "The text \"%s\" was not found."
 #~ msgstr "Tekstiä \"%s\" ei löytynyt."
@@ -1334,9 +1403,6 @@ msgstr "Pikaskripti:"
 
 #~ msgid "_minutes"
 #~ msgstr "_minuuttia"
-
-#~ msgid "character(s)"
-#~ msgstr "merkki(ä)"
 
 #~ msgid "li_ne(s)"
 #~ msgstr " r_ivi(ä)"
@@ -1689,9 +1755,6 @@ msgstr "Pikaskripti:"
 
 #~ msgid "Change the visibility of the output window in the current window"
 #~ msgstr "Muuta tulosteikkunan näkyvyyttä nykyisessä ikkunassa"
-
-#~ msgid "Change the visibility of the statusbar in the current window"
-#~ msgstr "Muuta tilarivin näkyvyyttä nykyisessä ikkunassa"
 
 #~ msgid "Change the visibility of the toolbar in the current window"
 #~ msgstr "Muuta työkalupalkin näkyvyyttä nykyisessä ikkunassa"
@@ -2333,14 +2396,8 @@ msgstr "Pikaskripti:"
 #~ msgid "Close the output window"
 #~ msgstr "Sulje tulosteikkuna"
 
-#~ msgid "Copy selected lines"
-#~ msgstr "Kopioi valitut rivit"
-
 #~ msgid "Clear the output window"
 #~ msgstr "Tyhjennä tulosteikkuna"
-
-#~ msgid "Output Lines"
-#~ msgstr "Tulosterivit"
 
 #~ msgid "Choose one or more e_ncodings:"
 #~ msgstr "Valitse yksi tai useampia _koodaustapoja:"
