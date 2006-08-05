@@ -310,7 +310,7 @@ undef_plugin() {
 		disabled_plugins="$disabled_plugins, $1 ($2)"
 	fi
 	
-	PLUGINS=$(echo "$PLUGINS" | sed -e "s/[^a-zA-Z0-9_]$1[ \t\r\n\f]\{1,\}/ /" -e "s/[^a-zA-Z0-9_]$1$//" -e "s/^$1[ \t\r\n\f]\{1,\}//")
+	PLUGINS=$(echo "$PLUGINS" | sed -e "s/[[^a-zA-Z0-9_]]$1[[ \t\r\n\f]]\{1,\}/ /" -e "s/[[^a-zA-Z0-9_]]$1$//" -e "s/^$1[[ \t\r\n\f]]\{1,\}//")
 }
 
 # ================================================================
