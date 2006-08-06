@@ -48,123 +48,125 @@ ui_str = """
 """
 
 class JoinLinesPlugin(gedit.Plugin):
-	def __init__(self):
-		gedit.Plugin.__init__(self)
-					
-	def activate(self, window):
-		manager = window.get_ui_manager()
-		data = dict()
+    def __init__(self):
+        gedit.Plugin.__init__(self)
+                    
+    def activate(self, window):
+        manager = window.get_ui_manager()
+        data = dict()
 
-		data["action_group"] = gtk.ActionGroup("GeditJoinLinesPluginActions")
-		data["action_group"].add_actions(
-			[("JoinLines", None, _("_Join Lines"), "<Ctrl>J",
-			  _("Join the selected lines"),
-			  lambda a, w: join_lines(w)),
-			 ("SplitLines", None, _('_Split Lines'), "<Shift><Ctrl>J",
-			  _("Split the selected lines"),
-			  lambda a, w: split_lines(w))],
-			window)
+        data["action_group"] = gtk.ActionGroup("GeditJoinLinesPluginActions")
+        data["action_group"].add_actions(
+            [("JoinLines", None, _("_Join Lines"), "<Ctrl>J",
+              _("Join the selected lines"),
+              lambda a, w: join_lines(w)),
+             ("SplitLines", None, _('_Split Lines'), "<Shift><Ctrl>J",
+              _("Split the selected lines"),
+              lambda a, w: split_lines(w))],
+            window)
 
-		manager.insert_action_group(data["action_group"], -1)
-		data["ui_id"] = manager.add_ui_from_string(ui_str)
+        manager.insert_action_group(data["action_group"], -1)
+        data["ui_id"] = manager.add_ui_from_string(ui_str)
 
-		window.set_data("JoinLinesPluginInfo", data)
-		update_sensitivity(window)
-	
-	def deactivate(self, window):
-		data = window.get_data("JoinLinesPluginInfo")		
-		manager = window.get_ui_manager()		
-		manager.remove_ui(data["ui_id"])
-		manager.remove_action_group(data["action_group"])
-		manager.ensure_update()
-		window.set_data("JoinLinesPluginInfo", None)
-		
-	def update_ui(self, window):
-		update_sensitivity(window)
-			
+        window.set_data("JoinLinesPluginInfo", data)
+        update_sensitivity(window)
+    
+    def deactivate(self, window):
+        data = window.get_data("JoinLinesPluginInfo")        
+        manager = window.get_ui_manager()        
+        manager.remove_ui(data["ui_id"])
+        manager.remove_action_group(data["action_group"])
+        manager.ensure_update()
+        window.set_data("JoinLinesPluginInfo", None)
+        
+    def update_ui(self, window):
+        update_sensitivity(window)
+            
 def update_sensitivity(window):
-	data = window.get_data("JoinLinesPluginInfo")
-	view = window.get_active_view()
-	data["action_group"].set_sensitive(view is not None and \
-	                                   view.get_editable())
+    data = window.get_data("JoinLinesPluginInfo")
+    view = window.get_active_view()
+    data["action_group"].set_sensitive(view is not None and \
+                                       view.get_editable())
 
 def join_lines(window):
-	document = window.get_active_document()
-	if document is None:
-		return
-	
-	document.begin_user_action()
-	
-	try:
-		start, end = document.get_selection_bounds()
-	except ValueError:
-		start, end = document.get_bounds()
-	
-	end_mark = document.create_mark(None, end)
-	
-	while document.get_iter_at_mark(end_mark).compare(start) == 1:
-		start.forward_to_line_end()
+    document = window.get_active_document()
+    if document is None:
+        return
+    
+    document.begin_user_action()
+    
+    try:
+        start, end = document.get_selection_bounds()
+    except ValueError:
+        start, end = document.get_bounds()
+    
+    end_mark = document.create_mark(None, end)
+    
+    while document.get_iter_at_mark(end_mark).compare(start) == 1:
+        start.forward_to_line_end()
 
-		end = start.copy()
-		c = end.get_char()
-		if c == '\r':
-			end.forward_char()
-			c = end.get_char()
-		if c == '\n':
-			end.forward_char()
-			c = end.get_char()
+        end = start.copy()
+        c = end.get_char()
+        if c == '\r':
+            end.forward_char()
+            c = end.get_char()
+        if c == '\n':
+            end.forward_char()
+            c = end.get_char()
 
-		# remove blank chars		
-		while end.get_char() in (' ', '\t'):
-			end.forward_char()
-		
-		document.delete(start, end)
+        # remove blank chars        
+        while end.get_char() in (' ', '\t'):
+            end.forward_char()
+        
+        document.delete(start, end)
 
-		# let the carriage return there if there are more than one:
-		while end.get_char() in ('\r', '\n'):
-			end.forward_char()
-		else:
-			document.insert(start, ' ')
-	
-	document.delete_mark(end_mark)
-	document.end_user_action()			
+        # let the carriage return there if there are more than one:
+        while end.get_char() in ('\r', '\n'):
+            end.forward_char()
+        else:
+            document.insert(start, ' ')
+    
+    document.delete_mark(end_mark)
+    document.end_user_action()            
 
 def split_lines(window):
-	view = window.get_active_view()
-	if view is None:
-		return
+    view = window.get_active_view()
+    if view is None:
+        return
 
-	document = view.get_buffer()
-	tabsize = view.get_tabs_width()
+    document = view.get_buffer()
+    tabsize = view.get_tabs_width()
 
-	document.begin_user_action()
+    document.begin_user_action()
 
-	try:
-		start, end = document.get_selection_bounds()
-	except ValueError:
-		start, end = document.get_bounds()
+    try:
+        start, end = document.get_selection_bounds()
+    except ValueError:
+        start, end = document.get_bounds()
 
-	end_mark = document.create_mark(None, end)
-	width = window.get_active_view().get_margin()
+    end_mark = document.create_mark(None, end)
+    width = window.get_active_view().get_margin()
 
-	# split lines
-	pos = 0
-	while document.get_iter_at_mark(end_mark).compare(start) == 1:
-		start.forward_char()
-		char = start.get_char()
+    # split lines
+    pos = 0
+    while document.get_iter_at_mark(end_mark).compare(start) == 1:
+        start.forward_char()
+        char = start.get_char()
 
-		if char in ('\r','\n'):
-			pos = 0
-		elif char == '\t':
-			pos = pos + tabsize
-		else:
-			pos = pos + 1
+        if char in ('\r','\n'):
+            pos = 0
+        elif char == '\t':
+            pos = pos + tabsize
+        else:
+            pos = pos + 1
 
-		if pos >= width:
-			pos = 0
-			if start.inside_word() and not start.starts_word():
-				start.backward_word_start()
-			document.insert(start, '\n')
+        if pos >= width:
+            pos = 0
+            if start.inside_word() and not start.starts_word():
+                start.backward_word_start()
+            document.insert(start, '\n')
 
-	document.delete_mark(end_mark)
-	document.end_user_action()
+    document.delete_mark(end_mark)
+    document.end_user_action()
+
+# ex:ts=4:et:
