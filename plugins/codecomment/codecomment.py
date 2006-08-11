@@ -183,8 +183,8 @@ def do_comment(document, unindent=False):
         return
 
     lang_id = lang.get_id()
-    if tags_dict.has_key(lang):
-        (start_tag, end_tag) = tags_dict[lang]
+    if tags_dict.has_key(lang_id):
+        (start_tag, end_tag) = tags_dict[lang_id]
         if unindent:       # Select the comment or the uncomment method
             new_code = remove_comment_characters(document,
                                                  start_tag,
@@ -260,12 +260,12 @@ class CodeCommentWindowHelper(object):
             lang = doc.get_language()
             if lang is not None:
                 self._action_group.set_sensitive(tags_dict.has_key(lang.get_id()))
-        else:
-            self._action_group.set_sensitive(False)
+                return
+        self._action_group.set_sensitive(False)
 
 
 class CodeCommentPlugin(gedit.Plugin):
-    DATA_TAG = "CodeCommentPluginInstance"
+    DATA_TAG = "CodeCommentPluginWindowHelper"
 
     def __init__(self):
         gedit.Plugin.__init__(self)
