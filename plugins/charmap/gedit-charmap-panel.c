@@ -22,6 +22,7 @@
 #include <config.h>
 #endif
 
+#include <gedit/gedit-plugin.h>
 #include "gedit-charmap-panel.h"
 #include <gucharmap/gucharmap-script-chapters.h>
 
@@ -36,7 +37,7 @@ struct _GeditCharmapPanelPrivate
 	GtkWidget	*chapters;
 };
 
-G_DEFINE_TYPE(GeditCharmapPanel, gedit_charmap_panel, GTK_TYPE_VBOX)
+GEDIT_PLUGIN_DEFINE_TYPE(GeditCharmapPanel, gedit_charmap_panel, GTK_TYPE_VBOX)
 
 static void
 on_chapter_changed (GucharmapChapters *chapters,

@@ -1,3 +1,13 @@
+2006-08-11  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac:
+	* plugins/charmap/gedit-charmap-plugin.c:
+	* plugins/charmap/gedit-charmap-panel.[ch]:
+	
+	Make charmap plugin use the new GeditPlugin macros for registering
+	types. gedit requirement version in configure.ac has been bumped to
+	2.15.5 since the new macros are included since then
+
 2006-08-11  Steve Frécinaux  <steve@istique.net>
 
 	* plugins/codecomment/codecomment.py: fix bug introduced in last

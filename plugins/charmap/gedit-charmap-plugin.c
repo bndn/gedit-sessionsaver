@@ -47,7 +47,9 @@ typedef struct
 	guint		 context_id;
 } WindowData;
 
-GEDIT_PLUGIN_REGISTER_TYPE (GeditCharmapPlugin, gedit_charmap_plugin)
+GEDIT_PLUGIN_REGISTER_TYPE_WITH_CODE (GeditCharmapPlugin, gedit_charmap_plugin,
+		gedit_charmap_panel_register_type (module);
+)
 
 static void
 gedit_charmap_plugin_init (GeditCharmapPlugin *plugin)
