@@ -25,33 +25,57 @@ import gtk
 import copy
 from gettext import gettext as _
 
-tags_dict = {'text/x-c-header'   : ('/* '  , ' */'),
-             'text/x-chdr'       : ('/* '  , ' */'),             
-             'text/x-csrc'       : ('/* '  , ' */'),    # C comment tags
-             'text/x-c++hdr'     : ("// "  , None),
-             'text/x-c++src'     : ("// "  , None),     # C++ comment tags
-             'text/x-csharpsrc'  : ("// "  , None),     # C#
-             'text/x-adasrc'     : ("-- "  , None),     # Ada
-             'text/x-python'     : ("# "   , None),     # Python comment tags
-             'text/x-objcsrc'    : ("% "   , None),     # Matlab/Octave
-             'text/x-fortran'    : ("! "   , None),     # Fortran 95
-             'text/css'          : ("/* "  , " */"),    # CSS
-             'text/x-gtkrc'      : ("# "   , None),     # gtkrc
-             'text/x-haskell'    : ("-- "  , None),     # Haskell
-             'text/html'         : ("<!-- ", " -->"),   # (X)HTML
-             'text/x-ini-file'   : ("; "   , None),     # INI
-             'text/x-java'       : ("// "  , None),     # Java
-             'text/x-javascript' : ("// "  , None),     # Javascript
-             'text/x-tex'        : ("% "   , None),     # Latex
-             'text/x-lua'        : ("# "   , None),     # LUA
-             'text/x-makefile'   : ("# "   , None),     # Makefile
-             'text/x-pascal'     : ("(* "  , " *)"),    # Pascal
-             'text/x-perl'       : ("# "   , None),     # Perl
-             'application/x-php' : ("# "   , None),     # PHP
-             'application/x-ruby': ("# "   , None),     # Ruby
-             'text/x-shellscript': ("# "   , None),     # Sh
-             'text/xml'          : ("<!-- ", " -->"),   # XML
-}
+# Most common types of comments (store them only once)
+ccomment    = ('/* ', ' */')
+cppcomment  = ('// ', None)
+adacomment  = ('-- ', None)
+xmlcomment  = ('<!-- ', ' -->')
+shcomment   = ('# ', None)
+texcomment  = ('% ', None)
+pascomment  = ('(* ', ' *)')
+lispcomment = ('; ', None)
+
+tags_dict = { '@46@desktop'     : shcomment,
+              '@46@ini'         : lispcomment,
+              'Ada'             : adacomment,
+              'Boo'             : shcomment,
+              'C'               : ccomment,
+              'C@35@'           : cppcomment,
+              'C@43@@43@'       : cppcomment,
+              'CSS'             : ccomment,
+              'D'               : cppcomment,
+              'Fortran@32@95'   : ('! ', None),
+              'GtkRC'           : shcomment,
+              'HTML'            : xmlcomment,
+              'Haskell'         : adacomment,
+              'IDL'             : cppcomment,
+              'Java'            : cppcomment,
+              'JavaScript'      : cppcomment,
+              'LaTeX'           : texcomment,
+              'Lua'             : adacomment,
+              'MSIL'            : cppcomment,
+              'Makefile'        : shcomment,
+              'Nemerle'         : cppcomment,
+              'Objective@32@Caml': pascomment,
+              'Octave'          : texcomment,
+              'PHP'             : shcomment,
+              'Pascal'          : pascomment,
+              'Perl'            : shcomment,
+              'Python'          : shcomment,
+              'R'               : shcomment,
+              'Ruby'            : shcomment,
+              'SQL'             : adacomment,
+              'Scheme'          : lispcomment,
+              'Tcl'             : shcomment,
+              'VB@46@NET'       : ("' ", None),
+              'VHDL'            : adacomment,
+              'Verilog'         : cppcomment,
+              'XML'             : xmlcomment,
+              'gettext@32@translation': shcomment,
+              'sh'              : shcomment 
+            }
+
+
 
 def forward_tag(iter, tag):
     iter.forward_chars(len(tag))
@@ -153,9 +177,14 @@ def do_comment(document, unindent=False):
         end = start.copy()
         if not end.forward_to_line_end():
             return
-    doc_type = document.get_mime_type()
-    if tags_dict.has_key(doc_type):
-        (start_tag, end_tag) = tags_dict[doc_type]            
+
+    lang = document.get_language()
+    if lang is None:
+        return
+
+    lang_id = lang.get_id()
+    if tags_dict.has_key(lang):
+        (start_tag, end_tag) = tags_dict[lang]
         if unindent:       # Select the comment or the uncomment method
             new_code = remove_comment_characters(document,
                                                  start_tag,
@@ -193,7 +222,7 @@ class CodeCommentWindowHelper(object):
         self._plugin = plugin
         self._insert_menu()
 
-    def deactivate(self, window):
+    def deactivate(self):
         self._remove_menu()
         self._action_group = None
         self._window = None
@@ -228,8 +257,9 @@ class CodeCommentWindowHelper(object):
     def update_ui(self):
         doc = self._window.get_active_document()
         if doc:
-            doc_type = doc.get_mime_type()
-            self._action_group.set_sensitive(tags_dict.has_key(doc_type))
+            lang = doc.get_language()
+            if lang is not None:
+                self._action_group.set_sensitive(tags_dict.has_key(lang.get_id()))
         else:
             self._action_group.set_sensitive(False)
 
