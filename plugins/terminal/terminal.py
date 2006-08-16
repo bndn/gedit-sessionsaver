@@ -168,7 +168,7 @@ class TerminalWindowHelper(object):
         bottom.add_item(self._panel, "Terminal", image)
 
     def deactivate(self):
-        bottom = window.get_bottom_panel()
+        bottom = self._window.get_bottom_panel()
         bottom.remove_item(self._panel)
     
     def update_ui(self):
