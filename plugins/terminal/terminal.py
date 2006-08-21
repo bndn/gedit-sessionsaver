@@ -25,6 +25,11 @@ import pango
 import gtk
 import vte
 import gconf
+import gettext
+from gpdefs import *
+
+gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+_ = lambda s: gettext.dgettext("gedit-plugins", s);
 
 class GeditTerminal(gtk.HBox):
     """VTE terminal which follows gnome-terminal default profile options"""
@@ -165,7 +170,7 @@ class TerminalWindowHelper(object):
         image.set_from_icon_name("utilities-terminal", gtk.ICON_SIZE_MENU)
 
         bottom = window.get_bottom_panel()
-        bottom.add_item(self._panel, "Terminal", image)
+        bottom.add_item(self._panel, _("Terminal"), image)
 
     def deactivate(self):
         bottom = self._window.get_bottom_panel()

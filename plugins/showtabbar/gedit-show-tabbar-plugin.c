@@ -205,8 +205,8 @@ impl_activate (GeditPlugin *plugin,
 						 GETTEXT_PACKAGE);
 
 	action = gtk_toggle_action_new ("ShowTabbar",
-					N_("Tab_bar"),
-					N_("Show or hide the tabbar in the current window"),
+					_("Tab_bar"),
+					_("Show or hide the tabbar in the current window"),
 					NULL);	
 
 	gtk_toggle_action_set_active (action, visible);

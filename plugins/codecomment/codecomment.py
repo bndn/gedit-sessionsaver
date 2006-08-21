@@ -23,7 +23,11 @@
 import gedit
 import gtk
 import copy
-from gettext import gettext as _
+import gettext
+from gpdefs import *
+
+gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+_ = lambda s: gettext.dgettext("gedit-plugins", s);
 
 # Most common types of comments (store them only once)
 ccomment    = ('/* ', ' */')

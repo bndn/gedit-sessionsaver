@@ -413,6 +413,7 @@ AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 
 AC_CONFIG_FILES([
 Makefile
+plugins/gpdefs.py
 plugins/Makefile
 plugins/charmap/Makefile
 plugins/codecomment/Makefile

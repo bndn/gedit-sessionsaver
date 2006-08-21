@@ -1,3 +1,24 @@
+2006-08-18  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac:
+	* plugins/.cvsignore:
+	* plugins/Makefile.am:
+	* plugins/gpdefs.py.in:
+	
+	New gpdef module containing data from gedit-plugin configure, including
+	VERSION, PACKAGE and GETTEXT stuff.
+	
+	* plugins/charmap/gedit-charmap-plugin.c:
+	* plugins/showtabbar/gedit-show-tabbar-plugin.c:
+
+	Use translated strings instead of just mark them as translatable.
+	
+	* plugins/codecomment/codecomment.py:
+	* plugins/colorpicker/colorpicker.py:
+	* plugins/terminal/terminal.py:
+	
+	Fix i18n: initialize gettext domain and fix not translated strings.
+
 2006-08-16  Steve Frécinaux  <steve@istique.net>
 
 	* plugins/terminal/terminal.py: fix plugin deactivation.

@@ -252,7 +252,7 @@ impl_activate (GeditPlugin *plugin,
 	
 	gedit_panel_add_item (panel,
 			      data->panel,
-			      N_("Character Map"),
+			      _("Character Map"),
 			      image);
 
 	gtk_object_sink (GTK_OBJECT (image));
