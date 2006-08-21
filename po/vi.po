@@ -1,6 +1,5 @@
 # Vietnamese translation for Gedit-Plugins.
-# Copyright © 2002-2006 Gnome i18n Project for Vietnamese.
-# This file is distributed under the same license as the gedit package.
+# Copyright © 2006 Gnome i18n Project for Vietnamese.
 # Nguyễn Thái Ngọc Duy <pclouds@gmx.net>, 2002.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2006.
 # 
@@ -8,202 +7,101 @@ msgid ""
 ""
 msgstr "Project-Id-Version: gedit-plugins Gnome HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-11 02:35+0100\n"
-"PO-Revision-Date: 2006-01-11 16:39+1030\n"
+"POT-Creation-Date: 2006-08-21 11:09+0200\n"
+"PO-Revision-Date: 2006-08-21 22:33+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: LocFactoryEditor 1.6b23\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: LocFactoryEditor 1.6fc1\n"
 
-#:../quickies/quickies.glade.h:1
-msgid "Execute"
-msgstr "Thực hiện"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:255
+msgid "Character Map"
+msgstr "Sơ đồ ký tự"
 
-#:../quickies/quickies.glade.h:2
-msgid "Quick Script:"
-msgstr "Tập lệnh nhanh:"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr "Chèn ký tự đặc biệt bằng cách đơn giản nhấn vào nó."
 
-#~ msgid "_ASCII Table"
-#~ msgstr "Bảng _ASCII"
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+msgid "Color Picker"
+msgstr "Bộ chọn màu"
 
-#~ msgid "Pop-up a dialog containing an ASCII Table"
-#~ msgstr "Hiện hộp thoại chứa bảng mã ASCII."
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
+msgstr "Kén màu từ hộp thoại và chèn đại diện thập lục của nó."
 
-#~ msgid "Char"
-#~ msgstr "Ký tự"
+#: ../plugins/colorpicker/colorpicker.py:68
+msgid "_Color picker"
+msgstr "Bộ _chọn màu"
 
-#~ msgid "Dec#"
-#~ msgstr "Thập phân#"
+#: ../plugins/colorpicker/colorpicker.py:69
+msgid "Pick a color from a dialog"
+msgstr "Kén màu từ hộp thoại"
 
-#~ msgid "Hex#"
-#~ msgstr "Thập lục phân#"
+#: ../plugins/colorpicker/colorpicker.py:215
+msgid "Color picker"
+msgstr "Bộ chọn màu"
 
-#~ msgid "Name"
-#~ msgstr "Tên"
+#: ../plugins/colorpicker/colorpicker.py:223
+msgid "_Insert"
+msgstr "_Chèn"
 
-#~ msgid "ASCII Table"
-#~ msgstr "Bảng ASCII"
+#: ../plugins/joinlines/joinlines.py:60
+msgid "_Join Lines"
+msgstr "_Nối kết đường"
 
-#~ msgid "_Insert char"
-#~ msgstr "_Chèn ký tự"
+#: ../plugins/joinlines/joinlines.py:61
+msgid "Join the selected lines"
+msgstr "Nối kết những đường đã chọn"
 
-#~ msgid "ASCII table"
-#~ msgstr "Bảng ASCII"
+#: ../plugins/joinlines/joinlines.py:63
+msgid "_Split Lines"
+msgstr "Chi_a tách đường"
 
-#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-#~ msgstr "Bộ cầm phít này hiển thị một hộp thoại bật lên chứa bảng mã ASCII."
+#: ../plugins/joinlines/joinlines.py:64
+msgid "Split the selected lines"
+msgstr "Chia tách những đường đã chọn"
 
-#~ msgid "Open CVS Chan_geLogs"
-#~ msgstr "Mở CVS Chan_geLog"
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+msgid "Tab_bar"
+msgstr "Thanh ta_b"
 
-#~ msgid "Searches for ChangeLogs in the current document and opens them"
-#~ msgstr "Tìm các ChangeLog (Bản ghi thay đổi) trong tài liệu hiện thời và mở chúng."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+msgid "Show or hide the tabbar in the current window"
+msgstr "Hiện/ẩn thanh tab trong cửa sổ hiện thời"
 
-#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-#~ msgstr "Bộ cầm phít mở các ChangeLog (Bản ghi thay đổi được tìm thấy trong thông "
-#~ "báo gài vào (commit) của CVS."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+msgid "Tabbar is Visible"
+msgstr "Thanh tab hiển thị"
 
-#~ msgid "CVS ChangeLog"
-#~ msgstr "CVS ChangeLog"
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+msgid "Whether the tabbar should be visible in editing windows."
+msgstr "Thanh tab có nên hiển thị trong cửa sổ hiệu chỉnh hay không."
 
-#~ msgid "Co_mpare Files..."
-#~ msgstr "_So sánh tập tin..."
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+msgid "Add a menu entry to show/hide the tabbar."
+msgstr "Thêm một mục nhập trình đơn để hiện/ẩn thanh tab."
 
-#~ msgid "Makes a diff file from two documents or files"
-#~ msgstr "Tạo tập tin khác biệt (diff) từ hai tài liệu hoặc hai tập tin."
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+msgid "Show/Hide Tabbar"
+msgstr "Hiện/Ẩn thanh tab"
 
-#~ msgid "Compare Files"
-#~ msgstr "So sánh tập tin"
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr "Quên bạn không sử dụng dấu cách cột."
 
-#~ msgid "C_ompare"
-#~ msgstr "_So sánh"
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+msgid "Smart Spaces"
+msgstr "Dấu cách thông minh"
 
-#~ msgid "The two documents you selected are the same."
-#~ msgstr "Hai tài liệu bạn đã chọn hoàn toàn giống nhau."
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr "Nhúng cửa sổ dòng lệnh trong ô bên dưới."
 
-#~ msgid ""
-#~ "The \"first\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
-#~ msgstr "Tài liệu « thứ nhất » được chọn không tồn tại.\n"
-#~ "\n"
-#~ "Hãy cung cấp một tập tin hợp lệ."
-
-#~ msgid ""
-#~ "The \"second\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
-#~ msgstr "Tài liệu « thứ hai » được chọn không tồn tại.\n"
-#~ "\n"
-#~ "Hãy cung cấp một tập tin hợp lệ."
-
-#~ msgid "The two files you selected are the same."
-#~ msgstr "Hai tập tin bạn chọn hoàn toàn giống nhau."
-
-#~ msgid "The \"first\" document contains no text."
-#~ msgstr "Tài liệu « thứ nhất » không chứa chữ nào."
-
-#~ msgid "The \"second\" document contains no text."
-#~ msgstr "Tài liệu « thứ hai » không chứa chữ nào."
-
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "gedit could not create a temporary file."
-#~ msgstr "Không thể so sánh những tài liệu được chọn.\n"
-#~ "\n"
-#~ "Trình gedit không thể tạo tập tin tạm."
-
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "Error executing the diff command."
-#~ msgstr "Không thể so sánh các tài liệu được chọn.\n"
-#~ "\n"
-#~ "Gặp lỗi khi thực hiện lệnh « diff » (khác biệt)."
-
-#~ msgid "No differences were found between the selected documents."
-#~ msgstr "Không tìm thấy khác biệt nào giữa những tài liệu được chọn."
-
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "The result contains invalid UTF-8 data."
-#~ msgstr "Không thể so sánh những tài liệu được chọn.\n"
-#~ "\n"
-#~ "Kết quả có chứa dữ liệu không phải là UTF-8."
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Choose the files to compare."
-#~ msgstr "Chọn tập tin để so sánh."
-
-#~ msgid "Compare files..."
-#~ msgstr "So sánh tập tin..."
-
-#~ msgid "F_rom document"
-#~ msgstr "_Từ tài liệu"
-
-#~ msgid "First"
-#~ msgstr "Đầu tiên"
-
-#~ msgid "First file from disk"
-#~ msgstr "Tập tin thứ nhất từ đĩa"
-
-#~ msgid "First file from open document"
-#~ msgstr "Tập tin thứ nhất từ tài liệu đang mở"
-
-#~ msgid "From _document"
-#~ msgstr "Từ tài _liệu"
-
-#~ msgid "From a _file on disk"
-#~ msgstr "Từ _tập tin trên đĩa"
-
-#~ msgid "From a file o_n disk"
-#~ msgstr "Từ tập tin t_rên đĩa"
-
-#~ msgid "Ignore _blanks (-b option)"
-#~ msgstr "Bỏ qua _khoảng trắng (tuỳ chọn « -b »)"
-
-#~ msgid "Note that this option is only supported by GNU diff"
-#~ msgstr "Chú ý là tùy chọn này chỉ được hỗ trợ bởi công cụ « diff » của GNU."
-
-#~ msgid "Second"
-#~ msgstr "Thứ hai"
-
-#~ msgid "Second file from disk"
-#~ msgstr "Tập tin thứ hai từ đĩa"
-
-#~ msgid "Second file from open document"
-#~ msgstr "Tập tin thứ hai từ tài liệu đang mở"
-
-#~ msgid "Select the \"first\" file..."
-#~ msgstr "Chọn tập tin « thứ nhất »..."
-
-#~ msgid "Select the \"second\" file..."
-#~ msgstr "Chọn tập tin « thứ hai »..."
-
-#~ msgid "Select the first file to compare"
-#~ msgstr "Chọn tập tin thứ nhất để so sánh"
-
-#~ msgid "Select the first open document to compare"
-#~ msgstr "Chọn tài liệu đang mở thứ nhất để so sánh"
-
-#~ msgid "Select the second file to compare"
-#~ msgstr "Chọn tập tin thứ hai để so sánh"
-
-#~ msgid "Select the second open document to compare"
-#~ msgstr "Chọn tài liệu đang mở thứ hai để só sánh"
-
-#~ msgid "Use the _unified output format (-u option)"
-#~ msgstr "Dùng dạng thức _unified (được hợp nhất: tùy chọn « -u »)"
-
-#~ msgid ""
-#~ "The Compare Files plugin uses the \"diff\" program to compare two "
-#~ "documents or files on disk."
-#~ msgstr "Bộ cầm phít « So sánh tập tin » dùng công cụ <tt>diff</tt> để so sánh 2 "
-#~ "tài liệu hay 2 tập tin trên đĩa."
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+msgid "Embedded Terminal"
+msgstr "Cửa sổ dòng lệnh nhúng"
