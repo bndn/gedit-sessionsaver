@@ -1,9 +1,9 @@
 # Process this file with autoconf to produce a configure script.
 
-GEDIT_MAJOR=2.14.2
+GEDIT_MAJOR=2.15.7
 GEDIT_PLUGINS_MAJOR=2.15
 
-AC_INIT(gedit-plugins, 2.15.4, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
+AC_INIT(gedit-plugins, 2.15.5, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
 
 AC_CONFIG_SRCDIR([plugins])
 AC_CONFIG_MACRO_DIR([m4])
@@ -51,7 +51,7 @@ PKG_CHECK_MODULES(GEDIT, [
 	glib-2.0 >= 2.8.0
 	gtk+-2.0 >= 2.8.0
 	gtksourceview-1.0 >= 1.2.0
-	gedit-2.14 >= 2.14.2
+	gedit-2.14 >= 2.15.7
 	libglade-2.0 >= 2.4.0
 	gnome-vfs-2.0 >= 2.13.4
 ])
