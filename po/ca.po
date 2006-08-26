@@ -3,26 +3,121 @@
 # Softcatalà <gnome@softcatala.net>, 2000, 2001, 2002.
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003.
 # Josep Puigdemont <josep.puigdemont@gmail.com>, 2005
+# Gil Forcada <gilforcada@guifi.net>, 2006
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-02 22:40+0100\n"
-"PO-Revision-Date: 2005-12-02 22:41+0100\n"
-"Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
+"POT-Creation-Date: 2006-08-26 10:27+0200\n"
+"PO-Revision-Date: 2006-08-26 10:29+0200\n"
+"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../quickies/quickies.glade.h:1
-msgid "Execute"
-msgstr "Executta"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:255
+msgid "Character Map"
+msgstr "Mapa de caràcters"
 
-#: ../quickies/quickies.glade.h:2
-msgid "Quick Script:"
-msgstr "Seqüència ràpida:"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr "Inseriu caràcters especials fent-hi clic."
+
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+msgid "Color Picker"
+msgstr "Capturador de color"
+
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
+msgstr ""
+"Agafeu un color amb un diàleg i inseriu la seva representació hexadecimal."
+
+#: ../plugins/colorpicker/colorpicker.py:70
+msgid "_Color picker"
+msgstr "_Capturador de color"
+
+#: ../plugins/colorpicker/colorpicker.py:71
+msgid "Pick a color from a dialog"
+msgstr "Captureu un color amb un diàleg"
+
+#: ../plugins/colorpicker/colorpicker.py:217
+msgid "Color picker"
+msgstr "Capturador de color"
+
+#
+#: ../plugins/colorpicker/colorpicker.py:225
+msgid "_Insert"
+msgstr "_Insereix"
+
+#
+#: ../plugins/joinlines/joinlines.py:60
+msgid "_Join Lines"
+msgstr "_Uneix les línies"
+
+#
+#: ../plugins/joinlines/joinlines.py:61
+msgid "Join the selected lines"
+msgstr "Uneix les línies seleccionades"
+
+#: ../plugins/joinlines/joinlines.py:63
+msgid "_Split Lines"
+msgstr "_Divideix les línies"
+
+#: ../plugins/joinlines/joinlines.py:64
+msgid "Split the selected lines"
+msgstr "Divideix les línies seleccionades"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+msgid "Tab_bar"
+msgstr "_Barra de pestanyes"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+msgid "Show or hide the tabbar in the current window"
+msgstr "Canvia la visibilitat de la barra de pestanyes de la finestra actual"
+
+#
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+msgid "Tabbar is Visible"
+msgstr "La barra de pestanyes és visible"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+msgid "Whether the tabbar should be visible in editing windows."
+msgstr ""
+"Si la barra de pestanyes hauria de ser visible a les finestres d'edició."
+
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+msgid "Add a menu entry to show/hide the tabbar."
+msgstr "Afegeix una entrada al menú per mostrar/amagar la barra de pestanyes."
+
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+msgid "Show/Hide Tabbar"
+msgstr "Mostra/Amaga la barra de pestanyes"
+
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr "Oblideu-vos de que no esteu fent servir tabulacions."
+
+#
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+msgid "Smart Spaces"
+msgstr "Espais intel·ligents"
+
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr "Incrusta un terminal al quadre inferior."
+
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+msgid "Embedded Terminal"
+msgstr "Terminal incrustat"
+
+#~ msgid "Execute"
+#~ msgstr "Executta"
+
+#~ msgid "Quick Script:"
+#~ msgstr "Seqüència ràpida:"
 
 #~ msgid "_ASCII Table"
 #~ msgstr "Taula _ASCII"
@@ -335,10 +430,6 @@ msgstr "Seqüència ràpida:"
 #~ "un document. D'altra manera, el gedit imprimirà números de línia cada "
 #~ "tanes línies indicades aquí."
 
-#
-#~ msgid "Insert spaces"
-#~ msgstr "Inserta espais"
-
 #~ msgid "Line Number Font for Printing"
 #~ msgstr "Tipus de lletra dels números de línia per a imprimir"
 
@@ -508,10 +599,6 @@ msgstr "Seqüència ràpida:"
 #~ msgid "Toolbar Buttons Style"
 #~ msgstr "Estil dels botons de la barra d'eines"
 
-#
-#~ msgid "Toolbar is Visible"
-#~ msgstr "La barres d'eines és visible"
-
 #~ msgid "Undo Actions Limit"
 #~ msgstr "Límit d'accions a desfer"
 
@@ -577,10 +664,6 @@ msgstr "Seqüència ràpida:"
 #~ "Si la barra d'estat hauria de mostrar el mode d'inserció/sobreescriptura "
 #~ "en les finestres d'edició. Assegureu-vos de que habiliteu l'opció «La "
 #~ "barra d'estat és visible» per a què això tingui efecte."
-
-#~ msgid "Whether the toolbar should be visible in editing windows."
-#~ msgstr ""
-#~ "Si la barra d'eines hauria de ser visible en les finestres d'edició."
 
 #~ msgid ""
 #~ "Whether to use the system's default colors for the editing area. If this "
@@ -820,10 +903,6 @@ msgstr "Seqüència ràpida:"
 #~ msgid "Use the _selected format"
 #~ msgstr "Usa el format _seleccionat"
 
-#
-#~ msgid "_Insert"
-#~ msgstr "_Insereix"
-
 #~ msgid "_Prompt for a format"
 #~ msgstr "_Pregunta per un format"
 
@@ -847,10 +926,6 @@ msgstr "Seqüència ràpida:"
 
 #~ msgid "U_nindent"
 #~ msgstr "Desag_na"
-
-#
-#~ msgid "Unindent selected lines"
-#~ msgstr "Desagna les línies seleccionades"
 
 #
 #~ msgid "Indent lines"
@@ -1091,10 +1166,6 @@ msgstr "Seqüència ràpida:"
 #
 #~ msgid "Go to Line"
 #~ msgstr "Vés a la línia"
-
-#
-#~ msgid "_Go to Line"
-#~ msgstr "_Vés a la línia"
 
 #~ msgid "The text \"%s\" was not found."
 #~ msgstr "No s'ha trobat el text «%s»."
@@ -1438,9 +1509,6 @@ msgstr "Seqüència ràpida:"
 
 #~ msgid "_minutes"
 #~ msgstr "_mínuts"
-
-#~ msgid "character(s)"
-#~ msgstr "caràcter(s)"
 
 #~ msgid "li_ne(s)"
 #~ msgstr " lí_nia(es)"
@@ -1808,9 +1876,6 @@ msgstr "Seqüència ràpida:"
 #~ msgid "Change the visibility of the output window in the current window"
 #~ msgstr ""
 #~ "Canvia la visibilitat de la finestra de sortida de la finestra actual"
-
-#~ msgid "Change the visibility of the statusbar in the current window"
-#~ msgstr "Canvia la visibilitat de la barra d'estat de la finestra actual"
 
 #~ msgid "Change the visibility of the toolbar in the current window"
 #~ msgstr "Canvia la visibilitat de la barra d'eines de la finestra actual"
@@ -2455,14 +2520,8 @@ msgstr "Seqüència ràpida:"
 #~ msgid "Close the output window"
 #~ msgstr "Tanca la finestra de sortida"
 
-#~ msgid "Copy selected lines"
-#~ msgstr "Copia les línies seleccionades"
-
 #~ msgid "Clear the output window"
 #~ msgstr "Neteja la finestra de sortida"
-
-#~ msgid "Output Lines"
-#~ msgstr "Línies de sortida"
 
 #~ msgid "Choose one or more e_ncodings:"
 #~ msgstr "Seleccio_neu una o més codificacions:"
