@@ -36,7 +36,7 @@ class SmartSpacesViewHelper(object):
     def deactivate(self):
         for handler in self._handlers:
             if handler is not None:
-                view.disconect(handler)
+                self._view.disconnect(handler)
 
     def update_active(self):
         # Don't activate the feature if the buffer isn't editable or if

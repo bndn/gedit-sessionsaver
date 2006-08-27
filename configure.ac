@@ -73,9 +73,9 @@ ALL_PLUGINS="showtabbar charmap"
 USEFUL_PLUGINS="showtabbar charmap"
 DEFAULT_PLUGINS="showtabbar charmap"
 
-PYTHON_ALL_PLUGINS="codecomment colorpicker joinlines smartspaces terminal"
-PYTHON_USEFUL_PLUGINS="codecomment colorpicker joinlines smartspaces terminal"
-PYTHON_DEFAULT_PLUGINS="codecomment colorpicker joinlines smartspaces terminal"
+PYTHON_ALL_PLUGINS="bracketcompletion codecomment colorpicker joinlines smartspaces terminal"
+PYTHON_USEFUL_PLUGINS="bracketcompletion codecomment colorpicker joinlines smartspaces terminal"
+PYTHON_DEFAULT_PLUGINS="bracketcompletion codecomment colorpicker joinlines smartspaces terminal"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
@@ -95,9 +95,10 @@ fi
 AC_ARG_WITH([plugins],
 [  --with-plugins=plugin1,plugin2,...
 			  build the specified plugins. Available:
-			  charmap, codecommen, colorpicker, joinlines,
-			  showtabbar,  smartspaces, terminal, as well
-			  as the aliases default, all, and really-all],
+			  bracketcompletion, charmap, codecomment,
+			  colorpicker, joinlines, showtabbar,  smartspaces,
+			  terminal, as well as the aliases default, all,
+			  and really-all],
 			  [plugins=$with_plugins],
 			  [plugins="default"])
 
@@ -415,6 +416,7 @@ AC_CONFIG_FILES([
 Makefile
 plugins/gpdefs.py
 plugins/Makefile
+plugins/bracketcompletion/Makefile
 plugins/charmap/Makefile
 plugins/codecomment/Makefile
 plugins/colorpicker/Makefile
