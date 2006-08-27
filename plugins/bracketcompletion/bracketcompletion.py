@@ -41,9 +41,11 @@ class BracketCompletionViewHelper(object):
     def __init__(self, view):
         self._view = view
         self._doc = view.get_buffer()
+        self._last_iter = None
         self.update_language()
 
         self._handlers = [
+            None,
             None,
             view.connect('notify::editable', self.on_notify_editable),
             self._doc.connect('notify::language', self.on_notify_language),
@@ -53,8 +55,9 @@ class BracketCompletionViewHelper(object):
     def deactivate(self):
         if self._handlers[0]:
             self._view.disconnect(self._handlers[0])
-        self._view.disconnect(self._handlers[1])
-        self._doc.disconnect(self._handlers[2])
+            self._view.disconnect(self._handlers[1])
+        self._view.disconnect(self._handlers[2])
+        self._doc.disconnect(self._handlers[3])
 
     def update_active(self):
         # Don't activate the feature if the buffer isn't editable or if
@@ -64,10 +67,14 @@ class BracketCompletionViewHelper(object):
 
         if active and self._handlers[0] is None:
             self._handlers[0] = self._view.connect('event-after',
+                                                   self.on_event_after)
+            self._handlers[1] = self._view.connect('key-press-event',
                                                    self.on_key_press_event)
         elif not active and self._handlers[0] is not None:
             self._view.disconnect(self._handlers[0])
             self._handlers[0] = None
+            self._view.disconnect(self._handlers[1])
+            self._handlers[1] = None
 
     def update_language(self):
         lang = self._doc.get_language()
@@ -112,6 +119,7 @@ class BracketCompletionViewHelper(object):
 
         bracket = self._brackets[word]
         self._doc.insert(end, bracket)
+        self._last_iter = end.copy()
         end.backward_chars(len(bracket))
         self._doc.place_cursor(end)
 
@@ -126,6 +134,23 @@ class BracketCompletionViewHelper(object):
         self.update_active()
 
     def on_key_press_event(self, view, event):
+        if not self._last_iter or \
+           event.state & (gdk.CONTROL_MASK | gdk.MOD1_MASK):
+            return False
+
+        if event.keyval == gtk.keysyms.BackSpace:
+            iter = self._doc.get_iter_at_mark(self._doc.get_insert())
+            iter.backward_char()
+            self._doc.begin_user_action()
+            self._doc.delete(iter, self._last_iter)
+            self._doc.end_user_action()
+            self._last_iter = None
+            return True
+
+        self._last_iter = None
+        return False
+
+    def on_event_after(self, view, event):
         if event.type != gdk.KEY_PRESS or \
            event.state & (gdk.CONTROL_MASK | gdk.MOD1_MASK) or \
            event.keyval < 32 or event.keyval > 126:
