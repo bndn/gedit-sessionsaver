@@ -7,8 +7,8 @@ msgid ""
 ""
 msgstr "Project-Id-Version: gedit-plugins Gnome HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-21 11:09+0200\n"
-"PO-Revision-Date: 2006-08-21 22:33+0930\n"
+"POT-Creation-Date: 2006-08-28 11:12+0200\n"
+"PO-Revision-Date: 2006-08-28 18:55+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,14 @@ msgstr "Project-Id-Version: gedit-plugins Gnome HEAD\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: LocFactoryEditor 1.6fc1\n"
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Thêm tự động dấu ngoặc đóng."
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Gõ xong dấu ngoặc"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:255
@@ -26,6 +34,31 @@ msgstr "Sơ đồ ký tự"
 msgid "Insert special characters just by clicking on them."
 msgstr "Chèn ký tự đặc biệt bằng cách đơn giản nhấn vào nó."
 
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Ghi chú tắt mã"
+
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Ghi chú tắt hay hủy ghi chú tắt một khối mã đã chọn."
+
+#: ../plugins/codecomment/codecomment.py:240
+msgid "Co_mment Code"
+msgstr "Ghi chú _mã"
+
+#: ../plugins/codecomment/codecomment.py:242
+msgid "Comment the selected code"
+msgstr "Ghi chú mã đã chọn"
+
+#: ../plugins/codecomment/codecomment.py:246
+msgid "U_ncomment Code"
+msgstr "Hủ_y ghi chú mã"
+
+#: ../plugins/codecomment/codecomment.py:248
+msgid "Uncomment the selected code"
+msgstr "Hủy ghi chú mã đã chọn"
+
+#.ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
 msgid "Color Picker"
 msgstr "Bộ chọn màu"
@@ -34,21 +67,29 @@ msgstr "Bộ chọn màu"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Kén màu từ hộp thoại và chèn đại diện thập lục của nó."
 
-#: ../plugins/colorpicker/colorpicker.py:68
+#: ../plugins/colorpicker/colorpicker.py:70
 msgid "_Color picker"
 msgstr "Bộ _chọn màu"
 
-#: ../plugins/colorpicker/colorpicker.py:69
+#: ../plugins/colorpicker/colorpicker.py:71
 msgid "Pick a color from a dialog"
 msgstr "Kén màu từ hộp thoại"
 
-#: ../plugins/colorpicker/colorpicker.py:215
+#: ../plugins/colorpicker/colorpicker.py:217
 msgid "Color picker"
 msgstr "Bộ chọn màu"
 
-#: ../plugins/colorpicker/colorpicker.py:223
+#: ../plugins/colorpicker/colorpicker.py:225
 msgid "_Insert"
 msgstr "_Chèn"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Nối kết vài dòng, hoặc xẻ dòng dài"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Nối/Xẻ dòng"
 
 #: ../plugins/joinlines/joinlines.py:60
 msgid "_Join Lines"
