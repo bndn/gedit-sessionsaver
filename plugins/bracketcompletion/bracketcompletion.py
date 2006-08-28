@@ -32,8 +32,9 @@ common_brackets = {
 }
 
 language_brackets = {
+    'ChangeLog': { '<' : '>' },
     'HTML': { '<' : '>' },
-    'Ruby': { '|' : '|', 'do': ' end' },
+    'Ruby': { '|' : '|', 'do': 'end' },
     'XML': { '<' : '>' },
 }
 
@@ -109,22 +110,24 @@ class BracketCompletionViewHelper(object):
         else:
             return None, None, None
 
-    def complete_brackets(self):
-        word, start, end = self.get_current_token()
+    def compute_indentation (self, cur):
+        """
+        Compute indentation at the given iterator line
+        view : gtk.TextView
+        cur : gtk.TextIter
+        """
+        start = self._doc.get_iter_at_line(cur.get_line())
+        end = start.copy();
 
-        if word not in self._brackets:
-            return False
+        c = end.get_char()
+        while c.isspace() and c not in ('\n', '\r') and end.compare(cur) < 0:
+            if not end.forward_char():
+                break
+            c = end.get_char()
 
-        self._doc.begin_user_action()
-
-        bracket = self._brackets[word]
-        self._doc.insert(end, bracket)
-        self._last_iter = end.copy()
-        end.backward_chars(len(bracket))
-        self._doc.place_cursor(end)
-
-        self._doc.end_user_action()
-        return True    
+        if start.equal(end):
+            return ''
+        return start.get_slice(end)
 
     def on_notify_language(self, view, pspec):
         self.update_language()
@@ -147,6 +150,32 @@ class BracketCompletionViewHelper(object):
             self._last_iter = None
             return True
 
+        if event.keyval in (gtk.keysyms.Return, gtk.keysyms.KP_Enter) and \
+           view.get_auto_indent():
+            print "return"
+            # This code has barely been adapted from gtksourceview.c
+            # Note: it might break IM!
+
+            mark = self._doc.get_insert()
+            iter = self._doc.get_iter_at_mark(mark)
+
+            indent = self.compute_indentation(iter)
+            indent = "\n" + indent
+            
+            # Insert new line and auto-indent.
+            self._doc.begin_user_action()
+            self._doc.insert(iter, indent)
+            self._doc.insert(iter, indent)                
+            self._doc.end_user_action()
+
+            # Leave the cursor where we want it to be
+            iter.backward_chars(len(indent))
+            self._doc.place_cursor(iter)
+            self._view.scroll_mark_onscreen(mark)
+
+            self._last_iter = None
+            return True
+
         self._last_iter = None
         return False
 
@@ -156,7 +185,23 @@ class BracketCompletionViewHelper(object):
            event.keyval < 32 or event.keyval > 126:
             return
 
-        self.complete_brackets()
+        word, start, end = self.get_current_token()
+
+        if word not in self._brackets:
+            return
+
+        bracket = self._brackets[word]
+
+        # Insert the closing bracket
+        self._doc.begin_user_action()
+        self._doc.insert(end, bracket)
+        self._doc.end_user_action()
+        
+        # Leave the cursor when we want it to be
+        self._last_iter = end.copy()
+        end.backward_chars(len(bracket))
+        self._doc.place_cursor(end)
+
 
 class BracketCompletionPlugin(gedit.Plugin):
     WINDOW_DATA_KEY = "BracketCompletionPluginWindowData"

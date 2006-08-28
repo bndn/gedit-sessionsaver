@@ -1,5 +1,11 @@
 2006-08-28  Steve Frécinaux  <steve@istique.net>
 
+	* plugins.bracketcompletion/bracketcompletion.py: put the closing
+	bracket on the next line if the user hits Return.
+	Warning: this might break input methods.
+
+2006-08-28  Steve Frécinaux  <steve@istique.net>
+
 	* plugins/bracketcompletion/bracketcompletion.py: remove both brackets
 	if the user hits the backspace.
 
