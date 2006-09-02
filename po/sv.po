@@ -12,16 +12,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-06-25 10:41+0200\n"
-"PO-Revision-Date: 2006-06-25 17:20+0100\n"
+"POT-Creation-Date: 2006-09-02 04:13+0200\n"
+"PO-Revision-Date: 2006-09-02 10:04+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Lägger automatiskt till avslutande paranteser."
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Paranteskomplettering"
+
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:253
+#: ../plugins/charmap/gedit-charmap-plugin.c:255
 msgid "Character Map"
 msgstr "Teckenkarta"
 
@@ -29,6 +37,31 @@ msgstr "Teckenkarta"
 msgid "Insert special characters just by clicking on them."
 msgstr "Infoga specialtecken genom att klicka på dem."
 
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Kodkommentar"
+
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Kommentera ut eller avkommentera ett markerat kodblock."
+
+#: ../plugins/codecomment/codecomment.py:240
+msgid "Co_mment Code"
+msgstr "Ko_mmentera kod"
+
+#: ../plugins/codecomment/codecomment.py:242
+msgid "Comment the selected code"
+msgstr "Kommentera den markerade koden"
+
+#: ../plugins/codecomment/codecomment.py:246
+msgid "U_ncomment Code"
+msgstr "A_vkommentera kod"
+
+#: ../plugins/codecomment/codecomment.py:248
+msgid "Uncomment the selected code"
+msgstr "Avkommentera den markerade koden"
+
+#. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
 msgid "Color Picker"
 msgstr "Färgväljare"
@@ -37,21 +70,29 @@ msgstr "Färgväljare"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Välj en färg från en dialog och infoga dess hexadecimala motsvarighet."
 
-#: ../plugins/colorpicker/colorpicker.py:68
+#: ../plugins/colorpicker/colorpicker.py:70
 msgid "_Color picker"
 msgstr "_Färgväljare"
 
-#: ../plugins/colorpicker/colorpicker.py:69
+#: ../plugins/colorpicker/colorpicker.py:71
 msgid "Pick a color from a dialog"
 msgstr "Välj en färg från en dialog"
 
-#: ../plugins/colorpicker/colorpicker.py:215
+#: ../plugins/colorpicker/colorpicker.py:217
 msgid "Color picker"
 msgstr "Färgväljare"
 
-#: ../plugins/colorpicker/colorpicker.py:223
+#: ../plugins/colorpicker/colorpicker.py:225
 msgid "_Insert"
 msgstr "_Infoga"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Sammanfoga flera rader eller dela långa rader"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Sammanfoga/Dela rader"
 
 #: ../plugins/joinlines/joinlines.py:60
 msgid "_Join Lines"
@@ -286,8 +327,6 @@ msgstr "Inbäddad terminal"
 #~ msgstr ""
 #~ "Bakgrundsfärg för omarkerad text i redigeringsytan. Detta kommer endast "
 #~ "att ha effekt om alternativet \"Använd standardfärger\" är frånslaget."
-#~ msgid "Backup Copy Extension"
-#~ msgstr "Ändelse på säkerhetskopior"
 #~ msgid "Body Font for Printing"
 #~ msgstr "Texttypsnitt för utskrift"
 #~ msgid "Create Backup Copies"
@@ -610,8 +649,6 @@ msgstr "Inbäddad terminal"
 #~ "Ange ett giltigt skalkommando."
 #~ msgid "Executing command"
 #~ msgstr "Kör kommando"
-#~ msgid "Co_mmand:"
-#~ msgstr "Ko_mmando:"
 #~ msgid "Select the working directory..."
 #~ msgstr "Ange arbetskatalogen..."
 #~ msgid "_Show results in Output Window"
