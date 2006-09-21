@@ -1,16 +1,16 @@
 # Bulgarian translation of gedit for GNOME 2.
-# Copyright (C) 2002, 2003, 2005 Free Software Foundation.
+# Copyright (C) 2002, 2003, 2005, 2006 Free Software Foundation.
 # This file is distributed under the same license as the gedit package.
 # Evgeni Boevski <linkej@yahoo.com>, 2002.
 # Yanko Kaneti <yaneti@declera.com>, 2003.
-# Alexander Shopov <ash@contact.bg>, 2005.
+# Alexander Shopov <ash@contact.bg>, 2005, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-01 13:54+0200\n"
-"PO-Revision-Date: 2005-12-01 09:03+0200\n"
+"POT-Creation-Date: 2006-09-21 10:22+0300\n"
+"PO-Revision-Date: 2006-09-21 10:43+0300\n"
 "Last-Translator: Alexander Shopov <ash@contact.bg>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,10 +18,136 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../quickies/quickies.glade.h:1
-msgid "Execute"
-msgstr "Команда за изпълнение"
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Автоматично добавяне на затварящи скоби."
 
-#: ../quickies/quickies.glade.h:2
-msgid "Quick Script:"
-msgstr "Бърз скрипт:"
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Затваряне на скобите"
+
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:255
+msgid "Character Map"
+msgstr "Таблица със знаци"
+
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr "Вмъкване на специални знаци чрез натискането им"
+
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Коментиране на код"
+
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Превръщане на част от кода в коментар и обратно."
+
+#: ../plugins/codecomment/codecomment.py:240
+msgid "Co_mment Code"
+msgstr "_Коментиране"
+
+#: ../plugins/codecomment/codecomment.py:242
+msgid "Comment the selected code"
+msgstr "Превръщане на избраното в коментар"
+
+#: ../plugins/codecomment/codecomment.py:246
+msgid "U_ncomment Code"
+msgstr "_Разкоментиране"
+
+#: ../plugins/codecomment/codecomment.py:248
+msgid "Uncomment the selected code"
+msgstr "Махане на коментирането на избраното"
+
+#. ex:ts=4:et:
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+msgid "Color Picker"
+msgstr "Цветна палитра"
+
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
+msgstr "Избор на цвят от диалогов прозорец и вмъкване на шестдесетичното му представяне."
+
+#: ../plugins/colorpicker/colorpicker.py:70
+msgid "_Color picker"
+msgstr "_Цветна палитра"
+
+#: ../plugins/colorpicker/colorpicker.py:71
+msgid "Pick a color from a dialog"
+msgstr "Избор на цвят от диалогов прозорец"
+
+#: ../plugins/colorpicker/colorpicker.py:217
+msgid "Color picker"
+msgstr "Цветна палитра"
+
+#: ../plugins/colorpicker/colorpicker.py:225
+msgid "_Insert"
+msgstr "_Вмъкване"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Съединяване на един ред или разделяне на няколко"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Съединяване/разделяне на редове"
+
+#: ../plugins/joinlines/joinlines.py:60
+msgid "_Join Lines"
+msgstr "_Съединяване на редове"
+
+#: ../plugins/joinlines/joinlines.py:61
+msgid "Join the selected lines"
+msgstr "Съединяване на избраните редове"
+
+#: ../plugins/joinlines/joinlines.py:63
+msgid "_Split Lines"
+msgstr "_Разделяне на редове"
+
+#: ../plugins/joinlines/joinlines.py:64
+msgid "Split the selected lines"
+msgstr "Разделяне на избраните редове"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+msgid "Tab_bar"
+msgstr "Лента за _табулациите"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+msgid "Show or hide the tabbar in the current window"
+msgstr "Показване/скриване на лентата за табулации в текущия прозорец"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+msgid "Tabbar is Visible"
+msgstr "Лентата за табулациите е видима"
+
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+msgid "Whether the tabbar should be visible in editing windows."
+msgstr "Дали лентата за табулации да е видима в прозореца, в който се редактира."
+
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+msgid "Add a menu entry to show/hide the tabbar."
+msgstr "Добавяне на елемент към менюто за показване/скриване на лентата за табулации"
+
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+msgid "Show/Hide Tabbar"
+msgstr "Показване/скриване на лентата за табулации"
+
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr "Забравяне, че не се ползват табулации."
+
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+msgid "Smart Spaces"
+msgstr "Умни шпации"
+
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr "Показване на терминал в долния прозорец"
+
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+msgid "Embedded Terminal"
+msgstr "Вграден терминал"
+
+#: ../plugins/terminal/terminal.py:173
+msgid "Terminal"
+msgstr "Терминал"
