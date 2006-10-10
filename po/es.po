@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-06-15 01:51+0200\n"
-"PO-Revision-Date: 2006-06-15 01:58+0200\n"
+"POT-Creation-Date: 2006-10-10 20:52+0200\n"
+"PO-Revision-Date: 2006-10-10 20:55+0200\n"
 "Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,8 +24,16 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Añadir automáticamente cierres de paréntesis."
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Completar paréntesis"
+
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:253
+#: ../plugins/charmap/gedit-charmap-plugin.c:255
 msgid "Character Map"
 msgstr "Mapa de caracteres"
 
@@ -33,6 +41,31 @@ msgstr "Mapa de caracteres"
 msgid "Insert special characters just by clicking on them."
 msgstr "Inserte caracteres especiales tan sólo pulsando en ellos."
 
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Comentar código"
+
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Comentar o descomentar un bloque de código seleccionado."
+
+#: ../plugins/codecomment/codecomment.py:240
+msgid "Co_mment Code"
+msgstr "Co_mentar código"
+
+#: ../plugins/codecomment/codecomment.py:242
+msgid "Comment the selected code"
+msgstr "Comentar el código selecionado"
+
+#: ../plugins/codecomment/codecomment.py:246
+msgid "U_ncomment Code"
+msgstr "_Descomentar el código"
+
+#: ../plugins/codecomment/codecomment.py:248
+msgid "Uncomment the selected code"
+msgstr "Descomentar el código seleccionado"
+
+#. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
 msgid "Color Picker"
 msgstr "Selector de color"
@@ -41,21 +74,29 @@ msgstr "Selector de color"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Escoja un color del diálogo e inserte su notación hexadecimal."
 
-#: ../plugins/colorpicker/colorpicker.py:68
+#: ../plugins/colorpicker/colorpicker.py:70
 msgid "_Color picker"
 msgstr "Selector de _color"
 
-#: ../plugins/colorpicker/colorpicker.py:69
+#: ../plugins/colorpicker/colorpicker.py:71
 msgid "Pick a color from a dialog"
 msgstr "Escoja un color de un diálogo"
 
-#: ../plugins/colorpicker/colorpicker.py:215
+#: ../plugins/colorpicker/colorpicker.py:217
 msgid "Color picker"
 msgstr "Selector de color"
 
-#: ../plugins/colorpicker/colorpicker.py:223
+#: ../plugins/colorpicker/colorpicker.py:225
 msgid "_Insert"
 msgstr "_Insertar"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Unir varias líneas o dividir líneas largas"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Unir/Dividir líneas"
 
 #: ../plugins/joinlines/joinlines.py:60
 msgid "_Join Lines"
@@ -87,7 +128,8 @@ msgstr "La barra de solapas es visible"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
 msgid "Whether the tabbar should be visible in editing windows."
-msgstr "Indica si la barra de solapas debe ser visible en las ventanas de edición"
+msgstr ""
+"Indica si la barra de solapas debe ser visible en las ventanas de edición"
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
@@ -113,3 +155,6 @@ msgstr "Empotre un terminal en el panel inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal empotrado"
 
+#: ../plugins/terminal/terminal.py:173
+msgid "Terminal"
+msgstr "Terminal"
