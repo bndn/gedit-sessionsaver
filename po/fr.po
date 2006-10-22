@@ -3,21 +3,30 @@
 # This file is distributed under the same license as the gedit-plugins-package.
 #
 # maintainer: Christophe Merlet (RedFox) <redfox@redfoxcenter.org>, 2000-2006.
+# Jonathan Ernst <jonathan@ernstfamily.ch>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit 2.15.4\n"
+"Project-Id-Version: gedit 2.16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-28 20:38+0200\n"
-"PO-Revision-Date: 2006-07-28 20:30+0200\n"
-"Last-Translator: Christophe Merlet (RedFox) <redfox@redfoxcenter.org>\n"
+"POT-Creation-Date: 2006-10-22 11:49+0200\n"
+"PO-Revision-Date: 2006-10-22 11:49+0200\n"
+"Last-Translator: Jonathan Ernst <jonathan@ernstfamily.ch>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Ajoute automatiquement les parenthèses fermantes."
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Complétion de parenthèses"
+
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:253
+#: ../plugins/charmap/gedit-charmap-plugin.c:255
 msgid "Character Map"
 msgstr "Table de caractères"
 
@@ -25,6 +34,31 @@ msgstr "Table de caractères"
 msgid "Insert special characters just by clicking on them."
 msgstr "Insère des caractères spéciaux juste en cliquant dessus."
 
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Commentateur de code"
+
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Commente ou décommente un bloc de code sélectionnée."
+
+#: ../plugins/codecomment/codecomment.py:240
+msgid "Co_mment Code"
+msgstr "_Commenter le code"
+
+#: ../plugins/codecomment/codecomment.py:242
+msgid "Comment the selected code"
+msgstr "Commente le code sélectionné"
+
+#: ../plugins/codecomment/codecomment.py:246
+msgid "U_ncomment Code"
+msgstr "_Décommenter le code"
+
+#: ../plugins/codecomment/codecomment.py:248
+msgid "Uncomment the selected code"
+msgstr "Décommente le code sélectionné"
+
+#. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
 msgid "Color Picker"
 msgstr "Sélecteur de couleurs"
@@ -35,21 +69,29 @@ msgstr ""
 "Pioche une couleur dans une boîte de dialogue et l'insère sous sa forme "
 "hexadécimale."
 
-#: ../plugins/colorpicker/colorpicker.py:68
+#: ../plugins/colorpicker/colorpicker.py:70
 msgid "_Color picker"
 msgstr "_Sélecteur de couleurs"
 
-#: ../plugins/colorpicker/colorpicker.py:69
+#: ../plugins/colorpicker/colorpicker.py:71
 msgid "Pick a color from a dialog"
 msgstr "Pioche une couleur depuis une boîte de dialogue"
 
-#: ../plugins/colorpicker/colorpicker.py:215
+#: ../plugins/colorpicker/colorpicker.py:217
 msgid "Color picker"
 msgstr "Sélecteur de couleurs"
 
-#: ../plugins/colorpicker/colorpicker.py:223
+#: ../plugins/colorpicker/colorpicker.py:225
 msgid "_Insert"
 msgstr "_Insérer"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Joins plusieurs lignes ou sépare les longues lignes"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Joindre/couper les lignes"
 
 #: ../plugins/joinlines/joinlines.py:60
 msgid "_Join Lines"
@@ -57,7 +99,7 @@ msgstr "_Joindre des lignes"
 
 #: ../plugins/joinlines/joinlines.py:61
 msgid "Join the selected lines"
-msgstr "Joint les lignes sélectionnées"
+msgstr "Joins les lignes sélectionnées"
 
 #: ../plugins/joinlines/joinlines.py:63
 msgid "_Split Lines"
@@ -107,3 +149,7 @@ msgstr "Intègre un terminal dans le panneau du bas."
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
 msgid "Embedded Terminal"
 msgstr "Terminal intégré"
+
+#: ../plugins/terminal/terminal.py:173
+msgid "Terminal"
+msgstr "Terminal"
