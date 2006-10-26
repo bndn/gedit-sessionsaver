@@ -4,266 +4,347 @@
 # Jan-Willem Harmanny <jwharmanny@hotmail.com>, 2002.
 # Ronald Hummelink <ronald@hummelink.xs4all.nl>, 2002.
 # Sander Knopper <sander@knopper.dhs.org>, 2002
-# Reinout van Schouwen <reinout@cs.vu.nl>, 2002-2004
+# Reinout van Schouwen <reinouts@gnome.org>, 2002-2006
 # Taco Witte <T.C.Witte@phys.uu.nl>, 2002
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-09 03:34+0100\n"
-"PO-Revision-Date: 2004-03-07 18:21+0100\n"
-"Last-Translator: Reinout van Schouwen <reinout@cs.vu.nl>\n"
-"Language-Team: Dutch <vertaling@nl.linux.org>\n"
+"POT-Creation-Date: 2006-10-24 18:49+0200\n"
+"PO-Revision-Date: 2006-10-24 23:38+0100\n"
+"Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
+"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "_ASCII-tabel"
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Voegt automatisch haakjes sluiten toe."
 
-#: plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Nieuw venster met een ASCII-tabel tonen"
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Haakjes completeren"
 
-#: plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Teken"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:255
+msgid "Character Map"
+msgstr "Speciale tekens"
 
-#: plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "Dec#"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr "Speciale tekens invoegen door erop te klikken."
 
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "Hex#"
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Code-commentaar"
 
-#: plugins/ASCII/ascii.c:324
-msgid "Name"
-msgstr "Naam"
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Een blok code van commentaar voorzien of uit commentaar halen."
 
-#: plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
-msgstr "ASCII-tabel"
+#: ../plugins/codecomment/codecomment.py:240
+msgid "Co_mment Code"
+msgstr "_Code-commentaar"
 
-#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "Speciaal teken _invoegen"
+#: ../plugins/codecomment/codecomment.py:242
+msgid "Comment the selected code"
+msgstr "De geselecteerde code in commentaar zetten"
 
-#: plugins/ASCII/asciitable.glade2.h:1
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
-msgid "ASCII table"
-msgstr "ASCII-tabel"
+#: ../plugins/codecomment/codecomment.py:246
+msgid "U_ncomment Code"
+msgstr "Code ui_t commentaar halen"
 
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
-msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-msgstr "Deze plugin laat een venster met een ASCII tabel zien."
+#: ../plugins/codecomment/codecomment.py:248
+msgid "Uncomment the selected code"
+msgstr "De geselecteerde code uit commentaar halen"
 
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "CVS Chan_geLogs openen"
+#. ex:ts=4:et:
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+msgid "Color Picker"
+msgstr "Kleurkiezer"
 
-#: plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "Zoekt naar ChangeLogs in het huidige document en opent ze."
-
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
-msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
-"Een plugin die ChangeLogs opent die gevonden zijn in CVS commit berichten."
+"Een kleur uit een dialoogvenster kiezen en de hexadecimale representatie "
+"ervan invoegen. "
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
-msgid "CVS ChangeLog"
-msgstr "CVS ChangeLog"
+#: ../plugins/colorpicker/colorpicker.py:70
+msgid "_Color picker"
+msgstr "_Kleurkiezer"
 
-#: plugins/diff/diff.c:64
-msgid "Co_mpare Files..."
-msgstr "Besta_nden vergelijken..."
+#: ../plugins/colorpicker/colorpicker.py:71
+msgid "Pick a color from a dialog"
+msgstr "Kleur uit dialoogvenster kiezen"
 
-#: plugins/diff/diff.c:67
-msgid "Makes a diff file from two documents or files"
-msgstr "Maakt een diff bestand van twee documenten of bestanden"
+#: ../plugins/colorpicker/colorpicker.py:217
+msgid "Color picker"
+msgstr "Kleurkiezer"
 
-#. Create the dialog
-#: plugins/diff/diff.c:270 plugins/diff/diff.gedit-plugin.desktop.in.h:1
-msgid "Compare Files"
-msgstr "Bestanden vergelijken"
+#: ../plugins/colorpicker/colorpicker.py:225
+msgid "_Insert"
+msgstr "_Invoegen"
 
-#: plugins/diff/diff.c:284
-msgid "C_ompare"
-msgstr "V_ergelijken"
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Meerdere lange regels aaneenvoegen of lange regels splitsen"
 
-#: plugins/diff/diff.c:511
-msgid "Executed command"
-msgstr "Uitgevoerde opdracht"
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Regels aaneenvoegen/splitsen"
 
-#: plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "De twee geselecteerde bestanden zijn hetzelfde."
+#: ../plugins/joinlines/joinlines.py:60
+msgid "_Join Lines"
+msgstr "_Regels aaneenvoegen"
 
-#: plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Het \"eerste\" geselecteerde bestand bestaat niet.\n"
-"\n"
-"Geef een juiste bestandsnaam op."
+#: ../plugins/joinlines/joinlines.py:61
+msgid "Join the selected lines"
+msgstr "De geselecteerde regels aaneenvoegen"
 
-#: plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Het \"tweede\" geselecteerde bestand bestaat niet.\n"
-"\n"
-"Geef een juiste bestandsnaam op."
+#: ../plugins/joinlines/joinlines.py:63
+msgid "_Split Lines"
+msgstr "Regels _splitsen"
 
-#: plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "De twee geselecteerde bestanden zijn hetzelfde."
+#: ../plugins/joinlines/joinlines.py:64
+msgid "Split the selected lines"
+msgstr "Geselecteerde regels splitsen"
 
-#: plugins/diff/diff.c:694
-msgid "The \"first\" document contains no text."
-msgstr "Het \"eerste\" document bevat geen tekst."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+msgid "Tab_bar"
+msgstr "Tab_balk"
 
-#: plugins/diff/diff.c:728
-msgid "The \"second\" document contains no text."
-msgstr "Het \"tweede\" document bevat geen tekst."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+msgid "Show or hide the tabbar in the current window"
+msgstr "Verander zichtbaarheid van de tabbalk in het huidige venster"
 
-#. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:754
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"De twee documenten konden niet worden vergeleken.\n"
-"\n"
-"gedit kon geen tijdelijk bestand aanmaken."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+msgid "Tabbar is Visible"
+msgstr "Tabbalk zichtbaar"
 
-#: plugins/diff/diff.c:778 plugins/diff/diff.c:791
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"De twee documenten konden niet worden vergeleken.\n"
-"\n"
-"Het programma diff kon niet worden uitgevoerd."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+msgid "Whether the tabbar should be visible in editing windows."
+msgstr "Weergeven tabbalk in bewerkingsvensters."
 
-#: plugins/diff/diff.c:813
-msgid "No differences were found between the selected documents."
-msgstr "Er werden geen verschillen gevonden tussen de twee documenten."
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+msgid "Add a menu entry to show/hide the tabbar."
+msgstr "Een menu-item toevoegen om de zichtbaarheid van de tabbalk om te zetten."
 
-#: plugins/diff/diff.c:854
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"De twee documenten konden niet worden vergeleken.\n"
-"\n"
-"Het resultaat bevat ongeldige UTF-8-gegevens."
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+msgid "Show/Hide Tabbar"
+msgstr "Tabbalk tonen/verbergen"
 
-#: plugins/diff/diff.glade2.h:1
-msgid "*"
-msgstr "*"
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr "Vergeet dat u geen tabulaties gebruikt."
 
-#: plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Selecteer de te vergelijken bestanden."
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+msgid "Smart Spaces"
+msgstr "Slimme spaties"
 
-#: plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Bestanden vergelijken..."
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr "Een terminalvenster in het onderpaneel inbedden."
 
-#: plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "Van do_cument"
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+msgid "Embedded Terminal"
+msgstr "Ingebedde terminal"
 
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Eerste"
+#: ../plugins/terminal/terminal.py:173
+msgid "Terminal"
+msgstr "Terminal"
 
-#: plugins/diff/diff.glade2.h:6
-msgid "First file from disk"
-msgstr "Eerste bestand van schijf"
+#~ msgid "_ASCII Table"
+#~ msgstr "_ASCII-tabel"
 
-#: plugins/diff/diff.glade2.h:7
-msgid "First file from open document"
-msgstr "Eerste bestand vanuit geopend document"
+#~ msgid "Pop-up a dialog containing an ASCII Table"
+#~ msgstr "Nieuw venster met een ASCII-tabel tonen"
 
-#: plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "Van _document"
+#~ msgid "Char"
+#~ msgstr "Teken"
 
-#: plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "Bestand op de schij_f"
+#~ msgid "Dec#"
+#~ msgstr "Dec#"
 
-#: plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "Besta_nd op de schijf"
+#~ msgid "Hex#"
+#~ msgstr "Hex#"
 
-#: plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "Spaties n_egeren (-b optie)"
+#~ msgid "Name"
+#~ msgstr "Naam"
 
-#: plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr "Deze optie is alleen aanwezig in GNU diff"
+#~ msgid "ASCII Table"
+#~ msgstr "ASCII-tabel"
 
-#: plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Tweede"
+#~ msgid "_Insert char"
+#~ msgstr "Speciaal teken _invoegen"
 
-#: plugins/diff/diff.glade2.h:14
-msgid "Second file from disk"
-msgstr "Tweede bestand van schijf"
+#~ msgid "ASCII table"
+#~ msgstr "ASCII-tabel"
 
-#: plugins/diff/diff.glade2.h:15
-msgid "Second file from open document"
-msgstr "Tweede bestand vanuit geopend document"
+#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+#~ msgstr "Deze plugin laat een venster met een ASCII tabel zien."
 
-#: plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr "Selecteer het \"eerste\" bestand..."
+#~ msgid "Open CVS Chan_geLogs"
+#~ msgstr "CVS Chan_geLogs openen"
 
-#: plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr "Selecteer het \"tweede\" bestand..."
+#~ msgid "Searches for ChangeLogs in the current document and opens them"
+#~ msgstr "Zoekt naar ChangeLogs in het huidige document en opent ze."
 
-#: plugins/diff/diff.glade2.h:18
-msgid "Select the first file to compare"
-msgstr "Selecteer het eerste te vergelijken bestand"
+#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+#~ msgstr ""
+#~ "Een plugin die ChangeLogs opent die gevonden zijn in CVS commit berichten."
 
-#: plugins/diff/diff.glade2.h:19
-msgid "Select the first open document to compare"
-msgstr "Selecteer het eerste te vergelijken geopende document"
+#~ msgid "CVS ChangeLog"
+#~ msgstr "CVS ChangeLog"
 
-#: plugins/diff/diff.glade2.h:20
-msgid "Select the second file to compare"
-msgstr "Selecteer het tweede te vergelijken bestand"
+#~ msgid "Co_mpare Files..."
+#~ msgstr "Besta_nden vergelijken..."
 
-#: plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr "Selecteer het tweede te vergelijken geopende document"
+#~ msgid "Makes a diff file from two documents or files"
+#~ msgstr "Maakt een diff bestand van twee documenten of bestanden"
 
-#: plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Gebruik het _unified uitvoerformaat (-u optie)"
+#~ msgid "Compare Files"
+#~ msgstr "Bestanden vergelijken"
 
-#: plugins/diff/diff.gedit-plugin.desktop.in.h:2
-msgid ""
-"The Compare Files plugin uses the \"diff\" program to compare two documents "
-"or files on disk."
-msgstr ""
-"De 'Bestanden vergelijken'-plugin gebruikt het \"diff\"-programma om twee "
-"documenten of bestanden op de schijf te vergelijken."
+#~ msgid "C_ompare"
+#~ msgstr "V_ergelijken"
+
+#~ msgid "Executed command"
+#~ msgstr "Uitgevoerde opdracht"
+
+#~ msgid "The two documents you selected are the same."
+#~ msgstr "De twee geselecteerde bestanden zijn hetzelfde."
+
+#~ msgid ""
+#~ "The \"first\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Het \"eerste\" geselecteerde bestand bestaat niet.\n"
+#~ "\n"
+#~ "Geef een juiste bestandsnaam op."
+
+#~ msgid ""
+#~ "The \"second\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Het \"tweede\" geselecteerde bestand bestaat niet.\n"
+#~ "\n"
+#~ "Geef een juiste bestandsnaam op."
+
+#~ msgid "The two files you selected are the same."
+#~ msgstr "De twee geselecteerde bestanden zijn hetzelfde."
+
+#~ msgid "The \"first\" document contains no text."
+#~ msgstr "Het \"eerste\" document bevat geen tekst."
+
+#~ msgid "The \"second\" document contains no text."
+#~ msgstr "Het \"tweede\" document bevat geen tekst."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "gedit could not create a temporary file."
+#~ msgstr ""
+#~ "De twee documenten konden niet worden vergeleken.\n"
+#~ "\n"
+#~ "gedit kon geen tijdelijk bestand aanmaken."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "Error executing the diff command."
+#~ msgstr ""
+#~ "De twee documenten konden niet worden vergeleken.\n"
+#~ "\n"
+#~ "Het programma diff kon niet worden uitgevoerd."
+
+#~ msgid "No differences were found between the selected documents."
+#~ msgstr "Er werden geen verschillen gevonden tussen de twee documenten."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "The result contains invalid UTF-8 data."
+#~ msgstr ""
+#~ "De twee documenten konden niet worden vergeleken.\n"
+#~ "\n"
+#~ "Het resultaat bevat ongeldige UTF-8-gegevens."
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "Choose the files to compare."
+#~ msgstr "Selecteer de te vergelijken bestanden."
+
+#~ msgid "Compare files..."
+#~ msgstr "Bestanden vergelijken..."
+
+#~ msgid "F_rom document"
+#~ msgstr "Van do_cument"
+
+#~ msgid "First"
+#~ msgstr "Eerste"
+
+#~ msgid "First file from disk"
+#~ msgstr "Eerste bestand van schijf"
+
+#~ msgid "First file from open document"
+#~ msgstr "Eerste bestand vanuit geopend document"
+
+#~ msgid "From _document"
+#~ msgstr "Van _document"
+
+#~ msgid "From a _file on disk"
+#~ msgstr "Bestand op de schij_f"
+
+#~ msgid "From a file o_n disk"
+#~ msgstr "Besta_nd op de schijf"
+
+#~ msgid "Ignore _blanks (-b option)"
+#~ msgstr "Spaties n_egeren (-b optie)"
+
+#~ msgid "Note that this option is only supported by GNU diff"
+#~ msgstr "Deze optie is alleen aanwezig in GNU diff"
+
+#~ msgid "Second"
+#~ msgstr "Tweede"
+
+#~ msgid "Second file from disk"
+#~ msgstr "Tweede bestand van schijf"
+
+#~ msgid "Second file from open document"
+#~ msgstr "Tweede bestand vanuit geopend document"
+
+#~ msgid "Select the \"first\" file..."
+#~ msgstr "Selecteer het \"eerste\" bestand..."
+
+#~ msgid "Select the \"second\" file..."
+#~ msgstr "Selecteer het \"tweede\" bestand..."
+
+#~ msgid "Select the first file to compare"
+#~ msgstr "Selecteer het eerste te vergelijken bestand"
+
+#~ msgid "Select the first open document to compare"
+#~ msgstr "Selecteer het eerste te vergelijken geopende document"
+
+#~ msgid "Select the second file to compare"
+#~ msgstr "Selecteer het tweede te vergelijken bestand"
+
+#~ msgid "Select the second open document to compare"
+#~ msgstr "Selecteer het tweede te vergelijken geopende document"
+
+#~ msgid "Use the _unified output format (-u option)"
+#~ msgstr "Gebruik het _unified uitvoerformaat (-u optie)"
+
+#~ msgid ""
+#~ "The Compare Files plugin uses the \"diff\" program to compare two "
+#~ "documents or files on disk."
+#~ msgstr ""
+#~ "De 'Bestanden vergelijken'-plugin gebruikt het \"diff\"-programma om twee "
+#~ "documenten of bestanden op de schijf te vergelijken."
 
 #~ msgid "gedit application"
 #~ msgstr "gedit-toepassing"
@@ -312,9 +393,6 @@ msgstr ""
 #~ "Achtergrondkleur voor niet geselecteerde tekst in het bewerkingsgedeelte. "
 #~ "Dit heeft alleen effect indien de optie \"Standaardkleuren gebruiken\" is "
 #~ "uitgeschakeld."
-
-#~ msgid "Backup Copy Extension"
-#~ msgstr "Achtervoegsel voor reservekopie"
 
 #~ msgid "Body Font for Printing"
 #~ msgstr "Afdruklettertype voor inhoud"
@@ -367,9 +445,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Als deze waarde 0 is dan zullen er geen regelnummers worden afgedrukt. "
 #~ "Anders zal gedit iedere zoveel regels het regelnummer afdrukken."
-
-#~ msgid "Insert spaces"
-#~ msgstr "Spaties invoegen"
 
 #~ msgid "Line Number Font for Printing"
 #~ msgstr "Lettertype voor regelnummers bij afdrukken"
@@ -538,9 +613,6 @@ msgstr ""
 #~ msgid "Toolbar Buttons Style"
 #~ msgstr "Werkbalk-knoppenstijl"
 
-#~ msgid "Toolbar is Visible"
-#~ msgstr "Werkbalk zichtbaar"
-
 #~ msgid "Undo Actions Limit"
 #~ msgstr "Aantal ongedaan te maken acties"
 
@@ -600,9 +672,6 @@ msgstr ""
 #~ "Invoegen/overschrijven modus weergeven in statusbalk van "
 #~ "bewerkingsvensters. Zorg ervoor dat de optie \"Statusbalk is zichtbaar\" "
 #~ "aangeschakeld is om dit te laten werken."
-
-#~ msgid "Whether the toolbar should be visible in editing windows."
-#~ msgstr "Weergeven werkbalk in bewerkingsvensters."
 
 #~ msgid ""
 #~ "Whether to use the system's default colors for the editing area. If this "
@@ -761,9 +830,6 @@ msgstr ""
 #~ msgid "Executing command"
 #~ msgstr "Bezig met uitvoeren opdracht"
 
-#~ msgid "Co_mmand:"
-#~ msgstr "Op_dracht:"
-
 #~ msgid "Select the working directory..."
 #~ msgstr "Selecteer de werkmap..."
 
@@ -850,9 +916,6 @@ msgstr ""
 #~ msgid "Use the _selected format"
 #~ msgstr "Ge_selecteerd formaat gebruiken"
 
-#~ msgid "_Insert"
-#~ msgstr "_Invoegen"
-
 #~ msgid "_Prompt for a format"
 #~ msgstr "_Vragen om een formaat"
 
@@ -883,9 +946,6 @@ msgstr ""
 
 #~ msgid "U_nindent"
 #~ msgstr "Uitspri_ngen"
-
-#~ msgid "Unindent selected lines"
-#~ msgstr "De geselecteerde regels uitspringen"
 
 #~ msgid "Indent lines"
 #~ msgstr "Regels inspringen"
@@ -1125,9 +1185,6 @@ msgstr ""
 
 #~ msgid "Go to Line"
 #~ msgstr "Ga naar regel"
-
-#~ msgid "_Go to Line"
-#~ msgstr "_Ga naar regel"
 
 #~ msgid "The text \"%s\" was not found."
 #~ msgstr "De zoekterm \"%s\" werd niet gevonden."
@@ -1456,9 +1513,6 @@ msgstr ""
 
 #~ msgid "_minutes"
 #~ msgstr "_minuten"
-
-#~ msgid "character(s)"
-#~ msgstr "karakter(s)"
 
 #~ msgid "li_ne(s)"
 #~ msgstr "re_gel(s)"
@@ -1812,9 +1866,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Verander zichtbaarheid van het uitvoervenster in het huidige venster"
 
-#~ msgid "Change the visibility of the statusbar in the current window"
-#~ msgstr "Verander zichtbaarheid van de statusbalk in het huidige venster"
-
 #~ msgid "Change the visibility of the toolbar in the current window"
 #~ msgstr "Verander zichtbaarheid van de werkbalk in het huidige venster"
 
@@ -1856,9 +1907,6 @@ msgstr ""
 
 #~ msgid "Delete"
 #~ msgstr "Verwijderen"
-
-#~ msgid "Delete the selected text"
-#~ msgstr "Geselecteerde tekst verwijderen"
 
 #~ msgid "Dump XML"
 #~ msgstr "XML verwijderen"
@@ -2438,14 +2486,8 @@ msgstr ""
 #~ msgid "Close the output window"
 #~ msgstr "Uitvoervenster sluiten"
 
-#~ msgid "Copy selected lines"
-#~ msgstr "Geselecteerde regels kopiëren"
-
 #~ msgid "Clear the output window"
 #~ msgstr "Uitvoervenster wissen"
-
-#~ msgid "Output Lines"
-#~ msgstr "Uitvoerregels"
 
 #~ msgid "Choose one or more e_ncodings:"
 #~ msgstr "Kies één of meer coderi_ngen:"
@@ -2551,9 +2593,6 @@ msgstr ""
 
 #~ msgid "_Word Count"
 #~ msgstr "_Woorden Tellen"
-
-#~ msgid "Word count"
-#~ msgstr "Woorden tellen"
 
 #~ msgid "Execute a shell command"
 #~ msgstr "Een shell-opdracht uitvoeren"
