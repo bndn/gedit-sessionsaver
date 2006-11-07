@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 #  Code comment plugin
 #  This file is part of gedit
-# 
+#
 #  Copyright (C) 2005-2006 Igalia
 #  Copyright (C) 2006 Matthew Dugan
-#   
+#
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation; either version 2 of the License, or
 #  (at your option) any later version.
-#   
+#
 #  This program is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
-#   
+#
 #  You should have received a copy of the GNU General Public License
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330,
@@ -76,7 +76,7 @@ tags_dict = { '@46@desktop'     : shcomment,
               'Verilog'         : cppcomment,
               'XML'             : xmlcomment,
               'gettext@32@translation': shcomment,
-              'sh'              : shcomment 
+              'sh'              : shcomment
             }
 
 
@@ -89,17 +89,17 @@ def backward_tag(iter, tag):
 
 def get_tag_position_in_line(tag, head_iter, iter):
     found = False
-    while (not iter.ends_line()) and (not found):
+    while (not found) and (not iter.ends_line()):
         s = iter.get_slice(head_iter)
         if s == tag:
-           found = True
+            found = True
         else:
             head_iter.forward_char()
             iter.forward_char()
     return found
 
 def add_comment_characters(document, start_tag, end_tag, start, end):
-    smark = document.create_mark("start", start, False)    
+    smark = document.create_mark("start", start, False)
     imark = document.create_mark("iter", start, False)
     emark = document.create_mark("end", end, False)
     number_lines = end.get_line() - start.get_line() + 1
@@ -112,7 +112,7 @@ def add_comment_characters(document, start_tag, end_tag, start, end):
             document.insert(iter, start_tag, -1)
             if end_tag is not None:
                 if i != number_lines -1:
-                    iter = document.get_iter_at_mark(imark)                
+                    iter = document.get_iter_at_mark(imark)
                     iter.forward_to_line_end()
                     document.insert(iter, end_tag, -1)
                 else:
@@ -125,15 +125,15 @@ def add_comment_characters(document, start_tag, end_tag, start, end):
 
     document.end_user_action()
 
-    document.delete_mark(imark)        
+    document.delete_mark(imark)
     new_start = document.get_iter_at_mark(smark)
     new_end = document.get_iter_at_mark(emark)
     if not new_start.ends_line():
         backward_tag(new_start, start_tag)
     document.select_range(new_start, new_end)
     document.delete_mark(smark)
-    document.delete_mark(emark)    
-    
+    document.delete_mark(emark)
+
 def remove_comment_characters(document, start_tag, end_tag, start, end):
     smark = document.create_mark("start", start, False)
     emark = document.create_mark("end", end, False)
@@ -173,14 +173,20 @@ def do_comment(document, unindent=False):
     deselect = False
     if selection != ():
         (start, end) = selection
-    else:
-        deselect = True        
-        start = document.get_iter_at_mark(currentPosMark)
         if start.ends_line():
-            return
+            start.forward_char()
+        elif not start.starts_line():
+            start.set_line_offset(0)
+        if end.starts_line():
+            end.backward_char()
+        elif not end.ends_line():
+            end.forward_to_line_end()
+    else:
+        deselect = True
+        start = document.get_iter_at_mark(currentPosMark)
+        start.set_line_offset(0)
         end = start.copy()
-        if not end.forward_to_line_end():
-            return
+        end.forward_to_line_end()
 
     lang = document.get_language()
     if lang is None:
@@ -205,7 +211,7 @@ def do_comment(document, unindent=False):
         if deselect:
             oldPosIter = document.get_iter_at_mark(currentPosMark)
             document.select_range(oldPosIter,oldPosIter)
-            document.place_cursor(oldPosIter)    
+            document.place_cursor(oldPosIter)
 
 ui_str = """
 <ui>
@@ -218,7 +224,7 @@ ui_str = """
     </menu>
   </menubar>
 </ui>
-"""          
+"""
 
 class CodeCommentWindowHelper(object):
     def __init__(self, plugin, window):

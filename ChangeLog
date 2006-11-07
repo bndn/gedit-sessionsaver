@@ -1,3 +1,8 @@
+2006-11-07  Steve Frécinaux  <code@istique.net>
+
+	* plugins/codecomment/codecomment.py: Fix bug 359494 – codecomment
+	plugin is commenting unselected lines, and remove trailing spaces.
+
 === gedit-plugins 2.16.0 ===
 
 2006-09-08  Jesse van den Kieboom  <jesse@icecrew.nl>
@@ -13,7 +18,7 @@
 
 2006-08-28  Steve Frécinaux  <steve@istique.net>
 
-	* plugins.bracketcompletion/bracketcompletion.py: put the closing
+	* plugins/bracketcompletion/bracketcompletion.py: put the closing
 	bracket on the next line if the user hits Return.
 	Warning: this might break input methods.
 
