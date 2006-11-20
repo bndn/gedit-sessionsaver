@@ -60,7 +60,7 @@ class GeditTerminal(gtk.HBox):
 
         self._vte = vte.Terminal()
         self.reconfigure_vte()
-        self._vte.set_size(30, 5)
+        self._vte.set_size(self._vte.get_column_count(), 5)
         self._vte.set_size_request(200, 50)
         self._vte.show()
         self.pack_start(self._vte)
@@ -72,6 +72,7 @@ class GeditTerminal(gtk.HBox):
         gconf_client.notify_add(self.GCONF_PROFILE_DIR,
                                 self.on_gconf_notification)
         
+        self._vte.connect("key-press-event", self.on_vte_key_press)
         self._vte.connect("button-press-event", self.on_vte_button_press)
         self._vte.connect("popup-menu", self.on_vte_popup_menu)
         self._vte.connect("child-exited", lambda term: term.fork_command())
@@ -124,6 +125,17 @@ class GeditTerminal(gtk.HBox):
 
     def on_gconf_notification(self, client, cnxn_id, entry, what):
         self.reconfigure_vte()
+
+    def on_vte_key_press(self, term, event):
+        modifiers = event.state & gtk.accelerator_get_default_mod_mask()
+        if event.keyval in (gtk.keysyms.Tab, gtk.keysyms.KP_Tab, gtk.keysyms.ISO_Left_Tab):
+            if modifiers == gtk.gdk.CONTROL_MASK:
+                self.get_toplevel().child_focus(gtk.DIR_TAB_FORWARD)
+                return True
+            elif modifiers == gtk.gdk.CONTROL_MASK | gtk.gdk.SHIFT_MASK:
+                self.get_toplevel().child_focus(gtk.DIR_TAB_BACKWARD)
+                return True
+        return False
 
     def on_vte_button_press(self, term, event):
         if event.button == 3:
