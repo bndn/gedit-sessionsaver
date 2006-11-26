@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-26 10:27+0200\n"
-"PO-Revision-Date: 2006-08-26 12:54+0200\n"
+"POT-Creation-Date: 2006-11-26 19:05+0100\n"
+"PO-Revision-Date: 2006-10-22 14:06+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,6 +26,34 @@ msgstr "Mapa de caràcters"
 msgid "Insert special characters just by clicking on them."
 msgstr "Inseriu caràcters especials fent-hi clic."
 
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Comenta el codi"
+
+# FIXME: "descomentar" (si no fos que no existeix)
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Comenta o treu el comentari del bloc de codi seleccionat."
+
+#: ../plugins/codecomment/codecomment.py:246
+msgid "Co_mment Code"
+msgstr "Co_menta el codi"
+
+#: ../plugins/codecomment/codecomment.py:248
+msgid "Comment the selected code"
+msgstr "Comenta el codi seleccionat"
+
+# FIXME: "descomentar" (si no fos que no existeix)
+#: ../plugins/codecomment/codecomment.py:252
+msgid "U_ncomment Code"
+msgstr "_Treu el comentari del codi"
+
+# FIXME: "descomentar" (si no fos que no existeix)
+#: ../plugins/codecomment/codecomment.py:254
+msgid "Uncomment the selected code"
+msgstr "Treu el comentari del codi seleccionat"
+
+#. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
 msgid "Color Picker"
 msgstr "Capturador de color"
@@ -33,7 +61,7 @@ msgstr "Capturador de color"
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
-"Captureu un color amb un diàleg i inseriu la seva representació hexadecimal."
+"Captureu un color amb un diàleg i inseriu-ne la representació hexadecimal."
 
 #: ../plugins/colorpicker/colorpicker.py:70
 msgid "_Color picker"
@@ -52,12 +80,18 @@ msgstr "Capturador de color"
 msgid "_Insert"
 msgstr "_Insereix"
 
-#
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Uneix diverses línies, o en separa de llargues"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Uneix/Divideix les línies"
+
 #: ../plugins/joinlines/joinlines.py:60
 msgid "_Join Lines"
 msgstr "_Uneix les línies"
 
-#
 #: ../plugins/joinlines/joinlines.py:61
 msgid "Join the selected lines"
 msgstr "Uneix les línies seleccionades"
@@ -90,28 +124,31 @@ msgstr ""
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
-msgstr "Afegiu una entrada al menú per mostrar/amagar la barra de pestanyes."
+msgstr "Afegiu una entrada al menú per mostrar o amagar la barra de pestanyes."
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
 msgid "Show/Hide Tabbar"
-msgstr "Mostreu/Amagueu la barra de pestanyes"
+msgstr "Mostra/Amaga la barra de pestanyes"
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Oblideu-vos de que no esteu fent servir tabulacions."
 
-#
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
 msgid "Smart Spaces"
 msgstr "Espais intel·ligents"
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
 msgid "Embed a terminal in the bottom pane."
-msgstr "Incrusteu un terminal al quadre inferior."
+msgstr "Incrusta un terminal al quadre inferior."
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
 msgid "Embedded Terminal"
 msgstr "Terminal incrustat"
+
+#: ../plugins/terminal/terminal.py:185
+msgid "Terminal"
+msgstr "Terminal"
 
 #~ msgid "Execute"
 #~ msgstr "Executta"
@@ -803,9 +840,6 @@ msgstr "Terminal incrustat"
 
 #~ msgid "Executing command"
 #~ msgstr "S'està executant l'ordre"
-
-#~ msgid "Co_mmand:"
-#~ msgstr "_Ordre:"
 
 #~ msgid "Select the working directory..."
 #~ msgstr "Seleccioneu el directori de treball..."
@@ -2646,9 +2680,6 @@ msgstr "Terminal incrustat"
 #~ "Copyright (C) 2002 Paolo Maggi"
 
 #~ msgid "_Word Count"
-#~ msgstr "Comptador de paraules"
-
-#~ msgid "Word count"
 #~ msgstr "Comptador de paraules"
 
 #~ msgid "Copyright (C) 2002 - Paolo Maggi"
