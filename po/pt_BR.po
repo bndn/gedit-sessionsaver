@@ -8,17 +8,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-06-05 18:38+0200\n"
-"PO-Revision-Date: 2006-06-05 15:18-0300\n"
-"Last-Translator: Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>\n"
+"POT-Creation-Date: 2006-10-14 19:04+0200\n"
+"PO-Revision-Date: 2006-10-22 16:12-0300\n"
+"Last-Translator: Leonardo Fereira Fontenelle <leo.fontenelle@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Fecha parênteses automaticamente."
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Fechamento de Parênteses"
+
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:253
+#: ../plugins/charmap/gedit-charmap-plugin.c:255
 msgid "Character Map"
 msgstr "Mapa de Caracteres"
 
@@ -26,6 +34,31 @@ msgstr "Mapa de Caracteres"
 msgid "Insert special characters just by clicking on them."
 msgstr "Insira caracteres especiais apenas clicando neles"
 
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Comentário de código"
+
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Comenta ou descomenta um determinado bloco de código."
+
+#: ../plugins/codecomment/codecomment.py:246
+msgid "Co_mment Code"
+msgstr "_Comentar Código"
+
+#: ../plugins/codecomment/codecomment.py:248
+msgid "Comment the selected code"
+msgstr "Comenta o código selecionado"
+
+#: ../plugins/codecomment/codecomment.py:252
+msgid "U_ncomment Code"
+msgstr "_Descomentar Código"
+
+#: ../plugins/codecomment/codecomment.py:254
+msgid "Uncomment the selected code"
+msgstr "Descomenta o código selecionado"
+
+#. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
 msgid "Color Picker"
 msgstr "Seletor de Cor"
@@ -34,21 +67,29 @@ msgstr "Seletor de Cor"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Escolha uma cor a partir de um diálogo e insira sua representação hexadecimal."
 
-#: ../plugins/colorpicker/colorpicker.py:68
+#: ../plugins/colorpicker/colorpicker.py:70
 msgid "_Color picker"
 msgstr "Seletor de _Cor"
 
-#: ../plugins/colorpicker/colorpicker.py:69
+#: ../plugins/colorpicker/colorpicker.py:71
 msgid "Pick a color from a dialog"
 msgstr "Selecione uma cor a partir de um diálogo"
 
-#: ../plugins/colorpicker/colorpicker.py:215
+#: ../plugins/colorpicker/colorpicker.py:217
 msgid "Color picker"
 msgstr "Seletor de cor"
 
-#: ../plugins/colorpicker/colorpicker.py:223
+#: ../plugins/colorpicker/colorpicker.py:225
 msgid "_Insert"
 msgstr "_Inserir"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Junta várias linhas ou divide linhas longas"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Juntar/Dividir Linhas"
 
 #: ../plugins/joinlines/joinlines.py:60
 msgid "_Join Lines"
@@ -106,11 +147,12 @@ msgstr "Embute um terminal no painel inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal Embutido"
 
-#: ../quickies/quickies.glade.h:1
-msgid "Execute"
-msgstr "Executar"
+#: ../plugins/terminal/terminal.py:185
+msgid "Terminal"
+msgstr "Terminal"
 
-#: ../quickies/quickies.glade.h:2
-msgid "Quick Script:"
-msgstr "Script rápido:"
+#~ msgid "Execute"
+#~ msgstr "Executar"
 
+#~ msgid "Quick Script:"
+#~ msgstr "Script rápido:"
