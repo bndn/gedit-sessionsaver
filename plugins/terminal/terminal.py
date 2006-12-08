@@ -21,11 +21,15 @@
 # Boston, MA  02110-1301  USA
 
 import gedit
+import gedit.utils
 import pango
 import gtk
+import gobject
 import vte
 import gconf
 import gettext
+import gnomevfs
+import os
 from gpdefs import *
 
 gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
@@ -33,6 +37,14 @@ _ = lambda s: gettext.dgettext("gedit-plugins", s);
 
 class GeditTerminal(gtk.HBox):
     """VTE terminal which follows gnome-terminal default profile options"""
+
+    __gsignals__ = {
+        "populate-popup": (
+            gobject.SIGNAL_RUN_LAST,
+            None,
+            (gobject.TYPE_OBJECT,)
+        )
+    }
 
     GCONF_PROFILE_DIR = "/apps/gnome-terminal/profiles/Default"
     
@@ -157,6 +169,7 @@ class GeditTerminal(gtk.HBox):
         item.connect("activate", lambda menu_item: self._vte.paste_clipboard())
         menu.append(item)
         
+        self.emit("populate-popup", menu)
         menu.show_all()
         return menu
 
@@ -171,11 +184,16 @@ class GeditTerminal(gtk.HBox):
                        0, gtk.get_current_event_time())
             menu.select_first(False)        
 
+    def change_directory(self, path):
+        path = path.replace('\\', '\\\\').replace('"', '\\"')
+        self._vte.feed_child('cd "%s"\n' % path)
+
 class TerminalWindowHelper(object):
     def __init__(self, window):
         self._window = window
 
         self._panel = GeditTerminal()
+        self._panel.connect("populate-popup", self.on_panel_populate_popup)
         self._panel.show()
 
         image = gtk.Image()
@@ -190,6 +208,23 @@ class TerminalWindowHelper(object):
     
     def update_ui(self):
         pass
+
+    def get_active_document_directory(self):
+        doc = self._window.get_active_document()
+        if doc is None:
+            return None
+        uri = doc.get_uri()
+        if uri is not None and gedit.utils.uri_has_file_scheme(uri):
+            return os.path.dirname(gnomevfs.get_local_path_from_uri(uri))
+        return None
+
+    def on_panel_populate_popup(self, panel, menu):
+        menu.prepend(gtk.SeparatorMenuItem())
+        path = self.get_active_document_directory()
+        item = gtk.MenuItem(_("C_hange Directory"))
+        item.connect("activate", lambda menu_item: panel.change_directory(path))
+        item.set_sensitive(path is not None)
+        menu.prepend(item)
 
 class TerminalPlugin(gedit.Plugin):
     WINDOW_DATA_KEY = "TerminalPluginWindowData"
