@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-05 13:01-0500\n"
+"POT-Creation-Date: 2006-12-27 15:12-0500\n"
 "PO-Revision-Date: 2004-04-28 15:10-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
@@ -16,197 +16,140 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: quickies/quickies.glade.h:1
-msgid "Execute"
-msgstr "Execute"
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Automatically adds closing brackets."
 
-#: quickies/quickies.glade.h:2
-msgid "Quick Script:"
-msgstr "Quick Script:"
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Bracket Completion"
 
-#~ msgid "_ASCII Table"
-#~ msgstr "_ASCII Table"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:255
+msgid "Character Map"
+msgstr "Character Map"
 
-#~ msgid "Pop-up a dialog containing an ASCII Table"
-#~ msgstr "Pop up a dialogue containing an ASCII Table"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr "Insert special characters just by clicking on them."
 
-#~ msgid "Char"
-#~ msgstr "Char"
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Code comment"
 
-#~ msgid "Dec#"
-#~ msgstr "Dec#"
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Comment out or uncomment a selected block of code."
 
-#~ msgid "Hex#"
-#~ msgstr "Hex#"
+#: ../plugins/codecomment/codecomment.py:246
+msgid "Co_mment Code"
+msgstr "Co_mment Code"
 
-#~ msgid "Name"
-#~ msgstr "Name"
+#: ../plugins/codecomment/codecomment.py:248
+msgid "Comment the selected code"
+msgstr "Comment the selected code"
 
-#~ msgid "ASCII Table"
-#~ msgstr "ASCII Table"
+#: ../plugins/codecomment/codecomment.py:252
+msgid "U_ncomment Code"
+msgstr "U_ncomment Code"
 
-#~ msgid "_Insert char"
-#~ msgstr "_Insert char"
+#: ../plugins/codecomment/codecomment.py:254
+msgid "Uncomment the selected code"
+msgstr "Uncomment the selected code"
 
-#~ msgid "ASCII table"
-#~ msgstr "ASCII table"
+#. ex:ts=4:et:
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+msgid "Color Picker"
+msgstr "Colour Picker"
 
-#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-#~ msgstr "This plugin displays a pop-up dialog which contains an ASCII Table."
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
+msgstr "Pick a colour from a dialogue and insert its hexadecimal representation."
 
-#~ msgid "Open CVS Chan_geLogs"
-#~ msgstr "Open CVS Chan_geLogs"
+#: ../plugins/colorpicker/colorpicker.py:70
+msgid "_Color picker"
+msgstr "_Colour picker"
 
-#~ msgid "Searches for ChangeLogs in the current document and opens them"
-#~ msgstr "Searches for ChangeLogs in the current document and opens them"
+#: ../plugins/colorpicker/colorpicker.py:71
+msgid "Pick a color from a dialog"
+msgstr "Pick a colour from a dialogue"
 
-#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-#~ msgstr "A plugin that opens ChangeLogs found in CVS commit messages."
+#: ../plugins/colorpicker/colorpicker.py:217
+msgid "Color picker"
+msgstr "Colour picker"
 
-#~ msgid "CVS ChangeLog"
-#~ msgstr "CVS ChangeLog"
+#: ../plugins/colorpicker/colorpicker.py:225
+msgid "_Insert"
+msgstr "_Insert"
 
-#~ msgid "Co_mpare Files..."
-#~ msgstr "Co_mpare Files..."
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Join several lines or split long ones"
 
-#~ msgid "Makes a diff file from two documents or files"
-#~ msgstr "Makes a diff file from two documents or files"
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Join/Split Lines"
 
-#~ msgid "Compare Files"
-#~ msgstr "Compare Files"
+#: ../plugins/joinlines/joinlines.py:60
+msgid "_Join Lines"
+msgstr "_Join Lines"
 
-#~ msgid "C_ompare"
-#~ msgstr "C_ompare"
+#: ../plugins/joinlines/joinlines.py:61
+msgid "Join the selected lines"
+msgstr "Join the selected lines"
 
-#~ msgid "The two documents you selected are the same."
-#~ msgstr "The two documents you selected are the same."
+#: ../plugins/joinlines/joinlines.py:63
+msgid "_Split Lines"
+msgstr "_Split Lines"
 
-#~ msgid ""
-#~ "The \"first\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
-#~ msgstr ""
-#~ "The \"first\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
+#: ../plugins/joinlines/joinlines.py:64
+msgid "Split the selected lines"
+msgstr "Split the selected lines"
 
-#~ msgid ""
-#~ "The \"second\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
-#~ msgstr ""
-#~ "The \"second\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+msgid "Tab_bar"
+msgstr "Tab_bar"
 
-#~ msgid "The two files you selected are the same."
-#~ msgstr "The two files you selected are the same."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+msgid "Show or hide the tabbar in the current window"
+msgstr "Show or hide the tabbar in the current window"
 
-#~ msgid "The \"first\" document contains no text."
-#~ msgstr "The \"first\" document contains no text."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+msgid "Tabbar is Visible"
+msgstr "Tabbar is Visible"
 
-#~ msgid "The \"second\" document contains no text."
-#~ msgstr "The \"second\" document contains no text."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+msgid "Whether the tabbar should be visible in editing windows."
+msgstr "Whether the tabbar should be visible in editing windows."
 
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "gedit could not create a temporary file."
-#~ msgstr ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "gedit could not create a temporary file."
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+msgid "Add a menu entry to show/hide the tabbar."
+msgstr "Add a menu entry to show/hide the tabbar."
 
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "Error executing the diff command."
-#~ msgstr ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "Error executing the diff command."
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+msgid "Show/Hide Tabbar"
+msgstr "Show/Hide Tabbar"
 
-#~ msgid "No differences were found between the selected documents."
-#~ msgstr "No differences were found between the selected documents."
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr "Forget you're not using tabulations."
 
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "The result contains invalid UTF-8 data."
-#~ msgstr ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "The result contains invalid UTF-8 data."
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+msgid "Smart Spaces"
+msgstr "Smart Spaces"
 
-#~ msgid "*"
-#~ msgstr "*"
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr "Embed a terminal in the bottom pane."
 
-#~ msgid "Choose the files to compare."
-#~ msgstr "Choose the files to compare."
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+msgid "Embedded Terminal"
+msgstr "Embedded Terminal"
 
-#~ msgid "Compare files..."
-#~ msgstr "Compare files..."
+#: ../plugins/terminal/terminal.py:203
+msgid "Terminal"
+msgstr "Terminal"
 
-#~ msgid "F_rom document"
-#~ msgstr "F_rom document"
-
-#~ msgid "First"
-#~ msgstr "First"
-
-#~ msgid "First file from disk"
-#~ msgstr "First file from disk"
-
-#~ msgid "First file from open document"
-#~ msgstr "First file from open document"
-
-#~ msgid "From _document"
-#~ msgstr "From _document"
-
-#~ msgid "From a _file on disk"
-#~ msgstr "From a _file on disk"
-
-#~ msgid "From a file o_n disk"
-#~ msgstr "From a file o_n disk"
-
-#~ msgid "Ignore _blanks (-b option)"
-#~ msgstr "Ignore _blanks (-b option)"
-
-#~ msgid "Note that this option is only supported by GNU diff"
-#~ msgstr "Note that this option is only supported by GNU diff"
-
-#~ msgid "Second"
-#~ msgstr "Second"
-
-#~ msgid "Second file from disk"
-#~ msgstr "Second file from disk"
-
-#~ msgid "Second file from open document"
-#~ msgstr "Second file from open document"
-
-#~ msgid "Select the \"first\" file..."
-#~ msgstr "Select the \"first\" file..."
-
-#~ msgid "Select the \"second\" file..."
-#~ msgstr "Select the \"second\" file..."
-
-#~ msgid "Select the first file to compare"
-#~ msgstr "Select the first file to compare"
-
-#~ msgid "Select the first open document to compare"
-#~ msgstr "Select the first open document to compare"
-
-#~ msgid "Select the second file to compare"
-#~ msgstr "Select the second file to compare"
-
-#~ msgid "Select the second open document to compare"
-#~ msgstr "Select the second open document to compare"
-
-#~ msgid "Use the _unified output format (-u option)"
-#~ msgstr "Use the _unified output format (-u option)"
-
-#~ msgid ""
-#~ "The Compare Files plugin uses the \"diff\" program to compare two "
-#~ "documents or files on disk."
-#~ msgstr ""
-#~ "The Compare Files plugin uses the \"diff\" program to compare two "
-#~ "documents or files on disk."
+#: ../plugins/terminal/terminal.py:224
+msgid "C_hange Directory"
+msgstr "C_hange Directory"
