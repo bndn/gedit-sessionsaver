@@ -9,13 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-29 06:40+0100\n"
-"PO-Revision-Date: 2006-11-29 06:50+0100\n"
+"POT-Creation-Date: 2007-01-10 01:14+0100\n"
+"PO-Revision-Date: 2007-01-10 01:16+0100\n"
 "Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Afegeix els parèntesis de tancament automàticament."
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Compleció de parèntesis"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:255
@@ -146,9 +154,13 @@ msgstr "Incrusteu un terminal al quadre inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal incrustat"
 
-#: ../plugins/terminal/terminal.py:185
+#: ../plugins/terminal/terminal.py:203
 msgid "Terminal"
 msgstr "Terminal"
+
+#: ../plugins/terminal/terminal.py:224
+msgid "C_hange Directory"
+msgstr "C_anvia de directori"
 
 #~ msgid "Execute"
 #~ msgstr "Executa"
@@ -409,9 +421,6 @@ msgstr "Terminal"
 #~ msgstr ""
 #~ "Color de fons per al text no seleccionat en l'àrea d'edició. Això només "
 #~ "tindrà efecte si l'opció «Usa els colors per defecte» està inhabilitada."
-
-#~ msgid "Backup Copy Extension"
-#~ msgstr "Extensió de les copies de seguretat"
 
 #~ msgid "Body Font for Printing"
 #~ msgstr "Tipus de lletra del cos per a imprimir"
@@ -846,9 +855,6 @@ msgstr "Terminal"
 
 #~ msgid "_Show results in Output Window"
 #~ msgstr "Mos_tra els resultats en la finestra de sortida"
-
-#~ msgid "_Working directory:"
-#~ msgstr "_Directori de treball:"
 
 #~ msgid "gedit: Shell Output plugin"
 #~ msgstr "gedit: Connector de la sortida de l'intèrpret d'ordres"
