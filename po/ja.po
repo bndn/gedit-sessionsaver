@@ -1,18 +1,18 @@
 # gedit ja.po
-# Copyright (C) 1999,2000,2002,2003,2006 Free Software Foundation, Inc.
+# Copyright (C) 1999,2000,2002,2003,2006,2007 Free Software Foundation, Inc.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999
 # Yuusuke Tahara <tahara@gnome.gr.jp>
 # Yukihiro Nakai <nakai@gnome.gr.jp>
 # Akira TAGOH <tagoh@gnome.gr.jp>, 2002.
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
-# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2006.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2006,2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins HEAD\n"
+"Project-Id-Version: gedit-plugins trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-09 14:20+0900\n"
-"PO-Revision-Date: 2006-09-09 14:20+0900\n"
+"POT-Creation-Date: 2007-01-17 23:02+0900\n"
+"PO-Revision-Date: 2007-01-17 23:02+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -44,19 +44,19 @@ msgstr "コードのコメント"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "選択した範囲をコメントアウトしたり解除します。"
 
-#: ../plugins/codecomment/codecomment.py:240
+#: ../plugins/codecomment/codecomment.py:246
 msgid "Co_mment Code"
 msgstr "コメント・アウト(_M)"
 
-#: ../plugins/codecomment/codecomment.py:242
+#: ../plugins/codecomment/codecomment.py:248
 msgid "Comment the selected code"
 msgstr "選択範囲をコメントにします"
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:252
 msgid "U_ncomment Code"
 msgstr "コメント・アウトの解除(_N)"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:254
 msgid "Uncomment the selected code"
 msgstr "選択範囲のコメント・アウトを解除します"
 
@@ -149,6 +149,10 @@ msgstr "ボトム・ペインに端末を埋め込みます。"
 msgid "Embedded Terminal"
 msgstr "埋め込み式の端末"
 
-#: ../plugins/terminal/terminal.py:173
+#: ../plugins/terminal/terminal.py:203
 msgid "Terminal"
 msgstr "端末"
+
+#: ../plugins/terminal/terminal.py:224
+msgid "C_hange Directory"
+msgstr "フォルダの変更(_H)"
