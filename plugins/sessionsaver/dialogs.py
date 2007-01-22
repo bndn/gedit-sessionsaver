@@ -11,6 +11,7 @@ from store import Session
 
 from gpdefs import *
 gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+glade.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
 _ = lambda s: gettext.dgettext("gedit-plugins", s);
 
 class SessionModel(gtk.GenericTreeModel):
