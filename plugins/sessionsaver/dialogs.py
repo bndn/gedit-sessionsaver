@@ -4,14 +4,14 @@
 
 import gobject
 import gedit
-import gtk
+import gtk, gtk.glade
 import os.path
 import gettext
 from store import Session
 
 from gpdefs import *
 gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-glade.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+gtk.glade.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
 _ = lambda s: gettext.dgettext("gedit-plugins", s);
 
 class SessionModel(gtk.GenericTreeModel):
