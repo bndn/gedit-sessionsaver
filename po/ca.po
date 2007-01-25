@@ -1,16 +1,16 @@
 # gedit translation to Catalan.
-# Copyright © 2000-2006 Free Software Foundation, Inc.
+# Copyright © 2000-2007 Free Software Foundation, Inc.
 # Softcatalà <gnome@softcatala.net>, 2000, 2001, 2002.
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003.
-# Josep Puigdemont <josep.puigdemont@gmail.com>, 2005, 2006.
+# Josep Puigdemont <josep.puigdemont@gmail.com>, 2005, 2006, 2007.
 # Gil Forcada <gilforcada@guifi.net>, 2006
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-10 01:14+0100\n"
-"PO-Revision-Date: 2007-01-10 01:16+0100\n"
+"POT-Creation-Date: 2007-01-26 00:37+0100\n"
+"PO-Revision-Date: 2007-01-26 00:40+0100\n"
 "Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -137,6 +137,44 @@ msgstr "Afegiu una entrada al menú per mostrar o amagar la barra de pestanyes."
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Mostreu/Amagueu la barra de pestanyes"
+
+#: ../plugins/sessionsaver/dialogs.py:162
+msgid "Session Name"
+msgstr "Nom de la sessió"
+
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+msgid "Save and restore your working sessions"
+msgstr "Deseu i recupereu les sessions de treball"
+
+# FIXME desador? (josep)
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr "Desador de sessions"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Session name:"
+msgstr "Nom de la sessió:"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "gtk-cancel"
+msgstr "gtk-cancel"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+msgid "gtk-close"
+msgstr "gtk-close"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:4
+msgid "gtk-delete"
+msgstr "gtk-delete"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:5
+msgid "gtk-open"
+msgstr "gtk-open"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:6
+msgid "gtk-save"
+msgstr "gtk-save"
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
@@ -1582,9 +1620,6 @@ msgstr "C_anvia de directori"
 
 #~ msgid "The title of the selection dialog box"
 #~ msgstr "Títol del quadre de diàleg de la selecció"
-
-#~ msgid "Font name"
-#~ msgstr "Nom del tipus de lletra"
 
 #~ msgid "Name of the selected font"
 #~ msgstr "Nom de la lletra seleccionada"
