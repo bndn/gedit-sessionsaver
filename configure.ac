@@ -1,9 +1,9 @@
 # Process this file with autoconf to produce a configure script.
 
 GEDIT_MAJOR=2.16.0
-GEDIT_PLUGINS_MAJOR=2.17.1
+GEDIT_PLUGINS_MAJOR=2.17.2
 
-AC_INIT(gedit-plugins, 2.17.1, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
+AC_INIT(gedit-plugins, 2.17.2, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
 
 AC_CONFIG_SRCDIR([plugins])
 AC_CONFIG_MACRO_DIR([m4])
