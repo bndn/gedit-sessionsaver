@@ -79,7 +79,7 @@ class SessionSaverWindowHelper(object):
         SessionManagerDialog(self.plugin).run()
 
     def session_menu_action(self, action, session):
-        self.plutin.load_session(session, self.window)
+        self.plugin.load_session(session, self.window)
 
     def remove_session_menu(self):
         if self._ui_id != 0:
