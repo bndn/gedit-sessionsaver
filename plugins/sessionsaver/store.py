@@ -23,13 +23,6 @@ import os.path
 from xml.parsers import expat
 import gobject
 
-class A(object):
-    def __init__(self, name):
-        super(Session, self).__init__()
-        self.name = name
-    def __cmp__(self, session):
-        return cmp(self.name.lower(), session.name.lower())
-
 class Session(object):
     def __init__(self, name, files = None):
         super(Session, self).__init__()

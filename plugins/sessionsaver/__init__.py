@@ -153,7 +153,7 @@ class SessionSaverPlugin(gedit.Plugin):
             window = app.get_active_window()
 
         tab = window.get_active_tab()
-        if tab is not None or \
+        if tab is not None and \
            not (tab.get_document().is_untouched() and \
                 tab.get_state() == gedit.TAB_STATE_NORMAL):
             window = app.create_window()
