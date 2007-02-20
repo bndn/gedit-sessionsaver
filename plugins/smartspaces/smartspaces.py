@@ -60,6 +60,9 @@ class SmartSpacesViewHelper(object):
             return False
         
         doc = view.get_buffer()
+        if doc.get_has_selection():
+            return False
+        
         cur = doc.get_iter_at_mark(doc.get_insert())
         offset = cur.get_line_offset()
         
