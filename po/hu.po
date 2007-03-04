@@ -1,18 +1,19 @@
 # Hungarian translation of gedit-plugins.
-# Copyright (C) 2000-2004, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2000-2004, 2006, 2007 Free Software Foundation, Inc.
 #
 # Szabolcs Ban <shooby@gnome.hu>, 2000.
 # Emese Kovacs <emese@gnome.hu>, 2003.
 # Laszlo Dvornik <dvornikl@mailbox.hu>, 2004.
 # Gabor Kelemen <kelemeng@gnome.hu>, 2006.
+# Gabor SUVEG <gabor@suveg.hu>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-20 01:56+0200\n"
-"PO-Revision-Date: 2006-10-21 03:46+0200\n"
-"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
-"Language-Team: Hungarian <gnome@gnome.hu>\n"
+"POT-Creation-Date: 2007-01-23 03:40+0000\n"
+"PO-Revision-Date: 2007-03-04 14:03+0100\n"
+"Last-Translator: Gabor SUVEG <gabor@suveg.hu>\n"
+"Language-Team:  <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,19 +45,19 @@ msgstr "Kód megjegyzés"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Kijelölt kódblokk megjegyzésbe tétele vagy kivétele onnan."
 
-#: ../plugins/codecomment/codecomment.py:240
+#: ../plugins/codecomment/codecomment.py:246
 msgid "Co_mment Code"
 msgstr "A kó_d megjegyzés"
 
-#: ../plugins/codecomment/codecomment.py:242
+#: ../plugins/codecomment/codecomment.py:248
 msgid "Comment the selected code"
 msgstr "A kijelölt kód megjegyzésé tétele"
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:252
 msgid "U_ncomment Code"
 msgstr "A kód _nem megjegyzés"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:254
 msgid "Uncomment the selected code"
 msgstr "A kijelölt kód kivétele megjegyzésből"
 
@@ -135,6 +136,43 @@ msgstr "Menübejegyzés hozzáadása a lapsáv megjelenítéséhez/elrejtéséhe
 msgid "Show/Hide Tabbar"
 msgstr "Lapsáv megjelenítése/elrejtése"
 
+#: ../plugins/sessionsaver/dialogs.py:162
+msgid "Session Name"
+msgstr "Munkamenet neve"
+
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+msgid "Save and restore your working sessions"
+msgstr "Működő munkamenet mentése és visszaállítása"
+
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr "Munkamenetmentő"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Session name:"
+msgstr "Munkamenetnév:"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "gtk-cancel"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+msgid "gtk-close"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:4
+msgid "gtk-delete"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:5
+msgid "gtk-open"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:6
+msgid "gtk-save"
+msgstr ""
+
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Felejtse el, hogy nem használ tabokat."
@@ -151,7 +189,11 @@ msgstr "Terminál beágyazása az alsó alaktáblába."
 msgid "Embedded Terminal"
 msgstr "Beágyazott terminál"
 
-#: ../plugins/terminal/terminal.py:173
+#: ../plugins/terminal/terminal.py:203
 msgid "Terminal"
 msgstr "Terminál"
+
+#: ../plugins/terminal/terminal.py:224
+msgid "C_hange Directory"
+msgstr "Könyvtár_váltás"
 
