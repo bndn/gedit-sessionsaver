@@ -59,7 +59,7 @@
             <child>
               <widget class="GtkButton" id="button2">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-cancel</property>
+                <property name="label" translatable="no">gtk-cancel</property>
                 <property name="use_stock">True</property>
                 <property name="response_id">-6</property>
               </widget>
@@ -69,7 +69,7 @@
                 <property name="visible">True</property>
                 <property name="can_default">True</property>
                 <property name="has_default">True</property>
-                <property name="label" translatable="yes">gtk-save</property>
+                <property name="label" translatable="no">gtk-save</property>
                 <property name="use_stock">True</property>
                 <property name="response_id">-5</property>
               </widget>
@@ -118,7 +118,7 @@
             <child>
               <widget class="GtkButton" id="open-button">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-open</property>
+                <property name="label" translatable="no">gtk-open</property>
                 <property name="use_stock">True</property>
                 <signal name="clicked" handler="on_open_button_clicked"/>
               </widget>
@@ -126,7 +126,7 @@
             <child>
               <widget class="GtkButton" id="delete-button">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-delete</property>
+                <property name="label" translatable="no">gtk-delete</property>
                 <property name="use_stock">True</property>
                 <signal name="clicked" handler="on_delete_button_clicked"/>
               </widget>
@@ -137,7 +137,8 @@
             <child>
               <widget class="GtkButton" id="close-button">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-close</property>
+                <property name="label" translatable="no">gtk-close</property>
+
                 <property name="use_stock">True</property>
                 <signal name="clicked" handler="on_close_button_clicked"/>
               </widget>
