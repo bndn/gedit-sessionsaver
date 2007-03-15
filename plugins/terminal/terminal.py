@@ -32,8 +32,11 @@ import gnomevfs
 import os
 from gpdefs import *
 
-gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-_ = lambda s: gettext.dgettext("gedit-plugins", s);
+try:
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+    _ = lambda s: s
 
 class GeditTerminal(gtk.HBox):
     """VTE terminal which follows gnome-terminal default profile options"""

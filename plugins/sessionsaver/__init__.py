@@ -27,9 +27,12 @@ import gettext
 from store import XMLSessionStore
 from dialogs import SaveSessionDialog, SessionManagerDialog
 
-from gpdefs import *
-gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-_ = lambda s: gettext.dgettext("gedit-plugins", s);
+try:
+    from gpdefs import *
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+    _ = lambda s: s
 
 class SessionSaverWindowHelper(object):
     ACTION_HANDLER_DATA_KEY = "SessionSaverActionHandlerData"

@@ -1,5 +1,18 @@
 2007-03-15  Steve Frécinaux  <code@istique.net>
 
+	* plugins/codecomment/codecomment.py:
+	* plugins/colorpicker/colorpicker.py:
+	* plugins/sessionsaver/__init__.py:
+	* plugins/sessionsaver/dialogs.py:
+	* plugins/terminal/terminal.py:
+
+	Use try/catch statements to define the textdomain, in order to make it
+	easier to copy paste plugins in ~.
+	Also use GETTEXT_DOMAIN instead of gving it explicitely.
+
+
+2007-03-15  Steve Frécinaux  <code@istique.net>
+
 	* plugins/drawspaces/drawspaces.glade:
 	* plugins/sessionsaver/sessionsaver.glade:
 

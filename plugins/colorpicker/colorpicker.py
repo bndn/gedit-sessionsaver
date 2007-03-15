@@ -24,8 +24,11 @@ import gettext
 import re
 from gpdefs import *
 
-gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-_ = lambda s: gettext.dgettext("gedit-plugins", s);
+try:
+	gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+	_ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+	_ = lambda s: s
 
 ui_str = """
 <ui>

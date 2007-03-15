@@ -9,10 +9,13 @@ import os.path
 import gettext
 from store import Session
 
-from gpdefs import *
-gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-gtk.glade.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-_ = lambda s: gettext.dgettext("gedit-plugins", s);
+try:
+    from gpdefs import *
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    gtk.glade.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+    _ = lambda s: s
 
 class SessionModel(gtk.GenericTreeModel):
     OBJECT_COLUMN = 0

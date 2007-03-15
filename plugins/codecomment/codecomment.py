@@ -26,8 +26,11 @@ import copy
 import gettext
 from gpdefs import *
 
-gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-_ = lambda s: gettext.dgettext("gedit-plugins", s);
+try:
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+    _ = lambda s: s
 
 # Most common types of comments (store them only once)
 ccomment    = ('/* ', ' */')
