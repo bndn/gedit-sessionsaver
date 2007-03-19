@@ -3,17 +3,18 @@
 # Ludootje <ludootje@linux.be>, 2001.
 # Jan-Willem Harmanny <jwharmanny@hotmail.com>, 2002.
 # Ronald Hummelink <ronald@hummelink.xs4all.nl>, 2002.
-# Sander Knopper <sander@knopper.dhs.org>, 2002
-# Reinout van Schouwen <reinouts@gnome.org>, 2002-2006
-# Taco Witte <T.C.Witte@phys.uu.nl>, 2002
+# Sander Knopper <sander@knopper.dhs.org>, 2002.
+# Reinout van Schouwen <reinouts@gnome.org>, 2002-2006.
+# Taco Witte <T.C.Witte@phys.uu.nl>, 2002.
+# Wouter Bolsterlee <wbolster@gnome.org>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-24 18:49+0200\n"
-"PO-Revision-Date: 2006-10-24 23:38+0100\n"
-"Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
+"POT-Creation-Date: 2007-03-19 22:24+0100\n"
+"PO-Revision-Date: 2007-03-19 22:24+0100 \n"
+"Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,19 +45,19 @@ msgstr "Code-commentaar"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Een blok code van commentaar voorzien of uit commentaar halen."
 
-#: ../plugins/codecomment/codecomment.py:240
+#: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
 msgstr "_Code-commentaar"
 
-#: ../plugins/codecomment/codecomment.py:242
+#: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
 msgstr "De geselecteerde code in commentaar zetten"
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
 msgstr "Code ui_t commentaar halen"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
 msgstr "De geselecteerde code uit commentaar halen"
 
@@ -71,22 +72,44 @@ msgstr ""
 "Een kleur uit een dialoogvenster kiezen en de hexadecimale representatie "
 "ervan invoegen. "
 
-#: ../plugins/colorpicker/colorpicker.py:70
+#: ../plugins/colorpicker/colorpicker.py:73
 msgid "_Color picker"
 msgstr "_Kleurkiezer"
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "Kleur uit dialoogvenster kiezen"
 
-#: ../plugins/colorpicker/colorpicker.py:217
+#: ../plugins/colorpicker/colorpicker.py:220
 msgid "Color picker"
 msgstr "Kleurkiezer"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:228
 msgid "_Insert"
 msgstr "_Invoegen"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "Spaties tonen"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "Spaties en tabs tonen"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw spaces"
+msgstr "Spaties tonen"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw tabs"
+msgstr "Tabs tonen"
+
+# vrij vertaald (Wouter Bolsterlee)
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Drawing color:"
+msgstr "Kleur:"
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Meerdere lange regels aaneenvoegen of lange regels splitsen"
@@ -129,15 +152,33 @@ msgstr "Weergeven tabbalk in bewerkingsvensters."
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
-msgstr "Een menu-item toevoegen om de zichtbaarheid van de tabbalk om te zetten."
+msgstr ""
+"Een menu-item toevoegen om de zichtbaarheid van de tabbalk om te zetten."
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Tabbalk tonen/verbergen"
 
+#: ../plugins/sessionsaver/dialogs.py:165
+msgid "Session Name"
+msgstr "Sessienaam"
+
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+msgid "Save and restore your working sessions"
+msgstr "Werksessies opslaan en weer openen"
+
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr "Sessies Opslaan"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Session name:"
+msgstr "Sessienaam:"
+
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
-msgstr "Vergeet dat u geen tabulaties gebruikt."
+msgstr "Vergeet dat u geen tabs gebruikt."
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
 msgid "Smart Spaces"
@@ -151,9 +192,13 @@ msgstr "Een terminalvenster in het onderpaneel inbedden."
 msgid "Embedded Terminal"
 msgstr "Ingebedde terminal"
 
-#: ../plugins/terminal/terminal.py:173
+#: ../plugins/terminal/terminal.py:206
 msgid "Terminal"
 msgstr "Terminal"
+
+#: ../plugins/terminal/terminal.py:227
+msgid "C_hange Directory"
+msgstr "_Map wijzigen"
 
 #~ msgid "_ASCII Table"
 #~ msgstr "_ASCII-tabel"
@@ -835,9 +880,6 @@ msgstr "Terminal"
 
 #~ msgid "_Show results in Output Window"
 #~ msgstr "Re_sultaten in uitvoervenster tonen"
-
-#~ msgid "_Working directory:"
-#~ msgstr "_Werkmap:"
 
 #~ msgid "gedit: Shell Output plugin"
 #~ msgstr "gedit: Shelluitvoer-plugin"
@@ -1546,9 +1588,6 @@ msgstr "Terminal"
 
 #~ msgid "The title of the selection dialog box"
 #~ msgstr "De titel van het selectie dialoogvenster"
-
-#~ msgid "Font name"
-#~ msgstr "Lettertypenaam"
 
 #~ msgid "Name of the selected font"
 #~ msgstr "Naam van het geselecteerde lettertype"
