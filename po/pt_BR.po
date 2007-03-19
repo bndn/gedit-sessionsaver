@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-08 01:56-0300\n"
-"PO-Revision-Date: 2007-03-08 01:56-0300\n"
+"POT-Creation-Date: 2007-03-18 20:58-0300\n"
+"PO-Revision-Date: 2007-03-18 21:47-0300\n"
 "Last-Translator: Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
@@ -42,19 +42,19 @@ msgstr "Comentar código"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Comente ou descomente um determinado bloco de código."
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
 msgstr "Comentar Código"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
 msgstr "Comenta o código selecionado"
 
-#: ../plugins/codecomment/codecomment.py:252
+#: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
 msgstr "Descomentar Código"
 
-#: ../plugins/codecomment/codecomment.py:254
+#: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
 msgstr "Descomenta o código selecionado"
 
@@ -69,22 +69,43 @@ msgstr ""
 "Escolha uma cor a partir de um diálogo e insira sua representação "
 "hexadecimal."
 
-#: ../plugins/colorpicker/colorpicker.py:70
+#: ../plugins/colorpicker/colorpicker.py:73
 msgid "_Color picker"
 msgstr "Seletor de _Cor"
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "Selecione uma cor a partir de um diálogo"
 
-#: ../plugins/colorpicker/colorpicker.py:217
+#: ../plugins/colorpicker/colorpicker.py:220
 msgid "Color picker"
 msgstr "Seletor de cor"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:228
 msgid "_Insert"
 msgstr "_Inserir"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "Desenhar Espaços"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "Desenha Espaços e Tabulações"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw spaces"
+msgstr "Desenhar espaços"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw tabs"
+msgstr "Desenhar tabulações"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Drawing color:"
+msgstr "Cor do desenho:"
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Junta várias linhas ou divide linhas longas"
@@ -133,7 +154,7 @@ msgstr "Adicione uma entrada de menu para mostrar/ocultar a barra de abas."
 msgid "Show/Hide Tabbar"
 msgstr "Mostrar/ocultar barra de abas"
 
-#: ../plugins/sessionsaver/dialogs.py:162
+#: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "Nome da Sessão"
 
@@ -149,26 +170,6 @@ msgstr "Salvador de Sessão"
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
 msgid "Session name:"
 msgstr "Nome da sessão:"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
-msgid "gtk-close"
-msgstr "gtk-close"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:4
-msgid "gtk-delete"
-msgstr "gtk-delete"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:5
-msgid "gtk-open"
-msgstr "gtk-open"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:6
-msgid "gtk-save"
-msgstr "gtk-save"
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
@@ -186,13 +187,28 @@ msgstr "Embuta um terminal no painel inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal Embutido"
 
-#: ../plugins/terminal/terminal.py:203
+#: ../plugins/terminal/terminal.py:206
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:224
+#: ../plugins/terminal/terminal.py:227
 msgid "C_hange Directory"
 msgstr "Alterar Diretório"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-close"
+
+#~ msgid "gtk-delete"
+#~ msgstr "gtk-delete"
+
+#~ msgid "gtk-open"
+#~ msgstr "gtk-open"
+
+#~ msgid "gtk-save"
+#~ msgstr "gtk-save"
 
 #~ msgid "Execute"
 #~ msgstr "Executar"
