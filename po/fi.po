@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-15 11:07+0300\n"
-"PO-Revision-Date: 2006-09-15 11:10+0300\n"
+"POT-Creation-Date: 2007-03-19 09:17+0300\n"
+"PO-Revision-Date: 2007-03-19 09:19+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -42,19 +42,19 @@ msgstr "Lähdekoodin kommentointi"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Kommentoi tai poista kommentit valitusta lähdekoodin alueesta."
 
-#: ../plugins/codecomment/codecomment.py:240
+#: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
 msgstr "Lähdek_oodin kommentointi"
 
-#: ../plugins/codecomment/codecomment.py:242
+#: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
 msgstr "Kommentoi valittu lähdekoodi."
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
 msgstr "_Poista kommentti koodista"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
 msgstr "Poista kommentit valitusta lähdekoodista"
 
@@ -67,22 +67,43 @@ msgstr "Värinvalitsin"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Valitse väri ikkunasta ja syötä tekstiin sen heksadesimaaliesitys."
 
-#: ../plugins/colorpicker/colorpicker.py:70
+#: ../plugins/colorpicker/colorpicker.py:73
 msgid "_Color picker"
 msgstr "_Värinvalitsin"
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "Valitse väri ikkunasta"
 
-#: ../plugins/colorpicker/colorpicker.py:217
+#: ../plugins/colorpicker/colorpicker.py:220
 msgid "Color picker"
 msgstr "Värinvalitsin"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:228
 msgid "_Insert"
 msgstr "L_isää"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "Näytä tyhjeet"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "Näytä välilyönnit ja sarkaimet"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw spaces"
+msgstr "Näytä välilyönnit"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw tabs"
+msgstr "Näytä sarkaimet"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Drawing color:"
+msgstr "Tyhjeiden väri:"
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Liitä useita rivejä tai jaa pitkiä rivejä"
@@ -131,6 +152,23 @@ msgstr "Lisää valikon kohta välilehtipalkin piilottamiseksi ja näyttämiseks
 msgid "Show/Hide Tabbar"
 msgstr "Näytä tai piilota välilehtipalkki"
 
+#: ../plugins/sessionsaver/dialogs.py:165
+msgid "Session Name"
+msgstr "Istunnon nimi"
+
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+msgid "Save and restore your working sessions"
+msgstr "Tallenna istunto ja palaa tallennettuun istuntoon"
+
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr "Istunnon tallannus"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Session name:"
+msgstr "Istunnon nimi:"
+
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Unohda, että et käytä sarkaimia."
@@ -147,9 +185,13 @@ msgstr "Upota pääteikkuna alapaneeliin."
 msgid "Embedded Terminal"
 msgstr "Upotettu pääteikkuna"
 
-#: ../plugins/terminal/terminal.py:173
+#: ../plugins/terminal/terminal.py:206
 msgid "Terminal"
 msgstr "Pääteikkuna"
+
+#: ../plugins/terminal/terminal.py:227
+msgid "C_hange Directory"
+msgstr "Vai_hda kansiota"
 
 #~ msgid "Execute"
 #~ msgstr "Suorita"
@@ -793,9 +835,6 @@ msgstr "Pääteikkuna"
 
 #~ msgid "_Show results in Output Window"
 #~ msgstr "_Näytä tulokset tulosteikkunassa"
-
-#~ msgid "_Working directory:"
-#~ msgstr "_Työhakemisto:"
 
 #~ msgid "gedit: Shell Output plugin"
 #~ msgstr "gedit: Komentotulkkituloste liitännäinen"
@@ -1475,9 +1514,6 @@ msgstr "Pääteikkuna"
 
 #~ msgid "The title of the selection dialog box"
 #~ msgstr "Valintaikkunan otsikko"
-
-#~ msgid "Font name"
-#~ msgstr "Kirjasimen nimi"
 
 #~ msgid "Name of the selected font"
 #~ msgstr "Valitun kirjasimen nimi"
