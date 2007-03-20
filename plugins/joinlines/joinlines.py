@@ -32,13 +32,11 @@
 #   by a whitespace-only line with a space.
 
 import gedit, gtk
+import gettext
 
 try:
     from gpdefs import *
-    import gettext, locale
     gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-    gtk.glade.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-    locale.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
     _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s)
 except:
     _ = lambda s: s

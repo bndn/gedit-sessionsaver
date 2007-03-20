@@ -25,15 +25,14 @@ import gtk.glade
 import gedit
 import gconf
 import os
+import gettext
 from math import pi
 
 try:
     from gpdefs import *
-    import gettext, locale
     gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
     gtk.glade.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
     gtk.glade.textdomain(GETTEXT_PACKAGE)
-    locale.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
     _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s)
 except:
     _ = lambda s: s
