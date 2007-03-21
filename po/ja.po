@@ -1,4 +1,4 @@
-# gedit ja.po
+# gedit-plugins ja.po.
 # Copyright (C) 1999,2000,2002,2003,2006,2007 Free Software Foundation, Inc.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999
 # Yuusuke Tahara <tahara@gnome.gr.jp>
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-22 09:08+0900\n"
-"PO-Revision-Date: 2007-02-22 09:08+0900\n"
+"POT-Creation-Date: 2007-03-21 19:04+0900\n"
+"PO-Revision-Date: 2007-03-21 19:03+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -44,19 +44,19 @@ msgstr "コードのコメント"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "選択した範囲をコメントアウトしたり解除します。"
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
 msgstr "コメント・アウト(_M)"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
 msgstr "選択範囲をコメントにします"
 
-#: ../plugins/codecomment/codecomment.py:252
+#: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
 msgstr "コメント・アウトの解除(_N)"
 
-#: ../plugins/codecomment/codecomment.py:254
+#: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
 msgstr "選択範囲のコメント・アウトを解除します"
 
@@ -69,22 +69,43 @@ msgstr "色の取得"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "ダイアログから色を取得して 16進形式の文字列を挿入していきます。"
 
-#: ../plugins/colorpicker/colorpicker.py:70
+#: ../plugins/colorpicker/colorpicker.py:73
 msgid "_Color picker"
 msgstr "色の取得(_C)"
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "ダイアログから色を取得します"
 
-#: ../plugins/colorpicker/colorpicker.py:217
+#: ../plugins/colorpicker/colorpicker.py:220
 msgid "Color picker"
 msgstr "色の取得"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:228
 msgid "_Insert"
 msgstr "挿入する(_I)"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "空白文字の表示"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "空白やタブ文字を描画します。"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw spaces"
+msgstr "空白文字を表示する"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw tabs"
+msgstr "タブ文字を表示する"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Drawing color:"
+msgstr "文字の色:"
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "複数の行と結合したり一行を分割したりします。"
@@ -93,19 +114,19 @@ msgstr "複数の行と結合したり一行を分割したりします。"
 msgid "Join/Split Lines"
 msgstr "行の結合・分割"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:68
 msgid "_Join Lines"
 msgstr "行の連結(_J)"
 
-#: ../plugins/joinlines/joinlines.py:61
+#: ../plugins/joinlines/joinlines.py:69
 msgid "Join the selected lines"
 msgstr "選択した行と次の行を連結します"
 
-#: ../plugins/joinlines/joinlines.py:63
+#: ../plugins/joinlines/joinlines.py:71
 msgid "_Split Lines"
 msgstr "行の分割(_S)"
 
-#: ../plugins/joinlines/joinlines.py:64
+#: ../plugins/joinlines/joinlines.py:72
 msgid "Split the selected lines"
 msgstr "選択した行を分割します"
 
@@ -133,7 +154,7 @@ msgstr "タブバーの表示切り替えエントリをメニューに追加し
 msgid "Show/Hide Tabbar"
 msgstr "タブバーの表示/非表示"
 
-#: ../plugins/sessionsaver/dialogs.py:162
+#: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "セッション名"
 
@@ -149,26 +170,6 @@ msgstr "セッションの保存"
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
 msgid "Session name:"
 msgstr "セッション名:"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
-msgid "gtk-close"
-msgstr "gtk-close"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:4
-msgid "gtk-delete"
-msgstr "gtk-delete"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:5
-msgid "gtk-open"
-msgstr "gtk-open"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:6
-msgid "gtk-save"
-msgstr "gtk-save"
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
@@ -186,10 +187,10 @@ msgstr "ボトム・ペインに端末を埋め込みます。"
 msgid "Embedded Terminal"
 msgstr "埋め込み式の端末"
 
-#: ../plugins/terminal/terminal.py:203
+#: ../plugins/terminal/terminal.py:206
 msgid "Terminal"
 msgstr "端末"
 
-#: ../plugins/terminal/terminal.py:224
+#: ../plugins/terminal/terminal.py:227
 msgid "C_hange Directory"
 msgstr "フォルダの変更(_H)"
