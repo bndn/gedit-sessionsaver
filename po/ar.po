@@ -2,30 +2,29 @@
 # Isam Bayazidi <bayazidi@arabeyes.org>, 2002.#. Translator credits.
 # Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
 # Arafat Medini <lumina@silverpen.de>, 2002.
-# Khaled Hosny <khaledhosny@eglug.org>, 2006.
-# Copyright (C) 2002, 2006 Free Software Foundation, Inc.
+# Khaled Hosny <khaledhosny@eglug.org>, 2006, 2007.
+# Copyright (C) 2002, 2006, 2007 Free Software Foundation, Inc.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.HEAD.ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-17 21:15+0000\n"
-"PO-Revision-Date: 2006-10-27 23:16+0200\n"
-"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
-"Language-Team: Arabic <support@arabeyes.org>\n"
+"POT-Creation-Date: 2007-04-06 11:26+0100\n"
+"PO-Revision-Date: 2007-04-06 11:27+0100\n"
+"Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
-"Plural-Forms: Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && "
-"n<=10 ? 2 : 3\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : 3\n"
 
 #: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
 msgid "Automatically adds closing brackets."
-msgstr ""
+msgstr "يغلق الأقواس آليا."
 
 #: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
 msgid "Bracket Completion"
-msgstr ""
+msgstr "إكمال الأقواس"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:255
@@ -34,33 +33,31 @@ msgstr "خريطة المحارف"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
 msgid "Insert special characters just by clicking on them."
-msgstr "ادرج المحارف الخاصة بمجرد النقر عليهم."
+msgstr "ادرج محارف خاصة بمجرد النقر عليهم."
 
 #: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
 msgid "Code comment"
-msgstr ""
+msgstr "تعليقات الشفرة"
 
 #: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
 msgid "Comment out or uncomment a selected block of code."
-msgstr ""
+msgstr "ضع أو احذف علامة التعليق من على جزء منتقى من الشفرة."
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
-msgstr ""
+msgstr "ا_جعل الشفرة تعليقا"
 
-#: ../plugins/codecomment/codecomment.py:248
-#, fuzzy
+#: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
-msgstr "صِل الخطوط المنتقاة"
+msgstr "ضع علامة التعليق على الشفرة المنتقاة"
 
-#: ../plugins/codecomment/codecomment.py:252
+#: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
-msgstr ""
+msgstr "أزل ال_تعليق"
 
-#: ../plugins/codecomment/codecomment.py:254
-#, fuzzy
+#: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
-msgstr "صِل الخطوط المنتقاة"
+msgstr "أزل علامة التعليق من الشفرة المنتقاة"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
@@ -71,46 +68,66 @@ msgstr "مُنْتَقِى اللون"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "التقط لون من صندوق حوار وادرج تمثيله الست عشري."
 
-#: ../plugins/colorpicker/colorpicker.py:70
+#: ../plugins/colorpicker/colorpicker.py:73
 msgid "_Color picker"
 msgstr "مُنْتَقِى ال_لون"
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "التقط لون من صندوق حوار"
 
-#: ../plugins/colorpicker/colorpicker.py:217
+#: ../plugins/colorpicker/colorpicker.py:220
 msgid "Color picker"
 msgstr "مُنْتَقِى اللون"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:228
 msgid "_Insert"
 msgstr "أ_درج"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "ارسم الفراغات"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "ارسم الفراغات"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw spaces"
+msgstr "ارسم الفراغات"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw tabs"
+msgstr "ارسم الفراغات \t"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Drawing color:"
+msgstr "لون الرسم:"
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
-msgstr ""
+msgstr "صِل أكثر من سطر أو افصل السطور الطويلة"
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
-#, fuzzy
 msgid "Join/Split Lines"
-msgstr "ا_قسم الخطوط"
+msgstr "صل/افصل السطور"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:68
 msgid "_Join Lines"
-msgstr "_صِل الخطوط"
+msgstr "_صِل السطور"
 
-#: ../plugins/joinlines/joinlines.py:61
+#: ../plugins/joinlines/joinlines.py:69
 msgid "Join the selected lines"
-msgstr "صِل الخطوط المنتقاة"
+msgstr "صِل السطور المنتقاة"
 
-#: ../plugins/joinlines/joinlines.py:63
+#: ../plugins/joinlines/joinlines.py:71
 msgid "_Split Lines"
-msgstr "ا_قسم الخطوط"
+msgstr "ا_فصل السطور"
 
-#: ../plugins/joinlines/joinlines.py:64
+#: ../plugins/joinlines/joinlines.py:72
 msgid "Split the selected lines"
-msgstr "اقسم الخطوط المنتقاة"
+msgstr "افصل الخطوط المنتقاة"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
 msgid "Tab_bar"
@@ -136,9 +153,26 @@ msgstr "أضف مُدْخلة قائمة لعرض/اخفاء شريط التبو
 msgid "Show/Hide Tabbar"
 msgstr "اظهر/اخفي شريط التبويب"
 
+#: ../plugins/sessionsaver/dialogs.py:165
+msgid "Session Name"
+msgstr "اسم الجلسة"
+
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+msgid "Save and restore your working sessions"
+msgstr "احفظ واستعد جلسات عملك"
+
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr "حافظ الجلسات"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Session name:"
+msgstr "اسم الجلسة:"
+
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
-msgstr "انسي انك لا تستخدم التبويب"
+msgstr "انسي انك لا تستخدم التبويب."
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
 msgid "Smart Spaces"
@@ -146,13 +180,28 @@ msgstr "مسافاة ذكية"
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
 msgid "Embed a terminal in the bottom pane."
-msgstr "اغرس طرفية في الشريط السفلي"
+msgstr "اغرس طرفية في الشريط السفلي."
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
 msgid "Embedded Terminal"
 msgstr "اغرس طرفية"
 
-#: ../plugins/terminal/terminal.py:173
-#, fuzzy
+#: ../plugins/terminal/terminal.py:206
 msgid "Terminal"
-msgstr "اغرس طرفية"
+msgstr "طرفية"
+
+#: ../plugins/terminal/terminal.py:227
+msgid "C_hange Directory"
+msgstr "_غير المجلد"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+#~ msgid "gtk-close"
+#~ msgstr "gtk-close"
+#~ msgid "gtk-delete"
+#~ msgstr "gtk-delete"
+#~ msgid "gtk-open"
+#~ msgstr "gtk-open"
+#~ msgid "gtk-save"
+#~ msgstr "gtk-save"
+
