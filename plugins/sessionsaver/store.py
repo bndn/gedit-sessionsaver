@@ -121,7 +121,7 @@ class XMLSessionStore(SessionStore):
     def save(self):
         dirname = os.path.dirname(self.filename)
         if not os.path.isdir(dirname):
-            os.path.makedirs(dirname)
+            os.makedirs(dirname)
 
         fp = file(self.filename, "wb")
         fp.write('<?xml version="1.0" encoding="UTF-8"?>\n')
