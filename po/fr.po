@@ -1,18 +1,19 @@
-# French translation of gedit.
+# French translation of gedit-plugin.
 # Copyright (C) 1998-2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gedit-plugins-package.
 #
 # Christophe Merlet <redfox@redfoxcenter.org>, 2000-2006.
 # Jonathan Ernst <jonathan@ernstfamily.ch>, 2006.
 # Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.
+# Robert-André Mauchin <zebob.m@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit 2.16.0\n"
+"Project-Id-Version: gedit-plugins 2.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-05 01:29+0100\n"
-"PO-Revision-Date: 2007-03-05 23:12+0100\n"
-"Last-Translator: Stéphane Raimbault <stephane.raimbault@gmail.com>\n"
+"POT-Creation-Date: 2007-04-22 08:55+0200\n"
+"PO-Revision-Date: 2007-04-21 13:51+0200\n"
+"Last-Translator: Robert-André Mauchin <zebob.m@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,19 +44,19 @@ msgstr "Commentateur de code"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Commente ou décommente un bloc de code sélectionnée."
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
 msgstr "_Commenter le code"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
 msgstr "Commente le code sélectionné"
 
-#: ../plugins/codecomment/codecomment.py:252
+#: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
 msgstr "_Décommenter le code"
 
-#: ../plugins/codecomment/codecomment.py:254
+#: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
 msgstr "Décommente le code sélectionné"
 
@@ -70,43 +71,64 @@ msgstr ""
 "Pioche une couleur dans une boîte de dialogue et l'insère sous sa forme "
 "hexadécimale."
 
-#: ../plugins/colorpicker/colorpicker.py:70
+#: ../plugins/colorpicker/colorpicker.py:73
 msgid "_Color picker"
 msgstr "_Sélecteur de couleurs"
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "Pioche une couleur depuis une boîte de dialogue"
 
-#: ../plugins/colorpicker/colorpicker.py:217
+#: ../plugins/colorpicker/colorpicker.py:220
 msgid "Color picker"
 msgstr "Sélecteur de couleurs"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:228
 msgid "_Insert"
 msgstr "_Insérer"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "Indicateur d'espaces"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "Indique les espaces et les tabulations"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw spaces"
+msgstr "Indiquer les espaces"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw tabs"
+msgstr "Indiquer les tabulations"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Drawing color:"
+msgstr "Couleur des indicateurs :"
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
-msgstr "Joins plusieurs lignes ou sépare les longues lignes"
+msgstr "Joint plusieurs lignes ou sépare les longues lignes"
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
 msgid "Join/Split Lines"
 msgstr "Joindre/couper les lignes"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:68
 msgid "_Join Lines"
 msgstr "_Joindre des lignes"
 
-#: ../plugins/joinlines/joinlines.py:61
+#: ../plugins/joinlines/joinlines.py:69
 msgid "Join the selected lines"
-msgstr "Joins les lignes sélectionnées"
+msgstr "Joint les lignes sélectionnées"
 
-#: ../plugins/joinlines/joinlines.py:63
+#: ../plugins/joinlines/joinlines.py:71
 msgid "_Split Lines"
 msgstr "_Couper des lignes"
 
-#: ../plugins/joinlines/joinlines.py:64
+#: ../plugins/joinlines/joinlines.py:72
 msgid "Split the selected lines"
 msgstr "Coupe les lignes sélectionnées"
 
@@ -135,14 +157,14 @@ msgstr "Ajoute une entrée de menus pour afficher/masquer la barre d'onglets."
 msgid "Show/Hide Tabbar"
 msgstr "Afficher/Masquer la barre d'onglets"
 
-#: ../plugins/sessionsaver/dialogs.py:162
+#: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "Nom de session"
 
 #. ex:ts=4:et:
 #: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
 msgid "Save and restore your working sessions"
-msgstr "Sauvegarde et restaure vos sessions de travail"
+msgstr "Enregistre et restaure vos sessions de travail"
 
 #: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
 msgid "Session Saver"
@@ -151,26 +173,6 @@ msgstr "Enregistreur de session"
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
 msgid "Session name:"
 msgstr "Nom de session :"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
-msgid "gtk-cancel"
-msgstr "Annuler"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
-msgid "gtk-close"
-msgstr "Fermer"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:4
-msgid "gtk-delete"
-msgstr "Supprimer"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:5
-msgid "gtk-open"
-msgstr "Ouvrir"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:6
-msgid "gtk-save"
-msgstr "Enregistrer"
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
@@ -188,10 +190,25 @@ msgstr "Intègre un terminal dans le panneau du bas."
 msgid "Embedded Terminal"
 msgstr "Terminal intégré"
 
-#: ../plugins/terminal/terminal.py:203
+#: ../plugins/terminal/terminal.py:206
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:224
+#: ../plugins/terminal/terminal.py:227
 msgid "C_hange Directory"
 msgstr "C_hanger de répertoire"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "Annuler"
+
+#~ msgid "gtk-close"
+#~ msgstr "Fermer"
+
+#~ msgid "gtk-delete"
+#~ msgstr "Supprimer"
+
+#~ msgid "gtk-open"
+#~ msgstr "Ouvrir"
+
+#~ msgid "gtk-save"
+#~ msgstr "Enregistrer"
