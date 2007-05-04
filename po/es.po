@@ -1,7 +1,8 @@
 # translation of es.po to Spanish
 # translation of gedit-plugins.HEAD.es.po to Spanish
 # Gedit's Spanish translation
-# Copyright © 1999-2002 Free Software Foundation, Inc.
+# Copyright © 1999-2002, 2007 Free Software Foundation, Inc.
+#
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch>, 1999-2000.
 # Carlos Perelló Marín <carlos@gnome-db.org>, 2000-2001.
 # Chema Celorio <chema@celorio.com>, 2000.
@@ -9,19 +10,19 @@
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com>,2002.
 # Francisco Javier F. Serrador <serrador@arrakis.es>, 2003.
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2006.
-#
+# Jorge González <jorgegonz@svn.gnome.org>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: es\n"
+"Project-Id-Version: gedit-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-08 20:37+0100\n"
-"PO-Revision-Date: 2006-12-08 20:37+0100\n"
-"Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
+"POT-Creation-Date: 2007-03-17 03:23+0000\n"
+"PO-Revision-Date: 2007-05-04 02:04+0200\n"
+"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
@@ -49,19 +50,19 @@ msgstr "Comentar código"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Comentar o descomentar un bloque de código seleccionado."
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
 msgstr "Co_mentar código"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
 msgstr "Comentar el código selecionado"
 
-#: ../plugins/codecomment/codecomment.py:252
+#: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
 msgstr "_Descomentar el código"
 
-#: ../plugins/codecomment/codecomment.py:254
+#: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
 msgstr "Descomentar el código seleccionado"
 
@@ -74,22 +75,43 @@ msgstr "Selector de color"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Escoja un color del diálogo e inserte su notación hexadecimal."
 
-#: ../plugins/colorpicker/colorpicker.py:70
+#: ../plugins/colorpicker/colorpicker.py:73
 msgid "_Color picker"
 msgstr "Selector de _color"
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "Escoja un color de un diálogo"
 
-#: ../plugins/colorpicker/colorpicker.py:217
+#: ../plugins/colorpicker/colorpicker.py:220
 msgid "Color picker"
 msgstr "Selector de color"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:228
 msgid "_Insert"
 msgstr "_Insertar"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr ""
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr ""
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw spaces"
+msgstr ""
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw tabs"
+msgstr ""
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Drawing color:"
+msgstr ""
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Unir varias líneas o dividir líneas largas"
@@ -128,8 +150,7 @@ msgstr "La barra de solapas es visible"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
 msgid "Whether the tabbar should be visible in editing windows."
-msgstr ""
-"Indica si la barra de solapas debe ser visible en las ventanas de edición"
+msgstr "Indica si la barra de solapas debe ser visible en las ventanas de edición"
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
@@ -138,6 +159,23 @@ msgstr "Añade una entrada en el menú para mostrar/ocultar la barra de solapas.
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Mostrar/Ocultar barra de solapas"
+
+#: ../plugins/sessionsaver/dialogs.py:165
+msgid "Session Name"
+msgstr "Nombre de la sesión"
+
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+msgid "Save and restore your working sessions"
+msgstr "Guarde y restablezca sus sesiones de trabajo"
+
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Session name:"
+msgstr "Nombre de la sesión:"
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
@@ -155,10 +193,11 @@ msgstr "Empotre un terminal en el panel inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal empotrado"
 
-#: ../plugins/terminal/terminal.py:203
+#: ../plugins/terminal/terminal.py:206
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:224
+#: ../plugins/terminal/terminal.py:227
 msgid "C_hange Directory"
 msgstr "_Cambiar de directorio"
+
