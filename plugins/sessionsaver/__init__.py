@@ -119,7 +119,7 @@ class SessionSaverWindowHelper(object):
         pass
 
     def deactivate(self):
-        manager = self._window.get_ui_manager()
+        manager = self.window.get_ui_manager()
         manager.remove_ui(self._menu_ui_id)
         manager.remove_action_group(self._menu_action_group)
         self.remove_session_menu()

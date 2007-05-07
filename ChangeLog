@@ -1,3 +1,9 @@
+2007-05-06  Loïc Minier  <lool@dooz.org>
+
+	* plugins/sessionsaver/__init__.py:
+	Fix typo causing a Python stack trace on deactivation of the plugin;
+	thanks Vincent Untz. Fixes #436371.
+
 2007-04-07  Paolo Borelli  <pborelli@katamail.com>
 
 	* plugins/sessionsaver/store.py:
