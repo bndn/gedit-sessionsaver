@@ -41,7 +41,7 @@ GCONF_KEY_BASE = '/apps/gedit-2/plugins/drawspaces'
 GCONF_KEY_COLOR = '/apps/gedit-2/plugins/drawspaces/color'
 GCONF_KEY_DRAW_TABS = '/apps/gedit-2/plugins/drawspaces/draw_tabs'
 GCONF_KEY_DRAW_SPACES = '/apps/gedit-2/plugins/drawspaces/draw_spaces'
-
+GCONF_KEY_DRAW_NBSP = '/apps/gedit-2/plugins/drawspaces/draw_nbsp'
 
 class DrawSpacesViewHelper(object):
     def __init__(self, plugin, view):
@@ -77,6 +77,22 @@ class DrawSpacesViewHelper(object):
         cr.arc(x, y, 0.8, 0, 2 * pi)
         cr.restore()
 
+    def draw_nbsp_at_iter(self, cr, iter):
+        if not self._plugin._draw_nbsp:
+            return
+
+        rect = self._view.get_iter_location(iter)
+        x, y = self._view.buffer_to_window_coords(gtk.TEXT_WINDOW_TEXT,
+                                                  rect.x,
+                                                  rect.y + rect.height / 2)
+
+        cr.save()
+        cr.move_to(x + 2, y - 2)
+        cr.rel_line_to(+7,0)
+        cr.rel_line_to(-3.5,+6.06)
+        cr.rel_line_to(-3.5,-6.06)
+        cr.restore()
+
     def draw_tab_at_iter(self, cr, iter):
         if not self._plugin._draw_tabs:
             return
@@ -102,8 +118,10 @@ class DrawSpacesViewHelper(object):
             c = iter.get_char()
             if c == '\t':
                 self.draw_tab_at_iter(cr, iter)
-            elif c == ' ':
+            elif c == '\040':
                 self.draw_space_at_iter(cr, iter)
+            elif c == '\302\240':
+                self.draw_nbsp_at_iter(cr, iter)
             if not iter.forward_char():
                 break
         cr.stroke()
@@ -121,12 +139,14 @@ class DrawSpacesConfigDialog(object):
         self.dialog = self.ui.get_widget('config-dialog')
 
         self['draw-spaces'].set_active(plugin._draw_spaces)
+        self['draw-nbsp'].set_active(plugin._draw_nbsp)
         self['draw-tabs'].set_active(plugin._draw_tabs)
         self['color'].set_color(plugin._color)
 
         handlers = {
             'on_color_color_set': self.on_color_color_set,
             'on_draw_spaces_toggled': self.on_draw_spaces_toggled,
+            'on_draw_nbsp_toggled': self.on_draw_nbsp_toggled,
             'on_draw_tabs_toggled': self.on_draw_tabs_toggled
         }
         self.ui.signal_autoconnect(handlers)
@@ -151,6 +171,10 @@ class DrawSpacesConfigDialog(object):
         value = checkbox.get_active()
         gconf_set_bool(GCONF_KEY_DRAW_SPACES, value)
 
+    def on_draw_nbsp_toggled(self, checkbox):
+        value = checkbox.get_active()
+        gconf_set_bool(GCONF_KEY_DRAW_NBSP, value)
+
     def on_draw_tabs_toggled(self, checkbox):
         value = checkbox.get_active()
         gconf_set_bool(GCONF_KEY_DRAW_TABS, value)
@@ -167,6 +191,7 @@ class DrawSpacesPlugin(gedit.Plugin):
         self._color = gtk.gdk.color_parse(gconf_get_str(GCONF_KEY_COLOR, '#CCCCCC'))
         self._draw_tabs = gconf_get_bool(GCONF_KEY_DRAW_TABS, True)
         self._draw_spaces = gconf_get_bool(GCONF_KEY_DRAW_SPACES, True)
+        self._draw_nbsp = gconf_get_bool(GCONF_KEY_DRAW_NBSP, True)
         gconf.client_get_default().notify_add(GCONF_KEY_BASE, self.on_gconf_notify)
 
     def on_gconf_notify(self, client, id, entry, data):
@@ -177,6 +202,8 @@ class DrawSpacesPlugin(gedit.Plugin):
             self._draw_tabs = entry.get_value().get_bool()
         elif key == GCONF_KEY_DRAW_SPACES:
             self._draw_spaces = entry.get_value().get_bool()
+        elif key == GCONF_KEY_DRAW_NBSP:
+            self._draw_nbsp = entry.get_value().get_bool()
 
         # redraw as needed
         for window in gedit.app_get_default().get_windows():
