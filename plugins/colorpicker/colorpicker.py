@@ -67,13 +67,13 @@ class ColorPickerPluginInstance:
 		
 	def insert_menu(self):
 		manager = self._window.get_ui_manager()
-		
+
 		self._action_group = gtk.ActionGroup("GeditColorPickerPluginActions")
 		self._action_group.add_actions( \
-				[("ColorPicker", None, _("_Color picker"), None, \
+				[("ColorPicker", None, _("Pick _Color..."), None, \
 				_("Pick a color from a dialog"), \
 				lambda a: self._plugin.on_color_picker_activate(self._window))])
-		
+
 		manager.insert_action_group(self._action_group, -1)
 		self._ui_id = manager.add_ui_from_string(ui_str)
 
@@ -217,22 +217,20 @@ class ColorPickerPlugin(gedit.Plugin):
 	
 	def on_color_picker_activate(self, window):
 		if not self._dialog:
-			self._dialog = gtk.ColorSelectionDialog(_('Color picker'))
-			
-			self._dialog.set_has_separator(False)
+			self._dialog = gtk.ColorSelectionDialog(_('Pick Color'))
 			self._dialog.colorsel.set_has_palette(True)
-			
+
 			image = gtk.Image()
 			image.set_from_stock(gtk.STOCK_SELECT_COLOR, gtk.ICON_SIZE_BUTTON)
-			
+
 			self._dialog.ok_button.set_label(_('_Insert'))
 			self._dialog.ok_button.set_image(image)
-						
+
 			self._dialog.cancel_button.set_use_stock(True)
 			self._dialog.cancel_button.set_label(gtk.STOCK_CLOSE)
-			
+
 			self._dialog.connect('response', self.on_dialog_response)
-		
+
 		color = self.get_current_color()
 		
 		if color:
