@@ -4,6 +4,7 @@
 #
 #  Copyright (C) 2005-2006 Igalia
 #  Copyright (C) 2006 Matthew Dugan
+#  Copyrignt (C) 2007 Steve Frécinaux
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -32,57 +33,15 @@ try:
 except:
     _ = lambda s: s
 
-# Most common types of comments (store them only once)
-ccomment    = ('/* ', ' */')
-cppcomment  = ('// ', None)
-adacomment  = ('-- ', None)
-xmlcomment  = ('<!-- ', ' -->')
-shcomment   = ('# ', None)
-texcomment  = ('% ', None)
-pascomment  = ('(* ', ' *)')
-lispcomment = ('; ', None)
-
-tags_dict = { '@46@desktop'     : shcomment,
-              '@46@ini'         : lispcomment,
-              'Ada'             : adacomment,
-              'Boo'             : shcomment,
-              'C'               : ccomment,
-              'C@35@'           : cppcomment,
-              'C@43@@43@'       : cppcomment,
-              'CSS'             : ccomment,
-              'D'               : cppcomment,
-              'Fortran@32@95'   : ('! ', None),
-              'GtkRC'           : shcomment,
-              'HTML'            : xmlcomment,
-              'Haskell'         : adacomment,
-              'IDL'             : cppcomment,
-              'Java'            : cppcomment,
-              'JavaScript'      : cppcomment,
-              'LaTeX'           : texcomment,
-              'Lua'             : adacomment,
-              'MSIL'            : cppcomment,
-              'Makefile'        : shcomment,
-              'Nemerle'         : cppcomment,
-              'Objective@32@Caml': pascomment,
-              'Octave'          : texcomment,
-              'PHP'             : shcomment,
-              'Pascal'          : pascomment,
-              'Perl'            : shcomment,
-              'Python'          : shcomment,
-              'R'               : shcomment,
-              'Ruby'            : shcomment,
-              'SQL'             : adacomment,
-              'Scheme'          : lispcomment,
-              'Tcl'             : shcomment,
-              'VB@46@NET'       : ("' ", None),
-              'VHDL'            : adacomment,
-              'Verilog'         : cppcomment,
-              'XML'             : xmlcomment,
-              'gettext@32@translation': shcomment,
-              'sh'              : shcomment
-            }
-
-
+def get_comment_tags(lang):
+    start_tag = lang.get_metadata('line-comment-start')
+    if start_tag:
+        return (start_tag, None)
+    start_tag = lang.get_metadata('block-comment-start')
+    end_tag = lang.get_metadata('block-comment-end')
+    if start_tag and end_tag:
+        return (start_tag, end_tag)
+    return (None, None)
 
 def forward_tag(iter, tag):
     iter.forward_chars(len(tag))
@@ -195,26 +154,28 @@ def do_comment(document, unindent=False):
     if lang is None:
         return
 
-    lang_id = lang.get_id()
-    if tags_dict.has_key(lang_id):
-        (start_tag, end_tag) = tags_dict[lang_id]
-        if unindent:       # Select the comment or the uncomment method
-            new_code = remove_comment_characters(document,
-                                                 start_tag,
-                                                 end_tag,
-                                                 start,
-                                                 end)
-        else:
-            new_code = add_comment_characters(document,
-                                              start_tag,
-                                              end_tag,
-                                              start,
-                                              end)
+    (start_tag, end_tag) = get_comment_tags(lang)
 
-        if deselect:
-            oldPosIter = document.get_iter_at_mark(currentPosMark)
-            document.select_range(oldPosIter,oldPosIter)
-            document.place_cursor(oldPosIter)
+    if not start_tag and not end_tag:
+        return
+
+    if unindent:       # Select the comment or the uncomment method
+        new_code = remove_comment_characters(document,
+                                             start_tag,
+                                             end_tag,
+                                             start,
+                                             end)
+    else:
+        new_code = add_comment_characters(document,
+                                          start_tag,
+                                          end_tag,
+                                          start,
+                                          end)
+
+    if deselect:
+        oldPosIter = document.get_iter_at_mark(currentPosMark)
+        document.select_range(oldPosIter,oldPosIter)
+        document.place_cursor(oldPosIter)
 
 ui_str = """
 <ui>
@@ -272,7 +233,8 @@ class CodeCommentWindowHelper(object):
         if doc:
             lang = doc.get_language()
             if lang is not None:
-                self._action_group.set_sensitive(tags_dict.has_key(lang.get_id()))
+                sensitive = get_comment_tags(lang) != (None, None)
+                self._action_group.set_sensitive(sensitive)
                 return
         self._action_group.set_sensitive(False)
 
