@@ -82,7 +82,7 @@ class SmartSpacesViewHelper(object):
             return True
         
         # Otherwise, check how many spaces we're able to remove
-        max_move = (offset - 1) % view.get_tabs_width() + 1
+        max_move = (offset - 1) % view.get_tab_width() + 1
         moved = 0
         while moved < max_move and start.get_char() == ' ':
             start.backward_char()
