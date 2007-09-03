@@ -3,7 +3,7 @@
 GEDIT_MAJOR=2.16.0
 GEDIT_PLUGINS_MAJOR=2.18.0
 
-AC_INIT(gedit-plugins, 2.18.0, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
+AC_INIT(gedit-plugins, 2.19.90, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
 
 AC_CONFIG_SRCDIR([plugins])
 AC_CONFIG_MACRO_DIR([m4])
