@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins head\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-06-06 22:40+0200\n"
-"PO-Revision-Date: 2007-06-03 15:07+0200\n"
+"POT-Creation-Date: 2007-09-04 22:14+0200\n"
+"PO-Revision-Date: 2007-09-03 22:37+0200\n"
 "Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -41,19 +41,19 @@ msgstr "Commento codice"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Commenta o toglie il commento a un blocco di codice."
 
-#: ../plugins/codecomment/codecomment.py:249
+#: ../plugins/codecomment/codecomment.py:210
 msgid "Co_mment Code"
 msgstr "Commenta co_dice"
 
-#: ../plugins/codecomment/codecomment.py:251
+#: ../plugins/codecomment/codecomment.py:212
 msgid "Comment the selected code"
 msgstr "Commenta il codice selezionato"
 
-#: ../plugins/codecomment/codecomment.py:255
+#: ../plugins/codecomment/codecomment.py:216
 msgid "U_ncomment Code"
 msgstr "To_gli commento"
 
-#: ../plugins/codecomment/codecomment.py:257
+#: ../plugins/codecomment/codecomment.py:218
 msgid "Uncomment the selected code"
 msgstr "Toglie il commento al codice selezionato"
 
@@ -66,10 +66,9 @@ msgstr "Selettore colore"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Sceglie un colore e inserisce il suo valore esadecimale."
 
-# (Ndt) voce di menù
 #: ../plugins/colorpicker/colorpicker.py:73
-msgid "_Color picker"
-msgstr "Sce_gli colore"
+msgid "Pick _Color..."
+msgstr "Scegli _colore..."
 
 # (NdT) questo è un tooltip... però il colore siamo noi a sceglierlo...
 #: ../plugins/colorpicker/colorpicker.py:74
@@ -77,10 +76,10 @@ msgid "Pick a color from a dialog"
 msgstr "Scegli un colore da una finestra di dialogo"
 
 #: ../plugins/colorpicker/colorpicker.py:220
-msgid "Color picker"
-msgstr "Selettore colore"
+msgid "Pick Color"
+msgstr "Scegli colore"
 
-#: ../plugins/colorpicker/colorpicker.py:228
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "_Inserisci"
 
@@ -94,15 +93,20 @@ msgstr "Traccia gli spazi e le tabulazioni"
 
 # (NdT) opzione
 #: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "Tracciare spazi non terminanti"
+
+# (NdT) opzione
+#: ../plugins/drawspaces/drawspaces.glade.h:2
 msgid "Draw spaces"
 msgstr "Tracciare spazi"
 
 # (NdT) opzione
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.glade.h:3
 msgid "Draw tabs"
 msgstr "Tracciare tabulazioni"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.glade.h:4
 msgid "Drawing color:"
 msgstr "Colore della traccia:"
 
@@ -200,3 +204,10 @@ msgstr "Terminale"
 #: ../plugins/terminal/terminal.py:227
 msgid "C_hange Directory"
 msgstr "Cam_bia directory"
+
+# (Ndt) voce di menù
+#~ msgid "_Color picker"
+#~ msgstr "Sce_gli colore"
+
+#~ msgid "Color picker"
+#~ msgstr "Selettore colore"
