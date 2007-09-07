@@ -3,14 +3,15 @@
 # Frederic L.W.Meunier <linux@urbi.com.br>, 1999.
 # Evandro Fernandes Giovanini <evandrofg@ig.com.br>, 2004.
 # Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>, 2006-2007.
+# Og Maciel <ogmaciel@gnome.org>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-18 20:58-0300\n"
-"PO-Revision-Date: 2007-03-18 21:47-0300\n"
-"Last-Translator: Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>\n"
+"POT-Creation-Date: 2007-08-17 03:29+0100\n"
+"PO-Revision-Date: 2007-09-03 00:04-0500\n"
+"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,7 +45,7 @@ msgstr "Comente ou descomente um determinado bloco de código."
 
 #: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
-msgstr "Comentar Código"
+msgstr "Co_mentar Código"
 
 #: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
@@ -52,7 +53,7 @@ msgstr "Comenta o código selecionado"
 
 #: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
-msgstr "Descomentar Código"
+msgstr "Descome_ntar Código"
 
 #: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
@@ -65,23 +66,21 @@ msgstr "Selecionador de cores"
 
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr ""
-"Escolha uma cor a partir de um diálogo e insira sua representação "
-"hexadecimal."
+msgstr "Escolha uma cor a partir de um diálogo e insira sua representação hexadecimal."
 
 #: ../plugins/colorpicker/colorpicker.py:73
-msgid "_Color picker"
-msgstr "Seletor de _Cor"
+msgid "Pick _Color..."
+msgstr "Escolher _Cor..."
 
 #: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
-msgstr "Selecione uma cor a partir de um diálogo"
+msgstr "Escolha uma cor a partir de um diálogo"
 
 #: ../plugins/colorpicker/colorpicker.py:220
-msgid "Color picker"
-msgstr "Seletor de cor"
+msgid "Pick Color"
+msgstr "Escolher Cor"
 
-#: ../plugins/colorpicker/colorpicker.py:228
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "_Inserir"
 
@@ -94,14 +93,18 @@ msgid "Draw Spaces and Tabs"
 msgstr "Desenha Espaços e Tabulações"
 
 #: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "Desenhar espaços não-quebráveis"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
 msgid "Draw spaces"
 msgstr "Desenhar espaços"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.glade.h:3
 msgid "Draw tabs"
 msgstr "Desenhar tabulações"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.glade.h:4
 msgid "Drawing color:"
 msgstr "Cor do desenho:"
 
@@ -114,19 +117,19 @@ msgstr "Junta várias linhas ou divide linhas longas"
 msgid "Join/Split Lines"
 msgstr "Juntar/Dividir Linhas"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:68
 msgid "_Join Lines"
 msgstr "_Juntar linhas"
 
-#: ../plugins/joinlines/joinlines.py:61
+#: ../plugins/joinlines/joinlines.py:69
 msgid "Join the selected lines"
 msgstr "Junta as linhas selecionadas"
 
-#: ../plugins/joinlines/joinlines.py:63
+#: ../plugins/joinlines/joinlines.py:71
 msgid "_Split Lines"
 msgstr "_Separar linhas"
 
-#: ../plugins/joinlines/joinlines.py:64
+#: ../plugins/joinlines/joinlines.py:72
 msgid "Split the selected lines"
 msgstr "Separa as linhas selecionadas"
 
@@ -195,23 +198,22 @@ msgstr "Terminal"
 msgid "C_hange Directory"
 msgstr "Alterar Diretório"
 
+#~ msgid "_Color picker"
+#~ msgstr "Seletor de _Cor"
+#~ msgid "Color picker"
+#~ msgstr "Seletor de cor"
 #~ msgid "gtk-cancel"
 #~ msgstr "gtk-cancel"
-
 #~ msgid "gtk-close"
 #~ msgstr "gtk-close"
-
 #~ msgid "gtk-delete"
 #~ msgstr "gtk-delete"
-
 #~ msgid "gtk-open"
 #~ msgstr "gtk-open"
-
 #~ msgid "gtk-save"
 #~ msgstr "gtk-save"
-
 #~ msgid "Execute"
 #~ msgstr "Executar"
-
 #~ msgid "Quick Script:"
 #~ msgstr "Script rápido:"
+
