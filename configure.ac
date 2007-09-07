@@ -1,4 +1,4 @@
-# Process this file with autoconf to produce a configure script.
+dnl Process this file with autoconf to produce a configure script.
 
 GEDIT_MAJOR=2.16.0
 GEDIT_PLUGINS_MAJOR=2.18.0
@@ -217,12 +217,14 @@ fi
 
 if test "x$have_python" != "xno"
 then
+	PYGOBJECT_REQUIRED=2.11.5
 	PYGTK_REQUIRED=2.9.7
-	GNOME_PYTHON_DESKTOP_REQUIRED=2.15.90
+	PYGTKSOURCEVIEW_REQUIRED=1.90.4
 
 	PKG_CHECK_MODULES([PYGTK], [
+		pygobject-2.0 >= $PYGOBJECT_REQUIRED
 		pygtk-2.0 >= $PYGTK_REQUIRED
-		gnome-python-desktop-2.0 >= $GNOME_PYTHON_DESKTOP_REQUIRED],
+		pygtksourceview-2.0 >= $PYGTKSOURCEVIEW_REQUIRED],
 		[],[have_python=no])
 
 	AC_SUBST([PYGTK_CFLAGS])
