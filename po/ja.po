@@ -11,10 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-21 19:04+0900\n"
-"PO-Revision-Date: 2007-03-21 19:03+0900\n"
+"POT-Creation-Date: 2007-09-08 20:39+0900\n"
+"PO-Revision-Date: 2007-09-08 18:35+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
-"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,19 +44,19 @@ msgstr "コードのコメント"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "選択した範囲をコメントアウトしたり解除します。"
 
-#: ../plugins/codecomment/codecomment.py:249
+#: ../plugins/codecomment/codecomment.py:210
 msgid "Co_mment Code"
 msgstr "コメント・アウト(_M)"
 
-#: ../plugins/codecomment/codecomment.py:251
+#: ../plugins/codecomment/codecomment.py:212
 msgid "Comment the selected code"
 msgstr "選択範囲をコメントにします"
 
-#: ../plugins/codecomment/codecomment.py:255
+#: ../plugins/codecomment/codecomment.py:216
 msgid "U_ncomment Code"
 msgstr "コメント・アウトの解除(_N)"
 
-#: ../plugins/codecomment/codecomment.py:257
+#: ../plugins/codecomment/codecomment.py:218
 msgid "Uncomment the selected code"
 msgstr "選択範囲のコメント・アウトを解除します"
 
@@ -67,21 +67,21 @@ msgstr "色の取得"
 
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr "ダイアログから色を取得して 16進形式の文字列を挿入していきます。"
+msgstr "色選択ダイアログから色を取得して 16進形式の文字列として挿入します。"
 
 #: ../plugins/colorpicker/colorpicker.py:73
-msgid "_Color picker"
-msgstr "色の取得(_C)"
+msgid "Pick _Color..."
+msgstr "色の取得(_C)..."
 
 #: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
-msgstr "ダイアログから色を取得します"
+msgstr "色選択ダイアログからいろを取得します"
 
 #: ../plugins/colorpicker/colorpicker.py:220
-msgid "Color picker"
+msgid "Pick Color"
 msgstr "色の取得"
 
-#: ../plugins/colorpicker/colorpicker.py:228
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "挿入する(_I)"
 
@@ -94,14 +94,18 @@ msgid "Draw Spaces and Tabs"
 msgstr "空白やタブ文字を描画します。"
 
 #: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "ハードスペース (NBSP) を表示する"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
 msgid "Draw spaces"
 msgstr "空白文字を表示する"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.glade.h:3
 msgid "Draw tabs"
 msgstr "タブ文字を表示する"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.glade.h:4
 msgid "Drawing color:"
 msgstr "文字の色:"
 
