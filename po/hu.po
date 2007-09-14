@@ -4,15 +4,15 @@
 # Szabolcs Ban <shooby@gnome.hu>, 2000.
 # Emese Kovacs <emese@gnome.hu>, 2003.
 # Laszlo Dvornik <dvornikl@mailbox.hu>, 2004.
-# Gabor Kelemen <kelemeng@gnome.hu>, 2006.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2006, 2007.
 # Gabor SUVEG <gabor@suveg.hu>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-23 03:40+0000\n"
-"PO-Revision-Date: 2007-03-04 14:03+0100\n"
-"Last-Translator: Gabor SUVEG <gabor@suveg.hu>\n"
+"POT-Creation-Date: 2007-08-17 03:29+0100\n"
+"PO-Revision-Date: 2007-09-14 09:40+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team:  <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,19 +45,19 @@ msgstr "Kód megjegyzés"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Kijelölt kódblokk megjegyzésbe tétele vagy kivétele onnan."
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
 msgstr "A kó_d megjegyzés"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
 msgstr "A kijelölt kód megjegyzésé tétele"
 
-#: ../plugins/codecomment/codecomment.py:252
+#: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
 msgstr "A kód _nem megjegyzés"
 
-#: ../plugins/codecomment/codecomment.py:254
+#: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
 msgstr "A kijelölt kód kivétele megjegyzésből"
 
@@ -72,22 +72,47 @@ msgstr ""
 "Válasszon egy színt egy párbeszédablakból és szúrja be annak hexadecimális "
 "ábrázolását"
 
-#: ../plugins/colorpicker/colorpicker.py:70
-msgid "_Color picker"
-msgstr "S_zínpipetta"
+#: ../plugins/colorpicker/colorpicker.py:73
+msgid "Pick _Color..."
+msgstr "_Válasszon színt..."
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "Válasszon egy színt egy párbeszédablakból"
 
-#: ../plugins/colorpicker/colorpicker.py:217
-msgid "Color picker"
-msgstr "Színpipetta"
+#: ../plugins/colorpicker/colorpicker.py:220
+msgid "Pick Color"
+msgstr "Válasszon színt"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "_Beszúrás"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "Szóközök rajzolása"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "Szóközök és tabok rajzolása"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "Nem törhető szóközök rajzolása"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw spaces"
+msgstr "Szóközök rajzolása"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Draw tabs"
+msgstr "Tabok rajzolása"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:4
+msgid "Drawing color:"
+msgstr "Rajzszín:"
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Több sor egyesítése vagy hosszúak szétvágása"
@@ -96,19 +121,19 @@ msgstr "Több sor egyesítése vagy hosszúak szétvágása"
 msgid "Join/Split Lines"
 msgstr "Sorok egyesítése/szétvágása"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:68
 msgid "_Join Lines"
 msgstr "Sorok _egyesítése"
 
-#: ../plugins/joinlines/joinlines.py:61
+#: ../plugins/joinlines/joinlines.py:69
 msgid "Join the selected lines"
 msgstr "A kijelölt sorok egyesítése"
 
-#: ../plugins/joinlines/joinlines.py:63
+#: ../plugins/joinlines/joinlines.py:71
 msgid "_Split Lines"
 msgstr "Sorok szét_vágása"
 
-#: ../plugins/joinlines/joinlines.py:64
+#: ../plugins/joinlines/joinlines.py:72
 msgid "Split the selected lines"
 msgstr "A kijelölt sorok szétvágása"
 
@@ -136,7 +161,7 @@ msgstr "Menübejegyzés hozzáadása a lapsáv megjelenítéséhez/elrejtéséhe
 msgid "Show/Hide Tabbar"
 msgstr "Lapsáv megjelenítése/elrejtése"
 
-#: ../plugins/sessionsaver/dialogs.py:162
+#: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "Munkamenet neve"
 
@@ -152,26 +177,6 @@ msgstr "Munkamenetmentő"
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
 msgid "Session name:"
 msgstr "Munkamenetnév:"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
-msgid "gtk-cancel"
-msgstr ""
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
-msgid "gtk-close"
-msgstr ""
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:4
-msgid "gtk-delete"
-msgstr ""
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:5
-msgid "gtk-open"
-msgstr ""
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:6
-msgid "gtk-save"
-msgstr ""
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
@@ -189,11 +194,11 @@ msgstr "Terminál beágyazása az alsó alaktáblába."
 msgid "Embedded Terminal"
 msgstr "Beágyazott terminál"
 
-#: ../plugins/terminal/terminal.py:203
+#: ../plugins/terminal/terminal.py:206
 msgid "Terminal"
 msgstr "Terminál"
 
-#: ../plugins/terminal/terminal.py:224
+#: ../plugins/terminal/terminal.py:227
 msgid "C_hange Directory"
 msgstr "Könyvtár_váltás"
 
