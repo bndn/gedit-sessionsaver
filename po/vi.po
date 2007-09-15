@@ -1,25 +1,25 @@
 # Vietnamese translation for Gedit-Plugins.
-# Copyright © 2006 Gnome i18n Project for Vietnamese.
+# Copyright © 2007 GNOME i18n Project for Vietnamese.
 # Nguyễn Thái Ngọc Duy <pclouds@gmx.net>, 2002.
-# Clytie Siddall <clytie@riverland.net.au>, 2005-2006.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2007.
 # 
 msgid ""
-""
-msgstr "Project-Id-Version: gedit-plugins Gnome HEAD\n"
+msgstr ""
+"Project-Id-Version: gedit-plugins 2.19.90 GNOME TRUNK\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-28 11:12+0200\n"
-"PO-Revision-Date: 2006-08-28 18:55+0930\n"
+"POT-Creation-Date: 2007-08-17 03:29+0100\n"
+"PO-Revision-Date: 2007-09-15 16:11+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: LocFactoryEditor 1.6fc1\n"
+"X-Generator: LocFactoryEditor 1.7b1\n"
 
 #: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
 msgid "Automatically adds closing brackets."
-msgstr "Thêm tự động dấu ngoặc đóng."
+msgstr "Tự động thêm dấu ngoặc đóng."
 
 #: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
 msgid "Bracket Completion"
@@ -42,102 +42,144 @@ msgstr "Ghi chú tắt mã"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Ghi chú tắt hay hủy ghi chú tắt một khối mã đã chọn."
 
-#: ../plugins/codecomment/codecomment.py:240
+#: ../plugins/codecomment/codecomment.py:249
 msgid "Co_mment Code"
 msgstr "Ghi chú _mã"
 
-#: ../plugins/codecomment/codecomment.py:242
+#: ../plugins/codecomment/codecomment.py:251
 msgid "Comment the selected code"
 msgstr "Ghi chú mã đã chọn"
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:255
 msgid "U_ncomment Code"
 msgstr "Hủ_y ghi chú mã"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:257
 msgid "Uncomment the selected code"
 msgstr "Hủy ghi chú mã đã chọn"
 
-#.ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+#. ex:ts=4:et:
 msgid "Color Picker"
 msgstr "Bộ chọn màu"
 
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr "Kén màu từ hộp thoại và chèn đại diện thập lục của nó."
+msgstr "Kén màu trong hộp thoại và chèn đại diện thập lục của nó."
 
-#: ../plugins/colorpicker/colorpicker.py:70
-msgid "_Color picker"
-msgstr "Bộ _chọn màu"
+#: ../plugins/colorpicker/colorpicker.py:73
+msgid "Pick _Color..."
+msgstr "Kén _màu..."
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
-msgstr "Kén màu từ hộp thoại"
+msgstr "Kén màu trong hộp thoại"
 
-#: ../plugins/colorpicker/colorpicker.py:217
-msgid "Color picker"
-msgstr "Bộ chọn màu"
+#: ../plugins/colorpicker/colorpicker.py:220
+msgid "Pick Color"
+msgstr "Kén màu"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
-msgstr "_Chèn"
+msgstr "C_hèn"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "Vẽ dấu cách"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "Vẽ dấu cách và cột Tab"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "Vẽ dấu cách không ngắt"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw spaces"
+msgstr "Vẽ dấu cách"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Draw tabs"
+msgstr "Vẽ cột Tab"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:4
+msgid "Drawing color:"
+msgstr "Màu vẽ:"
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+#. ex:ts=4:et:
 msgid "Join several lines or split long ones"
-msgstr "Nối kết vài dòng, hoặc xẻ dòng dài"
+msgstr "Nối lại vài dòng, hoặc ngắt dòng dài"
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
 msgid "Join/Split Lines"
-msgstr "Nối/Xẻ dòng"
+msgstr "Nối/Ngắt dòng"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:68
 msgid "_Join Lines"
-msgstr "_Nối kết đường"
+msgstr "_Nối dòng"
 
-#: ../plugins/joinlines/joinlines.py:61
+#: ../plugins/joinlines/joinlines.py:69
 msgid "Join the selected lines"
-msgstr "Nối kết những đường đã chọn"
+msgstr "Nối lại những dòng đã chọn"
 
-#: ../plugins/joinlines/joinlines.py:63
+#: ../plugins/joinlines/joinlines.py:71
 msgid "_Split Lines"
-msgstr "Chi_a tách đường"
+msgstr "N_gắt dòng"
 
-#: ../plugins/joinlines/joinlines.py:64
+#: ../plugins/joinlines/joinlines.py:72
 msgid "Split the selected lines"
-msgstr "Chia tách những đường đã chọn"
+msgstr "Ngắt những dòng đã chọn"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
 msgid "Tab_bar"
-msgstr "Thanh ta_b"
+msgstr "Thanh Ta_b"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
 msgid "Show or hide the tabbar in the current window"
-msgstr "Hiện/ẩn thanh tab trong cửa sổ hiện thời"
+msgstr "Hiện/ẩn thanh thẻ trong cửa sổ hiện tại"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
 msgid "Tabbar is Visible"
-msgstr "Thanh tab hiển thị"
+msgstr "Hiện thanh thẻ"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
 msgid "Whether the tabbar should be visible in editing windows."
-msgstr "Thanh tab có nên hiển thị trong cửa sổ hiệu chỉnh hay không."
+msgstr "Thanh thẻ có nên hiển thị trong cửa sổ soạn thảo hay không."
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
-msgstr "Thêm một mục nhập trình đơn để hiện/ẩn thanh tab."
+msgstr "Thêm một mục nhập trình đơn để hiện/ẩn thanh thẻ."
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
 msgid "Show/Hide Tabbar"
-msgstr "Hiện/Ẩn thanh tab"
+msgstr "Hiện/Ẩn thanh thẻ"
+
+#: ../plugins/sessionsaver/dialogs.py:165
+msgid "Session Name"
+msgstr "Tên phiên chạy"
+
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+#. ex:ts=4:et:
+msgid "Save and restore your working sessions"
+msgstr "Lưu rồi phục hồi phiên chạy làm việc"
+
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr "Bộ lưu phiên chạy"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Session name:"
+msgstr "Tên phiên chạy:"
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
-msgstr "Quên bạn không sử dụng dấu cách cột."
+msgstr "Quên bạn không sử dụng cột Tab."
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
 msgid "Smart Spaces"
-msgstr "Dấu cách thông minh"
+msgstr "Dấu cách khéo"
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
 msgid "Embed a terminal in the bottom pane."
@@ -145,4 +187,18 @@ msgstr "Nhúng cửa sổ dòng lệnh trong ô bên dưới."
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
 msgid "Embedded Terminal"
-msgstr "Cửa sổ dòng lệnh nhúng"
+msgstr "Dòng lệnh nhúng"
+
+#: ../plugins/terminal/terminal.py:206
+msgid "Terminal"
+msgstr "Dòng lệnh"
+
+#: ../plugins/terminal/terminal.py:227
+msgid "C_hange Directory"
+msgstr "C_huyển đổi thư mục"
+
+#~ msgid "_Color picker"
+#~ msgstr "Bộ _chọn màu"
+
+#~ msgid "Color picker"
+#~ msgstr "Bộ chọn màu"
