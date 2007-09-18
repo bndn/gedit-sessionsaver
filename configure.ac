@@ -51,7 +51,7 @@ PKG_CHECK_MODULES(GEDIT, [
 	glib-2.0 >= 2.8.0
 	gtk+-2.0 >= 2.8.0
 	gtksourceview-2.0 >= 1.90.4
-	gedit-2.16 >= 2.19.91
+	gedit-2.20 >= 2.20.0
 	libglade-2.0 >= 2.4.0
 	gnome-vfs-2.0 >= 2.13.4
 ])
