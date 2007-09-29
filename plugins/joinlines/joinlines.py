@@ -2,7 +2,7 @@
 #  Join lines plugin
 #  This file is part of gedit
 # 
-#  Copyright (C) 2006 Steve Frécinaux
+#  Copyright (C) 2006-2007 Steve Frécinaux, André Homeyer
 #   
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -18,18 +18,6 @@
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
-
-# Bug 319938:
-# It would be great if there were a menu function to allow joining of lines in 
-# gedit. I've had use of this feature in kate, vim and TextPad and it's really 
-# useful: 
-# - ctrl-J, no text selected: remove leading whitespace from next line, 
-#   replace newline at end of current line with a space. 
-# - ctrl-J, with selected text: remove leading whitespace from all but the first
-#   line, replace newlines on all but the last line with a space.
-# - ctrl-shift-J, with selected text: remove all leading whitespace from lines
-#   not preceded by a whitespace-only line. replace all newlines not followed
-#   by a whitespace-only line with a space.
 
 import gedit, gtk
 import gettext
@@ -80,13 +68,13 @@ class JoinLinesPlugin(gedit.Plugin):
         update_sensitivity(window)
     
     def deactivate(self, window):
-        data = window.get_data("JoinLinesPluginInfo")        
-        manager = window.get_ui_manager()        
+        data = window.get_data("JoinLinesPluginInfo")
+        manager = window.get_ui_manager()
         manager.remove_ui(data["ui_id"])
         manager.remove_action_group(data["action_group"])
         manager.ensure_update()
         window.set_data("JoinLinesPluginInfo", None)
-        
+
     def update_ui(self, window):
         update_sensitivity(window)
             
@@ -102,40 +90,32 @@ def join_lines(window):
         return
     
     document.begin_user_action()
-    
+
+    # If there is a selection use it, otherwise join the
+    # next line    
     try:
         start, end = document.get_selection_bounds()
     except ValueError:
-        start, end = document.get_bounds()
-    
+        start = document.get_iter_at_mark(document.get_insert())
+        end = start.copy()
+        end.forward_line()
+
     end_mark = document.create_mark(None, end)
-    
-    while document.get_iter_at_mark(end_mark).compare(start) == 1:
+
+    if not start.ends_line():
         start.forward_to_line_end()
 
+    while document.get_iter_at_mark(end_mark).compare(start) == 1:
         end = start.copy()
-        c = end.get_char()
-        if c == '\r':
-            end.forward_char()
-            c = end.get_char()
-        if c == '\n':
-            end.forward_char()
-            c = end.get_char()
-
-        # remove blank chars        
-        while end.get_char() in (' ', '\t'):
-            end.forward_char()
-        
+        while end.get_char() in ('\r', '\n', ' ', '\t'):
+            end.forward_char() 
         document.delete(start, end)
 
-        # let the carriage return there if there are more than one:
-        while end.get_char() in ('\r', '\n'):
-            end.forward_char()
-        else:
-            document.insert(start, ' ')
-    
+        document.insert(start, ' ')
+        start.forward_to_line_end()
+
     document.delete_mark(end_mark)
-    document.end_user_action()            
+    document.end_user_action()
 
 def split_lines(window):
     view = window.get_active_view()
@@ -143,38 +123,102 @@ def split_lines(window):
         return
 
     document = view.get_buffer()
-    tabsize = view.get_tab_width()
+
+    width = view.get_right_margin_position()
+    tabwidth = view.get_tab_width()
 
     document.begin_user_action()
 
     try:
+        # get selection bounds
         start, end = document.get_selection_bounds()
+
+        # measure indent until selection start
+        indent_iter = start.copy()
+        indent_iter.set_line_offset(0)
+        indent = ''
+        while indent_iter.get_offset() != start.get_offset():
+            if indent_iter.get_char() == '\t':
+                indent = indent + '\t'
+            else:
+                indent = indent + ' '
+            indent_iter.forward_char()
     except ValueError:
-        start, end = document.get_bounds()
+        # select from start to line end
+        start = document.get_iter_at_mark(document.get_insert())
+        start.set_line_offset(0)
+        end = start.copy()
+        if not end.ends_line():
+            end.forward_to_line_end()
+
+        # measure indent of line
+        indent_iter = start.copy()
+        indent = ''
+        while indent_iter.get_char() in (' ', '\t'):
+            indent = indent + indent_iter.get_char()
+            indent_iter.forward_char()
 
     end_mark = document.create_mark(None, end)
-    width = window.get_active_view().get_right_margin_position()
 
-    # split lines
-    pos = 0
-    while document.get_iter_at_mark(end_mark).compare(start) == 1:
-        start.forward_char()
-        char = start.get_char()
+    # ignore first word 
+    previous_word_end = start.copy()
+    forward_to_word_start(previous_word_end)
+    forward_to_word_end(previous_word_end)
 
-        if char in ('\r','\n'):
-            pos = 0
-        elif char == '\t':
-            pos = pos + tabsize
+    while 1: 
+        current_word_start = previous_word_end.copy()
+        forward_to_word_start(current_word_start)
+        
+        current_word_end = current_word_start.copy()
+        forward_to_word_end(current_word_end)
+        
+        if ord(current_word_end.get_char()) and \
+           document.get_iter_at_mark(end_mark).compare(current_word_end) >= 0:
+
+            word_length = current_word_end.get_offset() - \
+                          current_word_start.get_offset()
+
+            document.delete(previous_word_end, current_word_start)
+
+            line_offset = get_line_offset(current_word_start, tabwidth) + word_length
+            if line_offset > width - 1: 
+                document.insert(current_word_start, '\n' + indent)
+            else:
+                document.insert(current_word_start, ' ')
+            
+            previous_word_end = current_word_start.copy()
+            previous_word_end.forward_chars(word_length)
         else:
-            pos = pos + 1
-
-        if pos >= width:
-            pos = 0
-            if start.inside_word() and not start.starts_word():
-                start.backward_word_start()
-            document.insert(start, '\n')
+            break
 
     document.delete_mark(end_mark)
     document.end_user_action()
+
+def get_line_offset(text_iter, tabwidth):
+    offset_iter = text_iter.copy()
+    offset_iter.set_line_offset(0)
+
+    line_offset = 0
+    while offset_iter.get_offset() < text_iter.get_offset():
+        char = offset_iter.get_char()
+        if char == '\t':
+            line_offset += tabwidth
+        else:
+            line_offset += 1
+        offset_iter.forward_char()
+
+    return line_offset
+    
+def forward_to_word_start(text_iter):
+    char = text_iter.get_char()
+    while ord(char) and (char in (' ', '\t', '\n', '\r')):
+        text_iter.forward_char()
+        char = text_iter.get_char()
+        
+def forward_to_word_end(text_iter):
+    char = text_iter.get_char()
+    while ord(char) and (not (char in (' ', '\t', '\n', '\r'))):
+        text_iter.forward_char()
+        char = text_iter.get_char()
 
 # ex:ts=4:et:

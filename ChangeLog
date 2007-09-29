@@ -1,5 +1,12 @@
 2007-09-29  Paolo Borelli  <pborelli@katamail.com>
 
+	* plugins/joinlines/joinlines.py: Patch from André Homeyer to improve
+	the behavior: just join the current and next line when there is no
+	selection and respect current line indentation when reformatting
+	a paragraph.
+
+2007-09-29  Paolo Borelli  <pborelli@katamail.com>
+
 	* plugins/joinlines/joinlines.py: update for gsv2.
 
 2007-09-18  Jürg Billeter  <j@bitron.ch>
