@@ -58,7 +58,7 @@ ui_str = """
 class JoinLinesPlugin(gedit.Plugin):
     def __init__(self):
         gedit.Plugin.__init__(self)
-                    
+
     def activate(self, window):
         manager = window.get_ui_manager()
         data = dict()
@@ -143,7 +143,7 @@ def split_lines(window):
         return
 
     document = view.get_buffer()
-    tabsize = view.get_tabs_width()
+    tabsize = view.get_tab_width()
 
     document.begin_user_action()
 
@@ -153,7 +153,7 @@ def split_lines(window):
         start, end = document.get_bounds()
 
     end_mark = document.create_mark(None, end)
-    width = window.get_active_view().get_margin()
+    width = window.get_active_view().get_right_margin_position()
 
     # split lines
     pos = 0
