@@ -64,7 +64,8 @@ class GeditTerminal(gtk.HBox):
         'scroll_on_keystroke'   : False,
         'scroll_on_output'      : False,
         'scrollback_lines'      : 100,
-        'visible_bell'          : False
+        'visible_bell'          : False,
+        'word_chars'            : '-A-Za-z0-9,./?%&#:_'
     }
 
     def __init__(self):
@@ -134,6 +135,9 @@ class GeditTerminal(gtk.HBox):
 
         self._vte.set_scroll_on_output(gconf_get_bool(self.GCONF_PROFILE_DIR + "/scroll_on_output",
                                                       self.defaults['scroll_on_output']))
+
+        self._vte.set_word_chars(gconf_get_str(self.GCONF_PROFILE_DIR + "/word_chars",
+                                               self.defaults['word_chars']))
 
         self._vte.set_emulation(self.defaults['emulation'])
         self._vte.set_visible_bell(self.defaults['visible_bell'])
