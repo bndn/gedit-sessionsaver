@@ -32,10 +32,11 @@ common_brackets = {
 }
 
 language_brackets = {
-    'ChangeLog': { '<' : '>' },
-    'HTML': { '<' : '>' },
-    'Ruby': { '|' : '|', 'do': 'end' },
-    'XML': { '<' : '>' },
+    'changelog': { '<' : '>' },
+    'html': { '<' : '>' },
+    'ruby': { '|' : '|', 'do': 'end' },
+    'sh': { '`' : '`' },
+    'xml': { '<' : '>' },
 }
 
 class BracketCompletionViewHelper(object):
@@ -82,10 +83,10 @@ class BracketCompletionViewHelper(object):
         if lang is None:
             self._brackets = None
             return
-        
+
         lang_id = lang.get_id()
         if lang_id in language_brackets:
-            self._brackets = language_brackets[lang.get_id()]
+            self._brackets = language_brackets[lang_id]
             # we populate the language-specific brackets with common ones lazily
             self._brackets.update(common_brackets)
         else:
