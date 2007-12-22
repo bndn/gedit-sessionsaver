@@ -1,3 +1,8 @@
+2007-12-22  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/charmap/gedit-charmap-plugin.c: do not unref the panel when
+	we do not own the ref. Patch by Christian Persch. Bug #502707.
+
 2007-10-11  Paolo Borelli  <pborelli@katamail.com>
 
 	* plugins/bracketcompletion/bracketcompletion.py: fix language-specific
