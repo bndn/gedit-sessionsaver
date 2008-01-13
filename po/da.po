@@ -4,6 +4,7 @@
 # Kenneth Christiansen <kenneth@gnome.org>, 1999, 2000.
 # Keld Simonsen <keld@dkuug.dk>, 2000, 01.
 # Ole Laursen <olau@hardworking.dk>, 2002, 03, 04.
+# Niels Rasmussen <nielsrasmus@gmail.com>, 2008
 #
 # Konventioner:
 #
@@ -14,255 +15,380 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit 0.7.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-19 22:42+0100\n"
-"PO-Revision-Date: 2004-02-19 22:43+0100\n"
-"Last-Translator: Ole Laursen <olau@hardworking.dk>\n"
-"Language-Team: Danish <dansk@klid.dk>\n"
+"POT-Creation-Date: 2008-01-13 21:27+0100\n"
+"PO-Revision-Date: 2008-01-13 20:27+0100\n"
+"Last-Translator: Niels Rasmussen <nielsrasmus@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "_ASCII-tabel"
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Tilføjer automatisk afsluttende klammer."
 
-#: plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Viser et vindue med ASCII-tabellen."
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Klammefuldførelse"
 
-#: plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Tegn"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
+msgid "Character Map"
+msgstr "Tegnoversigt"
 
-#: plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "Dec. nr."
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr "Indsæt speicaltegn ved at klikke på dem."
 
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "Hex. nr."
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Kodekommentar"
 
-#: plugins/ASCII/ascii.c:324
-msgid "Name"
-msgstr "Navn"
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Kommentér eller udkommentér den valgte kodeblok."
 
-#: plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
-msgstr "ASCII-tabel"
+#: ../plugins/codecomment/codecomment.py:210
+msgid "Co_mment Code"
+msgstr "Ko_mmentér Kode"
 
-#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "_Indsæt tegn"
+#: ../plugins/codecomment/codecomment.py:212
+msgid "Comment the selected code"
+msgstr "Kommentér den valgte kode"
 
-#: plugins/ASCII/asciitable.glade2.h:1
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
-msgid "ASCII table"
-msgstr "ASCII-tabel"
+#: ../plugins/codecomment/codecomment.py:216
+msgid "U_ncomment Code"
+msgstr "U_dkommentér Kode"
 
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
-msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-msgstr "Dette udvidelsesmodul viser et vindue med ASCII-tabellen."
+#: ../plugins/codecomment/codecomment.py:218
+msgid "Uncomment the selected code"
+msgstr "Udkommentér den valgte kode"
 
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "Åbn CVS-Chan_geLog"
+#. ex:ts=4:et:
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+msgid "Color Picker"
+msgstr "Farvevælger"
 
-#: plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "Søger efter ChangeLog-filer i det aktuelle dokument og åbner dem"
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
+msgstr "Vælg en farve fra dialogvinduet og indsæt dens hexadecimale værdi."
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
-msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-msgstr ""
-"Et udvidelsesmodul der åbner ChangeLog-filer fundet i CVS-commitmeddelelser."
+#: ../plugins/colorpicker/colorpicker.py:73
+msgid "Pick _Color..."
+msgstr "Vælg _Farve..."
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
-msgid "CVS ChangeLog"
-msgstr "CVS-ChangeLog"
+#: ../plugins/colorpicker/colorpicker.py:74
+msgid "Pick a color from a dialog"
+msgstr "Vælg en farve fra et dialogvindue"
 
-#: plugins/diff/diff.c:64
-msgid "Co_mpare Files..."
-msgstr "Sa_mmenlign filer..."
+#: ../plugins/colorpicker/colorpicker.py:220
+msgid "Pick Color"
+msgstr "Vælg farve"
 
-#: plugins/diff/diff.c:67
-msgid "Makes a diff file from two documents or files"
-msgstr ""
-"Laver en fil som indeholder forskellene mellem to dokumenter eller filer"
+#: ../plugins/colorpicker/colorpicker.py:226
+msgid "_Insert"
+msgstr "_Indsæt"
 
-#. Create the dialog
-#: plugins/diff/diff.c:270 plugins/diff/diff.gedit-plugin.desktop.in.h:1
-msgid "Compare Files"
-msgstr "Sammenlign filer"
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "Tegn mellemrum"
 
-#: plugins/diff/diff.c:284
-msgid "C_ompare"
-msgstr "S_ammenlign"
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "Tegn mellemrum og indrykninger"
 
-#: plugins/diff/diff.c:511
-msgid "Executed command"
-msgstr "Udført kommando"
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "Tegn ikke-ombrydelige mellemrum"
 
-#: plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "De to dokumenter du valgte, er ens."
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw spaces"
+msgstr "Tegn mellemrum"
 
-#: plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Den første fil du valgte, eksisterer ikke.\n"
-"\n"
-"Angiv venligst en gyldig fil."
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Draw tabs"
+msgstr "Tegn indryk"
 
-#: plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Den anden fil du valgte, eksisterer ikke.\n"
-"\n"
-"Angiv venligst en gyldig fil."
+#: ../plugins/drawspaces/drawspaces.glade.h:4
+msgid "Drawing color:"
+msgstr "Tegnfarve:"
 
-#: plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "De to filer du valgte, er ens."
+#. ex:ts=4:et:
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Sammenføj flere linjer eller del de lange"
 
-#: plugins/diff/diff.c:694
-msgid "The \"first\" document contains no text."
-msgstr "Det første dokument indeholder ingen tekst."
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Sammenføj/Del linjer"
 
-#: plugins/diff/diff.c:728
-msgid "The \"second\" document contains no text."
-msgstr "Det andet dokument indeholder ingen tekst."
+#: ../plugins/joinlines/joinlines.py:56
+msgid "_Join Lines"
+msgstr "_Sammenføj Linjer"
 
-#. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:754
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"Det mislykkedes at sammenligne de valgte dokumenter.\n"
-"\n"
-"Kunne ikke oprette en midlertidig fil."
+#: ../plugins/joinlines/joinlines.py:57
+msgid "Join the selected lines"
+msgstr "Sammenføj de valgte linjer"
 
-#: plugins/diff/diff.c:778 plugins/diff/diff.c:791
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"Det mislykkedes at sammenligne de valgte dokumenter.\n"
-"\n"
-"Fejl ved kørsel af diff-kommandoen."
+#: ../plugins/joinlines/joinlines.py:59
+msgid "_Split Lines"
+msgstr "_Del Linjer"
 
-#: plugins/diff/diff.c:813
-msgid "No differences were found between the selected documents."
-msgstr "Ingen forskelle fundet mellem de valgte dokumenter."
+#: ../plugins/joinlines/joinlines.py:60
+msgid "Split the selected lines"
+msgstr "Del den valgte linje"
 
-#: plugins/diff/diff.c:854
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"Det mislykkedes at sammenligne de valgte dokumenter.\n"
-"\n"
-"Resultatet indeholder ugyldige UTF-8-data."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+msgid "Tab_bar"
+msgstr "Faneblads_linje"
 
-#: plugins/diff/diff.glade2.h:1
-msgid "*"
-msgstr "*"
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+msgid "Show or hide the tabbar in the current window"
+msgstr "Vis eller skjul fanebladslinjen i det aktive vindue"
 
-#: plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Vælg de filer som skal sammenlignes."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+msgid "Tabbar is Visible"
+msgstr "Fanebladslinjen er synlig"
 
-#: plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Sammenlign filer..."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+msgid "Whether the tabbar should be visible in editing windows."
+msgstr "Vælg om fanebladslinjen skal være synlig i redigeringsvinduer."
 
-#: plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "F_ra dokument"
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+msgid "Add a menu entry to show/hide the tabbar."
+msgstr "Tilføj et menupunkt til at vise/skjule fanebladslinjen."
 
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Første"
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+msgid "Show/Hide Tabbar"
+msgstr "Vis/Skjul Fanebladslinjen"
 
-#: plugins/diff/diff.glade2.h:6
-msgid "First file from disk"
-msgstr "Første fil fra disk"
+#: ../plugins/sessionsaver/dialogs.py:165
+msgid "Session Name"
+msgstr "Session Navn"
 
-#: plugins/diff/diff.glade2.h:7
-msgid "First file from open document"
-msgstr "Første fil fra åbent dokument"
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+msgid "Save and restore your working sessions"
+msgstr "Gem og gendan dine aktuelle sessioner"
 
-#: plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "Fra _dokument"
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr "Gem Sessioner"
 
-#: plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "Fra en _fil på disken"
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Session name:"
+msgstr "Session navn:"
 
-#: plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "Fra en fil _på disken"
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr "Glem ikke at du bruger tabulatorer."
 
-#: plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "Ignorér _blanke (tilvalget -b)"
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+msgid "Smart Spaces"
+msgstr "Smarte mellemrum"
 
-#: plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr "Bemærk at dette tilvalg kun understøttes af GNU diff"
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr "Indlejr en terminal i nederste felt."
 
-#: plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Anden"
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+msgid "Embedded Terminal"
+msgstr "Indlejret terminalvindue"
 
-#: plugins/diff/diff.glade2.h:14
-msgid "Second file from disk"
-msgstr "Anden fil fra disk"
+#: ../plugins/terminal/terminal.py:210
+msgid "Terminal"
+msgstr "Terminal"
 
-#: plugins/diff/diff.glade2.h:15
-msgid "Second file from open document"
-msgstr "Anden fil fra åbent dokument"
+#: ../plugins/terminal/terminal.py:231
+msgid "C_hange Directory"
+msgstr "S_kift filkatalog"
 
-#: plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr "Vælg den \"første\" fil..."
+#~ msgid "_ASCII Table"
+#~ msgstr "_ASCII-tabel"
 
-#: plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr "Vælg den \"anden\" fil..."
+#~ msgid "Pop-up a dialog containing an ASCII Table"
+#~ msgstr "Viser et vindue med ASCII-tabellen."
 
-#: plugins/diff/diff.glade2.h:18
-msgid "Select the first file to compare"
-msgstr "Vælg den første fil der skal sammenlignes"
+#~ msgid "Char"
+#~ msgstr "Tegn"
 
-#: plugins/diff/diff.glade2.h:19
-msgid "Select the first open document to compare"
-msgstr "Vælg det første dokument der skal sammenlignes"
+#~ msgid "Dec#"
+#~ msgstr "Dec. nr."
 
-#: plugins/diff/diff.glade2.h:20
-msgid "Select the second file to compare"
-msgstr "Vælg den anden fil der skal sammenlignes"
+#~ msgid "Hex#"
+#~ msgstr "Hex. nr."
 
-#: plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr "Vælg det andet dokument der skal sammenlignes"
+#~ msgid "Name"
+#~ msgstr "Navn"
 
-#: plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Brug det _forenede udskriftsformat (tilvalget -u)"
+#~ msgid "ASCII Table"
+#~ msgstr "ASCII-tabel"
 
-#: plugins/diff/diff.gedit-plugin.desktop.in.h:2
-msgid ""
-"The Compare Files plugin uses the \"diff\" program to compare two documents "
-"or files on disk."
-msgstr "Benytter programmet \"diff\" til at sammenligne to dokumenter eller filer på disken."
+#~ msgid "ASCII table"
+#~ msgstr "ASCII-tabel"
+
+#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+#~ msgstr "Dette udvidelsesmodul viser et vindue med ASCII-tabellen."
+
+#~ msgid "Open CVS Chan_geLogs"
+#~ msgstr "Åbn CVS-Chan_geLog"
+
+#~ msgid "Searches for ChangeLogs in the current document and opens them"
+#~ msgstr "Søger efter ChangeLog-filer i det aktuelle dokument og åbner dem"
+
+#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+#~ msgstr ""
+#~ "Et udvidelsesmodul der åbner ChangeLog-filer fundet i CVS-"
+#~ "commitmeddelelser."
+
+#~ msgid "CVS ChangeLog"
+#~ msgstr "CVS-ChangeLog"
+
+#~ msgid "Co_mpare Files..."
+#~ msgstr "Sa_mmenlign filer..."
+
+#~ msgid "Makes a diff file from two documents or files"
+#~ msgstr ""
+#~ "Laver en fil som indeholder forskellene mellem to dokumenter eller filer"
+
+#~ msgid "Compare Files"
+#~ msgstr "Sammenlign filer"
+
+#~ msgid "C_ompare"
+#~ msgstr "S_ammenlign"
+
+#~ msgid "Executed command"
+#~ msgstr "Udført kommando"
+
+#~ msgid "The two documents you selected are the same."
+#~ msgstr "De to dokumenter du valgte, er ens."
+
+#~ msgid ""
+#~ "The \"first\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Den første fil du valgte, eksisterer ikke.\n"
+#~ "\n"
+#~ "Angiv venligst en gyldig fil."
+
+#~ msgid ""
+#~ "The \"second\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Den anden fil du valgte, eksisterer ikke.\n"
+#~ "\n"
+#~ "Angiv venligst en gyldig fil."
+
+#~ msgid "The two files you selected are the same."
+#~ msgstr "De to filer du valgte, er ens."
+
+#~ msgid "The \"first\" document contains no text."
+#~ msgstr "Det første dokument indeholder ingen tekst."
+
+#~ msgid "The \"second\" document contains no text."
+#~ msgstr "Det andet dokument indeholder ingen tekst."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "gedit could not create a temporary file."
+#~ msgstr ""
+#~ "Det mislykkedes at sammenligne de valgte dokumenter.\n"
+#~ "\n"
+#~ "Kunne ikke oprette en midlertidig fil."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "Error executing the diff command."
+#~ msgstr ""
+#~ "Det mislykkedes at sammenligne de valgte dokumenter.\n"
+#~ "\n"
+#~ "Fejl ved kørsel af diff-kommandoen."
+
+#~ msgid "No differences were found between the selected documents."
+#~ msgstr "Ingen forskelle fundet mellem de valgte dokumenter."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "The result contains invalid UTF-8 data."
+#~ msgstr ""
+#~ "Det mislykkedes at sammenligne de valgte dokumenter.\n"
+#~ "\n"
+#~ "Resultatet indeholder ugyldige UTF-8-data."
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "Choose the files to compare."
+#~ msgstr "Vælg de filer som skal sammenlignes."
+
+#~ msgid "Compare files..."
+#~ msgstr "Sammenlign filer..."
+
+#~ msgid "F_rom document"
+#~ msgstr "F_ra dokument"
+
+#~ msgid "First"
+#~ msgstr "Første"
+
+#~ msgid "First file from disk"
+#~ msgstr "Første fil fra disk"
+
+#~ msgid "First file from open document"
+#~ msgstr "Første fil fra åbent dokument"
+
+#~ msgid "From _document"
+#~ msgstr "Fra _dokument"
+
+#~ msgid "From a _file on disk"
+#~ msgstr "Fra en _fil på disken"
+
+#~ msgid "From a file o_n disk"
+#~ msgstr "Fra en fil _på disken"
+
+#~ msgid "Ignore _blanks (-b option)"
+#~ msgstr "Ignorér _blanke (tilvalget -b)"
+
+#~ msgid "Note that this option is only supported by GNU diff"
+#~ msgstr "Bemærk at dette tilvalg kun understøttes af GNU diff"
+
+#~ msgid "Second"
+#~ msgstr "Anden"
+
+#~ msgid "Second file from disk"
+#~ msgstr "Anden fil fra disk"
+
+#~ msgid "Second file from open document"
+#~ msgstr "Anden fil fra åbent dokument"
+
+#~ msgid "Select the \"first\" file..."
+#~ msgstr "Vælg den \"første\" fil..."
+
+#~ msgid "Select the \"second\" file..."
+#~ msgstr "Vælg den \"anden\" fil..."
+
+#~ msgid "Select the first file to compare"
+#~ msgstr "Vælg den første fil der skal sammenlignes"
+
+#~ msgid "Select the first open document to compare"
+#~ msgstr "Vælg det første dokument der skal sammenlignes"
+
+#~ msgid "Select the second file to compare"
+#~ msgstr "Vælg den anden fil der skal sammenlignes"
+
+#~ msgid "Select the second open document to compare"
+#~ msgstr "Vælg det andet dokument der skal sammenlignes"
+
+#~ msgid "Use the _unified output format (-u option)"
+#~ msgstr "Brug det _forenede udskriftsformat (tilvalget -u)"
+
+#~ msgid ""
+#~ "The Compare Files plugin uses the \"diff\" program to compare two "
+#~ "documents or files on disk."
+#~ msgstr ""
+#~ "Benytter programmet \"diff\" til at sammenligne to dokumenter eller filer "
+#~ "på disken."
