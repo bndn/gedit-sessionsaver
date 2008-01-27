@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-03 04:22+0000\n"
+"POT-Creation-Date: 2008-01-27 13:47+0200\n"
 "PO-Revision-Date: 2007-02-03 04:31+0000\n"
 "Last-Translator: Dimitris Glezos <dimitris@glezos.com>\n"
 "Language-Team: el <fedora-trans-el@redhat.com>\n"
@@ -38,7 +38,7 @@ msgid "Bracket Completion"
 msgstr "Συμπλήρωση παρενθέσεων"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
 msgid "Character Map"
 msgstr "Πίνακας χαρακτήρων"
 
@@ -54,19 +54,19 @@ msgstr "Σχολιασμός κώδικα"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Σχολιάστε και απο-σχολιάστε ένα επιλεγμένο τμήμα κώδικα."
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:210
 msgid "Co_mment Code"
 msgstr "Σ_χολιάστε κώδικα"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:212
 msgid "Comment the selected code"
 msgstr "Σχολιάστε τον επιλεγμένο κώδικα"
 
-#: ../plugins/codecomment/codecomment.py:252
+#: ../plugins/codecomment/codecomment.py:216
 msgid "U_ncomment Code"
 msgstr "Α_ποσχολιάστε κώδικα"
 
-#: ../plugins/codecomment/codecomment.py:254
+#: ../plugins/codecomment/codecomment.py:218
 msgid "Uncomment the selected code"
 msgstr "Αποσχολιάστε τον επιλεγμένο κώδικα"
 
@@ -77,24 +77,53 @@ msgstr "Επιλογή χρωμάτων"
 
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr "Επιλέξτε ένα χρώμα από ένα διάλογο και εισάγετε τη δεκαεξαδική του αναπαράσταση."
+msgstr ""
+"Επιλέξτε ένα χρώμα από ένα διάλογο και εισάγετε τη δεκαεξαδική του "
+"αναπαράσταση."
 
-#: ../plugins/colorpicker/colorpicker.py:70
-msgid "_Color picker"
-msgstr "Επιλογή _χρωμάτων"
+#: ../plugins/colorpicker/colorpicker.py:73
+msgid "Pick _Color..."
+msgstr ""
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "Επιλογή χρωμάτων από ένα διάλογο"
 
-#: ../plugins/colorpicker/colorpicker.py:217
-msgid "Color picker"
-msgstr "Επιλογή χρωμάτων"
+#: ../plugins/colorpicker/colorpicker.py:220
+msgid "Pick Color"
+msgstr ""
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "_Εισαγωγή"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+#, fuzzy
+msgid "Draw Spaces"
+msgstr "Έξυπνα διαστήματα"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr ""
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr ""
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+#, fuzzy
+msgid "Draw spaces"
+msgstr "Έξυπνα διαστήματα"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Draw tabs"
+msgstr ""
+
+#: ../plugins/drawspaces/drawspaces.glade.h:4
+msgid "Drawing color:"
+msgstr ""
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Ενώστε πολλές γραμμές ή χωρίστε μία μεγάλη"
@@ -103,19 +132,19 @@ msgstr "Ενώστε πολλές γραμμές ή χωρίστε μία μεγ
 msgid "Join/Split Lines"
 msgstr "Ενώστε/χωρίστε γραμμές"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr "Ε_νώστε γραμμές"
 
-#: ../plugins/joinlines/joinlines.py:61
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr "Ενώστε τις επιλεγμένες γραμμές"
 
-#: ../plugins/joinlines/joinlines.py:63
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "Χ_ωρίστε γραμμές"
 
-#: ../plugins/joinlines/joinlines.py:64
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Χωρίστε τις επιλεγμένες γραμμές"
 
@@ -143,7 +172,7 @@ msgstr "Προσθέστε μια καταχώρηση μενού για εμφ�
 msgid "Show/Hide Tabbar"
 msgstr "Εμφάνιση/απόκρυψη του Tabbar"
 
-#: ../plugins/sessionsaver/dialogs.py:162
+#: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "Όνομα συνεδρίας"
 
@@ -159,26 +188,6 @@ msgstr "Αποθήκευση συνεδριών"
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
 msgid "Session name:"
 msgstr "Όνομα συνεδρίας:"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
-msgid "gtk-close"
-msgstr "gtk-close"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:4
-msgid "gtk-delete"
-msgstr "gtk-delete"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:5
-msgid "gtk-open"
-msgstr "gtk-open"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:6
-msgid "gtk-save"
-msgstr "gtk-save"
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
@@ -196,11 +205,31 @@ msgstr "Ενσωμάτωση ενός τερματικού στο κάτω τα�
 msgid "Embedded Terminal"
 msgstr "Ενσωματωμένο τερματικό"
 
-#: ../plugins/terminal/terminal.py:203
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "Τερματικό"
 
-#: ../plugins/terminal/terminal.py:224
+#: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
 msgstr "Α_λλαγή καταλόγου"
 
+#~ msgid "_Color picker"
+#~ msgstr "Επιλογή _χρωμάτων"
+
+#~ msgid "Color picker"
+#~ msgstr "Επιλογή χρωμάτων"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-close"
+
+#~ msgid "gtk-delete"
+#~ msgstr "gtk-delete"
+
+#~ msgid "gtk-open"
+#~ msgstr "gtk-open"
+
+#~ msgid "gtk-save"
+#~ msgstr "gtk-save"
