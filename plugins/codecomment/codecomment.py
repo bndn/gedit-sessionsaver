@@ -33,15 +33,35 @@ try:
 except:
     _ = lambda s: s
 
-def get_comment_tags(lang):
-    start_tag = lang.get_metadata('line-comment-start')
-    if start_tag:
-        return (start_tag, None)
+# If the language is listed here we prefer block comments over line comments.
+# Maybe this list should be user configurable, but just C comes to my mind...
+block_comment_languages = [
+    'c',
+]
+
+def get_block_comment_tags(lang):
     start_tag = lang.get_metadata('block-comment-start')
     end_tag = lang.get_metadata('block-comment-end')
     if start_tag and end_tag:
         return (start_tag, end_tag)
     return (None, None)
+
+def get_line_comment_tags(lang):
+    start_tag = lang.get_metadata('line-comment-start')
+    if start_tag:
+        return (start_tag, None)
+    return (None, None)
+
+def get_comment_tags(lang):
+    if lang.get_id() in block_comment_languages:
+        (s, e) = get_block_comment_tags(lang)
+        if (s, e) == (None, None):
+            (s, e) = get_line_comment_tags(lang)
+    else:
+        (s, e) = get_line_comment_tags(lang)
+        if (s, e) == (None, None):
+            (s, e) = get_block_comment_tags(lang)
+    return (s, e)
 
 def forward_tag(iter, tag):
     iter.forward_chars(len(tag))
