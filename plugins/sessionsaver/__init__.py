@@ -62,9 +62,9 @@ class SessionSaverWindowHelper(object):
 
         self._menu_action_group = gtk.ActionGroup("SessionSaverPluginActions")
         self._menu_action_group.add_actions(
-            (("FileSession", None, "Sa_ved sessions"),
-             ("FileSessionSave", gtk.STOCK_SAVE_AS, "_Save current session", None, "Save the current document list as a new session", self.on_save_session_action),
-             ("FileSessionManage", None, "_Manage saved sessions...", None, "Open the saved session manager", self.on_manage_sessions_action)))
+            (("FileSession", None, _("Sa_ved sessions")),
+             ("FileSessionSave", gtk.STOCK_SAVE_AS, _("_Save current session"), None, _("Save the current document list as a new session"), self.on_save_session_action),
+             ("FileSessionManage", None, _("_Manage saved sessions..."), None, _("Open the saved session manager"), self.on_manage_sessions_action)))
         manager.insert_action_group(self._menu_action_group, -1)
         self._menu_ui_id = manager.add_ui_from_string(self.SESSION_MENU_UI_STRING)
 
@@ -104,7 +104,7 @@ class SessionSaverWindowHelper(object):
         i = 0
         for session in self.plugin.sessions:
             action_name = 'SessionSaver%X' % i
-            action = gtk.Action(action_name, session.name, "Recover '%s' session" % session.name, None)
+            action = gtk.Action(action_name, session.name, _("Recover '%s' session") % session.name, None)
             handler = action.connect("activate", self.session_menu_action, session)
 
             action.set_data(self.ACTION_HANDLER_DATA_KEY, handler)
