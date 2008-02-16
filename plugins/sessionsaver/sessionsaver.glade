@@ -9,7 +9,7 @@
 <glade-interface>
   <widget class="GtkDialog" id="save-session-dialog">
     <property name="border_width">6</property>
-    <property name="title">Save session</property>
+    <property name="title" translatable="yes">Save session</property>
     <property name="resizable">False</property>
     <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
     <property name="has_separator">False</property>
@@ -89,7 +89,7 @@
   <widget class="GtkWindow" id="session-manager-dialog">
     <property name="width_request">400</property>
     <property name="height_request">200</property>
-    <property name="title">Saved Sessions</property>
+    <property name="title" translatable="yes">Saved Sessions</property>
     <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
     <child>
       <widget class="GtkHBox" id="hbox1">
