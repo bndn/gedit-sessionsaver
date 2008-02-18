@@ -1,7 +1,6 @@
-# translation of es.po to Spanish
-# translation of gedit-plugins.HEAD.es.po to Spanish
+# translation of gedit-plugins.HEAD.po to Español
 # Gedit's Spanish translation
-# Copyright © 1999-2002, 2007 Free Software Foundation, Inc.
+# Copyright © 1999-2002, 2007, 2008 Free Software Foundation, Inc.
 #
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch>, 1999-2000.
 # Carlos Perelló Marín <carlos@gnome-db.org>, 2000-2001.
@@ -10,15 +9,15 @@
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com>,2002.
 # Francisco Javier F. Serrador <serrador@arrakis.es>, 2003.
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2006.
-# Jorge González <jorgegonz@svn.gnome.org>, 2007.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins.HEAD.es\n"
+"Project-Id-Version: gedit-plugins.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-17 03:29+0100\n"
-"PO-Revision-Date: 2007-11-03 14:42+0100\n"
+"POT-Creation-Date: 2008-02-16 15:36+0000\n"
+"PO-Revision-Date: 2008-02-18 12:23+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
-"Language-Team: Spanish <traductores@es.gnome.org>\n"
+"Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,7 +33,7 @@ msgid "Bracket Completion"
 msgstr "Completar paréntesis"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
 msgid "Character Map"
 msgstr "Mapa de caracteres"
 
@@ -50,19 +49,19 @@ msgstr "Comentar código"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Comentar o descomentar un bloque de código seleccionado."
 
-#: ../plugins/codecomment/codecomment.py:249
+#: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
 msgstr "Co_mentar código"
 
-#: ../plugins/codecomment/codecomment.py:251
+#: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
 msgstr "Comentar el código selecionado"
 
-#: ../plugins/codecomment/codecomment.py:255
+#: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
 msgstr "_Descomentar el código"
 
-#: ../plugins/codecomment/codecomment.py:257
+#: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
 msgstr "Descomentar el código seleccionado"
 
@@ -124,19 +123,19 @@ msgstr "Unir varias líneas o dividir líneas largas"
 msgid "Join/Split Lines"
 msgstr "Unir/Dividir líneas"
 
-#: ../plugins/joinlines/joinlines.py:68
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr "_Unir líneas"
 
-#: ../plugins/joinlines/joinlines.py:69
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr "Unir las líneas seleccionadas"
 
-#: ../plugins/joinlines/joinlines.py:71
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Dividir líneas"
 
-#: ../plugins/joinlines/joinlines.py:72
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Dividir las líneas seleccionadas"
 
@@ -164,6 +163,31 @@ msgstr "Añade una entrada en el menú para mostrar/ocultar la barra de solapas.
 msgid "Show/Hide Tabbar"
 msgstr "Mostrar/Ocultar barra de solapas"
 
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr "Versiones guar_dadas"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr "_Guardar la sesión actual"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr "Guardar la lista del documento actual como una nueva sesión"
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr "_Gestionar las sesiones guardadas..."
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr "Abrir el gestor de sesiones guardadas"
+
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr "Recuperar la sesión «%s»"
+
 #: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "Nombre de la sesión"
@@ -178,6 +202,14 @@ msgid "Session Saver"
 msgstr "Salvasesiones"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Save session"
+msgstr "Guardar la sesión"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "Saved Sessions"
+msgstr "Sesiones guardadas"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
 msgid "Session name:"
 msgstr "Nombre de la sesión:"
 
@@ -197,11 +229,11 @@ msgstr "Empotre un terminal en el panel inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal empotrado"
 
-#: ../plugins/terminal/terminal.py:206
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:227
+#: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
 msgstr "_Cambiar de directorio"
 
