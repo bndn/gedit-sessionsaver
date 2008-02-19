@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-26 00:19+0200\n"
+"POT-Creation-Date: 2008-02-19 20:20+0100\n"
 "PO-Revision-Date: 2007-11-20 14:30+0100\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -28,7 +28,7 @@ msgid "Bracket Completion"
 msgstr ""
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
 msgid "Character Map"
 msgstr ""
 
@@ -44,19 +44,19 @@ msgstr ""
 msgid "Comment out or uncomment a selected block of code."
 msgstr ""
 
-#: ../plugins/codecomment/codecomment.py:249
+#: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
 msgstr ""
 
-#: ../plugins/codecomment/codecomment.py:251
+#: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
 msgstr ""
 
-#: ../plugins/codecomment/codecomment.py:255
+#: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
 msgstr ""
 
-#: ../plugins/codecomment/codecomment.py:257
+#: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
 msgstr ""
 
@@ -70,7 +70,7 @@ msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 
 #: ../plugins/colorpicker/colorpicker.py:73
-msgid "_Color picker"
+msgid "Pick _Color..."
 msgstr ""
 
 #: ../plugins/colorpicker/colorpicker.py:74
@@ -78,10 +78,10 @@ msgid "Pick a color from a dialog"
 msgstr ""
 
 #: ../plugins/colorpicker/colorpicker.py:220
-msgid "Color picker"
+msgid "Pick Color"
 msgstr ""
 
-#: ../plugins/colorpicker/colorpicker.py:228
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "_Inserir"
 
@@ -94,14 +94,18 @@ msgid "Draw Spaces and Tabs"
 msgstr ""
 
 #: ../plugins/drawspaces/drawspaces.glade.h:1
-msgid "Draw spaces"
+msgid "Draw non-breaking spaces"
 msgstr ""
 
 #: ../plugins/drawspaces/drawspaces.glade.h:2
-msgid "Draw tabs"
+msgid "Draw spaces"
 msgstr ""
 
 #: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Draw tabs"
+msgstr ""
+
+#: ../plugins/drawspaces/drawspaces.glade.h:4
 msgid "Drawing color:"
 msgstr ""
 
@@ -114,19 +118,19 @@ msgstr ""
 msgid "Join/Split Lines"
 msgstr ""
 
-#: ../plugins/joinlines/joinlines.py:68
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr ""
 
-#: ../plugins/joinlines/joinlines.py:69
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr ""
 
-#: ../plugins/joinlines/joinlines.py:71
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr ""
 
-#: ../plugins/joinlines/joinlines.py:72
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr ""
 
@@ -154,6 +158,31 @@ msgstr ""
 msgid "Show/Hide Tabbar"
 msgstr ""
 
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr ""
+
 #: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr ""
@@ -168,6 +197,14 @@ msgid "Session Saver"
 msgstr ""
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Save session"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "Saved Sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
 msgid "Session name:"
 msgstr ""
 
@@ -187,11 +224,10 @@ msgstr ""
 msgid "Embedded Terminal"
 msgstr ""
 
-#: ../plugins/terminal/terminal.py:206
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:227
+#: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
 msgstr ""
-
