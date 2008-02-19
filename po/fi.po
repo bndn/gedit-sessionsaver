@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-07 19:24+0300\n"
+"POT-Creation-Date: 2008-02-19 08:52+0300\n"
 "PO-Revision-Date: 2007-03-19 09:19+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -26,7 +26,7 @@ msgid "Bracket Completion"
 msgstr "Kaarisulkujen täydennys"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
 msgid "Character Map"
 msgstr "Merkkikartta"
 
@@ -42,19 +42,19 @@ msgstr "Lähdekoodin kommentointi"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Kommentoi tai poista kommentit valitusta lähdekoodin alueesta."
 
-#: ../plugins/codecomment/codecomment.py:210
+#: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
 msgstr "Lähdek_oodin kommentointi"
 
-#: ../plugins/codecomment/codecomment.py:212
+#: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
 msgstr "Kommentoi valittu lähdekoodi."
 
-#: ../plugins/codecomment/codecomment.py:216
+#: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
 msgstr "_Poista kommentti koodista"
 
-#: ../plugins/codecomment/codecomment.py:218
+#: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
 msgstr "Poista kommentit valitusta lähdekoodista"
 
@@ -116,19 +116,19 @@ msgstr "Liitä useita rivejä tai jaa pitkiä rivejä"
 msgid "Join/Split Lines"
 msgstr "_Yhdistä tai jaa rivejä"
 
-#: ../plugins/joinlines/joinlines.py:68
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr "_Yhdistä rivit"
 
-#: ../plugins/joinlines/joinlines.py:69
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr "Yhdistä valitut rivit"
 
-#: ../plugins/joinlines/joinlines.py:71
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Jaa rivit"
 
-#: ../plugins/joinlines/joinlines.py:72
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Jaa valitut rivit"
 
@@ -156,6 +156,31 @@ msgstr "Lisää valikon kohta välilehtipalkin piilottamiseksi ja näyttämiseks
 msgid "Show/Hide Tabbar"
 msgstr "Näytä tai piilota välilehtipalkki"
 
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr "Ta_llennetut istunnot"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr "_Tallenna nykyinen istunto"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr "Tallenna nykyinen asiakirjaluettelo uuteena istuntona"
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr "_Hallitse tallennettuja istuntoja..."
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr "Avaa tallennettujen istuntojen hallinta"
+
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr "Palauta istunto \"%s\""
+
 #: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "Istunnon nimi"
@@ -170,6 +195,14 @@ msgid "Session Saver"
 msgstr "Istunnon tallannus"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Save session"
+msgstr "Tallenna istunto"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "Saved Sessions"
+msgstr "Tallennetut istunnot"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
 msgid "Session name:"
 msgstr "Istunnon nimi:"
 
@@ -189,11 +222,11 @@ msgstr "Upota pääteikkuna alapaneeliin."
 msgid "Embedded Terminal"
 msgstr "Upotettu pääteikkuna"
 
-#: ../plugins/terminal/terminal.py:206
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "Pääteikkuna"
 
-#: ../plugins/terminal/terminal.py:227
+#: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
 msgstr "Vai_hda kansiota"
 
@@ -1907,9 +1940,6 @@ msgstr "Vai_hda kansiota"
 #~ msgid "Main toolbar"
 #~ msgstr "Päätyökalupalkki"
 
-#~ msgid "Move the current document to a new window"
-#~ msgstr "Siirrä asiakirja uuteen ikkunaan"
-
 #~ msgid "New"
 #~ msgstr "Uusi"
 
@@ -1927,9 +1957,6 @@ msgstr "Vai_hda kansiota"
 
 #~ msgid "Open a file from a specified location"
 #~ msgstr "Avaa tiedosto tietystä sijainnista"
-
-#~ msgid "Open the gedit manual"
-#~ msgstr "Avaa geditin ohje"
 
 #~ msgid "Paste"
 #~ msgstr "Liitä"
@@ -1976,17 +2003,11 @@ msgstr "Vai_hda kansiota"
 #~ msgid "Revert to a saved version of the file"
 #~ msgstr "Palauta levylle tallennettu versio tiedostosta"
 
-#~ msgid "Save As"
-#~ msgstr "Tallenna nimellä"
-
 #~ msgid "Save _As..."
 #~ msgstr "T_allenna nimellä..."
 
 #~ msgid "Save all open files"
 #~ msgstr "Tallenna kaikki avoimet tiedostot"
-
-#~ msgid "Save the current file"
-#~ msgstr "Tallenna nykyinen tiedosto"
 
 #~ msgid "Save the current file with a different name"
 #~ msgstr "Tallenna nykyinen tiedosto uudella nimellä"
