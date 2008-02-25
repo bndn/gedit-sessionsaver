@@ -1,5 +1,6 @@
-# gedit translation to Catalan.
-# Copyright © 2000-2007 Free Software Foundation, Inc.
+# Traducció del gedit-plugins de l'equip de Softcatalà.
+# Copyright © 2006-2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gedit-plugins package.
 # Softcatalà <gnome@softcatala.net>, 2000, 2001, 2002.
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003.
 # Josep Puigdemont <josep.puigdemont@gmail.com>, 2005, 2006, 2007.
@@ -8,10 +9,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit 2.2.0\n"
+"Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-21 00:18+0200\n"
-"PO-Revision-Date: 2007-09-18 21:40+0100\n"
+"POT-Creation-Date: 2008-02-25 01:25+0100\n"
+"PO-Revision-Date: 2008-02-22 23:15+0100\n"
 "Last-Translator: Francesc Vilches <francesc.vilches@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +28,7 @@ msgid "Bracket Completion"
 msgstr "Compleció de parèntesis"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
 msgid "Character Map"
 msgstr "Mapa de caràcters"
 
@@ -44,21 +45,21 @@ msgstr "Comenteu el codi"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Comenteu o traieu comentaris del bloc de codi seleccionat."
 
-#: ../plugins/codecomment/codecomment.py:210
+#: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
 msgstr "Co_menta el codi"
 
-#: ../plugins/codecomment/codecomment.py:212
+#: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
 msgstr "Comenta el codi seleccionat"
 
 # FIXME: "descomentar" (si no fos que no existeix)
-#: ../plugins/codecomment/codecomment.py:216
+#: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
 msgstr "_Treu el comentari del codi"
 
 # FIXME: "descomentar" (si no fos que no existeix)
-#: ../plugins/codecomment/codecomment.py:218
+#: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
 msgstr "Treu el comentari del codi seleccionat"
 
@@ -121,19 +122,19 @@ msgstr "Uniu diverses línies, o separeu-ne de llargues"
 msgid "Join/Split Lines"
 msgstr "Uniu/separeu línies"
 
-#: ../plugins/joinlines/joinlines.py:68
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr "_Uneix les línies"
 
-#: ../plugins/joinlines/joinlines.py:69
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr "Uneix les línies seleccionades"
 
-#: ../plugins/joinlines/joinlines.py:71
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Divideix les línies"
 
-#: ../plugins/joinlines/joinlines.py:72
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Divideix les línies seleccionades"
 
@@ -163,6 +164,31 @@ msgstr "Afegiu una entrada al menú per mostrar o amagar la barra de pestanyes."
 msgid "Show/Hide Tabbar"
 msgstr "Mostra/amaga la barra de pestanyes"
 
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr "_Sessions desades"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr "_Desa la sessió actual"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr "Desa la llista de documents actual com a una sessió nova"
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr "_Gestiona les sessions desades..."
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr "Obre el gestor de sessions desades"
+
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr "Recupera la sessió «%s»"
+
 #: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "Nom de la sessió"
@@ -178,6 +204,14 @@ msgid "Session Saver"
 msgstr "Desador de sessions"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Save session"
+msgstr "Desa la sessió"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "Saved Sessions"
+msgstr "Sessions desades"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
 msgid "Session name:"
 msgstr "Nom de la sessió:"
 
@@ -197,10 +231,10 @@ msgstr "Incrusteu un terminal al quadre inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal incrustat"
 
-#: ../plugins/terminal/terminal.py:206
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:227
+#: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
 msgstr "C_anvia de directori"
