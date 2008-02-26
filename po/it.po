@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins head\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-04 22:14+0200\n"
-"PO-Revision-Date: 2007-09-03 22:37+0200\n"
+"POT-Creation-Date: 2008-02-26 10:36+0100\n"
+"PO-Revision-Date: 2008-02-25 22:25+0100\n"
 "Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgid "Bracket Completion"
 msgstr "Completamento parentesi"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
 msgid "Character Map"
 msgstr "Tabella caratteri"
 
@@ -39,21 +39,21 @@ msgstr "Commento codice"
 
 #: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
 msgid "Comment out or uncomment a selected block of code."
-msgstr "Commenta o toglie il commento a un blocco di codice."
+msgstr "Commenta o de-commenta a un blocco di codice selezionato."
 
-#: ../plugins/codecomment/codecomment.py:210
+#: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
 msgstr "Commenta co_dice"
 
-#: ../plugins/codecomment/codecomment.py:212
+#: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
 msgstr "Commenta il codice selezionato"
 
-#: ../plugins/codecomment/codecomment.py:216
+#: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
-msgstr "To_gli commento"
+msgstr "D_e-commenta codice"
 
-#: ../plugins/codecomment/codecomment.py:218
+#: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
 msgstr "Toglie il commento al codice selezionato"
 
@@ -64,7 +64,9 @@ msgstr "Selettore colore"
 
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr "Sceglie un colore e inserisce il suo valore esadecimale."
+msgstr ""
+"Seleziona un colore da un dialogo e inserisce la sua rappresentazione "
+"esadecimale."
 
 #: ../plugins/colorpicker/colorpicker.py:73
 msgid "Pick _Color..."
@@ -120,21 +122,21 @@ msgid "Join/Split Lines"
 msgstr "Unisce/Spezza righe"
 
 # (NdT) voce di menù
-#: ../plugins/joinlines/joinlines.py:68
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr "_Unisci righe"
 
 # (NdT) suggerimento
-#: ../plugins/joinlines/joinlines.py:69
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr "Unisce le righe selezionate"
 
 # (NdT) voce di menù
-#: ../plugins/joinlines/joinlines.py:71
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Dividi righe"
 
-#: ../plugins/joinlines/joinlines.py:72
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Divide le righe selezionate"
 
@@ -163,6 +165,31 @@ msgstr ""
 msgid "Show/Hide Tabbar"
 msgstr "Mostra/Nascondi barra delle schede"
 
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr "Sessioni sal_vate"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr "_Salva sessione attuale"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr "Salva l'elenco dei documenti attuali come una nuova sessione"
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr "_Gestione sessioni salvate..."
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr "Apre il gestore delle sessioni salvate"
+
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr "Ripristino sessione «%s»"
+
 # (NdT) titolo dialogo
 #: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
@@ -178,6 +205,14 @@ msgid "Session Saver"
 msgstr "Salva sessione"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Save session"
+msgstr "Salva sessione"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "Saved Sessions"
+msgstr "Sessioni salvate"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
 msgid "Session name:"
 msgstr "Nome sessione:"
 
@@ -197,11 +232,11 @@ msgstr "Incorpora un terminale nel riquadro inferiore."
 msgid "Embedded Terminal"
 msgstr "Terminale incorporato"
 
-#: ../plugins/terminal/terminal.py:206
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "Terminale"
 
-#: ../plugins/terminal/terminal.py:227
+#: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
 msgstr "Cam_bia directory"
 
