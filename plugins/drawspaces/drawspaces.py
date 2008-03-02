@@ -38,10 +38,22 @@ except:
     _ = lambda s: s
 
 GCONF_KEY_BASE = '/apps/gedit-2/plugins/drawspaces'
+GCONF_KEY_ENABLE = '/apps/gedit-2/plugins/drawspaces/enable'
 GCONF_KEY_COLOR = '/apps/gedit-2/plugins/drawspaces/color'
 GCONF_KEY_DRAW_TABS = '/apps/gedit-2/plugins/drawspaces/draw_tabs'
 GCONF_KEY_DRAW_SPACES = '/apps/gedit-2/plugins/drawspaces/draw_spaces'
 GCONF_KEY_DRAW_NBSP = '/apps/gedit-2/plugins/drawspaces/draw_nbsp'
+
+ui_str = """
+<ui>
+  <menubar name="MenuBar">
+    <menu name="ViewMenu" action="View">
+      <separator />
+      <menuitem name="DrawSpacesMenu" action="DrawSpaces"/>
+    </menu>
+  </menubar>
+</ui>
+"""
 
 class DrawSpacesViewHelper(object):
     def __init__(self, plugin, view):
@@ -51,6 +63,14 @@ class DrawSpacesViewHelper(object):
 
     def deactivate(self):
         self._view.disconnect(self._handler_id)
+
+    def enable_draw_spaces(self, enable):
+        if enable and self._handler_id is None:
+            self._handler_id = self._view.connect('event-after',
+                                                   self.on_event_after)
+        elif not enable and self._handler_id is not None:
+            self._view.disconnect(self._handler_id)
+            self._handler_id = None
 
     def on_event_after(self, view, event):
         if event.type != gtk.gdk.EXPOSE or \
@@ -127,6 +147,51 @@ class DrawSpacesViewHelper(object):
         cr.stroke()
 
 
+class DrawSpacesWindowHelper(object):
+    def __init__(self, plugin, window):
+        self._window = window
+        self._plugin = plugin
+        self.insert_menu()
+
+    def deactivate(self):
+        self.set_tab_added_handler(None)
+        self.remove_menu()
+        self._window = None
+        self._plugin = None
+
+    def set_tab_added_handler(self, handler):
+        if handler is None:
+            if self._handler_id:
+                self._window.disconnect(handler_id)
+        else:
+            self.handler_id = self._window.connect("tab-added", handler)
+
+    def on_active_toggled(self, checkbox):
+        gconf_set_bool(GCONF_KEY_ENABLE, checkbox.get_active())
+
+    def insert_menu(self):
+        manager = self._window.get_ui_manager()
+
+        self._action_group = gtk.ActionGroup("DrawSpacesPluginActions")
+        self._action_group.add_toggle_actions([("DrawSpaces", None,
+                                                _("Show White Space"), None,
+                                                _("Show spaces and tabs"),
+                                                self.on_active_toggled,
+                                                self._plugin._enable)])
+
+        manager.insert_action_group(self._action_group, -1)
+        self._ui_id = manager.add_ui_from_string(ui_str)
+
+    def remove_menu(self):
+        manager = self._window.get_ui_manager()
+        manager.remove_ui(self._ui_id)
+        manager.remove_action_group(self._action_group)
+        manager.ensure_update()
+
+    def sync_menu(self):
+        self._action_group.get_action("DrawSpaces").set_active(self._plugin._enable)
+
+
 class DrawSpacesConfigDialog(object):
     GLADE_FILE = os.path.join(os.path.dirname(__file__), "drawspaces.glade")
 
@@ -187,6 +252,8 @@ class DrawSpacesPlugin(gedit.Plugin):
     def __init__(self):
         gedit.Plugin.__init__(self)
 
+        self._enable = gconf_get_bool(GCONF_KEY_ENABLE, True)
+
         # TODO: there should be a GUI to config those
         self._color = gtk.gdk.color_parse(gconf_get_str(GCONF_KEY_COLOR, '#CCCCCC'))
         self._draw_tabs = gconf_get_bool(GCONF_KEY_DRAW_TABS, True)
@@ -194,9 +261,22 @@ class DrawSpacesPlugin(gedit.Plugin):
         self._draw_nbsp = gconf_get_bool(GCONF_KEY_DRAW_NBSP, True)
         gconf.client_get_default().notify_add(GCONF_KEY_BASE, self.on_gconf_notify)
 
+    def enable_draw_spaces(self, enable):
+        if (self._enable != enable):
+            self._enable = enable
+            for window in gedit.app_get_default().get_windows():
+                whelper = window.get_data(self.WINDOW_DATA_KEY)
+                whelper.sync_menu()
+                for view in window.get_views():
+                    helper = view.get_data(self.VIEW_DATA_KEY)
+                    helper.enable_draw_spaces(enable)
+
     def on_gconf_notify(self, client, id, entry, data):
         key = entry.get_key()
-        if key == GCONF_KEY_COLOR:
+        if key == GCONF_KEY_ENABLE:
+            self.enable_draw_spaces(entry.get_value().get_bool())
+
+        elif key == GCONF_KEY_COLOR:
             self._color = gtk.gdk.color_parse(entry.get_value().get_string())
         elif key == GCONF_KEY_DRAW_TABS:
             self._draw_tabs = entry.get_value().get_bool()
@@ -209,29 +289,30 @@ class DrawSpacesPlugin(gedit.Plugin):
         for window in gedit.app_get_default().get_windows():
             window.get_active_view().queue_draw()
 
-    def add_helper(self, view):
+    def add_view_helper(self, view):
         helper = DrawSpacesViewHelper(self, view)
+        helper.enable_draw_spaces(self._enable)
         view.set_data(self.VIEW_DATA_KEY, helper)
     
-    def remove_helper(self, view):
+    def remove_view_helper(self, view):
         view.get_data(self.VIEW_DATA_KEY).deactivate()
         view.set_data(self.VIEW_DATA_KEY, None)
 
     def activate(self, window):
-        for view in window.get_views():
-            self.add_helper(view)
-            
-        handler_id = window.connect("tab-added",
-                                    lambda w, t: self.add_helper(t.get_view()))
-        window.set_data(self.WINDOW_DATA_KEY, handler_id)
+        whelper = DrawSpacesWindowHelper(self, window)
+        window.set_data(self.WINDOW_DATA_KEY, whelper)
 
-    def deactivate(self, window):
-        handler_id = window.get_data(self.WINDOW_DATA_KEY)
-        window.disconnect(handler_id)
-        window.set_data(self.WINDOW_DATA_KEY, None)
-        
         for view in window.get_views():
-            self.remove_helper(view)
+            self.add_view_helper(view)
+        whelper.set_tab_added_handler(lambda w, t: self.add_view_helper(t.get_view()))
+    
+    def deactivate(self, window):
+        whelper = window.get_data(self.WINDOW_DATA_KEY)
+        whelper.deactivate()
+        window.set_data(self.WINDOW_DATA_KEY, None)
+
+        for view in window.get_views():
+            self.remove_view_helper(view)
 
     def update_ui(self, window):
         pass
