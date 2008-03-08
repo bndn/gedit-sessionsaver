@@ -2,15 +2,16 @@
 # Copyright (C) 2004 THE gedit-plugins'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gedit-plugins package.
 # Gareth Owen <gowen72@yahoo.com>, 2004.
-#
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-16 07:33+0100\n"
-"PO-Revision-Date: 2007-05-16 07:33-0000\n"
+"POT-Creation-Date: 2008-03-08 11:49+0000\n"
+"PO-Revision-Date: 2008-03-08 11:49+0000\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
-"Language-Team: \n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,7 +25,7 @@ msgid "Bracket Completion"
 msgstr "Bracket Completion"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
 msgid "Character Map"
 msgstr "Character Map"
 
@@ -40,19 +41,19 @@ msgstr "Code comment"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Comment out or uncomment a selected block of code."
 
-#: ../plugins/codecomment/codecomment.py:249
+#: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
 msgstr "Co_mment Code"
 
-#: ../plugins/codecomment/codecomment.py:251
+#: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
 msgstr "Comment the selected code"
 
-#: ../plugins/codecomment/codecomment.py:255
+#: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
 msgstr "U_ncomment Code"
 
-#: ../plugins/codecomment/codecomment.py:257
+#: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
 msgstr "Uncomment the selected code"
 
@@ -63,21 +64,22 @@ msgstr "Colour Picker"
 
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr "Pick a colour from a dialogue and insert its hexadecimal representation."
+msgstr ""
+"Pick a colour from a dialogue and insert its hexadecimal representation."
 
 #: ../plugins/colorpicker/colorpicker.py:73
-msgid "_Color picker"
-msgstr "_Colour picker"
+msgid "Pick _Color..."
+msgstr "Pick _Colour..."
 
 #: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "Pick a colour from a dialogue"
 
 #: ../plugins/colorpicker/colorpicker.py:220
-msgid "Color picker"
-msgstr "Colour picker"
+msgid "Pick Color"
+msgstr "Pick Colour"
 
-#: ../plugins/colorpicker/colorpicker.py:228
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "_Insert"
 
@@ -90,16 +92,28 @@ msgid "Draw Spaces and Tabs"
 msgstr "Draw Spaces and Tabs"
 
 #: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "Draw non-breaking spaces"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
 msgid "Draw spaces"
 msgstr "Draw spaces"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.glade.h:3
 msgid "Draw tabs"
 msgstr "Draw tabs"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.glade.h:4
 msgid "Drawing color:"
 msgstr "Drawing colour:"
+
+#: ../plugins/drawspaces/drawspaces.py:177
+msgid "Show White Space"
+msgstr "Show White Space"
+
+#: ../plugins/drawspaces/drawspaces.py:178
+msgid "Show spaces and tabs"
+msgstr "Show spaces and tabs"
 
 #. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
@@ -110,19 +124,19 @@ msgstr "Join several lines or split long ones"
 msgid "Join/Split Lines"
 msgstr "Join/Split Lines"
 
-#: ../plugins/joinlines/joinlines.py:68
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr "_Join Lines"
 
-#: ../plugins/joinlines/joinlines.py:69
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr "Join the selected lines"
 
-#: ../plugins/joinlines/joinlines.py:71
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Split Lines"
 
-#: ../plugins/joinlines/joinlines.py:72
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Split the selected lines"
 
@@ -150,6 +164,31 @@ msgstr "Add a menu entry to show/hide the tabbar."
 msgid "Show/Hide Tabbar"
 msgstr "Show/Hide Tabbar"
 
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr "Sa_ved sessions"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr "_Save current session"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr "Save the current document list as a new session"
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr "_Manage saved sessions..."
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr "Open the saved session manager"
+
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr "Recover '%s' session"
+
 #: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "Session Name"
@@ -164,6 +203,14 @@ msgid "Session Saver"
 msgstr "Session Saver"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Save session"
+msgstr "Save session"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "Saved Sessions"
+msgstr "Saved Sessions"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
 msgid "Session name:"
 msgstr "Session name:"
 
@@ -183,63 +230,93 @@ msgstr "Embed a terminal in the bottom pane."
 msgid "Embedded Terminal"
 msgstr "Embedded Terminal"
 
-#: ../plugins/terminal/terminal.py:206
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:227
+#: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
 msgstr "C_hange Directory"
 
+#~ msgid "_Color picker"
+#~ msgstr "_Colour picker"
+
+#~ msgid "Color picker"
+#~ msgstr "Colour picker"
+
 #~ msgid "gtk-cancel"
 #~ msgstr "gtk-cancel"
+
 #~ msgid "gtk-close"
 #~ msgstr "gtk-close"
+
 #~ msgid "gtk-delete"
 #~ msgstr "gtk-delete"
+
 #~ msgid "gtk-open"
 #~ msgstr "gtk-open"
+
 #~ msgid "gtk-save"
 #~ msgstr "gtk-save"
+
 #~ msgid "_ASCII Table"
 #~ msgstr "_ASCII Table"
+
 #~ msgid "Pop-up a dialog containing an ASCII Table"
 #~ msgstr "Pop-up a dialogue containing an ASCII Table"
+
 #~ msgid "Char"
 #~ msgstr "Char"
+
 #~ msgid "Dec#"
 #~ msgstr "Dec#"
+
 #~ msgid "Hex#"
 #~ msgstr "Hex#"
+
 #~ msgid "Name"
 #~ msgstr "Name"
+
 #~ msgid "ASCII Table"
 #~ msgstr "ASCII Table"
+
 #~ msgid "ASCII table"
 #~ msgstr "ASCII table"
+
 #~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
 #~ msgstr ""
 #~ "This plugin displays a pop-up dialogue which contains an ASCII Table."
+
 #~ msgid "Open CVS Chan_geLogs"
 #~ msgstr "Open CVS Chan_geLogs"
+
 #~ msgid "Searches for ChangeLogs in the current document and opens them"
 #~ msgstr "Searches for ChangeLogs in the current document and opens them"
+
 #~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
 #~ msgstr "A plugin that opens ChangeLogs found in CVS commit messages."
+
 #~ msgid "CVS ChangeLog"
 #~ msgstr "CVS ChangeLog"
+
 #~ msgid "Co_mpare Files..."
 #~ msgstr "Co_mpare Files..."
+
 #~ msgid "Makes a diff file from two documents or files"
 #~ msgstr "Makes a diff file from two documents or files"
+
 #~ msgid "Compare Files"
 #~ msgstr "Compare Files"
+
 #~ msgid "C_ompare"
 #~ msgstr "C_ompare"
+
 #~ msgid "Executed command"
 #~ msgstr "Executed command"
+
 #~ msgid "The two documents you selected are the same."
 #~ msgstr "The two documents you selected are the same."
+
 #~ msgid ""
 #~ "The \"first\" file you selected does not exist.\n"
 #~ "\n"
@@ -248,6 +325,7 @@ msgstr "C_hange Directory"
 #~ "The \"first\" file you selected does not exist.\n"
 #~ "\n"
 #~ "Please provide a valid file."
+
 #~ msgid ""
 #~ "The \"second\" file you selected does not exist.\n"
 #~ "\n"
@@ -256,12 +334,16 @@ msgstr "C_hange Directory"
 #~ "The \"second\" file you selected does not exist.\n"
 #~ "\n"
 #~ "Please provide a valid file."
+
 #~ msgid "The two files you selected are the same."
 #~ msgstr "The two files you selected are the same."
+
 #~ msgid "The \"first\" document contains no text."
 #~ msgstr "The \"first\" document contains no text."
+
 #~ msgid "The \"second\" document contains no text."
 #~ msgstr "The \"second\" document contains no text."
+
 #~ msgid ""
 #~ "Impossible to compare the selected documents.\n"
 #~ "\n"
@@ -270,6 +352,7 @@ msgstr "C_hange Directory"
 #~ "Impossible to compare the selected documents.\n"
 #~ "\n"
 #~ "gedit could not create a temporary file."
+
 #~ msgid ""
 #~ "Impossible to compare the selected documents.\n"
 #~ "\n"
@@ -278,8 +361,10 @@ msgstr "C_hange Directory"
 #~ "Impossible to compare the selected documents.\n"
 #~ "\n"
 #~ "Error executing the diff command."
+
 #~ msgid "No differences were found between the selected documents."
 #~ msgstr "No differences were found between the selected documents."
+
 #~ msgid ""
 #~ "Impossible to compare the selected documents.\n"
 #~ "\n"
@@ -288,54 +373,76 @@ msgstr "C_hange Directory"
 #~ "Impossible to compare the selected documents.\n"
 #~ "\n"
 #~ "The result contains invalid UTF-8 data."
+
 #~ msgid "*"
 #~ msgstr "*"
+
 #~ msgid "Choose the files to compare."
 #~ msgstr "Choose the files to compare."
+
 #~ msgid "Compare files..."
 #~ msgstr "Compare files..."
+
 #~ msgid "F_rom document"
 #~ msgstr "F_rom document"
+
 #~ msgid "First"
 #~ msgstr "First"
+
 #~ msgid "First file from disk"
 #~ msgstr "First file from disk"
+
 #~ msgid "First file from open document"
 #~ msgstr "First file from open document"
+
 #~ msgid "From _document"
 #~ msgstr "From _document"
+
 #~ msgid "From a _file on disk"
 #~ msgstr "From a _file on disk"
+
 #~ msgid "From a file o_n disk"
 #~ msgstr "From a file o_n disk"
+
 #~ msgid "Ignore _blanks (-b option)"
 #~ msgstr "Ignore _blanks (-b option)"
+
 #~ msgid "Note that this option is only supported by GNU diff"
 #~ msgstr "Note that this option is only supported by GNU diff"
+
 #~ msgid "Second"
 #~ msgstr "Second"
+
 #~ msgid "Second file from disk"
 #~ msgstr "Second file from disk"
+
 #~ msgid "Second file from open document"
 #~ msgstr "Second file from open document"
+
 #~ msgid "Select the \"first\" file..."
 #~ msgstr "Select the \"first\" file..."
+
 #~ msgid "Select the \"second\" file..."
 #~ msgstr "Select the \"second\" file..."
+
 #~ msgid "Select the first file to compare"
 #~ msgstr "Select the first file to compare"
+
 #~ msgid "Select the first open document to compare"
 #~ msgstr "Select the first open document to compare"
+
 #~ msgid "Select the second file to compare"
 #~ msgstr "Select the second file to compare"
+
 #~ msgid "Select the second open document to compare"
 #~ msgstr "Select the second open document to compare"
+
 #~ msgid "Use the _unified output format (-u option)"
 #~ msgstr "Use the _unified output format (-u option)"
+
 #~ msgid ""
 #~ "The Compare Files plugin uses the \"diff\" program to compare two "
 #~ "documents or files on disk."
 #~ msgstr ""
 #~ "The Compare Files plugin uses the \"diff\" program to compare two "
 #~ "documents or files on disk."
-
