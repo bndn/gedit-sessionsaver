@@ -1,15 +1,10 @@
 dnl Process this file with autoconf to produce a configure script.
 
-GEDIT_MAJOR=2.20.0
-GEDIT_PLUGINS_MAJOR=2.20.0
-
-AC_INIT(gedit-plugins, 2.20.0, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
+AC_INIT(gedit-plugins, 2.22.0, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
 
 AC_CONFIG_SRCDIR([plugins])
 AC_CONFIG_MACRO_DIR([m4])
 AC_PREFIX_PROGRAM([gedit])
-
-AC_SUBST(GEDIT_PLUGINS_MAJOR)
 
 AC_PREREQ(2.59)
 
