@@ -1,19 +1,19 @@
 # Hungarian translation of gedit-plugins.
-# Copyright (C) 2000-2004, 2006, 2007 Free Software Foundation, Inc.
+# Copyright (C) 2000-2004, 2006, 2007, 2008 Free Software Foundation, Inc.
 #
 # Szabolcs Ban <shooby@gnome.hu>, 2000.
 # Emese Kovacs <emese@gnome.hu>, 2003.
 # Laszlo Dvornik <dvornikl@mailbox.hu>, 2004.
-# Gabor Kelemen <kelemeng@gnome.hu>, 2006, 2007.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2006, 2007, 2008.
 # Gabor SUVEG <gabor@suveg.hu>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-17 03:29+0100\n"
-"PO-Revision-Date: 2007-09-14 09:40+0200\n"
+"POT-Creation-Date: 2008-03-02 08:25+0000\n"
+"PO-Revision-Date: 2008-03-16 01:52+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
-"Language-Team:  <hu@li.org>\n"
+"Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +29,7 @@ msgid "Bracket Completion"
 msgstr "Zárójel-kiegészítés"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
 msgid "Character Map"
 msgstr "Karaktertábla"
 
@@ -45,19 +45,19 @@ msgstr "Kód megjegyzés"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Kijelölt kódblokk megjegyzésbe tétele vagy kivétele onnan."
 
-#: ../plugins/codecomment/codecomment.py:249
+#: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
 msgstr "A kó_d megjegyzés"
 
-#: ../plugins/codecomment/codecomment.py:251
+#: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
 msgstr "A kijelölt kód megjegyzésé tétele"
 
-#: ../plugins/codecomment/codecomment.py:255
+#: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
 msgstr "A kód _nem megjegyzés"
 
-#: ../plugins/codecomment/codecomment.py:257
+#: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
 msgstr "A kijelölt kód kivétele megjegyzésből"
 
@@ -112,6 +112,14 @@ msgstr "Tabok rajzolása"
 msgid "Drawing color:"
 msgstr "Rajzszín:"
 
+#: ../plugins/drawspaces/drawspaces.py:177
+msgid "Show White Space"
+msgstr "Üres helyek megjelenítése"
+
+#: ../plugins/drawspaces/drawspaces.py:178
+msgid "Show spaces and tabs"
+msgstr "Szóközök és tabok megjelenítése"
+
 #. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
@@ -121,19 +129,19 @@ msgstr "Több sor egyesítése vagy hosszúak szétvágása"
 msgid "Join/Split Lines"
 msgstr "Sorok egyesítése/szétvágása"
 
-#: ../plugins/joinlines/joinlines.py:68
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr "Sorok _egyesítése"
 
-#: ../plugins/joinlines/joinlines.py:69
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr "A kijelölt sorok egyesítése"
 
-#: ../plugins/joinlines/joinlines.py:71
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "Sorok szét_vágása"
 
-#: ../plugins/joinlines/joinlines.py:72
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "A kijelölt sorok szétvágása"
 
@@ -161,6 +169,31 @@ msgstr "Menübejegyzés hozzáadása a lapsáv megjelenítéséhez/elrejtéséhe
 msgid "Show/Hide Tabbar"
 msgstr "Lapsáv megjelenítése/elrejtése"
 
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr "Mentett m_unkamenetek"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr "Jelenlegi munkamenet _mentése"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr "A jelenlegi dokumentumlista mentése új munkamenetként"
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr "Mentett munkamenetek _kezelése..."
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr "A mentett munkamenetek kezelése"
+
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr "\"%s\" munkamenet helyreállítása"
+
 #: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "Munkamenet neve"
@@ -175,6 +208,14 @@ msgid "Session Saver"
 msgstr "Munkamenetmentő"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Save session"
+msgstr "Munkamenet mentése"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "Saved Sessions"
+msgstr "Mentett munkamenetek"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
 msgid "Session name:"
 msgstr "Munkamenetnév:"
 
@@ -188,17 +229,17 @@ msgstr "Okos szóközök"
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
 msgid "Embed a terminal in the bottom pane."
-msgstr "Terminál beágyazása az alsó alaktáblába."
+msgstr "Terminál beágyazása az alsó ablaktáblába."
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
 msgid "Embedded Terminal"
 msgstr "Beágyazott terminál"
 
-#: ../plugins/terminal/terminal.py:206
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "Terminál"
 
-#: ../plugins/terminal/terminal.py:227
+#: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
 msgstr "Könyvtár_váltás"
 
