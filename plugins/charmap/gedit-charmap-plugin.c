@@ -31,8 +31,13 @@
 #include <gedit/gedit-panel.h>
 #include <gedit/gedit-document.h>
 #include <gedit/gedit-prefs-manager.h>
+
+#ifdef HAVE_GUCHARMAP_2
+#include <gucharmap/gucharmap.h>
+#else
 #include <gucharmap/gucharmap-table.h>
 #include <gucharmap/gucharmap-unicode-info.h>
+#endif
 
 #define WINDOW_DATA_KEY	"GeditCharmapPluginWindowData"
 
@@ -68,13 +73,15 @@ gedit_charmap_plugin_finalize (GObject *object)
 static void
 free_window_data (WindowData *data)
 {
-	g_return_if_fail (data != NULL);
-	
-	g_free (data);
+	g_slice_free (WindowData, data);
 }
 
 static void
+#ifdef HAVE_GUCHARMAP_2
+on_table_status_message (GucharmapChartable *chartable,
+#else
 on_table_status_message (GucharmapTable *chartable,
+#endif
 			 const gchar    *message,
 			 GeditWindow    *window)
 {
@@ -92,14 +99,25 @@ on_table_status_message (GucharmapTable *chartable,
 		gtk_statusbar_push (statusbar, data->context_id, message);
 }
 
+#ifdef HAVE_GUCHARMAP_2
+on_table_sync_active_char (GucharmapChartable *chartable,
+			   GParamSpec         *psepc,
+			   GeditWindow        *window)
+#else
 static void
 on_table_set_active_char (GucharmapTable *chartable,
 			  gunichar        wc,
 			  GeditWindow    *window)
+#endif
 {
 	GString *gs;
 	const gchar **temps;
 	gint i;
+#ifdef HAVE_GUCHARMAP_2
+        gunichar wc;
+
+        wc = gucharmap_chartable_get_active_character (chartable);
+#endif
 
 	gs = g_string_new (NULL);
 	g_string_append_printf (gs, "U+%4.4X %s", wc, 
@@ -132,30 +150,50 @@ on_table_focus_out_event (GtkWidget      *drawing_area,
 			  GdkEventFocus  *event,
 			  GeditWindow    *window)
 {
+#ifdef HAVE_GUCHARMAP_2
+	GucharmapChartable *chartable;
+#else
 	GucharmapTable *chartable;
+#endif
 	WindowData *data;
 	
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_val_if_fail (data != NULL, FALSE);
 
+#ifdef HAVE_GUCHARMAP_2
+	chartable = gedit_charmap_panel_get_chartable
+					(GEDIT_CHARMAP_PANEL (data->panel));
+#else
 	chartable = gedit_charmap_panel_get_table
 					(GEDIT_CHARMAP_PANEL (data->panel));
+#endif
 
 	on_table_status_message (chartable, NULL, window);
 	return FALSE;
 }
 
+#ifdef HAVE_GUCHARMAP_2
+static void
+on_table_activate (GucharmapChartable *chartable,
+		   GeditWindow *window)
+#else
 static void
 on_table_activate (GucharmapTable *chartable, 
 		   gunichar        wc, 
 		   GeditWindow    *window)
+#endif
 {
 	GtkTextView   *view;
 	GtkTextBuffer *document;
 	GtkTextIter start, end;
 	gchar buffer[6];
 	gchar length;
+#ifdef HAVE_GUCHARMAP_2
+        gunichar wc;
+
+        wc = gucharmap_chartable_get_active_character (chartable);
+#endif
 	
 	g_return_if_fail (gucharmap_unichar_validate (wc));
 	
@@ -185,37 +223,65 @@ static GtkWidget *
 create_charmap_panel (GeditWindow *window)
 {
 	GtkWidget      *panel;
+#ifdef HAVE_GUCHARMAP_2
+        GucharmapChartable *chartable;
+#else
 	GucharmapTable *table;
+#endif
 	gchar          *font;
 
 	panel = gedit_charmap_panel_new ();
-	table = gedit_charmap_panel_get_table (GEDIT_CHARMAP_PANEL (panel));
 
 	/* Use the same font as the document */
 	font = gedit_prefs_manager_get_editor_font ();
+
+#ifdef HAVE_GUCHARMAP_2
+	chartable = gedit_charmap_panel_get_chartable (GEDIT_CHARMAP_PANEL (panel));
+	gucharmap_chartable_set_font (chartable, font);
+#else
+	table = gedit_charmap_panel_get_table (GEDIT_CHARMAP_PANEL (panel));
 	gucharmap_table_set_font (table, font);
+#endif
+
 	g_free (font);
 
-	g_signal_connect (table,
+#ifdef HAVE_GUCHARMAP_2
+	g_signal_connect (chartable,
+			  "notify::active-character",
+			  G_CALLBACK (on_table_sync_active_char),
+			  window);
+	g_signal_connect (chartable,
+			  "focus-out-event",
+			  G_CALLBACK (on_table_focus_out_event),
+			  window);
+	g_signal_connect (chartable,
 			  "status-message",
 			  G_CALLBACK (on_table_status_message),
 			  window);
+	g_signal_connect (chartable,
+			  "activate", 
+			  G_CALLBACK (on_table_activate),
+			  window);
 
+#else
 	g_signal_connect (table,
 			  "set-active-char",
 			  G_CALLBACK (on_table_set_active_char),
 			  window);
-
 	/* Note: GucharmapTable does not provide focus-out-event ... */
 	g_signal_connect (table->drawing_area,
 			  "focus-out-event",
 			  G_CALLBACK (on_table_focus_out_event),
 			  window);
-
+	g_signal_connect (table,
+			  "status-message",
+			  G_CALLBACK (on_table_status_message),
+			  window);
 	g_signal_connect (table,
 			  "activate", 
 			  G_CALLBACK (on_table_activate),
 			  window);
+#endif /* HAVE_GUCHARMAP_2 */
 
 	gtk_widget_show_all (panel);
 
@@ -236,7 +302,7 @@ impl_activate (GeditPlugin *plugin,
 
 	panel = gedit_window_get_side_panel (window);
 
-	data = g_new (WindowData, 1);
+	data = g_slice_new (WindowData);
 
 	theme = gtk_icon_theme_get_default ();
 	
@@ -271,8 +337,12 @@ impl_deactivate	(GeditPlugin *plugin,
 		 GeditWindow *window)
 {
 	GeditPanel *panel;
-	GucharmapTable *chartable;
 	WindowData *data;
+#ifdef HAVE_GUCHARMAP_2
+	GucharmapChartable *chartable;
+#else
+	GucharmapTable *chartable;
+#endif
 
 	gedit_debug (DEBUG_PLUGINS);
 
@@ -280,8 +350,13 @@ impl_deactivate	(GeditPlugin *plugin,
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
 
+#ifdef HAVE_GUCHARMAP_2
+	chartable = gedit_charmap_panel_get_chartable
+					(GEDIT_CHARMAP_PANEL (data->panel));
+#else
 	chartable = gedit_charmap_panel_get_table
 					(GEDIT_CHARMAP_PANEL (data->panel));
+#endif
 	on_table_status_message (chartable, NULL, window);
 
 	panel = gedit_window_get_side_panel (window);

@@ -1,3 +1,14 @@
+2008-03-21  Christian Persch  <chpe@gnome.org>
+
+	* configure.ac:
+	* plugins/charmap/Makefile.am:
+	* plugins/charmap/gedit-charmap-panel.c:
+	(on_chapter_view_selection_changed), (gedit_charmap_panel_init),
+	(gedit_charmap_panel_get_chartable):
+	* plugins/charmap/gedit-charmap-panel.h:
+	* plugins/charmap/gedit-charmap-plugin.c: (free_window_data),
+	(on_table_status_message): Allow building with either gucharmap
+	stable, or gucharmap trunk. Bug #523694.
 
 ==== gedit-plugins 2.22.0 ====
 

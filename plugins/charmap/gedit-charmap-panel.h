@@ -26,7 +26,12 @@
 #include <glib.h>
 #include <glib-object.h>
 #include <gtk/gtk.h>
+
+#ifdef HAVE_GUCHARMAP_2
+#include <gucharmap/gucharmap.h>
+#else
 #include <gucharmap/gucharmap-table.h>
+#endif
 
 G_BEGIN_DECLS
 
@@ -72,7 +77,12 @@ struct _GeditCharmapPanelClass
 GType		 gedit_charmap_panel_get_type	   (void) G_GNUC_CONST;
 GType		 gedit_charmap_panel_register_type (GTypeModule * module);
 GtkWidget	*gedit_charmap_panel_new	   (void);
-GucharmapTable  *gedit_charmap_panel_get_table	   (GeditCharmapPanel *panel);
+
+#ifdef HAVE_GUCHARMAP_2
+GucharmapChartable *gedit_charmap_panel_get_chartable (GeditCharmapPanel *panel);
+#else
+GucharmapTable *gedit_charmap_panel_get_table	   (GeditCharmapPanel *panel);
+#endif
 
 G_END_DECLS
 
