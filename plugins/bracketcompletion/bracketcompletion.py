@@ -39,6 +39,7 @@ language_brackets = {
     'xml': { '<' : '>' },
 }
 
+
 class BracketCompletionViewHelper(object):
     def __init__(self, view):
         self._view = view
@@ -91,6 +92,13 @@ class BracketCompletionViewHelper(object):
             self._brackets.update(common_brackets)
         else:
             self._brackets = common_brackets
+
+        # get the corresponding keyvals
+        self._bracket_keyvals = set()
+        for b in self._brackets:
+            kv = gtk.gdk.unicode_to_keyval(ord(b[-1]))
+            if (kv):
+                self._bracket_keyvals.add(kv)
 
     def get_current_token(self):
         end = self._doc.get_iter_at_mark(self._doc.get_insert())
@@ -183,7 +191,7 @@ class BracketCompletionViewHelper(object):
     def on_event_after(self, view, event):
         if event.type != gdk.KEY_PRESS or \
            event.state & (gdk.CONTROL_MASK | gdk.MOD1_MASK) or \
-           event.keyval < 32 or event.keyval > 126:
+           event.keyval not in self._bracket_keyvals:
             return
 
         word, start, end = self.get_current_token()
