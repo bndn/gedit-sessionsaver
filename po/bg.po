@@ -1,17 +1,18 @@
-# Bulgarian translation of gedit for GNOME 2.
-# Copyright (C) 2002, 2003, 2005, 2006 Free Software Foundation.
-# This file is distributed under the same license as the gedit package.
+# Bulgarian translation of gedit-plugins po-file.
+# Copyright (C) 2002, 2003, 2005, 2006, 2008 Free Software Foundation.
+# This file is distributed under the same license as the gedit-plugins package.
 # Evgeni Boevski <linkej@yahoo.com>, 2002.
 # Yanko Kaneti <yaneti@declera.com>, 2003.
 # Alexander Shopov <ash@contact.bg>, 2005, 2006.
+# Yavor Doganov <yavor@gnu.org>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins HEAD\n"
+"Project-Id-Version: gedit-plugins trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-21 10:22+0300\n"
-"PO-Revision-Date: 2006-09-21 10:43+0300\n"
-"Last-Translator: Alexander Shopov <ash@contact.bg>\n"
+"POT-Creation-Date: 2008-04-13 22:42+0300\n"
+"PO-Revision-Date: 2008-04-08 18:08+0300\n"
+"Last-Translator: Yavor Doganov <yavor@gnu.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +28,7 @@ msgid "Bracket Completion"
 msgstr "Затваряне на скобите"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:320
 msgid "Character Map"
 msgstr "Таблица със знаци"
 
@@ -43,19 +44,19 @@ msgstr "Коментиране на код"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Превръщане на част от кода в коментар и обратно."
 
-#: ../plugins/codecomment/codecomment.py:240
+#: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
 msgstr "_Коментиране"
 
-#: ../plugins/codecomment/codecomment.py:242
+#: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
 msgstr "Превръщане на избраното в коментар"
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
 msgstr "_Разкоментиране"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
 msgstr "Махане на коментирането на избраното"
 
@@ -66,24 +67,59 @@ msgstr "Цветна палитра"
 
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr "Избор на цвят от диалогов прозорец и вмъкване на шестдесетичното му представяне."
+msgstr ""
+"Избор на цвят от диалогов прозорец и вмъкване на шестдесетичното му "
+"представяне."
 
-#: ../plugins/colorpicker/colorpicker.py:70
-msgid "_Color picker"
-msgstr "_Цветна палитра"
+#: ../plugins/colorpicker/colorpicker.py:73
+msgid "Pick _Color..."
+msgstr "Избор на _цвят…"
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "Избор на цвят от диалогов прозорец"
 
-#: ../plugins/colorpicker/colorpicker.py:217
-msgid "Color picker"
-msgstr "Цветна палитра"
+#: ../plugins/colorpicker/colorpicker.py:220
+msgid "Pick Color"
+msgstr "Избор на цвят"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "_Вмъкване"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "Изобразяване на шпации"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "Изобразяване на шпации и табулатори"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "Изобразяване на шпации, които не се пренасят"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw spaces"
+msgstr "Изобразяване на шпации"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Draw tabs"
+msgstr "Изобразяване на табулатори"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:4
+msgid "Drawing color:"
+msgstr "Цвят за изобразяване:"
+
+#: ../plugins/drawspaces/drawspaces.py:177
+msgid "Show White Space"
+msgstr "Показване на шпации"
+
+#: ../plugins/drawspaces/drawspaces.py:178
+msgid "Show spaces and tabs"
+msgstr "Показване на шпации и табулатори"
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Съединяване на един ред или разделяне на няколко"
@@ -92,19 +128,19 @@ msgstr "Съединяване на един ред или разделяне н
 msgid "Join/Split Lines"
 msgstr "Съединяване/разделяне на редове"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr "_Съединяване на редове"
 
-#: ../plugins/joinlines/joinlines.py:61
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr "Съединяване на избраните редове"
 
-#: ../plugins/joinlines/joinlines.py:63
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Разделяне на редове"
 
-#: ../plugins/joinlines/joinlines.py:64
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Разделяне на избраните редове"
 
@@ -122,15 +158,67 @@ msgstr "Лентата за табулациите е видима"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
 msgid "Whether the tabbar should be visible in editing windows."
-msgstr "Дали лентата за табулации да е видима в прозореца, в който се редактира."
+msgstr ""
+"Дали лентата за табулации да е видима в прозореца, в който се редактира."
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
-msgstr "Добавяне на елемент към менюто за показване/скриване на лентата за табулации"
+msgstr ""
+"Добавяне на елемент към менюто за показване/скриване на лентата за табулации"
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Показване/скриване на лентата за табулации"
+
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr "Запазе_ни сесии"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr "_Запазване на текущата сесия"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr "Запазване на списъка с текущите документи като нова сесия"
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr "_Управление на запазените сесии…"
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr "Отваряне на управителя на запазени сесии"
+
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr "Възстановяване на сесия „%s“"
+
+#: ../plugins/sessionsaver/dialogs.py:165
+msgid "Session Name"
+msgstr "Име на сесия"
+
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+msgid "Save and restore your working sessions"
+msgstr "Запазване и възстановяване на работните сесии"
+
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr "Запазване на сесии"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Save session"
+msgstr "Запазване на сесия"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "Saved Sessions"
+msgstr "Запазени сесии"
+
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+msgid "Session name:"
+msgstr "Име на сесията:"
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
@@ -142,12 +230,16 @@ msgstr "Умни шпации"
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
 msgid "Embed a terminal in the bottom pane."
-msgstr "Показване на терминал в долния прозорец"
+msgstr "Показване на терминал в долния прозорец."
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
 msgid "Embedded Terminal"
 msgstr "Вграден терминал"
 
-#: ../plugins/terminal/terminal.py:173
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "Терминал"
+
+#: ../plugins/terminal/terminal.py:231
+msgid "C_hange Directory"
+msgstr "_Смяна на папка"
