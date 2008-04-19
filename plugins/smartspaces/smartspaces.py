@@ -55,14 +55,16 @@ class SmartSpacesViewHelper(object):
         self.update_active()
 
     def on_key_press_event(self, view, event):
-        # Only take care of backspace
-        if event.keyval != gtk.keysyms.BackSpace:
+        # Only take care of backspace and shift+backspace
+        mods = gtk.accelerator_get_default_mod_mask()
+        if event.keyval != gtk.keysyms.BackSpace or \
+	       event.state & mods != 0 and event.state & mods != gtk.gdk.SHIFT_MASK:
             return False
-        
+   
         doc = view.get_buffer()
         if doc.get_has_selection():
             return False
-        
+       
         cur = doc.get_iter_at_mark(doc.get_insert())
         offset = cur.get_line_offset()
         
@@ -72,25 +74,25 @@ class SmartSpacesViewHelper(object):
             return False
 
         start = cur.copy()
-        start.backward_char()
+        prev = cur.copy()
+        prev.backward_char()
 
-        # If the previous char is a tab, we should just remove it
-        if start.get_char() == '\t':
-            doc.begin_user_action()
-            doc.delete(start, cur)
-            doc.end_user_action()
-            return True
-        
-        # Otherwise, check how many spaces we're able to remove
-        max_move = (offset - 1) % view.get_tab_width() + 1
+        # If the previus chars are spaces, try to remove 
+        # them until the previus tab stop
+        max_move = offset % view.get_tab_width()
+        if max_move == 0:
+            max_move = view.get_tab_width()
+
         moved = 0
-        while moved < max_move and start.get_char() == ' ':
+        while moved < max_move and prev.get_char() == ' ':
             start.backward_char()
             moved += 1
-        start.forward_char()
+            if not prev.backward_char():
+                # we reached the start of the buffer
+                break
         
         if moved == 0:
-            # The iterator hasn't moved, so there is nothing to remove
+            # The iterator hasn't moved, it was not a space
             return False
 
         # Actually delete the spaces        
@@ -113,7 +115,7 @@ class SmartSpacesPlugin(gedit.Plugin):
     def remove_helper(self, view):
         view.get_data(self.VIEW_DATA_KEY).deactivate()
         view.set_data(self.VIEW_DATA_KEY, None)
-                    
+
     def activate(self, window):
         for view in window.get_views():
             self.add_helper(view)
