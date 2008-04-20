@@ -31,8 +31,6 @@ from math import pi
 try:
     from gpdefs import *
     gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-    gtk.glade.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-    gtk.glade.textdomain(GETTEXT_PACKAGE)
     _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s)
 except:
     _ = lambda s: s
@@ -200,7 +198,7 @@ class DrawSpacesConfigDialog(object):
 
         self._plugin = plugin
 
-        self.ui = gtk.glade.XML(self.GLADE_FILE, 'config-dialog')
+        self.ui = gtk.glade.XML(self.GLADE_FILE, 'config-dialog', domain=GETTEXT_PACKAGE)
         self.dialog = self.ui.get_widget('config-dialog')
 
         self['draw-spaces'].set_active(plugin._draw_spaces)
