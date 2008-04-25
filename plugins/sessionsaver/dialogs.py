@@ -105,7 +105,7 @@ class Dialog(object):
             parent_window = gedit.app_get_default().get_active_window()
         self.parent = parent_window
 
-        self.ui = gtk.glade.XML(self.GLADE_FILE, main_widget)
+        self.ui = gtk.glade.XML(self.GLADE_FILE, main_widget, domain=GETTEXT_PACKAGE)
         self.dialog = self.ui.get_widget(main_widget)
         self.dialog.connect('delete-event', self.on_delete_event)
 
