@@ -158,11 +158,10 @@ class DrawSpacesWindowHelper(object):
         self._plugin = None
 
     def set_tab_added_handler(self, handler):
-        if handler is None:
-            if self._handler_id:
-                self._window.disconnect(handler_id)
-        else:
-            self.handler_id = self._window.connect("tab-added", handler)
+        if handler:
+            self._handler_id = self._window.connect("tab-added", handler)
+        elif self._handler_id:
+                self._window.disconnect(self._handler_id)
 
     def on_active_toggled(self, checkbox):
         gconf_set_bool(GCONF_KEY_ENABLE, checkbox.get_active())
