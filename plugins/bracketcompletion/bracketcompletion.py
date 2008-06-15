@@ -230,14 +230,17 @@ class BracketCompletionPlugin(gedit.Plugin):
     def activate(self, window):
         for view in window.get_views():
             self.add_helper(view)
-            
-        handler_id = window.connect("tab-added",
-                                    lambda w, t: self.add_helper(t.get_view()))
-        window.set_data(self.WINDOW_DATA_KEY, handler_id)
+
+        added_hid = window.connect("tab-added",
+                                   lambda w, t: self.add_helper(t.get_view()))
+        removed_hid = window.connect("tab-removed",
+                                     lambda w, t: self.remove_helper(t.get_view()))
+        window.set_data(self.WINDOW_DATA_KEY, (added_hid, removed_hid))
     
     def deactivate(self, window):
-        handler_id = window.get_data(self.WINDOW_DATA_KEY)
-        window.disconnect(handler_id)
+        handlers = window.get_data(self.WINDOW_DATA_KEY)
+        for handler_id in handlers:
+            window.disconnect(handler)
         window.set_data(self.WINDOW_DATA_KEY, None)
         
         for view in window.get_views():
