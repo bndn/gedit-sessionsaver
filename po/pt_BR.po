@@ -4,14 +4,15 @@
 # Evandro Fernandes Giovanini <evandrofg@ig.com.br>, 2004.
 # Og Maciel <ogmaciel@gnome.org>, 2007.
 # Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>, 2006-2008.
+# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-28 00:17-0300\n"
-"PO-Revision-Date: 2008-02-28 00:15-0300\n"
-"Last-Translator: Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>\n"
+"POT-Creation-Date: 2008-06-20 11:20-0300\n"
+"PO-Revision-Date: 2008-06-19 20:38-0300\n"
+"Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,12 +25,12 @@ msgstr "Fecha parênteses automaticamente."
 
 #: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
 msgid "Bracket Completion"
-msgstr "Fechamento de Parênteses"
+msgstr "Fechamento de parênteses"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:254
+#: ../plugins/charmap/gedit-charmap-plugin.c:320
 msgid "Character Map"
-msgstr "Mapa de Caracteres"
+msgstr "Mapa de caracteres"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
 msgid "Insert special characters just by clicking on them."
@@ -45,7 +46,7 @@ msgstr "Comenta ou descomenta um determinado bloco de código."
 
 #: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
-msgstr "Co_mentar Código"
+msgstr "Co_mentar código"
 
 #: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
@@ -53,7 +54,7 @@ msgstr "Comenta o código selecionado"
 
 #: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
-msgstr "Descome_ntar Código"
+msgstr "Descome_ntar código"
 
 #: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
@@ -70,7 +71,7 @@ msgstr "Insere a representação hexadecimal de uma cor escolhida num diálogo."
 
 #: ../plugins/colorpicker/colorpicker.py:73
 msgid "Pick _Color..."
-msgstr "Escolher _Cor..."
+msgstr "Escolher _cor..."
 
 #: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
@@ -78,19 +79,20 @@ msgstr "Escolha uma cor a partir de um diálogo"
 
 #: ../plugins/colorpicker/colorpicker.py:220
 msgid "Pick Color"
-msgstr "Escolher Cor"
+msgstr "Escolher cor"
 
 #: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "_Inserir"
 
+#. ex:ts=4:et:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
 msgid "Draw Spaces"
-msgstr "Desenhar Espaços"
+msgstr "Desenhar espaços"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
 msgid "Draw Spaces and Tabs"
-msgstr "Desenha Espaços e Tabulações"
+msgstr "Desenha espaços e tabulações"
 
 #: ../plugins/drawspaces/drawspaces.glade.h:1
 msgid "Draw non-breaking spaces"
@@ -108,6 +110,14 @@ msgstr "Desenhar tabulações"
 msgid "Drawing color:"
 msgstr "Cor do desenho:"
 
+#: ../plugins/drawspaces/drawspaces.py:174
+msgid "Show White Space"
+msgstr "Exibir espaço em branco"
+
+#: ../plugins/drawspaces/drawspaces.py:175
+msgid "Show spaces and tabs"
+msgstr "Exibe espaços e tabulações"
+
 #. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
@@ -115,7 +125,7 @@ msgstr "Junta várias linhas ou divide linhas longas"
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
 msgid "Join/Split Lines"
-msgstr "Juntar/Dividir Linhas"
+msgstr "Juntar/Dividir linhas"
 
 #: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
@@ -184,7 +194,7 @@ msgstr "Recuperar sessão \"%s\""
 
 #: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
-msgstr "Nome da Sessão"
+msgstr "Nome da sessão"
 
 #. ex:ts=4:et:
 #: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
@@ -193,15 +203,15 @@ msgstr "Salva e restaura suas sessões de trabalho"
 
 #: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
 msgid "Session Saver"
-msgstr "Salvador de Sessão"
+msgstr "Salvador de sessão"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
 msgid "Save session"
-msgstr "Salvar Sessão"
+msgstr "Salvar sessão"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:2
 msgid "Saved Sessions"
-msgstr "Sessões Salvas"
+msgstr "Sessões salvas"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:3
 msgid "Session name:"
@@ -213,7 +223,7 @@ msgstr "Esqueça que não está usando tabulações."
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
 msgid "Smart Spaces"
-msgstr "Espaços Inteligentes"
+msgstr "Espaços inteligentes"
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
 msgid "Embed a terminal in the bottom pane."
@@ -221,7 +231,7 @@ msgstr "Embute um terminal no painel inferior."
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
 msgid "Embedded Terminal"
-msgstr "Terminal Embutido"
+msgstr "Terminal embutido"
 
 #: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
@@ -229,7 +239,7 @@ msgstr "Terminal"
 
 #: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
-msgstr "Alterar Diretório"
+msgstr "Alterar diretório"
 
 #~ msgid "_Color picker"
 #~ msgstr "Seletor de _Cor"
