@@ -1,274 +1,443 @@
-# Copyright (C) 2001-2003 Free Software Foundation, Inc.
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Aktualną wersję tego pliku możesz odnaleźć w repozytorium cvs.gnome.pl
-# (:pserver:anonymous@cvs.gnome.pl:/gnomepl, puste hasło)
+# Aviary.pl
 # Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
-# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas na adres:
-# translators@gnome.pl
+# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
+# gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
-"POT-Creation-Date: 2003-11-15 17:25+0100\n"
-"PO-Revision-Date: 2003-07-14 08:38+0100\n"
-"Last-Translator: Gnome PL Team <translators@gnome.pl>\n"
-"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-06-28 22:37+0200\n"
+"PO-Revision-Date: 2008-06-20 21:39+0100\n"
+"Last-Translator: Tomasz Dominikowski <dominikowski@gmail.com>\n"
+"Language-Team: Aviary.pl <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: Poland\n"
 
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "Tabela _ASCII"
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr "Automatycznie dodaje zamykające nawiasy."
 
-#: plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Wyświetla okno z tablicą znaków ASCII"
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+msgid "Bracket Completion"
+msgstr "Uzupełnianie nawiasów"
 
-#: plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Znak"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:320
+msgid "Character Map"
+msgstr "Mapa znaków"
 
-#: plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "Dec"
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr "Pozwala wstawić znaki specjalne wybierając je za pomocą myszy."
 
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "Hex"
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+msgid "Code comment"
+msgstr "Komentowanie kodu"
 
-#: plugins/ASCII/ascii.c:324
-msgid "Name"
-msgstr "Nazwa"
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr "Pozwala komentować lub odkomentować zaznaczony blok kodu."
 
-#: plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
-msgstr "Tabela ASCII"
+#: ../plugins/codecomment/codecomment.py:230
+msgid "Co_mment Code"
+msgstr "Zako_mentuj kod"
 
-#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "_Wstaw znak"
+#: ../plugins/codecomment/codecomment.py:232
+msgid "Comment the selected code"
+msgstr "Zakomentowuje zaznaczony kod"
 
-#: plugins/ASCII/asciitable.glade2.h:1
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
-msgid "ASCII table"
-msgstr "Tabela ASCII"
+#: ../plugins/codecomment/codecomment.py:236
+msgid "U_ncomment Code"
+msgstr "Odkome_ntuj kod"
 
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
-msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-msgstr "Wtyczka ta wyświetla okno z tablicą znaków ASCII."
+#: ../plugins/codecomment/codecomment.py:238
+msgid "Uncomment the selected code"
+msgstr "Odkomentowuje zaznaczony kod"
 
-#. AFAIK, all cvs commit messages start with this
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "Otwórz plik _Changelog z CVS"
+#. ex:ts=4:et:
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+msgid "Color Picker"
+msgstr "Wybierak kolorów"
 
-#: plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
-"Wyszukuje pliki ChangeLog odnoszące się do bieżącego dokumentu i otwiera je"
+"Pozwala wybrać kolor z okna dialogowego i wstawić jego szesnastkowy "
+"odpowiednik."
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
-msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-msgstr ""
-"Wtyczka otwierająca pliki ChangeLog znalezione w komunikatach zatwierdzania "
-"CVS."
+#: ../plugins/colorpicker/colorpicker.py:73
+msgid "Pick _Color..."
+msgstr "Wybór _koloru..."
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
-msgid "CVS ChangeLog"
-msgstr "Plik ChangeLog z CVS"
+#: ../plugins/colorpicker/colorpicker.py:74
+msgid "Pick a color from a dialog"
+msgstr "Wybór koloru z okna dialogowego"
 
-#: plugins/diff/diff.c:64
-msgid "Co_mpare Files..."
-msgstr "Po_równaj pliki..."
+#: ../plugins/colorpicker/colorpicker.py:220
+msgid "Pick Color"
+msgstr "Wybór koloru"
 
-#: plugins/diff/diff.c:67
-msgid "Makes a diff file from two documents or files"
-msgstr "Tworzy opis różnic (diff) pomiędzy dwoma dokumentami lub plikami"
+#: ../plugins/colorpicker/colorpicker.py:226
+msgid "_Insert"
+msgstr "_Wstaw"
 
-#. Create the dialog
-#: plugins/diff/diff.c:270 plugins/diff/diff.gedit-plugin.desktop.in.h:1
-msgid "Compare Files"
-msgstr "Porównanie plików"
+#. ex:ts=4:et:
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "Wyświetlanie spacji"
 
-#: plugins/diff/diff.c:284
-msgid "C_ompare"
-msgstr "_Porównaj"
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "Wyświetla spacje i tabulację"
 
-#: plugins/diff/diff.c:511
-msgid "Executed command"
-msgstr "Wykonywane polecenie"
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "Rysuje spacje nieprzerywalne"
 
-#: plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "Zaznaczone dokumenty są takie same."
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw spaces"
+msgstr "Wyświetla spacje"
 
-#: plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Wybrany plik \"pierwszy\" nie istnieje.\n"
-"\n"
-"Wprowadź poprawny plik."
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Draw tabs"
+msgstr "Wyświetlanie tabulacji"
 
-#: plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Wybrany plik \"drugi\" nie istnieje.\n"
-"\n"
-"Wprowadź poprawny plik."
+#: ../plugins/drawspaces/drawspaces.glade.h:4
+msgid "Drawing color:"
+msgstr "Kolor wyświetlania:"
 
-#: plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "Oba zaznaczone pliki są takie same."
+#: ../plugins/drawspaces/drawspaces.py:174
+msgid "Show White Space"
+msgstr "Wyświetlanie białych spacji"
 
-#: plugins/diff/diff.c:694
-msgid "The \"first\" document contains no text."
-msgstr "\"Pierwszy\" dokument nie zawiera tekstu."
+#: ../plugins/drawspaces/drawspaces.py:175
+msgid "Show spaces and tabs"
+msgstr "Wyświetlanie spacji i tabulacji"
 
-#: plugins/diff/diff.c:728
-msgid "The \"second\" document contains no text."
-msgstr "\"Drugi\" dokument nie zawiera tekstu."
+#. ex:ts=4:et:
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Łączy wiele wierszy i dzieli dłuższe"
 
-#. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:754
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"Nie można porównać wybranych dokumentów.\n"
-"\n"
-"Nie można utworzyć pliku tymczasowego."
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+msgid "Join/Split Lines"
+msgstr "Połącz/Podziel wiersze"
 
-#: plugins/diff/diff.c:778 plugins/diff/diff.c:791
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"Nie można porównać wybranych dokumentów.\n"
-"\n"
-"Przy wykonywaniu polecenia diff wystąpił błąd."
+#: ../plugins/joinlines/joinlines.py:56
+msgid "_Join Lines"
+msgstr "_Połącz wiersze"
 
-#: plugins/diff/diff.c:813
-msgid "No differences were found between the selected documents."
-msgstr "Nie odnaleziono żadnych różnic pomiędzy wybranymi dokumentami."
+#: ../plugins/joinlines/joinlines.py:57
+msgid "Join the selected lines"
+msgstr "Łączy zaznaczone wiersze"
 
-#: plugins/diff/diff.c:854
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"Nie można porównać wybranych dokumentów.\n"
-"\n"
-"Wynik zawiera niepoprawne dane w zapisie UTF-8."
+#: ../plugins/joinlines/joinlines.py:59
+msgid "_Split Lines"
+msgstr "P_odziel wiersze"
 
-#: plugins/diff/diff.glade2.h:1
-msgid "*"
-msgstr "*"
+#: ../plugins/joinlines/joinlines.py:60
+msgid "Split the selected lines"
+msgstr "Dzieli zaznaczone wiersze"
 
-#: plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Wybierz pliki do porównania."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+msgid "Tab_bar"
+msgstr "Pasek _kart"
 
-#: plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Porównaj pliki..."
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+msgid "Show or hide the tabbar in the current window"
+msgstr "Wyświetla lub ukrywa pasek kart w bieżącym oknie"
 
-#: plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "Z _dokumentu"
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+msgid "Tabbar is Visible"
+msgstr "Pasek kart jest widoczny"
 
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Pierwszy"
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+msgid "Whether the tabbar should be visible in editing windows."
+msgstr "Określa, czy pasek kart ma być widoczny w oknach."
 
-#: plugins/diff/diff.glade2.h:6
-msgid "First file from disk"
-msgstr "Pierwszy plik z dysku"
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+msgid "Add a menu entry to show/hide the tabbar."
+msgstr "Dodaje pozycję menu do wyświetlania/ukrywania paska kart."
 
-#: plugins/diff/diff.glade2.h:7
-msgid "First file from open document"
-msgstr "Pierwszy plik z otwartego dokumentu"
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+msgid "Show/Hide Tabbar"
+msgstr "Wyświetl/Ukryj pasek kart"
 
-#: plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "Z d_okumentu"
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr "Zap_isane sesje"
 
-#: plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "Z pliku _na dysku"
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr "_Zapisz bieżącą sesję"
 
-#: plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "Z pliku na dy_sku"
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr "Zapisuje bieżące listy dokumentów jako nowa sesja"
 
-#: plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "_Ignorowanie pustych znaków (opcja -b)"
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr "_Zarządzanie zapisanymi sesjami..."
 
-#: plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr ""
-"Opcja ta jest obsługiwana tylko przez wersję diffa powstałą w ramach GNU"
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr "Otwiera menedżera sesji zapisanych"
 
-#: plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Drugi"
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr "Odtwórz sesję \"%s\""
 
-#: plugins/diff/diff.glade2.h:14
-msgid "Second file from disk"
-msgstr "Drugi plik dysku"
+#: ../plugins/sessionsaver/dialogs.py:165
+msgid "Session Name"
+msgstr "Nazwa sesji"
 
-#: plugins/diff/diff.glade2.h:15
-msgid "Second file from open document"
-msgstr "Drugi plik z otwartego dokumentu"
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+msgid "Save and restore your working sessions"
+msgstr "Zapisuje i odtwarza sesje"
 
-#: plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr "Wybór \"pierwszego\" pliku..."
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+msgid "Session Saver"
+msgstr "Zapisywanie sesji"
 
-#: plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr "Wybór \"drugiego\" pliku..."
+#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+msgid "Save session"
+msgstr "Zapisuje sesję"
 
-#: plugins/diff/diff.glade2.h:18
-msgid "Select the first file to compare"
-msgstr "Wybierz pierwszy z porównywanych plików"
+#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+msgid "Saved Sessions"
+msgstr "Sesje zapisane"
 
-#: plugins/diff/diff.glade2.h:19
-msgid "Select the first open document to compare"
-msgstr "Wybierz pierwszy plik spośród otwartych dokumentów"
+#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+msgid "Session name:"
+msgstr "Nazwa sesji:"
 
-#: plugins/diff/diff.glade2.h:20
-msgid "Select the second file to compare"
-msgstr "Wybierz pierwszy z porównywanych plików"
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr "Tabulacja nie jest już potrzebna."
 
-#: plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr "Wybierz drugi plik spośród otwartych dokumentów"
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+msgid "Smart Spaces"
+msgstr "Inteligentne spacje"
 
-#: plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Używanie z_unifikowanego formatu wyjścia (opcja -u)"
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr "Osadza terminal w dolnym panelu."
 
-#: plugins/diff/diff.gedit-plugin.desktop.in.h:2
-msgid ""
-"The Compare Files plugin uses the <tt>diff</tt> program to compare two "
-"documents or files on disk.\n"
-"\n"
-"For more info on <tt>diff</tt> program, type <tt>man diff</tt> in a shell "
-"prompt."
-msgstr ""
-"Wtyczka porównująca pliki korzysta z programu <tt>diff</tt> przy "
-"porównywaniu dwóch plików dokumentów zapisanych na dysku.\n"
-"\n"
-"Aby uzyskać więcej informacji o programie diff, wpisz \"man diff\" w wierszu "
-"poleceń powłoki."
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+msgid "Embedded Terminal"
+msgstr "Osadzony terminal"
+
+#: ../plugins/terminal/terminal.py:210
+msgid "Terminal"
+msgstr "Terminal"
+
+#: ../plugins/terminal/terminal.py:231
+msgid "C_hange Directory"
+msgstr "Zmień _katalog"
+
+#~ msgid "_ASCII Table"
+#~ msgstr "Tabela _ASCII"
+
+#~ msgid "Pop-up a dialog containing an ASCII Table"
+#~ msgstr "Wyświetla okno z tablicą znaków ASCII"
+
+#~ msgid "Char"
+#~ msgstr "Znak"
+
+#~ msgid "Dec#"
+#~ msgstr "Dec"
+
+#~ msgid "Hex#"
+#~ msgstr "Hex"
+
+#~ msgid "Name"
+#~ msgstr "Nazwa"
+
+#~ msgid "ASCII Table"
+#~ msgstr "Tabela ASCII"
+
+#~ msgid "ASCII table"
+#~ msgstr "Tabela ASCII"
+
+#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
+#~ msgstr "Wtyczka ta wyświetla okno z tablicą znaków ASCII."
+
+#~ msgid "Open CVS Chan_geLogs"
+#~ msgstr "Otwórz plik _Changelog z CVS"
+
+#~ msgid "Searches for ChangeLogs in the current document and opens them"
+#~ msgstr ""
+#~ "Wyszukuje pliki ChangeLog odnoszące się do bieżącego dokumentu i otwiera "
+#~ "je"
+
+#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
+#~ msgstr ""
+#~ "Wtyczka otwierająca pliki ChangeLog znalezione w komunikatach "
+#~ "zatwierdzania CVS."
+
+#~ msgid "CVS ChangeLog"
+#~ msgstr "Plik ChangeLog z CVS"
+
+#~ msgid "Co_mpare Files..."
+#~ msgstr "Po_równaj pliki..."
+
+#~ msgid "Makes a diff file from two documents or files"
+#~ msgstr "Tworzy opis różnic (diff) pomiędzy dwoma dokumentami lub plikami"
+
+#~ msgid "Compare Files"
+#~ msgstr "Porównanie plików"
+
+#~ msgid "C_ompare"
+#~ msgstr "_Porównaj"
+
+#~ msgid "Executed command"
+#~ msgstr "Wykonywane polecenie"
+
+#~ msgid "The two documents you selected are the same."
+#~ msgstr "Zaznaczone dokumenty są takie same."
+
+#~ msgid ""
+#~ "The \"first\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Wybrany plik \"pierwszy\" nie istnieje.\n"
+#~ "\n"
+#~ "Wprowadź poprawny plik."
+
+#~ msgid ""
+#~ "The \"second\" file you selected does not exist.\n"
+#~ "\n"
+#~ "Please provide a valid file."
+#~ msgstr ""
+#~ "Wybrany plik \"drugi\" nie istnieje.\n"
+#~ "\n"
+#~ "Wprowadź poprawny plik."
+
+#~ msgid "The two files you selected are the same."
+#~ msgstr "Oba zaznaczone pliki są takie same."
+
+#~ msgid "The \"first\" document contains no text."
+#~ msgstr "\"Pierwszy\" dokument nie zawiera tekstu."
+
+#~ msgid "The \"second\" document contains no text."
+#~ msgstr "\"Drugi\" dokument nie zawiera tekstu."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "gedit could not create a temporary file."
+#~ msgstr ""
+#~ "Nie można porównać wybranych dokumentów.\n"
+#~ "\n"
+#~ "Nie można utworzyć pliku tymczasowego."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "Error executing the diff command."
+#~ msgstr ""
+#~ "Nie można porównać wybranych dokumentów.\n"
+#~ "\n"
+#~ "Przy wykonywaniu polecenia diff wystąpił błąd."
+
+#~ msgid "No differences were found between the selected documents."
+#~ msgstr "Nie odnaleziono żadnych różnic pomiędzy wybranymi dokumentami."
+
+#~ msgid ""
+#~ "Impossible to compare the selected documents.\n"
+#~ "\n"
+#~ "The result contains invalid UTF-8 data."
+#~ msgstr ""
+#~ "Nie można porównać wybranych dokumentów.\n"
+#~ "\n"
+#~ "Wynik zawiera niepoprawne dane w zapisie UTF-8."
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "Choose the files to compare."
+#~ msgstr "Wybierz pliki do porównania."
+
+#~ msgid "Compare files..."
+#~ msgstr "Porównaj pliki..."
+
+#~ msgid "F_rom document"
+#~ msgstr "Z _dokumentu"
+
+#~ msgid "First"
+#~ msgstr "Pierwszy"
+
+#~ msgid "First file from disk"
+#~ msgstr "Pierwszy plik z dysku"
+
+#~ msgid "First file from open document"
+#~ msgstr "Pierwszy plik z otwartego dokumentu"
+
+#~ msgid "From _document"
+#~ msgstr "Z d_okumentu"
+
+#~ msgid "From a _file on disk"
+#~ msgstr "Z pliku _na dysku"
+
+#~ msgid "From a file o_n disk"
+#~ msgstr "Z pliku na dy_sku"
+
+#~ msgid "Ignore _blanks (-b option)"
+#~ msgstr "_Ignorowanie pustych znaków (opcja -b)"
+
+#~ msgid "Note that this option is only supported by GNU diff"
+#~ msgstr ""
+#~ "Opcja ta jest obsługiwana tylko przez wersję diffa powstałą w ramach GNU"
+
+#~ msgid "Second"
+#~ msgstr "Drugi"
+
+#~ msgid "Second file from disk"
+#~ msgstr "Drugi plik dysku"
+
+#~ msgid "Second file from open document"
+#~ msgstr "Drugi plik z otwartego dokumentu"
+
+#~ msgid "Select the \"first\" file..."
+#~ msgstr "Wybór \"pierwszego\" pliku..."
+
+#~ msgid "Select the \"second\" file..."
+#~ msgstr "Wybór \"drugiego\" pliku..."
+
+#~ msgid "Select the first file to compare"
+#~ msgstr "Wybierz pierwszy z porównywanych plików"
+
+#~ msgid "Select the first open document to compare"
+#~ msgstr "Wybierz pierwszy plik spośród otwartych dokumentów"
+
+#~ msgid "Select the second file to compare"
+#~ msgstr "Wybierz pierwszy z porównywanych plików"
+
+#~ msgid "Select the second open document to compare"
+#~ msgstr "Wybierz drugi plik spośród otwartych dokumentów"
+
+#~ msgid "Use the _unified output format (-u option)"
+#~ msgstr "Używanie z_unifikowanego formatu wyjścia (opcja -u)"
+
+#~ msgid ""
+#~ "The Compare Files plugin uses the <tt>diff</tt> program to compare two "
+#~ "documents or files on disk.\n"
+#~ "\n"
+#~ "For more info on <tt>diff</tt> program, type <tt>man diff</tt> in a shell "
+#~ "prompt."
+#~ msgstr ""
+#~ "Wtyczka porównująca pliki korzysta z programu <tt>diff</tt> przy "
+#~ "porównywaniu dwóch plików dokumentów zapisanych na dysku.\n"
+#~ "\n"
+#~ "Aby uzyskać więcej informacji o programie diff, wpisz \"man diff\" w "
+#~ "wierszu poleceń powłoki."
