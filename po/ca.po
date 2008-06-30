@@ -5,14 +5,14 @@
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003.
 # Josep Puigdemont <josep.puigdemont@gmail.com>, 2005, 2006, 2007.
 # Gil Forcada <gilforcada@guifi.net>, 2006
-# Francesc Vilches <francesc.vilches@gmail.com>, 2007.
+# Francesc Vilches <francesc.vilches@gmail.com>, 2007,2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-25 01:25+0100\n"
-"PO-Revision-Date: 2008-02-22 23:15+0100\n"
+"POT-Creation-Date: 2008-07-01 01:05+0200\n"
+"PO-Revision-Date: 2008-07-01 01:05+0200\n"
 "Last-Translator: Francesc Vilches <francesc.vilches@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,14 +21,16 @@ msgstr ""
 
 #: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
 msgid "Automatically adds closing brackets."
-msgstr "Afegeix els parèntesis de tancament automàticament."
+msgstr ""
+"Afegeix automàticament el signe de tancament dels signes de puntuació que en "
+"tenen."
 
 #: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
 msgid "Bracket Completion"
-msgstr "Compleció de parèntesis"
+msgstr "Compleció dels signes de puntuació que tenen tancament"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:254
+#: ../plugins/charmap/gedit-charmap-plugin.c:320
 msgid "Character Map"
 msgstr "Mapa de caràcters"
 
@@ -43,7 +45,7 @@ msgstr "Comenteu el codi"
 # FIXME: "descomentar" (si no fos que no existeix)
 #: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
 msgid "Comment out or uncomment a selected block of code."
-msgstr "Comenteu o traieu comentaris del bloc de codi seleccionat."
+msgstr "Comenteu o traieu els comentaris del bloc de codi seleccionat."
 
 #: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
@@ -66,61 +68,70 @@ msgstr "Treu el comentari del codi seleccionat"
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
 msgid "Color Picker"
-msgstr "Capturador de color"
+msgstr "Seleccionador de color"
 
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
-"Captureu un color amb un diàleg i inseriu-ne la representació hexadecimal."
+"Seleccioneu un color amb un diàleg i inseriu-ne la representació hexadecimal."
 
 #: ../plugins/colorpicker/colorpicker.py:73
 msgid "Pick _Color..."
-msgstr "_Captura el color..."
+msgstr "_Selecciona el color..."
 
 #: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
-msgstr "Captureu un color amb un diàleg"
+msgstr "Seleccioneu un color sobre un diàleg"
 
 #: ../plugins/colorpicker/colorpicker.py:220
 msgid "Pick Color"
-msgstr "Captura el color"
+msgstr "Selecciona el color"
 
 #: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "_Insereix"
 
+#. ex:ts=4:et:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
 msgid "Draw Spaces"
-msgstr "Dibuixa espais"
+msgstr "Dibuixa els espais"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
 msgid "Draw Spaces and Tabs"
-msgstr "Dibuixa espais i tabulacions"
+msgstr "Dibuixa els espais i les tabulacions"
 
 #: ../plugins/drawspaces/drawspaces.glade.h:1
 msgid "Draw non-breaking spaces"
-msgstr "Dibuixa espais sense ruptura"
+msgstr "Dibuixa els espais sense ruptura"
 
 #: ../plugins/drawspaces/drawspaces.glade.h:2
 msgid "Draw spaces"
-msgstr "Dibuixa espais"
+msgstr "Dibuixa els espais"
 
 #: ../plugins/drawspaces/drawspaces.glade.h:3
 msgid "Draw tabs"
-msgstr "Dibuixa tabulacions"
+msgstr "Dibuixa les tabulacions"
 
 #: ../plugins/drawspaces/drawspaces.glade.h:4
 msgid "Drawing color:"
-msgstr "Color de dibuix:"
+msgstr "Color que s'ha d'utilitzar:"
+
+#: ../plugins/drawspaces/drawspaces.py:174
+msgid "Show White Space"
+msgstr "Mostra els espais en blanc"
+
+#: ../plugins/drawspaces/drawspaces.py:175
+msgid "Show spaces and tabs"
+msgstr "Mostra els espais i les tabulacions"
 
 #. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
-msgstr "Uniu diverses línies, o separeu-ne de llargues"
+msgstr "Uneix diverses línies, o separa les llargues"
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
 msgid "Join/Split Lines"
-msgstr "Uniu/separeu línies"
+msgstr "Uneix/separa les línies"
 
 #: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
@@ -158,11 +169,12 @@ msgstr ""
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
-msgstr "Afegiu una entrada al menú per mostrar o amagar la barra de pestanyes."
+msgstr ""
+"Afegeix una entrada al menú per mostrar o amagar la barra de pestanyes."
 
 #: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
 msgid "Show/Hide Tabbar"
-msgstr "Mostra/amaga la barra de pestanyes"
+msgstr "Mostra/oculta la barra de pestanyes"
 
 #: ../plugins/sessionsaver/__init__.py:65
 msgid "Sa_ved sessions"
@@ -225,7 +237,7 @@ msgstr "Espais intel·ligents"
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
 msgid "Embed a terminal in the bottom pane."
-msgstr "Incrusteu un terminal al quadre inferior."
+msgstr "Incrusta un terminal al quadre inferior."
 
 #: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
 msgid "Embedded Terminal"
