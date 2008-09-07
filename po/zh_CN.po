@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-23 03:40+0000\n"
+"POT-Creation-Date: 2008-03-02 08:25+0000\n"
 "PO-Revision-Date: 2007-02-20 17:01+0800\n"
 "Last-Translator: Funda Wang <fundawang@gmail.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -26,7 +26,7 @@ msgid "Bracket Completion"
 msgstr "括号补全"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/gedit-charmap-plugin.c:254
 msgid "Character Map"
 msgstr "字符表"
 
@@ -42,19 +42,19 @@ msgstr "代码注释"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "添加或取消选中代码段的注释。"
 
-#: ../plugins/codecomment/codecomment.py:246
+#: ../plugins/codecomment/codecomment.py:230
 msgid "Co_mment Code"
 msgstr "代码注释(_M)"
 
-#: ../plugins/codecomment/codecomment.py:248
+#: ../plugins/codecomment/codecomment.py:232
 msgid "Comment the selected code"
 msgstr "为选中代码添加注释"
 
-#: ../plugins/codecomment/codecomment.py:252
+#: ../plugins/codecomment/codecomment.py:236
 msgid "U_ncomment Code"
 msgstr "取消注释(_N)"
 
-#: ../plugins/codecomment/codecomment.py:254
+#: ../plugins/codecomment/codecomment.py:238
 msgid "Uncomment the selected code"
 msgstr "取消选中代码的注释"
 
@@ -67,22 +67,55 @@ msgstr "颜色拾取器"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "从对话框中拾取一种颜色，然后插入其十六进制代码。"
 
-#: ../plugins/colorpicker/colorpicker.py:70
-msgid "_Color picker"
-msgstr "颜色拾取器(_C)"
+#: ../plugins/colorpicker/colorpicker.py:73
+msgid "Pick _Color..."
+msgstr "拾取颜色(_C)..."
 
-#: ../plugins/colorpicker/colorpicker.py:71
+#: ../plugins/colorpicker/colorpicker.py:74
 msgid "Pick a color from a dialog"
 msgstr "从对话框中拾取一种颜色"
 
-#: ../plugins/colorpicker/colorpicker.py:217
-msgid "Color picker"
-msgstr "颜色拾取器"
+#: ../plugins/colorpicker/colorpicker.py:220
+msgid "Pick Color"
+msgstr "拾取颜色"
 
-#: ../plugins/colorpicker/colorpicker.py:225
+#: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
 msgstr "插入(_I)"
 
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+msgid "Draw Spaces"
+msgstr "绘制空白"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr "绘制空格和跳格"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:1
+msgid "Draw non-breaking spaces"
+msgstr "绘制非中断空格"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:2
+msgid "Draw spaces"
+msgstr "绘制空格"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:3
+msgid "Draw tabs"
+msgstr "绘制跳格"
+
+#: ../plugins/drawspaces/drawspaces.glade.h:4
+msgid "Drawing color:"
+msgstr "绘制颜色："
+
+#: ../plugins/drawspaces/drawspaces.py:177
+msgid "Show White Space"
+msgstr "显示空白"
+
+#: ../plugins/drawspaces/drawspaces.py:178
+msgid "Show spaces and tabs"
+msgstr "显示空格和跳格"
+
+#. ex:ts=4:et:
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "合并多行或拆分长行"
@@ -91,19 +124,19 @@ msgstr "合并多行或拆分长行"
 msgid "Join/Split Lines"
 msgstr "合并/拆分行"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:56
 msgid "_Join Lines"
 msgstr "合并行(_G)"
 
-#: ../plugins/joinlines/joinlines.py:61
+#: ../plugins/joinlines/joinlines.py:57
 msgid "Join the selected lines"
 msgstr "合并选中行"
 
-#: ../plugins/joinlines/joinlines.py:63
+#: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "拆分行(_S)"
 
-#: ../plugins/joinlines/joinlines.py:64
+#: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "拆分选中行"
 
@@ -131,7 +164,32 @@ msgstr "添加一个可显示/隐藏标签栏的菜单项。"
 msgid "Show/Hide Tabbar"
 msgstr "显示/隐藏标签栏"
 
-#: ../plugins/sessionsaver/dialogs.py:162
+#: ../plugins/sessionsaver/__init__.py:65
+msgid "Sa_ved sessions"
+msgstr "已保存会话(_V)"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Save current session"
+msgstr "保存当前会话(_S)"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "Save the current document list as a new session"
+msgstr "将当前文档列表另存为新会话"
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "_Manage saved sessions..."
+msgstr "管理已保存的会话(_M)..."
+
+#: ../plugins/sessionsaver/__init__.py:67
+msgid "Open the saved session manager"
+msgstr "打开已保存的会话管理器"
+
+#: ../plugins/sessionsaver/__init__.py:107
+#, python-format
+msgid "Recover '%s' session"
+msgstr "复原“%s”会话"
+
+#: ../plugins/sessionsaver/dialogs.py:165
 msgid "Session Name"
 msgstr "会话名称"
 
@@ -145,28 +203,16 @@ msgid "Session Saver"
 msgstr "会话保存"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:1
-msgid "Session name:"
-msgstr "会话名称："
+msgid "Save session"
+msgstr "保存会话"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:2
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
+msgid "Saved Sessions"
+msgstr "已存会话"
 
 #: ../plugins/sessionsaver/sessionsaver.glade.h:3
-msgid "gtk-close"
-msgstr "gtk-close"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:4
-msgid "gtk-delete"
-msgstr "gtk-delete"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:5
-msgid "gtk-open"
-msgstr "gtk-open"
-
-#: ../plugins/sessionsaver/sessionsaver.glade.h:6
-msgid "gtk-save"
-msgstr "gtk-save"
+msgid "Session name:"
+msgstr "会话名称："
 
 #: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
 msgid "Forget you're not using tabulations."
@@ -184,11 +230,10 @@ msgstr "在底部面板中的嵌入终端。"
 msgid "Embedded Terminal"
 msgstr "嵌入式终端"
 
-#: ../plugins/terminal/terminal.py:203
+#: ../plugins/terminal/terminal.py:210
 msgid "Terminal"
 msgstr "终端"
 
-#: ../plugins/terminal/terminal.py:224
+#: ../plugins/terminal/terminal.py:231
 msgid "C_hange Directory"
 msgstr "更改目录(_H)"
-
