@@ -98,7 +98,7 @@ class GeditTerminal(gtk.HBox):
     def reconfigure_vte(self):
         # Fonts
         if gconf_get_bool(self.GCONF_PROFILE_DIR + "/use_system_font"):
-            font_name = gconf_get_str("/desktop/gnome/interface/monospace_font",
+            font_name = gconf_get_str("/desktop/gnome/interface/monospace_font_name",
                                       self.defaults['font_name'])
         else:
             font_name = gconf_get_str(self.GCONF_PROFILE_DIR + "/font",
