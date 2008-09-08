@@ -118,8 +118,18 @@ class GeditTerminal(gtk.HBox):
                              gtk.gdk.color_parse (bg_color),
                              [])
 
-        self._vte.set_cursor_blinks(gconf_get_bool(self.GCONF_PROFILE_DIR + "/cursor_blinks",
-                                                   self.defaults['cursor_blinks']))
+        # cursor blink
+        blink_mode = gconf_get_str(self.GCONF_PROFILE_DIR + "/cursor_blink_mode")
+        if blink_mode.lower() == "system":
+            blink = gconf_get_bool("/desktop/gnome/interface/cursor_blink",
+                                   self.defaults['cursor_blinks'])
+        elif blink_mode.lower() == "on":
+            blink = True
+        elif blink_mode.lower() == "off":
+            blink = False
+        else:
+            blink = self.defaults['cursor_blinks']
+        self._vte.set_cursor_blinks(blink)
 
         self._vte.set_audible_bell(not gconf_get_bool(self.GCONF_PROFILE_DIR + "/silent_bell",
                                                       not self.defaults['audible_bell']))
