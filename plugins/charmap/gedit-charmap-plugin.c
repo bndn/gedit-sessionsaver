@@ -99,12 +99,12 @@ on_table_status_message (GucharmapTable *chartable,
 		gtk_statusbar_push (statusbar, data->context_id, message);
 }
 
+static void
 #ifdef HAVE_GUCHARMAP_2
 on_table_sync_active_char (GucharmapChartable *chartable,
 			   GParamSpec         *psepc,
 			   GeditWindow        *window)
 #else
-static void
 on_table_set_active_char (GucharmapTable *chartable,
 			  gunichar        wc,
 			  GeditWindow    *window)
