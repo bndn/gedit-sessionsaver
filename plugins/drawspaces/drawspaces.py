@@ -60,7 +60,8 @@ class DrawSpacesViewHelper(object):
         self._handler_id = view.connect('event-after', self.on_event_after)
 
     def deactivate(self):
-        self._view.disconnect(self._handler_id)
+        if self._handler_id is not None:
+            self._view.disconnect(self._handler_id)
 
     def enable_draw_spaces(self, enable):
         if enable and self._handler_id is None:
