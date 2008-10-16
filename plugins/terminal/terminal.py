@@ -55,12 +55,10 @@ class GeditTerminal(gtk.HBox):
         'allow_bold'            : True,
         'audible_bell'          : False,
         'background'            : None,
-        'background_color'      : '#000000',
         'backspace_binding'     : 'ascii-del',
         'cursor_blinks'         : False,
         'emulation'             : 'xterm',
         'font_name'             : 'Monospace 10',
-        'foreground_color'      : '#AAAAAA',
         'scroll_on_keystroke'   : False,
         'scroll_on_output'      : False,
         'scrollback_lines'      : 100,
@@ -87,7 +85,9 @@ class GeditTerminal(gtk.HBox):
         
         gconf_client.notify_add(self.GCONF_PROFILE_DIR,
                                 self.on_gconf_notification)
-        
+
+        # we need to reconf colors if the style changes
+        self._vte.connect("style-set", lambda term, oldstyle: self.reconfigure_vte())
         self._vte.connect("key-press-event", self.on_vte_key_press)
         self._vte.connect("button-press-event", self.on_vte_button_press)
         self._vte.connect("popup-menu", self.on_vte_popup_menu)
@@ -110,13 +110,19 @@ class GeditTerminal(gtk.HBox):
             pass
 
         # colors
-        fg_color = gconf_get_str(self.GCONF_PROFILE_DIR + "/foreground_color",
-                                 self.defaults['foreground_color'])
-        bg_color = gconf_get_str(self.GCONF_PROFILE_DIR + "/background_color",
-                                 self.defaults['background_color'])
-        self._vte.set_colors(gtk.gdk.color_parse (fg_color),
-                             gtk.gdk.color_parse (bg_color),
-                             [])
+        self._vte.ensure_style()
+        style = self._vte.get_style()
+        fg = style.text[gtk.STATE_NORMAL]
+        bg = style.base[gtk.STATE_NORMAL]
+
+        if not gconf_get_bool(self.GCONF_PROFILE_DIR + "/use_theme_colors"):
+            fg_color = gconf_get_str(self.GCONF_PROFILE_DIR + "/foreground_color", None)
+            if (fg_color):
+                fg = gtk.gdk.color_parse (fg_color)
+            bg_color = gconf_get_str(self.GCONF_PROFILE_DIR + "/background_color", None)
+            if (bg_color):
+                bg = gtk.gdk.color_parse (bg_color)
+        self._vte.set_colors(fg, bg, [])
 
         # cursor blink
         blink_mode = gconf_get_str(self.GCONF_PROFILE_DIR + "/cursor_blink_mode")
