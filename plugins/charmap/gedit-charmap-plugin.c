@@ -237,7 +237,8 @@ create_charmap_panel (GeditWindow *window)
 
 #ifdef HAVE_GUCHARMAP_2
 	chartable = gedit_charmap_panel_get_chartable (GEDIT_CHARMAP_PANEL (panel));
-	gucharmap_chartable_set_font (chartable, font);
+	gucharmap_chartable_set_font_desc (chartable, 
+					   pango_font_description_from_string (font));
 #else
 	table = gedit_charmap_panel_get_table (GEDIT_CHARMAP_PANEL (panel));
 	gucharmap_table_set_font (table, font);
