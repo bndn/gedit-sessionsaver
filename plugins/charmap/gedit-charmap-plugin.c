@@ -114,9 +114,9 @@ on_table_set_active_char (GucharmapTable *chartable,
 	const gchar **temps;
 	gint i;
 #ifdef HAVE_GUCHARMAP_2
-        gunichar wc;
+	gunichar wc;
 
-        wc = gucharmap_chartable_get_active_character (chartable);
+	wc = gucharmap_chartable_get_active_character (chartable);
 #endif
 
 	gs = g_string_new (NULL);
@@ -224,11 +224,12 @@ create_charmap_panel (GeditWindow *window)
 {
 	GtkWidget      *panel;
 #ifdef HAVE_GUCHARMAP_2
-        GucharmapChartable *chartable;
+	GucharmapChartable *chartable;
+	PangoFontDescription *font_desc;
 #else
 	GucharmapTable *table;
 #endif
-	gchar          *font;
+	gchar *font;
 
 	panel = gedit_charmap_panel_new ();
 
@@ -237,8 +238,9 @@ create_charmap_panel (GeditWindow *window)
 
 #ifdef HAVE_GUCHARMAP_2
 	chartable = gedit_charmap_panel_get_chartable (GEDIT_CHARMAP_PANEL (panel));
-	gucharmap_chartable_set_font_desc (chartable, 
-					   pango_font_description_from_string (font));
+	font_desc = pango_font_description_from_string (font);
+	gucharmap_chartable_set_font_desc (chartable, font_desc);
+	pango_font_description_free (font_desc);
 #else
 	table = gedit_charmap_panel_get_table (GEDIT_CHARMAP_PANEL (panel));
 	gucharmap_table_set_font (table, font);
