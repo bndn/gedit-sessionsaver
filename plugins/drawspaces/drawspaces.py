@@ -53,6 +53,28 @@ ui_str = """
 </ui>
 """
 
+def is_tab(c):
+    return c == '\t';
+
+# There are probably more ...
+def is_space(c):
+    return c == '\040' or \
+           c == '\342\200\200' or \
+           c == '\342\200\201' or \
+           c == '\342\200\202' or \
+           c == '\342\200\203' or \
+           c == '\342\200\204' or \
+           c == '\342\200\205' or \
+           c == '\342\200\206' or \
+           c == '\342\200\207' or \
+           c == '\342\200\210' or \
+           c == '\342\200\211' or \
+           c == '\342\200\212' or \
+           c == '\343\200\200'
+
+def is_nbsp(c):
+    return c == '\302\240'
+
 class DrawSpacesViewHelper(object):
     def __init__(self, plugin, view):
         self._plugin = plugin
@@ -135,11 +157,11 @@ class DrawSpacesViewHelper(object):
         cr.set_line_width(0.8)
         while iter.compare(end) <= 0:
             c = iter.get_char()
-            if c == '\t':
+            if is_tab(c):
                 self.draw_tab_at_iter(cr, iter)
-            elif c == '\040':
+            elif is_space(c):
                 self.draw_space_at_iter(cr, iter)
-            elif c == '\302\240':
+            elif is_nbsp(c):
                 self.draw_nbsp_at_iter(cr, iter)
             if not iter.forward_char():
                 break
