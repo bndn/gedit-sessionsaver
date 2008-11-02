@@ -15,6 +15,7 @@ libshowtabbar_la_SOURCES = \
 	gedit-show-tabbar-plugin.c
 
 libshowtabbar_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+libshowtabbar_la_LIBADD = $(GEDIT_LIBS)
 
 # Plugin Info
 

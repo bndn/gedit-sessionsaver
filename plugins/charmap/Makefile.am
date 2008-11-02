@@ -17,10 +17,8 @@ libcharmap_la_SOURCES = \
 	gedit-charmap-panel.h				\
 	gedit-charmap-panel.c
 
-libcharmap_la_LDFLAGS = \
-	$(PLUGIN_LIBTOOL_FLAGS)				\
-	$(GEDIT_LIBS)					\
-	$(GUCHARMAP_LIBS)
+libcharmap_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+libcharmap_la_LIBADD = $(GEDIT_LIBS) $(GUCHARMAP_LIBS)
 
 # Plugin Info
 

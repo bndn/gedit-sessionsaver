@@ -29,6 +29,19 @@ AC_PROG_MAKE_SET
 # make sure we keep ACLOCAL_FLAGS around for maintainer builds to work
 AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS -I m4")
 
+dnl check for win32 platform
+AC_MSG_CHECKING([for some Win32 platform])
+case "$host" in
+  *-*-mingw*|*-*-cygwin*)
+    platform_win32=yes
+    ;;
+  *)
+    platform_win32=no
+    ;;
+esac
+AC_MSG_RESULT([$platform_win32])
+AM_CONDITIONAL(PLATFORM_WIN32, test "$platform_win32" = "yes")
+
 # ================================================================
 # Gettext stuff.
 # ================================================================
@@ -197,7 +210,7 @@ Py_Exit (0);
 EOF
 
 	if /bin/sh ../libtool --mode=compile ${CC} $PYTHON_CFLAGS -c testpython.c >/dev/null 2>&1 && \
-		/bin/sh ../libtool --mode=link ${CC} -o testpython.la -rpath `pwd` -module -avoid-version $PYTHON_LIB_LOC testpython.lo $PYTHON_LIBS $PYTHON_EXTRA_LIBS >/dev/null 2>&1 && \
+		/bin/sh ../libtool --mode=link ${CC} -o testpython.la -rpath `pwd` -module -avoid-version -no-undefined $PYTHON_LIB_LOC testpython.lo $PYTHON_LIBS $PYTHON_EXTRA_LIBS >/dev/null 2>&1 && \
 		grep 'dlname.*testpython' testpython.la >/dev/null 2>&1;
 	then
 		result=yes
@@ -414,7 +427,11 @@ then
 	AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
 fi
 
-PLUGIN_LIBTOOL_FLAGS="-module -avoid-version"
+if test "$platform_win32" = yes; then
+	PLUGIN_LIBTOOL_FLAGS="-module -avoid-version -no-undefined"
+else
+	PLUGIN_LIBTOOL_FLAGS="-module -avoid-version"
+fi
 AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 
 AC_CONFIG_FILES([
