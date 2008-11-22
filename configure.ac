@@ -77,13 +77,13 @@ GEDIT_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="showtabbar charmap"
-USEFUL_PLUGINS="showtabbar charmap"
-DEFAULT_PLUGINS="showtabbar charmap"
+ALL_PLUGINS="showtabbar charmap drawspaces"
+USEFUL_PLUGINS="showtabbar charmap drawspaces"
+DEFAULT_PLUGINS="showtabbar charmap drawspaces"
 
-PYTHON_ALL_PLUGINS="bracketcompletion codecomment colorpicker drawspaces joinlines sessionsaver smartspaces terminal"
-PYTHON_USEFUL_PLUGINS="bracketcompletion codecomment colorpicker drawspaces joinlines sessionsaver smartspaces terminal"
-PYTHON_DEFAULT_PLUGINS="bracketcompletion codecomment colorpicker drawspaces joinlines sessionsaver smartspaces terminal"
+PYTHON_ALL_PLUGINS="bracketcompletion codecomment colorpicker joinlines sessionsaver smartspaces terminal"
+PYTHON_USEFUL_PLUGINS="bracketcompletion codecomment colorpicker joinlines sessionsaver smartspaces terminal"
+PYTHON_DEFAULT_PLUGINS="bracketcompletion codecomment colorpicker joinlines sessionsaver smartspaces terminal"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
