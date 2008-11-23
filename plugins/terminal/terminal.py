@@ -28,8 +28,8 @@ import gobject
 import vte
 import gconf
 import gettext
-import gnomevfs
 import os
+import gio
 from gpdefs import *
 
 try:
@@ -238,7 +238,9 @@ class TerminalWindowHelper(object):
             return None
         uri = doc.get_uri()
         if uri is not None and gedit.utils.uri_has_file_scheme(uri):
-            return os.path.dirname(gnomevfs.get_local_path_from_uri(uri))
+            gfile = gio.File(uri)
+            directory = gfile.get_parent()
+            return os.path.dirname(directory.get_path())
         return None
 
     def on_panel_populate_popup(self, panel, menu):
