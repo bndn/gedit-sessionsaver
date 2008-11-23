@@ -4,7 +4,7 @@
 
 import gobject
 import gedit
-import gtk, gtk.glade
+import gtk
 import os.path
 import gettext
 from store import Session
@@ -91,7 +91,7 @@ class SessionModel(gtk.GenericTreeModel):
         return None
 
 class Dialog(object):
-    GLADE_FILE = os.path.join(os.path.dirname(__file__), "sessionsaver.glade")
+    UI_FILE = os.path.join(os.path.dirname(__file__), "sessionsaver.ui")
 
     def __new__(cls, *args):
         if not cls.__dict__.has_key('_instance') or cls._instance is None:
@@ -105,12 +105,14 @@ class Dialog(object):
             parent_window = gedit.app_get_default().get_active_window()
         self.parent = parent_window
 
-        self.ui = gtk.glade.XML(self.GLADE_FILE, main_widget, domain=GETTEXT_PACKAGE)
-        self.dialog = self.ui.get_widget(main_widget)
+        self.ui = gtk.Builder()
+        self.ui.add_from_file(self.UI_FILE)
+        self.ui.set_translation_domain(domain=GETTEXT_PACKAGE)
+        self.dialog = self.ui.get_object(main_widget)
         self.dialog.connect('delete-event', self.on_delete_event)
 
     def __getitem__(self, item):
-        return self.ui.get_widget(item)
+        return self.ui.get_object(item)
 
     def on_delete_event(self, dialog, event):
         dialog.hide()
@@ -170,7 +172,7 @@ class SessionManagerDialog(Dialog):
             'on_open_button_clicked': self.on_open_button_clicked,
             'on_delete_button_clicked': self.on_delete_button_clicked
         }
-        self.ui.signal_autoconnect(handlers)
+        self.ui.connect_signals(handlers)
 
     def on_delete_event(self, dialog, event):
         dialog.hide()

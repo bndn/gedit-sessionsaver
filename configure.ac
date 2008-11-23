@@ -60,7 +60,6 @@ PKG_CHECK_MODULES(GEDIT, [
 	gtk+-2.0 >= 2.13.0
 	gtksourceview-2.0 >= 2.4.0
 	gedit-2.20 >= 2.24.0
-	libglade-2.0 >= 2.4.0
 	gnome-vfs-2.0 >= 2.13.4
 ])
 GEDIT_LIBS="${GEDIT_LIBS}"

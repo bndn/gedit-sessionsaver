@@ -53,7 +53,6 @@ class SessionSaverWindowHelper(object):
             </menu>
           </menubar>
         </ui>"""
-    GLADE_FILE = os.path.join(os.path.dirname(__file__), "sessionsaver.glade")
 
     def __init__(self, plugin, window):
         self.plugin = plugin
