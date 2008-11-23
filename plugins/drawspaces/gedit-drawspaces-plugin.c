@@ -79,9 +79,6 @@ struct _DrawspacesConfigureDialog
 	GtkWidget *draw_tabs;
 	GtkWidget *draw_spaces;
 	GtkWidget *draw_newline;
-	
-	/* Needed to get and set info from gconf */
-	GeditDrawspacesPlugin *plugin;
 };
 
 static const gchar submenu [] = {
@@ -465,8 +462,6 @@ get_configuration_dialog (GeditDrawspacesPlugin *plugin)
 	};
 
 	dialog = g_slice_new (DrawspacesConfigureDialog);
-
-	dialog->plugin = plugin;
 
 	ret = gedit_utils_get_ui_objects (UI_FILE,
 					  root_objects,
