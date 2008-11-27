@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-07 20:35+0100\n"
-"PO-Revision-Date: 2008-03-07 20:36+0100\n"
+"POT-Creation-Date: 2008-11-27 21:09+0100\n"
+"PO-Revision-Date: 2008-11-27 21:10+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgid "Bracket Completion"
 msgstr "Paranteskomplettering"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:254
+#: ../plugins/charmap/gedit-charmap-plugin.c:323
 msgid "Character Map"
 msgstr "Teckenkarta"
 
@@ -84,6 +84,7 @@ msgstr "Välj färg"
 msgid "_Insert"
 msgstr "_Infoga"
 
+#. ex:ts=4:et:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
 msgid "Draw Spaces"
 msgstr "Rita ut blanksteg"
@@ -92,31 +93,30 @@ msgstr "Rita ut blanksteg"
 msgid "Draw Spaces and Tabs"
 msgstr "Rita ut blanksteg och tabulatorer"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:1
-msgid "Draw non-breaking spaces"
-msgstr "Rita ut icke-brytande blanksteg"
+#: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw new lines"
+msgstr "Rita ut nya rader"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw spaces"
 msgstr "Rita ut blanksteg"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw tabs"
 msgstr "Rita ut tabulatorer"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:4
-msgid "Drawing color:"
-msgstr "Ritfärg:"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
+msgid "Show _White Space"
+msgstr "Visa _blanktecken"
 
-#: ../plugins/drawspaces/drawspaces.py:177
-msgid "Show White Space"
-msgstr "Visa blanksteg"
-
-#: ../plugins/drawspaces/drawspaces.py:178
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:148
 msgid "Show spaces and tabs"
 msgstr "Visa blanksteg och tabulatorer"
 
-#. ex:ts=4:et:
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:480
+msgid "Error dialog"
+msgstr "Feldialog"
+
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Sammanfoga flera rader eller dela långa rader"
@@ -165,32 +165,32 @@ msgstr "Lägg till ett menyobjekt för att visa/dölja tabulatorraden."
 msgid "Show/Hide Tabbar"
 msgstr "Visa/Dölj tabulatorrad"
 
-#: ../plugins/sessionsaver/__init__.py:65
+#: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "Spa_rade sessioner"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "_Save current session"
 msgstr "_Spara aktuell session"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "Save the current document list as a new session"
 msgstr "Spara den aktuella dokumentlistan som en ny session"
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "_Hantera sparade sessioner..."
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "Open the saved session manager"
 msgstr "Öppna hanteraren för sparade sessioner"
 
-#: ../plugins/sessionsaver/__init__.py:107
+#: ../plugins/sessionsaver/__init__.py:106
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Återställ sessionen \"%s\""
 
-#: ../plugins/sessionsaver/dialogs.py:165
+#: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
 msgstr "Sessionsnamn"
 
@@ -203,15 +203,15 @@ msgstr "Spara och återskapa dina arbetssessioner"
 msgid "Session Saver"
 msgstr "Sessionssparare"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
 msgid "Save session"
 msgstr "Spara session"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
 msgstr "Sparade sessioner"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
 msgstr "Sessionsnamn:"
 
@@ -231,14 +231,18 @@ msgstr "Bädda in en terminal i bottenpanelen."
 msgid "Embedded Terminal"
 msgstr "Inbäddad terminal"
 
-#: ../plugins/terminal/terminal.py:210
+#: ../plugins/terminal/terminal.py:226
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:231
+#: ../plugins/terminal/terminal.py:249
 msgid "C_hange Directory"
 msgstr "B_yt katalog"
 
+#~ msgid "Draw non-breaking spaces"
+#~ msgstr "Rita ut icke-brytande blanksteg"
+#~ msgid "Drawing color:"
+#~ msgstr "Ritfärg:"
 #~ msgid "_Color picker"
 #~ msgstr "_Färgväljare"
 #~ msgid "Color picker"
@@ -823,8 +827,6 @@ msgstr "B_yt katalog"
 #~ msgstr "Dra in de markerade raderna"
 #~ msgid "U_nindent"
 #~ msgstr "Dra _ut"
-#~ msgid "Indent lines"
-#~ msgstr "Dra in rader"
 #~ msgid "Indent or un-indent selected lines."
 #~ msgstr "Dra in eller dra ut de markerade raderna."
 #~ msgid "R_emove duplicates"
