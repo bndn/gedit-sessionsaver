@@ -236,13 +236,13 @@ class BracketCompletionPlugin(gedit.Plugin):
         removed_hid = window.connect("tab-removed",
                                      lambda w, t: self.remove_helper(t.get_view()))
         window.set_data(self.WINDOW_DATA_KEY, (added_hid, removed_hid))
-    
+
     def deactivate(self, window):
         handlers = window.get_data(self.WINDOW_DATA_KEY)
         for handler_id in handlers:
-            window.disconnect(handler)
+            window.disconnect(handler_id)
         window.set_data(self.WINDOW_DATA_KEY, None)
-        
+
         for view in window.get_views():
             self.remove_helper(view)
 
