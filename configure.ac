@@ -57,10 +57,11 @@ AM_GLIB_GNU_GETTEXT
 
 PKG_CHECK_MODULES(GEDIT, [
 	glib-2.0 >= 2.13.0
+	gio-2.0 >= 2.16.0
 	gtk+-2.0 >= 2.13.0
+	gconf-2.0 >= 1.1.11
 	gtksourceview-2.0 >= 2.4.0
 	gedit-2.20 >= 2.24.0
-	gio-2.0 >= 2.16.0
 ])
 GEDIT_LIBS="${GEDIT_LIBS}"
 AC_SUBST(GEDIT_LIBS)
@@ -194,32 +195,6 @@ then
 	AC_SUBST([PYTHON_LIB_LOC])
 	AC_SUBST([PYTHON_CFLAGS])
 	AC_SUBST([PYTHON_EXTRA_LIBS])
-
-	# FIXME: do we really need this test?
-	AC_MSG_CHECKING([whether we can build a shared library depending on libpython])
-	rm -rf testpython
-	mkdir testpython
-	cd testpython
-	cat > testpython.c <<EOF
-#include <Python.h>
-int testpython (void)
-{
-Py_Exit (0);
-}
-EOF
-
-	if /bin/sh ../libtool --mode=compile ${CC} $PYTHON_CFLAGS -c testpython.c >/dev/null 2>&1 && \
-		/bin/sh ../libtool --mode=link ${CC} -o testpython.la -rpath `pwd` -module -avoid-version -no-undefined $PYTHON_LIB_LOC testpython.lo $PYTHON_LIBS $PYTHON_EXTRA_LIBS >/dev/null 2>&1 && \
-		grep 'dlname.*testpython' testpython.la >/dev/null 2>&1;
-	then
-		result=yes
-	else
-		result=no
-		have_python=no
-	fi
-	cd ..
-	rm -rf testpython
-	AC_MSG_RESULT([$result])
 fi
 
 if test "x$have_python" != "xno"
