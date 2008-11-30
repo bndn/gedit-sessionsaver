@@ -205,6 +205,8 @@ draw_spaces_in_window (GeditWindow *window,
 		gtk_source_view_set_draw_spaces (GTK_SOURCE_VIEW (l->data),
 						 data->enable ? plugin->priv->flags : 0);
 	}
+
+	g_list_free (views);
 }
 
 static void
