@@ -50,13 +50,14 @@ class GeditTerminal(gtk.HBox):
     }
 
     GCONF_PROFILE_DIR = "/apps/gnome-terminal/profiles/Default"
-    
+
     defaults = {
         'allow_bold'            : True,
         'audible_bell'          : False,
         'background'            : None,
         'backspace_binding'     : 'ascii-del',
-        'cursor_blinks'         : False,
+        'cursor_blink_mode'     : vte.CURSOR_BLINK_SYSTEM,
+        'cursor_shape'          : vte.CURSOR_SHAPE_BLOCK,
         'emulation'             : 'xterm',
         'font_name'             : 'Monospace 10',
         'scroll_on_keystroke'   : False,
@@ -127,15 +128,26 @@ class GeditTerminal(gtk.HBox):
         # cursor blink
         blink_mode = gconf_get_str(self.GCONF_PROFILE_DIR + "/cursor_blink_mode")
         if blink_mode.lower() == "system":
-            blink = gconf_get_bool("/desktop/gnome/interface/cursor_blink",
-                                   self.defaults['cursor_blinks'])
+            blink = vte.CURSOR_BLINK_SYSTEM
         elif blink_mode.lower() == "on":
-            blink = True
+            blink = vte.CURSOR_BLINK_ON
         elif blink_mode.lower() == "off":
-            blink = False
+            blink = vte.CURSOR_BLINK_OFF
         else:
-            blink = self.defaults['cursor_blinks']
-        self._vte.set_cursor_blinks(blink)
+            blink = self.defaults['cursor_blink_mode']
+        self._vte.set_cursor_blink_mode(blink)
+
+        # cursor shape
+        cursor_shape = gconf_get_str(self.GCONF_PROFILE_DIR + "/cursor_shape")
+        if cursor_shape.lower() == "block":
+            shape = vte.CURSOR_SHAPE_BLOCK
+        elif cursor_shape.lower() == "ibeam":
+            shape = vte.CURSOR_SHAPE_IBEAM
+        elif cursor_shape.lower() == "underline":
+            shape = vte.CURSOR_SHAPE_UNDERLINE
+        else:
+            shape = self.defaults['cursor_shape']
+        self._vte.set_cursor_shape(shape)
 
         self._vte.set_audible_bell(not gconf_get_bool(self.GCONF_PROFILE_DIR + "/silent_bell",
                                                       not self.defaults['audible_bell']))
