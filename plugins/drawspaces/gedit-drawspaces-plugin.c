@@ -247,14 +247,20 @@ get_gconf_value_with_default (GeditDrawspacesPlugin *plugin,
 			      gboolean def)
 {
 	GConfValue *value;
+	gboolean ret;
 
 	value = gconf_client_get (plugin->priv->gconf_client,
 				  key, NULL);
-				  
-	if (value == NULL || value->type != GCONF_VALUE_BOOL)
-		return def;
+
+	if (value != NULL && value->type == GCONF_VALUE_BOOL)
+		ret = gconf_value_get_bool (value);
 	else
-		return gconf_value_get_bool (value);
+		ret = def;
+
+	if (value != NULL)
+		gconf_value_free (value);
+
+	return ret;
 }
 
 static void
