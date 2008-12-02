@@ -316,19 +316,14 @@ plugin_defined charmap
 if test "$?" = 1
 then
         GUCHARMAP2_REQUIRED=2.23.0
-        GUCHARMAP_REQUIRED=1.6.0
         PKG_CHECK_MODULES([GUCHARMAP],[gucharmap-2 >= $GUCHARMAP2_REQUIRED],
-                          [have_gucharmap=yes have_gucharmap_2=yes],[have_gucharmap_2=no])
-        if test "$have_gucharmap_2" = "no"; then
-              PKG_CHECK_MODULES([GUCHARMAP], [gucharmap >= $GUCHARMAP_REQUIRED],
-                                [have_gucharmap=yes],[have_gucharmap=no])
-        fi
+                          [have_gucharmap_2=yes],[have_gucharmap_2=no])
 
 	if test "$have_gucharmap_2" = "yes"; then
 	       AC_DEFINE([HAVE_GUCHARMAP_2],[1],[Define if gucharmap API is version 2])
 	fi
 
-	if test "$have_gucharmap" = "no"; then
+	if test "$have_gucharmap_2" = "no"; then
 		plugin_defined_explicit charmap
 		if test "$?" = 1
 		then
