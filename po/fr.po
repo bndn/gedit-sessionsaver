@@ -10,10 +10,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins 2.18\n"
+"Project-Id-Version: gedit-plugins HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-08 11:04+0100\n"
-"PO-Revision-Date: 2008-03-08 11:15+0100\n"
+"POT-Creation-Date: 2008-12-03 08:44+0100\n"
+"PO-Revision-Date: 2008-12-03 08:58+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgid "Bracket Completion"
 msgstr "Complétion de parenthèses"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:254
+#: ../plugins/charmap/gedit-charmap-plugin.c:258
 msgid "Character Map"
 msgstr "Table de caractères"
 
@@ -88,6 +88,7 @@ msgstr "Sélectionner une couleur"
 msgid "_Insert"
 msgstr "_Insérer"
 
+#. ex:ts=4:et:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
 msgid "Draw Spaces"
 msgstr "Indicateur d'espaces"
@@ -96,31 +97,30 @@ msgstr "Indicateur d'espaces"
 msgid "Draw Spaces and Tabs"
 msgstr "Indique les espaces et les tabulations"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:1
-msgid "Draw non-breaking spaces"
-msgstr "Indiquer les espaces insécables"
+#: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw new lines"
+msgstr "Indiquer les sauts de ligne"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw spaces"
 msgstr "Indiquer les espaces"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw tabs"
 msgstr "Indiquer les tabulations"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:4
-msgid "Drawing color:"
-msgstr "Couleur des indicateurs :"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
+msgid "Show _White Space"
+msgstr "Afficher les _espaces"
 
-#: ../plugins/drawspaces/drawspaces.py:177
-msgid "Show White Space"
-msgstr "Afficher les espaces"
-
-#: ../plugins/drawspaces/drawspaces.py:178
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:148
 msgid "Show spaces and tabs"
 msgstr "Affiche les espaces et les tabulations"
 
-#. ex:ts=4:et:
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:488
+msgid "Error dialog"
+msgstr "Fenêtre d'erreur"
+
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Joint plusieurs lignes ou sépare les longues lignes"
@@ -170,32 +170,32 @@ msgstr "Ajoute une entrée de menus pour afficher/masquer la barre d'onglets."
 msgid "Show/Hide Tabbar"
 msgstr "Afficher/Masquer la barre d'onglets"
 
-#: ../plugins/sessionsaver/__init__.py:65
+#: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "Sessions enre_gistrées"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "_Save current session"
 msgstr "_Enregistrer la session actuelle"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "Save the current document list as a new session"
 msgstr "Enregistre la liste actuelle des documents dans une nouvelle session"
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "_Gérer les sessions enregistrées..."
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "Open the saved session manager"
 msgstr "Ouvre le gestionnaire des sessions enregistrées"
 
-#: ../plugins/sessionsaver/__init__.py:107
+#: ../plugins/sessionsaver/__init__.py:106
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Rétablir la session '%s'"
 
-#: ../plugins/sessionsaver/dialogs.py:165
+#: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
 msgstr "Nom de session"
 
@@ -208,15 +208,15 @@ msgstr "Enregistre et restaure vos sessions de travail"
 msgid "Session Saver"
 msgstr "Enregistreur de session"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
 msgid "Save session"
 msgstr "Enregistrement de session"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
 msgstr "Sessions enregistrées"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
 msgstr "Nom de session :"
 
@@ -236,16 +236,16 @@ msgstr "Intègre un terminal dans le panneau du bas."
 msgid "Embedded Terminal"
 msgstr "Terminal intégré"
 
-#: ../plugins/terminal/terminal.py:210
+#: ../plugins/terminal/terminal.py:238
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:231
+#: ../plugins/terminal/terminal.py:261
 msgid "C_hange Directory"
 msgstr "C_hanger de répertoire"
 
-#~ msgid "_Color picker"
-#~ msgstr "_Sélecteur de couleurs"
+#~ msgid "Draw non-breaking spaces"
+#~ msgstr "Indiquer les espaces insécables"
 
-#~ msgid "Color picker"
-#~ msgstr "Sélecteur de couleurs"
+#~ msgid "Drawing color:"
+#~ msgstr "Couleur des indicateurs :"
