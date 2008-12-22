@@ -9,9 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 08:25+0000\n"
-"PO-Revision-Date: 2008-09-19 15:37+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit-plugins&amp;component=general\n"
+"POT-Creation-Date: 2008-11-24 09:55+0000\n"
+"PO-Revision-Date: 2008-12-22 16:26+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgid "Bracket Completion"
 msgstr "Zárójel-kiegészítés"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:254
+#: ../plugins/charmap/gedit-charmap-plugin.c:323
 msgid "Character Map"
 msgstr "Karaktertábla"
 
@@ -88,6 +88,7 @@ msgstr "Válasszon színt"
 msgid "_Insert"
 msgstr "_Beszúrás"
 
+#. ex:ts=4:et:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
 msgid "Draw Spaces"
 msgstr "Szóközök rajzolása"
@@ -96,31 +97,30 @@ msgstr "Szóközök rajzolása"
 msgid "Draw Spaces and Tabs"
 msgstr "Szóközök és tabok rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:1
-msgid "Draw non-breaking spaces"
-msgstr "Nem törhető szóközök rajzolása"
+#: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw new lines"
+msgstr "Új sorok rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw spaces"
 msgstr "Szóközök rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw tabs"
 msgstr "Tabok rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:4
-msgid "Drawing color:"
-msgstr "Rajzszín:"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
+msgid "Show _White Space"
+msgstr "Üres helyek _megjelenítése"
 
-#: ../plugins/drawspaces/drawspaces.py:177
-msgid "Show White Space"
-msgstr "Üres helyek megjelenítése"
-
-#: ../plugins/drawspaces/drawspaces.py:178
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:148
 msgid "Show spaces and tabs"
 msgstr "Szóközök és tabok megjelenítése"
 
-#. ex:ts=4:et:
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:480
+msgid "Error dialog"
+msgstr "Hibaablak"
+
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Több sor egyesítése vagy hosszúak szétvágása"
@@ -169,32 +169,32 @@ msgstr "Menübejegyzés hozzáadása a lapsáv megjelenítéséhez/elrejtéséhe
 msgid "Show/Hide Tabbar"
 msgstr "Lapsáv megjelenítése/elrejtése"
 
-#: ../plugins/sessionsaver/__init__.py:65
+#: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "Mentett m_unkamenetek"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "_Save current session"
 msgstr "Jelenlegi munkamenet _mentése"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "Save the current document list as a new session"
 msgstr "A jelenlegi dokumentumlista mentése új munkamenetként"
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "Mentett munkamenetek _kezelése…"
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "Open the saved session manager"
 msgstr "A mentett munkamenetek kezelése"
 
-#: ../plugins/sessionsaver/__init__.py:107
+#: ../plugins/sessionsaver/__init__.py:106
 #, python-format
 msgid "Recover '%s' session"
 msgstr "„%s” munkamenet helyreállítása"
 
-#: ../plugins/sessionsaver/dialogs.py:165
+#: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
 msgstr "Munkamenet neve"
 
@@ -207,15 +207,15 @@ msgstr "Működő munkamenet mentése és visszaállítása"
 msgid "Session Saver"
 msgstr "Munkamenetmentő"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
 msgid "Save session"
 msgstr "Munkamenet mentése"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
 msgstr "Mentett munkamenetek"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
 msgstr "Munkamenetnév:"
 
@@ -235,11 +235,11 @@ msgstr "Terminál beágyazása az alsó ablaktáblába."
 msgid "Embedded Terminal"
 msgstr "Beágyazott terminál"
 
-#: ../plugins/terminal/terminal.py:210
+#: ../plugins/terminal/terminal.py:226
 msgid "Terminal"
 msgstr "Terminál"
 
-#: ../plugins/terminal/terminal.py:231
+#: ../plugins/terminal/terminal.py:249
 msgid "C_hange Directory"
 msgstr "Könyvtár_váltás"
 
