@@ -1,12 +1,17 @@
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT(gedit-plugins, 2.25.1, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
+AC_PREREQ(2.59)
+ 
+m4_define(gedit_plugins_major_version,  2)
+m4_define(gedit_plugins_minor_version, 25)
+m4_define(gedit_plugins_micro_version,  2)
+m4_define(gedit_plugins_version, gedit_plugins_major_version.gedit_plugins_minor_version.gedit_plugins_micro_version)
+
+AC_INIT(gedit-plugins, gedit_plugins_version, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
 
 AC_CONFIG_SRCDIR([plugins])
 AC_CONFIG_MACRO_DIR([m4])
 AC_PREFIX_PROGRAM([gedit])
-
-AC_PREREQ(2.59)
 
 AM_INIT_AUTOMAKE([1.8 dist-bzip2 no-dist-gzip])
 
@@ -66,6 +71,12 @@ PKG_CHECK_MODULES(GEDIT, [
 GEDIT_LIBS="${GEDIT_LIBS}"
 AC_SUBST(GEDIT_LIBS)
 AC_SUBST(GEDIT_CFLAGS)
+
+# ================================================================
+# GConf related settings
+# ================================================================
+
+AM_GCONF_SOURCE_2
 
 # ================================================================
 # Plugins
@@ -146,12 +157,6 @@ done
 IFS="$geditpl_save_ifs"
 
 AC_MSG_RESULT([$PLUGINS])
-
-# ================================================================
-# GConf related settings
-# ================================================================
-
-AM_GCONF_SOURCE_2
 
 
 # ================================================================
@@ -315,22 +320,21 @@ fi
 plugin_defined charmap
 if test "$?" = 1
 then
-        GUCHARMAP2_REQUIRED=2.23.0
-        PKG_CHECK_MODULES([GUCHARMAP],[gucharmap-2 >= $GUCHARMAP2_REQUIRED],
-                          [have_gucharmap_2=yes],[have_gucharmap_2=no])
+	GUCHARMAP2_REQUIRED=2.23.0
+	PKG_CHECK_MODULES([GUCHARMAP],
+		[gucharmap-2 >= $GUCHARMAP2_REQUIRED],
+		[have_gucharmap=yes],[have_gucharmap=no])
 
-	if test "$have_gucharmap_2" = "yes"; then
-	       AC_DEFINE([HAVE_GUCHARMAP_2],[1],[Define if gucharmap API is version 2])
-	fi
+	AC_SUBST([GUCHARMAP_CFLAGS])
+	AC_SUBST([GUCHARMAP_LIBS])
 
-	if test "$have_gucharmap_2" = "no"; then
+	if test "$have_gucharmap" = "no"; then
 		plugin_defined_explicit charmap
 		if test "$?" = 1
 		then
 			AC_MSG_ERROR([gucharmap could not be found, needed to built charmap plugin])
 		else
 			AC_MSG_WARN([gucharmap could not be found, charmap plugin will be disabled])
-
 			undef_plugin charmap "libgucharmap not found"
 		fi
 	fi
@@ -342,26 +346,24 @@ fi
 plugin_defined terminal
 if test "$?" = 1
 then
-	AC_MSG_CHECKING([for python-vte module])
+	PYVTE_REQUIRED=0.19.4
+	PKG_CHECK_MODULES([PYVTE],
+		[pyvte >= $PYVTE_REQUIRED],
+		[have_pyvte=yes],[have_pyvte=no])
 
-	if $PYTHON -c "import vte" >/dev/null 2>&1; 
-	then
-		AC_MSG_RESULT([yes])
-	else
-		# Disable the terminal plugin because it needs vte
-		AC_MSG_RESULT([no])
-		
+	AC_SUBST([PYVTE_CFLAGS])
+	AC_SUBST([PYVTE_LIBS])
+
+	if test "x$have_pyvte" = "xno";	then
 		plugin_defined_explicit terminal
 		if test "$?" = 1
 		then
-			AC_MSG_ERROR([the python vte module could not be found, needed to built terminal plugin])
+			AC_MSG_ERROR([pyvte could not be found, needed to built terminal plugin])
 		else
-			AC_MSG_WARN([the python vte module could not be found, terminal plugin will be disabled])
-			
-			undef_plugin terminal "python vte module not found"
+			AC_MSG_WARN([pyvte could not be found, terminal plugin will be disabled])
+			undef_plugin terminal "pyvte not found"
 		fi
-
-	fi		
+	fi
 fi
 
 if test -z "$disabled_plugins"
@@ -436,5 +438,5 @@ Configuration:
 Note: you have to install these plugins into the same prefix than your gedit
 installation (probably /usr if you're using your distro packages, /usr/local
 if you have compiled it on your own).
-
 "
+
