@@ -36,6 +36,7 @@
 #define GCONF_KEY_DRAW_TABS    GCONF_KEY_BASE "/draw_tabs"
 #define GCONF_KEY_DRAW_SPACES  GCONF_KEY_BASE "/draw_spaces"
 #define GCONF_KEY_DRAW_NEWLINE GCONF_KEY_BASE "/draw_newline"
+#define GCONF_KEY_DRAW_NBSP    GCONF_KEY_BASE "/draw_nbsp"
 
 #define UI_FILE GEDIT_UIDIR "/drawspaces.ui"
 
@@ -79,6 +80,7 @@ struct _DrawspacesConfigureDialog
 	GtkWidget *draw_tabs;
 	GtkWidget *draw_spaces;
 	GtkWidget *draw_newline;
+	GtkWidget *draw_nbsp;
 };
 
 static const gchar submenu [] = {
@@ -269,7 +271,7 @@ static void
 get_config_options (WindowData *data,
 		    GeditDrawspacesPlugin *plugin)
 {
-	gboolean tabs, spaces, newline;
+	gboolean tabs, spaces, newline, nbsp;
 
 	data->enable = get_gconf_value_with_default (plugin, GCONF_KEY_ENABLE,
 						     FALSE);
@@ -281,7 +283,10 @@ get_config_options (WindowData *data,
 					       TRUE);
 
 	newline = get_gconf_value_with_default (plugin, GCONF_KEY_DRAW_NEWLINE,
-					        FALSE);			 
+					        FALSE);
+					        
+	nbsp = get_gconf_value_with_default (plugin, GCONF_KEY_DRAW_NBSP,
+					     FALSE);
 
 	if (tabs)
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_TAB;
@@ -289,6 +294,8 @@ get_config_options (WindowData *data,
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_SPACE;
 	if (newline)
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_NEWLINE;
+	if (nbsp)
+		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_NBSP;
 }
 
 static void
@@ -428,6 +435,20 @@ set_draw_newline (GeditDrawspacesPlugin *plugin,
 }
 
 static void
+set_draw_nbsp (GeditDrawspacesPlugin *plugin,
+	       gboolean value)
+{
+	if (!gconf_client_key_is_writable (plugin->priv->gconf_client,
+					   GCONF_KEY_DRAW_NBSP,
+					   NULL))
+		return;
+	gconf_client_set_bool (plugin->priv->gconf_client,
+			       GCONF_KEY_DRAW_NBSP,
+			       value,
+			       NULL);
+}
+
+static void
 on_draw_tabs_toggled (GtkToggleButton *button,
 		      GeditDrawspacesPlugin *plugin)
 {
@@ -446,6 +467,13 @@ on_draw_newline_toggled (GtkToggleButton *button,
 		         GeditDrawspacesPlugin *plugin)
 {
 	set_draw_newline (plugin, gtk_toggle_button_get_active (button));
+}
+
+static void
+on_draw_nbsp_toggled (GtkToggleButton *button,
+		      GeditDrawspacesPlugin *plugin)
+{
+	set_draw_nbsp (plugin, gtk_toggle_button_get_active (button));
 }
 
 static void
@@ -478,6 +506,7 @@ get_configuration_dialog (GeditDrawspacesPlugin *plugin)
 					  "draw-tabs", &dialog->draw_tabs,
 					  "draw-spaces", &dialog->draw_spaces,
 					  "draw-newlines", &dialog->draw_newline,
+					  "draw-nbsp", &dialog->draw_nbsp,
 					  NULL);
 
 	if(!ret)
@@ -507,6 +536,8 @@ get_configuration_dialog (GeditDrawspacesPlugin *plugin)
 				      plugin->priv->flags & GTK_SOURCE_DRAW_SPACES_SPACE);
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (dialog->draw_newline),
 				      plugin->priv->flags & GTK_SOURCE_DRAW_SPACES_NEWLINE);
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (dialog->draw_nbsp),
+				      plugin->priv->flags & GTK_SOURCE_DRAW_SPACES_NBSP);
 
 	g_signal_connect (dialog->draw_tabs, "toggled",
 			  G_CALLBACK (on_draw_tabs_toggled), plugin);
@@ -514,6 +545,8 @@ get_configuration_dialog (GeditDrawspacesPlugin *plugin)
 			  G_CALLBACK (on_draw_spaces_toggled), plugin);
 	g_signal_connect (dialog->draw_newline, "toggled",
 			  G_CALLBACK (on_draw_newline_toggled), plugin);
+	g_signal_connect (dialog->draw_nbsp, "toggled",
+			  G_CALLBACK (on_draw_nbsp_toggled), plugin);
 	g_signal_connect (dialog->dialog, "destroy",
 			  G_CALLBACK (dialog_destroyed), dialog);
 
@@ -567,6 +600,14 @@ on_gconf_notify (GConfClient *client,
 			plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_NEWLINE;
 		else
 			plugin->priv->flags &= ~GTK_SOURCE_DRAW_SPACES_NEWLINE;
+	}
+	else if (strcmp (entry->key, GCONF_KEY_DRAW_NBSP) == 0)
+	{
+		value = gconf_value_get_bool (entry->value);
+		if (value)
+			plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_NBSP;
+		else
+			plugin->priv->flags &= ~GTK_SOURCE_DRAW_SPACES_NBSP;
 	}
 	
 	draw_spaces (plugin);
