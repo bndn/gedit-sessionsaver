@@ -91,14 +91,14 @@ class SessionModel(gtk.GenericTreeModel):
         return None
 
 class Dialog(object):
-    UI_FILE = os.path.join(os.path.dirname(__file__), "sessionsaver.ui")
+    UI_FILE = "sessionsaver.ui"
 
     def __new__(cls, *args):
         if not cls.__dict__.has_key('_instance') or cls._instance is None:
             cls._instance = object.__new__(cls, *args)
         return cls._instance
 
-    def __init__(self, main_widget, parent_window = None):
+    def __init__(self, main_widget, datadir, parent_window = None):
         super(Dialog, self).__init__()
 
         if parent_window is None:
@@ -106,7 +106,7 @@ class Dialog(object):
         self.parent = parent_window
 
         self.ui = gtk.Builder()
-        self.ui.add_from_file(self.UI_FILE)
+        self.ui.add_from_file(os.path.join(datadir, self.UI_FILE))
         self.ui.set_translation_domain(domain=GETTEXT_PACKAGE)
         self.dialog = self.ui.get_object(main_widget)
         self.dialog.connect('delete-event', self.on_delete_event)
@@ -131,7 +131,7 @@ class Dialog(object):
 
 class SaveSessionDialog(Dialog):
     def __init__(self, window, plugin):
-        super(SaveSessionDialog, self).__init__('save-session-dialog', window)
+        super(SaveSessionDialog, self).__init__('save-session-dialog', plugin.get_data_dir(), window)
         self.plugin = plugin
 
         model = SessionModel(plugin.sessions)
@@ -155,7 +155,7 @@ class SaveSessionDialog(Dialog):
 
 class SessionManagerDialog(Dialog):
     def __init__(self, plugin):
-        super(SessionManagerDialog, self).__init__('session-manager-dialog')
+        super(SessionManagerDialog, self).__init__('session-manager-dialog', plugin.get_data_dir())
         self.plugin = plugin
 
         model = SessionModel(plugin.sessions)

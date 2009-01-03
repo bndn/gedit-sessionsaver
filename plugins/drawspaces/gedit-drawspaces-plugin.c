@@ -38,7 +38,7 @@
 #define GCONF_KEY_DRAW_NEWLINE GCONF_KEY_BASE "/draw_newline"
 #define GCONF_KEY_DRAW_NBSP    GCONF_KEY_BASE "/draw_nbsp"
 
-#define UI_FILE GEDIT_UIDIR "/drawspaces.ui"
+#define UI_FILE "drawspaces.ui"
 
 #define WINDOW_DATA_KEY "GeditDrawspacesPluginWindowData"
 
@@ -492,6 +492,9 @@ get_configuration_dialog (GeditDrawspacesPlugin *plugin)
 	DrawspacesConfigureDialog *dialog = NULL;
 	gboolean ret;
 	GtkWidget *error_widget;
+	gchar *datadir;
+	gchar *filename;
+	
 	gchar *root_objects [] = {
 		"config-dialog",
 		NULL
@@ -499,7 +502,10 @@ get_configuration_dialog (GeditDrawspacesPlugin *plugin)
 
 	dialog = g_slice_new (DrawspacesConfigureDialog);
 
-	ret = gedit_utils_get_ui_objects (UI_FILE,
+	datadir = gedit_plugin_get_data_dir (GEDIT_PLUGIN (plugin));
+	filename = g_build_filename (datadir, UI_FILE, NULL);
+
+	ret = gedit_utils_get_ui_objects (filename,
 					  root_objects,
 					  &error_widget,
 					  "config-dialog", &dialog->dialog,
@@ -508,6 +514,9 @@ get_configuration_dialog (GeditDrawspacesPlugin *plugin)
 					  "draw-newlines", &dialog->draw_newline,
 					  "draw-nbsp", &dialog->draw_nbsp,
 					  NULL);
+
+	g_free (datadir);
+	g_free (filename);
 
 	if(!ret)
 	{

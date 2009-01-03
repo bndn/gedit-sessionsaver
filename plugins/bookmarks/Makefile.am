@@ -5,7 +5,6 @@ supportdir = $(GEDIT_PLUGINS_DATA_DIR)/bookmarks
 INCLUDES = \
 	-I$(top_srcdir) 				\
 	$(GEDIT_CFLAGS) 				\
-	$(GUCHARMAP_CFLAGS)				\
 	$(WARN_CFLAGS)					\
 	$(DISABLE_DEPRECATED_CFLAGS)
 

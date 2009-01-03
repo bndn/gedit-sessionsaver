@@ -1,5 +1,23 @@
 2009-01-03  Jesse van den Kieboom  <jesse@icecrew.nl>
 
+	* plugins/sessionsaver/Makefile.am:
+	* plugins/sessionsaver/dialogs.py:
+	* plugins/bookmarks/Makefile.am:
+	* plugins/charmap/Makefile.am:
+	* plugins/drawspaces/gedit-drawspaces-plugin.c:
+	* plugins/drawspaces/Makefile.am:
+	* plugins/showtabbar/Makefile.am:
+
+	Makefile cleanup and use get_data_dir() where applicable (also install
+	data in correct data directory now)
+
+2009-01-03  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac: bump version of gedit to 2.25.3 to make use of 
+	gedit_plugin_get_data_dir.
+
+2009-01-03  Jesse van den Kieboom  <jesse@icecrew.nl>
+
 	* configure.ac: bump version of gedit to 2.25.3 to make use of 
 	gedit_plugin_get_data_dir.
 

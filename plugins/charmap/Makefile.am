@@ -6,8 +6,7 @@ INCLUDES = \
 	$(GEDIT_CFLAGS) 				\
 	$(GUCHARMAP_CFLAGS)				\
 	$(WARN_CFLAGS)					\
-	$(DISABLE_DEPRECATED_CFLAGS)			\
-	-DGEDIT_LOCALEDIR=\""$(datadir)/locale"\"
+	$(DISABLE_DEPRECATED_CFLAGS)
 
 plugin_LTLIBRARIES = libcharmap.la
 

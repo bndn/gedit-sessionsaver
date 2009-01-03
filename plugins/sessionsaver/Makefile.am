@@ -6,11 +6,13 @@ plugin_in_files = sessionsaver.gedit-plugin.desktop.in
 
 sessionsaverdir=$(plugindir)/sessionsaver
 sessionsaver_PYTHON = __init__.py store.py dialogs.py
-sessionsaver_DATA = sessionsaver.ui
+
+uidir=$(GEDIT_PLUGINS_DATA_DIR)/sessionsaver
+ui_DATA = sessionsaver.ui
 
 plugin_DATA = $(plugin_in_files:.gedit-plugin.desktop.in=.gedit-plugin)
 
-EXTRA_DIST = $(plugin_in_files) $(sessionsaver_DATA)
+EXTRA_DIST = $(plugin_in_files) $(ui_DATA)
 
 CLEANFILES = $(plugin_DATA)
 DISTCLEANFILES = $(plugin_DATA)

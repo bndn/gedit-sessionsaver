@@ -5,9 +5,7 @@ INCLUDES = \
 	-I$(top_srcdir) 				\
 	$(GEDIT_CFLAGS) 				\
 	$(WARN_CFLAGS)					\
-	$(DISABLE_DEPRECATED_CFLAGS)			\
-	-DGEDIT_UIDIR=\""$(datadir)/gedit-2/plugins/drawspaces"\" \
-	-DGEDIT_LOCALEDIR=\""$(datadir)/locale"\"
+	$(DISABLE_DEPRECATED_CFLAGS)
 
 plugin_LTLIBRARIES = libdrawspaces.la
 
@@ -18,7 +16,7 @@ libdrawspaces_la_SOURCES = \
 libdrawspaces_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 libdrawspaces_la_LIBADD = $(GEDIT_LIBS)
 
-uidir = $(datadir)/gedit-2/plugins/drawspaces
+uidir = $(GEDIT_PLUGINS_DATA_DIR)/drawspaces
 ui_DATA = drawspaces.ui
 
 # Plugin Info
