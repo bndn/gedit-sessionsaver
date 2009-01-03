@@ -1,6 +1,6 @@
 # Terminal Plugin
 
-plugindir = $(libdir)/gedit-2/plugins
+plugindir = $(GEDIT_PLUGINS_LIBS_DIR)
 plugin_PYTHON = terminal.py
 
 plugin_in_files = terminal.gedit-plugin.desktop.in
