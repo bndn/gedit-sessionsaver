@@ -9,14 +9,14 @@
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com>,2002.
 # Francisco Javier F. Serrador <serrador@arrakis.es>, 2003.
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2006.
-# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 200, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit-"
-"plugins&amp;component=general\n"
-"POT-Creation-Date: 2008-11-24 09:55+0000\n"
-"PO-Revision-Date: 2008-11-30 10:34+0100\n"
+"plugins&component=general\n"
+"POT-Creation-Date: 2009-01-03 13:41+0000\n"
+"PO-Revision-Date: 2009-01-03 16:34+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.h:1
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.h:2
+msgid "Easy document navigation with bookmarks"
+msgstr "Navegue fácilmente por sus documentos con marcadores"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:123
+msgid "Toggle Bookmark"
+msgstr "Conmutar marcador"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:124
+msgid "Toggle bookmark status of the current line"
+msgstr "Conmutar el estado del marcador de la línea actual"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:126
+msgid "Goto Next Bookmark"
+msgstr "Ir al siguiente marcador"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:127
+msgid "Goto the next bookmark"
+msgstr "Ir al siguiente marcador"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+msgid "Goto Previous Bookmark"
+msgstr "Ir al marcador anterior"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+msgid "Goto the previous bookmark"
+msgstr "ir al marcador anterior"
 
 #: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
 msgid "Automatically adds closing brackets."
@@ -34,7 +66,7 @@ msgid "Bracket Completion"
 msgstr "Completar paréntesis"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:323
+#: ../plugins/charmap/gedit-charmap-plugin.c:258
 msgid "Character Map"
 msgstr "Mapa de caracteres"
 
@@ -105,22 +137,26 @@ msgid "Draw new lines"
 msgstr "Dibujar líneas nuevas"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:2
+msgid "Draw non-breaking spaces"
+msgstr "Dibujar espacios de no ruptura"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw spaces"
 msgstr "Dibujar espacios"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw tabs"
 msgstr "Dibujar tabulaciones"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:149
 msgid "Show _White Space"
 msgstr "Mostrar espacios en _blanco"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:148
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
 msgid "Show spaces and tabs"
 msgstr "Mostrar espacios y tabulaciones"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:480
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:517
 msgid "Error dialog"
 msgstr "Diálogo de error"
 
@@ -239,16 +275,13 @@ msgstr "Empotre un terminal en el panel inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal empotrado"
 
-#: ../plugins/terminal/terminal.py:226
+#: ../plugins/terminal/terminal.py:238
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:249
+#: ../plugins/terminal/terminal.py:261
 msgid "C_hange Directory"
 msgstr "_Cambiar de directorio"
-
-#~ msgid "Draw non-breaking spaces"
-#~ msgstr "Dibujar espacios de no ruptura"
 
 #~ msgid "Drawing color:"
 #~ msgstr "Color de dibujado:"
