@@ -66,7 +66,7 @@ PKG_CHECK_MODULES(GEDIT, [
 	gtk+-2.0 >= 2.13.0
 	gconf-2.0 >= 1.1.11
 	gtksourceview-2.0 >= 2.5.1
-	gedit-2.20 >= 2.24.0
+	gedit-2.20 >= 2.25.3
 ])
 GEDIT_LIBS="${GEDIT_LIBS}"
 AC_SUBST(GEDIT_LIBS)
