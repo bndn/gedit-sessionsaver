@@ -88,9 +88,9 @@ GEDIT_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="showtabbar charmap drawspaces"
-USEFUL_PLUGINS="showtabbar charmap drawspaces"
-DEFAULT_PLUGINS="showtabbar charmap drawspaces"
+ALL_PLUGINS="bookmarks showtabbar charmap drawspaces"
+USEFUL_PLUGINS="bookmarks showtabbar charmap drawspaces"
+DEFAULT_PLUGINS="bookmarks showtabbar charmap drawspaces"
 
 PYTHON_ALL_PLUGINS="bracketcompletion codecomment colorpicker joinlines sessionsaver smartspaces terminal"
 PYTHON_USEFUL_PLUGINS="bracketcompletion codecomment colorpicker joinlines sessionsaver smartspaces terminal"
@@ -405,10 +405,17 @@ else
 fi
 AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 
+GEDIT_PLUGINS_LIBS_DIR="$libdir/gedit-2/plugins"
+AC_SUBST(GEDIT_PLUGINS_LIBS_DIR)
+
+GEDIT_PLUGINS_DATA_DIR="$datadir/gedit-2/plugins"
+AC_SUBST(GEDIT_PLUGINS_DATA_DIR)
+
 AC_CONFIG_FILES([
 Makefile
 plugins/gpdefs.py
 plugins/Makefile
+plugins/bookmarks/Makefile
 plugins/bracketcompletion/Makefile
 plugins/charmap/Makefile
 plugins/codecomment/Makefile
