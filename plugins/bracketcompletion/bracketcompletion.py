@@ -31,6 +31,12 @@ common_brackets = {
     "'" : "'",
 }
 
+close_brackets = {
+    ')' : '(',
+    ']' : '[',
+    '}' : '{',
+}
+
 language_brackets = {
     'changelog': { '<' : '>' },
     'html': { '<' : '>' },
@@ -46,13 +52,21 @@ class BracketCompletionViewHelper(object):
         self._view = view
         self._doc = view.get_buffer()
         self._last_iter = None
+        self._stack = []
+        self._relocate_marks = True
         self.update_language()
+        
+        #Add the markers to the buffer
+        insert = self._doc.get_iter_at_mark(self._doc.get_insert())
+        self._mark_begin = self._doc.create_mark(None, insert, True)
+        self._mark_end = self._doc.create_mark(None, insert, False)
 
         self._handlers = [
             None,
             None,
             view.connect('notify::editable', self.on_notify_editable),
             self._doc.connect('notify::language', self.on_notify_language),
+            None,
         ]
         self.update_active()
 
@@ -60,8 +74,11 @@ class BracketCompletionViewHelper(object):
         if self._handlers[0]:
             self._view.disconnect(self._handlers[0])
             self._view.disconnect(self._handlers[1])
+            self._doc.disconnect(self._handlers[4])
         self._view.disconnect(self._handlers[2])
         self._doc.disconnect(self._handlers[3])
+        self._doc.delete_mark(self._mark_begin)
+        self._doc.delete_mark(self._mark_end)
 
     def update_active(self):
         # Don't activate the feature if the buffer isn't editable or if
@@ -74,11 +91,15 @@ class BracketCompletionViewHelper(object):
                                                    self.on_event_after)
             self._handlers[1] = self._view.connect('key-press-event',
                                                    self.on_key_press_event)
+            self._handlers[4] = self._doc.connect('delete-range',
+                                                  self.on_delete_range)
         elif not active and self._handlers[0] is not None:
             self._view.disconnect(self._handlers[0])
             self._handlers[0] = None
             self._view.disconnect(self._handlers[1])
             self._handlers[1] = None
+            self._doc.disconnect(self._handlers[4])
+            self._handlers[4] = None
 
     def update_language(self):
         lang = self._doc.get_language()
@@ -100,6 +121,10 @@ class BracketCompletionViewHelper(object):
             kv = gtk.gdk.unicode_to_keyval(ord(b[-1]))
             if (kv):
                 self._bracket_keyvals.add(kv)
+        for b in close_brackets:
+            kv = gtk.gdk.unicode_to_keyval(ord(b[-1]))
+            if (kv):
+                self._bracket_keyvals.add(kv)
 
     def get_current_token(self):
         end = self._doc.get_iter_at_mark(self._doc.get_insert())
@@ -111,6 +136,25 @@ class BracketCompletionViewHelper(object):
             word = self._doc.get_text(start, end)
 
         if not word and start.backward_char():
+            word = start.get_char()
+            if word.isspace():
+                word = None
+
+        if word:
+            return word, start, end
+        else:
+            return None, None, None
+
+    def get_next_token(self):
+        start = self._doc.get_iter_at_mark(self._doc.get_insert())
+        end = start.copy()
+        word = None
+
+        if start.ends_word() or (start.inside_word() and not start.starts_word()):
+            end.forward_word_end()
+            word = self._doc.get_text(start, end)
+
+        if not word and end.forward_char():
             word = start.get_char()
             if word.isspace():
                 word = None
@@ -147,11 +191,18 @@ class BracketCompletionViewHelper(object):
         self.update_active()
 
     def on_key_press_event(self, view, event):
-        if not self._last_iter or \
-           event.state & (gdk.CONTROL_MASK | gdk.MOD1_MASK):
+        if event.state & (gdk.CONTROL_MASK | gdk.MOD1_MASK):
             return False
 
+        if event.keyval in (gtk.keysyms.Left, gtk.keysyms.Right):
+            self._stack = []
+
         if event.keyval == gtk.keysyms.BackSpace:
+            self._stack = []
+            
+            if self._last_iter == None:
+                return False
+            
             iter = self._doc.get_iter_at_mark(self._doc.get_insert())
             iter.backward_char()
             self._doc.begin_user_action()
@@ -161,8 +212,7 @@ class BracketCompletionViewHelper(object):
             return True
 
         if event.keyval in (gtk.keysyms.Return, gtk.keysyms.KP_Enter) and \
-           view.get_auto_indent():
-            print "return"
+           view.get_auto_indent() and self._last_iter != None:
             # This code has barely been adapted from gtksourceview.c
             # Note: it might break IM!
 
@@ -175,7 +225,7 @@ class BracketCompletionViewHelper(object):
             # Insert new line and auto-indent.
             self._doc.begin_user_action()
             self._doc.insert(iter, indent)
-            self._doc.insert(iter, indent)                
+            self._doc.insert(iter, indent)
             self._doc.end_user_action()
 
             # Leave the cursor where we want it to be
@@ -194,24 +244,70 @@ class BracketCompletionViewHelper(object):
            event.state & (gdk.CONTROL_MASK | gdk.MOD1_MASK) or \
            event.keyval not in self._bracket_keyvals:
             return
-
+        
+        # Check if the insert mark is in the range of mark_begin to mark_end
+        # if not we free the stack
+        insert = self._doc.get_insert()
+        iter_begin = self._doc.get_iter_at_mark(self._mark_begin)
+        iter_end = self._doc.get_iter_at_mark(self._mark_end)
+        insert_iter = self._doc.get_iter_at_mark(insert)
+        if not iter_begin.equal(iter_end):
+            if not insert_iter.in_range(iter_begin, iter_end):
+                self._stack = []
+                self._relocate_marks = True
+        
+        # Check if the word is not in our brackets
         word, start, end = self.get_current_token()
-
-        if word not in self._brackets:
+        
+        if word not in self._brackets and word not in close_brackets:
             return
 
-        bracket = self._brackets[word]
-
-        # Insert the closing bracket
-        self._doc.begin_user_action()
-        self._doc.insert(end, bracket)
-        self._doc.end_user_action()
+        # If we didn't insert brackets yet we insert them in the insert mark iter
+        if self._relocate_marks == True:
+            insert_iter = self._doc.get_iter_at_mark(insert)
+            self._doc.move_mark(self._mark_begin, insert_iter)
+            self._doc.move_mark(self._mark_end, insert_iter)
+            self._relocate_marks = False
         
-        # Leave the cursor when we want it to be
-        self._last_iter = end.copy()
-        end.backward_chars(len(bracket))
-        self._doc.place_cursor(end)
+        # Depending on having close bracket or a open bracket we get the opposed
+        # bracket
+        bracket = None
+        bracket2 = None
+        
+        if word not in close_brackets:
+            self._stack.append(word)
+            bracket = self._brackets[word]
+        else:
+            bracket2 = close_brackets[word]
+        
+        word2, start2, end2 = self.get_next_token()
+        
+        # Check to skip the closing bracket
+        # Example: word = ) and word2 = )
+        if word == word2:
+            if bracket2 != None and self._stack != [] and \
+               self._stack[len(self._stack) - 1] == bracket2:
+                self._stack.pop()
+                self._doc.handler_block(self._handlers[4])
+                self._doc.delete(start, end)
+                self._doc.handler_unblock(self._handlers[4])
+                end.forward_char()
+                self._doc.place_cursor(end)
+            return
+        
+        # Insert the closing bracket
+        if bracket != None:
+            self._doc.begin_user_action()
+            self._doc.insert(end, bracket)
+            self._doc.end_user_action()
+            
+            # Leave the cursor when we want it to be
+            self._last_iter = end.copy()
+            end.backward_chars(len(bracket))
+            self._doc.place_cursor(end)
 
+    def on_delete_range(self, doc, start, end):
+        self._stack = []
 
 class BracketCompletionPlugin(gedit.Plugin):
     WINDOW_DATA_KEY = "BracketCompletionPluginWindowData"
