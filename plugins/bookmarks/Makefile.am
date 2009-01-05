@@ -28,7 +28,7 @@ BUILDFILES = $(plugin_in_files:.gedit-plugin.desktop.in=.gedit-plugin)
 
 plugin_DATA = $(BUILDFILES)
 
-EXTRA_DIST = $(plugin_in_files)
+EXTRA_DIST = $(plugin_in_files) $(support_DATA)
 
 CLEANFILES = $(BUILDFILES) 
 DISTCLEANFILES = $(BUILDFILES)
