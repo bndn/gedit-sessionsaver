@@ -416,16 +416,27 @@ Makefile
 plugins/gpdefs.py
 plugins/Makefile
 plugins/bookmarks/Makefile
+plugins/bookmarks/bookmarks.gedit-plugin.desktop.in
 plugins/bracketcompletion/Makefile
+plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in
 plugins/charmap/Makefile
+plugins/charmap/charmap.gedit-plugin.desktop.in
 plugins/codecomment/Makefile
+plugins/codecomment/codecomment.gedit-plugin.desktop.in
 plugins/colorpicker/Makefile
+plugins/colorpicker/colorpicker.gedit-plugin.desktop.in
 plugins/drawspaces/Makefile
+plugins/drawspaces/drawspaces.gedit-plugin.desktop.in
 plugins/joinlines/Makefile
+plugins/joinlines/joinlines.gedit-plugin.desktop.in
 plugins/sessionsaver/Makefile
+plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in
 plugins/showtabbar/Makefile
+plugins/showtabbar/showtabbar.gedit-plugin.desktop.in
 plugins/smartspaces/Makefile
+plugins/smartspaces/smartspaces.gedit-plugin.desktop.in
 plugins/terminal/Makefile
+plugins/terminal/terminal.gedit-plugin.desktop.in
 po/Makefile.in])
 
 AC_OUTPUT
