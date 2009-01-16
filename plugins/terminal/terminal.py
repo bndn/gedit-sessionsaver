@@ -115,6 +115,7 @@ class GeditTerminal(gtk.HBox):
         style = self._vte.get_style()
         fg = style.text[gtk.STATE_NORMAL]
         bg = style.base[gtk.STATE_NORMAL]
+        palette = []
 
         if not gconf_get_bool(self.GCONF_PROFILE_DIR + "/use_theme_colors"):
             fg_color = gconf_get_str(self.GCONF_PROFILE_DIR + "/foreground_color", None)
@@ -123,7 +124,17 @@ class GeditTerminal(gtk.HBox):
             bg_color = gconf_get_str(self.GCONF_PROFILE_DIR + "/background_color", None)
             if (bg_color):
                 bg = gtk.gdk.color_parse (bg_color)
-        self._vte.set_colors(fg, bg, [])
+        str_colors = gconf_get_str(self.GCONF_PROFILE_DIR + "/palette", None)
+        if (str_colors):
+            for str_color in str_colors.split(':'):
+                try:
+                    palette.append(gtk.gdk.color_parse(str_color))
+                except:
+                    palette = []
+                    break
+            if (len(palette) not in (0, 8, 16, 24)):
+                palette = []
+        self._vte.set_colors(fg, bg, palette)
 
         # cursor blink
         blink_mode = gconf_get_str(self.GCONF_PROFILE_DIR + "/cursor_blink_mode")
@@ -212,7 +223,7 @@ class GeditTerminal(gtk.HBox):
         menu = self.create_popup_menu()
    
         if event is not None:
-	        menu.popup(None, None, None, event.button, event.time)
+            menu.popup(None, None, None, event.button, event.time)
         else:
             menu.popup(None, None,
                        lambda m: gedit.utils.menu_position_under_widget(m, self),
