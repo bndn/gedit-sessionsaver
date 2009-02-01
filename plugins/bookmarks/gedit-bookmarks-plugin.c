@@ -119,6 +119,12 @@ free_window_data (WindowData *data)
 	g_slice_free (WindowData, data);
 }
 
+static void
+free_insert_data (InsertData *data)
+{
+	g_slice_free (InsertData, data);
+}
+
 static GtkActionEntry const action_entries[] = {
 	{"ToggleBookmark", NULL, N_("Toggle Bookmark"), "<Control><Alt>B",
 	 N_("Toggle bookmark status of the current line"), 
@@ -251,14 +257,14 @@ enable_bookmarks (GeditView   *view,
 				        G_CALLBACK (on_delete_range),
 				        NULL);
 				        
-		data = g_new (InsertData, 1);
+		data = g_slice_new (InsertData);
 		data->new_user_action = FALSE;
 		data->previous_line = -1;
 		
 		g_object_set_data_full (G_OBJECT (buffer), 
 					INSERT_DATA_KEY, 
 					data,
-					(GDestroyNotify) g_free);
+					(GDestroyNotify) free_insert_data);
 
 		g_signal_connect (buffer,
 				  "insert-text",
