@@ -1,42 +1,74 @@
 # gedit-plugins's Portuguese translation
-# Copyright © 2001, 2004, 2007, 2008 gedit-plugins
-# António Lima <amrlima@gmail.com>, 2007, 2008.
+# Copyright © 2001, 2004, 2007, 2008, 2009 gedit-plugins
+# António Lima <amrlima@gmail.com>, 2007, 2008, 2009.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 2.22\n"
+"Project-Id-Version: 2.26\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-07 00:22+0100\n"
-"PO-Revision-Date: 2008-02-19 19:48-0100\n"
+"POT-Creation-Date: 2009-02-22 19:59+0000\n"
+"PO-Revision-Date: 2009-01-20 22:46-0100\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
 "Language-Team: Portuguese pt <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:2
+msgid "Easy document navigation with bookmarks"
+msgstr "Navegar por documentos facilmente com marcadores"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+msgid "Toggle Bookmark"
+msgstr "Alternar Marcador"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+msgid "Toggle bookmark status of the current line"
+msgstr "Alternar estado do marcador da linha actual"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+msgid "Goto Next Bookmark"
+msgstr "Ir Para Próximo Marcador"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+msgid "Goto the next bookmark"
+msgstr "Ir para o próximo marcador"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+msgid "Goto Previous Bookmark"
+msgstr "Ir Para Marcador Anterior"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+msgid "Goto the previous bookmark"
+msgstr "Ir para o marcador anterior"
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:1
 msgid "Automatically adds closing brackets."
 msgstr "Adiciona automaticamente fecho de chavetas."
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Bracket Completion"
 msgstr "Conclusão de Chavetas"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:320
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:258
 msgid "Character Map"
 msgstr "Mapa de Caracteres"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Insere caracteres especiais ao clicar nestes."
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:1
 msgid "Code comment"
 msgstr "Comentar código"
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Comentar ou remover comentário de bloco de código seleccionado."
 
@@ -57,11 +89,11 @@ msgid "Uncomment the selected code"
 msgstr "Remover o comentário do código seleccionado"
 
 #. ex:ts=4:et:
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:1
 msgid "Color Picker"
 msgstr "Escolher Cor"
 
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 "Escolher uma cor a partir de uma janela de diálogo e inserir a sua "
@@ -83,44 +115,48 @@ msgstr "Escolher Cor"
 msgid "_Insert"
 msgstr "_Inserir caracter"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+#. ex:ts=4:et:
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Inserir Espaços"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Inserir Espaços e Tabuladores"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:1
+#: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw new lines"
+msgstr "Desenhar novas linhas"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw non-breaking spaces"
 msgstr "Inserir espaços inquebráveis"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw spaces"
 msgstr "Inserir espaços"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw tabs"
 msgstr "Inserir tabuladores"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:4
-msgid "Drawing color:"
-msgstr "Cor da linha:"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:149
+msgid "Show _White Space"
+msgstr "Apresentar Espaço em _Branco"
 
-#: ../plugins/drawspaces/drawspaces.py:177
-msgid "Show White Space"
-msgstr "Apresentar Espaço em Branco"
-
-#: ../plugins/drawspaces/drawspaces.py:178
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
 msgid "Show spaces and tabs"
 msgstr "Apresentar espaços e tabuladores"
 
-#. ex:ts=4:et:
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:526
+msgid "Error dialog"
+msgstr "Diálogo de erro"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Juntar várias linhas ou quebrar linhas longas"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "Juntar/Quebrar Linhas"
 
@@ -156,88 +192,91 @@ msgstr "Barra de Separadores Visível"
 msgid "Whether the tabbar should be visible in editing windows."
 msgstr "Se a barra de separadores deve ser visível nas janelas de edição."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
 msgstr ""
 "Adicionar uma entrada de menu para apresentar/ocultar a barra de separadores."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Apresentar/Ocultar a Barra de Separadores"
 
-#: ../plugins/sessionsaver/__init__.py:65
+#: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "Sessões gra_vadas"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "_Save current session"
 msgstr "_Gravar sessão actual"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "Save the current document list as a new session"
 msgstr "Gravar a actual lista de documentos como nova sessão"
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "_Gerir sessões gravadas..."
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "Open the saved session manager"
 msgstr "Abrir o gestor de sessões gravadas"
 
-#: ../plugins/sessionsaver/__init__.py:107
+#: ../plugins/sessionsaver/__init__.py:106
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Recuperar a sessão '%s'"
 
-#: ../plugins/sessionsaver/dialogs.py:165
+#: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
 msgstr "Nome de Sessão"
 
 #. ex:ts=4:et:
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:1
 msgid "Save and restore your working sessions"
 msgstr "Guarda e restaura as suas sessões de trabalho"
 
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "Gravador de Sessão"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
 msgid "Save session"
 msgstr "Gravar sessão"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
 msgstr "Sessões Gravadas"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
 msgstr "Nome de sessão:"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Esquecer que não está a utilizar tabuladores."
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Smart Spaces"
 msgstr "Espaços Inteligentes"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:1
 msgid "Embed a terminal in the bottom pane."
 msgstr "Embutir uma consola no painel inferior."
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:2
 msgid "Embedded Terminal"
 msgstr "Consola Embutida"
 
-#: ../plugins/terminal/terminal.py:210
+#: ../plugins/terminal/terminal.py:249
 msgid "Terminal"
 msgstr "Consola"
 
-#: ../plugins/terminal/terminal.py:231
+#: ../plugins/terminal/terminal.py:272
 msgid "C_hange Directory"
 msgstr "A_lterar Directório"
+
+#~ msgid "Drawing color:"
+#~ msgstr "Cor da linha:"
 
 #~ msgid "_ASCII Table"
 #~ msgstr "Tabela _ASCII"
