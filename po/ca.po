@@ -1,49 +1,83 @@
 # Traducció del gedit-plugins de l'equip de Softcatalà.
-# Copyright © 2006-2008 Free Software Foundation, Inc.
+# Copyright © 2006-2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gedit-plugins package.
-# Softcatalà <gnome@softcatala.net>, 2000, 2001, 2002.
+# Softcatalà <gnome@softcatala.net>, 2000-2002.
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003.
-# Josep Puigdemont <josep.puigdemont@gmail.com>, 2005, 2006, 2007.
-# Gil Forcada <gilforcada@guifi.net>, 2006
-# Francesc Vilches <francesc.vilches@gmail.com>, 2007,2008.
+# Josep Puigdemont <josep.puigdemont@gmail.com>, 2005-2007.
+# Gil Forcada <gilforcada@guifi.net>, 2006.
+# Francesc Vilches <francesc.vilches@gmail.com>, 2007, 2008.
+# Joan Duran <jodufi@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-01 01:05+0200\n"
-"PO-Revision-Date: 2008-07-01 01:05+0200\n"
-"Last-Translator: Francesc Vilches <francesc.vilches@gmail.com>\n"
+"POT-Creation-Date: 2009-03-09 22:18+0100\n"
+"PO-Revision-Date: 2009-02-11 07:47+0200\n"
+"Last-Translator: Joan Duran <jodufi@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
+msgid "Bookmarks"
+msgstr "Adreces d'interès"
+
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:2
+msgid "Easy document navigation with bookmarks"
+msgstr "Navegueu fàcilment pel document amb les adreces d'interès"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+msgid "Toggle Bookmark"
+msgstr "Commuta l'adreça d'interès"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+msgid "Toggle bookmark status of the current line"
+msgstr "Commuta l'estat de l'adreça d'interès de la línia actual"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+msgid "Goto Next Bookmark"
+msgstr "Vés a l'adreça d'interès següent"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+msgid "Goto the next bookmark"
+msgstr "Vés a l'adreça d'interès següent"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+msgid "Goto Previous Bookmark"
+msgstr "Vés a l'adreça d'interès anterior"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+msgid "Goto the previous bookmark"
+msgstr "Vés a l'adreça d'interès anterior"
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:1
 msgid "Automatically adds closing brackets."
 msgstr ""
 "Afegeix automàticament el signe de tancament dels signes de puntuació que en "
 "tenen."
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Bracket Completion"
 msgstr "Compleció dels signes de puntuació que tenen tancament"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:320
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:258
 msgid "Character Map"
 msgstr "Mapa de caràcters"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Inseriu caràcters especials fent-hi clic."
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:1
 msgid "Code comment"
 msgstr "Comenteu el codi"
 
 # FIXME: "descomentar" (si no fos que no existeix)
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Comenteu o traieu els comentaris del bloc de codi seleccionat."
 
@@ -66,11 +100,11 @@ msgid "Uncomment the selected code"
 msgstr "Treu el comentari del codi seleccionat"
 
 #. ex:ts=4:et:
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:1
 msgid "Color Picker"
 msgstr "Seleccionador de color"
 
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 "Seleccioneu un color amb un diàleg i inseriu-ne la representació hexadecimal."
@@ -92,44 +126,47 @@ msgid "_Insert"
 msgstr "_Insereix"
 
 #. ex:ts=4:et:
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Dibuixa els espais"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Dibuixa els espais i les tabulacions"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:1
+#: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw new lines"
+msgstr "Dibuixa les línies noves"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw non-breaking spaces"
 msgstr "Dibuixa els espais sense ruptura"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw spaces"
 msgstr "Dibuixa els espais"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw tabs"
 msgstr "Dibuixa les tabulacions"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:4
-msgid "Drawing color:"
-msgstr "Color que s'ha d'utilitzar:"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:149
+msgid "Show _White Space"
+msgstr "Mostra els _espais en blanc"
 
-#: ../plugins/drawspaces/drawspaces.py:174
-msgid "Show White Space"
-msgstr "Mostra els espais en blanc"
-
-#: ../plugins/drawspaces/drawspaces.py:175
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
 msgid "Show spaces and tabs"
 msgstr "Mostra els espais i les tabulacions"
 
-#. ex:ts=4:et:
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:526
+msgid "Error dialog"
+msgstr "Diàleg d'error"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Uneix diverses línies, o separa les llargues"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "Uneix/separa les línies"
 
@@ -167,86 +204,89 @@ msgid "Whether the tabbar should be visible in editing windows."
 msgstr ""
 "Si la barra de pestanyes hauria de ser visible a les finestres d'edició."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
 msgstr ""
 "Afegeix una entrada al menú per mostrar o amagar la barra de pestanyes."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Mostra/oculta la barra de pestanyes"
 
-#: ../plugins/sessionsaver/__init__.py:65
+#: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "_Sessions desades"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "_Save current session"
 msgstr "_Desa la sessió actual"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "Save the current document list as a new session"
 msgstr "Desa la llista de documents actual com a una sessió nova"
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "_Gestiona les sessions desades..."
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "Open the saved session manager"
 msgstr "Obre el gestor de sessions desades"
 
-#: ../plugins/sessionsaver/__init__.py:107
+#: ../plugins/sessionsaver/__init__.py:106
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Recupera la sessió «%s»"
 
-#: ../plugins/sessionsaver/dialogs.py:165
+#: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
 msgstr "Nom de la sessió"
 
 #. ex:ts=4:et:
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:1
 msgid "Save and restore your working sessions"
 msgstr "Deseu i recupereu les sessions de treball"
 
 # FIXME desador? (josep)
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "Desador de sessions"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
 msgid "Save session"
 msgstr "Desa la sessió"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
 msgstr "Sessions desades"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
 msgstr "Nom de la sessió:"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Oblideu-vos que no utilitzeu les tabulacions."
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Smart Spaces"
 msgstr "Espais intel·ligents"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:1
 msgid "Embed a terminal in the bottom pane."
 msgstr "Incrusta un terminal al quadre inferior."
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:2
 msgid "Embedded Terminal"
 msgstr "Terminal incrustat"
 
-#: ../plugins/terminal/terminal.py:210
+#: ../plugins/terminal/terminal.py:249
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:231
+#: ../plugins/terminal/terminal.py:272
 msgid "C_hange Directory"
 msgstr "C_anvia de directori"
+
+#~ msgid "Drawing color:"
+#~ msgstr "Color que s'ha d'utilitzar:"
