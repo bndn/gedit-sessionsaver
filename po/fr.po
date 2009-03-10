@@ -1,47 +1,79 @@
 # French translation of gedit-plugins.
-# Copyright (C) 1998-2008 Free Software Foundation, Inc.
+# Copyright (C) 1998-2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gedit-plugins-package.
 #
 # Christophe Merlet <redfox@redfoxcenter.org>, 2000-2006.
 # Jonathan Ernst <jonathan@ernstfamily.ch>, 2006.
 # Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.
 # Robert-André Mauchin <zebob.m@pengzone.org>, 2007.
-# Claude Paroz <claude@2xlibre.net>, 2008.
+# Claude Paroz <claude@2xlibre.net>, 2008-2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 08:44+0100\n"
-"PO-Revision-Date: 2008-12-03 08:58+0100\n"
+"POT-Creation-Date: 2009-03-10 15:42+0100\n"
+"PO-Revision-Date: 2009-03-10 15:45+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
+msgid "Bookmarks"
+msgstr "Signets"
+
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:2
+msgid "Easy document navigation with bookmarks"
+msgstr "Navigation aisée dans vos documents avec des signets"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+msgid "Toggle Bookmark"
+msgstr "Activer/désactiver le signet"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+msgid "Toggle bookmark status of the current line"
+msgstr "Inverse l'état de signet de la ligne actuelle"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+msgid "Goto Next Bookmark"
+msgstr "Aller au signet suivant"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+msgid "Goto the next bookmark"
+msgstr "Va au signet suivant"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+msgid "Goto Previous Bookmark"
+msgstr "Aller au signet précédent"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+msgid "Goto the previous bookmark"
+msgstr "Va au signet précédent"
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:1
 msgid "Automatically adds closing brackets."
 msgstr "Ajoute automatiquement les parenthèses fermantes."
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Bracket Completion"
 msgstr "Complétion de parenthèses"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:258
 msgid "Character Map"
 msgstr "Table de caractères"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Insère des caractères spéciaux juste en cliquant dessus."
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:1
 msgid "Code comment"
 msgstr "Commentateur de code"
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Commente ou décommente un bloc de code sélectionnée."
 
@@ -62,11 +94,11 @@ msgid "Uncomment the selected code"
 msgstr "Décommente le code sélectionné"
 
 #. ex:ts=4:et:
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:1
 msgid "Color Picker"
 msgstr "Sélecteur de couleurs"
 
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 "Pioche une couleur dans une boîte de dialogue et l'insère sous sa forme "
@@ -89,11 +121,11 @@ msgid "_Insert"
 msgstr "_Insérer"
 
 #. ex:ts=4:et:
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Indicateur d'espaces"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Indique les espaces et les tabulations"
 
@@ -102,30 +134,34 @@ msgid "Draw new lines"
 msgstr "Indiquer les sauts de ligne"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:2
+msgid "Draw non-breaking spaces"
+msgstr "Indiquer les espaces insécables"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw spaces"
 msgstr "Indiquer les espaces"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw tabs"
 msgstr "Indiquer les tabulations"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:149
 msgid "Show _White Space"
 msgstr "Afficher les _espaces"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:148
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
 msgid "Show spaces and tabs"
 msgstr "Affiche les espaces et les tabulations"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:488
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:526
 msgid "Error dialog"
 msgstr "Fenêtre d'erreur"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Joint plusieurs lignes ou sépare les longues lignes"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "Joindre/couper les lignes"
 
@@ -162,11 +198,11 @@ msgid "Whether the tabbar should be visible in editing windows."
 msgstr ""
 "Indique si la barre d'onglets doit être visible dans les fenêtres d'édition."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
 msgstr "Ajoute une entrée de menus pour afficher/masquer la barre d'onglets."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Afficher/Masquer la barre d'onglets"
 
@@ -200,11 +236,11 @@ msgid "Session Name"
 msgstr "Nom de session"
 
 #. ex:ts=4:et:
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:1
 msgid "Save and restore your working sessions"
 msgstr "Enregistre et restaure vos sessions de travail"
 
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "Enregistreur de session"
 
@@ -220,32 +256,29 @@ msgstr "Sessions enregistrées"
 msgid "Session name:"
 msgstr "Nom de session :"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Oubliez que vous n'utilisez pas les tabulations."
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Smart Spaces"
 msgstr "Espaces intelligents"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:1
 msgid "Embed a terminal in the bottom pane."
 msgstr "Intègre un terminal dans le panneau du bas."
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:2
 msgid "Embedded Terminal"
 msgstr "Terminal intégré"
 
-#: ../plugins/terminal/terminal.py:238
+#: ../plugins/terminal/terminal.py:249
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:261
+#: ../plugins/terminal/terminal.py:272
 msgid "C_hange Directory"
 msgstr "C_hanger de répertoire"
-
-#~ msgid "Draw non-breaking spaces"
-#~ msgstr "Indiquer les espaces insécables"
 
 #~ msgid "Drawing color:"
 #~ msgstr "Couleur des indicateurs :"
