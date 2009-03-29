@@ -53,6 +53,7 @@ GEDIT_PLUGIN_REGISTER_TYPE (GeditDrawspacesPlugin, gedit_drawspaces_plugin)
 struct _GeditDrawspacesPluginPrivate
 {
 	GConfClient *gconf_client;
+	guint connection_id;
 	
 	GtkSourceDrawSpacesFlags flags;
 };
@@ -170,24 +171,37 @@ gedit_drawspaces_plugin_init (GeditDrawspacesPlugin *plugin)
 			      GCONF_CLIENT_PRELOAD_ONELEVEL,
 			      NULL);
 			      
-	gconf_client_notify_add (plugin->priv->gconf_client,
-				 GCONF_KEY_BASE,
-				 on_gconf_notify,
-				 plugin, NULL, NULL);
+	plugin->priv->connection_id = gconf_client_notify_add (plugin->priv->gconf_client,
+							       GCONF_KEY_BASE,
+							       on_gconf_notify,
+							       plugin, NULL, NULL);
 }
 
 static void
-gedit_drawspaces_plugin_finalize (GObject *object)
+gedit_drawspaces_plugin_dispose (GObject *object)
 {
 	GeditDrawspacesPlugin *plugin = GEDIT_DRAWSPACES_PLUGIN (object);
 
-	gedit_debug_message (DEBUG_PLUGINS, "GeditDrawspacesPlugin finalizing");
+	gedit_debug_message (DEBUG_PLUGINS, "GeditDrawspacesPlugin disposing");
 
-	gconf_client_suggest_sync (plugin->priv->gconf_client, NULL);
+	if (plugin->priv->connection_id != 0)
+	{
+		gconf_client_notify_remove (plugin->priv->gconf_client,
+					    plugin->priv->connection_id);
+		
+		plugin->priv->connection_id = 0;
+	}
+	
+	if (plugin->priv->gconf_client != NULL)
+	{
+		gconf_client_suggest_sync (plugin->priv->gconf_client, NULL);
 
-	g_object_unref (G_OBJECT (plugin->priv->gconf_client));
-
-	G_OBJECT_CLASS (gedit_drawspaces_plugin_parent_class)->finalize (object);
+		g_object_unref (G_OBJECT (plugin->priv->gconf_client));
+		
+		plugin->priv->gconf_client = NULL;
+	}
+	
+	G_OBJECT_CLASS (gedit_drawspaces_plugin_parent_class)->dispose (object);
 }
 
 static void
@@ -630,7 +644,7 @@ gedit_drawspaces_plugin_class_init (GeditDrawspacesPluginClass *klass)
 
 	g_type_class_add_private (object_class, sizeof (GeditDrawspacesPluginPrivate));
 
-	object_class->finalize = gedit_drawspaces_plugin_finalize;
+	object_class->dispose = gedit_drawspaces_plugin_dispose;
 
 	plugin_class->activate = impl_activate;
 	plugin_class->deactivate = impl_deactivate;
