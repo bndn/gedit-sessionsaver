@@ -288,7 +288,7 @@ get_config_options (WindowData *data,
 	gboolean tabs, spaces, newline, nbsp;
 
 	data->enable = get_gconf_value_with_default (plugin, GCONF_KEY_ENABLE,
-						     FALSE);
+						     TRUE);
 
 	tabs = get_gconf_value_with_default (plugin, GCONF_KEY_DRAW_TABS,
 					     TRUE);
