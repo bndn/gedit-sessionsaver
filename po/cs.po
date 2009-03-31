@@ -1,19 +1,19 @@
 # Czech translation of gedit-plugins.
-# Copyright (C) 2002,2003, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2002,2003, 2006, 2009 the author(s) of gedit-plugins.
 # Copyright (C) 2003, 2004, 2005 Miloslav Trmac <mitr@volny.cz>.
 # This file is distributed under the same license as the gedit-plugins package.
 # Michal Bukovjan <michal.bukovjan@openone.cz>, 2002.
 # Michal Bukovjan <bukm@centrum.cz>, 2003.
 # Miloslav Trmac <mitr@volny.cz>, 2003, 2004, 2005.
 # Jakub Friedl <jfriedl@suse.cz>, 2006.
-# Kamil Páral <ripper42@gmail.com>, 2008.
+# Kamil Páral <ripper42@gmail.com>, 2008, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-03 20:43+0100\n"
-"PO-Revision-Date: 2008-03-02 16:19+0100\n"
+"POT-Creation-Date: 2009-03-31 15:47+0200\n"
+"PO-Revision-Date: 2009-03-30 22:08+0100\n"
 "Last-Translator: Kamil Páral <ripper42@gmail.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,28 +21,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
+msgid "Bookmarks"
+msgstr "Záložky"
+
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:2
+msgid "Easy document navigation with bookmarks"
+msgstr "Jednoduché procházení dokumentem pomocí záložek"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+msgid "Toggle Bookmark"
+msgstr "Přepnout záložku"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+msgid "Toggle bookmark status of the current line"
+msgstr "Přepnout stav záložky na aktuálním řádku"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+msgid "Goto Next Bookmark"
+msgstr "Přejít na následující záložku"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+msgid "Goto the next bookmark"
+msgstr "Přejít na následující záložku"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+msgid "Goto Previous Bookmark"
+msgstr "Přejít na předcházející záložku"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+msgid "Goto the previous bookmark"
+msgstr "Přejít na předcházející záložku"
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:1
 msgid "Automatically adds closing brackets."
 msgstr "Automaticky přidávat uzavírací závorky."
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Bracket Completion"
 msgstr "Doplňování závorek"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:254
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:258
 msgid "Character Map"
 msgstr "Mapa znaků"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Vkládání speciálních znaků pouhým kliknutím."
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:1
 msgid "Code comment"
 msgstr "Komentování kódu"
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Zakomentovat nebo odkomentovat vybraný blok kódu."
 
@@ -63,11 +95,11 @@ msgid "Uncomment the selected code"
 msgstr "Odkomentovat vybraný kód"
 
 #. ex:ts=4:et:
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:1
 msgid "Color Picker"
 msgstr "Barevná pipeta"
 
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Vybrat barvu z dialogu a vložit její šestnáctkové vyjádření."
 
@@ -87,44 +119,48 @@ msgstr "Vybrat barvu"
 msgid "_Insert"
 msgstr "_Vložit"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+#. ex:ts=4:et:
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Vykreslovat mezery"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Vykreslovat mezery a tabulátory"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:1
+#: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw new lines"
+msgstr "Vykreslovat nové řádky"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw non-breaking spaces"
 msgstr "Vykreslovat nezlomitelné mezery"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw spaces"
 msgstr "Vykreslovat mezery"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw tabs"
 msgstr "Vykreslovat tabulátory"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:4
-msgid "Drawing color:"
-msgstr "Barva pro kreslení:"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
+msgid "Show _White Space"
+msgstr "Zobrazovat _bílé znaky"
 
-#: ../plugins/drawspaces/drawspaces.py:177
-msgid "Show White Space"
-msgstr "Zobrazovat bílé znaky"
-
-#: ../plugins/drawspaces/drawspaces.py:178
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:151
 msgid "Show spaces and tabs"
 msgstr "Zobrazovat mezery a tabulátory"
 
-#. ex:ts=4:et:
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:540
+msgid "Error dialog"
+msgstr "Chybový dialog"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Spojit několik řádků nebo rozdělit dlouhé řádky"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "Spojit/Rozdělit řádky"
 
@@ -160,90 +196,84 @@ msgstr "Lišta karet je viditelná"
 msgid "Whether the tabbar should be visible in editing windows."
 msgstr "Zda má být lišta karet viditelná v editačních oknech."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
 msgstr "Přidává položku nabídky pro zobrazení/skrytí lišty karet."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Zobrazit/skrýt lištu karet"
 
-#: ../plugins/sessionsaver/__init__.py:65
+#: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "_Uložená sezení"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "_Save current session"
 msgstr "Uložit aktuální _sezení"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "Save the current document list as a new session"
 msgstr "Uložit aktuální seznam dokumentů jako nové sezení"
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "Spravovat _uložená sezení..."
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "Open the saved session manager"
 msgstr "Otevřít správce uložených sezení"
 
-#: ../plugins/sessionsaver/__init__.py:107
+#: ../plugins/sessionsaver/__init__.py:106
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Obnovit sezení \"%s\""
 
-#: ../plugins/sessionsaver/dialogs.py:165
+#: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
 msgstr "Název sezení"
 
 #. ex:ts=4:et:
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:1
 msgid "Save and restore your working sessions"
 msgstr "Uložit a obnovit vaše pracovní sezení"
 
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "Ukládač sezení"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
 msgid "Save session"
 msgstr "Uložit sezení"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
 msgstr "Uložená sezení"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
 msgstr "Název sezení:"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Zapomeňte, že nepoužíváte tabulace."
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Smart Spaces"
 msgstr "Inteligentní mezery"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:1
 msgid "Embed a terminal in the bottom pane."
 msgstr "Vložit terminál do spodního panelu."
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:2
 msgid "Embedded Terminal"
 msgstr "Vestavěný terminál"
 
-#: ../plugins/terminal/terminal.py:210
+#: ../plugins/terminal/terminal.py:249
 msgid "Terminal"
 msgstr "Terminál"
 
-#: ../plugins/terminal/terminal.py:231
+#: ../plugins/terminal/terminal.py:272
 msgid "C_hange Directory"
 msgstr "Změnit _adresář"
-
-#~ msgid "_Color picker"
-#~ msgstr "_Barevná pipeta"
-
-#~ msgid "Color picker"
-#~ msgstr "Barevná pipeta"
