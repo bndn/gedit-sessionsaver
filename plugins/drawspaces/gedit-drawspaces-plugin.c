@@ -28,6 +28,7 @@
 #include <gedit/gedit-window.h>
 #include <gedit/gedit-view.h>
 #include <gedit/gedit-tab.h>
+#include <gedit/gedit-utils.h>
 
 #include <gconf/gconf-client.h>
 
@@ -316,8 +317,7 @@ static void
 impl_activate (GeditPlugin *plugin,
 	       GeditWindow *window)
 {
-	GList *views, *l;
-	GeditDrawspacesPlugin *ds_plugin = GEDIT_DRAWSPACES_PLUGIN (plugin);
+	GeditDrawspacesPlugin *ds_plugin;
 	GtkUIManager *manager;
 	GError *error = NULL;
 	GtkAction *action;
@@ -325,6 +325,8 @@ impl_activate (GeditPlugin *plugin,
 	ActionData *action_data;
 
 	gedit_debug (DEBUG_PLUGINS);
+
+	ds_plugin = GEDIT_DRAWSPACES_PLUGIN (plugin);
 
 	data = g_slice_new (WindowData);
 	action_data = g_slice_new (ActionData);
