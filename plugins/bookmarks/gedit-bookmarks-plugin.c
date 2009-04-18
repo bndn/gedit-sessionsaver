@@ -221,30 +221,43 @@ disable_bookmarks (GeditView *view)
 	g_object_set_data (G_OBJECT (buffer), INSERT_DATA_KEY, NULL);
 }
 
+static GdkPixbuf *
+get_bookmark_pixbuf (GeditPlugin *plugin)
+{
+	gchar *datadir;
+	gchar *iconpath;
+	GdkPixbuf *pixbuf;
+
+	datadir = gedit_plugin_get_data_dir (plugin);
+	iconpath = g_build_filename (datadir, "bookmark.png", NULL);
+	pixbuf = gdk_pixbuf_new_from_file (iconpath, NULL);
+
+	g_free (datadir);
+	g_free (iconpath);
+
+	return pixbuf;
+}
+
 static void
 enable_bookmarks (GeditView   *view,
-		  const gchar *datadir)
+		  GeditPlugin *plugin)
 {
-	gchar *iconpath = g_build_filename (datadir, "bookmark.png", NULL);
-	GdkPixbuf * pixbuf = gdk_pixbuf_new_from_file (iconpath, NULL);
-	GtkSourceView *source_view = GTK_SOURCE_VIEW (view);
+	GdkPixbuf *pixbuf;
 
-	g_free (iconpath);
-	
+	pixbuf = get_bookmark_pixbuf (plugin);
+
 	/* Make sure the category pixbuf is set */
 	if (pixbuf)
 	{
 		InsertData *data;
 		GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
-		
-		
+
 		update_background_color (view);		
 		gtk_source_view_set_mark_category_pixbuf (GTK_SOURCE_VIEW (view),
 							  BOOKMARK_CATEGORY,
 							  pixbuf);
 		g_object_unref (pixbuf);
 
-		
 		gtk_source_view_set_show_line_marks (GTK_SOURCE_VIEW (view), TRUE);
 		
 		g_signal_connect (buffer,
@@ -299,7 +312,6 @@ impl_activate (GeditPlugin *plugin,
 	WindowData *data;
 	GList *views;
 	GList *item;
-	gchar *datadir;
 
 	gedit_debug (DEBUG_PLUGINS);
 
@@ -309,14 +321,13 @@ impl_activate (GeditPlugin *plugin,
 				data,
 				(GDestroyNotify) free_window_data);
 	
-	datadir = gedit_plugin_get_data_dir (plugin);
 	views = gedit_window_get_views (window);
-
 	for (item = views; item != NULL; item = item->next)
-		enable_bookmarks (GEDIT_VIEW (item->data), datadir);
-	
+	{
+		enable_bookmarks (GEDIT_VIEW (item->data), plugin);
+	}
+
 	g_list_free (views);
-	g_free (datadir);
 
 	g_signal_connect (window, "tab-added",
 			  G_CALLBACK (on_tab_added), plugin);
@@ -496,7 +507,6 @@ on_insert_text_after (GtkTextBuffer *buffer,
 		      gint	     len,
 		      InsertData    *data)
 {
-	GtkTextIter iter;
 	gint current;
 	
 	if (data->previous_line == -1)
@@ -534,7 +544,6 @@ on_toggle_bookmark_activate (GtkAction   *action,
 	GtkTextBuffer *buffer;
 	GtkTextIter iter;
 	GSList *marks;
-	GSList *item;
 
 	if (!doc)
 		return;
@@ -648,9 +657,7 @@ on_tab_added (GeditWindow *window,
 	      GeditTab    *tab,
 	      GeditPlugin *plugin)
 {
-	gchar *datadir = gedit_plugin_get_data_dir (plugin);
-	enable_bookmarks (gedit_tab_get_view (tab), datadir);
-	g_free (datadir);
+	enable_bookmarks (gedit_tab_get_view (tab), plugin);
 }
 
 static void
