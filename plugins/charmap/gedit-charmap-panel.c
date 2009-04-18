@@ -34,80 +34,80 @@
 
 struct _GeditCharmapPanelPrivate
 {
-        GucharmapChaptersView *chapters_view;
-        GucharmapChartable *chartable;
+	GucharmapChaptersView *chapters_view;
+	GucharmapChartable *chartable;
 };
 
 GEDIT_PLUGIN_DEFINE_TYPE(GeditCharmapPanel, gedit_charmap_panel, GTK_TYPE_VBOX)
 
 static void
 on_chapter_view_selection_changed (GtkTreeSelection *selection,
-                                   GeditCharmapPanel *panel)
+				   GeditCharmapPanel *panel)
 {
-        GeditCharmapPanelPrivate *priv = panel->priv;
-        GucharmapCodepointList *codepoint_list;
-        GtkTreeIter iter;
+	GeditCharmapPanelPrivate *priv = panel->priv;
+	GucharmapCodepointList *codepoint_list;
+	GtkTreeIter iter;
 
-        if (!gtk_tree_selection_get_selected (selection, NULL, &iter))
-                return;
+	if (!gtk_tree_selection_get_selected (selection, NULL, &iter))
+		return;
 
-        codepoint_list = gucharmap_chapters_view_get_codepoint_list (priv->chapters_view);
-        gucharmap_chartable_set_codepoint_list (priv->chartable, codepoint_list);
-        g_object_unref (codepoint_list);
+	codepoint_list = gucharmap_chapters_view_get_codepoint_list (priv->chapters_view);
+	gucharmap_chartable_set_codepoint_list (priv->chartable, codepoint_list);
+	g_object_unref (codepoint_list);
 }
 
 static void
 gedit_charmap_panel_init (GeditCharmapPanel *panel)
 {
-        GeditCharmapPanelPrivate *priv;
+	GeditCharmapPanelPrivate *priv;
 	GtkPaned *paned;
-        GtkWidget *scrolled_window, *view, *chartable;
-        GtkTreeSelection *selection;
-        GucharmapChaptersModel *model;
+	GtkWidget *scrolled_window, *view, *chartable;
+	GtkTreeSelection *selection;
+	GucharmapChaptersModel *model;
 
 	priv = panel->priv = GEDIT_CHARMAP_PANEL_GET_PRIVATE (panel);
 
 	paned = GTK_PANED (gtk_vpaned_new ());
 
-        scrolled_window = gtk_scrolled_window_new (NULL, NULL);
-        gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
-                                        GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
-        gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled_window),
-                                            GTK_SHADOW_ETCHED_IN);
+	scrolled_window = gtk_scrolled_window_new (NULL, NULL);
+	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
+					GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
+	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled_window),
+					    GTK_SHADOW_ETCHED_IN);
 
-        view = gucharmap_chapters_view_new ();
-        priv->chapters_view = GUCHARMAP_CHAPTERS_VIEW (view);
+	view = gucharmap_chapters_view_new ();
+	priv->chapters_view = GUCHARMAP_CHAPTERS_VIEW (view);
 	gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (view), FALSE);
 
 	model = gucharmap_script_chapters_model_new ();
-        gucharmap_chapters_view_set_model (priv->chapters_view, model);
-        g_object_unref (model);
+	gucharmap_chapters_view_set_model (priv->chapters_view, model);
+	g_object_unref (model);
 
-        selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (view));
-        g_signal_connect (selection, "changed",
-                          G_CALLBACK (on_chapter_view_selection_changed), panel);
+	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (view));
+	g_signal_connect (selection, "changed",
+			  G_CALLBACK (on_chapter_view_selection_changed), panel);
 
-        gtk_container_add (GTK_CONTAINER (scrolled_window), view);
-        gtk_widget_show (view);
+	gtk_container_add (GTK_CONTAINER (scrolled_window), view);
+	gtk_widget_show (view);
 
 	gtk_paned_pack1 (paned, scrolled_window, FALSE, TRUE);
-        gtk_widget_show (scrolled_window);
+	gtk_widget_show (scrolled_window);
 
-        scrolled_window = gtk_scrolled_window_new (NULL, NULL);
-        gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
-                                        GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
-        gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled_window),
-                                            GTK_SHADOW_ETCHED_IN);
+	scrolled_window = gtk_scrolled_window_new (NULL, NULL);
+	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
+					GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
+	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled_window),
+					    GTK_SHADOW_ETCHED_IN);
 
-        chartable = gucharmap_chartable_new ();
+	chartable = gucharmap_chartable_new ();
 	priv->chartable = GUCHARMAP_CHARTABLE (chartable);
-        gtk_container_add (GTK_CONTAINER (scrolled_window), chartable);
-        gtk_widget_show (chartable);
+	gtk_container_add (GTK_CONTAINER (scrolled_window), chartable);
+	gtk_widget_show (chartable);
 
 	gtk_paned_pack2 (paned, scrolled_window, TRUE, TRUE);
-        gtk_widget_show (scrolled_window);
+	gtk_widget_show (scrolled_window);
 
-        gucharmap_chapters_view_select_locale (priv->chapters_view);
+	gucharmap_chapters_view_select_locale (priv->chapters_view);
 
 	gtk_paned_set_position (paned, 150);
 	
