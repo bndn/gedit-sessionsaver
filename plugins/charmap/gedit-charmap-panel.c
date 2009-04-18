@@ -60,12 +60,10 @@ static void
 gedit_charmap_panel_init (GeditCharmapPanel *panel)
 {
         GeditCharmapPanelPrivate *priv;
-	GucharmapCodepointList *codepoint_list;
 	GtkPaned *paned;
         GtkWidget *scrolled_window, *view, *chartable;
         GtkTreeSelection *selection;
         GucharmapChaptersModel *model;
-        GtkTreeIter iter;
 
 	priv = panel->priv = GEDIT_CHARMAP_PANEL_GET_PRIVATE (panel);
 
