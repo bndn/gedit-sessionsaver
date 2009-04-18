@@ -66,9 +66,6 @@ PKG_CHECK_MODULES(GEDIT, [
 	gtksourceview-2.0 >= 2.5.1
 	gedit-2.20 >= 2.25.4
 ])
-GEDIT_LIBS="${GEDIT_LIBS}"
-AC_SUBST(GEDIT_LIBS)
-AC_SUBST(GEDIT_CFLAGS)
 
 # ================================================================
 # GConf related settings
