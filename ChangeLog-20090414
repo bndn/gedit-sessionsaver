@@ -1,0 +1,975 @@
+==== gedit-plugins 2.26.1 ====
+
+2009-04-11  Paolo Borelli  <pborelli@katamail.com>
+
+	* README:
+	* configure.ac:
+	* NEWS:
+
+	gedit-plugins 2.26.1 released.
+
+2009-03-31  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/drawspaces/gedit-drawspaces-plugin.c:
+	Draw spaces should be enabled first time the plugin is activated.
+
+2009-03-29  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/drawspaces/gedit-drawspaces-plugin.c:
+	Remove the gconf notification on dispose. (Fixes bug #576766).
+
+==== gedit-plugins 2.26.0 ====
+
+2009-03-16  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+        * configure.ac:
+        * NEWS:
+        * README:
+        gedit-plugins 2.26.0 released.
+
+==== gedit-plugins 2.25.3 ====
+
+2009-02-23  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+        * configure.ac:
+        * NEWS:
+        * README:
+        gedit-plugins 2.25.3 released.
+
+2009-02-01  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/bookmarks/gedit-bookmarks-plugin.c:
+	Use slice instead of g_new.
+
+2009-01-17  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/terminal/terminal.py:
+	Built-in terminal should reuse gnome-terminal color scheme.
+	(Fixes bug #567629)
+
+2009-01-06  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.ac:
+	Bump gedit to 2.25.4.
+
+2009-01-05  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in:
+	* plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in:
+	* plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in:
+	* plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in:
+	* plugins/joinlines/joinlines.gedit-plugin.desktop.in.in:
+	* plugins/charmap/charmap.gedit-plugin.desktop.in.in:
+	* plugins/terminal/terminal.gedit-plugin.desktop.in.in:
+	* plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in:
+	* plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in:
+	* plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in:
+	* plugins/codecomment/codecomment.gedit-plugin.desktop.in.in:
+	* configure.ac:
+	* po/POTFILES.in:
+	* po/POTFILES.skip:
+	Add new Version property to plugins.
+
+==== gedit-plugins 2.25.2 ====
+
+2009-01-05  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+        * NEWS:
+        * README:
+        gedit-plugins 2.25.2 released.
+
+2009-01-05  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/bookmarks/Makefile.am:
+	Add icon to distribution.
+
+2009-01-05  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/bracketcompletion/bracketcompletion.py:
+	Skip closing brackets. (Fixes bug #566557).
+
+2009-01-03  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* plugins/sessionsaver/Makefile.am:
+	* plugins/sessionsaver/dialogs.py:
+	* plugins/bookmarks/Makefile.am:
+	* plugins/charmap/Makefile.am:
+	* plugins/drawspaces/gedit-drawspaces-plugin.c:
+	* plugins/drawspaces/Makefile.am:
+	* plugins/showtabbar/Makefile.am:
+
+	Makefile cleanup and use get_data_dir() where applicable (also install
+	data in correct data directory now)
+
+2009-01-03  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac: bump version of gedit to 2.25.3 to make use of 
+	gedit_plugin_get_data_dir.
+
+2009-01-03  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac: bump version of gedit to 2.25.3 to make use of 
+	gedit_plugin_get_data_dir.
+
+2009-01-03  Jesse van den Kieboom  <jesse@icecrew.nl>
+	
+	* plugins/sessionsaver/Makefile.am:
+	* plugins/bracketcompletion/Makefile.am:
+	* plugins/smartspaces/Makefile.am:
+	* plugins/joinlines/Makefile.am:
+	* plugins/charmap/Makefile.am:
+	* plugins/terminal/Makefile.am:
+	* plugins/colorpicker/Makefile.am:
+	* plugins/drawspaces/Makefile.am:
+	* plugins/showtabbar/Makefile.am:
+	* plugins/codecomment/Makefile.am:
+
+	Updated to use $(GEDIT_PLUGINS_LIBS_DIR).
+	
+2009-01-03  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac:
+	* plugins/bookmarks:
+
+	Added new bookmarks plugin.
+
+2009-01-02  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* plugins/bracketcompletion/bracketcompletion.py: added completion
+	for <> for php.
+
+2008-12-28  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.ac: Bump gtksourceview to 2.5.1
+
+	* plugins/drawspaces/gedit-drawspaces-plugin.c:
+	* plugins/drawspaces/drawspaces.glade:
+	* plugins/drawspaces/drawspaces.ui:
+	Update drawspaces to show non breaking spaces.
+
+2008-12-26  Paolo Borelli  <pborelli@katamail.com>
+
+	* configure.ac: use pkg-config to check for pyvte.
+
+==== gedit-plugins 2.25.1 ====
+
+2008-12-02  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+        * configure.ac:
+        * NEWS:
+        * README:
+        gedit-plugins 2.25.1 released.
+
+2008-12-02  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.ac:
+	Forgot this file in the previous commit.
+
+2008-12-02  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.ac:
+	* plugins/charmap/gedit-charmap-plugin.c:
+	* plugins/charmap/gedit-charmap-panel.c:
+	* plugins/charmap/gedit-charmap-panel.h:
+	Only support gucharmap 2.
+
+2008-11-30  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/drawspaces/gedit-drawspaces-plugin.c:	plug leak.
+
+2008-11-30  Paolo Borelli  <pborelli@katamail.com>
+
+	* configure.ac: require gconf, remove wrong python test.
+
+2008-11-30  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/terminal: use vte api to set cursor shape and blink mode.
+
+2008-11-23  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/terminal/terminal.py:
+	* configure.ac:
+	Ported to gio. Bump pygtk and pygobject.
+
+2008-11-23  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/sessionsaver/sessionsaver.ui:
+	* plugins/sessionsaver/__init__.py:
+	* plugins/sessionsaver/Makefile.am:
+	* plugins/sessionsaver/dialogs.py:
+	* configure.ac:
+	Ported to gtkbuilder. (Fixes bug #561948).
+
+2008-11-23  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/drawspaces/gedit-drawspaces-plugin.c:
+	* plugins/drawspaces/drawspaces.gedit-plugin.desktop.in:
+	Removed useless variable.
+
+2008-11-22  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.ac: bump gtksourceview, gtk+, glib and gedit deps.
+
+2008-11-22  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/drawspaces: new implementation of the drawspaces plugin
+	using the appropriate gtksourceview api.
+	* configure.ac: bump gtksourceview dep
+
+2008-11-02  Paolo Borelli  <pborelli@katamail.com>
+
+	* configure.ac:
+	Build fixes for cygwin. Bug #317567.
+
+==== gedit-plugins 2.22.5 ====
+
+2008-10-25  Paolo Borelli  <pborelli@katamail.com>
+
+	* README:
+	* configure.ac:
+	* NEWS:
+
+	gedit-plugins 2.22.5 released.
+
+2008-10-25  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/drawspaces/drawspaces.py: draw some more kind of spaces.
+
+2008-10-25  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/charmap/gedit-charmap-plugin.c: use the correct API for
+	the new charmap lib. Bug #557598, patch by Christophe Sauthier.
+
+==== gedit-plugins 2.22.4 ====
+
+2008-10-16  Paolo Borelli  <pborelli@katamail.com>
+
+	* README:
+	* configure.ac:
+	* NEWS:
+
+	gedit-plugins 2.22.4 released.
+
+2008-10-16  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/terminal/terminal.py: take into account the gnome-terminal
+	setting of using the default theme and properly track color scheme
+	changes. Based on a path by Fabricio Silva, bug #556473.
+
+2008-09-24  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* plugins/charmap/gedit-charmap-plugin.c:
+	Fixed compile warning.
+
+==== gedit-plugins 2.22.3 ====
+
+2008-09-08  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/terminal/terminal.py: take into account system-wide cursor
+	blink setting
+
+2008-09-08  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/terminal/terminal.py: use proper gconf key for the monospace
+	font. Patch by Kurt Litsch.
+
+2008-06-10  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/drawspaces/drawspaces.py: properly disconnect the tab-added
+	handler.
+
+2008-04-25 Gabor Kelemen  <kelemeng@gnome.org>
+
+	* plugins/sessionsaver/dialogs.py: correct glade translation setup.
+	Bug #529815.
+
+==== gedit-plugins 2.22.2 ====
+
+2008-04-20  Paolo Borelli  <pborelli@katamail.com>
+
+	* README:
+	* configure.ac:
+	* NEWS:
+
+	gedit-plugins 2.22.2 released.
+
+2008-04-20  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/colorpicker/colorpicker.py: convert to PEP8 style.
+
+2008-04-20  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/drawspaces/drawspaces.py: fix glade translation setup
+	Bug #527841
+
+2008-04-19  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/smartspaces/smartspaces.py: simplify logic and make it work
+	also when we reach the start of the buffer.
+
+==== gedit-plugins 2.22.1 ====
+
+2008-04-08  Paolo Borelli  <pborelli@katamail.com>
+
+	* README:
+	* configure.ac:
+	* NEWS:
+
+	gedit-plugins 2.22.1 released.
+
+2008-03-22  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/bracketcompletion/bracketcompletion.py: only watch the
+	necessary keyvalues. Bug #518985.
+
+2008-03-21  Christian Persch  <chpe@gnome.org>
+
+	* configure.ac:
+	* plugins/charmap/Makefile.am:
+	* plugins/charmap/gedit-charmap-panel.c:
+	(on_chapter_view_selection_changed), (gedit_charmap_panel_init),
+	(gedit_charmap_panel_get_chartable):
+	* plugins/charmap/gedit-charmap-panel.h:
+	* plugins/charmap/gedit-charmap-plugin.c: (free_window_data),
+	(on_table_status_message): Allow building with either gucharmap
+	stable, or gucharmap trunk. Bug #523694.
+
+==== gedit-plugins 2.22.0 ====
+
+2008-03-10  Paolo Borelli  <pborelli@katamail.com>
+
+	* README:
+	* configure.ac:
+	* NEWS:
+
+	gedit-plugins 2.22.0 released.
+
+2008-03-02  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/drawspaces/drawspaces.py: add a menu item to toggle
+	drawing of spaces. Based on a patch by Stefan Schweizer.
+
+2008-02-16  Djihed Afifi <djihed@gmail.com> 
+
+	* plugins/sessionsaver/__init__.py: Mark strings for translation.
+
+2008-02-01  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/codecomment/codecomment.py: for C, prefer block comments
+	over line comments.
+
+2008-01-19  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/charmap/gedit-charmap-plugin.c: fix a compiler warning.
+
+2007-12-22  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/charmap/gedit-charmap-plugin.c: do not unref the panel when
+	we do not own the ref. Patch by Christian Persch. Bug #502707.
+
+2007-10-11  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/bracketcompletion/bracketcompletion.py: fix language-specific
+	brackets.
+
+2007-10-24  Armin Burgmeier  <armin@arbur.net>
+
+	* plugins/terminal/terminal.py: Set word_chars from gnome-terminal
+	configuration.
+
+==== gedit-plugins 2.20.0 ====
+
+2007-09-29  Paolo Borelli  <pborelli@katamail.com>
+
+	* README:
+	* configure.ac:
+	* NEWS:
+
+	gedit-plugins 2.20.0 released.
+
+2007-09-29  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/joinlines/joinlines.py: Patch from André Homeyer to improve
+	the behavior: just join the current and next line when there is no
+	selection and respect current line indentation when reformatting
+	a paragraph.
+
+2007-09-29  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/joinlines/joinlines.py: update for gsv2.
+
+2007-09-18  Jürg Billeter  <j@bitron.ch>
+
+	* configure.ac: require gedit-2.20 >= 2.20.0
+
+2007-09-05  Jürg Billeter  <j@bitron.ch>
+
+	* configure.ac: require gtksourceview-2.0 >= 1.90.4 and
+	gedit-2.16 >= 2.19.91
+
+==== gedit-plugins 2.19.90 ====
+
+2007-09-03  Paolo Borelli  <pborelli@katamail.com>
+
+	* README:
+	* configure.ac:
+	* NEWS:
+
+	gedit-plugins 2.19.90 released.
+
+2007-08-28  Steve Frécinaux  <code@istique.net>
+
+	* plugins/codecomment/codecomment.py: Update to new gtksourceview 1.90
+	API. Comment tags are now taken from .lang metadata.
+
+2007-08-28  Steve Frécinaux  <code@istique.net>
+
+	* plugins/smartspaces/smartspaces.py: Update to new gtksourceview 1.90
+	API.
+
+2007-08-16  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/colorpicker/colorpicker.py: use "Pick Color..."
+	for the menu item label.
+
+2007-07-01  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/drawspaces/drawspaces.glade:
+	* plugins/drawspaces/drawspaces.py:
+
+	Draw non-breaking spaces. Patch by Bob Mauchin. Fixes bug
+	#431956.
+
+2007-05-06  Loïc Minier  <lool@dooz.org>
+
+	* plugins/sessionsaver/__init__.py:
+	Fix typo causing a Python stack trace on deactivation of the plugin;
+	thanks Vincent Untz. Fixes #436371.
+
+2007-04-07  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/sessionsaver/store.py:
+
+	Fix dir craeation. Pointed out by Trond Danielsen.
+
+2007-03-20  Steve Frécinaux  <code@istique.net>
+
+	* plugins/drawspaces/drawspaces.py:
+	* plugins/joinlines/joinlines.py:
+
+	Remove unneeded parts of the i18n initialisation.
+
+2007-03-19  Wouter Bolsterlee  <wbolster@svn.gnome.org>
+
+	* plugins/drawspaces/drawspaces.py: Make i18n actually
+	work for this plugin. Fixes #420305.
+
+2007-03-19  Wouter Bolsterlee  <wbolster@svn.gnome.org>
+
+	* plugins/joinlines/joinlines.py: Make i18n actually
+	work for this plugin. Partly fixes #420305.
+
+==== gedit-plugins 2.18.0 ====
+
+2007-03-19  Steve Frécinaux  <code@istique.net>
+
+	* README:
+	* configure.ac:
+	* NEWS:
+
+	gedit-plugins 2.18 released.
+
+2007-03-15  Steve Frécinaux  <code@istique.net>
+
+	* plugins/codecomment/codecomment.py:
+	* plugins/colorpicker/colorpicker.py:
+	* plugins/sessionsaver/__init__.py:
+	* plugins/sessionsaver/dialogs.py:
+	* plugins/terminal/terminal.py:
+
+	Use try/catch statements to define the textdomain, in order to make it
+	easier to copy paste plugins in ~.
+	Also use GETTEXT_DOMAIN instead of gving it explicitely.
+
+
+2007-03-15  Steve Frécinaux  <code@istique.net>
+
+	* plugins/drawspaces/drawspaces.glade:
+	* plugins/sessionsaver/sessionsaver.glade:
+
+	Mark stock labels as non translatable.
+
+2007-03-15  Steve Frécinaux  <code@istique.net>
+
+	* configure.ac:
+	* README:
+	* plugins/drawspaces/Makefile.am:
+	* plugins/drawspaces/drawspaces.gedit-plugin.desktop.in:
+	* plugins/drawspaces/drawspaces.glade:
+	* plugins/drawspaces/drawspaces.py:
+
+	New Draw Spaces plugin.
+
+==== gedit-plugins 2.17.2 ====
+
+2007-02-20  Steve Frécinaux  <code@istique.net>
+
+	* NEWS:
+	* README:
+	* configure.ac:
+
+	gedit-plugins 2.17.2 released.
+
+	* plugins/sessionsaver/Makefile.am: add sessionsaver.glade to
+	EXTRA_DIST.
+
+2007-02-20  Steve Frécinaux  <code@istique.net>
+
+	* plugins/sessionsaver/__init__.py: fix opening of a new window:
+	don't open a new window when there is only an untouched document
+	in the window.
+
+	* plugins/sessionsaver/store.py: remove dead code.
+
+2007-02-20  Steve Frécinaux  <code@istique.net>
+
+	* plugins/sessionsaver/sessionsaver.py: fix a typo that caused the
+	menu items not to work properly.
+
+2007-02-20  Steve Frécinaux  <code@istique.net>
+
+	* plugins/smartspaces/smartspaces.py: fix annoying behaviour that
+	avoided the selection to be deleted on backspace.
+
+2007-01-22  Steve Frécinaux  <code@istique.net>
+
+	* plugins/sessionsaver/dialogs.py: add glade.bindtextdomain.
+
+2007-01-22  Steve Frécinaux  <code@istique.net>
+
+	* plugins/sessionsaver/Makefile.am:
+	* plugins/sessionsaver/__init__.py:
+	* plugins/sessionsaver/dialogs.py:
+	* plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in:
+	* plugins/sessionsaver/sessionsaver.glade:
+	* plugins/sessionsaver/store.py:
+
+	New Session Saver plugin.
+
+	* configure.ac:
+	* README:
+
+	Add the new plugin.
+
+=== gedit-plugins 2.17.1 ===
+
+2007-01-13  Steve Frécinaux  <code@istique.net>
+
+	* README:
+	* NEWS:
+	* configure.ac:
+
+	gedit-plugins 2.17.1 released (due to a mistake in previous release).
+
+=== gedit-plugins 2.17.0 ===
+
+2007-01-13  Steve Frécinaux  <code@istique.net>
+
+	* README:
+	* NEWS:
+	* configure.ac:
+
+	gedit-plugins 2.17.0 released.
+
+2006-12-08  Steve Frécinaux  <code@istique.net>
+
+	* plugins/terminal/terminal.py: Fix Bug 381885 – Terminal plugin should
+	offer an easy way to change the directory. Patch by Osmo Salomaa.
+
+2006-11-20  Steve Frécinaux  <code@istique.net>
+
+	* plugins/terminal/terminal.py: Fix Bug 351630 – terminal plugin should
+	honour ctrl+tab; fix weird line break that appeared in the middle of
+	the first line.
+
+2006-11-07  Steve Frécinaux  <code@istique.net>
+
+	* plugins/codecomment/codecomment.py: Fix bug 359494 – codecomment
+	plugin is commenting unselected lines, and remove trailing spaces.
+
+=== gedit-plugins 2.16.0 ===
+
+2006-09-08  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac: bump the gedit requirement to 2.16.0
+	* README: added bracketcompletion and smartspaces plugin
+
+	* configure.ac:
+	* NEWS:
+	* README:
+
+	gedit-plugins 2.16.0 released.
+
+2006-08-28  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/bracketcompletion/bracketcompletion.py: put the closing
+	bracket on the next line if the user hits Return.
+	Warning: this might break input methods.
+
+2006-08-28  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/bracketcompletion/bracketcompletion.py: remove both brackets
+	if the user hits the backspace.
+
+2006-08-28  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac:
+	* plugins/bracketcompletion/bracketcompletion.py
+	* plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in:
+	* plugins/bracketcompletion/Makefile.am:
+
+	New Bracket Completion plugin.
+
+	* plugins/smartspaces/smartspaces.py: fix typo that caused a warning
+	on plugin deactivation.
+
+	* plugins/joinlines/joinlines.gedit-plugin.desktop.in: set the name
+	and description translatable.
+
+=== gedit-plugins 2.15.5 ===
+
+2006-08-21  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac: bump the gedit requirement to 2.15.7
+
+	* configure.ac:
+	* NEWS:
+	* README:
+
+	gedit-plugins 2.15.5 released.
+
+2006-08-18  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac:
+	* plugins/.cvsignore:
+	* plugins/Makefile.am:
+	* plugins/gpdefs.py.in:
+	
+	New gpdef module containing data from gedit-plugin configure, including
+	VERSION, PACKAGE and GETTEXT stuff.
+	
+	* plugins/charmap/gedit-charmap-plugin.c:
+	* plugins/showtabbar/gedit-show-tabbar-plugin.c:
+
+	Use translated strings instead of just mark them as translatable.
+	
+	* plugins/codecomment/codecomment.py:
+	* plugins/colorpicker/colorpicker.py:
+	* plugins/terminal/terminal.py:
+	
+	Fix i18n: initialize gettext domain and fix not translated strings.
+
+2006-08-16  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/terminal/terminal.py: fix plugin deactivation.
+
+2006-08-11  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac:
+	* plugins/charmap/gedit-charmap-plugin.c:
+	* plugins/charmap/gedit-charmap-panel.[ch]:
+	
+	Make charmap plugin use the new GeditPlugin macros for registering
+	types. gedit requirement version in configure.ac has been bumped to
+	2.15.5 since the new macros are included since then
+
+2006-08-11  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/codecomment/codecomment.py: fix bug introduced in last
+	commit.
+
+2006-08-11  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/codecomment/codecomment.py: use language id's instead
+	of MIME types. Add a few new language comments definitions. 
+	Define each comment tuple only once. Fix an exception on
+	deactivate.
+
+2006-08-06  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/codecomment/*:
+	* configure.ac:
+
+	New Code Comment plugin, from Matthew Dugan.
+
+2006-08-06  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/joinlines/joinlines.py: convert from tabs to spaces
+	to conform PEP8. (we decided to use spaces instead of tabs for
+	python).
+
+2006-08-05  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac: fixed configure.ac sed rule (autoconf seems to
+	remove [] from the rule which is fixed by using [[]] instead)
+
+=== gedit-plugins 2.15.4 ===
+
+2006-07-11  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* NEWS:
+	* README:
+	* configure.ac:
+	
+	gedit-plugins 2.15.4 released.
+
+2006-06-20  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac: fix Bug 344655 – configure uses old-style automake
+	init. Patch by Christian Persch.
+
+2006-06-19  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/terminal/terminal.py: set the "copy" menu insensitive when
+	there is nothing selected.
+
+2006-06-13  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac: fix some more linuxisms (bug #344613). Patch by
+	Joe Marcus Clarke.
+
+2006-06-11  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac: fix bug #344563 – broken configure script (due 
+	bashizms). Patch by Fryderyk Dziarmagowski
+
+=== gedit-plugins 2.15.3 ===
+
+2006-06-11  Steve Frécinaux  <steve@istique.net>
+
+	* NEWS:
+	* README:
+	* configure.ac:
+	
+	gedit-plugins 2.15.3 released.
+
+2006-06-11  Steve Frécinaux  <steve@istique.net>
+
+	* MAINTAINERS: add MAINTAINERS file.
+	
+	* configure.ac: set default prefix to the one gedit is installed under;
+	lower the gedit dependency to 2.14.2; fix the --with-plugins help
+	message.
+	
+2006-06-04  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/smartspaces/Makefile.am:
+	* plugins/smartspaces/smartspaces.gedit-plugin.desktop.in:
+	* plugins/smartspaces/smartspaces.py:
+	* plugins/smartspaces/.cvsignore:
+
+	New Smart Spaces plugin.
+
+	* configure.ac: add above plugin to python plugin list.
+
+2006-06-03  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/terminal/terminal.py: fix the context menu positioning on
+	"popup-menu" event. (requires gedit 2.15 from today CVS)
+
+2006-05-31  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/terminal/terminal.py: move the scrollbar into the terminal
+	widget; get the most part of terminal configuration from GConf (Default
+	gnome-terminal profile); add a terminal popup menu containing copy and
+	paste entries.
+
+2006-05-30  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/terminal/terminal.py: adapt to use a window helper. Converted
+	tabs to space to conform to PEP8. (py plugins should conform to PEP8.)
+
+2006-05-25  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/charmap/gedit-charmap-plugin.c: remove statusbar text on
+	plugin removal.
+
+	* configure.ac: set gedit requirement to 2.14 since people have been
+	asking for it several times. Added a note about prefix.
+
+	* plugins/colorpicker/colorpicker.py: reverted API update to make it
+	run with gedit 2.14
+
+2006-05-24  Paolo Borelli  <pborelli@katamail.com>
+
+	* plugins/charmap/gedit-charmap-plugin.c: fix leak.
+
+2006-05-20  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* plugins/colorpicker/colorpicker.py: fixed setting color picker menu
+	item insensitive when there are no documents. Close dialog when it's
+	still open and there are no more documents open.
+
+2006-05-19  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* plugins/colorpicker/colorpicker.py: fixed finding color from cursor
+	position (it no longer accepts # as a hex color token, which it 
+	shouldn't have in the first place)
+
+2006-05-19  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* configure.ac: added checks for plugin dependencies. When dependencies
+	are not met the plugin will be disabled. When the plugin is explicitely
+	defined with --enable-plugins then the missing dependency will generate
+	an error, otherwise it will only generate a warning so plugins can
+	still be built, but without that specific plugin. Added python vte 
+	module check for the terminal plugin. Disable all python plugins when
+	there is no python support.
+
+2006-05-15  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac: bumped intltool requirement to 0.35.0, and gedit
+	requirement to 2.15.2.
+
+	* plugins/colorpicker/colorpicker.py: updated deprecated use of
+	gedit.gedit_app_get_default().
+
+=== gedit-plugins 2.15.2 ===
+
+2006-05-15  Steve Frécinaux  <steve@istique.net>
+
+	* Makefile.am: added gnome-doc-utils.make to dist and dustclean targets.
+
+	* plugins/showtabbar/Makefile.am: added schema file to dist, clean and
+	distclean targets.
+
+	* README: information about module and how to install.
+
+	* configure.ac: gedit-plugins 2.15.2 released.
+
+2006-05-14  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/charmap/gedit-charmap-plugin.c: fix the insertion when a
+	document is read-only or non-editable. Show information about the
+	currently selected char in the statusbar.
+
+2006-05-13  Steve Frécinaux  <steve@istique.net>
+
+	* INSTALL: Added generic install instructions.
+
+	* plugins/terminal/terminal.gedit-plugin.desktop.in: added custom icon.
+	
+	* plugins/colorpicker/colorpicker.gedit-plugin.desktop.in: added custom
+	icon and marked strings for translation.
+	
+	* plugin/charmap/charmap.gedit-plugin.desktop.in: added custom icon and
+	explicit plugin description.
+
+2006-04-23  Jesse van den Kieboom  <jesse@icecrew.nl>
+
+	* plugins/colorpicker/.cvsignore:
+	* plugins/colorpicker/Makefile.am:
+	* plugins/colorpicker/colorpicker.gedit-plugin.desktop.in:
+	* plugins/colorpicker/colorpicker.py:
+	
+	New Color Picker plugin
+	
+	* configure.ac: Add above plugin to python plugin list
+
+2006-04-23  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/charmap/.cvsignore:
+	* plugins/charmap/Makefile.am:
+	* plugins/charmap/charmap.gedit-plugin.desktop.in:
+	* plugins/charmap/gedit-charmap-panel.[ch]:
+	* plugins/charmap/gedit-charmap-plugin.[ch]:
+	
+	New Character Map Panel plugin.
+
+	* configure.ac: Add above plugin to plugin list. Remove useless
+	dependencies. Remove unused GEDIT_DATA_DIR definition. Add conditional
+	dependency for libgucharmap.
+
+2006-04-20  Steve Frécinaux  <steve@istique.net>
+
+	* autogen.sh: updated package name to gedit-plugins
+
+	* configure.ac: comment out GNOME_COMPILE_WARNINGS on a suggestion
+	of بهداد اسفهبد.
+
+2006-04-16  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac:
+	* plugins/terminal/.cvsignore:
+	* plugins/terminal/Makefile.am:
+	* plugins/terminal/terminal.gedit-plugin.desktop.in:
+	* plugins/terminal/terminal.py:
+
+	New Embedded Terminal plugin.
+	Plugin from Paolo Borelli <pborelli@katamail.com>.
+
+2006-04-16  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac:
+	* plugins/showtabbar/.cvsignore:
+	* plugins/showtabbar/Makefile.am:
+	* plugins/showtabbar/gedit-show-tabbar-plugin.c:
+	* plugins/showtabbar/gedit-show-tabbar-plugin.h:
+	* plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in:
+	* plugins/showtabbar/showtabbar.gedit-plugin.desktop.in:
+	
+	New Show/Hide Tabbar plugin.
+
+2006-04-16  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac: fix typo.
+
+	* .cvsignore:
+	* m4/.cvsignore:
+	* po/.cvsignore:
+	
+	Update cvsignore list.
+
+2006-04-16  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac: fix the way po/LINGUAS is handled. Add gedit-2.14 into
+	pkg dependencies to be able to build C plugins.
+
+2006-04-09  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac:
+	* po/LINGUAS:
+	
+	Move ALL_LANGUAGES content to the po/LINGUAS file, to make our
+	translators' life easier.
+
+2006-04-08  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/joinlines/joinlines.py: take care of the current tab size for
+	the line splitting.
+
+2006-03-30  Steve Frécinaux  <steve@istique.net>
+
+	* plugins/joinlines/joinlines.gedit-plugin.desktop.in:
+	* plugins/joinlines/joinlines.py:
+	* plugins/joinlines/Makefile.am:
+
+	New "Join/Split Lines" plugin.
+
+	* configure.ac,Makefile.am: updated plugin list and removed
+	references to translations
+
+2006-03-29  Steve Frécinaux  <steve@istique.net>
+
+	* configure.ac,Makefile.am:
+	* README,INSTALL,COPYING,NEWS,AUTHORS,autogen.sh:
+	* plugins/*:
+	* m4/*:
+
+	Autotools stuff, burrowed from gedit and epiphany-extensions.
+	Need further testing and plugins ;-), probably quite buggy.
+
+2005-09-29  Raphael Slinckx  <rslinckx@cvs.gnome.org>
+
+	* quickies/quickies.py,quickies.glade,quickies.gedit-plugin:
+	Clean the CVS module, and add the quickies python extension
