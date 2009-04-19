@@ -263,7 +263,7 @@ class TerminalWindowHelper(object):
         if uri is not None and gedit.utils.uri_has_file_scheme(uri):
             gfile = gio.File(uri)
             directory = gfile.get_parent()
-            return os.path.dirname(directory.get_path())
+            return directory.get_path()
         return None
 
     def on_panel_populate_popup(self, panel, menu):
