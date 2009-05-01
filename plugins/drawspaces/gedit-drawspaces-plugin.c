@@ -400,7 +400,7 @@ impl_deactivate	(GeditPlugin *plugin,
 	ds_plugin->priv->flags = 0;
 	draw_spaces (ds_plugin);
 	
-	g_signal_handlers_disconnect_by_func (window, tab_added_cb, NULL);
+	g_signal_handlers_disconnect_by_func (window, tab_added_cb, ds_plugin);
 	
 	gtk_ui_manager_remove_ui (manager, data->ui_id);
 	gtk_ui_manager_remove_action_group (manager, data->action_group);
