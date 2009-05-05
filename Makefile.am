@@ -38,3 +38,5 @@ ChangeLog:
 	fi
 
 .PHONY: ChangeLog
+
+-include $(top_srcdir)/git.mk

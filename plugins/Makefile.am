@@ -10,3 +10,5 @@ DISTCLEANFILES = \
 
 EXTRA_DIST = \
 	gpdefs.py.in
+
+-include $(top_srcdir)/git.mk
