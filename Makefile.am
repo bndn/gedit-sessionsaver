@@ -4,39 +4,33 @@ ACLOCAL_AMFLAGS = -I m4
 
 EXTRA_DIST =			\
 	autogen.sh		\
-	ChangeLog  		\
-	gnome-doc-utils.make	\
+	ChangeLog-20090414	\
+	gedit-plugins.doap	\
 	intltool-extract.in 	\
 	intltool-merge.in 	\
 	intltool-update.in
 
 DISTCLEANFILES = 		\
-	gnome-doc-utils.make	\
 	intltool-extract 	\
 	intltool-merge 		\
 	intltool-update
 
 DISTCHECK_CONFIGURE_FLAGS = --with-plugins=really-all
 
-distclean-local:
-	if test $(srdcir) = .; then :; else \
-		rm -f ChangeLog; \
-	fi
+CHANGELOG_START = GEDIT_PLUGINS_2_26_2
 
-ChangeLog:
-	@echo Creating $@
-	@if test -d "$(srcdir)/.git"; then \
-	  (GIT_DIR=$(top_srcdir)/.git ./missing --run git log GEDIT_PLUGINS_2_26_1^^.. --stat -M -C --name-status  --date=short --no-color) | fmt --split-only > $@.tmp \
-	  && mv -f $@.tmp $@ \
-	  || ($(RM) $@.tmp; \
-	      echo Failed to generate ChangeLog, your ChangeLog may be outdated >&2; \
-	      (test -f $@ || echo git-log is required to generate this file >> $@)); \
+dist-hook:
+	@if test -d "$(srcdir)/.git"; \
+	then \
+		echo Creating ChangeLog && \
+		(GIT_DIR=$(top_srcdir)/.git \
+		  ./missing --run git log $(CHANGELOG_START)^^.. --stat -M -C --name-status  --date=short --no-color) | \
+		  fmt --split-only > ChangeLog.tmp \
+		&& mv -f ChangeLog.tmp $(top_distdir)/ChangeLog \
+		|| ( rm -f ChangeLog.tmp ; \
+		  echo Failed to generate ChangeLog >&2 ); \
 	else \
-	  test -f $@ || \
-	  (echo A git checkout and git-log is required to generate ChangeLog >&2 && \
-	  echo A git checkout and git-log is required to generate this file >> $@); \
+		echo A git clone is required to generate a ChangeLog >&2; \
 	fi
-
-.PHONY: ChangeLog
 
 -include $(top_srcdir)/git.mk
