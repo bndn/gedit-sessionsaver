@@ -17,7 +17,7 @@ DISTCLEANFILES = 		\
 
 DISTCHECK_CONFIGURE_FLAGS = --with-plugins=really-all
 
-CHANGELOG_START = GEDIT_PLUGINS_2_26_2
+CHANGELOG_START = GEDIT_PLUGINS_2_26_1
 
 dist-hook:
 	@if test -d "$(srcdir)/.git"; \
