@@ -397,8 +397,8 @@ impl_deactivate	(GeditPlugin *plugin,
 	
 	manager = gedit_window_get_ui_manager (window);
 	
-	ds_plugin->priv->flags = 0;
-	draw_spaces (ds_plugin);
+	data->enable = FALSE;
+	draw_spaces_in_window (window, ds_plugin);
 	
 	g_signal_handlers_disconnect_by_func (window, tab_added_cb, ds_plugin);
 	
