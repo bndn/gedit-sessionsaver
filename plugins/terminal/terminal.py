@@ -17,7 +17,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with gedit; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin St, Fifth Floor, 
+# Foundation, Inc., 51 Franklin St, Fifth Floor,
 # Boston, MA  02110-1301  USA
 
 import gedit
@@ -79,11 +79,11 @@ class GeditTerminal(gtk.HBox):
         self._vte.set_size_request(200, 50)
         self._vte.show()
         self.pack_start(self._vte)
-        
+
         self._scrollbar = gtk.VScrollbar(self._vte.get_adjustment())
         self._scrollbar.show()
         self.pack_start(self._scrollbar, False, False, 0)
-        
+
         gconf_client.notify_add(self.GCONF_PROFILE_DIR,
                                 self.on_gconf_notification)
 
@@ -165,7 +165,7 @@ class GeditTerminal(gtk.HBox):
 
         self._vte.set_scrollback_lines(gconf_get_int(self.GCONF_PROFILE_DIR + "/scrollback_lines",
                                                      self.defaults['scrollback_lines']))
-        
+
         self._vte.set_allow_bold(gconf_get_bool(self.GCONF_PROFILE_DIR + "/allow_bold",
                                                 self.defaults['allow_bold']))
 
@@ -207,32 +207,41 @@ class GeditTerminal(gtk.HBox):
         menu = gtk.Menu()
 
         item = gtk.ImageMenuItem(gtk.STOCK_COPY)
-        item.connect("activate", lambda menu_item: self._vte.copy_clipboard())
+        item.connect("activate", lambda menu_item: self.copy_clipboard())
         item.set_sensitive(self._vte.get_has_selection())
         menu.append(item)
 
         item = gtk.ImageMenuItem(gtk.STOCK_PASTE)
-        item.connect("activate", lambda menu_item: self._vte.paste_clipboard())
+        item.connect("activate", lambda menu_item: self.paste_clipboard())
         menu.append(item)
-        
+
         self.emit("populate-popup", menu)
         menu.show_all()
         return menu
 
     def do_popup(self, event = None):
         menu = self.create_popup_menu()
-   
+
         if event is not None:
             menu.popup(None, None, None, event.button, event.time)
         else:
             menu.popup(None, None,
                        lambda m: gedit.utils.menu_position_under_widget(m, self),
                        0, gtk.get_current_event_time())
-            menu.select_first(False)        
+            menu.select_first(False)
+
+    def copy_clipboard(self):
+        self._vte.copy_clipboard()
+        self._vte.grab_focus()
+
+    def paste_clipboard(self):
+        self._vte.paste_clipboard()
+        self._vte.grab_focus()
 
     def change_directory(self, path):
         path = path.replace('\\', '\\\\').replace('"', '\\"')
         self._vte.feed_child('cd "%s"\n' % path)
+        self._vte.grab_focus()
 
 class TerminalWindowHelper(object):
     def __init__(self, window):
@@ -251,7 +260,7 @@ class TerminalWindowHelper(object):
     def deactivate(self):
         bottom = self._window.get_bottom_panel()
         bottom.remove_item(self._panel)
-    
+
     def update_ui(self):
         pass
 
@@ -294,7 +303,7 @@ class TerminalPlugin(gedit.Plugin):
 gconf_client = gconf.client_get_default()
 def gconf_get_bool(key, default = False):
     val = gconf_client.get(key)
-    
+
     if val is not None and val.type == gconf.VALUE_BOOL:
         return val.get_bool()
     else:
@@ -302,7 +311,7 @@ def gconf_get_bool(key, default = False):
 
 def gconf_get_str(key, default = ""):
     val = gconf_client.get(key)
-    
+
     if val is not None and val.type == gconf.VALUE_STRING:
         return val.get_string()
     else:
@@ -310,7 +319,7 @@ def gconf_get_str(key, default = ""):
 
 def gconf_get_int(key, default = 0):
     val = gconf_client.get(key)
-    
+
     if val is not None and val.type == gconf.VALUE_INT:
         return val.get_int()
     else:
