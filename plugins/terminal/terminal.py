@@ -197,6 +197,7 @@ class GeditTerminal(gtk.HBox):
 
     def on_vte_button_press(self, term, event):
         if event.button == 3:
+            self._vte.grab_focus()
             self.do_popup(event)
             return True
 
