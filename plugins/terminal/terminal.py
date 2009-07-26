@@ -96,6 +96,9 @@ class GeditTerminal(gtk.HBox):
 
         self._vte.fork_command()
 
+    def do_grab_focus(self):
+        self._vte.grab_focus()
+
     def reconfigure_vte(self):
         # Fonts
         if gconf_get_bool(self.GCONF_PROFILE_DIR + "/use_system_font"):
