@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-28 22:37+0200\n"
-"PO-Revision-Date: 2008-06-20 21:39+0100\n"
+"POT-Creation-Date: 2009-08-20 19:26+0200\n"
+"PO-Revision-Date: 2009-08-20 19:26+0100\n"
 "Last-Translator: Tomasz Dominikowski <dominikowski@gmail.com>\n"
-"Language-Team: Aviary.pl <gnomepl@aviary.pl>\n"
+"Language-Team: Polish <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,28 +20,60 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
+msgid "Bookmarks"
+msgstr "Zakładki"
+
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:2
+msgid "Easy document navigation with bookmarks"
+msgstr "Łatwa nawigacja po dokumencie za pomocą zakładek"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+msgid "Toggle Bookmark"
+msgstr "Przełącz zakładkę"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+msgid "Toggle bookmark status of the current line"
+msgstr "Przełącza stan zakładki bieżącego wiersza"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+msgid "Goto Next Bookmark"
+msgstr "Przejdź do następnej zakładki"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+msgid "Goto the next bookmark"
+msgstr "Przechodzi do następnej zakładki"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+msgid "Goto Previous Bookmark"
+msgstr "Przejdź do poprzedniej zakładki"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+msgid "Goto the previous bookmark"
+msgstr "Przechodzi do poprzedniej zakładki"
+
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:1
 msgid "Automatically adds closing brackets."
 msgstr "Automatycznie dodaje zamykające nawiasy."
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Bracket Completion"
 msgstr "Uzupełnianie nawiasów"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:320
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:258
 msgid "Character Map"
 msgstr "Mapa znaków"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Pozwala wstawić znaki specjalne wybierając je za pomocą myszy."
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:1
 msgid "Code comment"
 msgstr "Komentowanie kodu"
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Pozwala komentować lub odkomentować zaznaczony blok kodu."
 
@@ -62,11 +94,11 @@ msgid "Uncomment the selected code"
 msgstr "Odkomentowuje zaznaczony kod"
 
 #. ex:ts=4:et:
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:1
 msgid "Color Picker"
-msgstr "Wybierak kolorów"
+msgstr "Wybór koloru"
 
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 "Pozwala wybrać kolor z okna dialogowego i wstawić jego szesnastkowy "
@@ -89,44 +121,47 @@ msgid "_Insert"
 msgstr "_Wstaw"
 
 #. ex:ts=4:et:
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Wyświetlanie spacji"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
-msgstr "Wyświetla spacje i tabulację"
+msgstr "Wyświetla spacje i tabulacje"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:1
+#: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw new lines"
+msgstr "Wyświetlanie nowych wierszy"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw non-breaking spaces"
-msgstr "Rysuje spacje nieprzerywalne"
+msgstr "Wyświetlanie nieprzerywalnych spacji"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw spaces"
 msgstr "Wyświetla spacje"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw tabs"
 msgstr "Wyświetlanie tabulacji"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:4
-msgid "Drawing color:"
-msgstr "Kolor wyświetlania:"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:151
+msgid "Show _White Space"
+msgstr "Wyświetlanie _spacji"
 
-#: ../plugins/drawspaces/drawspaces.py:174
-msgid "Show White Space"
-msgstr "Wyświetlanie białych spacji"
-
-#: ../plugins/drawspaces/drawspaces.py:175
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:152
 msgid "Show spaces and tabs"
 msgstr "Wyświetlanie spacji i tabulacji"
 
-#. ex:ts=4:et:
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
-msgid "Join several lines or split long ones"
-msgstr "Łączy wiele wierszy i dzieli dłuższe"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:542
+msgid "Error dialog"
+msgstr "Okno dialogowe błędu"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
+msgid "Join several lines or split long ones"
+msgstr "Łączy wiele wierszy lub dzieli dłuższe"
+
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "Połącz/Podziel wiersze"
 
@@ -162,282 +197,84 @@ msgstr "Pasek kart jest widoczny"
 msgid "Whether the tabbar should be visible in editing windows."
 msgstr "Określa, czy pasek kart ma być widoczny w oknach."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
 msgstr "Dodaje pozycję menu do wyświetlania/ukrywania paska kart."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Wyświetl/Ukryj pasek kart"
 
-#: ../plugins/sessionsaver/__init__.py:65
+#: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "Zap_isane sesje"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "_Save current session"
 msgstr "_Zapisz bieżącą sesję"
 
-#: ../plugins/sessionsaver/__init__.py:66
+#: ../plugins/sessionsaver/__init__.py:65
 msgid "Save the current document list as a new session"
-msgstr "Zapisuje bieżące listy dokumentów jako nowa sesja"
+msgstr "Zapisuje bieżącą listę dokumentów jako nową sesję"
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
-msgstr "_Zarządzanie zapisanymi sesjami..."
+msgstr "_Zarządzaj zapisanymi sesjami..."
 
-#: ../plugins/sessionsaver/__init__.py:67
+#: ../plugins/sessionsaver/__init__.py:66
 msgid "Open the saved session manager"
-msgstr "Otwiera menedżera sesji zapisanych"
+msgstr "Otwiera menedżera zapisanych sesji"
 
-#: ../plugins/sessionsaver/__init__.py:107
+#: ../plugins/sessionsaver/__init__.py:106
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Odtwórz sesję \"%s\""
 
-#: ../plugins/sessionsaver/dialogs.py:165
+#: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
 msgstr "Nazwa sesji"
 
 #. ex:ts=4:et:
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:1
 msgid "Save and restore your working sessions"
-msgstr "Zapisuje i odtwarza sesje"
+msgstr "Zapisuje i odtwarza sesje robocze"
 
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "Zapisywanie sesji"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
 msgid "Save session"
 msgstr "Zapisuje sesję"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:2
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
-msgstr "Sesje zapisane"
+msgstr "Zapisane sesje"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:3
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
 msgstr "Nazwa sesji:"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Tabulacja nie jest już potrzebna."
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Smart Spaces"
 msgstr "Inteligentne spacje"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:1
 msgid "Embed a terminal in the bottom pane."
 msgstr "Osadza terminal w dolnym panelu."
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:2
 msgid "Embedded Terminal"
 msgstr "Osadzony terminal"
 
-#: ../plugins/terminal/terminal.py:210
+#: ../plugins/terminal/terminal.py:262
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:231
+#: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "Zmień _katalog"
-
-#~ msgid "_ASCII Table"
-#~ msgstr "Tabela _ASCII"
-
-#~ msgid "Pop-up a dialog containing an ASCII Table"
-#~ msgstr "Wyświetla okno z tablicą znaków ASCII"
-
-#~ msgid "Char"
-#~ msgstr "Znak"
-
-#~ msgid "Dec#"
-#~ msgstr "Dec"
-
-#~ msgid "Hex#"
-#~ msgstr "Hex"
-
-#~ msgid "Name"
-#~ msgstr "Nazwa"
-
-#~ msgid "ASCII Table"
-#~ msgstr "Tabela ASCII"
-
-#~ msgid "ASCII table"
-#~ msgstr "Tabela ASCII"
-
-#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-#~ msgstr "Wtyczka ta wyświetla okno z tablicą znaków ASCII."
-
-#~ msgid "Open CVS Chan_geLogs"
-#~ msgstr "Otwórz plik _Changelog z CVS"
-
-#~ msgid "Searches for ChangeLogs in the current document and opens them"
-#~ msgstr ""
-#~ "Wyszukuje pliki ChangeLog odnoszące się do bieżącego dokumentu i otwiera "
-#~ "je"
-
-#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-#~ msgstr ""
-#~ "Wtyczka otwierająca pliki ChangeLog znalezione w komunikatach "
-#~ "zatwierdzania CVS."
-
-#~ msgid "CVS ChangeLog"
-#~ msgstr "Plik ChangeLog z CVS"
-
-#~ msgid "Co_mpare Files..."
-#~ msgstr "Po_równaj pliki..."
-
-#~ msgid "Makes a diff file from two documents or files"
-#~ msgstr "Tworzy opis różnic (diff) pomiędzy dwoma dokumentami lub plikami"
-
-#~ msgid "Compare Files"
-#~ msgstr "Porównanie plików"
-
-#~ msgid "C_ompare"
-#~ msgstr "_Porównaj"
-
-#~ msgid "Executed command"
-#~ msgstr "Wykonywane polecenie"
-
-#~ msgid "The two documents you selected are the same."
-#~ msgstr "Zaznaczone dokumenty są takie same."
-
-#~ msgid ""
-#~ "The \"first\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
-#~ msgstr ""
-#~ "Wybrany plik \"pierwszy\" nie istnieje.\n"
-#~ "\n"
-#~ "Wprowadź poprawny plik."
-
-#~ msgid ""
-#~ "The \"second\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
-#~ msgstr ""
-#~ "Wybrany plik \"drugi\" nie istnieje.\n"
-#~ "\n"
-#~ "Wprowadź poprawny plik."
-
-#~ msgid "The two files you selected are the same."
-#~ msgstr "Oba zaznaczone pliki są takie same."
-
-#~ msgid "The \"first\" document contains no text."
-#~ msgstr "\"Pierwszy\" dokument nie zawiera tekstu."
-
-#~ msgid "The \"second\" document contains no text."
-#~ msgstr "\"Drugi\" dokument nie zawiera tekstu."
-
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "gedit could not create a temporary file."
-#~ msgstr ""
-#~ "Nie można porównać wybranych dokumentów.\n"
-#~ "\n"
-#~ "Nie można utworzyć pliku tymczasowego."
-
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "Error executing the diff command."
-#~ msgstr ""
-#~ "Nie można porównać wybranych dokumentów.\n"
-#~ "\n"
-#~ "Przy wykonywaniu polecenia diff wystąpił błąd."
-
-#~ msgid "No differences were found between the selected documents."
-#~ msgstr "Nie odnaleziono żadnych różnic pomiędzy wybranymi dokumentami."
-
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "The result contains invalid UTF-8 data."
-#~ msgstr ""
-#~ "Nie można porównać wybranych dokumentów.\n"
-#~ "\n"
-#~ "Wynik zawiera niepoprawne dane w zapisie UTF-8."
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Choose the files to compare."
-#~ msgstr "Wybierz pliki do porównania."
-
-#~ msgid "Compare files..."
-#~ msgstr "Porównaj pliki..."
-
-#~ msgid "F_rom document"
-#~ msgstr "Z _dokumentu"
-
-#~ msgid "First"
-#~ msgstr "Pierwszy"
-
-#~ msgid "First file from disk"
-#~ msgstr "Pierwszy plik z dysku"
-
-#~ msgid "First file from open document"
-#~ msgstr "Pierwszy plik z otwartego dokumentu"
-
-#~ msgid "From _document"
-#~ msgstr "Z d_okumentu"
-
-#~ msgid "From a _file on disk"
-#~ msgstr "Z pliku _na dysku"
-
-#~ msgid "From a file o_n disk"
-#~ msgstr "Z pliku na dy_sku"
-
-#~ msgid "Ignore _blanks (-b option)"
-#~ msgstr "_Ignorowanie pustych znaków (opcja -b)"
-
-#~ msgid "Note that this option is only supported by GNU diff"
-#~ msgstr ""
-#~ "Opcja ta jest obsługiwana tylko przez wersję diffa powstałą w ramach GNU"
-
-#~ msgid "Second"
-#~ msgstr "Drugi"
-
-#~ msgid "Second file from disk"
-#~ msgstr "Drugi plik dysku"
-
-#~ msgid "Second file from open document"
-#~ msgstr "Drugi plik z otwartego dokumentu"
-
-#~ msgid "Select the \"first\" file..."
-#~ msgstr "Wybór \"pierwszego\" pliku..."
-
-#~ msgid "Select the \"second\" file..."
-#~ msgstr "Wybór \"drugiego\" pliku..."
-
-#~ msgid "Select the first file to compare"
-#~ msgstr "Wybierz pierwszy z porównywanych plików"
-
-#~ msgid "Select the first open document to compare"
-#~ msgstr "Wybierz pierwszy plik spośród otwartych dokumentów"
-
-#~ msgid "Select the second file to compare"
-#~ msgstr "Wybierz pierwszy z porównywanych plików"
-
-#~ msgid "Select the second open document to compare"
-#~ msgstr "Wybierz drugi plik spośród otwartych dokumentów"
-
-#~ msgid "Use the _unified output format (-u option)"
-#~ msgstr "Używanie z_unifikowanego formatu wyjścia (opcja -u)"
-
-#~ msgid ""
-#~ "The Compare Files plugin uses the <tt>diff</tt> program to compare two "
-#~ "documents or files on disk.\n"
-#~ "\n"
-#~ "For more info on <tt>diff</tt> program, type <tt>man diff</tt> in a shell "
-#~ "prompt."
-#~ msgstr ""
-#~ "Wtyczka porównująca pliki korzysta z programu <tt>diff</tt> przy "
-#~ "porównywaniu dwóch plików dokumentów zapisanych na dysku.\n"
-#~ "\n"
-#~ "Aby uzyskać więcej informacji o programie diff, wpisz \"man diff\" w "
-#~ "wierszu poleceń powłoki."
