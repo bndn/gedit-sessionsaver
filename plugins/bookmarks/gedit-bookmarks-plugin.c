@@ -43,6 +43,7 @@
 
 #define BOOKMARK_CATEGORY "GeditBookmarksPluginBookmark"
 #define INSERT_DATA_KEY "GeditBookmarksInsertData"
+#define METADATA_ATTR "metadata::gedit-bookmarks"
 
 typedef struct
 {
@@ -306,6 +307,121 @@ enable_bookmarks (GeditView   *view,
 }
 
 static void
+load_bookmarks (GeditView *view,
+		gchar    **bookmarks)
+{
+	GtkSourceBuffer *buf;
+	GtkTextIter iter;
+	gint tot_lines;
+	gint i;
+	
+	buf = GTK_SOURCE_BUFFER (gtk_text_view_get_buffer (GTK_TEXT_VIEW (view)));
+	
+	gtk_text_buffer_get_end_iter (GTK_TEXT_BUFFER (buf), &iter);
+	tot_lines = gtk_text_iter_get_line (&iter);
+	
+	for (i = 0; bookmarks != NULL && bookmarks[i] != NULL; i++)
+	{
+		gint line;
+		
+		line = atoi (bookmarks[i]);
+
+		if (line >= 0 && line < tot_lines)
+		{
+			GSList *marks;
+		
+			gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER (buf),
+							  &iter, line);
+			
+			marks = gtk_source_buffer_get_source_marks_at_iter (buf, &iter,
+									    BOOKMARK_CATEGORY);
+			
+			if (marks == NULL)
+			{
+				/* Add new bookmark */
+				gtk_source_buffer_create_source_mark (buf,
+								      NULL,
+								      BOOKMARK_CATEGORY,
+								      &iter);
+			}
+			else
+			{
+				g_slist_free (marks);
+			}
+		}
+	}
+}
+
+static void
+load_bookmark_query_info_cb (GFile        *source,
+			     GAsyncResult *res,
+			     GeditView    *view)
+{
+	GFileInfo *info;
+	GError *error = NULL;
+	const gchar *bookmarks_attr;
+	gchar **bookmarks;
+
+	info = g_file_query_info_finish (source,
+					 res,
+					 &error);
+
+	if (info == NULL)
+	{
+		g_warning ("%s", error->message);
+		g_error_free (error);
+		return;
+	}
+	
+	if (g_file_info_has_attribute (info, METADATA_ATTR))
+	{
+		bookmarks_attr = g_file_info_get_attribute_string (info,
+								   METADATA_ATTR);
+
+		if (bookmarks_attr != NULL)
+		{
+			bookmarks = g_strsplit (bookmarks_attr, ",", -1);
+			load_bookmarks (view, bookmarks);
+		
+			g_strfreev (bookmarks);
+		}
+	}
+	
+	g_object_unref (info);
+}
+
+static void
+query_info (GeditView *view,
+	    GAsyncReadyCallback callback,
+	    gpointer data)
+{
+	GeditDocument *doc;
+	GFile *location;
+	
+	doc = GEDIT_DOCUMENT (gtk_text_view_get_buffer (GTK_TEXT_VIEW (view)));
+	location = gedit_document_get_location (doc);
+	
+	if (location != NULL)
+	{
+		g_file_query_info_async (location,
+					 METADATA_ATTR,
+					 G_FILE_QUERY_INFO_NONE,
+					 G_PRIORITY_DEFAULT,
+					 NULL,
+					 (GAsyncReadyCallback) callback,
+					 data);
+		g_object_unref (location);
+	}
+}
+
+static void
+load_bookmark_metadata (GeditView *view)
+{
+	query_info (view, (GAsyncReadyCallback) load_bookmark_query_info_cb,
+		    view);
+}
+
+static void
 impl_activate (GeditPlugin *plugin,
 	       GeditWindow *window)
 {
@@ -325,6 +441,7 @@ impl_activate (GeditPlugin *plugin,
 	for (item = views; item != NULL; item = item->next)
 	{
 		enable_bookmarks (GEDIT_VIEW (item->data), plugin);
+		load_bookmark_metadata (GEDIT_VIEW (item->data));
 	}
 
 	g_list_free (views);
@@ -336,6 +453,100 @@ impl_activate (GeditPlugin *plugin,
 			  G_CALLBACK (on_tab_removed), plugin);
 
 	install_menu (window);
+}
+
+static void
+set_attributes_cb (GObject      *source,
+		   GAsyncResult *res,
+		   gpointer      useless)
+{
+	g_file_set_attributes_finish (G_FILE (source),
+				      res,
+				      NULL,
+				      NULL);
+}
+
+static void
+save_bookmarks_query_info_cb (GFile        *source,
+			      GAsyncResult *res,
+			      gchar        *val)
+{
+	GFileInfo *info;
+	GError *error = NULL;
+
+	info = g_file_query_info_finish (source,
+					 res,
+					 &error);
+
+	if (info == NULL)
+	{
+		g_warning ("%s", error->message);
+		g_error_free (error);
+		return;
+	}
+
+	if (val != NULL)
+	{
+		g_file_info_set_attribute_string (info, METADATA_ATTR, val);
+		g_free (val);
+	}
+	else
+	{
+		/* Unset the key */
+		g_file_info_set_attribute (info, METADATA_ATTR,
+					   G_FILE_ATTRIBUTE_TYPE_INVALID,
+					   NULL);
+	}
+
+	g_file_set_attributes_async (source,
+				     info,
+				     G_FILE_QUERY_INFO_NONE,
+				     G_PRIORITY_DEFAULT,
+				     NULL,
+				     set_attributes_cb,
+				     NULL);
+
+	g_object_unref (info);
+}
+
+static void
+save_bookmark_metadata (GeditView *view)
+{
+	GtkTextIter iter;
+	GtkTextBuffer *buf;
+	GString *string;
+	gchar *val = NULL;
+	gboolean first = TRUE;
+
+	buf = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
+	
+	gtk_text_buffer_get_start_iter (buf, &iter);
+	
+	string = g_string_new (NULL);
+	
+	while (gtk_source_buffer_forward_iter_to_source_mark (GTK_SOURCE_BUFFER (buf),
+							      &iter,
+							      BOOKMARK_CATEGORY))
+	{
+		gint line;
+		
+		line = gtk_text_iter_get_line (&iter);
+		
+		if (!first)
+		{
+			g_string_append_printf (string, ",%d", line);
+		}
+		else
+		{
+			g_string_append_printf (string, "%d", line);
+			first = FALSE;
+		}
+	}
+	
+	val = g_string_free (string, FALSE);
+	
+	query_info (view, (GAsyncReadyCallback) save_bookmarks_query_info_cb,
+		    val);
 }
 
 static void
@@ -353,7 +564,9 @@ impl_deactivate	(GeditPlugin *plugin,
 	views = gedit_window_get_views (window);
 
 	for (item = views; item != NULL; item = item->next)
+	{
 		disable_bookmarks (GEDIT_VIEW (item->data));
+	}
 	
 	g_list_free (views);
 	
@@ -653,11 +866,46 @@ on_previous_bookmark_activate (GtkAction   *action,
 }
 
 static void
+on_document_loaded (GeditDocument *doc,
+		    const GError  *error,
+		    GeditView     *view)
+{
+	if (error == NULL)
+	{
+		load_bookmark_metadata (view);
+	}
+}
+
+static void
+on_document_saved (GeditDocument *doc,
+		   const GError  *error,
+		   GeditView     *view)
+{
+	if (error == NULL)
+	{
+		save_bookmark_metadata (view);
+	}
+}
+
+static void
 on_tab_added (GeditWindow *window,
 	      GeditTab    *tab,
 	      GeditPlugin *plugin)
 {
-	enable_bookmarks (gedit_tab_get_view (tab), plugin);
+	GeditDocument *doc;
+	GeditView *view;
+
+	doc = gedit_tab_get_document (tab);
+	view = gedit_tab_get_view (tab);
+	
+	g_signal_connect (doc, "loaded",
+			  G_CALLBACK (on_document_loaded),
+			  view);
+	g_signal_connect (doc, "saved",
+			  G_CALLBACK (on_document_saved),
+			  view);
+
+	enable_bookmarks (view, plugin);
 }
 
 static void
@@ -665,5 +913,14 @@ on_tab_removed (GeditWindow *window,
 	        GeditTab    *tab,
 	        GeditPlugin *plugin)
 {
-	disable_bookmarks (gedit_tab_get_view (tab));
+	GeditDocument *doc;
+	GeditView *view;
+
+	doc = gedit_tab_get_document (tab);
+	view = gedit_tab_get_view (tab);
+	
+	g_signal_handlers_disconnect_by_func (doc, on_document_loaded, view);
+	g_signal_handlers_disconnect_by_func (doc, on_document_saved, view);
+
+	disable_bookmarks (view);
 }
