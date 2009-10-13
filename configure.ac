@@ -85,9 +85,9 @@ GEDIT_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="bookmarks showtabbar charmap drawspaces"
-USEFUL_PLUGINS="bookmarks showtabbar charmap drawspaces"
-DEFAULT_PLUGINS="bookmarks showtabbar charmap drawspaces"
+ALL_PLUGINS="bookmarks showtabbar charmap drawspaces wordcompletion"
+USEFUL_PLUGINS="bookmarks showtabbar charmap drawspaces wordcompletion"
+DEFAULT_PLUGINS="bookmarks showtabbar charmap drawspaces wordcompletion"
 
 PYTHON_ALL_PLUGINS="bracketcompletion codecomment colorpicker joinlines sessionsaver smartspaces terminal"
 PYTHON_USEFUL_PLUGINS="bracketcompletion codecomment colorpicker joinlines sessionsaver smartspaces terminal"
@@ -113,8 +113,8 @@ AC_ARG_WITH([plugins],
 			  build the specified plugins. Available:
 			  bracketcompletion, charmap, codecomment,
 			  colorpicker, drawspaces, joinlines, showtabbar,
-			  sessionsaver, smartspaces,  terminal, as well
-			  as the aliases default, all, and really-all],
+			  sessionsaver, smartspaces,  terminal, wordcompletion,
+			  as well as the aliases default, all, and really-all],
 			  [plugins=$with_plugins],
 			  [plugins="default"])
 
@@ -434,6 +434,8 @@ plugins/smartspaces/Makefile
 plugins/smartspaces/smartspaces.gedit-plugin.desktop.in
 plugins/terminal/Makefile
 plugins/terminal/terminal.gedit-plugin.desktop.in
+plugins/wordcompletion/Makefile
+plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in
 po/Makefile.in])
 
 AC_OUTPUT
