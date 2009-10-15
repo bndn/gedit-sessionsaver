@@ -7,19 +7,23 @@
 # Miloslav Trmac <mitr@volny.cz>, 2003, 2004, 2005.
 # Jakub Friedl <jfriedl@suse.cz>, 2006.
 # Kamil Páral <ripper42@gmail.com>, 2008, 2009.
+# Marek Černocký <marek@manet.cz>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-31 15:47+0200\n"
-"PO-Revision-Date: 2009-03-30 22:08+0100\n"
-"Last-Translator: Kamil Páral <ripper42@gmail.com>\n"
+"Project-Id-Version: gedit-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2009-10-13 19:20+0000\n"
+"PO-Revision-Date: 2009-10-14 12:08+0100\n"
+"Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
 msgid "Bookmarks"
@@ -29,27 +33,27 @@ msgstr "Záložky"
 msgid "Easy document navigation with bookmarks"
 msgstr "Jednoduché procházení dokumentem pomocí záložek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
 msgid "Toggle Bookmark"
 msgstr "Přepnout záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:131
 msgid "Toggle bookmark status of the current line"
 msgstr "Přepnout stav záložky na aktuálním řádku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
 msgid "Goto Next Bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:134
 msgid "Goto the next bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Goto Previous Bookmark"
 msgstr "Přejít na předcházející záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Goto the previous bookmark"
 msgstr "Přejít na předcházející záložku"
 
@@ -129,30 +133,42 @@ msgid "Draw Spaces and Tabs"
 msgstr "Vykreslovat mezery a tabulátory"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw leading spaces"
+msgstr "Vykreslovat úvodní mezery"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw new lines"
 msgstr "Vykreslovat nové řádky"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "Vykreslovat nezlomitelné mezery"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw spaces"
 msgstr "Vykreslovat mezery"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/drawspaces.ui.h:5
+msgid "Draw spaces in text"
+msgstr "Vykreslovat mezery v textu"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:6
 msgid "Draw tabs"
 msgstr "Vykreslovat tabulátory"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
+#: ../plugins/drawspaces/drawspaces.ui.h:7
+msgid "Draw trailing spaces"
+msgstr "Vykreslovat koncové mezery"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:163
 msgid "Show _White Space"
 msgstr "Zobrazovat _bílé znaky"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:151
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:164
 msgid "Show spaces and tabs"
 msgstr "Zobrazovat mezery a tabulátory"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:540
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:626
 msgid "Error dialog"
 msgstr "Chybový dialog"
 
@@ -270,10 +286,11 @@ msgstr "Vložit terminál do spodního panelu."
 msgid "Embedded Terminal"
 msgstr "Vestavěný terminál"
 
-#: ../plugins/terminal/terminal.py:249
+#: ../plugins/terminal/terminal.py:262
 msgid "Terminal"
 msgstr "Terminál"
 
-#: ../plugins/terminal/terminal.py:272
+#: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "Změnit _adresář"
+
