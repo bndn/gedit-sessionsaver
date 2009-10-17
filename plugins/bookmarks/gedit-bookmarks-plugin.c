@@ -253,10 +253,10 @@ enable_bookmarks (GeditView   *view,
 		InsertData *data;
 		GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
 
-		update_background_color (view);		
-		gtk_source_view_set_mark_category_pixbuf (GTK_SOURCE_VIEW (view),
-							  BOOKMARK_CATEGORY,
-							  pixbuf);
+		update_background_color (view);
+		gtk_source_view_set_mark_category_icon_from_pixbuf (GTK_SOURCE_VIEW (view),
+								    BOOKMARK_CATEGORY,
+								    pixbuf);
 		g_object_unref (pixbuf);
 
 		gtk_source_view_set_show_line_marks (GTK_SOURCE_VIEW (view), TRUE);
