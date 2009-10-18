@@ -329,5 +329,5 @@ def gconf_get_int(key, default = 0):
     else:
         return default
 
-
-# ex:ts=4:et: Let's conform to PEP8
+# Let's conform to PEP8
+# ex:ts=4:et:
