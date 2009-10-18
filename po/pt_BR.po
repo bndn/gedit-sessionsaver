@@ -2,7 +2,7 @@
 # Copyright (C) 1999,2004,2006-2007 Free Software Foundation, Inc.
 # Frederic L.W.Meunier <linux@urbi.com.br>, 1999.
 # Evandro Fernandes Giovanini <evandrofg@ig.com.br>, 2004.
-# Og Maciel <ogmaciel@gnome.org>, 2007.
+# Og Maciel <ogmaciel@gnome.org>, 2007, 2009.
 # Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>, 2006-2008.
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
 # Vladimir Melo <vmelo@gnome.org>, 2008.
@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-06 17:16-0500\n"
-"PO-Revision-Date: 2008-11-24 12:15-0300\n"
-"Last-Translator: Vladimir Melo <vmelo@gnome.org>\n"
+"POT-Creation-Date: 2009-10-18 16:06-0400\n"
+"PO-Revision-Date: 2009-10-18 16:12-0500\n"
+"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,27 +28,27 @@ msgstr "Marcadores"
 msgid "Easy document navigation with bookmarks"
 msgstr "Navegação fácil de documentos com marcadores"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:123
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
 msgid "Toggle Bookmark"
 msgstr "Alternar marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:124
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:131
 msgid "Toggle bookmark status of the current line"
 msgstr "Alterna o status do marcador da linha atual"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:126
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
 msgid "Goto Next Bookmark"
 msgstr "Ir ao próximo marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:127
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:134
 msgid "Goto the next bookmark"
 msgstr "Vai ao próximo marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Goto Previous Bookmark"
 msgstr "Ir ao marcador anterior"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Goto the previous bookmark"
 msgstr "Vai ao marcador anterior"
 
@@ -128,30 +128,42 @@ msgid "Draw Spaces and Tabs"
 msgstr "Desenha espaços e tabulações"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw leading spaces"
+msgstr "Desenhar espaços no início"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw new lines"
 msgstr "Desenhar novas linhas"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "Desenhar espaços não-quebráveis"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw spaces"
 msgstr "Desenhar espaços"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/drawspaces.ui.h:5
+msgid "Draw spaces in text"
+msgstr "Desenhar espaços no texto"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:6
 msgid "Draw tabs"
 msgstr "Desenhar tabulações"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:149
+#: ../plugins/drawspaces/drawspaces.ui.h:7
+msgid "Draw trailing spaces"
+msgstr "Desenhar espaços no final"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:163
 msgid "Show _White Space"
 msgstr "Mostrar _espaço em branco"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:164
 msgid "Show spaces and tabs"
 msgstr "Mostra espaços e tabulações"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:526
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:626
 msgid "Error dialog"
 msgstr "Diálogo de erro"
 
@@ -269,13 +281,25 @@ msgstr "Embute um terminal no painel inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal embutido"
 
-#: ../plugins/terminal/terminal.py:238
+#: ../plugins/terminal/terminal.py:262
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:261
+#: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "Al_terar diretório"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+msgid "Document Words"
+msgstr "Palavras do documento"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
+msgid "Word Completion"
+msgstr "Completar palavras"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr "Completar palavras usando o framework de completar"
 
 #~ msgid "Drawing color:"
 #~ msgstr "Cor do desenho:"
