@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.master.gu\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit-plugins&component=general\n"
-"POT-Creation-Date: 2009-04-17 14:22+0000\n"
-"PO-Revision-Date: 2009-04-27 16:44+0530\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2009-10-18 20:14+0000\n"
+"PO-Revision-Date: 2009-10-20 14:30+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
 "MIME-Version: 1.0\n"
@@ -27,27 +27,27 @@ msgstr "બુકમાર્કો"
 msgid "Easy document navigation with bookmarks"
 msgstr "બુકમાર્કો સાથે સરળ દસ્તાવેજ શોધનાર"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
 msgid "Toggle Bookmark"
 msgstr "ટોગલ બુકમાર્ક"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:131
 msgid "Toggle bookmark status of the current line"
 msgstr "હાલનાં વાક્ય પર ટોગલ બુકમાર્ક સ્થિતિ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
 msgid "Goto Next Bookmark"
 msgstr "પછીનાં બુકમાર્ક પર જાઓ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:134
 msgid "Goto the next bookmark"
 msgstr "પછીનાં બુકમાર્ક પર જાઓ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Goto Previous Bookmark"
 msgstr "પહેલાનાં બુકમાર્ક પર જાઓ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Goto the previous bookmark"
 msgstr "પહેલાનાં બુકમાર્ક પર જાઓ"
 
@@ -114,7 +114,6 @@ msgid "Pick Color"
 msgstr "રંગને પસંદ કરો"
 
 #: ../plugins/colorpicker/colorpicker.py:226
-#| msgid "_Insert char"
 msgid "_Insert"
 msgstr "દાખલ કરો (_I)"
 
@@ -128,30 +127,45 @@ msgid "Draw Spaces and Tabs"
 msgstr "જગ્યાઓ અને ટેબોને દોરો"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:1
+#| msgid "Draw non-breaking spaces"
+msgid "Draw leading spaces"
+msgstr "મુખ્ય જગ્યાઓને દોરો"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw new lines"
 msgstr "નવી લીટીઓને દોરો"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "બ્રેક ન થાય તેવી જગ્યાઓને દોરો"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw spaces"
 msgstr "જગ્યાઓને દોરો"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/drawspaces.ui.h:5
+#| msgid "Draw spaces"
+msgid "Draw spaces in text"
+msgstr "લખાણમાં જગ્યાઓને દોરો"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:6
 msgid "Draw tabs"
 msgstr "ટેબોને દોરો"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:151
+#: ../plugins/drawspaces/drawspaces.ui.h:7
+#| msgid "Draw non-breaking spaces"
+msgid "Draw trailing spaces"
+msgstr "ટ્રેલિંગ જગ્યાઓને દોરો"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:163
 msgid "Show _White Space"
 msgstr "સફેદ જગ્યાને બતાવો (_W)"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:152
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:164
 msgid "Show spaces and tabs"
 msgstr "જગ્યાઓ અને ટેબોને બતાવો"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:542
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:626
 msgid "Error dialog"
 msgstr "ભૂલ સંવાદ"
 
@@ -269,11 +283,24 @@ msgstr "નીચેના તકતીમાં ટર્મિનલને એ
 msgid "Embedded Terminal"
 msgstr "એમ્બેડ થયેલ ટર્મિનલ"
 
-#: ../plugins/terminal/terminal.py:249
+#: ../plugins/terminal/terminal.py:262
 msgid "Terminal"
 msgstr "ટર્મિનલ"
 
-#: ../plugins/terminal/terminal.py:272
+#: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "ડિરેક્ટરીને બદલો (_h)"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+msgid "Document Words"
+msgstr "દસ્તાવેજ શબ્દો"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
+#| msgid "Bracket Completion"
+msgid "Word Completion"
+msgstr "શબ્દ સમાપ્તિ"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr "શબ્દ સમાપ્તિ એ ફ્રેમવર્ક સમાપ્તિ ને વાપરી રહી છે"
 
