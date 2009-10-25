@@ -452,7 +452,7 @@ Configuration:
 	
 	Disabled plugins:       $disabled_plugins
 
-Note: you have to install these plugins into the same prefix than your gedit
+Note: you have to install these plugins into the same prefix as your gedit
 installation (probably /usr if you're using your distro packages, /usr/local
 if you have compiled it on your own).
 "
