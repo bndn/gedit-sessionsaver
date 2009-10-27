@@ -1,14 +1,14 @@
-# translation of gedit-plugins.HEAD.po to Telugu
+# translation of gedit-plugins.master.te.po to Telugu
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Krishna Babu K <kkrothap@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit-plugins&component=general\n"
-"POT-Creation-Date: 2009-03-16 11:43+0000\n"
-"PO-Revision-Date: 2009-03-25 11:24+0530\n"
+"Project-Id-Version: gedit-plugins.master.te\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2009-10-18 20:14+0000\n"
+"PO-Revision-Date: 2009-10-26 19:44+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"\n"
 "\n"
 "\n"
 
@@ -27,27 +28,27 @@ msgstr "బుక్‌మార్కులు"
 msgid "Easy document navigation with bookmarks"
 msgstr "బుక్‌మార్కులతో సులభతర పత్ర విహారము"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
 msgid "Toggle Bookmark"
 msgstr "బుక్‌మార్కును మార్చుము"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:131
 msgid "Toggle bookmark status of the current line"
 msgstr "ప్రస్తుత పంక్తియొక్క బుక్‌మార్కు స్థితిని మార్చుము"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
 msgid "Goto Next Bookmark"
 msgstr "తరువాతి బుక్‌మార్కునకు వెళ్ళుము"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:134
 msgid "Goto the next bookmark"
 msgstr "తరువాతి బుక్‌మార్కునకు వెళ్ళుము"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Goto Previous Bookmark"
 msgstr "మునుపటి బుక్‌మార్కునకు వెళ్ళుము"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Goto the previous bookmark"
 msgstr "మునుపటి బుక్‌మార్కునకు వెళ్ళుము"
 
@@ -127,30 +128,45 @@ msgid "Draw Spaces and Tabs"
 msgstr "ఖాళీలను మరియు టాబులను గీయుము"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:1
+#| msgid "Draw non-breaking spaces"
+msgid "Draw leading spaces"
+msgstr "లీడింగ్ి ఖాళీలను గీయుము"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw new lines"
 msgstr "కొత్త పంక్తి గీయుము"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "విరిగి-పోని ఖాళీలను గీయుము"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw spaces"
 msgstr "ఖాళీలను గీయుము"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/drawspaces.ui.h:5
+#| msgid "Draw spaces"
+msgid "Draw spaces in text"
+msgstr "పాఠ్యమునందు ఖాళీలను గీయుము"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:6
 msgid "Draw tabs"
 msgstr "టాబ్‌లను గీయుము"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:149
+#: ../plugins/drawspaces/drawspaces.ui.h:7
+#| msgid "Draw non-breaking spaces"
+msgid "Draw trailing spaces"
+msgstr "ట్రెయిలింగ్ ఖాళీలను గీయుము"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:163
 msgid "Show _White Space"
 msgstr "తెల్లని ఖాళీలను చూపుము (_W)"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:164
 msgid "Show spaces and tabs"
 msgstr "ఖాళీలను మరియు టాబులను చూపుము"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:526
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:626
 msgid "Error dialog"
 msgstr "దోషపు డైలాగ్"
 
@@ -268,11 +284,24 @@ msgstr "టెర్మినల్‌ను క్రింది తలము�
 msgid "Embedded Terminal"
 msgstr "ఇరికించివుంచిన టెర్మినల్"
 
-#: ../plugins/terminal/terminal.py:249
+#: ../plugins/terminal/terminal.py:262
 msgid "Terminal"
 msgstr "టెర్మినల్"
 
-#: ../plugins/terminal/terminal.py:272
+#: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "డైరెక్టరీను మార్చుము (_h)"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+msgid "Document Words"
+msgstr "పత్రము పదాలు"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
+#| msgid "Bracket Completion"
+msgid "Word Completion"
+msgstr "పద ముగింపు"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr "పూర్తిచేయు ఫ్రేమ్‌వర్కు వుపయోగించి పద సంపూరణము"
 
