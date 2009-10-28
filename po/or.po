@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.master.or\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit-plugins&component=general\n"
-"POT-Creation-Date: 2009-04-17 14:22+0000\n"
-"PO-Revision-Date: 2009-06-29 17:03+0530\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2009-10-18 20:14+0000\n"
+"PO-Revision-Date: 2009-10-28 13:03+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"\n"
+"\n"
 "\n"
 
 #: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
@@ -28,27 +30,27 @@ msgstr "ଚିହ୍ନିତ ସ୍ଥାନଗୁଡ଼ିକ"
 msgid "Easy document navigation with bookmarks"
 msgstr "ଚିହ୍ନିତ ସ୍ଥାନଗୁଡ଼ିକ ସହିତ ସହଜ ଦଲିଲ ସଞ୍ଚାରକ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
 msgid "Toggle Bookmark"
 msgstr "ଚିହ୍ନିତ ସ୍ଥାନଗୁଡ଼ିକୁ ଆଗପଛକରନ୍ତୁ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:131
 msgid "Toggle bookmark status of the current line"
 msgstr "ପ୍ରଚଳିତ ଧାଡ଼ିର ଚିହ୍ନିତ ସ୍ଥାନକୁ ଆଗପଛ କରନ୍ତୁ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
 msgid "Goto Next Bookmark"
 msgstr "ପରବର୍ତ୍ତି ଚିହ୍ନିତ ସ୍ଥାନକୁ ଯାଆନ୍ତୁ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:134
 msgid "Goto the next bookmark"
 msgstr "ପରବର୍ତ୍ତି ଚିହ୍ନିତ ସ୍ଥାନକୁ ଯାଆନ୍ତୁ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Goto Previous Bookmark"
 msgstr "ପୂର୍ବବର୍ତ୍ତି ଚିହ୍ନିତ ସ୍ଥାନକୁ ଯାଆନ୍ତୁ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Goto the previous bookmark"
 msgstr "ପୂର୍ବବର୍ତ୍ତି ଚିହ୍ନିତ ସ୍ଥାନକୁ ଯାଆନ୍ତୁ"
 
@@ -115,7 +117,6 @@ msgid "Pick Color"
 msgstr "ରଙ୍ଗ ଗୋଟାନ୍ତୁ"
 
 #: ../plugins/colorpicker/colorpicker.py:226
-#| msgid "_Insert char"
 msgid "_Insert"
 msgstr "ଭର୍ତ୍ତି କରନ୍ତୁ (_I)"
 
@@ -129,30 +130,45 @@ msgid "Draw Spaces and Tabs"
 msgstr "ଖାଲିସ୍ଥାନ ଏବଂ ଟ୍ୟାବ ଆଙ୍କନ୍ତୁ"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:1
+#| msgid "Draw non-breaking spaces"
+msgid "Draw leading spaces"
+msgstr "ଅଗ୍ରୀଣ ଖାଲିସ୍ଥାନଗୁଡ଼ିକୁ ଆଙ୍କନ୍ତୁ"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw new lines"
 msgstr "ନୂତନ ଧାଡ଼ିଗୁଡ଼ିକୁ ଆଙ୍କନ୍ତୁ"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "ଅଭଙ୍ଗା ଖାଲିସ୍ଥାନଗୁଡ଼ିକୁ ଆଙ୍କନ୍ତୁ"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw spaces"
 msgstr "ଖାଲିସ୍ଥାନଗୁଡ଼ିକୁ ଆଙ୍କନ୍ତୁ"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/drawspaces.ui.h:5
+#| msgid "Draw spaces"
+msgid "Draw spaces in text"
+msgstr "ପାଠ୍ୟରେ ଖାଲିସ୍ଥାନଗୁଡ଼ିକୁ ଆଙ୍କନ୍ତୁ"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:6
 msgid "Draw tabs"
 msgstr "ଟ୍ୟାବଗୁଡ଼ିକୁ ଆଙ୍କନ୍ତୁ"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:151
+#: ../plugins/drawspaces/drawspaces.ui.h:7
+#| msgid "Draw non-breaking spaces"
+msgid "Draw trailing spaces"
+msgstr "ପଛୁଆ ଖାଲିସ୍ଥାନଗୁଡ଼ିକୁ ଆଙ୍କନ୍ତୁ"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:163
 msgid "Show _White Space"
 msgstr "ଧଳା ଖାଲିସ୍ଥାନ ଦର୍ଶାନ୍ତୁ (_W)"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:152
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:164
 msgid "Show spaces and tabs"
 msgstr "ଖାଲିସ୍ଥାନ ଏବଂ ଟ୍ୟାବଗୁଡ଼ିକୁ ଦର୍ଶାନ୍ତୁ"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:542
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:626
 msgid "Error dialog"
 msgstr "ତ୍ରୁଟି ସଂଳାପ"
 
@@ -270,11 +286,24 @@ msgstr "ତଳ ସ୍ଥାନରେ ଗୋଟିଏ ଟର୍ମିନାଲ �
 msgid "Embedded Terminal"
 msgstr "ସଂଲଗ୍ନ ଟର୍ମିନାଲ"
 
-#: ../plugins/terminal/terminal.py:249
+#: ../plugins/terminal/terminal.py:262
 msgid "Terminal"
 msgstr "ଟର୍ମିନାଲ"
 
-#: ../plugins/terminal/terminal.py:272
+#: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "ଡିରେକ୍ଟୋରୀ ପରିବର୍ତ୍ତନ କରନ୍ତୁ (_h)"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+msgid "Document Words"
+msgstr "ଦଲିଲ ଶବ୍ଦଗୁଡ଼ିକ"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
+#| msgid "Bracket Completion"
+msgid "Word Completion"
+msgstr "ଶବ୍ଦ ପୂର୍ଣ୍ଣତା"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr "ସମ୍ପୂର୍ଣ୍ଣ ଫ୍ରେମୱର୍କ ବ୍ୟବହାର କରି ଶବ୍ଦ ସମ୍ପୂର୍ଣ୍ଣତା"
 
