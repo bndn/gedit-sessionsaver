@@ -172,13 +172,20 @@ impl_deactivate	(GeditPlugin *plugin,
 	GeditWordCompletionPlugin *ds_plugin = GEDIT_WORD_COMPLETION_PLUGIN (plugin);
 	GtkUIManager *manager;
 	WindowData *data;
+	GList *views, *l;
 
 	gedit_debug (DEBUG_PLUGINS);
 	
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
-	
+
+	views = gedit_window_get_views (window);
+	for (l = views; l != NULL; l = g_list_next (l))
+	{
+		remove_view (data, GTK_SOURCE_VIEW (l->data));
+	}
+
 	g_signal_handler_disconnect (window, data->tab_added_id);
 	g_signal_handler_disconnect (window, data->tab_removed_id);
 	
