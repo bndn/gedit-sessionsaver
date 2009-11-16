@@ -4,7 +4,7 @@ AC_PREREQ(2.59)
  
 m4_define(gedit_plugins_major_version,  2)
 m4_define(gedit_plugins_minor_version, 29)
-m4_define(gedit_plugins_micro_version,  1)
+m4_define(gedit_plugins_micro_version,  2)
 m4_define(gedit_plugins_version, gedit_plugins_major_version.gedit_plugins_minor_version.gedit_plugins_micro_version)
 
 AC_INIT(gedit-plugins, gedit_plugins_version, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
