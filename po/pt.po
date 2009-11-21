@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.26\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-22 19:59+0000\n"
-"PO-Revision-Date: 2009-01-20 22:46-0100\n"
+"POT-Creation-Date: 2009-11-21 23:46+0000\n"
+"PO-Revision-Date: 2009-11-21 00:51-0100\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
 "Language-Team: Portuguese pt <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -23,27 +23,27 @@ msgstr "Marcadores"
 msgid "Easy document navigation with bookmarks"
 msgstr "Navegar por documentos facilmente com marcadores"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
 msgid "Toggle Bookmark"
 msgstr "Alternar Marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:131
 msgid "Toggle bookmark status of the current line"
 msgstr "Alternar estado do marcador da linha actual"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
 msgid "Goto Next Bookmark"
 msgstr "Ir Para Próximo Marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:134
 msgid "Goto the next bookmark"
 msgstr "Ir para o próximo marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Goto Previous Bookmark"
 msgstr "Ir Para Marcador Anterior"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Goto the previous bookmark"
 msgstr "Ir para o marcador anterior"
 
@@ -113,42 +113,54 @@ msgstr "Escolher Cor"
 
 #: ../plugins/colorpicker/colorpicker.py:226
 msgid "_Insert"
-msgstr "_Inserir caracter"
+msgstr "_Inserir"
 
 #. ex:ts=4:et:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Draw Spaces"
-msgstr "Inserir Espaços"
+msgstr "Mostrar Espaços"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
-msgstr "Inserir Espaços e Tabuladores"
+msgstr "Mostrar Espaços e Tabuladores"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw leading spaces"
+msgstr "Mostrar espaços iniciais"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw new lines"
 msgstr "Desenhar novas linhas"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
-msgid "Draw non-breaking spaces"
-msgstr "Inserir espaços inquebráveis"
-
 #: ../plugins/drawspaces/drawspaces.ui.h:3
-msgid "Draw spaces"
-msgstr "Inserir espaços"
+msgid "Draw non-breaking spaces"
+msgstr "Mostrar espaços inquebráveis"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:4
-msgid "Draw tabs"
-msgstr "Inserir tabuladores"
+msgid "Draw spaces"
+msgstr "Mostrar espaços"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:149
+#: ../plugins/drawspaces/drawspaces.ui.h:5
+msgid "Draw spaces in text"
+msgstr "Mostrar espaços no texto"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:6
+msgid "Draw tabs"
+msgstr "Mostrar tabuladores"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:7
+msgid "Draw trailing spaces"
+msgstr "Mostrar espaços finais"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:163
 msgid "Show _White Space"
 msgstr "Apresentar Espaço em _Branco"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:164
 msgid "Show spaces and tabs"
 msgstr "Apresentar espaços e tabuladores"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:526
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:626
 msgid "Error dialog"
 msgstr "Diálogo de erro"
 
@@ -175,6 +187,56 @@ msgstr "_Quebrar Linhas"
 #: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Quebrar as linhas seleccionadas"
+
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr "Editar documento em vários locais simultâneamente"
+
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr "Multi Edição"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:279
+msgid "Added edit point..."
+msgstr "Ponto de adição adicionado..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:417
+msgid "Column Mode..."
+msgstr "Modo de Coluna..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:535
+msgid "Removed edit point..."
+msgstr "Ponto de edição removido..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:685
+msgid "Cancelled column mode..."
+msgstr "Ponto de coluna cancelado..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:804
+msgid "Enter column edit mode using selection"
+msgstr "Entrar no modo de edição de coluna utilizando a selecção"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:805
+msgid "Toggle edit point"
+msgstr "Alternar ponto de edição"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:806
+msgid "Add edit point at beginning of line/selection"
+msgstr "Adicionar ponto de edição no início da linha/selecção"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:807
+msgid "Add edit point at end of line/selection"
+msgstr "Adicionar ponto de edição no final da linha/selecção"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:843
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Multi Edit Mode"
+msgstr "Modo de Edição Múltipla"
+
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Start multi edit mode"
+msgstr "Iniciar modo de edição múltipla"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
 msgid "Tab_bar"
@@ -267,13 +329,25 @@ msgstr "Embutir uma consola no painel inferior."
 msgid "Embedded Terminal"
 msgstr "Consola Embutida"
 
-#: ../plugins/terminal/terminal.py:249
+#: ../plugins/terminal/terminal.py:262
 msgid "Terminal"
 msgstr "Consola"
 
-#: ../plugins/terminal/terminal.py:272
+#: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "A_lterar Directório"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+msgid "Document Words"
+msgstr "Palavras do Documento"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
+msgid "Word Completion"
+msgstr "Conclusão de Palavras"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr "Conclusão de palavras utilizando a ferramenta de conclusão"
 
 #~ msgid "Drawing color:"
 #~ msgstr "Cor da linha:"
