@@ -368,7 +368,8 @@ load_bookmark_query_info_cb (GFile        *source,
 
 	if (info == NULL)
 	{
-		g_warning ("%s", error->message);
+		if (error->code != G_FILE_ERROR_ISDIR)
+			g_warning ("%s", error->message);
 		g_error_free (error);
 		return;
 	}
@@ -480,7 +481,8 @@ save_bookmarks_query_info_cb (GFile        *source,
 
 	if (info == NULL)
 	{
-		g_warning ("%s", error->message);
+		if (error->code != G_FILE_ERROR_ISDIR)
+			g_warning ("%s", error->message);
 		g_error_free (error);
 		return;
 	}
