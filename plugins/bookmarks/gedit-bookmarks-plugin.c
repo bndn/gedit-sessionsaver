@@ -353,73 +353,25 @@ load_bookmarks (GeditView *view,
 }
 
 static void
-load_bookmark_query_info_cb (GFile        *source,
-			     GAsyncResult *res,
-			     GeditView    *view)
-{
-	GFileInfo *info;
-	GError *error = NULL;
-	const gchar *bookmarks_attr;
-	gchar **bookmarks;
-
-	info = g_file_query_info_finish (source,
-					 res,
-					 &error);
-
-	if (info == NULL)
-	{
-		if (error->code != G_FILE_ERROR_ISDIR)
-			g_warning ("%s", error->message);
-		g_error_free (error);
-		return;
-	}
-	
-	if (g_file_info_has_attribute (info, METADATA_ATTR))
-	{
-		bookmarks_attr = g_file_info_get_attribute_string (info,
-								   METADATA_ATTR);
-
-		if (bookmarks_attr != NULL)
-		{
-			bookmarks = g_strsplit (bookmarks_attr, ",", -1);
-			load_bookmarks (view, bookmarks);
-		
-			g_strfreev (bookmarks);
-		}
-	}
-	
-	g_object_unref (info);
-}
-
-static void
-query_info (GeditView *view,
-	    GAsyncReadyCallback callback,
-	    gpointer data)
-{
-	GeditDocument *doc;
-	GFile *location;
-	
-	doc = GEDIT_DOCUMENT (gtk_text_view_get_buffer (GTK_TEXT_VIEW (view)));
-	location = gedit_document_get_location (doc);
-	
-	if (location != NULL)
-	{
-		g_file_query_info_async (location,
-					 METADATA_ATTR,
-					 G_FILE_QUERY_INFO_NONE,
-					 G_PRIORITY_DEFAULT,
-					 NULL,
-					 (GAsyncReadyCallback) callback,
-					 data);
-		g_object_unref (location);
-	}
-}
-
-static void
 load_bookmark_metadata (GeditView *view)
 {
-	query_info (view, (GAsyncReadyCallback) load_bookmark_query_info_cb,
-		    view);
+	GeditDocument *doc;
+	gchar *bookmarks_attr;
+
+	doc = GEDIT_DOCUMENT (gtk_text_view_get_buffer (GTK_TEXT_VIEW (view)));
+	bookmarks_attr = gedit_document_get_metadata (doc, METADATA_ATTR);
+
+	if (bookmarks_attr != NULL)
+	{
+		gchar **bookmarks;
+	
+		bookmarks = g_strsplit (bookmarks_attr, ",", -1);
+		g_free (bookmarks_attr);
+
+		load_bookmarks (view, bookmarks);
+
+		g_strfreev (bookmarks);
+	}
 }
 
 static void
@@ -457,61 +409,6 @@ impl_activate (GeditPlugin *plugin,
 }
 
 static void
-set_attributes_cb (GObject      *source,
-		   GAsyncResult *res,
-		   gpointer      useless)
-{
-	g_file_set_attributes_finish (G_FILE (source),
-				      res,
-				      NULL,
-				      NULL);
-}
-
-static void
-save_bookmarks_query_info_cb (GFile        *source,
-			      GAsyncResult *res,
-			      gchar        *val)
-{
-	GFileInfo *info;
-	GError *error = NULL;
-
-	info = g_file_query_info_finish (source,
-					 res,
-					 &error);
-
-	if (info == NULL)
-	{
-		if (error->code != G_FILE_ERROR_ISDIR)
-			g_warning ("%s", error->message);
-		g_error_free (error);
-		return;
-	}
-
-	if (val != NULL)
-	{
-		g_file_info_set_attribute_string (info, METADATA_ATTR, val);
-		g_free (val);
-	}
-	else
-	{
-		/* Unset the key */
-		g_file_info_set_attribute (info, METADATA_ATTR,
-					   G_FILE_ATTRIBUTE_TYPE_INVALID,
-					   NULL);
-	}
-
-	g_file_set_attributes_async (source,
-				     info,
-				     G_FILE_QUERY_INFO_NONE,
-				     G_PRIORITY_DEFAULT,
-				     NULL,
-				     set_attributes_cb,
-				     NULL);
-
-	g_object_unref (info);
-}
-
-static void
 save_bookmark_metadata (GeditView *view)
 {
 	GtkTextIter iter;
@@ -544,11 +441,19 @@ save_bookmark_metadata (GeditView *view)
 			first = FALSE;
 		}
 	}
+
+	if (string->len == 0)
+	{
+		val = g_string_free (string, TRUE);
+		val = NULL;
+	}
+	else
+		val = g_string_free (string, FALSE);
 	
-	val = g_string_free (string, FALSE);
-	
-	query_info (view, (GAsyncReadyCallback) save_bookmarks_query_info_cb,
-		    val);
+	gedit_document_set_metadata (GEDIT_DOCUMENT (buf), METADATA_ATTR,
+				     val, NULL);
+
+	g_free (val);
 }
 
 static void
