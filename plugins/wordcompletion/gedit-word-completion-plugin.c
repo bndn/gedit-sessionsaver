@@ -169,8 +169,6 @@ static void
 impl_deactivate	(GeditPlugin *plugin,
 		 GeditWindow *window)
 {
-	GeditWordCompletionPlugin *ds_plugin = GEDIT_WORD_COMPLETION_PLUGIN (plugin);
-	GtkUIManager *manager;
 	WindowData *data;
 	GList *views, *l;
 
