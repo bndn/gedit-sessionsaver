@@ -27,9 +27,25 @@ plugin_in_files = drawspaces.gedit-plugin.desktop.in
 
 plugin_DATA = $(plugin_in_files:.gedit-plugin.desktop.in=.gedit-plugin)
 
-EXTRA_DIST = $(plugin_in_files) $(ui_DATA)
+schemasdir	 = $(GCONF_SCHEMA_FILE_DIR)
+schemas_in_files = gedit-drawspaces.schemas.in
+schemas_DATA 	 = $(schemas_in_files:.schemas.in=.schemas)
+@INTLTOOL_SCHEMAS_RULE@
 
-CLEANFILES = $(plugin_DATA)
-DISTCLEANFILES = $(plugin_DATA)
+if GCONF_SCHEMAS_INSTALL
+install-data-local:
+	        if test -z "$(DESTDIR)" ; then \
+	                for p in $(schemas_DATA) ; do \
+	                        GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/plugins/drawspaces/$$p ; \
+	                done \
+	        fi
+else
+install-data-local:
+endif
+
+EXTRA_DIST = $(plugin_in_files) $(ui_DATA) $(schemas_in_files)
+
+CLEANFILES = $(plugin_DATA) $(schemas_DATA)
+DISTCLEANFILES = $(plugin_DATA) $(schemas_DATA)
 
 -include $(top_srcdir)/git.mk

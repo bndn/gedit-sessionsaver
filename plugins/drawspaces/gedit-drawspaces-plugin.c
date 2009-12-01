@@ -125,17 +125,21 @@ free_action_data (gpointer data)
 }
 
 static void
-set_enable_draw (GeditDrawspacesPlugin *plugin,
-		 gboolean value)
+set_draw_gconf (GeditDrawspacesPlugin *plugin,
+                gchar const           *key,
+                gboolean               value)
 {
-	if (gconf_client_key_is_writable (plugin->priv->gconf_client,
-					   GCONF_KEY_ENABLE,
-					   NULL))
+	GError *error = NULL;
+	
+	gconf_client_set_bool (plugin->priv->gconf_client,
+			       key,
+			       value,
+			       &error);
+
+	if (error != NULL)
 	{
-		gconf_client_set_bool (plugin->priv->gconf_client,
-				       GCONF_KEY_ENABLE,
-				       value,
-				       NULL);
+		g_warning ("%s", error->message);
+		g_error_free (error);
 	}
 }
 
@@ -153,7 +157,7 @@ on_active_toggled (GtkToggleAction *action,
 	value = gtk_toggle_action_get_active (action);
 	data->enable = value;
 
-	set_enable_draw (action_data->plugin, value);
+	set_draw_gconf (action_data->plugin, GCONF_KEY_ENABLE, value);
 
 	draw_spaces_in_window (action_data->window, action_data->plugin);
 }
@@ -493,24 +497,6 @@ impl_deactivate	(GeditPlugin *plugin,
 }
 
 static void
-set_draw_gconf (GeditDrawspacesPlugin *plugin,
-                gchar const           *key,
-                gboolean               value)
-{
-	if (!gconf_client_key_is_writable (plugin->priv->gconf_client,
-					   key,
-					   NULL))
-	{
-		return;
-	}
-	
-	gconf_client_set_bool (plugin->priv->gconf_client,
-			       key,
-			       value,
-			       NULL);
-}
-
-static void
 on_draw_tabs_toggled (GtkToggleButton       *button,
                       GeditDrawspacesPlugin *plugin)
 {
@@ -807,5 +793,5 @@ gedit_drawspaces_plugin_class_init (GeditDrawspacesPluginClass *klass)
 
 	plugin_class->activate = impl_activate;
 	plugin_class->deactivate = impl_deactivate;
-	plugin_class->create_configure_dialog = impl_create_configure_dialog;	
+	plugin_class->create_configure_dialog = impl_create_configure_dialog;
 }
