@@ -156,7 +156,7 @@ def do_comment(document, unindent=False):
     if selection != ():
         (start, end) = selection
         if start.ends_line():
-            start.forward_char()
+            start.forward_line()
         elif not start.starts_line():
             start.set_line_offset(0)
         if end.starts_line():
