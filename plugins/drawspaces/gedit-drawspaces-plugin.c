@@ -126,7 +126,7 @@ free_action_data (gpointer data)
 
 static void
 set_draw_gconf (GeditDrawspacesPlugin *plugin,
-                gchar const           *key,
+                const gchar           *key,
                 gboolean               value)
 {
 	GError *error = NULL;
