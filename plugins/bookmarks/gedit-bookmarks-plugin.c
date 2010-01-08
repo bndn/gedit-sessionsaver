@@ -50,8 +50,14 @@
 
 typedef struct
 {
-	gint previous_line;
-	gboolean new_user_action;
+	GtkSourceMark *bookmark;
+	GtkTextMark *mark;
+} InsertTracker;
+
+typedef struct
+{
+	GSList *trackers;
+	guint user_action;
 } InsertData;
 
 static void update_background_color		(GeditView   *view);
@@ -65,12 +71,6 @@ static void on_delete_range			(GtkTextBuffer *buffer,
 						 gpointer       user_data);
 
 static void on_insert_text_before		(GtkTextBuffer *buffer,
-						 GtkTextIter   *location,
-						 gchar         *text,
-						 gint		len,
-						 InsertData    *data);
-
-static void on_insert_text_after		(GtkTextBuffer *buffer,
 						 GtkTextIter   *location,
 						 gchar         *text,
 						 gint		len,
@@ -222,7 +222,6 @@ disable_bookmarks (GeditView *view)
 	data = g_object_get_data (G_OBJECT (buffer), INSERT_DATA_KEY);
 
 	g_signal_handlers_disconnect_by_func (buffer, on_insert_text_before, data);
-	g_signal_handlers_disconnect_by_func (buffer, on_insert_text_after, data);
 	g_signal_handlers_disconnect_by_func (buffer, on_begin_user_action, data);
 	g_signal_handlers_disconnect_by_func (buffer, on_end_user_action, data);
 	
@@ -278,9 +277,7 @@ enable_bookmarks (GeditView   *view,
 				        G_CALLBACK (on_delete_range),
 				        NULL);
 				        
-		data = g_slice_new (InsertData);
-		data->new_user_action = FALSE;
-		data->previous_line = -1;
+		data = g_slice_new0 (InsertData);
 		
 		g_object_set_data_full (G_OBJECT (buffer), 
 					INSERT_DATA_KEY, 
@@ -291,16 +288,12 @@ enable_bookmarks (GeditView   *view,
 				  "insert-text",
 				  G_CALLBACK (on_insert_text_before),
 				  data);
-				  
-		g_signal_connect_after (buffer,
-				        "insert-text",
-				        G_CALLBACK (on_insert_text_after),
-				        data);
-				        
+
 		g_signal_connect (buffer,
 				  "begin-user-action",
 				  G_CALLBACK (on_begin_user_action),
 				  data);
+
 		g_signal_connect (buffer,
 				  "end-user-action",
 				  G_CALLBACK (on_end_user_action),
@@ -857,14 +850,79 @@ static void
 on_begin_user_action (GtkTextBuffer *buffer,
 		      InsertData    *data)
 {
-	data->new_user_action = TRUE;
+	++data->user_action;
 }
 
 static void
 on_end_user_action (GtkTextBuffer *buffer,
 		    InsertData    *data)
 {
-	data->previous_line = -1;
+	GSList *item;
+
+	if (--data->user_action > 0)
+	{
+		return;
+	}
+
+	/* Remove trackers */
+	for (item = data->trackers; item; item = g_slist_next (item))
+	{
+		InsertTracker *tracker = item->data;
+		GtkTextIter curloc;
+		GtkTextIter newloc;
+
+		/* Move the category to the line where the mark now is */
+		gtk_text_buffer_get_iter_at_mark (buffer,
+		                                  &curloc,
+		                                  GTK_TEXT_MARK (tracker->bookmark));
+
+		gtk_text_buffer_get_iter_at_mark (buffer,
+		                                  &newloc,
+		                                  tracker->mark);
+
+		if (gtk_text_iter_get_line (&curloc) != gtk_text_iter_get_line (&newloc))
+		{
+			gtk_text_iter_set_line_offset (&newloc, 0);
+			gtk_text_buffer_move_mark (buffer,
+			                           GTK_TEXT_MARK (tracker->bookmark),
+			                           &newloc);
+		}
+
+		gtk_text_buffer_delete_mark (buffer, tracker->mark);
+		g_slice_free (InsertTracker, tracker);
+	}
+
+	g_slist_free (data->trackers);
+	data->trackers = NULL;
+}
+
+static void
+add_tracker (GtkTextBuffer *buffer,
+             GtkTextIter   *iter,
+             GtkSourceMark *bookmark,
+             InsertData    *data)
+{
+	GSList *item;
+	InsertTracker *tracker;
+
+	for (item = data->trackers; item; item = g_slist_next (item))
+	{
+		tracker = item->data;
+
+		if (tracker->bookmark == bookmark)
+		{
+			return;
+		}
+	}
+
+	tracker = g_slice_new (InsertTracker);
+	tracker->bookmark = bookmark;
+	tracker->mark = gtk_text_buffer_create_mark (buffer,
+	                                             NULL,
+	                                             iter,
+	                                             FALSE);
+
+	data->trackers = g_slist_prepend (data->trackers, tracker);
 }
 
 static void 
@@ -874,62 +932,18 @@ on_insert_text_before (GtkTextBuffer *buffer,
 		       gint	      len,
 		       InsertData    *data)
 {
-	if (data->new_user_action && !gtk_text_iter_starts_line (location))
-	{
-		data->previous_line = -1;
-	}
-	else if (data->new_user_action)
+	if (gtk_text_iter_starts_line (location))
 	{
 		GSList *marks;
 		marks = gtk_source_buffer_get_source_marks_at_iter (GTK_SOURCE_BUFFER (buffer),
-							    	    location,
-							    	    BOOKMARK_CATEGORY);
+		                                                    location,
+		                                                    BOOKMARK_CATEGORY);
 
-		if (marks == NULL)
+		if (marks != NULL)
 		{
-			data->previous_line = -1;
-		}
-		else
-		{
-			data->previous_line = gtk_text_iter_get_line (location);
+			add_tracker (buffer, location, marks->data, data);
 			g_slist_free (marks);
 		}
-		
-		data->new_user_action = FALSE;
-	}
-}
-
-static void 
-on_insert_text_after (GtkTextBuffer *buffer,
-		      GtkTextIter   *location,
-		      gchar         *text,
-		      gint	     len,
-		      InsertData    *data)
-{
-	gint current;
-	
-	if (data->previous_line == -1)
-		return;
-	
-	current = gtk_text_iter_get_line (location);
-
-	if (current != data->previous_line)
-	{
-		GtkTextIter iter = *location;
-		GSList *marks;
-		GSList *item;
-		
-		gtk_text_iter_set_line_offset (&iter, 0);
-		
-		marks = gtk_source_buffer_get_source_marks_at_line (GTK_SOURCE_BUFFER (buffer),
-								    data->previous_line,
-								    BOOKMARK_CATEGORY);
-
-		for (item = marks; item; item = item->next)
-			gtk_text_buffer_move_mark (buffer, GTK_TEXT_MARK (item->data), &iter);
-
-		g_slist_free (marks);
-		data->previous_line = current;
 	}
 }
 
