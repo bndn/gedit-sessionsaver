@@ -89,9 +89,9 @@ ALL_PLUGINS="bookmarks showtabbar charmap drawspaces wordcompletion"
 USEFUL_PLUGINS="bookmarks showtabbar charmap drawspaces wordcompletion"
 DEFAULT_PLUGINS="bookmarks showtabbar charmap drawspaces wordcompletion"
 
-PYTHON_ALL_PLUGINS="bracketcompletion codecomment colorpicker joinlines multiedit sessionsaver smartspaces terminal"
-PYTHON_USEFUL_PLUGINS="bracketcompletion codecomment colorpicker joinlines multiedit sessionsaver smartspaces terminal"
-PYTHON_DEFAULT_PLUGINS="bracketcompletion codecomment colorpicker joinlines multiedit sessionsaver smartspaces terminal"
+PYTHON_ALL_PLUGINS="bracketcompletion codecomment colorpicker commander joinlines multiedit sessionsaver smartspaces terminal"
+PYTHON_USEFUL_PLUGINS="bracketcompletion codecomment colorpicker commander joinlines multiedit sessionsaver smartspaces terminal"
+PYTHON_DEFAULT_PLUGINS="bracketcompletion codecomment colorpicker commander joinlines multiedit sessionsaver smartspaces terminal"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
@@ -423,6 +423,12 @@ plugins/codecomment/Makefile
 plugins/codecomment/codecomment.gedit-plugin.desktop.in
 plugins/colorpicker/Makefile
 plugins/colorpicker/colorpicker.gedit-plugin.desktop.in
+plugins/commander/Makefile
+plugins/commander/commander.gedit-plugin.desktop.in
+plugins/commander/commander/Makefile
+plugins/commander/commander/commands/Makefile
+plugins/commander/modules/Makefile
+plugins/commander/modules/find/Makefile
 plugins/drawspaces/Makefile
 plugins/drawspaces/drawspaces.gedit-plugin.desktop.in
 plugins/joinlines/Makefile
