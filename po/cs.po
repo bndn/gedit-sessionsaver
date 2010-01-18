@@ -7,14 +7,15 @@
 # Miloslav Trmac <mitr@volny.cz>, 2003, 2004, 2005.
 # Jakub Friedl <jfriedl@suse.cz>, 2006.
 # Kamil Páral <ripper42@gmail.com>, 2008, 2009.
-# Marek Černocký <marek@manet.cz>, 2009.
+# Marek Černocký <marek@manet.cz>, 2009, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-04 20:16+0100\n"
-"PO-Revision-Date: 2009-11-04 13:53+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2010-01-18 15:53+0000\n"
+"PO-Revision-Date: 2009-11-13 20:26+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,27 +33,27 @@ msgstr "Záložky"
 msgid "Easy document navigation with bookmarks"
 msgstr "Jednoduché procházení dokumentem pomocí záložek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Toggle Bookmark"
 msgstr "Přepnout záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:131
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
 msgid "Toggle bookmark status of the current line"
 msgstr "Přepnout stav záložky na aktuálním řádku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
 msgid "Goto Next Bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:134
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
 msgid "Goto the next bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
 msgid "Goto Previous Bookmark"
 msgstr "Přejít na předcházející záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
 msgid "Goto the previous bookmark"
 msgstr "Přejít na předcházející záložku"
 
@@ -123,7 +124,18 @@ msgid "_Insert"
 msgstr "_Vložit"
 
 #. ex:ts=4:et:
+#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:1
+msgid "Command line interface for advanced editing"
+msgstr ""
+
+#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:2
+#, fuzzy
+#| msgid "Co_mment Code"
+msgid "Commander"
+msgstr "_Komentovat kód"
+
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
 msgid "Draw Spaces"
 msgstr "Vykreslovat mezery"
 
@@ -159,15 +171,57 @@ msgstr "Vykreslovat tabulátory"
 msgid "Draw trailing spaces"
 msgstr "Vykreslovat koncové mezery"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:163
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
+#, fuzzy
+#| msgid "Draw leading spaces"
+msgid "Draw Leading Spaces"
+msgstr "Vykreslovat úvodní mezery"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
+#, fuzzy
+#| msgid "Draw new lines"
+msgid "Draw New lines"
+msgstr "Vykreslovat nové řádky"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
+#, fuzzy
+#| msgid "Draw non-breaking spaces"
+msgid "Draw Non-Breaking Spaces"
+msgstr "Vykreslovat nezlomitelné mezery"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
+#, fuzzy
+#| msgid "Draw spaces in text"
+msgid "Draw Spaces in Text"
+msgstr "Vykreslovat mezery v textu"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
+#, fuzzy
+#| msgid "Draw tabs"
+msgid "Draw Tabs"
+msgstr "Vykreslovat tabulátory"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
+#, fuzzy
+#| msgid "Draw trailing spaces"
+msgid "Draw Trailing Spaces"
+msgstr "Vykreslovat koncové mezery"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
+#, fuzzy
+#| msgid "Show _White Space"
+msgid "Show White Spaces"
+msgstr "Zobrazovat _bílé znaky"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
 msgid "Show _White Space"
 msgstr "Zobrazovat _bílé znaky"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:164
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
 msgid "Show spaces and tabs"
 msgstr "Zobrazovat mezery a tabulátory"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:626
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
 msgid "Error dialog"
 msgstr "Chybový dialog"
 
@@ -194,6 +248,56 @@ msgstr "_Rozdělit řádky"
 #: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Rozdělit vybrané řádky"
+
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr "Úprava dokumentu na více místech současně"
+
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr "Vícenásobná úprava"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:279
+msgid "Added edit point..."
+msgstr "Přidat editační bod…"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:417
+msgid "Column Mode..."
+msgstr "Sloupcový režim…"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:535
+msgid "Removed edit point..."
+msgstr "Odebrat editační bod…"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:685
+msgid "Cancelled column mode..."
+msgstr "Sloupcový režim zrušen…"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:804
+msgid "Enter column edit mode using selection"
+msgstr "Vstoupit do režimu úpravy sloupců pomocí výběru"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:805
+msgid "Toggle edit point"
+msgstr "Přepnout editační bod"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:806
+msgid "Add edit point at beginning of line/selection"
+msgstr "Přidat editační bod na začátek řádku/výběru"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:807
+msgid "Add edit point at end of line/selection"
+msgstr "Přidat editační bod na konec řádku/výběru"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:843
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Multi Edit Mode"
+msgstr "Režim vícenásobné úpravy"
+
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Start multi edit mode"
+msgstr "Začít režim vícenásobné úpravy"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
 msgid "Tab_bar"
@@ -304,3 +408,4 @@ msgstr "Dokončování slov"
 #: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "Dokončování slov využívající vývojářský systém pro doplňování"
+
