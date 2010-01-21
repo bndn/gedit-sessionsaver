@@ -9,8 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit-plugins&component=general\n"
-"POT-Creation-Date: 2009-01-03 13:41+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2010-01-17 00:07+0000\n"
 "PO-Revision-Date: 2009-01-07 12:41+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
@@ -20,60 +21,60 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.h:1
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
-#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.h:2
+#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:2
 msgid "Easy document navigation with bookmarks"
 msgstr "Egyszerű dokumentumnavigáció könyvjelzőkkel"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:123
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Toggle Bookmark"
 msgstr "Könyvjelző átváltása"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:124
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
 msgid "Toggle bookmark status of the current line"
 msgstr "Az aktuális sor könyvjelző állapotának átváltása"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:126
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
 msgid "Goto Next Bookmark"
 msgstr "Ugrás a következő könyvjelzőre"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:127
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
 msgid "Goto the next bookmark"
 msgstr "Ugrás a következő könyvjelzőre"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
 msgid "Goto Previous Bookmark"
 msgstr "Ugrás az előző könyvjelzőre"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
 msgid "Goto the previous bookmark"
 msgstr "Ugrás az előző könyvjelzőre"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:1
 msgid "Automatically adds closing brackets."
 msgstr "Záró zárójelek automatikus hozzáadása."
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Bracket Completion"
 msgstr "Zárójel-kiegészítés"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:258
 msgid "Character Map"
 msgstr "Karaktertábla"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Speciális karakterek beszúrása egy kattintással."
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:1
 msgid "Code comment"
 msgstr "Kód megjegyzés"
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Kijelölt kódblokk megjegyzésbe tétele vagy kivétele onnan."
 
@@ -94,11 +95,11 @@ msgid "Uncomment the selected code"
 msgstr "A kijelölt kód kivétele megjegyzésből"
 
 #. ex:ts=4:et:
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:1
 msgid "Color Picker"
 msgstr "Színpipetta"
 
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 "Válasszon egy színt egy párbeszédablakból és szúrja be annak hexadecimális "
@@ -121,47 +122,118 @@ msgid "_Insert"
 msgstr "_Beszúrás"
 
 #. ex:ts=4:et:
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:1
+msgid "Command line interface for advanced editing"
+msgstr ""
+
+#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:2
+#, fuzzy
+#| msgid "Co_mment Code"
+msgid "Commander"
+msgstr "A kó_d megjegyzés"
+
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
 msgid "Draw Spaces"
 msgstr "Szóközök rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Szóközök és tabok rajzolása"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:1
+#, fuzzy
+#| msgid "Draw non-breaking spaces"
+msgid "Draw leading spaces"
+msgstr "Nem törhető szóközök rajzolása"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw new lines"
 msgstr "Új sorok rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "Nem törhető szóközök rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw spaces"
 msgstr "Szóközök rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/drawspaces.ui.h:5
+#, fuzzy
+#| msgid "Draw spaces"
+msgid "Draw spaces in text"
+msgstr "Szóközök rajzolása"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:6
 msgid "Draw tabs"
 msgstr "Tabok rajzolása"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:149
+#: ../plugins/drawspaces/drawspaces.ui.h:7
+#, fuzzy
+#| msgid "Draw non-breaking spaces"
+msgid "Draw trailing spaces"
+msgstr "Nem törhető szóközök rajzolása"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
+#, fuzzy
+#| msgid "Draw non-breaking spaces"
+msgid "Draw Leading Spaces"
+msgstr "Nem törhető szóközök rajzolása"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
+#, fuzzy
+#| msgid "Draw new lines"
+msgid "Draw New lines"
+msgstr "Új sorok rajzolása"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
+#, fuzzy
+#| msgid "Draw non-breaking spaces"
+msgid "Draw Non-Breaking Spaces"
+msgstr "Nem törhető szóközök rajzolása"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
+#, fuzzy
+#| msgid "Draw Spaces and Tabs"
+msgid "Draw Spaces in Text"
+msgstr "Szóközök és tabok rajzolása"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
+#, fuzzy
+#| msgid "Draw tabs"
+msgid "Draw Tabs"
+msgstr "Tabok rajzolása"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
+#, fuzzy
+#| msgid "Draw non-breaking spaces"
+msgid "Draw Trailing Spaces"
+msgstr "Nem törhető szóközök rajzolása"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
+#, fuzzy
+#| msgid "Show _White Space"
+msgid "Show White Spaces"
+msgstr "Üres helyek _megjelenítése"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
 msgid "Show _White Space"
 msgstr "Üres helyek _megjelenítése"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:150
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
 msgid "Show spaces and tabs"
 msgstr "Szóközök és tabok megjelenítése"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:517
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
 msgid "Error dialog"
 msgstr "Hibaablak"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Több sor egyesítése vagy hosszúak szétvágása"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "Sorok egyesítése/szétvágása"
 
@@ -181,6 +253,56 @@ msgstr "Sorok szét_vágása"
 msgid "Split the selected lines"
 msgstr "A kijelölt sorok szétvágása"
 
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:279
+msgid "Added edit point..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:417
+msgid "Column Mode..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:535
+msgid "Removed edit point..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:685
+msgid "Cancelled column mode..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:804
+msgid "Enter column edit mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:805
+msgid "Toggle edit point"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:806
+msgid "Add edit point at beginning of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:807
+msgid "Add edit point at end of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:843
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Multi Edit Mode"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Start multi edit mode"
+msgstr ""
+
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
 msgid "Tab_bar"
 msgstr "_Lapsáv"
@@ -197,11 +319,11 @@ msgstr "A lapsáv látható"
 msgid "Whether the tabbar should be visible in editing windows."
 msgstr "A lapsáv látható legyen-e a szerkesztőablakokban?"
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
 msgid "Add a menu entry to show/hide the tabbar."
 msgstr "Menübejegyzés hozzáadása a lapsáv megjelenítéséhez/elrejtéséhez."
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
+#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
 msgid "Show/Hide Tabbar"
 msgstr "Lapsáv megjelenítése/elrejtése"
 
@@ -235,11 +357,11 @@ msgid "Session Name"
 msgstr "Munkamenet neve"
 
 #. ex:ts=4:et:
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:1
 msgid "Save and restore your working sessions"
 msgstr "Működő munkamenet mentése és visszaállítása"
 
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "Munkamenetmentő"
 
@@ -255,27 +377,40 @@ msgstr "Mentett munkamenetek"
 msgid "Session name:"
 msgstr "Munkamenetnév:"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Felejtse el, hogy nem használ tabokat."
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:2
 msgid "Smart Spaces"
 msgstr "Okos szóközök"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:1
 msgid "Embed a terminal in the bottom pane."
 msgstr "Terminál beágyazása az alsó ablaktáblába."
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:2
 msgid "Embedded Terminal"
 msgstr "Beágyazott terminál"
 
-#: ../plugins/terminal/terminal.py:238
+#: ../plugins/terminal/terminal.py:262
 msgid "Terminal"
 msgstr "Terminál"
 
-#: ../plugins/terminal/terminal.py:261
+#: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "Könyvtár_váltás"
 
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+msgid "Document Words"
+msgstr ""
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
+#, fuzzy
+#| msgid "Bracket Completion"
+msgid "Word Completion"
+msgstr "Zárójel-kiegészítés"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr ""
