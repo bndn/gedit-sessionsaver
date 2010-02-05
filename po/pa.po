@@ -4,20 +4,20 @@
 #
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004.
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
-# A S Alam <aalam@users.sf.net>, 2009.
+# A S Alam <aalam@users.sf.net>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gedit-plugins&component=general\n"
-"POT-Creation-Date: 2009-04-17 14:22+0000\n"
-"PO-Revision-Date: 2009-07-03 08:29+0530\n"
+"cgi?product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2010-01-17 00:07+0000\n"
+"PO-Revision-Date: 2010-02-05 06:37+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
@@ -29,27 +29,27 @@ msgstr "ਬੁੱਕਮਾਰਕ"
 msgid "Easy document navigation with bookmarks"
 msgstr "ਬੁੱਕਮਾਰਕ ਨਾਲ ਡੌਕੂਮੈਂਟ ਵਿੱਚ ਸੌਖੀ ਤਰ੍ਹਾਂ ਨੇਵੀਗੇਸ਼ਨ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Toggle Bookmark"
 msgstr "ਬੁੱਕਮਾਰਕ ਬਦਲੋ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
 msgid "Toggle bookmark status of the current line"
 msgstr "ਮੌਜੂਦਾ ਲਾਈਨ ਦੇ ਬੁੱਕਮਾਰਕ ਦੀ ਹਾਲਤ ਬਦਲੋ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
 msgid "Goto Next Bookmark"
 msgstr "ਅਗਲੇ ਬੁੱਕਮਾਰਕ ਉੱਤੇ ਜਾਓ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
 msgid "Goto the next bookmark"
 msgstr "ਅਗਲੇ ਬੁੱਕਮਾਰਕ ਉੱਤੇ ਜਾਓ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
 msgid "Goto Previous Bookmark"
 msgstr "ਪਿਛਲੇ ਬੁੱਕਮਾਰਕ ਉੱਤੇ ਜਾਓ"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
 msgid "Goto the previous bookmark"
 msgstr "ਪਿਛਲੇ ਬੁੱਕਮਾਰਕ ਉੱਤੇ ਜਾਓ"
 
@@ -116,12 +116,21 @@ msgid "Pick Color"
 msgstr "ਰੰਗ ਚੁਣੋ"
 
 #: ../plugins/colorpicker/colorpicker.py:226
-#| msgid "_Insert char"
 msgid "_Insert"
 msgstr "ਸ਼ਾਮਲ(_I)"
 
 #. ex:ts=4:et:
+#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:1
+msgid "Command line interface for advanced editing"
+msgstr "ਮਾਹਰ ਐਡਿਟਿੰਗ ਲਈ ਕਮਾਂਡ ਲਾਈਨ ਇੰਟਰਫੇਸ"
+
+#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:2
+#| msgid "Co_mment Code"
+msgid "Commander"
+msgstr "ਕਮਾਂਡਰ"
+
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
 msgid "Draw Spaces"
 msgstr "ਖਾਲੀ ਥਾਂ ਪਾਓ"
 
@@ -130,30 +139,80 @@ msgid "Draw Spaces and Tabs"
 msgstr "ਖਾਲੀ ਥਾਂ ਅਤੇ ਟੈਬ ਦਿਓ"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:1
+#| msgid "Draw non-breaking spaces"
+msgid "Draw leading spaces"
+msgstr "ਅੱਗੇ ਖਾਲੀ ਥਾਂ ਵਾਹੋ"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw new lines"
 msgstr "ਨਵੀਆਂ ਲਾਈਨਾਂ ਦਿਓ"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "ਬਿਨ-ਬਰੇਕ ਖਾਲੀ ਥਾਂ ਦਿਓ"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/drawspaces.ui.h:4
 msgid "Draw spaces"
 msgstr "ਖਾਲੀ ਥਾਂ ਦਿਓ"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/drawspaces.ui.h:5
+#| msgid "Draw spaces"
+msgid "Draw spaces in text"
+msgstr "ਟੈਕਸਟ ਵਿੱਚ ਥਾਂ ਦਿਓ"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:6
 msgid "Draw tabs"
 msgstr "ਟੈਬ ਬਣਾਓ"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:151
+#: ../plugins/drawspaces/drawspaces.ui.h:7
+#| msgid "Draw non-breaking spaces"
+msgid "Draw trailing spaces"
+msgstr "ਪਿੱਛੇ ਖਾਲੀ ਥਾਂ ਦਿਓ"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
+#| msgid "Draw non-breaking spaces"
+msgid "Draw Leading Spaces"
+msgstr "ਅੱਗੇ ਖਾਲੀ ਥਾਂ ਦਿਓ"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
+#| msgid "Draw new lines"
+msgid "Draw New lines"
+msgstr "ਨਵੀਆਂ ਲਾਈਨਾਂ ਬਣਾਓ"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
+#| msgid "Draw non-breaking spaces"
+msgid "Draw Non-Breaking Spaces"
+msgstr "ਬਿਨ-ਬਰੇਕ ਖਾਲੀ ਥਾਂ ਦਿਓ"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
+#| msgid "Draw Spaces and Tabs"
+msgid "Draw Spaces in Text"
+msgstr "ਟੈਕਸਟ ਵਿੱਚ ਖਾਲੀ ਥਾਂ ਦਿਓ"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
+#| msgid "Draw tabs"
+msgid "Draw Tabs"
+msgstr "ਟੈਬ ਬਣਾਓ"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
+#| msgid "Draw non-breaking spaces"
+msgid "Draw Trailing Spaces"
+msgstr "ਪਿੱਛੇ ਖਾਲੀ ਥਾਂ ਦਿਓ"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
+#| msgid "Show _White Space"
+msgid "Show White Spaces"
+msgstr "ਖਾਲੀ ਥਾਂ ਵੇਖੋ"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
 msgid "Show _White Space"
 msgstr "ਸਾਫ਼ ਥਾਂ ਵੇਖੋ(_W)"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:152
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
 msgid "Show spaces and tabs"
 msgstr "ਖਾਲੀ ਥਾਂ ਅਤੇ ਟੈਬਾਂ ਵੇਖੋ"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:542
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
 msgid "Error dialog"
 msgstr "ਗਲਤੀ ਡਾਈਲਾਗ"
 
@@ -180,6 +239,56 @@ msgstr "ਲਾਈਨਾਂ ਵੰਡੋ(_S)"
 #: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "ਚੁਣੀਆਂ ਲਾਈਨਾਂ ਵੰਡੋ"
+
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr "ਇਕੋ ਵਾਰ ਡੌਕੂਮੈਂਟ ਕਈ ਥਾਵਾਂ ਉੱਤੇ ਸੋਧੋ"
+
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr "ਮਲਟੀ ਐਡਿਟ"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:279
+msgid "Added edit point..."
+msgstr "ਐਡਿਟ ਪੁਆਇੰਟ ਜੋੜਿਆ..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:417
+msgid "Column Mode..."
+msgstr "ਕਾਲਮ ਮੋਡ..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:535
+msgid "Removed edit point..."
+msgstr "ਹਟਾਇਆ ਐਡਿਟ ਪੁਆਇੰਟ..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:685
+msgid "Cancelled column mode..."
+msgstr "ਕਾਲਮ ਮੋਡ ਰੱਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:804
+msgid "Enter column edit mode using selection"
+msgstr "ਚੋਣ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕਾਲਮ ਐਡਿਟ ਮੋਡ ਦਿਓ"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:805
+msgid "Toggle edit point"
+msgstr "ਸੋਧ ਪੁਆਇੰਟ ਬਦਲੋ"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:806
+msgid "Add edit point at beginning of line/selection"
+msgstr "ਲਾਈਨ ਦੇ ਸ਼ੁਰੂ/ਚੋਣ ਉੱਤੇ ਐਡਿਟ ਪੁਆਇੰਟ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:807
+msgid "Add edit point at end of line/selection"
+msgstr "ਲਾਈਨ ਦੇ ਅੰਤ/ਚੋਣ ਉੱਤੇ ਐਡਿਟ ਪੁਆਇੰਟ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:843
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Multi Edit Mode"
+msgstr "ਮਲਟੀ ਐਡਿਟ ਮੋਡ"
+
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Start multi edit mode"
+msgstr "ਮਲਟੀ ਐਡਿਟ ਮੋਡ ਸ਼ੁਰੂ"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
 msgid "Tab_bar"
@@ -271,13 +380,26 @@ msgstr "ਤਲ ਵਿੱਚ ਟਰਮੀਨਲ ਸ਼ਾਮਲ ਕਰੋ।"
 msgid "Embedded Terminal"
 msgstr "ਟਰਮੀਨਲ ਸ਼ਾਮਲ ਕਰੋ"
 
-#: ../plugins/terminal/terminal.py:249
+#: ../plugins/terminal/terminal.py:262
 msgid "Terminal"
 msgstr "ਟਰਮੀਨਲ"
 
-#: ../plugins/terminal/terminal.py:272
+#: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "ਡਾਇਰੈਕਟਰੀ ਬਦਲੋ(_h)"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+msgid "Document Words"
+msgstr "ਡੌਕੂਮੈਂਟ ਸ਼ਬਦ"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
+#| msgid "Bracket Completion"
+msgid "Word Completion"
+msgstr "ਸ਼ਬਦ ਮੁਕੰਮਲ"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr "ਕੰਪਲਿਸ਼ਨ ਫਰੇਮਵਰਕ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਸ਼ਬਦ ਪੂਰੇ ਕਰੋ"
 
 #~ msgid "_ASCII Table"
 #~ msgstr "_ASCII ਸਾਰਣੀ"
