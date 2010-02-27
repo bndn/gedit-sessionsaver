@@ -8,9 +8,16 @@ class WindowHelper:
 		self._window = window
 		self._plugin = plugin
 		self._entry = None
-		
+		accel_path = '<gedit>/plugins/commander/activate'
+
+		accel = gtk.accel_map_lookup_entry(accel_path)
+
+		if accel == None:
+			accel = (gtk.keysyms.period, gtk.gdk.CONTROL_MASK)
+			gtk.accel_map_add_entry(accel_path, accel[0], accel[1])
+
 		self._accel = gtk.AccelGroup()
-		self._accel.connect_group(gtk.keysyms.C, gtk.gdk.SUPER_MASK, 0, self._do_command)
+		self._accel.connect_by_path(accel_path, self._do_command)
 		self._window.add_accel_group(self._accel)
 	
 	def deactivate(self):
