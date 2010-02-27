@@ -13,8 +13,7 @@ class WindowHelper:
 		accel = gtk.accel_map_lookup_entry(accel_path)
 
 		if accel == None:
-			accel = (gtk.keysyms.period, gtk.gdk.CONTROL_MASK)
-			gtk.accel_map_add_entry(accel_path, accel[0], accel[1])
+			gtk.accel_map_add_entry(accel_path, gtk.keysyms.period, gtk.gdk.CONTROL_MASK)
 
 		self._accel = gtk.AccelGroup()
 		self._accel.connect_by_path(accel_path, self._do_command)
