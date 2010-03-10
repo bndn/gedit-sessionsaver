@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-20 19:26+0200\n"
-"PO-Revision-Date: 2009-08-20 19:26+0100\n"
-"Last-Translator: Tomasz Dominikowski <dominikowski@gmail.com>\n"
+"POT-Creation-Date: 2010-03-10 14:03+0100\n"
+"PO-Revision-Date: 2010-03-10 11:58+0100\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,27 +28,27 @@ msgstr "Zakładki"
 msgid "Easy document navigation with bookmarks"
 msgstr "Łatwa nawigacja po dokumencie za pomocą zakładek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:129
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
 msgid "Toggle Bookmark"
 msgstr "Przełącz zakładkę"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
 msgid "Toggle bookmark status of the current line"
 msgstr "Przełącza stan zakładki bieżącego wiersza"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:132
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
 msgid "Goto Next Bookmark"
 msgstr "Przejdź do następnej zakładki"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
 msgid "Goto the next bookmark"
 msgstr "Przechodzi do następnej zakładki"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
 msgid "Goto Previous Bookmark"
 msgstr "Przejdź do poprzedniej zakładki"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
 msgid "Goto the previous bookmark"
 msgstr "Przechodzi do poprzedniej zakładki"
 
@@ -121,7 +121,16 @@ msgid "_Insert"
 msgstr "_Wstaw"
 
 #. ex:ts=4:et:
+#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:1
+msgid "Command line interface for advanced editing"
+msgstr "Interfejs wiersza poleceń do zaawansowanej redakcji tekstu"
+
+#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:2
+msgid "Commander"
+msgstr "Commander"
+
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
 msgid "Draw Spaces"
 msgstr "Wyświetlanie spacji"
 
@@ -130,30 +139,70 @@ msgid "Draw Spaces and Tabs"
 msgstr "Wyświetla spacje i tabulacje"
 
 #: ../plugins/drawspaces/drawspaces.ui.h:1
+msgid "Draw leading spaces"
+msgstr "Wyświetlanie spacji wiodących"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:2
 msgid "Draw new lines"
 msgstr "Wyświetlanie nowych wierszy"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/drawspaces.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "Wyświetlanie nieprzerywalnych spacji"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
-msgid "Draw spaces"
-msgstr "Wyświetla spacje"
-
 #: ../plugins/drawspaces/drawspaces.ui.h:4
+msgid "Draw spaces"
+msgstr "Wyświetlanie spacji"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:5
+msgid "Draw spaces in text"
+msgstr "Wyświetla spacji w tekście"
+
+#: ../plugins/drawspaces/drawspaces.ui.h:6
 msgid "Draw tabs"
 msgstr "Wyświetlanie tabulacji"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:151
+#: ../plugins/drawspaces/drawspaces.ui.h:7
+msgid "Draw trailing spaces"
+msgstr "Wyświetlanie spacji na końcach wierszy"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
+msgid "Draw Leading Spaces"
+msgstr "Wyświetlanie spacji wiodących"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
+msgid "Draw New lines"
+msgstr "Wyświetlanie nowych wierszy"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
+msgid "Draw Non-Breaking Spaces"
+msgstr "Wyświetlanie nieprzerywalnych spacji"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
+msgid "Draw Spaces in Text"
+msgstr "Wyświetlanie spacji w tekście"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
+msgid "Draw Tabs"
+msgstr "Wyświetlanie tabulacji"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
+msgid "Draw Trailing Spaces"
+msgstr "Wyświetlanie spacji na końcach wierszy"
+
+#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
+msgid "Show White Spaces"
+msgstr "Wyświetlanie spacji"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
 msgid "Show _White Space"
 msgstr "Wyświetlanie _spacji"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:152
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
 msgid "Show spaces and tabs"
 msgstr "Wyświetlanie spacji i tabulacji"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:542
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
 msgid "Error dialog"
 msgstr "Okno dialogowe błędu"
 
@@ -180,6 +229,56 @@ msgstr "P_odziel wiersze"
 #: ../plugins/joinlines/joinlines.py:60
 msgid "Split the selected lines"
 msgstr "Dzieli zaznaczone wiersze"
+
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr "Umożliwia modyfikowanie dokumentu w wielu miejscach na raz"
+
+#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr "Edycja w wielu miejscach"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:279
+msgid "Added edit point..."
+msgstr "Dodano punkt modyfikowania..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:417
+msgid "Column Mode..."
+msgstr "Tryb kolumny..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:535
+msgid "Removed edit point..."
+msgstr "Usunięto punkt modyfikowania..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:685
+msgid "Cancelled column mode..."
+msgstr "Anulowano tryb kolumny..."
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:804
+msgid "Enter column edit mode using selection"
+msgstr "Proszę podać tryb edycji kolumny używając zaznaczenia"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:805
+msgid "Toggle edit point"
+msgstr "Przełącz punkt modyfikowania"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:806
+msgid "Add edit point at beginning of line/selection"
+msgstr "Dodaj punkt modyfikowania na początku wiersza/zaznaczenia"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:807
+msgid "Add edit point at end of line/selection"
+msgstr "Dodaj punkt modyfikowania na końcu wiersza/zaznaczenia"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:843
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Multi Edit Mode"
+msgstr "Tryb edycji w wieli miejscach"
+
+#: ../plugins/multiedit/multiedit/windowhelper.py:69
+msgid "Start multi edit mode"
+msgstr "Rozpocznij tryb edycji w wieli miejscach"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
 msgid "Tab_bar"
@@ -278,3 +377,15 @@ msgstr "Terminal"
 #: ../plugins/terminal/terminal.py:285
 msgid "C_hange Directory"
 msgstr "Zmień _katalog"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+msgid "Document Words"
+msgstr "Słowa dokumentu"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
+msgid "Word Completion"
+msgstr "Uzupełnianie słów"
+
+#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr "Uzupełnianie słów używając struktury uzupełniania"
