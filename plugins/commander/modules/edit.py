@@ -48,6 +48,7 @@ def __default__(filename, view):
 def _dummy_cb(num, total):
 	pass
 
+@commands.autocomplete(newfile=commander.commands.completion.filename)
 def rename(view, newfile):
 	"""Rename current file: edit.rename &lt;newname&gt;"""
 	
