@@ -169,6 +169,20 @@ def command(view, name):
 	
 	raise commander.commands.exceptions.Execute('Could not find command: ' + name)
 
+COMMAND_TEMPLATE="""import commander.commands as commands
+import commander.commands.completion
+import commander.commands.result
+import commander.commands.exceptions
+
+__commander_module__ = True
+
+def __default__(view, entry):
+	\"\"\"Some kind of cool new feature: cool &lt;something&gt;
+
+Use this to apply the cool new feature\"\"\"
+	pass
+"""
+
 def new_command(view, entry, name):
 	"""Create a new commander command module: edit.new-command &lt;command&gt;"""
 	
@@ -176,9 +190,12 @@ def new_command(view, entry, name):
 	
 	if os.path.isfile(filename):
 		raise commander.commands.exceptions.Execute('Commander module `' + name + '\' already exists')
-	
+
+	dirname = os.path.dirname(filename)
+	os.makedirs(dirname)
+
 	f = open(filename, 'w')
-	f.write("import commander.commands\n\n__commander_module__ = True\n\ndef __default__(view, entry):\n\t\"\"\"Some kind of cool new feature: cool &lt;something&gt;\n\nUse this to apply the cool new feature\"\"\"\n\tpass\n")
+	f.write(COMMAND_TEMPLATE)
 	f.close()
 	
 	return __default__(filename, view)
