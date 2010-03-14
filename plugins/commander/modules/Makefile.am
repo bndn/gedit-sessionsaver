@@ -5,6 +5,7 @@ SUBDIRS = find
 plugindir = $(GEDIT_PLUGINS_DATA_DIR)/commander/modules
 
 plugin_PYTHON =	\
+	align.py
 	bookmark.py \
 	doc.py \
 	edit.py \
