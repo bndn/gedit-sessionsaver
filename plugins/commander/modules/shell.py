@@ -155,21 +155,21 @@ You can use <b>&lt;!</b> as a special input meaning the current selection or cur
 document."""
 	return _run_command(entry, False, False, argstr)
 
-def _run_replace(entry, argstr):
-	"""Run shell command and place output in document: !! &lt;command&gt;
-
-You can use <b>&lt;!</b> as a special input meaning the current selection or current
-document."""
-	return _run_command(entry, True, False, argstr)
-
-def _run_background(entry, argstr):
+def background(entry, argstr):
 	"""Run shell command in the background: !&amp; &lt;command&gt;
 
 You can use <b>&lt;!</b> as a special input meaning the current selection or current
 document."""
 	return _run_command(entry, False, True, argstr)
 
+def replace(entry, argstr):
+	"""Run shell command and place output in document: !! &lt;command&gt;
+
+You can use <b>&lt;!</b> as a special input meaning the current selection or current
+document."""
+	return _run_command(entry, True, False, argstr)
+
 locals()['!'] = __default__
-locals()['!!'] = _run_replace
-locals()['!&'] = _run_background
+locals()['!!'] = replace
+locals()['!&'] = background
 
