@@ -80,7 +80,7 @@ class Commands(Singleton):
 				ct.retval = ct.generator.send(ret)
 			else:
 				ct.retval = ct.generator.next()
-			
+
 			return ct.retval
 
 		def push(self, gen):
@@ -203,7 +203,7 @@ class Commands(Singleton):
 
 			if not retval or (isinstance(retval, result.Result) and (retval == result.DONE or retval == result.HIDE)):
 				state.pop()
-				 
+
 				if state:
 					return self._run_generator(state)
 
@@ -224,9 +224,9 @@ class Commands(Singleton):
 				# Re raise it for the top most to show the error
 				raise e
 
-		return None	
+		return None
 	
-	def run(self, state, ret):
+	def run(self, state, ret=None):
 		if type(ret) == types.GeneratorType:
 			# Ok, this is cool stuff, generators can ask and susped execution
 			# of commands, for instance to prompt for some more information
