@@ -30,7 +30,7 @@ class Line:
 
 		return self.matches[idx]
 
-	def append(self, idx, num, group):
+	def append(self, idx, num, group, add_ws_group):
 		m = self.match(idx)
 
 		if m == None:
@@ -41,13 +41,30 @@ class Line:
 		else:
 			gidx = group
 
+		if len(m.groups()) <= add_ws_group - 1:
+			wsidx = 0
+		else:
+			wsidx = add_ws_group
+
+		if wsidx > gidx:
+			wsidx = gidx
+
 		# First append leading match
-		self.newline += self.line[m.start(0):m.start(gidx)]
+		wsg = m.group(wsidx)
+		numln = len(wsg) - len(wsg.lstrip())
 
-		# Then do the indent
-		self.newline += ' ' * (num - self.new_len())
+		self.newline += self.line[m.start(0):m.start(wsidx)]
 
-		t = m.group(gidx)
+		# Then do the indent until gidx is aligned with num
+		bridge = self.line[m.start(wsidx) + numln:m.start(gidx)]
+
+		if not '\t' in bridge:
+			bridge = (' ' * (num - self.new_len(bridge))) + bridge
+		else:
+			while self.new_len(bridge) < num:
+				bridge = ' ' + bridge
+
+		self.newline += bridge
 
 		# Then append the rest of the match
 		mnext = self.match(idx + 1)
@@ -57,7 +74,7 @@ class Line:
 		else:
 			endidx = mnext.start(0)
 
-		self.newline += t.lstrip() + self.line[m.end(gidx):endidx]
+		self.newline += self.line[m.start(gidx):endidx]
 
 	def __str__(self):
 		return self.newline
@@ -68,10 +85,11 @@ def __default__(view):
 Align the selected text in columns separated by white space (spaces and tabs)"""
 	yield regex(view, '\s+')
 
-def _find_max_align(lines, idx, group):
+def _find_max_align(lines, idx, group, add_ws_group):
 	num = 0
 	spaces = re.compile('^\s*')
 
+	# We will align on 'group', by adding spaces to 'add_ws_group'
 	for line in lines:
 		m = line.match(idx)
 
@@ -81,11 +99,24 @@ def _find_max_align(lines, idx, group):
 			else:
 				gidx = group
 
-			g = m.group(gidx)
-			until = m.start(gidx) - m.start(0)
+			if len(m.groups()) <= add_ws_group - 1:
+				wsidx = 0
+			else:
+				wsidx = add_ws_group
+
+			if wsidx > gidx:
+				wsidx = gidx
+
+			wsg = m.group(wsidx)
+
+			numln = len(wsg) - len(wsg.lstrip())
+
+			# until the start
+			extra = line.line[m.start(0):m.start(wsidx)]
+			extra += line.line[m.start(wsidx) + numln:m.start(gidx)]
 
 			# Measure where to align it
-			l = line.new_len(m.group(0)[0:until])
+			l = line.new_len(extra)
 		else:
 			l = line.new_len()
 
@@ -94,7 +125,7 @@ def _find_max_align(lines, idx, group):
 
 	return num
 
-def _regex(view, reg, group, additional_ws, flags=0):
+def _regex(view, reg, group, additional_ws, add_ws_group, flags=0):
 	buf = view.get_buffer()
 
 	bounds = buf.get_selection_bounds()
@@ -113,18 +144,29 @@ def _regex(view, reg, group, additional_ws, flags=0):
 	if group == None:
 		group, words, modifier = (yield commander.commands.result.Prompt('Group (1):'))
 
-		try:
-			group = int(group)
-		except:
-			group = 1
+	try:
+		group = int(group)
+	except:
+		group = 1
 
 	if additional_ws == None:
 		additional_ws, words, modifier = (yield commander.commands.result.Prompt('Additional Whitespace (0):'))
 
-		try:
-			additional_ws = int(additional_ws)
-		except:
-			additional_ws = 0
+	try:
+		additional_ws = int(additional_ws)
+	except:
+		additional_ws = 0
+
+	if add_ws_group == None:
+		add_ws_group, words, modifier = (yield commander.commands.result.Prompt('Group (1):'))
+
+	try:
+		add_ws_group = int(add_ws_group)
+	except:
+		add_ws_group = -1
+
+	if add_ws_group < 0:
+		add_ws_group = group
 
 	start, end = bounds
 
@@ -147,10 +189,10 @@ def _regex(view, reg, group, additional_ws, flags=0):
 			num = len(ln.matches)
 
 	for i in range(num):
-		al = _find_max_align(newlines, i, group)
+		al = _find_max_align(newlines, i, group, add_ws_group)
 
 		for line in newlines:
-			line.append(i, al + 1 + additional_ws, group)
+			line.append(i, al + additional_ws, group, add_ws_group)
 
 	# Replace lines
 	aligned = '\n'.join([str(x) for x in newlines])
@@ -162,7 +204,7 @@ def _regex(view, reg, group, additional_ws, flags=0):
 
 	yield commander.commands.result.DONE
 
-def regex(view, reg=None, group=1, additional_ws=0):
+def regex(view, reg=None, group=1, additional_ws=1, add_ws_group=-1):
 	"""Align selected in columns using a regular expression: align.regex [&lt;regex&gt;] [&lt;group&gt;] [&lt;ws&gt;]
 
 Align the selected text in columns separated by the specified regular expression.
@@ -173,9 +215,9 @@ be used to add additional whitespace to the column separation.
 
 The regular expression will be matched in case-sensitive mode"""
 
-	yield _regex(view, reg, group, additional_ws)
+	yield _regex(view, reg, group, additional_ws, add_ws_group)
 
-def regex_i(view, reg=None, group=1, additional_ws=0):
+def regex_i(view, reg=None, group=1, additional_ws=1, add_ws_group=-1):
 	"""Align selected in columns using a regular expression: align.regex [&lt;regex&gt;] [&lt;group&gt;] [&lt;ws&gt;]
 
 Align the selected text in columns separated by the specified regular expression.
@@ -186,4 +228,4 @@ be used to add additional whitespace to the column separation.
 
 The regular expression will be matched in case-insensitive mode"""
 
-	yield _regex(view, reg, group, additional_ws, re.IGNORECASE)
+	yield _regex(view, reg, group, additional_ws, add_ws_group, re.IGNORECASE)
