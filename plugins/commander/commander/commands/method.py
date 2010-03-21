@@ -19,7 +19,13 @@ class Method:
 			return getattr(self.method, 'autocomplete')
 
 		return None
-	
+
+	def accelerator(self):
+		if hasattr(self.method, 'accelerator'):
+			return getattr(self.method, 'accelerator')
+
+		return None
+
 	def args(self):
 		fp = self.func_props()
 		
@@ -52,7 +58,7 @@ class Method:
 	def oneline_doc(self):
 		return self.doc().split("\n")[0]
 	
-	def execute(self, argstr, words, entry, modifier):
+	def execute(self, argstr, words, entry, modifier, kk = {}):
 		fp = self.func_props()
 		
 		kwargs = {'argstr': argstr, 'args': words, 'entry': entry, 'view': entry.view(), 'modifier': modifier, 'window': entry.view().get_toplevel()}
@@ -84,6 +90,9 @@ class Method:
 
 		if not fp.keywords:
 			kwargs = {}
+
+		for k in kk:
+			kwargs[k] = kk[k]
 
 		return self.method(*args, **kwargs)
 

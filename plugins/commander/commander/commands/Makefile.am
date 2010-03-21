@@ -3,6 +3,7 @@
 plugindir = $(GEDIT_PLUGINS_LIBS_DIR)/commander/commands
 
 plugin_PYTHON =	\
+	accel_group.py \
 	completion.py \
 	exceptions.py \
 	__init__.py \

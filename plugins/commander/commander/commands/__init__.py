@@ -13,7 +13,10 @@ import method
 import result
 import exceptions
 
-__all__ = ['is_commander_module', 'Commands']
+from accel_group import AccelGroup
+from accel_group import Accelerator
+
+__all__ = ['is_commander_module', 'Commands', 'Accelerator']
 
 def attrs(**kwargs):
 	def generator(f):
@@ -33,6 +36,9 @@ def autocomplete(d={}, **kwargs):
 				ret[k] = dic[k]
 
 	return attrs(autocomplete=ret)
+
+def accelerator(*args, **kwargs):
+	return attrs(accelerator=Accelerator(args, kwargs))
 
 def is_commander_module(mod):
 	if type(mod) == types.ModuleType:
@@ -107,6 +113,7 @@ class Commands(Singleton):
 		self._modules = None
 		self._dirs = []
 		self._monitors = []
+		self._accel_group = None
 		
 		self._timeouts = {}
 		
@@ -126,7 +133,35 @@ class Commands(Singleton):
 			glib.source_remove(self._timeouts[k])
 		
 		self._timeouts = {}
-	
+
+	def accelerator_activated(self, accel, mod, state, entry):
+		self.run(state, mod.execute('', [], entry, 0, accel.arguments))
+
+	def scan_accelerators(self, modules=None):
+		if modules == None:
+			self._accel_group = AccelGroup()
+			modules = self.modules()
+
+		recurse_mods = []
+
+		for mod in modules:
+			if type(mod) == types.ModuleType:
+				recurse_mods.append(mod)
+			else:
+				accel = mod.accelerator()
+
+				if accel != None:
+					self._accel_group.add(accel, self.accelerator_activated, mod)
+
+		for mod in recurse_mods:
+			self.scan_accelerators(mod.commands())
+
+	def accelerator_group(self):
+		if not self._accel_group:
+			self.scan_accelerators()
+
+		return self._accel_group
+
 	def modules(self):
 		self.ensure()
 		return list(self._modules)
@@ -303,11 +338,31 @@ class Commands(Singleton):
 		
 		return mod
 
-	def remove_module_root(self, mod):
+	def remove_module_accelerators(self, modules):
+		recurse_mods = []
+
+		for mod in modules:
+			if type(mod) == types.ModuleType:
+				recurse_mods.append(mod)
+			else:
+				accel = mod.accelerator()
+
+				if accel != None:
+					self._accel_group.remove(accel)
+
+		for mod in recurse_mods:
+			self.remove_module_accelerators(mod.commands())
+
+	def remove_module(self, mod):
+		# Remove roots
 		for r in mod.roots():
 			if r in self._modules:
 				self._modules.remove(r)
-	
+
+		# Remove accelerators
+		if self._accel_group:
+			self.remove_module_accelerators([mod])
+
 	def reload_module(self, mod):
 		if isinstance(mod, basestring):
 			mod = self.resolve_module(mod)
@@ -316,7 +371,7 @@ class Commands(Singleton):
 			return
 
 		# Remove roots
-		self.remove_module_root(mod)
+		self.remove_module(mod)
 
 		# Now, try to reload the module
 		try:
@@ -332,13 +387,16 @@ class Commands(Singleton):
 		for r in mod.roots():
 			bisect.insort(self._modules, r)
 
+		if self._accel_group:
+			self.scan_accelerators([mod])
+
 	def on_timeout_delete(self, path, mod):
 		if not path in self._timeouts:
 			return False
 		
 		# Remove the module
 		mod.unload()
-		self.remove_module_root(mod)
+		self.remove_module(mod)
 		self._modules.remove(mod)
 
 		return False

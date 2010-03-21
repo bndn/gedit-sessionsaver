@@ -11,6 +11,7 @@ import commands.completion
 import commands.module
 import commands.method
 import commands.exceptions
+import commands.accel_group
 
 import commander.utils as utils
 
@@ -58,6 +59,8 @@ class Entry(gtk.EventBox):
 		
 		self._history = History(os.path.expanduser('~/.gnome2/gedit/commander/history'))
 		self._prompt = None
+
+		self._accel_group = None
 		
 		hbox.pack_start(self._prompt_label, False, False, 0)
 		hbox.pack_start(self._entry, True, True, 0)
@@ -71,7 +74,7 @@ class Entry(gtk.EventBox):
 		
 		self.connect('destroy', self.on_destroy)
 		
-		self._history_prefix = None		
+		self._history_prefix = None
 		self._suspended = None
 		self._handlers = [
 			[0, gtk.keysyms.Up, self.on_history_move, -1],
@@ -147,23 +150,29 @@ class Entry(gtk.EventBox):
 	def on_entry_focus_out(self, widget, evnt):
 		if self._entry.flags() & gtk.SENSITIVE:
 			self.destroy()
-	
+
 	def on_entry_key_press(self, widget, evnt):
 		state = evnt.state & gtk.accelerator_get_default_mod_mask()
 		text = self._entry.get_text()
 		
-		if evnt.keyval == gtk.keysyms.Escape and self._info_window:
-			if self._suspended:
-				self._suspended.resume()
-
-			if self._info_window:
-				self._info_window.destroy()
-
-			self._entry.set_sensitive(True)
-			return True
-
 		if evnt.keyval == gtk.keysyms.Escape:
-			if text:
+			if self._info_window:
+				if self._suspended:
+					self._suspended.resume()
+
+				if self._info_window:
+					self._info_window.destroy()
+
+				self._entry.set_sensitive(True)
+			elif self._accel_group:
+				self._accel_group = self._accel_group.parent
+
+				if not self._accel_group or not self._accel_group.parent:
+					self._entry.set_editable(True)
+					self._accel_group = None
+
+				self.prompt()
+			elif text:
 				self._entry.set_text('')
 			elif self._command_state:
 				self._command_state.clear()
@@ -172,6 +181,30 @@ class Entry(gtk.EventBox):
 				self._view.grab_focus()
 				self.destroy()
 
+			return True
+
+		if state or self._accel_group:
+			# Check if it should be handled by the accel group
+			group = self._accel_group
+
+			if not self._accel_group:
+				group = commands.Commands().accelerator_group()
+
+			accel = group.activate(evnt.keyval, state)
+
+			if isinstance(accel, commands.accel_group.AccelGroup):
+				self._accel_group = accel
+				self._entry.set_text('')
+				self._entry.set_editable(False)
+				self.prompt()
+
+				return True
+			elif isinstance(accel, commands.accel_group.AccelCallback):
+				self._entry.set_editable(True)
+				self.run_command(lambda: accel.activate(self._command_state, self))
+				return True
+
+		if not self._entry.get_editable():
 			return True
 
 		for handler in self._handlers:
@@ -211,13 +244,16 @@ class Entry(gtk.EventBox):
 	def prompt(self, pr=''):
 		self._prompt = pr
 
+		if self._accel_group != None:
+			pr = '<i>%s</i>' % (saxutils.escape(self._accel_group.full_name()),)
+
 		if not pr:
 			pr = ''
 		else:
 			pr = ' ' + pr
-		
+
 		self._prompt_label.set_markup('<b>&gt;&gt;&gt;</b>%s' % pr)
-	
+
 	def make_info(self):
 		if self._info_window == None:
 			self._info_window = Info(self)
@@ -256,7 +292,7 @@ class Entry(gtk.EventBox):
 		if self._info_window and self._info_window.empty():
 			self._info_window.destroy()
 			self._entry.grab_focus()
-			self._entry.set_sensitive(True)			
+			self._entry.set_sensitive(True)
 	
 	def _show_wait_cancel(self):
 		self._cancel_button = self.info_add_action(gtk.STOCK_STOP, self.on_wait_cancel)
@@ -298,6 +334,47 @@ class Entry(gtk.EventBox):
 		self.hide()
 		gtk.EventBox.destroy(self)
 
+	def run_command(self, cb):
+		self._suspended = None
+
+		try:
+			ret = cb()
+		except Exception, e:
+			self.command_history_done()
+			self._command_state.clear()
+
+			self.prompt()
+
+			# Show error in info
+			self.info_show('<b><span color="#f66">Error:</span></b> ' + saxutils.escape(str(e)), True)
+
+			if not isinstance(e, commands.exceptions.Execute):
+				self.info_show(traceback.format_exc(), False)
+
+			return None
+
+		if ret == commands.result.Result.SUSPEND:
+			# Wait for it...
+			self._suspended = ret
+			ret.register(self.on_suspend_resume)
+
+			self._wait_timeout = glib.timeout_add(500, self._show_wait_cancel)
+			self._entry.set_sensitive(False)
+		else:
+			self.command_history_done()
+			self.prompt('')
+
+			if ret == commands.result.Result.PROMPT:
+				self.prompt(ret.prompt)
+			elif (ret == None or ret == commands.result.HIDE) and not self._prompt and (not self._info_window or self._info_window.empty()):
+				self._command_state.clear()
+				self._view.grab_focus()
+				self.destroy()
+			else:
+				self._entry.grab_focus()
+
+		return ret
+
 	def on_execute(self, dummy, modifier):
 		if self._info_window and not self._suspended:
 			self._info_window.destroy()
@@ -313,44 +390,8 @@ class Entry(gtk.EventBox):
 		if not wordsstr and not self._command_state:
 			self._entry.set_text('')
 			return
-		
-		self._suspended = None
 
-		try:
-			ret = commands.Commands().execute(self._command_state, text, words, wordsstr, self, modifier)
-		except Exception, e:
-			self.command_history_done()
-			self._command_state.clear()
-			
-			self.prompt()
-			
-			# Show error in info
-			self.info_show('<b><span color="#f66">Error:</span></b> ' + saxutils.escape(str(e)), True)
-
-			if not isinstance(e, commands.exceptions.Execute):
-				self.info_show(traceback.format_exc(), False)
-
-			return True
-
-		if ret == commands.result.Result.SUSPEND:
-			# Wait for it...
-			self._suspended = ret
-			ret.register(self.on_suspend_resume)
-
-			self._wait_timeout = glib.timeout_add(500, self._show_wait_cancel)
-			self._entry.set_sensitive(False)
-		else:
-			self.command_history_done()
-			self.prompt('')
-			
-			if ret == commands.result.Result.PROMPT:
-				self.prompt(ret.prompt)
-			elif (ret == None or ret == commands.result.HIDE) and not self._prompt and (not self._info_window or self._info_window.empty()):
-				self._command_state.clear()
-				self._view.grab_focus()
-				self.destroy()
-			else:
-				self._entry.grab_focus()
+		self.run_command(lambda: commands.Commands().execute(self._command_state, text, words, wordsstr, self, modifier))
 
 		return True
 	
