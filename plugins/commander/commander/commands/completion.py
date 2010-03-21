@@ -108,10 +108,7 @@ def single_command(words, idx):
 
 def command(words, idx):
 	s = words[idx].strip()
-	
-	if not s:
-		return None
-	
+
 	parts = s.split('.')
 	cmds = []
 
