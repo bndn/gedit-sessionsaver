@@ -2,7 +2,6 @@ import gtk
 import cairo
 import glib
 import os
-import drawing
 import re
 import inspect
 
