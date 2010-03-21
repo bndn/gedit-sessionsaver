@@ -192,7 +192,9 @@ def new_command(view, entry, name):
 		raise commander.commands.exceptions.Execute('Commander module `' + name + '\' already exists')
 
 	dirname = os.path.dirname(filename)
-	os.makedirs(dirname)
+
+	if not os.path.isdir(dirname):
+		os.makedirs(dirname)
 
 	f = open(filename, 'w')
 	f.write(COMMAND_TEMPLATE)
