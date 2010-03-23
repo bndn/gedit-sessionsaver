@@ -117,6 +117,8 @@ class Module(method.Method):
 				self.method = self.mod.__dict__['__default__']
 			else:
 				self.method = None
+
+			self._func_props = None
 		except:
 			sys.path = oldpath
 			self._rollback.uninstall()
