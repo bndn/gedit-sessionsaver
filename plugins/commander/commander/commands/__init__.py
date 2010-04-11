@@ -257,7 +257,7 @@ class Commands(Singleton):
 				state.top().generator.throw(type(e), e)
 			else:
 				# Re raise it for the top most to show the error
-				raise e
+				raise
 
 		return None
 	
