@@ -195,7 +195,7 @@ class Finder:
 
 		self.cancel()
 		yield commands.result.DONE
-	
+
 	def _restore_cursor(self, mark):
 		buf = mark.get_buffer()
 		
@@ -221,10 +221,16 @@ class Finder:
 		
 		if not ret:
 			yield commands.result.DONE
-		
+
+		self.scroll_back = False
+
 		# Then ask for the replacement string
 		if not self.replacestr:
 			try:
+				if replaceall:
+					self.scroll_back = True
+					self.select_last_result()
+
 				replacestr, words, modifier = (yield commands.result.Prompt('Replace with:'))
 				self.set_replace(replacestr)
 			except GeneratorExit, e:
@@ -272,10 +278,11 @@ class Finder:
 				buf.end_user_action()
 
 			self.cancel()
-			raise e				
+			raise e
 
 		if replaceall:
-			self._restore_cursor(startmark)
+			if self.scroll_back:
+				self._restore_cursor(startmark)
 
 			buf.end_user_action()
 
