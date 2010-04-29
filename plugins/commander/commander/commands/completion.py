@@ -156,7 +156,7 @@ def filename(words, idx, view):
 	doc = view.get_buffer()
 	
 	if not doc.is_untitled():
-		root = os.path.dirname(gio.File(doc.get_uri()).get_path())
+		root = os.path.dirname(doc.get_location().get_path())
 	else:
 		root = os.path.expanduser('~/')
 		

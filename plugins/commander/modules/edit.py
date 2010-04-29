@@ -23,7 +23,7 @@ def __default__(filename, view):
 	cwd = os.getcwd()
 	
 	if not doc.is_untitled():
-		cwd = os.path.dirname(doc.get_uri())
+		cwd = doc.get_location().get_parent().get_path()
 	else:
 		cwd = os.path.expanduser('~/')
 	
@@ -35,13 +35,13 @@ def __default__(filename, view):
 	
 	if matches:
 		for match in matches:
-			files.append(gio.File(match).get_uri())
+			files.append(gio.File(match))
 	else:
-		files.append(gio.File(filename).get_uri())
+		files.append(gio.File(filename))
 	
 	if files:
 		window = view.get_toplevel()
-		gedit.commands.load_uris(window, files)
+		gedit.commands.load_locations(window, files)
 		
 	return commander.commands.result.HIDE
 
@@ -66,8 +66,8 @@ def rename(view, newfile):
 	if not doc.is_local():
 		raise commander.commands.exceptions.Execute('You can only rename local files')
 	
-	f = gio.File(doc.get_uri())
-	
+	f = doc.get_location()
+
 	if not f.query_exists():
 		raise commander.commands.exceptions.Execute('Current document file does not exist')
 	
@@ -101,7 +101,7 @@ def rename(view, newfile):
 	try:
 		f.move(dest, _dummy_cb, flags=gio.FILE_COPY_OVERWRITE)
 		
-		doc.set_uri(dest.get_uri())
+		doc.set_location(dest)
 		yield commander.commands.result.HIDE
 	except Exception, e:
 		raise commander.commands.exceptions.Execute('Could not move file: %s' % (e,))
@@ -114,12 +114,12 @@ def _mod_has_alias(mod, alias):
 
 def _edit_command(view, mod, func=None):
 	try:
-		uri = gio.File(inspect.getsourcefile(mod)).get_uri()
+		location = gio.File(inspect.getsourcefile(mod))
 	except:
 		return False
 
 	if not func:
-		gedit.commands.load_uri(view.get_toplevel(), uri)
+		gedit.commands.load_location(view.get_toplevel(), location)
 	else:
 		try:
 			lines = inspect.getsourcelines(func)
@@ -127,7 +127,7 @@ def _edit_command(view, mod, func=None):
 		except:
 			line = 0
 
-		gedit.commands.load_uri(view.get_toplevel(), uri, None, line)
+		gedit.commands.load_location(view.get_toplevel(), location, None, line)
 	
 	return True
 

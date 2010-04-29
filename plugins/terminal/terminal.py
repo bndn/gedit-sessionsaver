@@ -272,10 +272,9 @@ class TerminalWindowHelper(object):
         doc = self._window.get_active_document()
         if doc is None:
             return None
-        uri = doc.get_uri()
-        if uri is not None and gedit.utils.uri_has_file_scheme(uri):
-            gfile = gio.File(uri)
-            directory = gfile.get_parent()
+        location = doc.get_location()
+        if location is not None and gedit.utils.location_has_file_scheme(location):
+            directory = location.get_parent()
             return directory.get_path()
         return None
 

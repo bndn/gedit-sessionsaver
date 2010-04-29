@@ -105,7 +105,7 @@ def _run_command(entry, replace, background, argstr):
 	doc = entry.view().get_buffer()
 	
 	if not doc.is_untitled() and doc.is_local():
-		gfile = gio.File(doc.get_uri())
+		gfile = doc.get_location()
 		cwd = os.path.dirname(gfile.get_path())
 	
 	if '<!' in argstr:
