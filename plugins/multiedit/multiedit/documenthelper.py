@@ -477,12 +477,27 @@ class DocumentHelper(Signals):
         return iters
 
     def do_smart_column_align(self, event):
-        ret = self.smart_column_iters()
+        if not self._edit_points:
+            ret = self.smart_column_iters()
 
-        if ret == True or ret == False:
-            return ret
+            if ret == True or ret == False:
+                return ret
+        else:
+            iters = [self._buffer.get_iter_at_mark(x) for x in self._edit_points]
+            iters.append(self._buffer.get_iter_at_mark(self._buffer.get_insert()))
 
-        selection = self._buffer.get_iter_at_mark(self._buffer.get_selection_bound())
+            iters.sort(lambda a, b: a.compare(b))
+            ret = []
+            lastline = -1
+
+            for piter in iters:
+                line = piter.get_line()
+
+                if line != lastline:
+                    ret.append(piter)
+
+                lastline = line
+
         lastline = self._buffer.get_iter_at_mark(self._buffer.get_insert()).get_line()
 
         # Get max visual offset
@@ -511,6 +526,8 @@ class DocumentHelper(Signals):
         self.block_signal(self._buffer, 'mark-set')
         self.block_signal(self._buffer, 'insert-text')
 
+        self._buffer.begin_user_action()
+
         for i in range(len(marks)):
             # Align with spaces on the left such that 'mark' is at maxoffset
             num = maxoffset - offsets[i]
@@ -524,6 +541,11 @@ class DocumentHelper(Signals):
             else:
                 self._buffer.place_cursor(piter)
 
+        for mark in marks:
+            self._buffer.delete_mark(mark)
+
+        self._buffer.end_user_action()
+
         self.unblock_signal(self._buffer, 'mark-set')
         self.unblock_signal(self._buffer, 'insert-text')
 
@@ -535,7 +557,6 @@ class DocumentHelper(Signals):
         if ret == True or ret == False:
             return ret
 
-        selection = self._buffer.get_iter_at_mark(self._buffer.get_selection_bound())
         lastline = self._buffer.get_iter_at_mark(self._buffer.get_insert()).get_line()
 
         # Remove previous edit points
@@ -1146,7 +1167,7 @@ class DocumentHelper(Signals):
         if x < geom[0] or x > geom[0] + geom[2] or y < geom[1] or y > geom[1] + geom[3]:
             return False
 
-        table = gtk.Table(10, 2)
+        table = gtk.Table(12, 2)
         table.set_row_spacings(3)
         table.set_col_spacings(12)
 
@@ -1166,14 +1187,19 @@ class DocumentHelper(Signals):
         table.attach(self.make_label('<Ctrl>+E', False), 0, 1, 7, 8, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
         table.attach(self.make_label('<Ctrl><Home>', False), 0, 1, 8, 9, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
         table.attach(self.make_label('<Ctrl><End>', False), 0, 1, 9, 10, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><Shift><Enter>', False), 0, 1, 10, 11, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><Alt><Shift><Enter>', False), 0, 1, 10, 11, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
 
         table.attach(self.make_label(_('Enter column edit mode using selection')), 1, 2, 1, 2)
         table.attach(self.make_label(_('Enter <b>smart</b> column edit mode using selection')), 1, 2, 2, 3)
         table.attach(self.make_label(_('<b>Smart</b> column align mode using selection')), 1, 2, 3, 4)
         table.attach(self.make_label(_('<b>Smart</b> column align mode with additional space using selection')), 1, 2, 4, 5)
+
         table.attach(self.make_label(_('Toggle edit point')), 1, 2, 7, 8)
         table.attach(self.make_label(_('Add edit point at beginning of line/selection')), 1, 2, 8, 9)
         table.attach(self.make_label(_('Add edit point at end of line/selection')), 1, 2, 9, 10)
+        table.attach(self.make_label(_('Align edit points')), 1, 2, 10, 11)
+        table.attach(self.make_label(_('Align edit points with additional space')), 1, 2, 11, 12)
 
         table.show_all()
         tooltip.set_custom(table)
