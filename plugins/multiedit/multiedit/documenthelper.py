@@ -48,6 +48,7 @@ class DocumentHelper(Signals):
         self._buffer = None
         self._in_mode = False
         self._column_mode = None
+        self._move_cursor = None
 
         self._edit_points = []
         self._multi_edited = False
@@ -63,6 +64,8 @@ class DocumentHelper(Signals):
         self.connect_signal(self._view, 'copy-clipboard', self.on_copy_clipboard)
         self.connect_signal(self._view, 'cut-clipboard', self.on_cut_clipboard)
         self.connect_signal(self._view, 'query-tooltip', self.on_query_tooltip)
+        self.connect_signal(self._view, 'move-cursor', self.on_move_cursor)
+        self.connect_signal_after(self._view, 'move-cursor', self.on_move_cursor_after)
 
         self._view.props.has_tooltip = True
 
@@ -762,6 +765,108 @@ class DocumentHelper(Signals):
 
         self._apply_column_mode()
 
+    def _move_edit_points(self, buf, where):
+        diff = where.get_offset() - buf.get_iter_at_mark(self._last_insert).get_offset()
+
+        for point in self._edit_points:
+            piter = buf.get_iter_at_mark(point)
+            piter.set_offset(piter.get_offset() + diff)
+            buf.move_mark(point, piter)
+
+    def _move_edit_point_logical_positions(self, piter, count):
+        piter.forward_cursor_positions(count)
+
+        return piter
+
+    def _move_edit_point_visual_positions(self, piter, count):
+        self._view.move_visually(piter, count)
+
+        return piter
+
+    def _move_edit_point_words(self, piter, count):
+        if count > 0:
+            piter.forward_visible_word_ends(count)
+        else:
+            piter.backward_visible_word_starts(-count)
+
+        return piter
+
+    def _move_edit_point_display_lines(self, piter, count):
+        offset = self.iter_to_offset(piter)
+
+        if count < 0:
+            cnt = -count
+        else:
+            cnt = count
+
+        for i in xrange(cnt):
+            if count > 0:
+                self._view.forward_display_line(piter)
+            else:
+                self._view.backward_display_line(piter)
+
+        piter, off = self.get_visible_iter(piter.get_line(), offset)
+
+        return piter
+
+    def _move_edit_point_display_line_ends(self, piter, count):
+        if count > 0:
+            cp = piter.copy()
+
+            if cp.forward_visible_cursor_position() and not self._view.starts_display_line(cp):
+                self._view.forward_display_line_end(piter)
+        elif not self._view.starts_display_line(piter):
+            self._view.backward_display_line_start(piter)
+
+        return piter
+
+    def _move_edit_point_paragraphs(self, piter, count):
+        offset = self.iter_to_offset(piter)
+
+        piter.forward_visible_lines(count)
+        piter, off = self.get_visible_iter(piter.get_line(), offset)
+
+        return piter
+
+    def _move_edit_point_paragraph_ends(self, piter, count):
+        if count > 0:
+            if not piter.ends_line():
+                piter.forward_to_line_end()
+        elif not piter.starts_line():
+            piter.set_line_offset(0)
+
+        return piter
+
+    def _move_edit_point_horizontal_pages(self, piter, count):
+        return self._move_edit_point_paragraph_ends(piter, count)
+
+    def _move_edit_points_by_cursor(self, buf, where):
+        actions = {
+            gtk.MOVEMENT_LOGICAL_POSITIONS: self._move_edit_point_logical_positions,
+            gtk.MOVEMENT_VISUAL_POSITIONS: self._move_edit_point_visual_positions,
+            gtk.MOVEMENT_WORDS: self._move_edit_point_words,
+            gtk.MOVEMENT_DISPLAY_LINES: self._move_edit_point_display_lines,
+            gtk.MOVEMENT_DISPLAY_LINE_ENDS: self._move_edit_point_display_line_ends,
+            gtk.MOVEMENT_PARAGRAPHS: self._move_edit_point_paragraphs,
+            gtk.MOVEMENT_PARAGRAPH_ENDS: self._move_edit_point_paragraph_ends,
+            gtk.MOVEMENT_HORIZONTAL_PAGES: self._move_edit_point_horizontal_pages,
+        }
+
+        typ = self._move_cursor[0]
+        count = self._move_cursor[1]
+
+        if not typ in actions:
+            return self._move_edit_points(buf, where)
+
+        action = actions[typ]
+
+        for point in self._edit_points:
+            piter = buf.get_iter_at_mark(point)
+            piter = action(piter, count)
+            buf.move_mark(point, piter)
+
+        self._move_cursor = None
+
     def on_mark_set(self, buf, where, mark):
         if not mark == buf.get_insert():
             return
@@ -771,14 +876,10 @@ class DocumentHelper(Signals):
                 # Cancel column mode when cursor moves
                 self._cancel_column_mode()
             elif self._edit_points and self._multi_edited:
-                # Detect moving up or down a line
-
-                diff = where.get_offset() - buf.get_iter_at_mark(self._last_insert).get_offset()
-
-                for point in self._edit_points:
-                    piter = buf.get_iter_at_mark(point)
-                    piter.set_offset(piter.get_offset() + diff)
-                    buf.move_mark(point, piter)
+                if self._move_cursor != None:
+                    self._move_edit_points_by_cursor(buf, where)
+                else:
+                    self._move_edit_points(buf, where)
 
                 self._remove_duplicate_edit_points()
 
@@ -885,5 +986,11 @@ class DocumentHelper(Signals):
             ctx.show_layout(layout)
 
         return False
+
+    def on_move_cursor(self, view, step_size, count, extend_selection):
+        self._move_cursor = [step_size, count]
+
+    def on_move_cursor_after(self, view, step_size, count, extend_selection):
+        self._move_cursor = None
 
 # ex:ts=4:et:
