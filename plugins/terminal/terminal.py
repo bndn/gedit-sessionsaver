@@ -283,7 +283,7 @@ class TerminalWindowHelper(object):
         image.set_from_icon_name("utilities-terminal", gtk.ICON_SIZE_MENU)
 
         bottom = window.get_bottom_panel()
-        bottom.add_item(self._panel, _("Terminal"), image)
+        bottom.add_item(self._panel, "GeditTerminalPanel", _("Terminal"), image)
 
     def deactivate(self):
         bottom = self._window.get_bottom_panel()

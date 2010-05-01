@@ -255,6 +255,7 @@ impl_activate (GeditPlugin *plugin,
 
 	gedit_panel_add_item (panel,
 			      data->panel,
+			      "GeditCharmapPanel",
 			      _("Character Map"),
 			      image);
 
