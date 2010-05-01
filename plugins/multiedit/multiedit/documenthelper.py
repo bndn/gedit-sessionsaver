@@ -23,6 +23,7 @@ import gedit
 import gtksourceview2 as gsv
 import gtk
 import glib
+import re
 
 from signals import Signals
 import constants
@@ -134,6 +135,7 @@ class DocumentHelper(Signals):
         self._event_handlers = [
             [('Escape',), 0, self.do_escape_mode, True],
             [('Return',), 0, self.do_column_edit, True],
+            [('Return',), gtk.gdk.CONTROL_MASK, self.do_smart_column_edit, True],
             [('Home',), gtk.gdk.CONTROL_MASK, self.do_mark_start, True],
             [('End',), gtk.gdk.CONTROL_MASK, self.do_mark_end, True],
             [('e',), gtk.gdk.CONTROL_MASK, self.do_toggle_edit_point, True]
@@ -373,6 +375,112 @@ class DocumentHelper(Signals):
         # Apply tag to start -> end
         if start.compare(end) < 0:
             self._buffer.apply_tag(self._selection_tag, start, end)
+
+    def do_smart_column_edit(self, event):
+        buf = self._buffer
+
+        bounds = buf.get_selection_bounds()
+
+        if not bounds or bounds[0].get_line() == bounds[1].get_line():
+            return False
+
+        # There are a few 'smart' things
+        # 1) if there is a number at the cursor, match any number
+        # 2) if there is a non-alpha/non-space at the cursor, match it
+        # 3) match word position
+        ch = bounds[0].get_char()
+        insline = bounds[0].get_line()
+
+        regex = None
+
+        if ch.isnumeric():
+            regex = re.compile('[0-9]')
+        elif not ch.isalpha() and not ch.isspace():
+            regex = re.compile(re.escape(ch))
+        elif not bounds[0].starts_word():
+            return True
+
+        start = bounds[0].copy()
+        end = bounds[1].copy()
+
+        offset = self.iter_to_offset(start)
+
+        if not regex:
+            # Get word number
+            worditer = start.copy()
+
+            if not worditer.starts_line():
+                worditer.set_line_offset(0)
+
+            wordcount = 0
+
+            while worditer.compare(start) < 0:
+                if not worditer.forward_visible_word_end():
+                    break
+
+                wordcount += 1
+
+        start.order(end)
+
+        if not start.starts_line():
+            start.set_line_offset(0)
+
+        iters = []
+
+        while start.compare(end) < 0:
+            if start.get_line() != insline:
+                lineend = start.copy()
+
+                if not lineend.ends_line():
+                    lineend.forward_to_line_end()
+
+                if regex:
+                    matches = regex.finditer(start.get_text(lineend))
+                    closest = None
+                    closest_diff = 0
+
+                    for match in matches:
+                        piter = start.copy()
+                        piter.forward_chars(match.start(0))
+
+                        diff = abs(self.iter_to_offset(piter) - offset)
+
+                        if not closest or diff < closest_diff:
+                            closest = piter
+                            closest_diff = diff
+
+                    if not matches:
+                        return True
+                else:
+                    lineno = start.get_line()
+                    cp = start.copy()
+                    cnt = 0
+
+                    if wordcount > 0 and cp.forward_visible_word_ends(wordcount):
+                        if cp.backward_visible_word_start() and cp.get_line() == lineno:
+                            closest = cp
+                        else:
+                            closest = start.copy()
+
+                            if not closest.ends_line():
+                                closest.forward_to_line_end()
+
+                iters.append(closest)
+
+            if not start.forward_line():
+                break
+
+        # Remove official selection
+        selection = buf.get_iter_at_mark(buf.get_selection_bound())
+        buf.move_mark(buf.get_insert(), selection)
+
+        # Remove previous edit points
+        self.remove_edit_points()
+
+        for piter in iters:
+            self._add_edit_point(piter)
+
+        return True
 
     def do_column_edit(self, event):
         buf = self._buffer
@@ -783,7 +891,7 @@ class DocumentHelper(Signals):
         if text:
             lines = text.splitlines()
 
-        buf = self._view.get_buffer()
+        buf = self._buffer
         piter = buf.get_iter_at_mark(self._paste_mark)
         ins = buf.get_iter_at_mark(buf.get_insert())
 
@@ -823,9 +931,7 @@ class DocumentHelper(Signals):
             return
 
         clipboard = gtk.Clipboard(self._view.get_display())
-        buf = view.get_buffer()
-
-        self._paste_mark = view.get_buffer().create_mark(None, buf.get_iter_at_mark(buf.get_insert()), True)
+        self._paste_mark = self._buffer.create_mark(None, self._buffer.get_iter_at_mark(self._buffer.get_insert()), True)
 
         clipboard.request_text(self.on_clipboard_text)
         view.stop_emission('paste-clipboard')
@@ -954,8 +1060,9 @@ class DocumentHelper(Signals):
         self._cancel_column_mode()
         self.remove_edit_points()
 
-    def make_label(self, text):
+    def make_label(self, text, use_markup=True):
         lbl = gtk.Label(text)
+        lbl.set_use_markup(use_markup)
         lbl.set_alignment(0, 0.5)
         lbl.show()
 
@@ -970,19 +1077,22 @@ class DocumentHelper(Signals):
         if x < geom[0] or x > geom[0] + geom[2] or y < geom[1] or y > geom[1] + geom[3]:
             return False
 
-        table = gtk.Table(4, 2)
+        table = gtk.Table(5, 2)
         table.set_row_spacings(3)
         table.set_col_spacings(6)
 
-        table.attach(self.make_label('<Enter>:'), 0, 1, 0, 1, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl>+E:'), 0, 1, 1, 2, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Home>:'), 0, 1, 2, 3, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><End>:'), 0, 1, 3, 4, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Enter>:', False), 0, 1, 0, 1, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><Enter>:', False), 0, 1, 1, 2, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+
+        table.attach(self.make_label('<Ctrl>+E:', False), 0, 1, 2, 3, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><Home>:', False), 0, 1, 3, 4, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><End>:', False), 0, 1, 4, 5, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
 
         table.attach(self.make_label(_('Enter column edit mode using selection')), 1, 2, 0, 1)
-        table.attach(self.make_label(_('Toggle edit point')), 1, 2, 1, 2)
-        table.attach(self.make_label(_('Add edit point at beginning of line/selection')), 1, 2, 2, 3)
-        table.attach(self.make_label(_('Add edit point at end of line/selection')), 1, 2, 3, 4)
+        table.attach(self.make_label(_('Enter <b>smart</b> column edit mode using selection')), 1, 2, 1, 2)
+        table.attach(self.make_label(_('Toggle edit point')), 1, 2, 2, 3)
+        table.attach(self.make_label(_('Add edit point at beginning of line/selection')), 1, 2, 3, 4)
+        table.attach(self.make_label(_('Add edit point at end of line/selection')), 1, 2, 4, 5)
 
         table.show_all()
         tooltip.set_custom(table)
