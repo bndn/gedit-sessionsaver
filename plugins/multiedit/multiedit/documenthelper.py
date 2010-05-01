@@ -785,11 +785,10 @@ class DocumentHelper(Signals):
     def on_query_tooltip(self, view, x, y, keyboard_mode, tooltip):
         if not self._in_mode:
             return False
-        
-        geom = view.get_window(gtk.TEXT_WINDOW_TEXT).get_geometry()
-        geom2 = view.get_window(gtk.TEXT_WINDOW_LEFT).get_geometry()
-        
-        if y < geom[3] or x < geom2[2]:
+
+        geom = view.get_window(gtk.TEXT_WINDOW_TOP).get_geometry()
+
+        if x < geom[0] or x > geom[0] + geom[2] or y < geom[1] or y > geom[1] + geom[3]:
             return False
 
         table = gtk.Table(4, 2)
