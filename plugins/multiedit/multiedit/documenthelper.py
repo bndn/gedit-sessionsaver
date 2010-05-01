@@ -396,7 +396,7 @@ class DocumentHelper(Signals):
         if eoff < soff:
             tmp = soff
             soff = eoff
-            eoff = soff
+            eoff = tmp
 
         # Apply tags where possible
         start_line = start.get_line()
