@@ -74,6 +74,16 @@ class DocumentHelper(Signals):
         self.reset_buffer(self._view.get_buffer())
 
         self.initialize_event_handlers()
+        self.toggle_callback = None
+
+    def get_view(self):
+        return self._view
+
+    def set_toggle_callback(self, callback, data):
+        self.toggle_callback = lambda: callback(data)
+
+    def enabled(self):
+        return self._in_mode
 
     def _update_selection_tag(self):
         style = self._view.get_style()
@@ -155,12 +165,21 @@ class DocumentHelper(Signals):
         self._view.set_border_window_size(gtk.TEXT_WINDOW_TOP, 0)
         self.remove_edit_points()
 
+        if self.toggle_callback:
+            self.toggle_callback()
+
     def enable_multi_edit(self):
         self._view.set_border_window_size(gtk.TEXT_WINDOW_TOP, 20)
         self._in_mode = True
 
-    def toggle_multi_edit(self):
-        if self._in_mode:
+        if self.toggle_callback:
+            self.toggle_callback()
+
+    def toggle_multi_edit(self, enabled):
+        if self.enabled() == enabled:
+            return
+
+        if self.enabled():
             self.disable_multi_edit()
         else:
             self.enable_multi_edit()
