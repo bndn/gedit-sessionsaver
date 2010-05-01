@@ -136,6 +136,8 @@ class DocumentHelper(Signals):
             [('Escape',), 0, self.do_escape_mode, True],
             [('Return',), 0, self.do_column_edit, True],
             [('Return',), gtk.gdk.CONTROL_MASK, self.do_smart_column_edit, True],
+            [('Return',), gtk.gdk.CONTROL_MASK | gtk.gdk.SHIFT_MASK, self.do_smart_column_align, True],
+            [('Return',), gtk.gdk.CONTROL_MASK | gtk.gdk.SHIFT_MASK | gtk.gdk.MOD1_MASK, self.do_smart_column_align, True],
             [('Home',), gtk.gdk.CONTROL_MASK, self.do_mark_start, True],
             [('End',), gtk.gdk.CONTROL_MASK, self.do_mark_end, True],
             [('e',), gtk.gdk.CONTROL_MASK, self.do_toggle_edit_point, True]
@@ -376,7 +378,7 @@ class DocumentHelper(Signals):
         if start.compare(end) < 0:
             self._buffer.apply_tag(self._selection_tag, start, end)
 
-    def do_smart_column_edit(self, event):
+    def smart_column_iters(self):
         buf = self._buffer
 
         bounds = buf.get_selection_bounds()
@@ -388,8 +390,10 @@ class DocumentHelper(Signals):
         # 1) if there is a number at the cursor, match any number
         # 2) if there is a non-alpha/non-space at the cursor, match it
         # 3) match word position
-        ch = bounds[0].get_char()
-        insline = bounds[0].get_line()
+        mm = buf.get_iter_at_mark(buf.get_selection_bound())
+
+        ch = mm.get_char()
+        insline = mm.get_line()
 
         regex = None
 
@@ -397,17 +401,17 @@ class DocumentHelper(Signals):
             regex = re.compile('[0-9]')
         elif not ch.isalpha() and not ch.isspace():
             regex = re.compile(re.escape(ch))
-        elif not bounds[0].starts_word():
+        elif not mm.starts_word():
             return True
 
         start = bounds[0].copy()
         end = bounds[1].copy()
 
-        offset = self.iter_to_offset(start)
+        offset = self.iter_to_offset(mm)
 
         if not regex:
             # Get word number
-            worditer = start.copy()
+            worditer = mm.copy()
 
             if not worditer.starts_line():
                 worditer.set_line_offset(0)
@@ -419,8 +423,6 @@ class DocumentHelper(Signals):
                     break
 
                 wordcount += 1
-
-        start.order(end)
 
         if not start.starts_line():
             start.set_line_offset(0)
@@ -466,19 +468,86 @@ class DocumentHelper(Signals):
                                 closest.forward_to_line_end()
 
                 iters.append(closest)
+            else:
+                iters.append(mm)
 
             if not start.forward_line():
                 break
 
-        # Remove official selection
-        selection = buf.get_iter_at_mark(buf.get_selection_bound())
-        buf.move_mark(buf.get_insert(), selection)
+        return iters
+
+    def do_smart_column_align(self, event):
+        ret = self.smart_column_iters()
+
+        if ret == True or ret == False:
+            return ret
+
+        selection = self._buffer.get_iter_at_mark(self._buffer.get_selection_bound())
+        lastline = self._buffer.get_iter_at_mark(self._buffer.get_insert()).get_line()
+
+        # Get max visual offset
+        offsets = []
+        maxoffset = 0
+
+        for piter in ret:
+            offset = self.iter_to_offset(piter)
+
+            cp = piter.copy()
+            moffset = offset
+
+            if (event.state & gtk.gdk.MOD1_MASK) and cp.backward_visible_cursor_position() and not cp.get_char().isspace():
+                moffset += 1
+
+            if moffset > maxoffset:
+                maxoffset = moffset
+
+            offsets.append(offset)
+
+        marks = [self._buffer.create_mark(None, x, False) for x in ret]
 
         # Remove previous edit points
         self.remove_edit_points()
 
-        for piter in iters:
-            self._add_edit_point(piter)
+        self.block_signal(self._buffer, 'mark-set')
+        self.block_signal(self._buffer, 'insert-text')
+
+        for i in range(len(marks)):
+            # Align with spaces on the left such that 'mark' is at maxoffset
+            num = maxoffset - offsets[i]
+            text = ' ' * num
+
+            piter = self._buffer.get_iter_at_mark(marks[i])
+            self._buffer.insert(piter, text)
+
+            if piter.get_line() != lastline:
+                self._add_edit_point(piter)
+            else:
+                self._buffer.place_cursor(piter)
+
+        self.unblock_signal(self._buffer, 'mark-set')
+        self.unblock_signal(self._buffer, 'insert-text')
+
+        return True
+
+    def do_smart_column_edit(self, event):
+        ret = self.smart_column_iters()
+
+        if ret == True or ret == False:
+            return ret
+
+        selection = self._buffer.get_iter_at_mark(self._buffer.get_selection_bound())
+        lastline = self._buffer.get_iter_at_mark(self._buffer.get_insert()).get_line()
+
+        # Remove previous edit points
+        self.remove_edit_points()
+
+        for i in range(len(ret)):
+            piter = ret[i]
+
+            if piter.get_line() != lastline:
+                self._add_edit_point(piter)
+            else:
+                self._buffer.place_cursor(piter)
 
         return True
 
@@ -1077,22 +1146,34 @@ class DocumentHelper(Signals):
         if x < geom[0] or x > geom[0] + geom[2] or y < geom[1] or y > geom[1] + geom[3]:
             return False
 
-        table = gtk.Table(5, 2)
+        table = gtk.Table(10, 2)
         table.set_row_spacings(3)
-        table.set_col_spacings(6)
+        table.set_col_spacings(12)
 
-        table.attach(self.make_label('<Enter>:', False), 0, 1, 0, 1, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Enter>:', False), 0, 1, 1, 2, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<b>Selection</b>', True), 0, 2, 0, 1, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
 
-        table.attach(self.make_label('<Ctrl>+E:', False), 0, 1, 2, 3, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Home>:', False), 0, 1, 3, 4, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><End>:', False), 0, 1, 4, 5, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Enter>', False), 0, 1, 1, 2, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><Enter>', False), 0, 1, 2, 3, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><Shift><Enter>', False), 0, 1, 3, 4, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><Alt><Shift><Enter>', False), 0, 1, 4, 5, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
 
-        table.attach(self.make_label(_('Enter column edit mode using selection')), 1, 2, 0, 1)
-        table.attach(self.make_label(_('Enter <b>smart</b> column edit mode using selection')), 1, 2, 1, 2)
-        table.attach(self.make_label(_('Toggle edit point')), 1, 2, 2, 3)
-        table.attach(self.make_label(_('Add edit point at beginning of line/selection')), 1, 2, 3, 4)
-        table.attach(self.make_label(_('Add edit point at end of line/selection')), 1, 2, 4, 5)
+        sep = gtk.HSeparator()
+        sep.show()
+
+        table.attach(sep, 0, 2, 5, 6, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+
+        table.attach(self.make_label('<b>Edit points</b>', True), 0, 2, 6, 7, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl>+E', False), 0, 1, 7, 8, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><Home>', False), 0, 1, 8, 9, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><End>', False), 0, 1, 9, 10, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+
+        table.attach(self.make_label(_('Enter column edit mode using selection')), 1, 2, 1, 2)
+        table.attach(self.make_label(_('Enter <b>smart</b> column edit mode using selection')), 1, 2, 2, 3)
+        table.attach(self.make_label(_('<b>Smart</b> column align mode using selection')), 1, 2, 3, 4)
+        table.attach(self.make_label(_('<b>Smart</b> column align mode with additional space using selection')), 1, 2, 4, 5)
+        table.attach(self.make_label(_('Toggle edit point')), 1, 2, 7, 8)
+        table.attach(self.make_label(_('Add edit point at beginning of line/selection')), 1, 2, 8, 9)
+        table.attach(self.make_label(_('Add edit point at end of line/selection')), 1, 2, 9, 10)
 
         table.show_all()
         tooltip.set_custom(table)
