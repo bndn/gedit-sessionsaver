@@ -146,13 +146,24 @@ class DocumentHelper(Signals):
         for handler in self._event_handlers:
             handler[0] = map(lambda x: gtk.gdk.keyval_from_name(x), handler[0])
 
+    def disable_multi_edit(self):
+        if self._column_mode:
+            self._cancel_column_mode()
+
+        self._in_mode = False
+
+        self._view.set_border_window_size(gtk.TEXT_WINDOW_TOP, 0)
+        self.remove_edit_points()
+
     def enable_multi_edit(self):
         self._view.set_border_window_size(gtk.TEXT_WINDOW_TOP, 20)
-
-        if self._in_mode:
-            return
-
         self._in_mode = True
+
+    def toggle_multi_edit(self):
+        if self._in_mode:
+            self.disable_multi_edit()
+        else:
+            self.enable_multi_edit()
 
     def remove_edit_points(self):
         buf = self._buffer
@@ -163,15 +174,6 @@ class DocumentHelper(Signals):
         self._edit_points = []
         self._multi_edited = False
         self._view.queue_draw()
-
-    def disable_multi_edit(self):
-        if self._column_mode:
-            self._cancel_column_mode()
-
-        self._in_mode = False
-
-        self._view.set_border_window_size(gtk.TEXT_WINDOW_TOP, 0)
-        self.remove_edit_points()
 
     def do_escape_mode(self, event):
         if self._column_mode:

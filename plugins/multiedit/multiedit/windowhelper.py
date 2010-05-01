@@ -115,6 +115,6 @@ class WindowHelper(Signals):
         helper = view.get_data(constants.DOCUMENT_HELPER_KEY)
 
         if helper != None:
-            helper.enable_multi_edit()
+            helper.toggle_multi_edit()
 
 # ex:ts=4:et:
