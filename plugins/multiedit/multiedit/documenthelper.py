@@ -610,20 +610,33 @@ class DocumentHelper(Signals):
     def handle_column_mode_delete(self, mark):
         buf = self._buffer
         start = buf.get_iter_at_mark(mark)
-        buf.delete_mark(mark)
 
         self._view.set_editable(True)
 
         # Reinsert what was deleted, and apply column mode
         self.block_signal(buf, 'insert-text')
 
+        singlecolumn = self._column_mode[2] == self._column_mode[3]
+
         buf.begin_user_action()
         buf.insert(start, self._delete_text)
+
+        start = buf.get_iter_at_mark(mark)
+        buf.delete_mark(mark)
+
         self._apply_column_mode()
         buf.end_user_action()
 
         self.unblock_signal(buf, 'insert-text')
         self._delete_mode_id = 0
+
+        if singlecolumn:
+            # Redo the delete actually
+            end = start.copy()
+            end.forward_char()
+
+            buf.delete(start, end)
+
         return False
 
     def on_delete_range(self, buf, start, end):
