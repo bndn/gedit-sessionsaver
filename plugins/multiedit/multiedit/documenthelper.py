@@ -63,6 +63,7 @@ class DocumentHelper(Signals):
         self.connect_signal(self._view, 'undo', self.on_view_undo)
         self.connect_signal(self._view, 'copy-clipboard', self.on_copy_clipboard)
         self.connect_signal(self._view, 'cut-clipboard', self.on_cut_clipboard)
+        self.connect_signal(self._view, 'paste-clipboard', self.on_paste_clipboard)
         self.connect_signal(self._view, 'query-tooltip', self.on_query_tooltip)
         self.connect_signal(self._view, 'move-cursor', self.on_move_cursor)
         self.connect_signal_after(self._view, 'move-cursor', self.on_move_cursor_after)
@@ -772,6 +773,62 @@ class DocumentHelper(Signals):
         view.stop_emission('cut-clipboard')
 
         self._apply_column_mode()
+
+    def on_clipboard_text(self, clipboard, text, data):
+        # Check if the number of lines in the text matches the number of edit
+        # points
+
+        lines = []
+
+        if text:
+            lines = text.splitlines()
+
+        buf = self._view.get_buffer()
+        piter = buf.get_iter_at_mark(self._paste_mark)
+        ins = buf.get_iter_at_mark(buf.get_insert())
+
+        if len(lines) != (len(self._edit_points) + 1) or piter.compare(ins) != 0:
+            # Actually, the buffer better handle it...
+            self.block_signal(self._view, 'paste-clipboard')
+            buf.paste_clipboard(clipboard, piter, True)
+            self.unblock_signal(self._view, 'paste-clipboard')
+        else:
+            # Insert text at each of the edit points then
+            self.block_signal(buf, 'insert-text')
+            self.block_signal(self._view, 'mark-set')
+
+            buf.begin_user_action()
+
+            marks = list(self._edit_points)
+            marks.append(buf.get_insert())
+
+            marks.sort(lambda a, b: buf.get_iter_at_mark(a).compare(buf.get_iter_at_mark(b)))
+
+            for i in range(len(lines)):
+                piter = buf.get_iter_at_mark(marks[i])
+                buf.insert(piter, lines[i])
+
+                if marks[i] != buf.get_insert():
+                    buf.move_mark(marks[i], piter)
+
+            buf.end_user_action()
+
+            self.unblock_signal(buf, 'insert-text')
+            self.unblock_signal(self._view, 'mark-set')
+
+        buf.delete_mark(self._paste_mark)
+
+    def on_paste_clipboard(self, view):
+        if not self._edit_points:
+            return
+
+        clipboard = gtk.Clipboard(self._view.get_display())
+        buf = view.get_buffer()
+
+        self._paste_mark = view.get_buffer().create_mark(None, buf.get_iter_at_mark(buf.get_insert()), True)
+
+        clipboard.request_text(self.on_clipboard_text)
+        view.stop_emission('paste-clipboard')
 
     def _move_edit_points(self, buf, where):
         diff = where.get_offset() - buf.get_iter_at_mark(self._last_insert).get_offset()
