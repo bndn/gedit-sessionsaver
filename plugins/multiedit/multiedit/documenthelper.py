@@ -402,8 +402,12 @@ class DocumentHelper(Signals):
         start_line = start.get_line()
         end_line = end.get_line()
 
+        singlecolumn = soff == eoff
+
         while start.get_line() <= end.get_line():
             self.line_column_edit(start, soff, eoff)
+
+            singlecolumn = (singlecolumn and self.get_visible_iter(start.get_line(), soff)[1] == 0)
 
             if not start.forward_line():
                 break
@@ -418,6 +422,10 @@ class DocumentHelper(Signals):
         # Set the column mode
         self._column_mode = (start_line, end_line, soff, eoff)
         self.status('<i>%s</i>' % (xml.sax.saxutils.escape(_('Column Mode...')),))
+
+        if singlecolumn:
+            self._apply_column_mode()
+            self._multi_edited = True
 
         return True
 
