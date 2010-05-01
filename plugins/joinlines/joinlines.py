@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 #  Join lines plugin
 #  This file is part of gedit
-# 
+#
 #  Copyright (C) 2006-2007 Steve Frécinaux, André Homeyer
-#   
+#
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation; either version 2 of the License, or
 #  (at your option) any later version.
-#   
+#
 #  This program is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
-#   
+#
 #  You should have received a copy of the GNU General Public License
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330,
@@ -66,7 +66,7 @@ class JoinLinesPlugin(gedit.Plugin):
 
         window.set_data("JoinLinesPluginInfo", data)
         update_sensitivity(window)
-    
+
     def deactivate(self, window):
         data = window.get_data("JoinLinesPluginInfo")
         manager = window.get_ui_manager()
@@ -77,7 +77,7 @@ class JoinLinesPlugin(gedit.Plugin):
 
     def update_ui(self, window):
         update_sensitivity(window)
-            
+
 def update_sensitivity(window):
     data = window.get_data("JoinLinesPluginInfo")
     view = window.get_active_view()
@@ -88,11 +88,11 @@ def join_lines(window):
     document = window.get_active_document()
     if document is None:
         return
-    
+
     document.begin_user_action()
 
     # If there is a selection use it, otherwise join the
-    # next line    
+    # next line
     try:
         start, end = document.get_selection_bounds()
     except ValueError:
@@ -108,7 +108,7 @@ def join_lines(window):
     while document.get_iter_at_mark(end_mark).compare(start) == 1:
         end = start.copy()
         while end.get_char() in ('\r', '\n', ' ', '\t'):
-            end.forward_char() 
+            end.forward_char()
         document.delete(start, end)
 
         document.insert(start, ' ')
@@ -160,18 +160,18 @@ def split_lines(window):
 
     end_mark = document.create_mark(None, end)
 
-    # ignore first word 
+    # ignore first word
     previous_word_end = start.copy()
     forward_to_word_start(previous_word_end)
     forward_to_word_end(previous_word_end)
 
-    while 1: 
+    while 1:
         current_word_start = previous_word_end.copy()
         forward_to_word_start(current_word_start)
-        
+
         current_word_end = current_word_start.copy()
         forward_to_word_end(current_word_end)
-        
+
         if ord(current_word_end.get_char()) and \
            document.get_iter_at_mark(end_mark).compare(current_word_end) >= 0:
 
@@ -181,11 +181,11 @@ def split_lines(window):
             document.delete(previous_word_end, current_word_start)
 
             line_offset = get_line_offset(current_word_start, tabwidth) + word_length
-            if line_offset > width - 1: 
+            if line_offset > width - 1:
                 document.insert(current_word_start, '\n' + indent)
             else:
                 document.insert(current_word_start, ' ')
-            
+
             previous_word_end = current_word_start.copy()
             previous_word_end.forward_chars(word_length)
         else:
@@ -208,13 +208,13 @@ def get_line_offset(text_iter, tabwidth):
         offset_iter.forward_char()
 
     return line_offset
-    
+
 def forward_to_word_start(text_iter):
     char = text_iter.get_char()
     while ord(char) and (char in (' ', '\t', '\n', '\r')):
         text_iter.forward_char()
         char = text_iter.get_char()
-        
+
 def forward_to_word_end(text_iter):
     char = text_iter.get_char()
     while ord(char) and (not (char in (' ', '\t', '\n', '\r'))):

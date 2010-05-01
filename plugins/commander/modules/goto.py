@@ -22,7 +22,7 @@ def __default__(view, line, column=1):
 			linnum = citer.get_line() - int(line[1:])
 		else:
 			linnum = int(line) - 1
-		
+
 		column = int(column) - 1
 	except ValueError:
 		raise commander.commands.exceptions.Execute('Please specify a valid line number')

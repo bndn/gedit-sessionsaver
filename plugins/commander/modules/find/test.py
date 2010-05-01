@@ -11,17 +11,17 @@ __root__ = ['/', 'find_i', '//', 'r/', 'r//']
 class TextFinder(finder.Finder):
 	def __init__(self, entry, flags):
 		finder.Finder.__init__(self, entry)
-		
+
 		self.flags = flags
 
 	def do_find(self, bounds):
 		buf = self.view.get_buffer()
-		
+
 		if self.findstr:
 			buf.set_search_text(self.findstr, self.flags)
-		
+
 		ret = map(lambda x: x.copy(), bounds)
-		
+
 		if buf.search_forward(bounds[0], bounds[1], ret[0], ret[1]):
 			return ret
 		else:
@@ -69,8 +69,8 @@ Quickly find and replace all phrases in the document (case insensitive)"""
 	fd = TextFinder(entry,0)
 	yield fd.replace(argstr, True)
 
-locals()['/'] = __default__	
-locals()['find_i'] = _find_insensitive			  
-locals()['//'] = replace	 	 	
-locals()['r/'] = regex.__default__	 	 
-locals()['r//'] = regex.replace	 	 
+locals()['/'] = __default__
+locals()['find_i'] = _find_insensitive
+locals()['//'] = replace
+locals()['r/'] = regex.__default__
+locals()['r//'] = regex.replace

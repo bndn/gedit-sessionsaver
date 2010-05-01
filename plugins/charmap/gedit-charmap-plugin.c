@@ -1,13 +1,13 @@
 /*
  * gedit-charmap-plugin.c - Character map side-pane for gedit
- * 
+ *
  * Copyright (C) 2006 Steve Frécinaux
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
  * any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -103,7 +103,7 @@ on_table_sync_active_char (GucharmapChartable *chartable,
 	wc = gucharmap_chartable_get_active_character (chartable);
 
 	gs = g_string_new (NULL);
-	g_string_append_printf (gs, "U+%4.4X %s", wc, 
+	g_string_append_printf (gs, "U+%4.4X %s", wc,
 				gucharmap_get_unicode_name (wc));
 
 	temps = gucharmap_get_nameslist_equals (wc);
@@ -135,7 +135,7 @@ on_table_focus_out_event (GtkWidget      *drawing_area,
 {
 	GucharmapChartable *chartable;
 	WindowData *data;
-	
+
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_val_if_fail (data != NULL, FALSE);
@@ -159,28 +159,28 @@ on_table_activate (GucharmapChartable *chartable,
         gunichar wc;
 
         wc = gucharmap_chartable_get_active_character (chartable);
-	
+
 	g_return_if_fail (gucharmap_unichar_validate (wc));
-	
+
 	view = GTK_TEXT_VIEW (gedit_window_get_active_view (window));
-	
+
 	if (!view || !gtk_text_view_get_editable (view))
 		return;
-	
+
 	document = gtk_text_view_get_buffer (view);
-	
+
 	g_return_if_fail (document != NULL);
-	
+
 	length = g_unichar_to_utf8 (wc, buffer);
 
 	gtk_text_buffer_begin_user_action (document);
-		
+
 	gtk_text_buffer_get_selection_bounds (document, &start, &end);
 
 	gtk_text_buffer_delete_interactive (document, &start, &end, TRUE);
 	if (gtk_text_iter_editable (&start, TRUE))
 		gtk_text_buffer_insert (document, &start, buffer, length);
-	
+
 	gtk_text_buffer_end_user_action (document);
 }
 
@@ -217,7 +217,7 @@ create_charmap_panel (GeditWindow *window)
 			  G_CALLBACK (on_table_status_message),
 			  window);
 	g_signal_connect (chartable,
-			  "activate", 
+			  "activate",
 			  G_CALLBACK (on_table_activate),
 			  window);
 
@@ -243,7 +243,7 @@ impl_activate (GeditPlugin *plugin,
 	data = g_slice_new (WindowData);
 
 	theme = gtk_icon_theme_get_default ();
-	
+
 	if (gtk_icon_theme_has_icon (theme, "accessories-character-map"))
 		image = gtk_image_new_from_icon_name ("accessories-character-map",
 						      GTK_ICON_SIZE_MENU);
@@ -252,7 +252,7 @@ impl_activate (GeditPlugin *plugin,
 						      GTK_ICON_SIZE_MENU);
 
 	data->panel = create_charmap_panel (window);
-	
+
 	gedit_panel_add_item (panel,
 			      data->panel,
 			      _("Character Map"),

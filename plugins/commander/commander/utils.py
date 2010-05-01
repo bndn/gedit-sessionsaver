@@ -9,15 +9,15 @@ class Struct(dict):
 			val = super(Struct, self).__getattr__(self, name)
 		else:
 			val = self[name]
-		
+
 		return val
-	
+
 	def __setattr__(self, name, value):
 		if not name in self:
 			super(Struct, self).__setattr__(self, name, value)
 		else:
 			self[name] = value
-	
+
 	def __delattr__(self, name):
 		del self[name]
 
@@ -39,5 +39,5 @@ def getargspec(func):
 			'keywords': ret[2],
 			'defaults': ret[3]
 		})
-		
+
 	return ret

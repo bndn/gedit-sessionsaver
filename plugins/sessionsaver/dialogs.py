@@ -33,7 +33,7 @@ class SessionModel(gtk.GenericTreeModel):
     def on_session_added(self, store, session):
         piter = store.index(session)
         self.row_inserted(self.on_get_path(piter), piter)
-        
+
     def on_session_changed(self, store, session):
         piter = store.index(session)
         self.row_changed(self.on_get_path(piter), piter)
@@ -41,7 +41,7 @@ class SessionModel(gtk.GenericTreeModel):
     def on_session_removed(self, store, session):
         piter = store.index(session)
         self.row_deleted(self.on_get_path(piter))
-    
+
     def on_get_flags(self):
         return gtk.TREE_MODEL_LIST_ONLY
 

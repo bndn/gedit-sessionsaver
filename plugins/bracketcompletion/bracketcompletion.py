@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 #
 #  bracketcompletion.py - Bracket completion plugin for gedit
-#  
+#
 #  Copyright (C) 2006 - Steve Frécinaux
-#  
+#
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation; either version 2 of the License, or
 #  (at your option) any later version.
-#   
+#
 #  This program is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
-#   
+#
 #  You should have received a copy of the GNU General Public License
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330,
@@ -55,7 +55,7 @@ class BracketCompletionViewHelper(object):
         self._stack = []
         self._relocate_marks = True
         self.update_language()
-        
+
         #Add the markers to the buffer
         insert = self._doc.get_iter_at_mark(self._doc.get_insert())
         self._mark_begin = self._doc.create_mark(None, insert, True)
@@ -199,10 +199,10 @@ class BracketCompletionViewHelper(object):
 
         if event.keyval == gtk.keysyms.BackSpace:
             self._stack = []
-            
+
             if self._last_iter == None:
                 return False
-            
+
             iter = self._doc.get_iter_at_mark(self._doc.get_insert())
             iter.backward_char()
             self._doc.begin_user_action()
@@ -221,7 +221,7 @@ class BracketCompletionViewHelper(object):
 
             indent = self.compute_indentation(iter)
             indent = "\n" + indent
-            
+
             # Insert new line and auto-indent.
             self._doc.begin_user_action()
             self._doc.insert(iter, indent)
@@ -244,7 +244,7 @@ class BracketCompletionViewHelper(object):
            event.state & (gdk.CONTROL_MASK | gdk.MOD1_MASK) or \
            event.keyval not in self._bracket_keyvals:
             return
-        
+
         # Check if the insert mark is in the range of mark_begin to mark_end
         # if not we free the stack
         insert = self._doc.get_insert()
@@ -255,10 +255,10 @@ class BracketCompletionViewHelper(object):
             if not insert_iter.in_range(iter_begin, iter_end):
                 self._stack = []
                 self._relocate_marks = True
-        
+
         # Check if the word is not in our brackets
         word, start, end = self.get_current_token()
-        
+
         if word not in self._brackets and word not in close_brackets:
             return
 
@@ -268,20 +268,20 @@ class BracketCompletionViewHelper(object):
             self._doc.move_mark(self._mark_begin, insert_iter)
             self._doc.move_mark(self._mark_end, insert_iter)
             self._relocate_marks = False
-        
+
         # Depending on having close bracket or a open bracket we get the opposed
         # bracket
         bracket = None
         bracket2 = None
-        
+
         if word not in close_brackets:
             self._stack.append(word)
             bracket = self._brackets[word]
         else:
             bracket2 = close_brackets[word]
-        
+
         word2, start2, end2 = self.get_next_token()
-        
+
         # Check to skip the closing bracket
         # Example: word = ) and word2 = )
         if word == word2:
@@ -294,13 +294,13 @@ class BracketCompletionViewHelper(object):
                 end.forward_char()
                 self._doc.place_cursor(end)
             return
-        
+
         # Insert the closing bracket
         if bracket != None:
             self._doc.begin_user_action()
             self._doc.insert(end, bracket)
             self._doc.end_user_action()
-            
+
             # Leave the cursor when we want it to be
             self._last_iter = end.copy()
             end.backward_chars(len(bracket))
@@ -319,11 +319,11 @@ class BracketCompletionPlugin(gedit.Plugin):
     def add_helper(self, view):
         helper = BracketCompletionViewHelper(view)
         view.set_data(self.VIEW_DATA_KEY, helper)
-    
+
     def remove_helper(self, view):
         view.get_data(self.VIEW_DATA_KEY).deactivate()
         view.set_data(self.VIEW_DATA_KEY, None)
-                    
+
     def activate(self, window):
         for view in window.get_views():
             self.add_helper(view)

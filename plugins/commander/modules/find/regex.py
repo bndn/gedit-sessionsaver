@@ -10,13 +10,13 @@ __root__ = ['regex_i']
 class RegexFinder(finder.Finder):
 	def __init__(self, entry, flags = 0):
 		finder.Finder.__init__(self, entry)
-		
+
 		self.flags = re.UNICODE | re.MULTILINE | re.DOTALL | flags
 		self.groupre = re.compile('(\\\\)?\\$([0-9]+|{(([0-9]+):([^}]+))})')
-	
+
 	def set_find(self, findstr):
 		finder.Finder.set_find(self, findstr)
-		
+
 		try:
 			self.findre = re.compile(findstr, self.flags)
 		except Exception, e:
@@ -24,25 +24,25 @@ class RegexFinder(finder.Finder):
 
 	def do_find(self, bounds):
 		buf = self.view.get_buffer()
-		
+
 		text = bounds[0].get_text(bounds[1])
 		ret = self.findre.search(text)
-		
+
 		if ret:
 			start = bounds[0].copy()
 			start.forward_chars(ret.start())
 
 			end = bounds[0].copy()
 			end.forward_chars(ret.end())
-			
+
 			return [start, end]
 		else:
 			return False
-	
+
 	def _transform(self, text, trans):
 		if not trans:
 			return text
-		
+
 		transforms = {
 			'u': lambda x: "%s%s" % (x[0].upper(), x[1:]),
 			'U': lambda x: x.upper(),
@@ -50,29 +50,29 @@ class RegexFinder(finder.Finder):
 			'L': lambda x: x.lower(),
 			't': lambda x: x.title()
 		}
-		
+
 		for i in trans.split(','):
 			if i in transforms:
 				text = transforms[i](text)
-		
+
 		return text
-	
+
 	def _do_re_replace_group(self, matchit, group):
 		if group.group(3):
 			num = int(group.group(4))
 		else:
 			num = int(group.group(2))
-		
+
 		if group.group(1):
 			return group.group(2)
 		elif num < len(matchit.groups()) + 1:
 			return self._transform(matchit.group(num), group.group(5))
 		else:
 			return group.group(0)
-	
+
 	def _do_re_replace(self, matchit):
 		return self.groupre.sub(lambda x: self._do_re_replace_group(matchit, x), self.replacestr)
-	
+
 	def get_replace(self, text):
 		try:
 			return self.findre.sub(self._do_re_replace, text)

@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 #  Color picker plugin
 #  This file is part of gedit-plugins
-# 
+#
 #  Copyright (C) 2006 Jesse van den Kieboom
-#   
+#
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation; either version 2 of the License, or
 #  (at your option) any later version.
-#   
+#
 #  This program is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
-#   
+#
 #  You should have received a copy of the GNU General Public License
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330,
@@ -121,12 +121,12 @@ class ColorPickerPlugin(gedit.Plugin):
     def skip_hex(self, buf, iter, next_char):
         while True:
             char = iter.get_char()
-            
+
             if not char:
                 return
 
             if char.lower() not in \
-                    ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+                    ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                     'a', 'b', 'c', 'd', 'e', 'f'):
                 return
 
@@ -248,9 +248,9 @@ class ColorPickerPlugin(gedit.Plugin):
     def on_dialog_response(self, dialog, response):
         if response == gtk.RESPONSE_OK:
             color = dialog.colorsel.get_current_color()
-            
+
             self.scale_color(color)
-            
+
             self.insert_color("%02x%02x%02x" % (color.red, \
                     color.green, color.blue))
         else:

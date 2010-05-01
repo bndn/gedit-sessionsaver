@@ -16,14 +16,14 @@ does not work correctly."""
 
 	# Get the command
 	res = commander.commands.completion.command([command], 0)
-	
+
 	if not res:
 		raise commander.commands.exceptions.Execute('Could not find command: ' + command)
 
 	mod = res[0][0]
-	
+
 	while not isinstance(mod, commander.commands.module.Module):
 		mod = mod.parent
-	
+
 	commander.commands.Commands().reload_module(mod)
 	return commander.commands.result.DONE

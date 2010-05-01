@@ -16,7 +16,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with gedit Session Saver Plugin; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin St, Fifth Floor, 
+# Foundation, Inc., 51 Franklin St, Fifth Floor,
 # Boston, MA  02110-1301  USA
 
 import os.path
@@ -59,10 +59,10 @@ class SessionStore(gobject.GObject):
 
     def __iter__(self):
         return iter(self._sessions)
-    
+
     def __getitem__(self, index):
         return self._sessions[index]
-    
+
     def __getslice__(self, i, j):
         return self._sessions[i:j]
 
@@ -72,7 +72,7 @@ class SessionStore(gobject.GObject):
     def do_session_added(self, session):
         self._sessions.append(session)
         self._sessions.sort()
-    
+
     def do_session_changed(self, session):
         index = self._sessions.index(session)
         self._sessions[index] = session
@@ -84,10 +84,10 @@ class SessionStore(gobject.GObject):
             self.emit('session-changed', session)
         else:
             self.emit('session-added', session)
-    
+
     def do_session_removed(self, session):
         self._sessions.remove(session)
-    
+
     def remove(self, session):
         assert isinstance(session, Session)
         if session in self:
@@ -131,7 +131,7 @@ class XMLSessionStore(SessionStore):
     def load(self):
         if not os.path.isfile(self.filename):
             return
-        
+
         parser = expat.ParserCreate('UTF-8')
         parser.buffer_text = True
         parser.StartElementHandler = self._expat_start_handler
@@ -148,7 +148,7 @@ class XMLSessionStore(SessionStore):
         elif tag == 'session':
             assert self._current_session is None
             self._current_session = Session(attr['name'])
-        
+
     def _expat_end_handler(self, tag):
         if tag == 'session':
             self.add(self._current_session)

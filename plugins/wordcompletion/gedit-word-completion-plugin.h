@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2009 Ignacio Casal Quinteiro <icq@gnome.org>
  *
  * This program is free software; you can redistribute it and/or modify

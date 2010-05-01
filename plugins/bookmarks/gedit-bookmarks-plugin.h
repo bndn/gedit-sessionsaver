@@ -1,6 +1,6 @@
 /*
  * gedit-advancedediting-plugin.h - Advanced editing for gedit
- * 
+ *
  * Copyright (C) 2008 Jesse van den Kieboom
  *
  * This program is free software; you can redistribute it and/or modify

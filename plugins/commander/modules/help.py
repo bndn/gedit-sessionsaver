@@ -15,11 +15,11 @@ def _name_match(first, second):
 
 	if len(first) > len(second):
 		return False
-	
+
 	for i in xrange(0, len(first)):
 		if not second[i].startswith(first[i]):
 			return False
-	
+
 	return True
 
 def _doc_text(command, func):
@@ -45,9 +45,9 @@ def __default__(entry, command='help'):
 
 Show detailed information on how to use a certain command (if available)"""
 	res = commander.commands.completion.command([command], 0)
-	
+
 	if not res:
 		raise commander.commands.exceptions.Execute('Could not find command: ' + command)
 
 	entry.info_show(_doc_text(command, res[0][0]), True)
-	return commands.result.DONE		
+	return commands.result.DONE

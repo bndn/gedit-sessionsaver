@@ -18,7 +18,7 @@ class WindowHelper:
 		self._accel = gtk.AccelGroup()
 		self._accel.connect_by_path(accel_path, self._do_command)
 		self._window.add_accel_group(self._accel)
-	
+
 	def deactivate(self):
 		self._window.remove_accel_group(self._accel)
 		self._window = None
@@ -26,10 +26,10 @@ class WindowHelper:
 
 	def update_ui(self):
 		pass
-	
+
 	def _do_command(self, group, obj, keyval, mod):
 		view = self._window.get_active_view()
-		
+
 		if not view:
 			return False
 
@@ -39,6 +39,6 @@ class WindowHelper:
 
 		self._entry.grab_focus()
 		return True
-	
+
 	def on_entry_destroy(self, widget):
 		self._entry = None

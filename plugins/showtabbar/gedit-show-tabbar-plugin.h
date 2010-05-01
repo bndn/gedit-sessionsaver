@@ -1,6 +1,6 @@
 /*
  * gedit-show-tabbar-plugin.h
- * 
+ *
  * Copyright (C) 2006 Steve Frécinaux
  *
  * This program is free software; you can redistribute it and/or modify

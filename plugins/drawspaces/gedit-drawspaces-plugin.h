@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2008 Ignacio Casal Quinteiro <nacho.resa@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -48,7 +48,7 @@ typedef struct _GeditDrawspacesPlugin		GeditDrawspacesPlugin;
 struct _GeditDrawspacesPlugin
 {
 	GeditPlugin parent_instance;
-	
+
 	/* private */
 	GeditDrawspacesPluginPrivate *priv;
 };

@@ -16,7 +16,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with gedit Session Saver Plugin; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin St, Fifth Floor, 
+# Foundation, Inc., 51 Franklin St, Fifth Floor,
 # Boston, MA  02110-1301  USA
 
 import gobject
@@ -142,11 +142,11 @@ class SessionSaverPlugin(gedit.Plugin):
 
     def update_ui(self, window):
         window.get_data(self.WINDOW_DATA_KEY).update_ui()
-    
+
     def update_session_menu(self):
         for window in gedit.app_get_default().get_windows():
             window.get_data(self.WINDOW_DATA_KEY).update_session_menu()
-    
+
     def load_session(self, session, window = None):
         # Note: a session has to stand on its own window.
         app = gedit.app_get_default()

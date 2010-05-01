@@ -63,7 +63,7 @@ class DocumentHelper(Signals):
         self.connect_signal(self._view, 'copy-clipboard', self.on_copy_clipboard)
         self.connect_signal(self._view, 'cut-clipboard', self.on_cut_clipboard)
         self.connect_signal(self._view, 'query-tooltip', self.on_query_tooltip)
-        
+
         self._view.props.has_tooltip = True
 
         self.reset_buffer(self._view.get_buffer())
@@ -117,11 +117,11 @@ class DocumentHelper(Signals):
 
         self.disconnect_signals(self._view)
         self._view = None
-        
+
         if self._status_timeout != 0:
             glib.source_remove(self._status_timeout)
             self._status_timeout = 0
-        
+
         if self._delete_mode_id != 0:
             glib.source_remove(self._delete_mode_id)
             self._delete_mode_id = 0
@@ -266,11 +266,11 @@ class DocumentHelper(Signals):
     def _add_edit_point(self, piter):
         # Check if there is already an edit point here
         marks = piter.get_marks()
-        
+
         for mark in marks:
             if mark in self._edit_points:
                 return
-        
+
         buf = self._buffer
         mark = buf.create_mark(None, piter, True)
         mark.set_visible(True)
@@ -280,7 +280,7 @@ class DocumentHelper(Signals):
 
     def _remove_duplicate_edit_points(self):
         buf = self._buffer
-        
+
         for mark in list(self._edit_points):
             if mark.get_deleted():
                 continue
@@ -289,14 +289,14 @@ class DocumentHelper(Signals):
 
             others = piter.get_marks()
             others.remove(mark)
-            
+
             for other in others:
                 if other in self._edit_points:
                     buf.delete_mark(other)
                     self._edit_points.remove(other)
-        
+
         marks = buf.get_iter_at_mark(buf.get_insert()).get_marks()
-        
+
         for mark in marks:
             if mark in self._edit_points:
                 buf.delete_mark(mark)
@@ -313,7 +313,7 @@ class DocumentHelper(Signals):
     def _remove_status(self):
         self._status = None
         self._invalidate_status()
-        
+
         self._status_timeout = 0
         return False
 
@@ -321,13 +321,13 @@ class DocumentHelper(Signals):
         if not self._in_mode:
             self._status = None
             return
-            
+
         self._status = text
         self._invalidate_status()
-        
+
         if self._status_timeout != 0:
             glib.source_remove(self._status_timeout)
-        
+
         self._status_timeout = glib.timeout_add(3000, self._remove_status)
 
     def _apply_column_mode(self):
@@ -408,7 +408,7 @@ class DocumentHelper(Signals):
         # Remove official selection
         insert = buf.get_iter_at_mark(buf.get_insert())
         buf.move_mark(buf.get_selection_bound(), insert)
-        
+
         # Remove previous marks
         self.remove_edit_points()
 
@@ -468,7 +468,7 @@ class DocumentHelper(Signals):
 
             ctx.rectangle(rx, y, rw, height)
             ctx.fill()
-            
+
         return False
 
     def do_mark_start_end(self, test, move):
@@ -493,51 +493,51 @@ class DocumentHelper(Signals):
 
             if not start.forward_line():
                 break
-        
+
         return orig, end
 
     def do_mark_start(self, event):
         start, end = self.do_mark_start_end(None, lambda x: x.set_line_offset(0))
-        
+
         start.backward_line()
-        
+
         buf = self._buffer
         buf.move_mark(buf.get_insert(), start)
         buf.move_mark(buf.get_selection_bound(), start)
-        
+
         return True
 
     def do_mark_end(self, event):
         start, end = self.do_mark_start_end(lambda x: x.ends_line(), lambda x: x.forward_to_line_end())
-        
+
         end.forward_line()
-        
+
         if not end.ends_line():
             end.forward_to_line_end()
-        
+
         buf = self._buffer
         buf.move_mark(buf.get_insert(), end)
         buf.move_mark(buf.get_selection_bound(), end)
 
         return True
-        
+
     def do_toggle_edit_point(self, event):
         buf = self._buffer
         piter = buf.get_iter_at_mark(buf.get_insert())
-        
+
         marks = piter.get_marks()
-        
+
         for mark in marks:
             if mark in self._edit_points:
                 buf.delete_mark(mark)
                 self._edit_points.remove(mark)
-                
+
                 self.status('<i>%s</i>' % (xml.sax.saxutils.escape(_('Removed edit point...'),)))
                 return
-        
+
         self._add_edit_point(piter)
         return True
-        
+
     def on_key_press_event(self, view, event):
         defmod = gtk.accelerator_get_default_mod_mask() & event.state
 
@@ -576,7 +576,7 @@ class DocumentHelper(Signals):
             # Insert the text at all the edit points
             for mark in self._edit_points:
                 piter = buf.get_iter_at_mark(mark)
-                
+
                 if not buf.get_iter_at_mark(buf.get_insert()).equal(piter):
                     self._multi_edited = True
                     buf.insert(piter, text)
@@ -587,11 +587,11 @@ class DocumentHelper(Signals):
 
         if hasattr(where, 'assign'):
             where.assign(iterwas)
-        
+
         if atinsert:
             buf.move_mark(buf.get_insert(), iterwas)
             buf.move_mark(buf.get_selection_bound(), iterwas)
-            
+
         buf.delete_mark(wasat)
         buf.end_user_action()
         self.unblock_signal(buf, 'insert-text')
@@ -641,7 +641,7 @@ class DocumentHelper(Signals):
                 for mark in self._edit_points:
                     piter = buf.get_iter_at_mark(mark)
                     other = piter.copy()
-                    
+
                     if self._is_backspace:
                         # Remove 'delete_length' chars _before_ piter
                         if not other.backward_chars(self._delete_length):
@@ -660,10 +660,10 @@ class DocumentHelper(Signals):
 
                 buf.end_user_action()
                 self.unblock_signal(buf, 'delete-range')
-                
+
                 piter = buf.get_iter_at_mark(orig)
                 buf.delete_mark(orig)
-                
+
                 # To be able to have it not crash with old pygtk
                 if hasattr(start, 'assign'):
                     start.assign(piter)
@@ -681,28 +681,28 @@ class DocumentHelper(Signals):
         bounds = buf.get_bounds()
 
         buf.remove_tag(self._selection_tag, bounds[0], bounds[1])
-        
+
         self.status('<i>%s</i>' % (xml.sax.saxutils.escape(_('Cancelled column mode...'),)))
         self._view.queue_draw()
 
     def _column_text(self):
         if not self._column_mode:
             return ''
-        
+
         start = self._column_mode[0]
         end = self._column_mode[1]
         buf = self._buffer
 
         cstart = self._column_mode[2]
         cend = self._column_mode[3]
-        
+
         lines = []
         width = cend - cstart
 
         while start <= end:
             start_iter, soff = self.get_visible_iter(start, cstart)
             end_iter, eoff = self.get_visible_iter(start, cend)
-            
+
             if soff == 0 and eoff == 0:
                 # Just text
                 lines.append(start_iter.get_text(end_iter))
@@ -721,32 +721,32 @@ class DocumentHelper(Signals):
                 lines.append(start_iter.get_text(end_iter) + (' ' * abs(eoff)))
             else:
                 lines.append('')
-            
+
             start += 1
-        
+
         return "\n".join(lines)
 
     def on_copy_clipboard(self, view):
         if not self._column_mode:
             return
-        
+
         text = self._column_text()
 
         clipboard = gtk.Clipboard(self._view.get_display())
         clipboard.set_text(text)
-        
+
         view.stop_emission('copy-clipboard')
-    
+
     def on_cut_clipboard(self, view):
         if not self._column_mode:
             return
-        
+
         text = self._column_text()
         clipboard = gtk.Clipboard(self._view.get_display())
         clipboard.set_text(text)
-        
+
         view.stop_emission('cut-clipboard')
-        
+
         self._apply_column_mode()
 
     def on_mark_set(self, buf, where, mark):
@@ -759,7 +759,7 @@ class DocumentHelper(Signals):
                 self._cancel_column_mode()
             elif self._edit_points and self._multi_edited:
                 # Detect moving up or down a line
-                
+
                 diff = where.get_offset() - buf.get_iter_at_mark(self._last_insert).get_offset()
 
                 for point in self._edit_points:
@@ -774,14 +774,14 @@ class DocumentHelper(Signals):
     def on_view_undo(self, view):
         self._cancel_column_mode()
         self.remove_edit_points()
-    
+
     def make_label(self, text):
         lbl = gtk.Label(text)
         lbl.set_alignment(0, 0.5)
         lbl.show()
-        
+
         return lbl
-    
+
     def on_query_tooltip(self, view, x, y, keyboard_mode, tooltip):
         if not self._in_mode:
             return False
@@ -799,12 +799,12 @@ class DocumentHelper(Signals):
         table.attach(self.make_label('<Ctrl>+E:'), 0, 1, 1, 2, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
         table.attach(self.make_label('<Ctrl><Home>:'), 0, 1, 2, 3, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
         table.attach(self.make_label('<Ctrl><End>:'), 0, 1, 3, 4, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        
+
         table.attach(self.make_label(_('Enter column edit mode using selection')), 1, 2, 0, 1)
         table.attach(self.make_label(_('Toggle edit point')), 1, 2, 1, 2)
         table.attach(self.make_label(_('Add edit point at beginning of line/selection')), 1, 2, 2, 3)
         table.attach(self.make_label(_('Add edit point at end of line/selection')), 1, 2, 3, 4)
-        
+
         table.show_all()
         tooltip.set_custom(table)
         return True
@@ -850,7 +850,7 @@ class DocumentHelper(Signals):
         ctx.set_line_width(1)
 
         col = self.from_color(view.get_style().text[view.state])
-        
+
         ctx.set_source_rgba(col[0], col[1], col[2], 0.6)
         ctx.move_to(geom[0], geom[1] + geom[3] - 1)
         ctx.rel_line_to(geom[2], 0)
@@ -859,7 +859,7 @@ class DocumentHelper(Signals):
         ctx.set_source_rgb(col[0], col[1], col[2])
         ctx.move_to(geom[2] - extents[1][2] - 3, (geom[3] - extents[1][3]) / 2)
         ctx.show_layout(layout)
-        
+
         if not self._status:
             status = ''
         else:
@@ -867,7 +867,7 @@ class DocumentHelper(Signals):
 
         if status:
             layout.set_markup(status)
-            
+
             ctx.move_to(3, (geom[3] - extents[1][3]) / 2)
             ctx.show_layout(layout)
 

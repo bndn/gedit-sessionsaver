@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2009 Ignacio Casal Quinteiro <icq@gnome.org>
  *               2009 Jesse van den Kieboom <jesse@gnome.org>
  *
@@ -6,7 +6,7 @@
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
  * any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -69,10 +69,10 @@ add_view (WindowData    *data,
 {
 	GtkSourceCompletion *completion;
 	GtkTextBuffer *buf;
-	
+
 	completion = gtk_source_view_get_completion (view);
 	buf = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
-	
+
 	gtk_source_completion_add_provider (completion,
 					    GTK_SOURCE_COMPLETION_PROVIDER (data->provider),
 					    NULL);
@@ -86,10 +86,10 @@ remove_view (WindowData    *data,
 {
 	GtkSourceCompletion *completion;
 	GtkTextBuffer *buf;
-	
+
 	completion = gtk_source_view_get_completion (view);
 	buf = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
-	
+
 	gtk_source_completion_remove_provider (completion,
 					       GTK_SOURCE_COMPLETION_PROVIDER (data->provider),
 					       NULL);
@@ -104,11 +104,11 @@ tab_added_cb (GeditWindow *window,
 {
 	GeditView *view;
 	WindowData *data;
-	
+
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
-	
+
 	view = gedit_tab_get_view (tab);
 
 	add_view (data, GTK_SOURCE_VIEW (view));
@@ -121,11 +121,11 @@ tab_removed_cb (GeditWindow *window,
 {
 	GeditView *view;
 	WindowData *data;
-	
+
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
-	
+
 	view = gedit_tab_get_view (tab);
 
 	remove_view (data, GTK_SOURCE_VIEW (view));
@@ -173,7 +173,7 @@ impl_deactivate	(GeditPlugin *plugin,
 	GList *views, *l;
 
 	gedit_debug (DEBUG_PLUGINS);
-	
+
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
@@ -186,7 +186,7 @@ impl_deactivate	(GeditPlugin *plugin,
 
 	g_signal_handler_disconnect (window, data->tab_added_id);
 	g_signal_handler_disconnect (window, data->tab_removed_id);
-	
+
 	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
 }
 

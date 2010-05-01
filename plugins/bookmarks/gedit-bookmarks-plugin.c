@@ -1,13 +1,13 @@
 /*
  * gedit-bookmarks-plugin.c - Bookmarking for gedit
- * 
+ *
  * Copyright (C) 2008 Jesse van den Kieboom
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
  * any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -82,17 +82,17 @@ static void on_begin_user_action		(GtkTextBuffer *buffer,
 static void on_end_user_action			(GtkTextBuffer *buffer,
 						 InsertData    *data);
 
-static void on_toggle_bookmark_activate 	(GtkAction   *action, 
+static void on_toggle_bookmark_activate 	(GtkAction   *action,
 						 GeditWindow *window);
-static void on_next_bookmark_activate 		(GtkAction   *action, 
+static void on_next_bookmark_activate 		(GtkAction   *action,
 						 GeditWindow *window);
-static void on_previous_bookmark_activate 	(GtkAction   *action, 
+static void on_previous_bookmark_activate 	(GtkAction   *action,
 						 GeditWindow *window);
-static void on_tab_added 			(GeditWindow *window, 
-						 GeditTab    *tab, 
+static void on_tab_added 			(GeditWindow *window,
+						 GeditTab    *tab,
 						 GeditPlugin *plugin);
-static void on_tab_removed 			(GeditWindow *window, 
-						 GeditTab    *tab, 
+static void on_tab_removed 			(GeditWindow *window,
+						 GeditTab    *tab,
 						 GeditPlugin *plugin);
 
 static void add_bookmark (GtkSourceBuffer *buffer, GtkTextIter *iter);
@@ -135,7 +135,7 @@ free_insert_data (InsertData *data)
 
 static GtkActionEntry const action_entries[] = {
 	{"ToggleBookmark", NULL, N_("Toggle Bookmark"), "<Control><Alt>B",
-	 N_("Toggle bookmark status of the current line"), 
+	 N_("Toggle bookmark status of the current line"),
 	 G_CALLBACK (on_toggle_bookmark_activate)},
 	{"NextBookmark", NULL, N_("Goto Next Bookmark"), "<Control>B",
 	 N_("Goto the next bookmark"),
@@ -167,18 +167,18 @@ install_menu (GeditWindow *window)
 
 	manager = gedit_window_get_ui_manager (window);
 	data->action_group = gtk_action_group_new ("GeditBookmarksPluginActions");
-	
+
 	gtk_action_group_set_translation_domain (data->action_group,
 						 GETTEXT_PACKAGE);
-	
-	gtk_action_group_add_actions (data->action_group, 
+
+	gtk_action_group_add_actions (data->action_group,
 				      action_entries,
 				      G_N_ELEMENTS (action_entries),
 				      window);
-				      
+
 	gtk_ui_manager_insert_action_group (manager, data->action_group, -1);
 	data->ui_id = gtk_ui_manager_add_ui_from_string (manager, uidefinition, -1, &error);
-	
+
 	if (!data->ui_id)
 	{
 		g_warning ("Could not load UI: %s", error->message);
@@ -191,12 +191,12 @@ uninstall_menu (GeditWindow *window)
 {
 	WindowData *data = BOOKMARKS_DATA (window);
 	GtkUIManager *manager;
-	
+
 	manager = gedit_window_get_ui_manager (window);
-	
+
 	gtk_ui_manager_remove_ui (manager, data->ui_id);
 	gtk_ui_manager_remove_action_group (manager, data->action_group);
-	
+
 	g_object_unref (data->action_group);
 }
 
@@ -207,24 +207,24 @@ disable_bookmarks (GeditView *view)
 	GtkTextIter end;
 	GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
 	gpointer data;
-	
+
 	gtk_source_view_set_show_line_marks (GTK_SOURCE_VIEW (view), FALSE);
 
 	gtk_text_buffer_get_bounds (buffer, &start, &end);
-	gtk_source_buffer_remove_source_marks (GTK_SOURCE_BUFFER (buffer), 
-					       &start, 
-					       &end, 
+	gtk_source_buffer_remove_source_marks (GTK_SOURCE_BUFFER (buffer),
+					       &start,
+					       &end,
 					       BOOKMARK_CATEGORY);
 
 	g_signal_handlers_disconnect_by_func (buffer, on_style_scheme_notify, view);
 	g_signal_handlers_disconnect_by_func (buffer, on_delete_range, NULL);
-	
+
 	data = g_object_get_data (G_OBJECT (buffer), INSERT_DATA_KEY);
 
 	g_signal_handlers_disconnect_by_func (buffer, on_insert_text_before, data);
 	g_signal_handlers_disconnect_by_func (buffer, on_begin_user_action, data);
 	g_signal_handlers_disconnect_by_func (buffer, on_end_user_action, data);
-	
+
 	g_object_set_data (G_OBJECT (buffer), INSERT_DATA_KEY, NULL);
 }
 
@@ -266,7 +266,7 @@ enable_bookmarks (GeditView   *view,
 		g_object_unref (pixbuf);
 
 		gtk_source_view_set_show_line_marks (GTK_SOURCE_VIEW (view), TRUE);
-		
+
 		g_signal_connect (buffer,
 				  "notify::style-scheme",
 				  G_CALLBACK (on_style_scheme_notify),
@@ -276,11 +276,11 @@ enable_bookmarks (GeditView   *view,
 				        "delete-range",
 				        G_CALLBACK (on_delete_range),
 				        NULL);
-				        
+
 		data = g_slice_new0 (InsertData);
-		
-		g_object_set_data_full (G_OBJECT (buffer), 
-					INSERT_DATA_KEY, 
+
+		g_object_set_data_full (G_OBJECT (buffer),
+					INSERT_DATA_KEY,
 					data,
 					(GDestroyNotify) free_insert_data);
 
@@ -314,28 +314,28 @@ load_bookmarks (GeditView *view,
 	GtkTextIter iter;
 	gint tot_lines;
 	gint i;
-	
+
 	buf = GTK_SOURCE_BUFFER (gtk_text_view_get_buffer (GTK_TEXT_VIEW (view)));
-	
+
 	gtk_text_buffer_get_end_iter (GTK_TEXT_BUFFER (buf), &iter);
 	tot_lines = gtk_text_iter_get_line (&iter);
-	
+
 	for (i = 0; bookmarks != NULL && bookmarks[i] != NULL; i++)
 	{
 		gint line;
-		
+
 		line = atoi (bookmarks[i]);
 
 		if (line >= 0 && line < tot_lines)
 		{
 			GSList *marks;
-		
+
 			gtk_text_buffer_get_iter_at_line (GTK_TEXT_BUFFER (buf),
 							  &iter, line);
-			
+
 			marks = gtk_source_buffer_get_source_marks_at_iter (buf, &iter,
 									    BOOKMARK_CATEGORY);
-			
+
 			if (marks == NULL)
 			{
 				/* Add new bookmark */
@@ -364,7 +364,7 @@ load_bookmark_metadata (GeditView *view)
 	if (bookmarks_attr != NULL)
 	{
 		gchar **bookmarks;
-	
+
 		bookmarks = g_strsplit (bookmarks_attr, ",", -1);
 		g_free (bookmarks_attr);
 
@@ -419,20 +419,20 @@ goto_bookmark (GeditWindow    *window,
 	if (!func (GTK_SOURCE_BUFFER (buffer), &at, BOOKMARK_CATEGORY))
 	{
 		GSList *marks;
-		
+
 		/* cycle through */
 		cycle_func (buffer, &at);
 		gtk_text_iter_set_line_offset (&at, 0);
-		
+
 		marks = gtk_source_buffer_get_source_marks_at_iter (GTK_SOURCE_BUFFER (buffer),
 		                                                    &at,
 		                                                    BOOKMARK_CATEGORY);
-		
+
 		if (!marks && !func (GTK_SOURCE_BUFFER (buffer), &at, BOOKMARK_CATEGORY))
 		{
 			return;
 		}
-		
+
 		g_slist_free (marks);
 	}
 
@@ -465,12 +465,12 @@ message_get_view_iter (GeditWindow    *window,
 	{
 		*view = GTK_SOURCE_VIEW (gedit_window_get_active_view (window));
 	}
-	
+
 	if (!*view)
 	{
 		return;
 	}
-	
+
 	if (gedit_message_has_key (message, "iter"))
 	{
 		gedit_message_get (message, "iter", iter, NULL);
@@ -493,12 +493,12 @@ message_toggle_cb (GeditMessageBus *bus,
 	GtkTextIter iter;
 
 	message_get_view_iter (window, message, &view, &iter);
-	
+
 	if (!view)
 	{
 		return;
 	}
-	
+
 	toggle_bookmark (GTK_SOURCE_BUFFER (gtk_text_view_get_buffer (GTK_TEXT_VIEW (view))),
 	                 &iter);
 }
@@ -512,12 +512,12 @@ message_add_cb (GeditMessageBus *bus,
 	GtkTextIter iter;
 
 	message_get_view_iter (window, message, &view, &iter);
-	
+
 	if (!view)
 	{
 		return;
 	}
-	
+
 	add_bookmark (GTK_SOURCE_BUFFER (gtk_text_view_get_buffer (GTK_TEXT_VIEW (view))),
 	              &iter);
 }
@@ -531,12 +531,12 @@ message_remove_cb (GeditMessageBus *bus,
 	GtkTextIter iter;
 
 	message_get_view_iter (window, message, &view, &iter);
-	
+
 	if (!view)
 	{
 		return;
 	}
-	
+
 	remove_bookmark (GTK_SOURCE_BUFFER (gtk_text_view_get_buffer (GTK_TEXT_VIEW (view))),
 	                 &iter);
 }
@@ -550,7 +550,7 @@ message_goto_next_cb (GeditMessageBus *bus,
 	GtkTextIter iter;
 
 	message_get_view_iter (window, message, &view, &iter);
-	
+
 	if (!view)
 	{
 		return;
@@ -572,7 +572,7 @@ message_goto_previous_cb (GeditMessageBus *bus,
 	GtkTextIter iter;
 
 	message_get_view_iter (window, message, &view, &iter);
-	
+
 	if (!view)
 	{
 		return;
@@ -589,7 +589,7 @@ static void
 install_messages (GeditWindow *window)
 {
 	GeditMessageBus *bus = gedit_window_get_message_bus (window);
-	
+
 	gedit_message_bus_register (bus,
 	                            MESSAGE_OBJECT_PATH,
 	                           "toggle",
@@ -659,7 +659,7 @@ impl_activate (GeditPlugin *plugin,
 				WINDOW_DATA_KEY,
 				data,
 				(GDestroyNotify) free_window_data);
-	
+
 	views = gedit_window_get_views (window);
 	for (item = views; item != NULL; item = item->next)
 	{
@@ -689,19 +689,19 @@ save_bookmark_metadata (GeditView *view)
 	gboolean first = TRUE;
 
 	buf = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
-	
+
 	gtk_text_buffer_get_start_iter (buf, &iter);
-	
+
 	string = g_string_new (NULL);
-	
+
 	while (gtk_source_buffer_forward_iter_to_source_mark (GTK_SOURCE_BUFFER (buf),
 							      &iter,
 							      BOOKMARK_CATEGORY))
 	{
 		gint line;
-		
+
 		line = gtk_text_iter_get_line (&iter);
-		
+
 		if (!first)
 		{
 			g_string_append_printf (string, ",%d", line);
@@ -720,7 +720,7 @@ save_bookmark_metadata (GeditView *view)
 	}
 	else
 		val = g_string_free (string, FALSE);
-	
+
 	gedit_document_set_metadata (GEDIT_DOCUMENT (buf), METADATA_ATTR,
 				     val, NULL);
 
@@ -739,19 +739,19 @@ impl_deactivate	(GeditPlugin *plugin,
 
 	uninstall_menu (window);
 	uninstall_messages (window);
-	
+
 	views = gedit_window_get_views (window);
 
 	for (item = views; item != NULL; item = item->next)
 	{
 		disable_bookmarks (GEDIT_VIEW (item->data));
 	}
-	
+
 	g_list_free (views);
-	
+
 	data = BOOKMARKS_DATA (window);
 	g_return_if_fail (data != NULL);
-	
+
 	g_signal_handlers_disconnect_by_func (window, on_tab_added, plugin);
 	g_signal_handlers_disconnect_by_func (window, on_tab_removed, plugin);
 
@@ -777,19 +777,19 @@ update_background_color (GeditView *view)
 	GtkSourceStyle *style;
 	GtkSourceStyleScheme *scheme;
 	GtkTextBuffer *buffer;
-	
+
 	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
-	
+
 	scheme = gtk_source_buffer_get_style_scheme (GTK_SOURCE_BUFFER (buffer));
 	style = gtk_source_style_scheme_get_style (scheme, "search-match");
-	
+
 	if (style)
 	{
 		gboolean bgset;
 		gchar *bg;
-		
+
 		g_object_get (style, "background-set", &bgset, "background", &bg, NULL);
-		
+
 		if (bgset)
 		{
 			GdkColor color;
@@ -798,17 +798,17 @@ update_background_color (GeditView *view)
 								      BOOKMARK_CATEGORY,
 								      &color);
 			g_free (bg);
-			
+
 			return;
 		}
 	}
-	
+
 	gtk_source_view_set_mark_category_background (source_view,
 						      BOOKMARK_CATEGORY,
 						      NULL);
 }
 
-static void 
+static void
 on_style_scheme_notify (GObject     *object,
 			GParamSpec  *pspec,
 			GeditView   *view)
@@ -816,7 +816,7 @@ on_style_scheme_notify (GObject     *object,
 	update_background_color (view);
 }
 
-static void 
+static void
 on_delete_range (GtkTextBuffer *buffer,
 	     	 GtkTextIter   *start,
 	     	 GtkTextIter   *end,
@@ -827,18 +827,18 @@ on_delete_range (GtkTextBuffer *buffer,
 	GSList *item;
 
 	iter = *start;
-	
+
 	/* move to start of line */
 	gtk_text_iter_set_line_offset (&iter, 0);
-	
+
 	/* remove any bookmarks that are collapsed on each other due to this */
-	marks = gtk_source_buffer_get_source_marks_at_iter (GTK_SOURCE_BUFFER (buffer), 
+	marks = gtk_source_buffer_get_source_marks_at_iter (GTK_SOURCE_BUFFER (buffer),
 							    &iter,
 							    BOOKMARK_CATEGORY);
 
 	if (marks == NULL)
 		return;
-	
+
 	/* remove all but the first mark */
 	for (item = marks->next; item; item = item->next)
 		gtk_text_buffer_delete_mark (buffer, GTK_TEXT_MARK (item->data));
@@ -925,7 +925,7 @@ add_tracker (GtkTextBuffer *buffer,
 	data->trackers = g_slist_prepend (data->trackers, tracker);
 }
 
-static void 
+static void
 on_insert_text_before (GtkTextBuffer *buffer,
 		       GtkTextIter   *location,
 		       gchar         *text,
@@ -968,8 +968,8 @@ get_bookmark_and_iter (GtkSourceBuffer *buffer,
 
 	gtk_text_iter_set_line_offset (start, 0);
 
-	marks = gtk_source_buffer_get_source_marks_at_iter (buffer, 
-							    start, 
+	marks = gtk_source_buffer_get_source_marks_at_iter (buffer,
+							    start,
 							    BOOKMARK_CATEGORY);
 
 	if (marks != NULL)
@@ -1008,9 +1008,9 @@ add_bookmark (GtkSourceBuffer *buffer,
 
 	if (bookmark == NULL)
 	{
-		gtk_source_buffer_create_source_mark (GTK_SOURCE_BUFFER (buffer), 
-						      NULL, 
-						      BOOKMARK_CATEGORY, 
+		gtk_source_buffer_create_source_mark (GTK_SOURCE_BUFFER (buffer),
+						      NULL,
+						      BOOKMARK_CATEGORY,
 						      &start);
 	}
 }
@@ -1023,7 +1023,7 @@ toggle_bookmark (GtkSourceBuffer *buffer,
 	GtkSourceMark *bookmark = NULL;
 
 	bookmark = get_bookmark_and_iter (buffer, iter, &start);
-	
+
 	if (bookmark != NULL)
 	{
 		remove_bookmark (buffer, &start);
@@ -1031,7 +1031,7 @@ toggle_bookmark (GtkSourceBuffer *buffer,
 	else
 	{
 		add_bookmark (buffer, &start);
-	}	
+	}
 }
 
 static void
@@ -1096,7 +1096,7 @@ on_tab_added (GeditWindow *window,
 
 	doc = gedit_tab_get_document (tab);
 	view = gedit_tab_get_view (tab);
-	
+
 	g_signal_connect (doc, "loaded",
 			  G_CALLBACK (on_document_loaded),
 			  view);
@@ -1117,7 +1117,7 @@ on_tab_removed (GeditWindow *window,
 
 	doc = gedit_tab_get_document (tab);
 	view = gedit_tab_get_view (tab);
-	
+
 	g_signal_handlers_disconnect_by_func (doc, on_document_loaded, view);
 	g_signal_handlers_disconnect_by_func (doc, on_document_saved, view);
 

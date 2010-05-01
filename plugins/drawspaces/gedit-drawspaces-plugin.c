@@ -1,11 +1,11 @@
-/* 
+/*
  * Copyright (C) 2008 Ignacio Casal Quinteiro <nacho.resa@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
  * any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -58,7 +58,7 @@ struct _GeditDrawspacesPluginPrivate
 {
 	GConfClient *gconf_client;
 	guint connection_id;
-	
+
 	GtkSourceDrawSpacesFlags flags;
 };
 
@@ -66,7 +66,7 @@ typedef struct
 {
 	GtkActionGroup *action_group;
 	guint           ui_id;
-	
+
 	gboolean enable;
 } WindowData;
 
@@ -81,7 +81,7 @@ typedef struct _DrawspacesConfigureDialog DrawspacesConfigureDialog;
 struct _DrawspacesConfigureDialog
 {
 	GtkWidget *dialog;
-	
+
 	GtkWidget *draw_tabs;
 	GtkWidget *draw_spaces;
 	GtkWidget *draw_newline;
@@ -130,7 +130,7 @@ set_draw_gconf (GeditDrawspacesPlugin *plugin,
                 gboolean               value)
 {
 	GError *error = NULL;
-	
+
 	gconf_client_set_bool (plugin->priv->gconf_client,
 			       key,
 			       value,
@@ -153,7 +153,7 @@ on_active_toggled (GtkToggleAction *action,
 	data = (WindowData *) g_object_get_data (G_OBJECT (action_data->window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
-	
+
 	value = gtk_toggle_action_get_active (action);
 	data->enable = value;
 
@@ -166,7 +166,7 @@ static const GtkToggleActionEntry action_entries[] =
 {
 	{ "DrawSpaces", NULL, N_("Show _White Space"), NULL,
 	 N_("Show spaces and tabs"),
-	 G_CALLBACK (on_active_toggled)}, 
+	 G_CALLBACK (on_active_toggled)},
 };
 
 static void on_gconf_notify (GConfClient *client,
@@ -178,7 +178,7 @@ static void
 gedit_drawspaces_plugin_init (GeditDrawspacesPlugin *plugin)
 {
 	gedit_debug_message (DEBUG_PLUGINS, "GeditDrawspacesPlugin initializing");
-	
+
 	plugin->priv = GEDIT_DRAWSPACES_PLUGIN_GET_PRIVATE (plugin);
 
 	plugin->priv->gconf_client = gconf_client_get_default ();
@@ -187,7 +187,7 @@ gedit_drawspaces_plugin_init (GeditDrawspacesPlugin *plugin)
 			      GCONF_KEY_BASE,
 			      GCONF_CLIENT_PRELOAD_ONELEVEL,
 			      NULL);
-			      
+
 	plugin->priv->connection_id = gconf_client_notify_add (plugin->priv->gconf_client,
 							       GCONF_KEY_BASE,
 							       on_gconf_notify,
@@ -205,19 +205,19 @@ gedit_drawspaces_plugin_dispose (GObject *object)
 	{
 		gconf_client_notify_remove (plugin->priv->gconf_client,
 					    plugin->priv->connection_id);
-		
+
 		plugin->priv->connection_id = 0;
 	}
-	
+
 	if (plugin->priv->gconf_client != NULL)
 	{
 		gconf_client_suggest_sync (plugin->priv->gconf_client, NULL);
 
 		g_object_unref (G_OBJECT (plugin->priv->gconf_client));
-		
+
 		plugin->priv->gconf_client = NULL;
 	}
-	
+
 	G_OBJECT_CLASS (gedit_drawspaces_plugin_parent_class)->dispose (object);
 }
 
@@ -227,7 +227,7 @@ draw_spaces_in_window (GeditWindow *window,
 {
 	GList *views, *l;
 	WindowData *data;
-	
+
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
@@ -248,7 +248,7 @@ draw_spaces (GeditDrawspacesPlugin *plugin)
 	const GList *windows, *l;
 
 	windows = gedit_app_get_windows (gedit_app_get_default ());
-	
+
 	for (l = windows; l != NULL; l = g_list_next (l))
 	{
 		draw_spaces_in_window (l->data, plugin);
@@ -262,11 +262,11 @@ tab_added_cb (GeditWindow *window,
 {
 	GeditView *view;
 	WindowData *data;
-	
+
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
-	
+
 	if (data->enable)
 	{
 		view = gedit_tab_get_view (tab);
@@ -343,25 +343,25 @@ get_config_options (WindowData *data,
 
 	tabs = get_gconf_value_with_default (plugin, GCONF_KEY_DRAW_TABS,
 					     TRUE);
-					
+
 	spaces = get_gconf_value_with_default (plugin, GCONF_KEY_DRAW_SPACES,
 					       TRUE);
 
 	newline = get_gconf_value_with_default (plugin, GCONF_KEY_DRAW_NEWLINE,
 					        FALSE);
-					        
+
 	nbsp = get_gconf_value_with_default (plugin, GCONF_KEY_DRAW_NBSP,
 					     FALSE);
 
-	leading = get_gconf_value_with_default (plugin, 
+	leading = get_gconf_value_with_default (plugin,
 	                                        GCONF_KEY_DRAW_LEADING,
 	                                        TRUE);
 
-	text = get_gconf_value_with_default (plugin, 
+	text = get_gconf_value_with_default (plugin,
 	                                     GCONF_KEY_DRAW_TEXT,
 	                                     TRUE);
 
-	trailing = get_gconf_value_with_default (plugin, 
+	trailing = get_gconf_value_with_default (plugin,
 	                                         GCONF_KEY_DRAW_TRAILING,
 	                                         TRUE);
 
@@ -369,32 +369,32 @@ get_config_options (WindowData *data,
 	{
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_TAB;
 	}
-	
+
 	if (spaces)
 	{
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_SPACE;
 	}
-	
+
 	if (newline)
 	{
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_NEWLINE;
 	}
-	
+
 	if (nbsp)
 	{
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_NBSP;
 	}
-	
+
 	if (leading)
 	{
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_LEADING;
 	}
-	
+
 	if (text)
 	{
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_TEXT;
 	}
-	
+
 	if (trailing)
 	{
 		plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_TRAILING;
@@ -418,7 +418,7 @@ impl_activate (GeditPlugin *plugin,
 
 	data = g_slice_new (WindowData);
 	action_data = g_slice_new (ActionData);
-	
+
 	action_data->window = window;
 	action_data->plugin = ds_plugin;
 
@@ -427,11 +427,11 @@ impl_activate (GeditPlugin *plugin,
 	manager = gedit_window_get_ui_manager (window);
 
 	data->action_group = gtk_action_group_new ("GeditDrawspacesPluginActions");
-	gtk_action_group_set_translation_domain (data->action_group, 
+	gtk_action_group_set_translation_domain (data->action_group,
 						 GETTEXT_PACKAGE);
 	gtk_action_group_add_toggle_actions_full (data->action_group,
 						  action_entries,
-						  G_N_ELEMENTS (action_entries), 
+						  G_N_ELEMENTS (action_entries),
 						  action_data,
 						  (GDestroyNotify) free_action_data);
 
@@ -478,21 +478,21 @@ impl_deactivate	(GeditPlugin *plugin,
 	WindowData *data;
 
 	gedit_debug (DEBUG_PLUGINS);
-	
+
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
-	
+
 	manager = gedit_window_get_ui_manager (window);
-	
+
 	data->enable = FALSE;
 	draw_spaces_in_window (window, ds_plugin);
-	
+
 	g_signal_handlers_disconnect_by_func (window, tab_added_cb, ds_plugin);
-	
+
 	gtk_ui_manager_remove_ui (manager, data->ui_id);
 	gtk_ui_manager_remove_action_group (manager, data->action_group);
-	
+
 	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
 }
 
@@ -500,7 +500,7 @@ static void
 on_draw_tabs_toggled (GtkToggleButton       *button,
                       GeditDrawspacesPlugin *plugin)
 {
-	set_draw_gconf (plugin, 
+	set_draw_gconf (plugin,
 	                GCONF_KEY_DRAW_TABS,
 	                gtk_toggle_button_get_active (button));
 }
@@ -509,7 +509,7 @@ static void
 on_draw_spaces_toggled (GtkToggleButton       *button,
                         GeditDrawspacesPlugin *plugin)
 {
-	set_draw_gconf (plugin, 
+	set_draw_gconf (plugin,
 	                GCONF_KEY_DRAW_SPACES,
 	                gtk_toggle_button_get_active (button));
 }
@@ -518,7 +518,7 @@ static void
 on_draw_newline_toggled (GtkToggleButton       *button,
                          GeditDrawspacesPlugin *plugin)
 {
-	set_draw_gconf (plugin, 
+	set_draw_gconf (plugin,
 	                GCONF_KEY_DRAW_NEWLINE,
 	                gtk_toggle_button_get_active (button));
 }
@@ -527,7 +527,7 @@ static void
 on_draw_nbsp_toggled (GtkToggleButton       *button,
                       GeditDrawspacesPlugin *plugin)
 {
-	set_draw_gconf (plugin, 
+	set_draw_gconf (plugin,
 	                GCONF_KEY_DRAW_NBSP,
 	                gtk_toggle_button_get_active (button));
 }
@@ -536,7 +536,7 @@ static void
 on_draw_leading_toggled (GtkToggleButton       *button,
                          GeditDrawspacesPlugin *plugin)
 {
-	set_draw_gconf (plugin, 
+	set_draw_gconf (plugin,
 	                GCONF_KEY_DRAW_LEADING,
 	                gtk_toggle_button_get_active (button));
 }
@@ -545,7 +545,7 @@ static void
 on_draw_text_toggled (GtkToggleButton       *button,
                       GeditDrawspacesPlugin *plugin)
 {
-	set_draw_gconf (plugin, 
+	set_draw_gconf (plugin,
 	                GCONF_KEY_DRAW_TEXT,
 	                gtk_toggle_button_get_active (button));
 }
@@ -554,7 +554,7 @@ static void
 on_draw_trailing_toggled (GtkToggleButton       *button,
                           GeditDrawspacesPlugin *plugin)
 {
-	set_draw_gconf (plugin, 
+	set_draw_gconf (plugin,
 	                GCONF_KEY_DRAW_TRAILING,
 	                gtk_toggle_button_get_active (button));
 }
@@ -608,7 +608,7 @@ get_configuration_dialog (GeditDrawspacesPlugin *plugin)
 	{
 		GtkWidget *dialog_error;
 		GtkWidget *content;
-		
+
 		dialog_error = gtk_dialog_new_with_buttons (_("Error dialog"),
 							    NULL,
 							    GTK_DIALOG_DESTROY_WITH_PARENT,
@@ -617,7 +617,7 @@ get_configuration_dialog (GeditDrawspacesPlugin *plugin)
 							    NULL);
 		content = gtk_dialog_get_content_area (GTK_DIALOG (dialog_error));
 		gtk_widget_show (error_widget);
-			
+
 		gtk_box_pack_start_defaults (GTK_BOX (content),
 					     error_widget);
 		gtk_widget_show (dialog_error);
@@ -666,14 +666,14 @@ static GtkWidget *
 impl_create_configure_dialog (GeditPlugin *plugin)
 {
 	DrawspacesConfigureDialog *dialog;
-	
+
 	dialog = get_configuration_dialog (GEDIT_DRAWSPACES_PLUGIN (plugin));
-	
+
 	g_signal_connect (dialog->dialog,
 			  "response",
 			  G_CALLBACK (gtk_widget_destroy),
 			  dialog->dialog);
-	
+
 	return dialog->dialog;
 }
 
@@ -689,7 +689,7 @@ on_gconf_notify (GConfClient *client,
 	if (strcmp (entry->key, GCONF_KEY_DRAW_TABS) == 0)
 	{
 		value = gconf_value_get_bool (entry->value);
-		
+
 		if (value)
 		{
 			plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_TAB;
@@ -702,7 +702,7 @@ on_gconf_notify (GConfClient *client,
 	else if (strcmp (entry->key, GCONF_KEY_DRAW_SPACES) == 0)
 	{
 		value = gconf_value_get_bool (entry->value);
-		
+
 		if (value)
 		{
 			plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_SPACE;
@@ -715,7 +715,7 @@ on_gconf_notify (GConfClient *client,
 	else if (strcmp (entry->key, GCONF_KEY_DRAW_NEWLINE) == 0)
 	{
 		value = gconf_value_get_bool (entry->value);
-		
+
 		if (value)
 		{
 			plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_NEWLINE;
@@ -728,7 +728,7 @@ on_gconf_notify (GConfClient *client,
 	else if (strcmp (entry->key, GCONF_KEY_DRAW_NBSP) == 0)
 	{
 		value = gconf_value_get_bool (entry->value);
-		
+
 		if (value)
 		{
 			plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_NBSP;
@@ -741,7 +741,7 @@ on_gconf_notify (GConfClient *client,
 	else if (strcmp (entry->key, GCONF_KEY_DRAW_LEADING) == 0)
 	{
 		value = gconf_value_get_bool (entry->value);
-		
+
 		if (value)
 		{
 			plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_LEADING;
@@ -754,7 +754,7 @@ on_gconf_notify (GConfClient *client,
 	else if (strcmp (entry->key, GCONF_KEY_DRAW_TEXT) == 0)
 	{
 		value = gconf_value_get_bool (entry->value);
-		
+
 		if (value)
 		{
 			plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_TEXT;
@@ -767,7 +767,7 @@ on_gconf_notify (GConfClient *client,
 	else if (strcmp (entry->key, GCONF_KEY_DRAW_TRAILING) == 0)
 	{
 		value = gconf_value_get_bool (entry->value);
-		
+
 		if (value)
 		{
 			plugin->priv->flags |= GTK_SOURCE_DRAW_SPACES_TRAILING;
@@ -777,7 +777,7 @@ on_gconf_notify (GConfClient *client,
 			plugin->priv->flags &= ~GTK_SOURCE_DRAW_SPACES_TRAILING;
 		}
 	}
-	
+
 	draw_spaces (plugin);
 }
 

@@ -22,14 +22,14 @@ def attrs(**kwargs):
 	def generator(f):
 		for k in kwargs:
 			setattr(f, k, kwargs[k])
-		
+
 		return f
-	
+
 	return generator
 
 def autocomplete(d={}, **kwargs):
 	ret = {}
-	
+
 	for dic in (d, kwargs):
 		for k in dic:
 			if type(dic[k]) == types.FunctionType:
@@ -62,7 +62,7 @@ class Commands(Singleton):
 		def __init__(self, generator):
 			self.generator = generator
 			self.retval = None
-	
+
 		def autocomplete_func(self):
 			if retval == result.Result.PROMPT:
 				return retval.autocomplete
@@ -72,16 +72,16 @@ class Commands(Singleton):
 	class State:
 		def __init__(self):
 			self.clear()
-		
+
 		def clear(self):
 			self.stack = []
 
 		def top(self):
 			return self.stack[0]
-		
+
 		def run(self, ret):
 			ct = self.top()
-			
+
 			if ret:
 				ct.retval = ct.generator.send(ret)
 			else:
@@ -100,7 +100,7 @@ class Commands(Singleton):
 				self.stack[0].generator.close()
 			except GeneratorExit:
 				pass
-			
+
 			del self.stack[0]
 
 		def __len__(self):
@@ -114,24 +114,24 @@ class Commands(Singleton):
 		self._dirs = []
 		self._monitors = []
 		self._accel_group = None
-		
+
 		self._timeouts = {}
-		
+
 		self._stack = []
-	
+
 	def set_dirs(self, dirs):
 		self._dirs = dirs
-	
+
 	def stop(self):
 		for mon in self._monitors:
 			mon.cancel()
-		
+
 		self._monitors = []
 		self._modules = None
-		
+
 		for k in self._timeouts:
 			glib.source_remove(self._timeouts[k])
-		
+
 		self._timeouts = {}
 
 	def accelerator_activated(self, accel, mod, state, entry):
@@ -165,11 +165,11 @@ class Commands(Singleton):
 	def modules(self):
 		self.ensure()
 		return list(self._modules)
-	
+
 	def add_monitor(self, d):
 		gfile = gio.File(d)
 		monitor = None
-		
+
 		try:
 			monitor = gfile.monitor_directory(gio.FILE_MONITOR_NONE, None)
 		except gio.Error, e:
@@ -180,54 +180,54 @@ class Commands(Singleton):
 		if monitor:
 			monitor.connect('changed', self.on_monitor_changed)
 			self._monitors.append(monitor)
-	
+
 	def scan(self, d):
 		files = []
-		
+
 		try:
 			files = os.listdir(d)
 		except OSError:
 			pass
-		
+
 		for f in files:
 			full = os.path.join(d, f)
 
 			# Test for python files or modules
 			if is_commander_module(full):
 				if self.add_module(full) and os.path.isdir(full):
-					# Add monitor on the module directory if module was 
+					# Add monitor on the module directory if module was
 					# successfully added. TODO: recursively add monitors
 					self.add_monitor(full)
-		
+
 		# Add a monitor on the scanned directory itself
 		self.add_monitor(d)
-		
+
 	def module_name(self, filename):
 		# Module name is the basename without the .py
 		return os.path.basename(os.path.splitext(filename)[0])
-		
+
 	def add_module(self, filename):
 		base = self.module_name(filename)
-		
+
 		# Check if module already exists
 		if base in self._modules:
 			return
-		
+
 		# Create new 'empty' module
 		mod = module.Module(base, os.path.dirname(filename))
 		bisect.insort_right(self._modules, mod)
-		
+
 		# Reload the module
 		self.reload_module(mod)
 		return True
-		
+
 	def ensure(self):
 		# Ensure that modules have been scanned
 		if self._modules != None:
 			return
 
 		self._modules = []
-		
+
 		for d in self._dirs:
 			self.scan(d)
 
@@ -243,7 +243,7 @@ class Commands(Singleton):
 					return self._run_generator(state)
 
 			return self.run(state, retval)
-			
+
 		except StopIteration:
 			state.pop()
 
@@ -252,7 +252,7 @@ class Commands(Singleton):
 		except Exception, e:
 			# Something error like, we throw on the parent generator
 			state.pop()
-			
+
 			if state:
 				state.top().generator.throw(type(e), e)
 			else:
@@ -260,13 +260,13 @@ class Commands(Singleton):
 				raise
 
 		return None
-	
+
 	def run(self, state, ret=None):
 		if type(ret) == types.GeneratorType:
 			# Ok, this is cool stuff, generators can ask and susped execution
 			# of commands, for instance to prompt for some more information
 			state.push(ret)
-			
+
 			return self._run_generator(state)
 		elif not isinstance(ret, result.Result) and len(state) > 1:
 			# Basicly, send it to the previous?
@@ -275,15 +275,15 @@ class Commands(Singleton):
 			return self._run_generator(state, ret)
 		else:
 			return ret
-	
+
 	def execute(self, state, argstr, words, wordsstr, entry, modifier):
 		self.ensure()
-		
-		if state:			
+
+		if state:
 			return self._run_generator(state, [argstr, words, modifier])
 
 		cmd = completion.single_command(wordsstr, 0)
-		
+
 		if not cmd:
 			raise exceptions.Execute('Could not find command: ' + wordsstr[0])
 
@@ -291,28 +291,28 @@ class Commands(Singleton):
 			argstr = argstr[words[1].start(0):]
 		else:
 			argstr = ''
-		
+
 		# Execute command
 		return self.run(state, cmd.execute(argstr, wordsstr[1:], entry, modifier))
-	
+
 	def invoke(self, entry, modifier, command, args, argstr=None):
 		self.ensure()
-		
+
 		cmd = completion.single_command([command], 0)
-		
+
 		if not cmd:
 			raise exceptions.Execute('Could not find command: ' + command)
-		
+
 		if argstr == None:
 			argstr = ' '.join(args)
 
 		ret = cmd.execute(argstr, args, entry, modifier)
-		
+
 		if type(ret) == types.GeneratorType:
 			raise exceptions.Execute('Cannot invoke commands that yield (yet)')
 		else:
 			return ret
-	
+
 	def resolve_module(self, path, load=True):
 		if not self._modules or not is_commander_module(path):
 			return None
@@ -326,7 +326,7 @@ class Commands(Singleton):
 		# Find module
 		idx = bisect.bisect_left(self._modules, base)
 		mod = None
-		
+
 		if idx < len(self._modules):
 			mod = self._modules[idx]
 
@@ -335,7 +335,7 @@ class Commands(Singleton):
 				self.add_module(path)
 
 			return None
-		
+
 		return mod
 
 	def remove_module_accelerators(self, modules):
@@ -366,7 +366,7 @@ class Commands(Singleton):
 	def reload_module(self, mod):
 		if isinstance(mod, basestring):
 			mod = self.resolve_module(mod)
-		
+
 		if not mod or not self._modules:
 			return
 
@@ -393,7 +393,7 @@ class Commands(Singleton):
 	def on_timeout_delete(self, path, mod):
 		if not path in self._timeouts:
 			return False
-		
+
 		# Remove the module
 		mod.unload()
 		self.remove_module(mod)
@@ -408,23 +408,23 @@ class Commands(Singleton):
 		elif evnt == gio.FILE_MONITOR_EVENT_DELETED:
 			path = gfile1.get_path()
 			mod = self.resolve_module(path, False)
-			
+
 			if not mod:
 				return
 
 			if path in self._timeouts:
 				glib.source_remove(self._timeouts[path])
-			
+
 			# We add a timeout because a common save strategy causes a
 			# DELETE/CREATE event chain
 			self._timeouts[path] = glib.timeout_add(500, self.on_timeout_delete, path, mod)
 		elif evnt == gio.FILE_MONITOR_EVENT_CREATED:
 			path = gfile1.get_path()
-			
+
 			# Check if this CREATE followed a previous DELETE
 			if path in self._timeouts:
 				glib.source_remove(self._timeouts[path])
 				del self._timeouts[path]
-			
+
 			# Reload the module
 			self.reload_module(path)

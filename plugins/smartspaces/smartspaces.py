@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 
 #  smartspaces.py
-#  
+#
 #  Copyright (C) 2006 - Steve Frécinaux
-#  
+#
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation; either version 2 of the License, or
 #  (at your option) any later version.
-#   
+#
 #  This program is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
-#   
+#
 #  You should have received a copy of the GNU General Public License
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330,
@@ -60,14 +60,14 @@ class SmartSpacesViewHelper(object):
         if event.keyval != gtk.keysyms.BackSpace or \
 	       event.state & mods != 0 and event.state & mods != gtk.gdk.SHIFT_MASK:
             return False
-   
+
         doc = view.get_buffer()
         if doc.get_has_selection():
             return False
-       
+
         cur = doc.get_iter_at_mark(doc.get_insert())
         offset = cur.get_line_offset()
-        
+
         if offset == 0:
             # We're at the begining of the line, so we can't obviously
             # unindent in this case
@@ -77,7 +77,7 @@ class SmartSpacesViewHelper(object):
         prev = cur.copy()
         prev.backward_char()
 
-        # If the previus chars are spaces, try to remove 
+        # If the previus chars are spaces, try to remove
         # them until the previus tab stop
         max_move = offset % view.get_tab_width()
         if max_move == 0:
@@ -90,12 +90,12 @@ class SmartSpacesViewHelper(object):
             if not prev.backward_char():
                 # we reached the start of the buffer
                 break
-        
+
         if moved == 0:
             # The iterator hasn't moved, it was not a space
             return False
 
-        # Actually delete the spaces        
+        # Actually delete the spaces
         doc.begin_user_action()
         doc.delete(start, cur)
         doc.end_user_action()
@@ -111,7 +111,7 @@ class SmartSpacesPlugin(gedit.Plugin):
     def add_helper(self, view):
         helper = SmartSpacesViewHelper(view)
         view.set_data(self.VIEW_DATA_KEY, helper)
-    
+
     def remove_helper(self, view):
         view.get_data(self.VIEW_DATA_KEY).deactivate()
         view.set_data(self.VIEW_DATA_KEY, None)
@@ -119,16 +119,16 @@ class SmartSpacesPlugin(gedit.Plugin):
     def activate(self, window):
         for view in window.get_views():
             self.add_helper(view)
-            
+
         handler_id = window.connect("tab-added",
                                     lambda w, t: self.add_helper(t.get_view()))
         window.set_data(self.WINDOW_DATA_KEY, handler_id)
-    
+
     def deactivate(self, window):
         handler_id = window.get_data(self.WINDOW_DATA_KEY)
         window.disconnect(handler_id)
         window.set_data(self.WINDOW_DATA_KEY, None)
-        
+
         for view in window.get_views():
             self.remove_helper(view)
 

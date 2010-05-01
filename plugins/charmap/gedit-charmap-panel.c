@@ -1,13 +1,13 @@
 /*
  * gedit-charmap-panel.c
- * 
+ *
  * Copyright (C) 2006 Steve Frécinaux
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
  * any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -110,7 +110,7 @@ gedit_charmap_panel_init (GeditCharmapPanel *panel)
 	gucharmap_chapters_view_select_locale (priv->chapters_view);
 
 	gtk_paned_set_position (paned, 150);
-	
+
 	gtk_box_pack_start (GTK_BOX (panel), GTK_WIDGET (paned), TRUE, TRUE, 0);
 }
 

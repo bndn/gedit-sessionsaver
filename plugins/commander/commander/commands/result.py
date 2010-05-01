@@ -6,10 +6,10 @@ class Result(object):
 
 	def __init__(self, value):
 		self._value = value
-	
+
 	def __int__(self):
 		return self._value
-	
+
 	def __cmp__(self, other):
 		if isinstance(other, int) or isinstance(other, Result):
 			return cmp(int(self), int(other))
@@ -31,10 +31,10 @@ class Suspend(Result):
 	def __init__(self):
 		Result.__init__(self, Result.SUSPEND)
 		self._callbacks = []
-	
+
 	def register(self, cb, *args):
 		self._callbacks.append([cb, args])
-	
+
 	def resume(self):
 		for cb in self._callbacks:
 			args = cb[1]

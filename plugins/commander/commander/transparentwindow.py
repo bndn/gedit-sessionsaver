@@ -12,13 +12,13 @@ class TransparentWindow(gtk.Window):
 		self.set_events(gtk.gdk.ALL_EVENTS_MASK)
 
 		self.set_rgba()
-	
+
 	def set_rgba(self):
 		cmap = self.get_screen().get_rgba_colormap()
-		
+
 		if not cmap:
 			return
-			
+
 		self.set_colormap(cmap)
 		self.connect('realize', self.on_realize)
 		self.connect('expose-event', self.on_expose)
@@ -39,12 +39,12 @@ class TransparentWindow(gtk.Window):
 		ct.set_operator(cairo.OPERATOR_SOURCE)
 		ct.rectangle(0, 0, widget.allocation.width, widget.allocation.height)
 		ct.set_source_rgba(0, 0, 0, 0)
-		
+
 		if not shape:
 			ct.fill_preserve()
 		else:
 			ct.fill()
-		
+
 		color = self.background_color()
 
 		if shape:
@@ -56,15 +56,15 @@ class TransparentWindow(gtk.Window):
 	def on_expose(self, widget, evnt):
 		if not self.window:
 			return
-		
+
 		ct = evnt.window.cairo_create()
 		ct.save()
-		
+
 		area = evnt.area
 		ct.rectangle(area.x, area.y, area.width, area.height)
 		ct.clip()
-		
+
 		self.draw_background(ct)
-		
+
 		ct.restore()
 		return False
