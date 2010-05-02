@@ -28,7 +28,6 @@
 #include <glib/gi18n-lib.h>
 #include <gedit/gedit-debug.h>
 #include <gedit/gedit-window.h>
-#include <gedit/gedit-panel.h>
 #include <gedit/gedit-document.h>
 #include <gedit/gedit-prefs-manager.h>
 
