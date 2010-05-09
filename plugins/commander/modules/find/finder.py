@@ -1,6 +1,7 @@
 from xml.sax import saxutils
 import commander.commands as commands
 import commander.utils as utils
+import gtk
 
 class Finder:
 	FIND_STARTMARK = 'gedit-commander-find-startmark'
@@ -270,7 +271,7 @@ class Finder:
 				                       'end': buf.get_iter_at_mark(self.find_result.end)})
 
 				# If there is a selection, replace it with the replacement string
-				if not bounds.start.equal(bounds.end):
+				if not bounds.start.equal(bounds.end) and not (modifier & gtk.gdk.CONTROL_MASK):
 					text = bounds.start.get_text(bounds.end)
 					repl = self.get_replace(text)
 
