@@ -18,6 +18,8 @@ from accel_group import Accelerator
 
 __all__ = ['is_commander_module', 'Commands', 'Accelerator']
 
+import commander.modules
+
 def attrs(**kwargs):
 	def generator(f):
 		for k in kwargs:
@@ -363,6 +365,9 @@ class Commands(Singleton):
 		if self._accel_group:
 			self.remove_module_accelerators([mod])
 
+		if mod.name in commander.modules.__dict__:
+			del commander.modules.__dict__[mod.name]
+
 	def reload_module(self, mod):
 		if isinstance(mod, basestring):
 			mod = self.resolve_module(mod)
@@ -386,6 +391,8 @@ class Commands(Singleton):
 		# Insert roots
 		for r in mod.roots():
 			bisect.insort(self._modules, r)
+
+		commander.modules.__dict__[mod.name] = mod.mod
 
 		if self._accel_group:
 			self.scan_accelerators([mod])

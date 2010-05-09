@@ -9,6 +9,7 @@ plugin_PYTHON =	\
 	history.py \
 	info.py \
 	__init__.py \
+	modules.py \
 	transparentwindow.py \
 	utils.py \
 	windowhelper.py

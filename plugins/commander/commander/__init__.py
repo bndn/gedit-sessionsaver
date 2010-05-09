@@ -8,7 +8,7 @@ if not path in sys.path:
 
 import gedit
 from windowhelper import WindowHelper
-import commands
+import commander.commands as commands
 
 class Commander(gedit.Plugin):
 	def __init__(self):
