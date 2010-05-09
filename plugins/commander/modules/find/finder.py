@@ -46,6 +46,9 @@ class Finder:
 	def set_find(self, findstr):
 		self.findstr = self.unescape(findstr)
 
+	def get_find(self):
+		return self.findstr
+
 	def select_last_result(self):
 		buf = self.view.get_buffer()
 
@@ -204,6 +207,17 @@ class Finder:
 
 		self.view.scroll_to_mark(buf.get_insert(), 0.2, True, 0, 0.5)
 
+	def get_current_replace(self):
+		buf = self.view.get_buffer()
+		bounds = utils.Struct({'start': buf.get_iter_at_mark(self.find_result.start),
+		                       'end': buf.get_iter_at_mark(self.find_result.end)})
+
+		if not bounds.start.equal(bounds.end):
+			text = bounds.start.get_text(bounds.end)
+			return self.get_replace(text)
+		else:
+			return self.replacestr
+
 	def replace(self, findstr, replaceall=False, replacestr=None):
 		if findstr:
 			self.set_find(findstr)
@@ -247,7 +261,7 @@ class Finder:
 		try:
 			while True:
 				if not replaceall:
-					rep, words, modifier = (yield commands.result.Prompt('Replace next [%s]:' % (saxutils.escape(self.replacestr),)))
+					rep, words, modifier = (yield commands.result.Prompt('Replace next [%s]:' % (saxutils.escape(self.get_current_replace()),)))
 
 					if rep:
 						self.set_replace(rep)

@@ -79,6 +79,64 @@ class RegexFinder(finder.Finder):
 		except Exception, e:
 			raise commands.exceptions.Execute('Invalid replacement: ' + str(e))
 
+class SemanticFinder(RegexFinder):
+	def __init__(self, entry):
+		RegexFinder.__init__(self, entry, re.IGNORECASE)
+
+	def split_semantic(self, s):
+		# Can be specified in _ separated syntax, or in TitleCase
+		if '_' in s:
+			return s.lower().split('_')
+		else:
+			return [m.group(0).lower() for m in re.finditer('[A-Z]+([^A-Z]+)?', s)]
+
+	def set_find(self, findstr):
+		self.findparts = self.split_semantic(findstr)
+		RegexFinder.set_find(self, '(' + ')(_?)('.join(map(lambda x: re.escape(x), self.findparts)) + ')')
+
+	def set_replace(self, replstr):
+		self.replaceparts = self.split_semantic(replstr)
+		RegexFinder.set_replace(self, replstr)
+
+	def copy_case(self, orig, repl):
+		lo = len(orig)
+		lr = len(repl)
+
+		ret = ''
+
+		for i in range(min(lr, lo)):
+			if orig[i].isupper():
+				ret += repl[i].upper()
+			else:
+				ret += repl[i].lower()
+
+		if lr > lo:
+			if orig.isupper():
+				ret += repl[lo:].upper()
+			else:
+				ret += repl[lo:].lower()
+
+		return ret
+
+	def get_replace(self, text):
+		m = self.findre.match(text)
+		groups = m.groups()
+
+		ret = []
+
+		for i in range(len(groups)):
+			ri = i / 2
+
+			if i % 2 == 0:
+				if ri >= len(self.replaceparts):
+					break
+
+				ret.append(self.copy_case(groups[i], self.replaceparts[ri]))
+			else:
+				ret.append(groups[i])
+
+		return ''.join(ret)
+
 def __default__(entry, argstr):
 	"""Find regex in document: find.regex &lt;regex&gt;
 
@@ -110,15 +168,29 @@ Quickly find and replace phrases in the document using regular expressions"""
 	yield fd.replace(findre, False, replstr)
 
 def replace_all(entry, findre, replstr=None):
-	"""Find/replace all regex in document: find.replace-all &lt;find&gt; [&lt;replace&gt;]
+	"""Find/replace all regex in document: find.regex.replace-all &lt;find&gt; [&lt;replace&gt;]
 
 Quickly find and replace all phrases in the document using regular expressions"""
 	fd = RegexFinder(entry, 0)
 	yield fd.replace(findre, True, replstr)
 
 def replace_all_i(entry, findre, replstr=None):
-	"""Find/replace all regex in document: find.replace-all-i &lt;find&gt; [&lt;replace&gt;]
+	"""Find/replace all regex in document: find.regex.replace-all-i &lt;find&gt; [&lt;replace&gt;]
 
 Quickly find and replace all phrases in the document using regular expressions"""
 	fd = RegexFinder(entry, re.IGNORECASE)
 	yield fd.replace(findre, True, replstr)
+
+def replace_semantic(entry, findstr, replstr=None):
+	"""Find/replace in document (semantically): find.regex.replace-s &lt;find&gt; [&lt;replace&gt;]
+
+Find and replace semantically"""
+	fd = SemanticFinder(entry)
+	yield fd.replace(findstr, False, replstr)
+
+def replace_all_semantic(entry, findstr, replstr=None):
+	"""Find/replace in document (semantically): find.regex.replace-s &lt;find&gt; [&lt;replace&gt;]
+
+Find and replace semantically"""
+	fd = SemanticFinder(entry)
+	yield fd.replace(findstr, True, replstr)

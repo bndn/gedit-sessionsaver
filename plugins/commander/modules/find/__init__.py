@@ -17,8 +17,8 @@ class TextFinder(finder.Finder):
 	def do_find(self, bounds):
 		buf = self.view.get_buffer()
 
-		if self.findstr:
-			buf.set_search_text(self.findstr, self.flags)
+		if self.get_find():
+			buf.set_search_text(self.get_find(), self.flags)
 
 		ret = map(lambda x: x.copy(), bounds)
 
