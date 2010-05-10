@@ -60,10 +60,23 @@ AM_GLIB_GNU_GETTEXT
 # Start of pkg-config checks
 # ================================================================
 
+# Dependencies
+GTK_REQUIRED=
+GTK_REQUIRED_VERSION=
+
+PKG_CHECK_EXISTS([gtk+-3.0 >= 2.90],
+		 [
+		 	GTK_REQUIRED=gtk+-3.0
+		 	GTK_REQUIRED_VERSION=2.90.0
+		 ],[
+		 	GTK_REQUIRED=gtk+-2.0
+		 	GTK_REQUIRED_VERSION=2.13.0
+		 ])
+
 PKG_CHECK_MODULES(GEDIT, [
 	glib-2.0 >= 2.13.0
 	gio-2.0 >= 2.25.4
-	gtk+-2.0 >= 2.13.0
+	$GTK_REQUIRED >= $GTK_REQUIRED_VERSION
 	gconf-2.0 >= 1.1.11
 	gtksourceview-2.0 >= 2.9.1
 	gedit-3.0 >= 2.31.1
