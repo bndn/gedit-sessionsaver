@@ -29,7 +29,6 @@
 #include <gedit/gedit-debug.h>
 #include <gedit/gedit-window.h>
 #include <gedit/gedit-document.h>
-#include <gedit/gedit-prefs-manager.h>
 
 #define WINDOW_DATA_KEY	"GeditBookmarksPluginWindowData"
 
