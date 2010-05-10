@@ -62,7 +62,7 @@ AM_GLIB_GNU_GETTEXT
 
 PKG_CHECK_MODULES(GEDIT, [
 	glib-2.0 >= 2.13.0
-	gio-2.0 >= 2.16.0
+	gio-2.0 >= 2.25.4
 	gtk+-2.0 >= 2.13.0
 	gconf-2.0 >= 1.1.11
 	gtksourceview-2.0 >= 2.9.1
