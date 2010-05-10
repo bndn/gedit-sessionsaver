@@ -30,7 +30,6 @@
 #include <gedit/gedit-window.h>
 #include <gedit/gedit-panel.h>
 #include <gedit/gedit-document.h>
-#include <gedit/gedit-prefs-manager.h>
 
 #include <gucharmap/gucharmap.h>
 
@@ -184,9 +183,39 @@ on_table_activate (GucharmapChartable *chartable,
 	gtk_text_buffer_end_user_action (document);
 }
 
+static gchar *
+get_document_font ()
+{
+	GSettings *editor;
+	gboolean use_default_font;
+	gchar *font;
+
+	editor = g_settings_new ("org.gnome.gedit.preferences.editor");
+
+	use_default_font = g_settings_get_boolean (editor, "use-default-font");
+
+	if (use_default_font)
+	{
+		GSettings *system;
+
+		system = g_settings_new ("org.gnome.Desktop.Interface");
+		font = g_settings_get_string (system, "monospace-font-name");
+		g_object_unref (system);
+	}
+	else
+	{
+		font = g_settings_get_string (editor, "editor-font");
+	}
+
+	g_object_unref (editor);
+
+	return font;
+}
+
 static GtkWidget *
 create_charmap_panel (GeditWindow *window)
 {
+	GSettings *settings;
 	GtkWidget      *panel;
 	GucharmapChartable *chartable;
 	PangoFontDescription *font_desc;
@@ -195,7 +224,7 @@ create_charmap_panel (GeditWindow *window)
 	panel = gedit_charmap_panel_new ();
 
 	/* Use the same font as the document */
-	font = gedit_prefs_manager_get_editor_font ();
+	font = get_document_font ();
 
 	chartable = gedit_charmap_panel_get_chartable (GEDIT_CHARMAP_PANEL (panel));
 	font_desc = pango_font_description_from_string (font);
