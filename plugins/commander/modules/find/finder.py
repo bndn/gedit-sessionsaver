@@ -271,7 +271,7 @@ class Finder:
 				                       'end': buf.get_iter_at_mark(self.find_result.end)})
 
 				# If there is a selection, replace it with the replacement string
-				if not bounds.start.equal(bounds.end) and not (modifier & gtk.gdk.CONTROL_MASK):
+				if not bounds.start.equal(bounds.end) and (replaceall or not (modifier & gtk.gdk.CONTROL_MASK)):
 					text = bounds.start.get_text(bounds.end)
 					repl = self.get_replace(text)
 
