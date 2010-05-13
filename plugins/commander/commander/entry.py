@@ -291,8 +291,7 @@ class Entry(gtk.EventBox):
 		return self._info_window.add_action(stock, callback, data)
 
 	def command_history_done(self):
-		self._history.update(self._entry.get_text())
-		self._history.add()
+		self._history.add(self._entry.get_text())
 		self._history_prefix = None
 		self._entry.set_text('')
 

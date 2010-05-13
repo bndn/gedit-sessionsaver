@@ -34,7 +34,13 @@ class History:
 	def down(self, prefix=''):
 		return self.move(1, prefix)
 
-	def add(self):
+	def add(self, line):
+		if line.strip() != '':
+			if self._history[-1] != '':
+				self._history.append(line)
+			else:
+				self._history[-1] = line
+
 		if self._history[-1] != '':
 			self._history.append('')
 
