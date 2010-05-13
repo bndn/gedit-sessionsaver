@@ -1188,7 +1188,7 @@ class DocumentHelper(Signals):
         if x < geom[0] or x > geom[0] + geom[2] or y < geom[1] or y > geom[1] + geom[3]:
             return False
 
-        table = gtk.Table(12, 2)
+        table = gtk.Table(13, 2)
         table.set_row_spacings(3)
         table.set_col_spacings(12)
 
@@ -1209,7 +1209,7 @@ class DocumentHelper(Signals):
         table.attach(self.make_label('<Ctrl><Home>', False), 0, 1, 8, 9, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
         table.attach(self.make_label('<Ctrl><End>', False), 0, 1, 9, 10, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
         table.attach(self.make_label('<Ctrl><Shift><Enter>', False), 0, 1, 10, 11, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Alt><Shift><Enter>', False), 0, 1, 10, 11, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<Ctrl><Alt><Shift><Enter>', False), 0, 1, 11, 12, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
 
         table.attach(self.make_label(_('Enter column edit mode using selection')), 1, 2, 1, 2)
         table.attach(self.make_label(_('Enter <b>smart</b> column edit mode using selection')), 1, 2, 2, 3)
