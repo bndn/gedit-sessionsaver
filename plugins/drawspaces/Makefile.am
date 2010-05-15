@@ -27,10 +27,7 @@ plugin_in_files = drawspaces.gedit-plugin.desktop.in
 
 plugin_DATA = $(plugin_in_files:.gedit-plugin.desktop.in=.gedit-plugin)
 
-gsettingsschema_in_files = org.gnome.gedit.drawspaces.gschema.in
-gsettingsschema_DATA = $(gsettingsschema_in_files:.gschema.in=.gschema.xml)
-org.gnome.gedit.drawspaces.gschema.xml: org.gnome.gedit.drawspaces.gschema.in
-	gsettings-schema-convert -f $< -o $@
+gsettingsschema_DATA = org.gnome.gedit.drawspaces.gschema.xml
 
 if GSETTINGS_SCHEMAS_INSTALL
 install-data-hook:
