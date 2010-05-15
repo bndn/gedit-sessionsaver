@@ -49,6 +49,7 @@ class GeditTerminal(gtk.HBox):
         )
     }
 
+    GCONF_INTERFACE_DIR = "/desktop/gnome/interface"
     GCONF_PROFILE_DIR = "/apps/gnome-terminal/profiles/Default"
 
     defaults = {
@@ -70,8 +71,15 @@ class GeditTerminal(gtk.HBox):
     def __init__(self):
         gtk.HBox.__init__(self, False, 4)
 
+        gconf_client.add_dir(self.GCONF_INTERFACE_DIR,
+                             gconf.CLIENT_PRELOAD_NONE)
         gconf_client.add_dir(self.GCONF_PROFILE_DIR,
                              gconf.CLIENT_PRELOAD_RECURSIVE)
+
+        gconf_client.notify_add(self.GCONF_INTERFACE_DIR,
+                                self.on_gconf_notification)
+        gconf_client.notify_add(self.GCONF_PROFILE_DIR,
+                                self.on_gconf_notification)
 
         self._vte = vte.Terminal()
         self.reconfigure_vte()
@@ -83,9 +91,6 @@ class GeditTerminal(gtk.HBox):
         self._scrollbar = gtk.VScrollbar(self._vte.get_adjustment())
         self._scrollbar.show()
         self.pack_start(self._scrollbar, False, False, 0)
-
-        gconf_client.notify_add(self.GCONF_PROFILE_DIR,
-                                self.on_gconf_notification)
 
         # we need to reconf colors if the style changes
         self._vte.connect("style-set", lambda term, oldstyle: self.reconfigure_vte())
@@ -114,17 +119,33 @@ class GeditTerminal(gtk.HBox):
 
     def reconfigure_vte(self):
         # Fonts
+        font_desc = None
+        system_font = gconf_get_str(self.GCONF_INTERFACE_DIR + "/monospace_font_name",
+                                    self.defaults["font_name"])
+
         if gconf_get_bool(self.GCONF_PROFILE_DIR + "/use_system_font"):
-            font_name = gconf_get_str("/desktop/gnome/interface/monospace_font_name",
-                                      self.defaults['font_name'])
+            font_name = system_font
         else:
-            font_name = gconf_get_str(self.GCONF_PROFILE_DIR + "/font",
-                                      self.defaults['font_name'])
+            font_name = gconf_get_str(self.GCONF_PROFILE_DIR + "/font", system_font)
 
         try:
-            self._vte.set_font(pango.FontDescription(font_name))
+            font_desc = pango.FontDescription(font_name)
         except:
-            pass
+            if font_name != self.DEFAULT_FONT:
+                if font_name != system_font:
+                    try:
+                        font_desc = pango.FontDescription(system_font)
+                    except:
+                        pass
+
+                if font_desc == None:
+                    try:
+                        font_desc = pango.FontDescription(self.defaults["font_name"])
+                    except:
+                        pass
+
+        if font_desc != None:
+            self._vte.set_font(font_desc)
 
         # colors
         self._vte.ensure_style()
