@@ -50,6 +50,7 @@ class DocumentHelper(Signals):
         self._in_mode = False
         self._column_mode = None
         self._move_cursor = None
+        self._previous_move_cursor = None
 
         self._edit_points = []
         self._multi_edited = False
@@ -66,8 +67,14 @@ class DocumentHelper(Signals):
         self.connect_signal(self._view, 'cut-clipboard', self.on_cut_clipboard)
         self.connect_signal(self._view, 'paste-clipboard', self.on_paste_clipboard)
         self.connect_signal(self._view, 'query-tooltip', self.on_query_tooltip)
+
         self.connect_signal(self._view, 'move-cursor', self.on_move_cursor)
         self.connect_signal_after(self._view, 'move-cursor', self.on_move_cursor_after)
+
+        try:
+            self.connect_signal(self._view, 'smart-home-end', self.on_smart_home_end)
+        except:
+            pass
 
         self._view.props.has_tooltip = True
 
@@ -1091,13 +1098,57 @@ class DocumentHelper(Signals):
 
         return piter
 
+    def _move_to_first_char(self, piter, display_line):
+        last = piter.copy()
+
+        if display_line:
+            self._view.forward_display_line_end(last)
+            self._view.backward_display_line_start(piter)
+        else:
+            piter.set_line_offset(0)
+
+            if not last.ends_line():
+                last.forward_to_line_end()
+
+        while piter.compare(last) < 0:
+            if piter.get_char().isspace():
+                piter.forward_visible_cursor_position()
+            else:
+                break
+
+    def _move_to_last_char(self, piter, display_line):
+        first = piter.copy()
+
+        if display_line:
+            self._view.backward_display_line_start(first)
+            self._view.forward_display_line_end(piter)
+        else:
+            if not piter.ends_line():
+                piter.forward_to_line_end()
+
+            first.set_line_offset(0)
+
+        while piter.compare(first) > 0:
+            piter.backward_visible_cursor_position()
+
+            if not piter.get_char().isspace():
+                if not piter.forward_visible_cursor_position():
+                    piter.forward_to_end()
+
+                break
+
+    def _move_edit_point_smart_display_line_ends(self, piter, count):
+        if count > 0:
+            self._move_to_last_char(piter, True)
+        else:
+            self._move_to_first_char(piter, True)
+
+        return piter
+
     def _move_edit_point_display_line_ends(self, piter, count):
         if count > 0:
-            cp = piter.copy()
-
-            if cp.forward_visible_cursor_position() and not self._view.starts_display_line(cp):
-                self._view.forward_display_line_end(piter)
-        elif not self._view.starts_display_line(piter):
+            self._view.forward_display_line_end(piter)
+        else:
             self._view.backward_display_line_start(piter)
 
         return piter
@@ -1107,6 +1158,14 @@ class DocumentHelper(Signals):
 
         piter.forward_visible_lines(count)
         piter, off = self.get_visible_iter(piter.get_line(), offset)
+
+        return piter
+
+    def _move_edit_point_smart_paragraph_ends(self, piter, count):
+        if count > 0:
+            self._move_to_last_char(piter, False)
+        else:
+            self._move_to_first_char(piter, False)
 
         return piter
 
@@ -1147,6 +1206,7 @@ class DocumentHelper(Signals):
             piter = action(piter, count)
             buf.move_mark(point, piter)
 
+        self._previous_move_cursor = self._move_cursor
         self._move_cursor = None
 
     def on_mark_set(self, buf, where, mark):
@@ -1290,10 +1350,30 @@ class DocumentHelper(Signals):
 
         return False
 
+    def on_smart_home_end(self, view, iter, count):
+        if not self._in_mode or not self._edit_points or not self._previous_move_cursor:
+            return
+
+        ins = self._buffer.get_iter_at_mark(self._buffer.get_insert())
+
+        if not ins.equal(iter):
+            return
+
+        if self._previous_move_cursor[0] == gtk.MOVEMENT_DISPLAY_LINE_ENDS:
+            cb = self._move_edit_point_smart_display_line_ends
+        else:
+            cb = self._move_edit_point_smart_paragraph_ends
+
+        for point in self._edit_points:
+            piter = self._buffer.get_iter_at_mark(point)
+            piter = cb(piter, count)
+            self._buffer.move_mark(point, piter)
+
     def on_move_cursor(self, view, step_size, count, extend_selection):
         self._move_cursor = [step_size, count]
 
     def on_move_cursor_after(self, view, step_size, count, extend_selection):
         self._move_cursor = None
+        self._previous_move_cursor = None
 
 # ex:ts=4:et:
