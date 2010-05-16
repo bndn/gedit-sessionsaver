@@ -12,10 +12,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2010-01-25 22:45+0000\n"
-"PO-Revision-Date: 2010-02-02 13:58+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-05-17 00:08+0200\n"
+"PO-Revision-Date: 2010-05-03 10:20+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,27 +32,27 @@ msgstr "Záložky"
 msgid "Easy document navigation with bookmarks"
 msgstr "Jednoduché procházení dokumentem pomocí záložek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
 msgid "Toggle Bookmark"
 msgstr "Přepnout záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Toggle bookmark status of the current line"
 msgstr "Přepnout stav záložky na aktuálním řádku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
 msgid "Goto Next Bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:139
 msgid "Goto the next bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
 msgid "Goto Previous Bookmark"
 msgstr "Přejít na předcházející záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:142
 msgid "Goto the previous bookmark"
 msgstr "Přejít na předcházející záložku"
 
@@ -66,7 +65,7 @@ msgid "Bracket Completion"
 msgstr "Doplňování závorek"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:258
+#: ../plugins/charmap/gedit-charmap-plugin.c:288
 msgid "Character Map"
 msgstr "Mapa znaků"
 
@@ -133,7 +132,6 @@ msgid "Commander"
 msgstr "Commander"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
 msgid "Draw Spaces"
 msgstr "Vykreslovat mezery"
 
@@ -169,43 +167,15 @@ msgstr "Vykreslovat tabulátory"
 msgid "Draw trailing spaces"
 msgstr "Vykreslovat koncové mezery"
 
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
-msgid "Draw Leading Spaces"
-msgstr "Vykreslovat úvodní mezery"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
-msgid "Draw New lines"
-msgstr "Vykreslovat zakončení řádků"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Vykreslovat nezlomitelné mezery"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
-msgid "Draw Spaces in Text"
-msgstr "Vykreslovat mezery v textu"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
-msgid "Draw Tabs"
-msgstr "Vykreslovat tabulátory"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
-msgid "Draw Trailing Spaces"
-msgstr "Vykreslovat koncové mezery"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
-msgid "Show White Spaces"
-msgstr "Zobrazovat bílé znaky"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:146
 msgid "Show _White Space"
 msgstr "Zobrazovat _bílé znaky"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
 msgid "Show spaces and tabs"
 msgstr "Zobrazovat mezery a tabulátory"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:538
 msgid "Error dialog"
 msgstr "Chybový dialog"
 
@@ -242,46 +212,76 @@ msgstr "Úprava dokumentu na více místech současně"
 msgid "Multi Edit"
 msgstr "Vícenásobná úprava"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:279
+#: ../plugins/multiedit/multiedit/documenthelper.py:315
 msgid "Added edit point..."
 msgstr "Přidat editační bod…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:417
+#: ../plugins/multiedit/multiedit/documenthelper.py:651
 msgid "Column Mode..."
 msgstr "Sloupcový režim…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:535
+#: ../plugins/multiedit/multiedit/documenthelper.py:773
 msgid "Removed edit point..."
 msgstr "Odebrat editační bod…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:685
+#: ../plugins/multiedit/multiedit/documenthelper.py:936
 msgid "Cancelled column mode..."
 msgstr "Sloupcový režim zrušen…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:804
+#: ../plugins/multiedit/multiedit/documenthelper.py:1274
 msgid "Enter column edit mode using selection"
 msgstr "Vstoupit do režimu úpravy sloupců pomocí výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:805
+#: ../plugins/multiedit/multiedit/documenthelper.py:1275
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr "Vstoupit do <b>chytrého</b> režimu úpravy sloupců pomocí výběru"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1276
+msgid "<b>Smart</b> column align mode using selection"
+msgstr "<b>Chytrý</b> režim zarovnání sloupců pomocí výběru"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1277
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+"<b>Chytrý</b> režim zarovnání sloupců s doplňujícím místem pomocí výběru"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1279
 msgid "Toggle edit point"
 msgstr "Přepnout editační bod"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:806
+#: ../plugins/multiedit/multiedit/documenthelper.py:1280
 msgid "Add edit point at beginning of line/selection"
 msgstr "Přidat editační bod na začátek řádku/výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:807
+#: ../plugins/multiedit/multiedit/documenthelper.py:1281
 msgid "Add edit point at end of line/selection"
 msgstr "Přidat editační bod na konec řádku/výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:843
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/documenthelper.py:1282
+msgid "Align edit points"
+msgstr "Editační body zarovnání"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1283
+msgid "Align edit points with additional space"
+msgstr "Editační body zarovnání s doplňujícím místem"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1319
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Režim vícenásobné úpravy"
 
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Start multi edit mode"
 msgstr "Začít režim vícenásobné úpravy"
+
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr ""
+
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:2
+msgid "Text Size"
+msgstr ""
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
 msgid "Tab_bar"
@@ -373,11 +373,11 @@ msgstr "Vložit terminál do spodního panelu."
 msgid "Embedded Terminal"
 msgstr "Vestavěný terminál"
 
-#: ../plugins/terminal/terminal.py:262
+#: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminál"
 
-#: ../plugins/terminal/terminal.py:285
+#: ../plugins/terminal/terminal.py:329
 msgid "C_hange Directory"
 msgstr "Změnit _adresář"
 
@@ -393,3 +393,23 @@ msgstr "Dokončování slov"
 msgid "Word completion using the completion framework"
 msgstr "Dokončování slov využívající vývojářský systém pro doplňování"
 
+#~ msgid "Draw Leading Spaces"
+#~ msgstr "Vykreslovat úvodní mezery"
+
+#~ msgid "Draw New lines"
+#~ msgstr "Vykreslovat zakončení řádků"
+
+#~ msgid "Draw Non-Breaking Spaces"
+#~ msgstr "Vykreslovat nezlomitelné mezery"
+
+#~ msgid "Draw Spaces in Text"
+#~ msgstr "Vykreslovat mezery v textu"
+
+#~ msgid "Draw Tabs"
+#~ msgstr "Vykreslovat tabulátory"
+
+#~ msgid "Draw Trailing Spaces"
+#~ msgstr "Vykreslovat koncové mezery"
+
+#~ msgid "Show White Spaces"
+#~ msgstr "Zobrazovat bílé znaky"
