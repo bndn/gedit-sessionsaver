@@ -7,20 +7,20 @@
 # Hendrik Richter <hendrikr@gnome.org>, 2005.
 # Andre Klapper <ak-47@gmx.net>, 2008.
 # Mario Blättermann <mariobl@gnome.org>, 2008, 2009.
+# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit 2.2.x\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2010-02-05 01:09+0000\n"
-"PO-Revision-Date: 2010-02-14 11:31+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
-"Language-Team: German <gnome-de@gnome.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-05-16 22:05+0200\n"
+"PO-Revision-Date: 2010-05-14 13:11+0200\n"
+"Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
+"Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
 
@@ -32,27 +32,27 @@ msgstr "Lesezeichen"
 msgid "Easy document navigation with bookmarks"
 msgstr "Einfache Navigation im Dokument mittels Lesezeichen"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
 msgid "Toggle Bookmark"
 msgstr "Lesezeichen ein-/ausschalten"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Toggle bookmark status of the current line"
 msgstr "Lesezeichenstatus der aktuellen Zeile ändern"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
 msgid "Goto Next Bookmark"
 msgstr "Nächstes Lesezeichen"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:139
 msgid "Goto the next bookmark"
 msgstr "Zum nächsten Lesezeichen gehen"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
 msgid "Goto Previous Bookmark"
 msgstr "Vorheriges Lesezeichen"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:142
 msgid "Goto the previous bookmark"
 msgstr "Zum vorherigen Lesezeichen gehen"
 
@@ -65,7 +65,7 @@ msgid "Bracket Completion"
 msgstr "Klammern schließen"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:258
+#: ../plugins/charmap/gedit-charmap-plugin.c:288
 msgid "Character Map"
 msgstr "Zeichentabelle"
 
@@ -135,7 +135,6 @@ msgid "Commander"
 msgstr "Commander"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
 msgid "Draw Spaces"
 msgstr "Leerzeichen anzeigen"
 
@@ -171,43 +170,15 @@ msgstr "Einzüge anzeigen"
 msgid "Draw trailing spaces"
 msgstr "Angehängte Leerzeichen anzeigen"
 
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
-msgid "Draw Leading Spaces"
-msgstr "Vorangestellte Leerzeichen anzeigen"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
-msgid "Draw New lines"
-msgstr "Zeilenumbrüche anzeigen"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Geschützte Leerzeichen anzeigen"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
-msgid "Draw Spaces in Text"
-msgstr "Leerzeichen im Text anzeigen"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
-msgid "Draw Tabs"
-msgstr "Einzüge anzeigen"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
-msgid "Draw Trailing Spaces"
-msgstr "Angehängte Leerzeichen anzeigen"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
-msgid "Show White Spaces"
-msgstr "Leerzeichen anzeigen"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:146
 msgid "Show _White Space"
 msgstr "Leerzei_chen anzeigen"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
 msgid "Show spaces and tabs"
 msgstr "Leerzeichen und Einzüge anzeigen"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:538
 msgid "Error dialog"
 msgstr "Fehlerdialog"
 
@@ -244,50 +215,84 @@ msgstr "Dokument an mehreren Stellen gleichzeitig bearbeiten"
 msgid "Multi Edit"
 msgstr "Mehrfachbearbeitung"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:279
+#: ../plugins/multiedit/multiedit/documenthelper.py:308
 msgid "Added edit point..."
 msgstr "Hinzugefügter Bearbeitungspunkt …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:417
+#: ../plugins/multiedit/multiedit/documenthelper.py:644
 msgid "Column Mode..."
 msgstr "Spaltenmodus …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:535
+#: ../plugins/multiedit/multiedit/documenthelper.py:766
 msgid "Removed edit point..."
 msgstr "Gelöschter Bearbeitungspunkt …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:685
+#: ../plugins/multiedit/multiedit/documenthelper.py:929
 msgid "Cancelled column mode..."
 msgstr "Abgebrochener Spaltenmodus …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:804
+#: ../plugins/multiedit/multiedit/documenthelper.py:1214
 msgid "Enter column edit mode using selection"
 msgstr "Mit dieser Auswahl in den Spalten-Bearbeitungsmodus wechseln"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:805
+#: ../plugins/multiedit/multiedit/documenthelper.py:1215
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr ""
+"Mit dieser Auswahl in den <b>intelligenten</b> Spalten-Bearbeitungsmodus "
+"wechseln"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1216
+msgid "<b>Smart</b> column align mode using selection"
+msgstr ""
+"Mit dieser Auswahl in den <b>intelligenten</b> Spalten-Bearbeitungsmodus"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1217
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+"Mit dieser Auswahl und zusätzlichem Abstand in den <b>intelligenten</b> "
+"Spalten-Bearbeitungsmodus"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1219
 msgid "Toggle edit point"
 msgstr "Bearbeitungspunkt umschalten"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:806
+#: ../plugins/multiedit/multiedit/documenthelper.py:1220
 msgid "Add edit point at beginning of line/selection"
 msgstr "Bearbeitungspunkt am Beginn der Zeile/Auswahl hinzufügen"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:807
+#: ../plugins/multiedit/multiedit/documenthelper.py:1221
 msgid "Add edit point at end of line/selection"
 msgstr "Bearbeitungspunkt am Ende der Zeile/Auswahl hinzufügen"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:843
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/documenthelper.py:1222
+msgid "Align edit points"
+msgstr "Bearbeitungspunkte ausrichten"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1223
+msgid "Align edit points with additional space"
+msgstr "Bearbeitungspunkte mit zusätzlichem Abstand ausrichten"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1259
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Mehrfachbearbeitungsmodus"
 
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Start multi edit mode"
 msgstr "In den Mehrfachbearbeitungsmodus wechseln"
 
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr "Die Textgröße leicht anpassen"
+
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:2
+msgid "Text Size"
+msgstr "Textgröße"
+
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
 msgid "Tab_bar"
-msgstr "Reiterleiste"
+msgstr "Reiter_leiste"
 
 #: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
 msgid "Show or hide the tabbar in the current window"
@@ -377,11 +382,11 @@ msgstr "Terminal in die untere Leiste einbetten"
 msgid "Embedded Terminal"
 msgstr "Eingebettetes Terminal"
 
-#: ../plugins/terminal/terminal.py:262
+#: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:285
+#: ../plugins/terminal/terminal.py:329
 msgid "C_hange Directory"
 msgstr "_Ordner wechseln"
 
@@ -396,6 +401,27 @@ msgstr "Wortvervollständigung"
 #: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
+
+#~ msgid "Draw Leading Spaces"
+#~ msgstr "Vorangestellte Leerzeichen anzeigen"
+
+#~ msgid "Draw New lines"
+#~ msgstr "Zeilenumbrüche anzeigen"
+
+#~ msgid "Draw Non-Breaking Spaces"
+#~ msgstr "Geschützte Leerzeichen anzeigen"
+
+#~ msgid "Draw Spaces in Text"
+#~ msgstr "Leerzeichen im Text anzeigen"
+
+#~ msgid "Draw Tabs"
+#~ msgstr "Einzüge anzeigen"
+
+#~ msgid "Draw Trailing Spaces"
+#~ msgstr "Angehängte Leerzeichen anzeigen"
+
+#~ msgid "Show White Spaces"
+#~ msgstr "Leerzeichen anzeigen"
 
 #~ msgid "Drawing color:"
 #~ msgstr "Zeichenfarbe:"
@@ -814,9 +840,6 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "anzuzeigen. Hinweis: Bei den Werten wird zwischen Groß- und "
 #~ "Kleinschreibung unterschieden. Verwenden Sie daher die Werte genau wie "
 #~ "hier angegeben."
-
-#~ msgid "Tab Size"
-#~ msgstr "Größe von Tabulatoren"
 
 #~ msgid "Text Color"
 #~ msgstr "Textfarbe"
