@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2010-05-04 21:35+0000\n"
-"PO-Revision-Date: 2010-05-07 13:36+0100\n"
+"POT-Creation-Date: 2010-05-21 16:12+0000\n"
+"PO-Revision-Date: 2010-05-21 20:18+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -29,27 +29,27 @@ msgstr "Zaznamki"
 msgid "Easy document navigation with bookmarks"
 msgstr "Enostavno upravljanje dokumentov z zaznamki"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
 msgid "Toggle Bookmark"
 msgstr "Preklopi zaznamek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Toggle bookmark status of the current line"
 msgstr "Preklopi stanje zaznamka trenutne vrstice"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:139
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
 msgid "Goto Next Bookmark"
 msgstr "Pojdi na naslednji zaznamek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:139
 msgid "Goto the next bookmark"
 msgstr "Pojdi na naslednji zaznamek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:142
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
 msgid "Goto Previous Bookmark"
 msgstr "Pojdi na predhodni zaznamek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:142
 msgid "Goto the previous bookmark"
 msgstr "Pojdi na predhodni zaznamek"
 
@@ -62,7 +62,7 @@ msgid "Bracket Completion"
 msgstr "Zaključevanje oklepajev"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:259
+#: ../plugins/charmap/gedit-charmap-plugin.c:288
 msgid "Character Map"
 msgstr "Preglednica znakov"
 
@@ -129,7 +129,7 @@ msgid "Commander"
 msgstr "Ukaznik"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
 msgid "Draw Spaces"
 msgstr "Izriši presledke"
 
@@ -165,45 +165,77 @@ msgstr "Izris tabulatorjev"
 msgid "Draw trailing spaces"
 msgstr "Izris presledkov na koncu vrstic"
 
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
-msgid "Draw Leading Spaces"
-msgstr "Izriši začetne presledke"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
-msgid "Draw New lines"
-msgstr "Izriši znake za nove vrstice"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Izriši nedeljive presledke"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
-msgid "Draw Spaces in Text"
-msgstr "Izriši presledke v besedilu"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
-msgid "Draw Tabs"
-msgstr "Izriši tabulatorje"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
-msgid "Draw Trailing Spaces"
-msgstr "Izriši presledke na koncu vrstic"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
-msgid "Show White Spaces"
-msgstr "Pokaži presledne znake"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:146
 msgid "Show _White Space"
 msgstr "Pokaži _presledne znake"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
 msgid "Show spaces and tabs"
 msgstr "Pokaži presledke znake in tabulatorje"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:538
 msgid "Error dialog"
 msgstr "Pogovorno okno napake"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
+msgid "Draw Leading Space"
+msgstr "Izriši znake začetnih presledkov"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
+msgid "Draw Newline"
+msgstr "Izriši oznake novih vrstic"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
+msgid "Draw Non-Breaking Spaces"
+msgstr "Izriši nedeljive presledke"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:5
+msgid "Draw Tabs"
+msgstr "Izriši tabulatorje"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:6
+msgid "Draw Text Space"
+msgstr "Izriši znake presledkov v besedilu"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:7
+msgid "Draw Trailing Space"
+msgstr "Izriši znake presledkov na koncu vrstic"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:8
+msgid "Enabled"
+msgstr "Omogočeno"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:9
+msgid "IF TRUE spaces in text will be drawn."
+msgstr "Izbrana možnost omogoča izrisovanje znakov presledkov v besedilu."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:10
+msgid "If TRUE drawing will be enabled."
+msgstr "Izbrana možnost omogoča izrisovanje znakov."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:11
+msgid "If TRUE leading space will be drawn."
+msgstr "Izbrana možnost omogoča izrisovanje znakov začetnih presledkov."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:12
+msgid "If TRUE newlines will be drawn."
+msgstr "Izbrana možnost omogoča izrisovanje znakov za nove vrstice."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:13
+msgid "If TRUE non-breaking spaces will be drawn."
+msgstr "Izbrana možnost omogoča izrisovanje znakov za nedeljive presledke."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:14
+msgid "If TRUE spaces will be drawn."
+msgstr "Izbrana možnost omogoča izrisovanje znakov za presledke."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:15
+msgid "If TRUE tabs will be drawn."
+msgstr "Izbrana možnost omogoča izrisovanje znakov za tabulatorje."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:16
+msgid "If TRUE trailing spaces will be drawn."
+msgstr "Izbrana možnost omogoča izrisovanje znakov presledkov na koncu vrstic."
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -238,59 +270,59 @@ msgstr "Uredi dokument na več mestih hkrati"
 msgid "Multi Edit"
 msgstr "Hkratno urejanje"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:308
+#: ../plugins/multiedit/multiedit/documenthelper.py:315
 msgid "Added edit point..."
 msgstr "Dodana točka urejanja ..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:644
+#: ../plugins/multiedit/multiedit/documenthelper.py:651
 msgid "Column Mode..."
 msgstr "Stolpični način ..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:766
+#: ../plugins/multiedit/multiedit/documenthelper.py:773
 msgid "Removed edit point..."
 msgstr "Odstranjena točka urejanja ..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:929
+#: ../plugins/multiedit/multiedit/documenthelper.py:936
 msgid "Cancelled column mode..."
 msgstr "Preklican stolpični način ..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1214
+#: ../plugins/multiedit/multiedit/documenthelper.py:1274
 msgid "Enter column edit mode using selection"
 msgstr "Način urejanja stolpcev z izbiro"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1215
+#: ../plugins/multiedit/multiedit/documenthelper.py:1275
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr "Uporabi <b>pametni</b> način urejanja stolpcev z izbiro"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1216
+#: ../plugins/multiedit/multiedit/documenthelper.py:1276
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "<b>Pametni</b> način poravnave stolpcev z uporabo izbire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1217
+#: ../plugins/multiedit/multiedit/documenthelper.py:1277
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr "<b>Pametni</b> način poravnave stolpcev z dodatnimi presledki z uporabo izbire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1219
+#: ../plugins/multiedit/multiedit/documenthelper.py:1279
 msgid "Toggle edit point"
 msgstr "Preklopi točko urejanja"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1220
+#: ../plugins/multiedit/multiedit/documenthelper.py:1280
 msgid "Add edit point at beginning of line/selection"
 msgstr "Dodaj točko urejanja na začetek vrstice oziroma izbire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1221
+#: ../plugins/multiedit/multiedit/documenthelper.py:1281
 msgid "Add edit point at end of line/selection"
 msgstr "Dodaj točko urejanja na konec vrstice oziroma izbire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1222
+#: ../plugins/multiedit/multiedit/documenthelper.py:1282
 msgid "Align edit points"
 msgstr "Poravnaj točke povezav"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1223
+#: ../plugins/multiedit/multiedit/documenthelper.py:1283
 msgid "Align edit points with additional space"
 msgstr "Poravnaj točke urejanja z dodatnim presledkom"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1259
+#: ../plugins/multiedit/multiedit/documenthelper.py:1319
 #: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Način hkratnega urejanja"
@@ -398,11 +430,11 @@ msgstr "Vstavi terminalsko okno v spodnji pladenj."
 msgid "Embedded Terminal"
 msgstr "Vstavljen terminal"
 
-#: ../plugins/terminal/terminal.py:286
+#: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:308
+#: ../plugins/terminal/terminal.py:329
 msgid "C_hange Directory"
 msgstr "_Spremeni mapo"
 
@@ -417,4 +449,9 @@ msgstr "Dopolnjevanje besed"
 #: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "Dopolnjevanje besed z uporabo ogrodja dopolnjevanja"
+
+#~ msgid "Draw Spaces in Text"
+#~ msgstr "Izriši presledke v besedilu"
+#~ msgid "Show White Spaces"
+#~ msgstr "Pokaži presledne znake"
 
