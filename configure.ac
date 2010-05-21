@@ -74,7 +74,7 @@ PKG_CHECK_EXISTS([gtk+-3.0 >= 2.90],
 		 ])
 
 PKG_CHECK_MODULES(GEDIT, [
-	glib-2.0 >= 2.13.0
+	glib-2.0 >= 2.25.6
 	gio-2.0 >= 2.25.4
 	$GTK_REQUIRED >= $GTK_REQUIRED_VERSION
 	gconf-2.0 >= 1.1.11
@@ -450,6 +450,7 @@ plugins/commander/modules/Makefile
 plugins/commander/modules/find/Makefile
 plugins/drawspaces/Makefile
 plugins/drawspaces/drawspaces.gedit-plugin.desktop.in
+plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in
 plugins/joinlines/Makefile
 plugins/joinlines/joinlines.gedit-plugin.desktop.in
 plugins/multiedit/Makefile
