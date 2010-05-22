@@ -214,21 +214,7 @@ class DocumentHelper(Signals):
         return True
 
     def iter_to_offset(self, piter):
-        tw = self._view.get_tab_width()
-        start = piter.copy()
-        start.set_line_offset(0)
-
-        offset = 0
-
-        while not start.equal(piter):
-            if start.get_char() == "\t":
-                offset += tw - (offset % tw)
-            else:
-                offset += 1
-
-            start.forward_char()
-
-        return offset
+        return self._view.get_visual_column(piter)
 
     def get_visible_iter(self, line, offset):
         piter = self._buffer.get_iter_at_line(line)
