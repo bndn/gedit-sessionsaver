@@ -27,13 +27,12 @@ plugin_in_files = drawspaces.gedit-plugin.desktop.in
 
 plugin_DATA = $(plugin_in_files:.gedit-plugin.desktop.in=.gedit-plugin)
 
-gsettingsschema_DATA = org.gnome.gedit.drawspaces.gschema.xml
-gsettingsschema_SCHEMAS = $(gsettingsschema_DATA)
+gsettings_SCHEMAS = org.gnome.gedit.drawspaces.gschema.xml
 
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-EXTRA_DIST = $(plugin_in_files) $(ui_DATA) $(gsettingsschema_SCHEMAS)
+EXTRA_DIST = $(plugin_in_files) $(ui_DATA) $(gsettings_SCHEMAS)
 
 CLEANFILES = $(plugin_DATA)
 DISTCLEANFILES = $(plugin_DATA)
