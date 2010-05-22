@@ -28,22 +28,28 @@
 
 #include <glib/gi18n-lib.h>
 #include <gedit/gedit-debug.h>
-#include <gconf/gconf-client.h>
 
 
-#define WINDOW_DATA_KEY	"GeditShowTabbarWindowData"
-#define MENU_PATH 	"/MenuBar/ViewMenu"
-#define GCONF_BASE_KEY	"/apps/gedit-2/plugins/showtabbar"
+#define WINDOW_DATA_KEY		"GeditShowTabbarWindowData"
+#define MENU_PATH 		"/MenuBar/ViewMenu"
+#define GSETTINGS_BASE_KEY	"org.gnome.gedit.plugins.showtabbar"
+#define GSETTINGS_KEY_TABBAR	"tabbar-visible"
 
 #define GEDIT_SHOW_TABBAR_PLUGIN_GET_PRIVATE(object)	(G_TYPE_INSTANCE_GET_PRIVATE ((object), GEDIT_TYPE_SHOW_TABBAR_PLUGIN, GeditShowTabbarPluginPrivate))
 
 GEDIT_PLUGIN_REGISTER_TYPE (GeditShowTabbarPlugin, gedit_show_tabbar_plugin)
 
+struct _GeditShowTabbarPluginPrivate
+{
+	GSettings *settings;
+};
+
 typedef struct
 {
-	GtkActionGroup *action_group;
-	guint           ui_id;
-	gulong		signal_handler_id;
+	GeditShowTabbarPlugin *plugin;
+	GtkActionGroup        *action_group;
+	guint                  ui_id;
+	gulong		       signal_handler_id;
 } WindowData;
 
 static void
@@ -51,61 +57,27 @@ gedit_show_tabbar_plugin_init (GeditShowTabbarPlugin *plugin)
 {
 	gedit_debug_message (DEBUG_PLUGINS,
 			     "GeditShowTabbarPlugin initializing");
+
+	plugin->priv = GEDIT_SHOW_TABBAR_PLUGIN_GET_PRIVATE (plugin);
+
+	plugin->priv->settings = g_settings_new (GSETTINGS_BASE_KEY);
 }
 
 static void
-gedit_show_tabbar_plugin_finalize (GObject *object)
+gedit_show_tabbar_plugin_dispose (GObject *object)
 {
+	GeditShowTabbarPlugin *plugin = GEDIT_SHOW_TABBAR_PLUGIN (object);
+
 	gedit_debug_message (DEBUG_PLUGINS,
-			     "GeditShowTabbarPlugin finalizing");
+			     "GeditShowTabbarPlugin disposing");
 
-	G_OBJECT_CLASS (gedit_show_tabbar_plugin_parent_class)->finalize (object);
-}
-
-static gboolean
-gconf_load_tabbar_visible (void)
-{
-	GConfClient *client;
-	GConfValue *value;
-
-	client = gconf_client_get_default ();
-
-	value = gconf_client_get (client,
-				  GCONF_BASE_KEY "/tabbar_visible",
-				  NULL);
-
-	g_object_unref (client);
-
-	if (value != NULL)
+	if (plugin->priv->settings != NULL)
 	{
-        	gboolean visible;
-
-        	visible = (value->type == GCONF_VALUE_BOOL)
-        			? gconf_value_get_bool (value)
-        			: TRUE;
-		gconf_value_free (value);
-
-		return visible;
+		g_object_unref (plugin->priv->settings);
+		plugin->priv->settings = NULL;
 	}
-	else
-	{
-		return TRUE; /* default value */
-	}
-}
 
-static void
-gconf_store_tabbar_visible (gboolean visible)
-{
-	GConfClient *client;
-
-	client = gconf_client_get_default ();
-
-	gconf_client_set_bool (client,
-			       GCONF_BASE_KEY "/tabbar_visible",
-			       visible,
-			       NULL);
-
-	g_object_unref (client);
+	G_OBJECT_CLASS (gedit_show_tabbar_plugin_parent_class)->dispose (object);
 }
 
 static GtkNotebook *
@@ -138,8 +110,9 @@ get_notebook (GeditWindow *window)
 static void
 on_notebook_show_tabs_changed (GtkNotebook	*notebook,
 			       GParamSpec	*pspec,
-			       GtkToggleAction	*action)
+			       WindowData	*data)
 {
+	GtkAction *action;
 	gboolean visible;
 
 #if 0
@@ -151,14 +124,18 @@ on_notebook_show_tabs_changed (GtkNotebook	*notebook,
 		gtk_toggle_action_set_active (action, visible);
 #endif
 
-	visible = gtk_toggle_action_get_active (action);
+	action = gtk_action_group_get_action (data->action_group,
+					      "ShowTabbar");
+	visible = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
 
 	/* this is intendend to avoid the GeditNotebook to show the tabs again
 	   (it does so everytime a new tab is added) */
 	if (visible != gtk_notebook_get_show_tabs (notebook))
 		gtk_notebook_set_show_tabs (notebook, visible);
 
-	gconf_store_tabbar_visible (visible);
+	g_settings_set_boolean (data->plugin->priv->settings,
+				GSETTINGS_KEY_TABBAR,
+				visible);
 }
 
 static void
@@ -175,7 +152,7 @@ free_window_data (WindowData *data)
 	g_return_if_fail (data != NULL);
 
 	g_object_unref (data->action_group);
-	g_free (data);
+	g_slice_free (WindowData, data);
 }
 
 static void
@@ -190,13 +167,15 @@ impl_activate (GeditPlugin *plugin,
 
 	gedit_debug (DEBUG_PLUGINS);
 
-	visible = gconf_load_tabbar_visible ();
+	data = g_slice_new (WindowData);
+	data->plugin = GEDIT_SHOW_TABBAR_PLUGIN (plugin);
+
+	visible = g_settings_get_boolean (data->plugin->priv->settings,
+					  GSETTINGS_KEY_TABBAR);
 
 	notebook = get_notebook (window);
 
 	gtk_notebook_set_show_tabs (notebook, visible);
-
-	data = g_new (WindowData, 1);
 
 	manager = gedit_window_get_ui_manager (window);
 
@@ -234,7 +213,7 @@ impl_activate (GeditPlugin *plugin,
 		g_signal_connect (notebook,
 				  "notify::show-tabs",
 				  G_CALLBACK (on_notebook_show_tabs_changed),
-				  action);
+				  data);
 
 	g_object_set_data_full (G_OBJECT (window),
 				WINDOW_DATA_KEY,
@@ -272,7 +251,9 @@ gedit_show_tabbar_plugin_class_init (GeditShowTabbarPluginClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	GeditPluginClass *plugin_class = GEDIT_PLUGIN_CLASS (klass);
 
-	object_class->finalize = gedit_show_tabbar_plugin_finalize;
+	g_type_class_add_private (object_class, sizeof (GeditShowTabbarPluginPrivate));
+
+	object_class->dispose = gedit_show_tabbar_plugin_dispose;
 
 	plugin_class->activate = impl_activate;
 	plugin_class->deactivate = impl_deactivate;

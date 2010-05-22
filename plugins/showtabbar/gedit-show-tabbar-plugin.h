@@ -50,6 +50,9 @@ typedef struct _GeditShowTabbarPlugin		GeditShowTabbarPlugin;
 struct _GeditShowTabbarPlugin
 {
 	GeditPlugin parent_instance;
+	
+	/* private */
+	GeditShowTabbarPluginPrivate *priv;
 };
 
 /*

@@ -463,6 +463,7 @@ plugins/sessionsaver/Makefile
 plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in
 plugins/showtabbar/Makefile
 plugins/showtabbar/showtabbar.gedit-plugin.desktop.in
+plugins/showtabbar/org.gnome.gedit.showtabbar.gschema.xml.in
 plugins/smartspaces/Makefile
 plugins/smartspaces/smartspaces.gedit-plugin.desktop.in
 plugins/terminal/Makefile
