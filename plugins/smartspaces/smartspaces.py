@@ -54,6 +54,14 @@ class SmartSpacesViewHelper(object):
     def on_notify(self, view, pspec):
         self.update_active()
 
+    def get_real_indent_width(view):
+        indent_width = view.get_indent_width()
+
+        if indent_width < 0:
+             indent_width = view.get_tab_width()
+
+        return indent_width
+
     def on_key_press_event(self, view, event):
         # Only take care of backspace and shift+backspace
         mods = gtk.accelerator_get_default_mod_mask()
@@ -79,9 +87,9 @@ class SmartSpacesViewHelper(object):
 
         # If the previus chars are spaces, try to remove
         # them until the previus tab stop
-        max_move = offset % view.get_tab_width()
+        max_move = offset % get_real_indent_width(view)
         if max_move == 0:
-            max_move = view.get_tab_width()
+            max_move = get_real_indent_width(view)
 
         moved = 0
         while moved < max_move and prev.get_char() == ' ':
