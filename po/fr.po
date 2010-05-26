@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: gedit-plugins HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2010-05-03 13:14+0000\n"
-"PO-Revision-Date: 2010-05-08 16:56+0200\n"
+"POT-Creation-Date: 2010-05-21 16:12+0000\n"
+"PO-Revision-Date: 2010-05-26 16:43+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,27 +30,27 @@ msgstr "Signets"
 msgid "Easy document navigation with bookmarks"
 msgstr "Navigation aisée dans vos documents avec des signets"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
 msgid "Toggle Bookmark"
 msgstr "Activer/désactiver le signet"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Toggle bookmark status of the current line"
 msgstr "Inverse l'état de signet de la ligne actuelle"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:139
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
 msgid "Goto Next Bookmark"
 msgstr "Aller au signet suivant"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:139
 msgid "Goto the next bookmark"
 msgstr "Va au signet suivant"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:142
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
 msgid "Goto Previous Bookmark"
 msgstr "Aller au signet précédent"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:142
 msgid "Goto the previous bookmark"
 msgstr "Va au signet précédent"
 
@@ -63,7 +63,7 @@ msgid "Bracket Completion"
 msgstr "Complétion de parenthèses"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:259
+#: ../plugins/charmap/gedit-charmap-plugin.c:288
 msgid "Character Map"
 msgstr "Table de caractères"
 
@@ -132,7 +132,7 @@ msgid "Commander"
 msgstr "Commander"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
 msgid "Draw Spaces"
 msgstr "Indicateur d'espaces"
 
@@ -168,45 +168,77 @@ msgstr "Indiquer les tabulations"
 msgid "Draw trailing spaces"
 msgstr "Indiquer les espaces de fin"
 
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
-msgid "Draw Leading Spaces"
-msgstr "Indiquer les espaces de début"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
-msgid "Draw New lines"
-msgstr "Indiquer les sauts de ligne"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Indiquer les espaces insécables"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
-msgid "Draw Spaces in Text"
-msgstr "Indique les espaces dans le texte"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
-msgid "Draw Tabs"
-msgstr "Indiquer les tabulations"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
-msgid "Draw Trailing Spaces"
-msgstr "Indiquer les espaces de fin"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
-msgid "Show White Spaces"
-msgstr "Afficher les espaces"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:146
 msgid "Show _White Space"
 msgstr "Afficher les _espaces"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
 msgid "Show spaces and tabs"
 msgstr "Affiche les espaces et les tabulations"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:538
 msgid "Error dialog"
 msgstr "Fenêtre d'erreur"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
+msgid "Draw Leading Space"
+msgstr "Indiquer les espaces de début"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
+msgid "Draw Newline"
+msgstr "Indiquer les sauts de ligne"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
+msgid "Draw Non-Breaking Spaces"
+msgstr "Indiquer les espaces insécables"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:5
+msgid "Draw Tabs"
+msgstr "Indiquer les tabulations"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:6
+msgid "Draw Text Space"
+msgstr "Indiquer les espaces dans le texte"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:7
+msgid "Draw Trailing Space"
+msgstr "Indiquer les espaces de fin"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:8
+msgid "Enabled"
+msgstr "Activé"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:9
+msgid "IF TRUE spaces in text will be drawn."
+msgstr "Si VRAI (TRUE), les espaces dans du texte sont indiquées."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:10
+msgid "If TRUE drawing will be enabled."
+msgstr "Si VRAI (TRUE), l'affichage des caractères blancs est activé."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:11
+msgid "If TRUE leading space will be drawn."
+msgstr "Si VRAI (TRUE), les espaces en début de ligne sont indiquées."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:12
+msgid "If TRUE newlines will be drawn."
+msgstr "Si VRAI (TRUE), les sauts de ligne sont indiqués."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:13
+msgid "If TRUE non-breaking spaces will be drawn."
+msgstr "Si VRAI (TRUE), les espaces insécables sont indiquées."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:14
+msgid "If TRUE spaces will be drawn."
+msgstr "Si VRAI (TRUE), les espaces sont indiquées."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:15
+msgid "If TRUE tabs will be drawn."
+msgstr "Si VRAI (TRUE), les tabulations sont indiquées."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:16
+msgid "If TRUE trailing spaces will be drawn."
+msgstr "Si VRAI (TRUE), les espaces en fin de ligne sont indiquées."
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -241,62 +273,64 @@ msgstr "Éditer un document à plusieurs endroits en même temps"
 msgid "Multi Edit"
 msgstr "Édition multiple"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:308
+#: ../plugins/multiedit/multiedit/documenthelper.py:315
 msgid "Added edit point..."
 msgstr "Point d'édition ajouté..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:644
+#: ../plugins/multiedit/multiedit/documenthelper.py:651
 msgid "Column Mode..."
 msgstr "Mode colonne..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:766
+#: ../plugins/multiedit/multiedit/documenthelper.py:773
 msgid "Removed edit point..."
 msgstr "Point d'édition supprimé..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:929
+#: ../plugins/multiedit/multiedit/documenthelper.py:936
 msgid "Cancelled column mode..."
 msgstr "Mode colonne annulé..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1214
+#: ../plugins/multiedit/multiedit/documenthelper.py:1274
 msgid "Enter column edit mode using selection"
 msgstr "Démarre le mode d'édition en colonne en utilisant la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1215
+#: ../plugins/multiedit/multiedit/documenthelper.py:1275
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
-"Démarre le mode d'édition en colonne <b>intelligent</b> en utilisant la sélection"
+"Démarre le mode d'édition en colonne <b>intelligent</b> en utilisant la "
+"sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1216
+#: ../plugins/multiedit/multiedit/documenthelper.py:1276
 msgid "<b>Smart</b> column align mode using selection"
-msgstr "Mode d'alignement de colonne <b>intelligent</b> en utilisant la sélection"
+msgstr ""
+"Mode d'alignement de colonne <b>intelligent</b> en utilisant la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1217
+#: ../plugins/multiedit/multiedit/documenthelper.py:1277
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
-"Mode d'alignement de colonne <b>intelligent</b> avec espace supplémentaire en "
-"utilisant la sélection"
+"Mode d'alignement de colonne <b>intelligent</b> avec espace supplémentaire "
+"en utilisant la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1219
+#: ../plugins/multiedit/multiedit/documenthelper.py:1279
 msgid "Toggle edit point"
 msgstr "Basculer le point d'édition"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1220
+#: ../plugins/multiedit/multiedit/documenthelper.py:1280
 msgid "Add edit point at beginning of line/selection"
 msgstr "Ajoute un point d'édition au début de la ligne ou de la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1221
+#: ../plugins/multiedit/multiedit/documenthelper.py:1281
 msgid "Add edit point at end of line/selection"
 msgstr "Ajoute un point d'édition à la fin de la ligne ou de la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1222
+#: ../plugins/multiedit/multiedit/documenthelper.py:1282
 msgid "Align edit points"
 msgstr "Aligner les points d'édition"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1223
+#: ../plugins/multiedit/multiedit/documenthelper.py:1283
 msgid "Align edit points with additional space"
 msgstr "Aligner les points d'édition avec espace supplémentaire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1259
+#: ../plugins/multiedit/multiedit/documenthelper.py:1319
 #: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Mode d'édition multiple"
@@ -405,11 +439,11 @@ msgstr "Intègre un terminal dans le panneau du bas."
 msgid "Embedded Terminal"
 msgstr "Terminal intégré"
 
-#: ../plugins/terminal/terminal.py:286
+#: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:308
+#: ../plugins/terminal/terminal.py:329
 msgid "C_hange Directory"
 msgstr "C_hanger de répertoire"
 
@@ -425,5 +459,8 @@ msgstr "Complétion de mots"
 msgid "Word completion using the completion framework"
 msgstr "Complétion de mots, utilise la structure de complétion"
 
-#~ msgid "Drawing color:"
-#~ msgstr "Couleur des indicateurs :"
+#~ msgid "Draw Spaces in Text"
+#~ msgstr "Indique les espaces dans le texte"
+
+#~ msgid "Show White Spaces"
+#~ msgstr "Afficher les espaces"
