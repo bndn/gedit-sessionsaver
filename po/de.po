@@ -7,15 +7,15 @@
 # Hendrik Richter <hendrikr@gnome.org>, 2005.
 # Andre Klapper <ak-47@gmx.net>, 2008.
 # Mario Blättermann <mariobl@gnome.org>, 2008, 2009.
-# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2010.
-#
+# Christian Kirbach  <Christian.Kirbach@googlemail.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit 2.2.x\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-16 22:05+0200\n"
-"PO-Revision-Date: 2010-05-14 13:11+0200\n"
-"Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2010-05-26 14:44+0000\n"
+"PO-Revision-Date: 2010-05-27 14:53+0200\n"
+"Last-Translator: Christian Kirbach  <Christian.Kirbach@googlemail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -135,6 +135,7 @@ msgid "Commander"
 msgstr "Commander"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
 msgid "Draw Spaces"
 msgstr "Leerzeichen anzeigen"
 
@@ -182,6 +183,66 @@ msgstr "Leerzeichen und Einzüge anzeigen"
 msgid "Error dialog"
 msgstr "Fehlerdialog"
 
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
+msgid "Draw Leading Space"
+msgstr "Vorangestellte Leerzeichen darstellen"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
+msgid "Draw Newline"
+msgstr "Zeilenumbrüche darstellen"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
+msgid "Draw Non-Breaking Spaces"
+msgstr "Geschützte Leerzeichen darstellen"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:5
+msgid "Draw Tabs"
+msgstr "Einzüge darstellen"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:6
+msgid "Draw Text Space"
+msgstr "Leerzeichen darstellen"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:7
+msgid "Draw Trailing Space"
+msgstr "Angehängte Leerzeichen darstellen"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:8
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:9
+msgid "IF TRUE spaces in text will be drawn."
+msgstr "Wenn WAHR, so werden Leerzeichen dargestellt."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:10
+msgid "If TRUE drawing will be enabled."
+msgstr "Wenn WAHR, so wird die Darstellung aktiviert."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:11
+msgid "If TRUE leading space will be drawn."
+msgstr "Wenn WAHR, so werden vorangestellte Leerzeichen dargestellt."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:12
+msgid "If TRUE newlines will be drawn."
+msgstr "Wenn WAHR, so werden Zeilenumbrüche dargestellt."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:13
+msgid "If TRUE non-breaking spaces will be drawn."
+msgstr "Wenn WAHR, so werden geschützte Leerzeichen dargestellt."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:14
+msgid "If TRUE spaces will be drawn."
+msgstr "Wenn WAHR, so werden Leerzeichen im Text dargestellt."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:15
+msgid "If TRUE tabs will be drawn."
+msgstr "Wenn WAHR, so werden Einzüge dargestellt."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:16
+msgid "If TRUE trailing spaces will be drawn."
+msgstr "Wenn WAHR, so werden angehängte Leerzeichen dargestellt."
+
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Mehrere Zeilen zusammenfügen oder lange Zeilen umbrechen"
@@ -215,64 +276,64 @@ msgstr "Dokument an mehreren Stellen gleichzeitig bearbeiten"
 msgid "Multi Edit"
 msgstr "Mehrfachbearbeitung"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:308
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
 msgstr "Hinzugefügter Bearbeitungspunkt …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:644
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
 msgid "Column Mode..."
 msgstr "Spaltenmodus …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:766
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
 msgid "Removed edit point..."
 msgstr "Gelöschter Bearbeitungspunkt …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:929
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
 msgid "Cancelled column mode..."
 msgstr "Abgebrochener Spaltenmodus …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1214
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
 msgid "Enter column edit mode using selection"
 msgstr "Mit dieser Auswahl in den Spalten-Bearbeitungsmodus wechseln"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1215
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
 "Mit dieser Auswahl in den <b>intelligenten</b> Spalten-Bearbeitungsmodus "
 "wechseln"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1216
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
 msgid "<b>Smart</b> column align mode using selection"
 msgstr ""
 "Mit dieser Auswahl in den <b>intelligenten</b> Spalten-Bearbeitungsmodus"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1217
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 "Mit dieser Auswahl und zusätzlichem Abstand in den <b>intelligenten</b> "
 "Spalten-Bearbeitungsmodus"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1219
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
 msgid "Toggle edit point"
 msgstr "Bearbeitungspunkt umschalten"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1220
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
 msgid "Add edit point at beginning of line/selection"
 msgstr "Bearbeitungspunkt am Beginn der Zeile/Auswahl hinzufügen"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1221
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
 msgid "Add edit point at end of line/selection"
 msgstr "Bearbeitungspunkt am Ende der Zeile/Auswahl hinzufügen"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1222
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
 msgid "Align edit points"
 msgstr "Bearbeitungspunkte ausrichten"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1223
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
 msgid "Align edit points with additional space"
 msgstr "Bearbeitungspunkte mit zusätzlichem Abstand ausrichten"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1259
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
 #: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Mehrfachbearbeitungsmodus"
@@ -290,19 +351,19 @@ msgstr "Die Textgröße leicht anpassen"
 msgid "Text Size"
 msgstr "Textgröße"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:187
 msgid "Tab_bar"
 msgstr "Reiter_leiste"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:188
 msgid "Show or hide the tabbar in the current window"
 msgstr "Die Reiterleiste im aktuellen Fenster anzeigen/verbergen"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+#: ../plugins/showtabbar/org.gnome.gedit.showtabbar.gschema.xml.in.in.h:1
 msgid "Tabbar is Visible"
 msgstr "Reiterleiste ist sichtbar"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+#: ../plugins/showtabbar/org.gnome.gedit.showtabbar.gschema.xml.in.in.h:2
 msgid "Whether the tabbar should be visible in editing windows."
 msgstr ""
 "Legt fest, ob die Reiterleiste in Bearbeitungsfenstern sichtbar sein soll."
@@ -402,23 +463,8 @@ msgstr "Wortvervollständigung"
 msgid "Word completion using the completion framework"
 msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 
-#~ msgid "Draw Leading Spaces"
-#~ msgstr "Vorangestellte Leerzeichen anzeigen"
-
-#~ msgid "Draw New lines"
-#~ msgstr "Zeilenumbrüche anzeigen"
-
-#~ msgid "Draw Non-Breaking Spaces"
-#~ msgstr "Geschützte Leerzeichen anzeigen"
-
 #~ msgid "Draw Spaces in Text"
 #~ msgstr "Leerzeichen im Text anzeigen"
-
-#~ msgid "Draw Tabs"
-#~ msgstr "Einzüge anzeigen"
-
-#~ msgid "Draw Trailing Spaces"
-#~ msgstr "Angehängte Leerzeichen anzeigen"
 
 #~ msgid "Show White Spaces"
 #~ msgstr "Leerzeichen anzeigen"
@@ -1030,9 +1076,6 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 
 #~ msgid "Done"
 #~ msgstr "Abgeschlossen"
-
-#~ msgid "Failed"
-#~ msgstr "Fehlgeschlagen"
 
 #~ msgid ""
 #~ "The shell command entry is empty.\n"
