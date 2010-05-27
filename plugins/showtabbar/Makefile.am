@@ -31,9 +31,9 @@ gsettings_SCHEMAS = org.gnome.gedit.showtabbar.gschema.xml
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-EXTRA_DIST = $(plugin_in_files) $(gsettings_SCHEMAS)
+EXTRA_DIST = $(plugin_in_files) org.gnome.gedit.showtabbar.gschema.xml.in.in
 
-CLEANFILES = $(plugin_DATA) $(schemas_DATA)
-DISTCLEANFILES = $(plugin_DATA) $(schemas_DATA)
+CLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk

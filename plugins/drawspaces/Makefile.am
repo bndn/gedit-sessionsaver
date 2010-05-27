@@ -32,9 +32,9 @@ gsettings_SCHEMAS = org.gnome.gedit.drawspaces.gschema.xml
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-EXTRA_DIST = $(plugin_in_files) $(ui_DATA) $(gsettings_SCHEMAS)
+EXTRA_DIST = $(plugin_in_files) $(ui_DATA) org.gnome.gedit.drawspaces.gschema.xml.in.in
 
-CLEANFILES = $(plugin_DATA)
-DISTCLEANFILES = $(plugin_DATA)
+CLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk
