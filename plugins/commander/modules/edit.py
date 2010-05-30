@@ -54,7 +54,7 @@ def rename(view, newfile):
 
 	doc = view.get_buffer()
 
-	if not hasattr(doc, 'set_uri'):
+	if not hasattr(doc, 'set_location'):
 		raise commander.commands.exceptions.Execute('Your version of gedit does not support this action')
 
 	if doc.is_untitled():
