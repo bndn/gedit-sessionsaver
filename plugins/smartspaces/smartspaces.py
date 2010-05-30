@@ -54,7 +54,7 @@ class SmartSpacesViewHelper(object):
     def on_notify(self, view, pspec):
         self.update_active()
 
-    def get_real_indent_width(view):
+    def get_real_indent_width(self, view):
         indent_width = view.get_indent_width()
 
         if indent_width < 0:
@@ -87,9 +87,10 @@ class SmartSpacesViewHelper(object):
 
         # If the previus chars are spaces, try to remove
         # them until the previus tab stop
-        max_move = offset % get_real_indent_width(view)
+        max_move = offset % self.get_real_indent_width(view)
+
         if max_move == 0:
-            max_move = get_real_indent_width(view)
+            max_move = self.get_real_indent_width(view)
 
         moved = 0
         while moved < max_move and prev.get_char() == ' ':
