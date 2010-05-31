@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-17 00:08+0200\n"
-"PO-Revision-Date: 2010-05-03 10:20+0200\n"
+"POT-Creation-Date: 2010-05-31 22:59+0200\n"
+"PO-Revision-Date: 2010-05-17 08:09+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -132,6 +132,7 @@ msgid "Commander"
 msgstr "Commander"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
 msgid "Draw Spaces"
 msgstr "Vykreslovat mezery"
 
@@ -179,6 +180,71 @@ msgstr "Zobrazovat mezery a tabulátory"
 msgid "Error dialog"
 msgstr "Chybový dialog"
 
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
+#, fuzzy
+msgid "Draw Leading Space"
+msgstr "Vykreslovat úvodní mezery"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
+#, fuzzy
+msgid "Draw Newline"
+msgstr "Vykreslovat zakončení řádků"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
+msgid "Draw Non-Breaking Spaces"
+msgstr "Vykreslovat nezlomitelné mezery"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:5
+msgid "Draw Tabs"
+msgstr "Vykreslovat tabulátory"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:6
+#, fuzzy
+msgid "Draw Text Space"
+msgstr "Vykreslovat mezery"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:7
+#, fuzzy
+msgid "Draw Trailing Space"
+msgstr "Vykreslovat koncové mezery"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:8
+msgid "Enabled"
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:9
+msgid "IF TRUE spaces in text will be drawn."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:10
+msgid "If TRUE drawing will be enabled."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:11
+msgid "If TRUE leading space will be drawn."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:12
+msgid "If TRUE newlines will be drawn."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:13
+#, fuzzy
+msgid "If TRUE non-breaking spaces will be drawn."
+msgstr "Vykreslovat nezlomitelné mezery"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:14
+msgid "If TRUE spaces will be drawn."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:15
+msgid "If TRUE tabs will be drawn."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:16
+msgid "If TRUE trailing spaces will be drawn."
+msgstr ""
+
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Spojit několik řádků nebo rozdělit dlouhé řádky"
@@ -212,60 +278,60 @@ msgstr "Úprava dokumentu na více místech současně"
 msgid "Multi Edit"
 msgstr "Vícenásobná úprava"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:315
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
 msgstr "Přidat editační bod…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:651
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
 msgid "Column Mode..."
 msgstr "Sloupcový režim…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:773
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
 msgid "Removed edit point..."
 msgstr "Odebrat editační bod…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:936
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
 msgid "Cancelled column mode..."
 msgstr "Sloupcový režim zrušen…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1274
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
 msgid "Enter column edit mode using selection"
 msgstr "Vstoupit do režimu úpravy sloupců pomocí výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1275
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr "Vstoupit do <b>chytrého</b> režimu úpravy sloupců pomocí výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1276
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "<b>Chytrý</b> režim zarovnání sloupců pomocí výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1277
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 "<b>Chytrý</b> režim zarovnání sloupců s doplňujícím místem pomocí výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1279
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
 msgid "Toggle edit point"
 msgstr "Přepnout editační bod"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1280
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
 msgid "Add edit point at beginning of line/selection"
 msgstr "Přidat editační bod na začátek řádku/výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1281
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
 msgid "Add edit point at end of line/selection"
 msgstr "Přidat editační bod na konec řádku/výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1282
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
 msgid "Align edit points"
 msgstr "Editační body zarovnání"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1283
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
 msgid "Align edit points with additional space"
 msgstr "Editační body zarovnání s doplňujícím místem"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1319
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
 #: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Režim vícenásobné úpravy"
@@ -277,25 +343,25 @@ msgstr "Začít režim vícenásobné úpravy"
 #. ex:ts=4:et:
 #: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:1
 msgid "Easily increase and decrease the text size"
-msgstr ""
+msgstr "Snadné zvětšování a zmenšování velikosti textu"
 
 #: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:2
 msgid "Text Size"
-msgstr ""
+msgstr "Velikost textu"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:187
 msgid "Tab_bar"
 msgstr "Lišta _karet"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
+#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:188
 msgid "Show or hide the tabbar in the current window"
 msgstr "Zobrazit či skrýt lištu karet v aktuálním okně"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
+#: ../plugins/showtabbar/org.gnome.gedit.showtabbar.gschema.xml.in.in.h:1
 msgid "Tabbar is Visible"
 msgstr "Lišta karet je viditelná"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
+#: ../plugins/showtabbar/org.gnome.gedit.showtabbar.gschema.xml.in.in.h:2
 msgid "Whether the tabbar should be visible in editing windows."
 msgstr "Zda má být lišta karet viditelná v editačních oknech."
 
@@ -393,23 +459,8 @@ msgstr "Dokončování slov"
 msgid "Word completion using the completion framework"
 msgstr "Dokončování slov využívající vývojářský systém pro doplňování"
 
-#~ msgid "Draw Leading Spaces"
-#~ msgstr "Vykreslovat úvodní mezery"
-
-#~ msgid "Draw New lines"
-#~ msgstr "Vykreslovat zakončení řádků"
-
-#~ msgid "Draw Non-Breaking Spaces"
-#~ msgstr "Vykreslovat nezlomitelné mezery"
-
 #~ msgid "Draw Spaces in Text"
 #~ msgstr "Vykreslovat mezery v textu"
-
-#~ msgid "Draw Tabs"
-#~ msgstr "Vykreslovat tabulátory"
-
-#~ msgid "Draw Trailing Spaces"
-#~ msgstr "Vykreslovat koncové mezery"
 
 #~ msgid "Show White Spaces"
 #~ msgstr "Zobrazovat bílé znaky"
