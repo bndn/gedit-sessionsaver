@@ -27,41 +27,77 @@
 #include "gedit-show-tabbar-plugin.h"
 
 #include <glib/gi18n-lib.h>
+#include <gtk/gtk.h>
 #include <gedit/gedit-debug.h>
 
 
-#define WINDOW_DATA_KEY		"GeditShowTabbarWindowData"
-#define MENU_PATH 		"/MenuBar/ViewMenu"
-#define GSETTINGS_BASE_KEY	"org.gnome.gedit.plugins.showtabbar"
-#define GSETTINGS_KEY_TABBAR	"tabbar-visible"
+#define WINDOW_DATA_KEY		"GeditShowTabberWindowData"
+#define GSETTINGS_UI_SCHEMA	"org.gnome.gedit.preferences.ui"
+#define GSETTINGS_TABBAR_SCHEMA	"org.gnome.gedit.plugins.showtabbar"
+#define GSETTINGS_UI_KEY	"notebook-show-tabs-mode"
+#define GSETTINGS_TABBAR_KEY	"show-tabs-mode"
 
 #define GEDIT_SHOW_TABBAR_PLUGIN_GET_PRIVATE(object)	(G_TYPE_INSTANCE_GET_PRIVATE ((object), GEDIT_TYPE_SHOW_TABBAR_PLUGIN, GeditShowTabbarPluginPrivate))
 
 GEDIT_PLUGIN_REGISTER_TYPE (GeditShowTabbarPlugin, gedit_show_tabbar_plugin)
 
+typedef enum {
+	SHOW_TABS_NEVER,
+	SHOW_TABS_AUTO,
+	SHOW_TABS_ALWAYS
+} ShowTabsModeType;
+
 struct _GeditShowTabbarPluginPrivate
 {
-	GSettings *settings;
+	GSettings *ui_settings;
+	GSettings *tabbar_settings;
 };
 
 typedef struct
 {
 	GeditShowTabbarPlugin *plugin;
-	GtkActionGroup        *action_group;
 	guint                  ui_id;
-	gulong		       signal_handler_id;
+	ShowTabsModeType       show_tabs_mode;
+	GtkActionGroup        *action_group;
+	GtkRadioAction        *bound_action;
 } WindowData;
 
-static void
-gedit_show_tabbar_plugin_init (GeditShowTabbarPlugin *plugin)
+
+static void	 gedit_show_tabbar_plugin_deactivate	(GeditPlugin *plugin,
+							 GeditWindow *window);
+static void	 gedit_show_tabbar_plugin_activate	(GeditPlugin *plugin,
+							 GeditWindow *window);
+
+const gchar *show_tabbar_mode_ui = " \
+<ui> \
+  <menubar name='MenuBar'> \
+    <menu name='ViewMenu' action='View'> \
+        <separator/> \
+        <menu action='ShowTabbar'> \
+          <menuitem action='ShowTabbarNever'/> \
+          <menuitem action='ShowTabbarAuto'/> \
+          <menuitem action='ShowTabbarAlways'/> \
+        </menu> \
+    </menu> \
+  </menubar> \
+</ui>";
+
+static const GtkActionEntry menu_action_entries[] =
 {
-	gedit_debug_message (DEBUG_PLUGINS,
-			     "GeditShowTabbarPlugin initializing");
+	{ "ShowTabbar", NULL, N_("Show Ta_bbar Mode") },
+};
 
-	plugin->priv = GEDIT_SHOW_TABBAR_PLUGIN_GET_PRIVATE (plugin);
+static const GtkRadioActionEntry radio_action_entries[] =
+{
+	{ "ShowTabbarNever", NULL, N_("_Never Show Tabbar"), NULL,
+	  N_("_Never Show the Tabbar"), SHOW_TABS_NEVER },
 
-	plugin->priv->settings = g_settings_new (GSETTINGS_BASE_KEY);
-}
+	{ "ShowTabbarAuto", NULL, N_("A_utomatically Show Tabbar"), NULL,
+	  N_("Show the tabbar when there is more than one tab"), SHOW_TABS_AUTO },
+
+	{ "ShowTabbarAlways", NULL, N_("_Always Show Tabbar"), NULL,
+	  N_("Always show the tabbar"), SHOW_TABS_ALWAYS }
+};
 
 static void
 gedit_show_tabbar_plugin_dispose (GObject *object)
@@ -71,79 +107,140 @@ gedit_show_tabbar_plugin_dispose (GObject *object)
 	gedit_debug_message (DEBUG_PLUGINS,
 			     "GeditShowTabbarPlugin disposing");
 
-	if (plugin->priv->settings != NULL)
+	if (plugin->priv->tabbar_settings != NULL)
 	{
-		g_object_unref (plugin->priv->settings);
-		plugin->priv->settings = NULL;
+		g_object_unref (plugin->priv->tabbar_settings);
+		plugin->priv->tabbar_settings = NULL;
+	}
+
+	if (plugin->priv->ui_settings != NULL)
+	{
+		g_object_unref (plugin->priv->ui_settings);
+		plugin->priv->ui_settings = NULL;
 	}
 
 	G_OBJECT_CLASS (gedit_show_tabbar_plugin_parent_class)->dispose (object);
 }
 
-static GtkNotebook *
-get_notebook (GeditWindow *window)
+static void
+gedit_show_tabbar_plugin_class_init (GeditShowTabbarPluginClass *klass)
 {
-	GList *list;
-	GtkContainer *container;
-	GtkNotebook *notebook;
+	GObjectClass *object_class = G_OBJECT_CLASS (klass);
+	GeditPluginClass *plugin_class = GEDIT_PLUGIN_CLASS (klass);
 
-	g_return_val_if_fail (window != NULL, NULL);
+	object_class->dispose = gedit_show_tabbar_plugin_dispose;
 
-	container = GTK_CONTAINER (gtk_bin_get_child (GTK_BIN (window)));
-								/* VBox   */
+	plugin_class->activate = gedit_show_tabbar_plugin_activate;
+	plugin_class->deactivate = gedit_show_tabbar_plugin_deactivate;
 
-	list = gtk_container_get_children (container);
-	container = GTK_CONTAINER (g_list_nth_data (list, 2));	/* HPaned */
-	g_list_free (list);
-
-	list = gtk_container_get_children (container);
-	container = GTK_CONTAINER (g_list_nth_data (list, 1));	/* VPaned */
-	g_list_free (list);
-
-	list = gtk_container_get_children (container);
-	notebook = GTK_NOTEBOOK (g_list_nth_data (list, 0));	/* Notebook */
-	g_list_free (list);
-
-	return notebook;
+	g_type_class_add_private (object_class, sizeof (GeditShowTabbarPluginPrivate));
 }
 
 static void
-on_notebook_show_tabs_changed (GtkNotebook	*notebook,
-			       GParamSpec	*pspec,
-			       WindowData	*data)
+gedit_show_tabbar_plugin_init (GeditShowTabbarPlugin *plugin)
 {
-	GtkAction *action;
-	gboolean visible;
+	gedit_debug_message (DEBUG_PLUGINS,
+			     "GeditShowTabbarPlugin initializing");
 
-#if 0
-	/* this works quite bad due to update_tabs_visibility in
-	   gedit-notebook.c */
-	visible = gtk_notebook_get_show_tabs (notebook);
+	plugin->priv = GEDIT_SHOW_TABBAR_PLUGIN_GET_PRIVATE (plugin);
 
-	if (gtk_toggle_action_get_active (action) != visible)
-		gtk_toggle_action_set_active (action, visible);
-#endif
+	plugin->priv->ui_settings = g_settings_new (GSETTINGS_UI_SCHEMA);
+	plugin->priv->tabbar_settings = g_settings_new (GSETTINGS_TABBAR_SCHEMA);
+}
 
-	action = gtk_action_group_get_action (data->action_group,
-					      "ShowTabbar");
-	visible = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
+static ShowTabsModeType
+string_to_show_tabs_mode (const gchar *str)
+{
+	ShowTabsModeType show_tabs_mode;
 
-	/* this is intendend to avoid the GeditNotebook to show the tabs again
-	   (it does so everytime a new tab is added) */
-	if (visible != gtk_notebook_get_show_tabs (notebook))
-		gtk_notebook_set_show_tabs (notebook, visible);
+	if (g_strcmp0 (str, "NEVER") == 0)
+	{
+		show_tabs_mode = SHOW_TABS_NEVER;
+	}
+	else if (g_strcmp0 (str, "AUTO") == 0)
+	{
+		show_tabs_mode = SHOW_TABS_AUTO;
+	}
+	else /* ALWAYS */
+	{
+		show_tabs_mode = SHOW_TABS_ALWAYS;
+	}
 
-	g_settings_set_boolean (data->plugin->priv->settings,
-				GSETTINGS_KEY_TABBAR,
-				visible);
+	return show_tabs_mode;
+}
+
+static gchar *
+show_tabs_mode_to_string (ShowTabsModeType show_tabs_mode)
+{
+	const gchar *value;
+
+	switch (show_tabs_mode)
+	{
+		case SHOW_TABS_NEVER:
+			value = "NEVER";
+			break;
+
+		case SHOW_TABS_AUTO:
+			value = "AUTO";
+			break;
+
+		default: /* SHOW_TABS_ALWAYS */
+			value = "ALWAYS";
+			break;
+	}
+
+	return g_strdup (value);
+}
+
+static GVariant *
+show_tabs_mode_set_mapping (const GValue       *value,
+			    const GVariantType *expected_type,
+			    gpointer            user_data G_GNUC_UNUSED)
+{
+	return g_variant_new_string (show_tabs_mode_to_string (g_value_get_int (value)));
+}
+
+static gboolean
+show_tabs_mode_get_mapping (GValue   *value,
+			    GVariant *variant,
+			    gpointer  user_data G_GNUC_UNUSED)
+{
+	const gchar *str;
+	ShowTabsModeType show_tabs_mode;
+
+	str = g_variant_get_string (variant, NULL);
+
+	show_tabs_mode = string_to_show_tabs_mode (str);
+
+	g_value_set_int (value, show_tabs_mode);
+
+	return TRUE;
 }
 
 static void
-on_view_tabbar_toggled (GtkToggleAction	*action,
-			GeditWindow	*window)
+on_action_changed (GtkRadioAction *action,
+		   GtkRadioAction *current,
+		   WindowData     *data)
 {
-	gtk_notebook_set_show_tabs (get_notebook (window),
-				    gtk_toggle_action_get_active (action));
+	ShowTabsModeType show_tabs_mode;
+
+	gedit_debug (DEBUG_PLUGINS);
+
+	show_tabs_mode = gtk_radio_action_get_current_value (current);
+
+	/* prevent loop */
+	if (data->show_tabs_mode != show_tabs_mode)
+	{
+		gchar *string;
+
+		string = show_tabs_mode_to_string (show_tabs_mode);
+
+		g_settings_set_string (data->plugin->priv->ui_settings,
+				       GSETTINGS_UI_KEY,
+				       string);
+
+		g_free (string);
+	}
 }
 
 static void
@@ -152,81 +249,89 @@ free_window_data (WindowData *data)
 	g_return_if_fail (data != NULL);
 
 	g_object_unref (data->action_group);
+
 	g_slice_free (WindowData, data);
 }
 
 static void
-impl_activate (GeditPlugin *plugin,
-	       GeditWindow *window)
+gedit_show_tabbar_plugin_activate (GeditPlugin *plugin,
+				   GeditWindow *window)
 {
 	GtkUIManager *manager;
 	WindowData *data;
-	GtkToggleAction *action;
-	GtkNotebook *notebook;
-	gboolean visible;
+	gchar *str;
+	GError *error = NULL;
 
 	gedit_debug (DEBUG_PLUGINS);
 
 	data = g_slice_new (WindowData);
 	data->plugin = GEDIT_SHOW_TABBAR_PLUGIN (plugin);
 
-	visible = g_settings_get_boolean (data->plugin->priv->settings,
-					  GSETTINGS_KEY_TABBAR);
-
-	notebook = get_notebook (window);
-
-	gtk_notebook_set_show_tabs (notebook, visible);
-
 	manager = gedit_window_get_ui_manager (window);
 
-	data->action_group = gtk_action_group_new ("GeditHideTabbarPluginActions");
+
+	data->action_group = gtk_action_group_new ("GeditShowTabbarPluginActions");
 	gtk_action_group_set_translation_domain (data->action_group,
 						 GETTEXT_PACKAGE);
 
-	action = gtk_toggle_action_new ("ShowTabbar",
-					_("Tab_bar"),
-					_("Show or hide the tabbar in the current window"),
-					NULL);
+	gtk_action_group_add_actions (data->action_group,
+				      menu_action_entries,
+				      G_N_ELEMENTS (menu_action_entries),
+				      data);
 
-	gtk_toggle_action_set_active (action, visible);
-
-	g_signal_connect (action,
-			  "toggled",
-			  G_CALLBACK (on_view_tabbar_toggled),
-			  window);
-
-	gtk_action_group_add_action (data->action_group, GTK_ACTION (action));
+	gtk_action_group_add_radio_actions (data->action_group,
+					    radio_action_entries,
+					    G_N_ELEMENTS (radio_action_entries),
+					    SHOW_TABS_ALWAYS,
+					    G_CALLBACK (on_action_changed),
+					    data);
 
 	gtk_ui_manager_insert_action_group (manager, data->action_group, -1);
 
-	data->ui_id = gtk_ui_manager_new_merge_id (manager);
+	data->ui_id = gtk_ui_manager_add_ui_from_string (manager,
+							 show_tabbar_mode_ui,
+							 -1,
+							 &error);
+	if (error != NULL)
+	{
+		g_warning ("Could not merge ShowTabber UI: %s", error->message);
+		g_error_free (error);
+	}
 
-	gtk_ui_manager_add_ui (manager,
-			       data->ui_id,
-			       MENU_PATH,
-			       "ShowTabbar",
-			       "ShowTabbar",
-			       GTK_UI_MANAGER_MENUITEM,
-			       TRUE);
+	gtk_ui_manager_ensure_update (manager);
 
-	data->signal_handler_id =
-		g_signal_connect (notebook,
-				  "notify::show-tabs",
-				  G_CALLBACK (on_notebook_show_tabs_changed),
-				  data);
+	data->bound_action = GTK_RADIO_ACTION (gtk_action_group_get_action (data->action_group,
+									    "ShowTabbarNever"));
+
+	g_settings_bind_with_mapping (data->plugin->priv->ui_settings,
+				      GSETTINGS_UI_KEY,
+				      data->bound_action,
+				      "current-value",
+				      G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET,
+				      show_tabs_mode_get_mapping,
+				      show_tabs_mode_set_mapping,
+				      NULL, NULL);
 
 	g_object_set_data_full (G_OBJECT (window),
 				WINDOW_DATA_KEY,
 				data,
 				(GDestroyNotify) free_window_data);
+
+	/* Reset the saved setting */
+	str = g_settings_get_string (data->plugin->priv->tabbar_settings,
+				      GSETTINGS_TABBAR_KEY);
+	gtk_radio_action_set_current_value (data->bound_action,
+					    string_to_show_tabs_mode (str));
+	g_free (str);
 }
 
 static void
-impl_deactivate	(GeditPlugin *plugin,
-		 GeditWindow *window)
+gedit_show_tabbar_plugin_deactivate (GeditPlugin *plugin,
+				     GeditWindow *window)
 {
 	GtkUIManager *manager;
 	WindowData *data;
+	gchar *str;
 
 	gedit_debug (DEBUG_PLUGINS);
 
@@ -236,25 +341,20 @@ impl_deactivate	(GeditPlugin *plugin,
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
 
+	/* Save the setting */
+	str = show_tabs_mode_to_string (gtk_radio_action_get_current_value (data->bound_action));
+	g_settings_set_string (data->plugin->priv->tabbar_settings,
+			       GSETTINGS_TABBAR_KEY,
+			       str);
+	g_free (str);
+
+	/* Reset the gedit setting */
+	g_settings_set_string (data->plugin->priv->ui_settings,
+			       GSETTINGS_UI_KEY,
+			       "ALWAYS"); 
+
 	gtk_ui_manager_remove_ui (manager, data->ui_id);
 	gtk_ui_manager_remove_action_group (manager, data->action_group);
 
-	g_signal_handler_disconnect (get_notebook (window),
-				     data->signal_handler_id);
-
 	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
-}
-
-static void
-gedit_show_tabbar_plugin_class_init (GeditShowTabbarPluginClass *klass)
-{
-	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	GeditPluginClass *plugin_class = GEDIT_PLUGIN_CLASS (klass);
-
-	g_type_class_add_private (object_class, sizeof (GeditShowTabbarPluginPrivate));
-
-	object_class->dispose = gedit_show_tabbar_plugin_dispose;
-
-	plugin_class->activate = impl_activate;
-	plugin_class->deactivate = impl_deactivate;
 }
