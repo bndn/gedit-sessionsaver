@@ -63,14 +63,17 @@ AM_GLIB_GNU_GETTEXT
 # Dependencies
 GTK_REQUIRED=
 GTK_REQUIRED_VERSION=
+GSV_REQUIRED=
 
 PKG_CHECK_EXISTS([gtk+-3.0 >= 2.90],
 		 [
 		 	GTK_REQUIRED=gtk+-3.0
 		 	GTK_REQUIRED_VERSION=2.90.0
+		 	GSV_REQUIRED=gtksourceview-3.0
 		 ],[
 		 	GTK_REQUIRED=gtk+-2.0
-		 	GTK_REQUIRED_VERSION=2.13.0
+		 	GTK_REQUIRED_VERSION=2.16.0
+		 	GSV_REQUIRED=gtksourceview-2.0
 		 ])
 
 PKG_CHECK_MODULES(GEDIT, [
@@ -78,7 +81,7 @@ PKG_CHECK_MODULES(GEDIT, [
 	gio-2.0 >= 2.25.4
 	$GTK_REQUIRED >= $GTK_REQUIRED_VERSION
 	gconf-2.0 >= 1.1.11
-	gtksourceview-2.0 >= 2.9.1
+	$GSV_REQUIRED >= 2.9.1
 	gedit-3.0 >= 2.31.1
 ])
 
