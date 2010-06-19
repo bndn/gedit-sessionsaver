@@ -66,10 +66,13 @@ class Commands(Singleton):
 			self.retval = None
 
 		def autocomplete_func(self):
-			if retval == result.Result.PROMPT:
-				return retval.autocomplete
+			if self.retval == result.Result.PROMPT:
+				return self.retval.autocomplete
 			else:
 				return {}
+
+		def args(self):
+			return [], True
 
 	class State:
 		def __init__(self):

@@ -462,12 +462,17 @@ class Entry(gtk.EventBox):
 			ret = commands.completion.command(words=wordsstr, idx=posidx)
 		else:
 			complete = None
+			realidx = posidx
 
 			if not self._command_state:
 				# Get the command first
 				cmd = commands.completion.single_command(wordsstr, 0)
+				realidx -= 1
+
+				ww = wordsstr[1:]
 			else:
 				cmd = self._command_state.top()
+				ww = wordsstr
 
 			if cmd:
 				complete = cmd.autocomplete_func()
@@ -483,8 +488,8 @@ class Entry(gtk.EventBox):
 			s = ['argstr', 'args', 'entry', 'view']
 			args = filter(lambda x: not x in s, args)
 
-			if posidx - 1 < len(args):
-				arg = args[posidx - 1]
+			if realidx < len(args):
+				arg = args[realidx]
 			elif varargs:
 				arg = '*'
 			else:
@@ -498,9 +503,12 @@ class Entry(gtk.EventBox):
 			try:
 				spec = utils.getargspec(func)
 
+				if not ww:
+					ww = ['']
+
 				kwargs = {
-					'words': wordsstr[1:],
-					'idx': posidx - 1,
+					'words': ww,
+					'idx': realidx,
 					'view': self._view
 				}
 
