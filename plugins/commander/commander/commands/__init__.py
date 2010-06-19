@@ -386,7 +386,7 @@ class Commands(Singleton):
 			mod.reload()
 		except Exception, e:
 			# Reload failed, we remove the module
-			print 'Failed to reload module:', e
+			print 'Failed to reload module (%s):' % (mod.name,), e
 
 			self._modules.remove(mod)
 			return
