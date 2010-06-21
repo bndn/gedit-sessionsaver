@@ -6,15 +6,15 @@
 # Manuel A. FernÃ¡ndez Montecelo <manuel@sindominio.net>, 2001.
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@ubuntu.com>, 2010.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins-master-po-gl-7774\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2010-02-27 16:28+0000\n"
-"PO-Revision-Date: 2010-02-13 11:28+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-22 01:26+0200\n"
+"PO-Revision-Date: 2010-06-22 01:24+0200\n"
 "Last-Translator: Fran Diéguez <frandieguez@ubuntu.com>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
+"Language-Team: Galician <gnome@g11n.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,27 +29,27 @@ msgstr "Marcadores"
 msgid "Easy document navigation with bookmarks"
 msgstr "Navegación do documento sinxela con marcadores"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
 msgid "Toggle Bookmark"
 msgstr "Activar/Desactivar marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
 msgid "Toggle bookmark status of the current line"
 msgstr "Troca o estado do marcado na liña actual"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
 msgid "Goto Next Bookmark"
 msgstr "Ir ao seguinte marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:139
 msgid "Goto the next bookmark"
 msgstr "Ir ao seguinte marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
 msgid "Goto Previous Bookmark"
 msgstr "Ir ao marcador anterior"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:142
 msgid "Goto the previous bookmark"
 msgstr "Ir ao marcador anterior"
 
@@ -62,7 +62,7 @@ msgid "Bracket Completion"
 msgstr "Completado de corchetes"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:258
+#: ../plugins/charmap/gedit-charmap-plugin.c:288
 msgid "Character Map"
 msgstr "Mapa de caracteres"
 
@@ -130,7 +130,7 @@ msgid "Commander"
 msgstr "Commander"
 
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
 msgid "Draw Spaces"
 msgstr "Debuxar espazos"
 
@@ -166,45 +166,77 @@ msgstr "Debuxar tabulacións"
 msgid "Draw trailing spaces"
 msgstr "Debuxar espazos iniciais"
 
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
-msgid "Draw Leading Spaces"
-msgstr "Debuxar espazos finais"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
-msgid "Draw New lines"
-msgstr "Debuxar o carácter de nova liña"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Debuxar os espazos non rotos"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
-msgid "Draw Spaces in Text"
-msgstr "Debuxar os espazos no texto"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
-msgid "Draw Tabs"
-msgstr "Debuxar tabulacións"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
-msgid "Draw Trailing Spaces"
-msgstr "Debuxar espazos finais"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
-msgid "Show White Spaces"
-msgstr "Mostrar espazos en branco"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:146
 msgid "Show _White Space"
 msgstr "Mostrar espazos en _branco"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
 msgid "Show spaces and tabs"
 msgstr "Mostrar espazos e tabulacións"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:538
 msgid "Error dialog"
 msgstr "Diálogo de erro"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
+msgid "Draw Leading Space"
+msgstr "Debuxar espazos iniciais"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
+msgid "Draw Newline"
+msgstr "Debuxar liñas novas"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
+msgid "Draw Non-Breaking Spaces"
+msgstr "Debuxar os espazos non rotos"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:5
+msgid "Draw Tabs"
+msgstr "Debuxar tabulacións"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:6
+msgid "Draw Text Space"
+msgstr "Debuxar espazos do texto"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:7
+msgid "Draw Trailing Space"
+msgstr "Debuxar espazos adicionais"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:8
+msgid "Enabled"
+msgstr "Activada"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:9
+msgid "IF TRUE spaces in text will be drawn."
+msgstr "Se está activada debuxaranse os espazos no texto."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:10
+msgid "If TRUE drawing will be enabled."
+msgstr "Se está activada activarase o debuxado"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:11
+msgid "If TRUE leading space will be drawn."
+msgstr "Se está activada debuxaranse os espazos iniciais."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:12
+msgid "If TRUE newlines will be drawn."
+msgstr "Se está activada debuxaranse as liñas novas"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:13
+msgid "If TRUE non-breaking spaces will be drawn."
+msgstr "Se está activada debuxaranse os espazos duros."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:14
+msgid "If TRUE spaces will be drawn."
+msgstr "Se está activada debuxaranse os espazos."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:15
+msgid "If TRUE tabs will be drawn."
+msgstr "Se está activada debuxaranse as tabulacións."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:16
+msgid "If TRUE trailing spaces will be drawn."
+msgstr "Se está activada debuxaranse os espazos adicionais."
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -239,71 +271,78 @@ msgstr "Editar o documento en múltiples lugares á vez"
 msgid "Multi Edit"
 msgstr "Edición múltiple"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:279
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
 msgstr "Punto de edición engadido..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:417
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
 msgid "Column Mode..."
 msgstr "Modo e columna..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:535
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
 msgid "Removed edit point..."
 msgstr "Punto de edición eliminado..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:685
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
 msgid "Cancelled column mode..."
 msgstr "Modo de columna cancelado..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:804
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
 msgid "Enter column edit mode using selection"
 msgstr "Insira o modo de edición de columna usando a selección"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:805
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr ""
+"Entrar no modo de edición de columna <b>intelixente</b> usando a selección"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+msgid "<b>Smart</b> column align mode using selection"
+msgstr "Modo de aliñado de columna <b>intelixente</b> usando a selección"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+"Modo de aliñado de columna <b>intelixente</b> con espazo adicional usando a "
+"selección"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
 msgid "Toggle edit point"
 msgstr "Punto de edición trocado"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:806
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
 msgid "Add edit point at beginning of line/selection"
 msgstr "Engadir un punto de edición ao principio da liña/selección"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:807
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
 msgid "Add edit point at end of line/selection"
 msgstr "Engadir un punto de edición ao final da liña/selección"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:843
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+msgid "Align edit points"
+msgstr "Aliñar os puntos de edición"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+msgid "Align edit points with additional space"
+msgstr "Aliñar os puntos de edición con espazo adicional"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Modo de edición múltiple"
 
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Start multi edit mode"
 msgstr "Iniciar o modo de edición múltiple"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
-msgid "Tab_bar"
-msgstr "Barra de _tabulacións"
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr "Aumentar e reducir facilmente o tamaño do texto"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
-msgid "Show or hide the tabbar in the current window"
-msgstr "Mostra ou agocha a barra de tabulacións na xanela actual"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
-msgid "Tabbar is Visible"
-msgstr "A barra de tabulacións está visíbel"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
-msgid "Whether the tabbar should be visible in editing windows."
-msgstr "Se a barra de tabulacións debe ser visíbel nas xanelas de edición."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
-msgid "Add a menu entry to show/hide the tabbar."
-msgstr ""
-"Engade unha entrada de menú para mostrar/agochar a barra de tabulacións."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
-msgid "Show/Hide Tabbar"
-msgstr "Mostrar/Agochar barra de tabulacións"
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:2
+msgid "Text Size"
+msgstr "Tamaño do texto"
 
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
@@ -371,11 +410,11 @@ msgstr "Incorpora unha terminal no panel inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal incorporado"
 
-#: ../plugins/terminal/terminal.py:262
+#: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:285
+#: ../plugins/terminal/terminal.py:329
 msgid "C_hange Directory"
 msgstr "_Cambiar cartafol"
 
@@ -390,3 +429,28 @@ msgstr "Completado de palabras"
 #: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "O completado de palabras usando o marco de traballo de completado"
+
+#~ msgid "Draw Spaces in Text"
+#~ msgstr "Debuxar os espazos no texto"
+
+#~ msgid "Show White Spaces"
+#~ msgstr "Mostrar espazos en branco"
+
+#~ msgid "Tab_bar"
+#~ msgstr "Barra de _tabulacións"
+
+#~ msgid "Show or hide the tabbar in the current window"
+#~ msgstr "Mostra ou agocha a barra de tabulacións na xanela actual"
+
+#~ msgid "Tabbar is Visible"
+#~ msgstr "A barra de tabulacións está visíbel"
+
+#~ msgid "Whether the tabbar should be visible in editing windows."
+#~ msgstr "Se a barra de tabulacións debe ser visíbel nas xanelas de edición."
+
+#~ msgid "Add a menu entry to show/hide the tabbar."
+#~ msgstr ""
+#~ "Engade unha entrada de menú para mostrar/agochar a barra de tabulacións."
+
+#~ msgid "Show/Hide Tabbar"
+#~ msgstr "Mostrar/Agochar barra de tabulacións"
