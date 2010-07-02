@@ -23,13 +23,11 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gedit/gedit-plugin.h>
+#include <libpeas/peas-extension-base.h>
+#include <libpeas/peas-object-module.h>
 
 G_BEGIN_DECLS
 
-/*
- * Type checking and casting macros
- */
 #define GEDIT_TYPE_DRAWSPACES_PLUGIN		(gedit_drawspaces_plugin_get_type ())
 #define GEDIT_DRAWSPACES_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), GEDIT_TYPE_DRAWSPACES_PLUGIN, GeditDrawspacesPlugin))
 #define GEDIT_DRAWSPACES_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), GEDIT_TYPE_DRAWSPACES_PLUGIN, GeditDrawspacesPluginClass))
@@ -37,39 +35,26 @@ G_BEGIN_DECLS
 #define GEDIT_IS_DRAWSPACES_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), GEDIT_TYPE_DRAWSPACES_PLUGIN))
 #define GEDIT_DRAWSPACES_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), GEDIT_TYPE_DRAWSPACES_PLUGIN, GeditDrawspacesPluginClass))
 
-/* Private structure type */
-typedef struct _GeditDrawspacesPluginPrivate	GeditDrawspacesPluginPrivate;
-
-/*
- * Main object structure
- */
 typedef struct _GeditDrawspacesPlugin		GeditDrawspacesPlugin;
+typedef struct _GeditDrawspacesPluginPrivate	GeditDrawspacesPluginPrivate;
+typedef struct _GeditDrawspacesPluginClass	GeditDrawspacesPluginClass;
 
 struct _GeditDrawspacesPlugin
 {
-	GeditPlugin parent_instance;
+	PeasExtensionBase parent_instance;
 
 	/* private */
 	GeditDrawspacesPluginPrivate *priv;
 };
 
-/*
- * Class definition
- */
-typedef struct _GeditDrawspacesPluginClass	GeditDrawspacesPluginClass;
-
 struct _GeditDrawspacesPluginClass
 {
-	GeditPluginClass parent_class;
+	PeasExtensionBaseClass parent_class;
 };
 
-/*
- * Public methods
- */
-GType	gedit_drawspaces_plugin_get_type	(void) G_GNUC_CONST;
+GType			gedit_drawspaces_plugin_get_type	(void) G_GNUC_CONST;
 
-/* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_gedit_plugin (GTypeModule *module);
+G_MODULE_EXPORT void	peas_register_types			(PeasObjectModule *module);
 
 G_END_DECLS
 

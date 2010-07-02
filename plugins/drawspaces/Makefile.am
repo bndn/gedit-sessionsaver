@@ -17,7 +17,7 @@ libdrawspaces_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 libdrawspaces_la_LIBADD = $(GEDIT_LIBS)
 
 uidir = $(GEDIT_PLUGINS_DATA_DIR)/drawspaces
-ui_DATA = drawspaces.ui
+ui_DATA = gedit-drawspaces-plugin.ui
 
 # Plugin Info
 
