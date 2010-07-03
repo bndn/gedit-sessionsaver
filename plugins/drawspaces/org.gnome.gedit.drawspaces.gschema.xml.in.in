@@ -1,44 +1,24 @@
 <schemalist>
+  <flags id='org.gnome.gedit.plugins.drawspaces.GtkSourceDrawSpacesFlags'>
+    <value nick='space' value='1'/>
+    <value nick='tab' value='2'/>
+    <value nick='newline' value='4'/>
+    <value nick='nbsp' value='8'/>
+    <value nick='leading' value='16'/>
+    <value nick='text' value='32'/>
+    <value nick='trailing' value='64'/>
+  </flags>
+
   <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.gedit.plugins.drawspaces" path="/apps/gedit/plugins/drawspaces/">
     <key name="enable" type="b">
       <default>true</default>
       <_summary>Enabled</_summary>
       <_description>If TRUE drawing will be enabled.</_description>
     </key>
-    <key name="draw-tabs" type="b">
-      <default>true</default>
-      <_summary>Draw Tabs</_summary>
-      <_description>If TRUE tabs will be drawn.</_description>
-    </key>
-    <key name="draw-spaces" type="b">
-      <default>true</default>
+    <key name="draw-spaces" flags="org.gnome.gedit.plugins.drawspaces.GtkSourceDrawSpacesFlags">
+      <default>['space', 'tab', 'leading', 'text', 'trailing']</default>
       <_summary>Draw Spaces</_summary>
-      <_description>If TRUE spaces will be drawn.</_description>
-    </key>
-    <key name="draw-newline" type="b">
-      <default>false</default>
-      <_summary>Draw Newline</_summary>
-      <_description>If TRUE newlines will be drawn.</_description>
-    </key>
-    <key name="draw-nbsp" type="b">
-      <default>false</default>
-      <_summary>Draw Non-Breaking Spaces</_summary>
-      <_description>If TRUE non-breaking spaces will be drawn.</_description>
-    </key>
-    <key name="draw-leading" type="b">
-      <default>true</default>
-      <_summary>Draw Leading Space</_summary>
-      <_description>If TRUE leading space will be drawn.</_description>
-    </key>
-    <key name="draw-text" type="b">
-      <default>true</default>
-      <_summary>Draw Text Space</_summary>
-      <_description>IF TRUE spaces in text will be drawn.</_description>
-    </key>
-    <key name="draw-trailing" type="b">
-      <default>true</default>
-      <_summary>Draw Trailing Space</_summary>
-      <_description>If TRUE trailing spaces will be drawn.</_description>
+      <_description>The type of spaces to be drawn.</_description>
     </key>
   </schema>
 </schemalist>
