@@ -6,16 +6,16 @@
 # Christian Neumair <chris@gnome-de.org>, 2005.
 # Hendrik Richter <hendrikr@gnome.org>, 2005.
 # Andre Klapper <ak-47@gmx.net>, 2008.
-# Mario Blättermann <mariobl@gnome.org>, 2008, 2009.
+# Mario Blättermann <mariobl@gnome.org>, 2008-2010.
 # Christian Kirbach  <Christian.Kirbach@googlemail.com>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit 2.2.x\n"
+"Project-Id-Version: gedit-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2010-05-26 14:44+0000\n"
-"PO-Revision-Date: 2010-05-27 14:53+0200\n"
-"Last-Translator: Christian Kirbach  <Christian.Kirbach@googlemail.com>\n"
+"POT-Creation-Date: 2010-07-04 18:27+0000\n"
+"PO-Revision-Date: 2010-07-05 01:12+0100\n"
+"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,7 +65,7 @@ msgid "Bracket Completion"
 msgstr "Klammern schließen"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:288
+#: ../plugins/charmap/gedit-charmap-plugin.c:285
 msgid "Character Map"
 msgstr "Zeichentabelle"
 
@@ -134,8 +134,9 @@ msgstr "Befehlszeilenschnittstelle für erweiterte Bearbeitung"
 msgid "Commander"
 msgstr "Commander"
 
+#. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Leerzeichen anzeigen"
 
@@ -143,105 +144,53 @@ msgstr "Leerzeichen anzeigen"
 msgid "Draw Spaces and Tabs"
 msgstr "Leerzeichen und Einzüge anzeigen"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
 msgid "Draw leading spaces"
 msgstr "Vorangestellte Leerzeichen anzeigen"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Zeilen einfügen"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "Geschützte Leerzeichen anzeigen"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
 msgid "Draw spaces"
 msgstr "Leerzeichen anzeigen"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:5
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
 msgstr "Leerzeichen im Text anzeigen"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:6
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "Einzüge anzeigen"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:7
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
 msgid "Draw trailing spaces"
 msgstr "Angehängte Leerzeichen anzeigen"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:146
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:128
 msgid "Show _White Space"
 msgstr "Leerzei_chen anzeigen"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:129
 msgid "Show spaces and tabs"
 msgstr "Leerzeichen und Einzüge anzeigen"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:538
-msgid "Error dialog"
-msgstr "Fehlerdialog"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
-msgid "Draw Leading Space"
-msgstr "Vorangestellte Leerzeichen darstellen"
-
 #: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
-msgid "Draw Newline"
-msgstr "Zeilenumbrüche darstellen"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Geschützte Leerzeichen darstellen"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:5
-msgid "Draw Tabs"
-msgstr "Einzüge darstellen"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:6
-msgid "Draw Text Space"
-msgstr "Leerzeichen darstellen"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:7
-msgid "Draw Trailing Space"
-msgstr "Angehängte Leerzeichen darstellen"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:8
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:9
-msgid "IF TRUE spaces in text will be drawn."
-msgstr "Wenn WAHR, so werden Leerzeichen dargestellt."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:10
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
 msgid "If TRUE drawing will be enabled."
 msgstr "Wenn WAHR, so wird die Darstellung aktiviert."
 
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:11
-msgid "If TRUE leading space will be drawn."
-msgstr "Wenn WAHR, so werden vorangestellte Leerzeichen dargestellt."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:12
-msgid "If TRUE newlines will be drawn."
-msgstr "Wenn WAHR, so werden Zeilenumbrüche dargestellt."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:13
-msgid "If TRUE non-breaking spaces will be drawn."
-msgstr "Wenn WAHR, so werden geschützte Leerzeichen dargestellt."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:14
-msgid "If TRUE spaces will be drawn."
-msgstr "Wenn WAHR, so werden Leerzeichen im Text dargestellt."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:15
-msgid "If TRUE tabs will be drawn."
-msgstr "Wenn WAHR, so werden Einzüge dargestellt."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:16
-msgid "If TRUE trailing spaces will be drawn."
-msgstr "Wenn WAHR, so werden angehängte Leerzeichen dargestellt."
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
+msgstr "Der Typ der darzustellenden Leerzeichen."
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -351,32 +300,6 @@ msgstr "Die Textgröße leicht anpassen"
 msgid "Text Size"
 msgstr "Textgröße"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:187
-msgid "Tab_bar"
-msgstr "Reiter_leiste"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:188
-msgid "Show or hide the tabbar in the current window"
-msgstr "Die Reiterleiste im aktuellen Fenster anzeigen/verbergen"
-
-#: ../plugins/showtabbar/org.gnome.gedit.showtabbar.gschema.xml.in.in.h:1
-msgid "Tabbar is Visible"
-msgstr "Reiterleiste ist sichtbar"
-
-#: ../plugins/showtabbar/org.gnome.gedit.showtabbar.gschema.xml.in.in.h:2
-msgid "Whether the tabbar should be visible in editing windows."
-msgstr ""
-"Legt fest, ob die Reiterleiste in Bearbeitungsfenstern sichtbar sein soll."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
-msgid "Add a menu entry to show/hide the tabbar."
-msgstr ""
-"Fügt einen Menüeintrag hinzu, um die Reiterleiste anzuzeigen/zu verbergen."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
-msgid "Show/Hide Tabbar"
-msgstr "Reiterleiste anzeigen/verbergen"
-
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "_Gespeicherte Sitzungen"
@@ -451,7 +374,7 @@ msgstr "Terminal"
 msgid "C_hange Directory"
 msgstr "_Ordner wechseln"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:58
 msgid "Document Words"
 msgstr "Wörter im Dokument"
 
@@ -462,6 +385,65 @@ msgstr "Wortvervollständigung"
 #: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
+
+#~ msgid "Error dialog"
+#~ msgstr "Fehlerdialog"
+
+#~ msgid "Draw Leading Space"
+#~ msgstr "Vorangestellte Leerzeichen darstellen"
+
+#~ msgid "Draw Newline"
+#~ msgstr "Zeilenumbrüche darstellen"
+
+#~ msgid "Draw Non-Breaking Spaces"
+#~ msgstr "Geschützte Leerzeichen darstellen"
+
+#~ msgid "Draw Tabs"
+#~ msgstr "Einzüge darstellen"
+
+#~ msgid "Draw Text Space"
+#~ msgstr "Leerzeichen darstellen"
+
+#~ msgid "Draw Trailing Space"
+#~ msgstr "Angehängte Leerzeichen darstellen"
+
+#~ msgid "IF TRUE spaces in text will be drawn."
+#~ msgstr "Wenn WAHR, so werden Leerzeichen dargestellt."
+
+#~ msgid "If TRUE leading space will be drawn."
+#~ msgstr "Wenn WAHR, so werden vorangestellte Leerzeichen dargestellt."
+
+#~ msgid "If TRUE newlines will be drawn."
+#~ msgstr "Wenn WAHR, so werden Zeilenumbrüche dargestellt."
+
+#~ msgid "If TRUE non-breaking spaces will be drawn."
+#~ msgstr "Wenn WAHR, so werden geschützte Leerzeichen dargestellt."
+
+#~ msgid "If TRUE tabs will be drawn."
+#~ msgstr "Wenn WAHR, so werden Einzüge dargestellt."
+
+#~ msgid "If TRUE trailing spaces will be drawn."
+#~ msgstr "Wenn WAHR, so werden angehängte Leerzeichen dargestellt."
+
+#~ msgid "Tab_bar"
+#~ msgstr "Reiter_leiste"
+
+#~ msgid "Show or hide the tabbar in the current window"
+#~ msgstr "Die Reiterleiste im aktuellen Fenster anzeigen/verbergen"
+
+#~ msgid "Tabbar is Visible"
+#~ msgstr "Reiterleiste ist sichtbar"
+
+#~ msgid "Whether the tabbar should be visible in editing windows."
+#~ msgstr ""
+#~ "Legt fest, ob die Reiterleiste in Bearbeitungsfenstern sichtbar sein soll."
+
+#~ msgid "Add a menu entry to show/hide the tabbar."
+#~ msgstr ""
+#~ "Fügt einen Menüeintrag hinzu, um die Reiterleiste anzuzeigen/zu verbergen."
+
+#~ msgid "Show/Hide Tabbar"
+#~ msgstr "Reiterleiste anzeigen/verbergen"
 
 #~ msgid "Draw Spaces in Text"
 #~ msgstr "Leerzeichen im Text anzeigen"
@@ -648,8 +630,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "The Compare Files plugin uses the \"diff\" program to compare two "
 #~ "documents or files on disk."
 #~ msgstr ""
-#~ "Das Dateivergleichs-Plugin verwendet das Programm »diff«, um zwei "
-#~ "Dokumente oder Dateien auf der Platte zu vergleichen."
+#~ "Das Dateivergleichs-Plugin verwendet das Programm »diff«, um zwei Dokumente "
+#~ "oder Dateien auf der Platte zu vergleichen."
 
 #~ msgid "gedit application"
 #~ msgstr "gedit-Anwendung"
@@ -776,8 +758,7 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 
 #~ msgid ""
 #~ "Number of minutes after which gedit will automatically save modified "
-#~ "files. This will only take effect if the \"Auto Save\" option is turned "
-#~ "on."
+#~ "files. This will only take effect if the \"Auto Save\" option is turned on."
 #~ msgstr ""
 #~ "Minuten, nach denen gedit automatisch veränderte Dateien speichert. Dies "
 #~ "wird nur passieren, wenn die »Automatisch speichern«-Option aktiviert ist."
@@ -819,23 +800,22 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 
 #~ msgid ""
 #~ "Specifies how to wrap long lines in the editing area. Use \"GTK_WRAP_NONE"
-#~ "\" for no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, "
-#~ "and \"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. "
-#~ "Note that the values are case-sensitive, so make sure they appear exactly "
-#~ "as mentioned here."
+#~ "\" for no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
+#~ "\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note "
+#~ "that the values are case-sensitive, so make sure they appear exactly as "
+#~ "mentioned here."
 #~ msgstr ""
 #~ "Gibt an, ab welcher Länge Zeilen im Editor-Bereich umgebrochen werden. "
 #~ "Verwenden Sie »GTK_WRAP_NONE« für keinen Umbruch, »GTK_WRAP_WORD«, um den "
 #~ "Zeilenumbruch an Wortgrenzen durchzufügen oder »GTK_WRAP_CHAR« für den "
-#~ "Umbruch an einzelnen Zeichengrenzen. Hinweis: Bei den Werten wird "
-#~ "zwischen Groß- und Kleinschreibung unterschieden. Verwenden Sie daher die "
-#~ "Werte genau wie hier angegeben."
+#~ "Umbruch an einzelnen Zeichengrenzen. Hinweis: Bei den Werten wird zwischen "
+#~ "Groß- und Kleinschreibung unterschieden. Verwenden Sie daher die Werte "
+#~ "genau wie hier angegeben."
 
 #~ msgid ""
 #~ "Specifies the font to use for a document's body when printing documents."
 #~ msgstr ""
-#~ "Gibt die Schrift an, die zum Drucken des Fließtextes verwendet werden "
-#~ "soll."
+#~ "Gibt die Schrift an, die zum Drucken des Fließtextes verwendet werden soll."
 
 #~ msgid ""
 #~ "Specifies the font to use for line numbers when printing. This will only "
@@ -850,8 +830,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "will only take effect if the \"Print Header\" option is turned on."
 #~ msgstr ""
 #~ "Gibt die Schrift an, die zum Drucken der Seiten-Kopfzeilen verwendet "
-#~ "werden soll. Diese wird nur verwendet, wenn die »Kopfzeilen drucken«-"
-#~ "Option aktiviert ist."
+#~ "werden soll. Diese wird nur verwendet, wenn die »Kopfzeilen drucken«-Option "
+#~ "aktiviert ist."
 
 #~ msgid ""
 #~ "Specifies the maximum number of recently opened files that will be "
@@ -882,10 +862,9 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "»GEDIT_TOOLBAR_SYSTEM« für den vom System vorgegebenen Stil, "
 #~ "»GEDIT_TOOLBAR_ICONS«, um nur Symbole anzuzeigen, "
 #~ "»GEDIT_TOOLBAR_ICONS_AND_TEXT«, um Symbole und Text anzuzeigen sowie "
-#~ "»GEDIT_TOOLBAR_ICONS_BOTH_HORIZ«, um wichtigen Text neben Icons "
-#~ "anzuzeigen. Hinweis: Bei den Werten wird zwischen Groß- und "
-#~ "Kleinschreibung unterschieden. Verwenden Sie daher die Werte genau wie "
-#~ "hier angegeben."
+#~ "»GEDIT_TOOLBAR_ICONS_BOTH_HORIZ«, um wichtigen Text neben Icons anzuzeigen. "
+#~ "Hinweis: Bei den Werten wird zwischen Groß- und Kleinschreibung "
+#~ "unterschieden. Verwenden Sie daher die Werte genau wie hier angegeben."
 
 #~ msgid "Text Color"
 #~ msgstr "Textfarbe"
@@ -895,10 +874,10 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "\"GEDIT_SAVE_ALWAYS_UTF8\" for mandatory UTF-8 saving, "
 #~ "\"GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE\" if you want gedit to try to "
 #~ "convert the document it is saving to your current locale's encoding, "
-#~ "\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE\" if you want gedit to "
-#~ "try to use the original file encoding (new files in UTF8) and "
-#~ "\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" if you want gedit "
-#~ "to try to use the original file encoding (new files in current locale's "
+#~ "\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE\" if you want gedit to try "
+#~ "to use the original file encoding (new files in UTF8) and "
+#~ "\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" if you want gedit to "
+#~ "try to use the original file encoding (new files in current locale's "
 #~ "encoding). If the conversion is successful, it will be used. Otherwise, "
 #~ "UTF-8 will be used. Note that the values are case-sensitive, so make sure "
 #~ "they appear exactly as mentioned here."
@@ -908,15 +887,15 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "in UTF-8, »GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE«, wenn gedit versuchen "
 #~ "soll, das Dokument beim Speichern in die Kodierung ihrer aktuellen "
 #~ "Standorteinstellungen zu konvertieren, "
-#~ "»GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE«, wenn gedit versuchen "
-#~ "soll, die ursprüngliche Datei-Kodierung (bei neuen Dateien UTF-8) zu "
-#~ "verwenden sowie »GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL«, wenn "
-#~ "gedit versuchen soll, die ursprüngliche Datei-Kodierung (bei neuen "
-#~ "Dateien die Kodierung Ihrer aktuellen Standorteinstellungen) zu "
-#~ "verwenden. Wenn die Konvertierung in die Kodierung erfolgreich war, wird "
-#~ "sie verwendet - ansonsten wird die Datei in UTF-8 kodiert. Hinweis: Bei "
-#~ "den Werten wird zwischen Groß- und Kleinschreibung unterschieden. "
-#~ "Verwenden Sie daher die Werte genau wie hier angegeben."
+#~ "»GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE«, wenn gedit versuchen soll, "
+#~ "die ursprüngliche Datei-Kodierung (bei neuen Dateien UTF-8) zu verwenden "
+#~ "sowie »GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL«, wenn gedit "
+#~ "versuchen soll, die ursprüngliche Datei-Kodierung (bei neuen Dateien die "
+#~ "Kodierung Ihrer aktuellen Standorteinstellungen) zu verwenden. Wenn die "
+#~ "Konvertierung in die Kodierung erfolgreich war, wird sie verwendet - "
+#~ "ansonsten wird die Datei in UTF-8 kodiert. Hinweis: Bei den Werten wird "
+#~ "zwischen Groß- und Kleinschreibung unterschieden. Verwenden Sie daher die "
+#~ "Werte genau wie hier angegeben."
 
 #~ msgid "Toolbar Buttons Style"
 #~ msgstr "Knopfstil der Werkzeugleiste"
@@ -936,8 +915,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "option."
 #~ msgstr ""
 #~ "Soll gedit veränderte Dateien automatisch nach einer bestimmten Zeit "
-#~ "speichern soll? Sie können diese Zeit mit der »Intervall für "
-#~ "automatisches Speichern«-Option einstellen."
+#~ "speichern soll? Sie können diese Zeit mit der »Intervall für automatisches "
+#~ "Speichern«-Option einstellen."
 
 #~ msgid ""
 #~ "Whether gedit should create backup copies for the files it saves. You can "
@@ -967,9 +946,9 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "sein?"
 
 #~ msgid ""
-#~ "Whether the status bar should show the cursor position in editing "
-#~ "windows. Make sure you turn on the \"Status Bar is Visible\" option for "
-#~ "this to take effect."
+#~ "Whether the status bar should show the cursor position in editing windows. "
+#~ "Make sure you turn on the \"Status Bar is Visible\" option for this to "
+#~ "take effect."
 #~ msgstr ""
 #~ "Soll in der Statusleiste die Cursor-Position in Bearbeitunsgfenstern "
 #~ "anzeigt werden? Hinweis: Die »Statusleiste ist sichtbar«-Option muss dazu "
@@ -1002,8 +981,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ msgstr ""
 #~ "Soll die Vorgabe-Schrift des Systems zum Bearbeiten von Text anstelle der "
 #~ "in gedit angegeben Schrift verwendet werden? Falls diese Option "
-#~ "deaktiviert ist, wird die unter »Editor-Schrift« angegeben Schrift "
-#~ "anstelle der System-Schrift verwendet."
+#~ "deaktiviert ist, wird die unter »Editor-Schrift« angegeben Schrift anstelle "
+#~ "der System-Schrift verwendet."
 
 #~ msgid "_Document Statistics"
 #~ msgstr "Statistik zum _Dokument"
@@ -1040,8 +1019,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 
 #~ msgid ""
 #~ "The Document Statistics plugin analyzes the current document and "
-#~ "determines the number of words, lines, characters and non-space "
-#~ "characters in it and displays the result."
+#~ "determines the number of words, lines, characters and non-space characters "
+#~ "in it and displays the result."
 #~ msgstr ""
 #~ "Das Dokumentstatistik-Plugin analysiert das aktuelle Dokument und "
 #~ "ermittelt die Anzahl der darin enthaltenen Wörter, Zeilen, Zeichen sowie "
@@ -1111,8 +1090,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "Execute an external program and eventually grabs its output in the output "
 #~ "window."
 #~ msgstr ""
-#~ "Ein externes Programm ausführen und die mögliche Ausgabe im "
-#~ "Ausgabefenster anzeigen."
+#~ "Ein externes Programm ausführen und die mögliche Ausgabe im Ausgabefenster "
+#~ "anzeigen."
 
 #~ msgid "Shell command"
 #~ msgstr "Shell-Befehl"
@@ -1384,8 +1363,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 
 #~ msgid "Could not find plugin-manager.glade2, reinstall gedit.\n"
 #~ msgstr ""
-#~ "plugin-manager.glade2 konnte nicht gefunden werden; installieren Sie "
-#~ "gedit neu.\n"
+#~ "plugin-manager.glade2 konnte nicht gefunden werden; installieren Sie gedit "
+#~ "neu.\n"
 
 #~ msgid "Invalid glade file for plugin manager -- not all widgets found.\n"
 #~ msgstr ""
@@ -1396,8 +1375,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ msgstr "Programmort angeben …"
 
 #~ msgid ""
-#~ "The %s plugin uses an external program, called <tt>%s</tt>, to perform "
-#~ "its task.\n"
+#~ "The %s plugin uses an external program, called <tt>%s</tt>, to perform its "
+#~ "task.\n"
 #~ "\n"
 #~ "Please, specify the location of the <tt>%s</tt> program."
 #~ msgstr ""
@@ -1475,8 +1454,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "Push this button to configure the color in which the selected text should "
 #~ "appear"
 #~ msgstr ""
-#~ "Drücken Sie diesen Knopf, um die Farbe, in der markierter Text "
-#~ "dargestellt wird, einzustellen"
+#~ "Drücken Sie diesen Knopf, um die Farbe, in der markierter Text dargestellt "
+#~ "wird, einzustellen"
 
 #~ msgid ""
 #~ "Push this button to configure the color in which the selected text should "
@@ -1497,8 +1476,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 
 #~ msgid "Push this button to select the font to be used to print line numbers"
 #~ msgstr ""
-#~ "Drücken Sie diesen Knopf, um die Schrift auszuwählen, in der "
-#~ "Zeilennummern dargestellt werden"
+#~ "Drücken Sie diesen Knopf, um die Schrift auszuwählen, in der Zeilennummern "
+#~ "dargestellt werden"
 
 #~ msgid "<span weight=\"bold\">When saving an existing file...</span>"
 #~ msgstr ""
@@ -1801,8 +1780,8 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "not have this limitation."
 #~ msgstr ""
 #~ "Die Platte auf die Sie versuchen zu speichern hat eine Einschränkung für "
-#~ "Dateigrößen.  Bitte versuchen Sie eine kleiner Datei zu speichern oder "
-#~ "auf eine Platte zu speichern, die diese Einschränkung nicht hat."
+#~ "Dateigrößen.  Bitte versuchen Sie eine kleiner Datei zu speichern oder auf "
+#~ "eine Platte zu speichern, die diese Einschränkung nicht hat."
 
 #~ msgid "Could not create a backup file."
 #~ msgstr "Sicherheitskopie der Datei konnte nicht erstellt werden."
@@ -1938,8 +1917,7 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 
 #~ msgid "Error, impossible to update ui of the plugin '%s'"
 #~ msgstr ""
-#~ "Fehler: Benutzeroberfläche des Plugins »%s« konnte nicht aktualisiert "
-#~ "werden"
+#~ "Fehler: Benutzeroberfläche des Plugins »%s« konnte nicht aktualisiert werden"
 
 #~ msgid "Cannot initialize preferences manager."
 #~ msgstr "Einstellungensverwalter konnte nicht initialisiert werden."
@@ -2304,8 +2282,7 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "Datei »%s« konnte nicht geöffnet werden, da zu viele Dateien geöffnet "
 #~ "sind.\n"
 #~ "\n"
-#~ "Bitte schließen Sie einige offene Dateien und versuchen Sie es noch "
-#~ "einmal."
+#~ "Bitte schließen Sie einige offene Dateien und versuchen Sie es noch einmal."
 
 #~ msgid ""
 #~ "\"%s\" is a directory.\n"
@@ -2361,8 +2338,7 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "\n"
 #~ "Please, check that you typed the location correctly and try again."
 #~ msgstr ""
-#~ "Datei »%s« konnte nicht geöffnet werden, da ein Anmeldeversuch "
-#~ "fehlschlug.\n"
+#~ "Datei »%s« konnte nicht geöffnet werden, da ein Anmeldeversuch fehlschlug.\n"
 #~ "\n"
 #~ "Bitte überprüfen Sie, ob Sie den Ort richtig eingegeben haben, und "
 #~ "versuchen Sie es noch einmal."
@@ -2407,8 +2383,7 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "Datei »%s« konnte nicht zurückgesetzt werden, da sie defekte Daten enthält."
 
 #~ msgid ""
-#~ "Could not revert the file \"%s\" because gedit cannot handle %s: "
-#~ "locations."
+#~ "Could not revert the file \"%s\" because gedit cannot handle %s: locations."
 #~ msgstr ""
 #~ "Datei »%s« konnte nicht zurückgesetzt werden, da gedit nicht mit %s:-Orten "
 #~ "umgehen kann."
@@ -2439,8 +2414,7 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "Datei »%s« konnte nicht zurückgesetzt werden, da zu viele Dateien geöffnet "
 #~ "sind.\n"
 #~ "\n"
-#~ "Bitte schließen Sie einige offene Dateien und versuchen Sie es noch "
-#~ "einmal."
+#~ "Bitte schließen Sie einige offene Dateien und versuchen Sie es noch einmal."
 
 #~ msgid ""
 #~ "Not enough available memory to revert the file \"%s\". Please, close some "
@@ -2465,8 +2439,7 @@ msgstr "Wortvervollständigung mit Hilfe des Vervollständigungs-Frameworks"
 #~ "\n"
 #~ "Please, check that your proxy settings are correct and try again."
 #~ msgstr ""
-#~ "Datei »%s« konnte nicht zurückgesetzt werden, da der Rechnername leer "
-#~ "war.\n"
+#~ "Datei »%s« konnte nicht zurückgesetzt werden, da der Rechnername leer war.\n"
 #~ "\n"
 #~ "Bitte überprüfen Sie, ob Ihre Proxy-Einstellungen richtig sind und "
 #~ "versuchen Sie es noch einmal."
