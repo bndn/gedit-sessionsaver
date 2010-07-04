@@ -71,10 +71,11 @@ struct _GeditCharmapPanelClass
  * Public methods
  */
 GType		 gedit_charmap_panel_get_type	   (void) G_GNUC_CONST;
-GType		 gedit_charmap_panel_register_type (GTypeModule * module);
 GtkWidget	*gedit_charmap_panel_new	   (void);
 
 GucharmapChartable *gedit_charmap_panel_get_chartable (GeditCharmapPanel *panel);
+
+void		_gedit_charmap_panel_register_type (GTypeModule *type_module);
 
 G_END_DECLS
 

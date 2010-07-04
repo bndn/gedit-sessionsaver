@@ -28,32 +28,43 @@
 #include <glib/gi18n-lib.h>
 #include <gedit/gedit-debug.h>
 #include <gedit/gedit-window.h>
+#include <gedit/gedit-window-activatable.h>
 #include <gedit/gedit-panel.h>
 #include <gedit/gedit-document.h>
 
 #include <gucharmap/gucharmap.h>
-
-#define WINDOW_DATA_KEY	"GeditCharmapPluginWindowData"
 
 #define GEDIT_CHARMAP_PLUGIN_GET_PRIVATE(object) \
 				(G_TYPE_INSTANCE_GET_PRIVATE ((object),	\
 				GEDIT_TYPE_CHARMAP_PLUGIN,		\
 				GeditCharmapPluginPrivate))
 
-typedef struct
+struct _GeditCharmapPluginPrivate
 {
-	GtkWidget	*panel;
-	guint		 context_id;
-} WindowData;
+	GeditWindow     *window;
 
-GEDIT_PLUGIN_REGISTER_TYPE_WITH_CODE (GeditCharmapPlugin, gedit_charmap_plugin,
-		gedit_charmap_panel_register_type (module);
+	GtkWidget       *panel;
+	guint            context_id;
+};
+
+static void gedit_window_activatable_iface_init (GeditWindowActivatableInterface *iface);
+
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (GeditCharmapPlugin,
+				gedit_charmap_plugin,
+				PEAS_TYPE_EXTENSION_BASE,
+				0,
+				G_IMPLEMENT_INTERFACE_DYNAMIC (GEDIT_TYPE_WINDOW_ACTIVATABLE,
+							       gedit_window_activatable_iface_init)	\
+													\
+				_gedit_charmap_panel_register_type (type_module);			\
 )
 
 static void
 gedit_charmap_plugin_init (GeditCharmapPlugin *plugin)
 {
 	gedit_debug_message (DEBUG_PLUGINS, "GeditCharmapPlugin initializing");
+
+	plugin->priv = GEDIT_CHARMAP_PLUGIN_GET_PRIVATE (plugin);
 }
 
 static void
@@ -65,34 +76,24 @@ gedit_charmap_plugin_finalize (GObject *object)
 }
 
 static void
-free_window_data (WindowData *data)
-{
-	g_slice_free (WindowData, data);
-}
-
-static void
 on_table_status_message (GucharmapChartable *chartable,
-			 const gchar    *message,
-			 GeditWindow    *window)
+			 const gchar        *message,
+			 GeditCharmapPlugin *plugin)
 {
 	GtkStatusbar *statusbar;
-	WindowData *data;
 
-	statusbar = GTK_STATUSBAR (gedit_window_get_statusbar (window));
-	data = (WindowData *) g_object_get_data (G_OBJECT (window),
-						 WINDOW_DATA_KEY);
-	g_return_if_fail (data != NULL);
+	statusbar = GTK_STATUSBAR (gedit_window_get_statusbar (plugin->priv->window));
 
-	gtk_statusbar_pop (statusbar, data->context_id);
+	gtk_statusbar_pop (statusbar, plugin->priv->context_id);
 
 	if (message)
-		gtk_statusbar_push (statusbar, data->context_id, message);
+		gtk_statusbar_push (statusbar, plugin->priv->context_id, message);
 }
 
 static void
 on_table_sync_active_char (GucharmapChartable *chartable,
 			   GParamSpec         *psepc,
-			   GeditWindow        *window)
+			   GeditCharmapPlugin *plugin)
 {
 	GString *gs;
 	const gchar **temps;
@@ -123,41 +124,36 @@ on_table_sync_active_char (GucharmapChartable *chartable,
 		g_free (temps);
 	}
 
-	on_table_status_message (chartable, gs->str, window);
+	on_table_status_message (chartable, gs->str, plugin);
 	g_string_free (gs, TRUE);
 }
 
 static gboolean
-on_table_focus_out_event (GtkWidget      *drawing_area,
-			  GdkEventFocus  *event,
-			  GeditWindow    *window)
+on_table_focus_out_event (GtkWidget          *drawing_area,
+			  GdkEventFocus      *event,
+			  GeditCharmapPlugin *plugin)
 {
 	GucharmapChartable *chartable;
-	WindowData *data;
-
-	data = (WindowData *) g_object_get_data (G_OBJECT (window),
-						 WINDOW_DATA_KEY);
-	g_return_val_if_fail (data != NULL, FALSE);
 
 	chartable = gedit_charmap_panel_get_chartable
-					(GEDIT_CHARMAP_PANEL (data->panel));
+					(GEDIT_CHARMAP_PANEL (plugin->priv->panel));
 
-	on_table_status_message (chartable, NULL, window);
+	on_table_status_message (chartable, NULL, plugin);
 	return FALSE;
 }
 
 static void
 on_table_activate (GucharmapChartable *chartable,
-		   GeditWindow *window)
+		   GeditWindow        *window)
 {
 	GtkTextView   *view;
 	GtkTextBuffer *document;
 	GtkTextIter start, end;
 	gchar buffer[6];
 	gchar length;
-        gunichar wc;
+	gunichar wc;
 
-        wc = gucharmap_chartable_get_active_character (chartable);
+	wc = gucharmap_chartable_get_active_character (chartable);
 
 	g_return_if_fail (gucharmap_unichar_validate (wc));
 
@@ -213,10 +209,10 @@ get_document_font ()
 }
 
 static GtkWidget *
-create_charmap_panel (GeditWindow *window)
+create_charmap_panel (GeditCharmapPlugin *plugin)
 {
 	GSettings *settings;
-	GtkWidget      *panel;
+	GtkWidget *panel;
 	GucharmapChartable *chartable;
 	PangoFontDescription *font_desc;
 	gchar *font;
@@ -236,19 +232,19 @@ create_charmap_panel (GeditWindow *window)
 	g_signal_connect (chartable,
 			  "notify::active-character",
 			  G_CALLBACK (on_table_sync_active_char),
-			  window);
+			  plugin);
 	g_signal_connect (chartable,
 			  "focus-out-event",
 			  G_CALLBACK (on_table_focus_out_event),
-			  window);
+			  plugin);
 	g_signal_connect (chartable,
 			  "status-message",
 			  G_CALLBACK (on_table_status_message),
-			  window);
+			  plugin);
 	g_signal_connect (chartable,
 			  "activate",
 			  G_CALLBACK (on_table_activate),
-			  window);
+			  plugin->priv->window);
 
 	gtk_widget_show_all (panel);
 
@@ -256,20 +252,21 @@ create_charmap_panel (GeditWindow *window)
 }
 
 static void
-impl_activate (GeditPlugin *plugin,
-	       GeditWindow *window)
+gedit_charmap_plugin_activate (GeditWindowActivatable *activatable,
+			       GeditWindow            *window)
 {
+	GeditCharmapPluginPrivate *priv;
 	GeditPanel *panel;
 	GtkWidget *image;
 	GtkIconTheme *theme;
 	GtkStatusbar *statusbar;
-	WindowData *data;
 
 	gedit_debug (DEBUG_PLUGINS);
 
-	panel = gedit_window_get_side_panel (window);
+	priv = GEDIT_CHARMAP_PLUGIN (activatable)->priv;
+	priv->window = window;
 
-	data = g_slice_new (WindowData);
+	panel = gedit_window_get_side_panel (window);
 
 	theme = gtk_icon_theme_get_default ();
 
@@ -280,10 +277,10 @@ impl_activate (GeditPlugin *plugin,
 		image = gtk_image_new_from_icon_name ("gucharmap",
 						      GTK_ICON_SIZE_MENU);
 
-	data->panel = create_charmap_panel (window);
+	priv->panel = create_charmap_panel (GEDIT_CHARMAP_PLUGIN (activatable));
 
 	gedit_panel_add_item (panel,
-			      data->panel,
+			      priv->panel,
 			      "GeditCharmapPanel",
 			      _("Character Map"),
 			      image);
@@ -291,47 +288,59 @@ impl_activate (GeditPlugin *plugin,
 	gtk_object_sink (GTK_OBJECT (image));
 
 	statusbar = GTK_STATUSBAR (gedit_window_get_statusbar (window));
-	data->context_id = gtk_statusbar_get_context_id (statusbar,
+	priv->context_id = gtk_statusbar_get_context_id (statusbar,
 							 "Character Description");
-
-	g_object_set_data_full (G_OBJECT (window),
-				WINDOW_DATA_KEY,
-				data,
-				(GDestroyNotify) free_window_data);
 }
 
 static void
-impl_deactivate	(GeditPlugin *plugin,
-		 GeditWindow *window)
+gedit_charmap_plugin_deactivate (GeditWindowActivatable *activatable,
+				 GeditWindow            *window)
 {
+	GeditCharmapPluginPrivate *priv;
 	GeditPanel *panel;
-	WindowData *data;
 	GucharmapChartable *chartable;
 
 	gedit_debug (DEBUG_PLUGINS);
 
-	data = (WindowData *) g_object_get_data (G_OBJECT (window),
-						 WINDOW_DATA_KEY);
-	g_return_if_fail (data != NULL);
+	priv = GEDIT_CHARMAP_PLUGIN (activatable)->priv;
 
 	chartable = gedit_charmap_panel_get_chartable
-					(GEDIT_CHARMAP_PANEL (data->panel));
-	on_table_status_message (chartable, NULL, window);
+					(GEDIT_CHARMAP_PANEL (priv->panel));
+	on_table_status_message (chartable, NULL,
+				 GEDIT_CHARMAP_PLUGIN (activatable));
 
 	panel = gedit_window_get_side_panel (window);
-	gedit_panel_remove_item (panel, data->panel);
-
-	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
+	gedit_panel_remove_item (panel, priv->panel);
 }
 
 static void
 gedit_charmap_plugin_class_init (GeditCharmapPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	GeditPluginClass *plugin_class = GEDIT_PLUGIN_CLASS (klass);
 
 	object_class->finalize = gedit_charmap_plugin_finalize;
 
-	plugin_class->activate = impl_activate;
-	plugin_class->deactivate = impl_deactivate;
+	g_type_class_add_private (object_class, sizeof (GeditCharmapPluginPrivate));
+}
+
+static void
+gedit_charmap_plugin_class_finalize (GeditCharmapPluginClass *klass)
+{
+}
+
+static void
+gedit_window_activatable_iface_init (GeditWindowActivatableInterface *iface)
+{
+	iface->activate = gedit_charmap_plugin_activate;
+	iface->deactivate = gedit_charmap_plugin_deactivate;
+}
+
+G_MODULE_EXPORT void
+peas_register_types (PeasObjectModule *module)
+{
+	gedit_charmap_plugin_register_type (G_TYPE_MODULE (module));
+
+	peas_object_module_register_extension_type (module,
+						    GEDIT_TYPE_WINDOW_ACTIVATABLE,
+						    GEDIT_TYPE_CHARMAP_PLUGIN);
 }

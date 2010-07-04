@@ -22,7 +22,6 @@
 #include <config.h>
 #endif
 
-#include <gedit/gedit-plugin.h>
 #include "gedit-charmap-panel.h"
 
 #include <gucharmap/gucharmap.h>
@@ -38,7 +37,7 @@ struct _GeditCharmapPanelPrivate
 	GucharmapChartable *chartable;
 };
 
-GEDIT_PLUGIN_DEFINE_TYPE(GeditCharmapPanel, gedit_charmap_panel, GTK_TYPE_VBOX)
+G_DEFINE_DYNAMIC_TYPE (GeditCharmapPanel, gedit_charmap_panel, GTK_TYPE_VBOX)
 
 static void
 on_chapter_view_selection_changed (GtkTreeSelection *selection,
@@ -130,6 +129,11 @@ gedit_charmap_panel_class_init (GeditCharmapPanelClass *klass)
 	object_class->finalize = gedit_charmap_panel_finalize;
 }
 
+static void
+gedit_charmap_panel_class_finalize (GeditCharmapPanelClass *klass)
+{
+}
+
 GtkWidget *
 gedit_charmap_panel_new (void)
 {
@@ -140,4 +144,10 @@ GucharmapChartable *
 gedit_charmap_panel_get_chartable (GeditCharmapPanel *panel)
 {
 	return panel->priv->chartable;
+}
+
+void
+_gedit_charmap_panel_register_type (GTypeModule *type_module)
+{
+	gedit_charmap_panel_register_type (type_module);
 }
