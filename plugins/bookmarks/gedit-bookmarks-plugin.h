@@ -24,50 +24,38 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gedit/gedit-plugin.h>
+#include <libpeas/peas-extension-base.h>
+#include <libpeas/peas-object-module.h>
 
 G_BEGIN_DECLS
 
-/*
- * Type checking and casting macros
- */
-#define GEDIT_TYPE_ADVANCED_EDITING_PLUGIN		(gedit_bookmarks_plugin_get_type ())
-#define GEDIT_BOOKMARKS_PLUGIN(o)			(G_TYPE_CHECK_INSTANCE_CAST ((o), GEDIT_TYPE_ADVANCED_EDITING_PLUGIN, GeditBookmarksPlugin))
-#define GEDIT_BOOKMARKS_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), GEDIT_TYPE_ADVANCED_EDITING_PLUGIN, GeditBookmarksPluginClass))
-#define GEDIT_IS_ADVANCED_EDITING_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), GEDIT_TYPE_ADVANCED_EDITING_PLUGIN))
-#define GEDIT_IS_ADVANCED_EDITING_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), GEDIT_TYPE_ADVANCED_EDITING_PLUGIN))
-#define GEDIT_BOOKMARKS_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), GEDIT_TYPE_ADVANCED_EDITING_PLUGIN, GeditBookmarksPluginClass))
+#define GEDIT_TYPE_BOOKMARKS_PLUGIN		(gedit_bookmarks_plugin_get_type ())
+#define GEDIT_BOOKMARKS_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), GEDIT_TYPE_BOOKMARKS_PLUGIN, GeditBookmarksPlugin))
+#define GEDIT_BOOKMARKS_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), GEDIT_TYPE_BOOKMARKS_PLUGIN, GeditBookmarksPluginClass))
+#define GEDIT_IS_BOOKMARKS_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), GEDIT_TYPE_ADVANCED_EDITING_PLUGIN))
+#define GEDIT_IS_BOOKMARKS_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), GEDIT_TYPE_BOOKMARKS_PLUGIN))
+#define GEDIT_BOOKMARKS_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), GEDIT_TYPE_BOOKMARKS_PLUGIN, GeditBookmarksPluginClass))
 
-/* Private structure type */
-typedef struct _GeditBookmarksPluginPrivate	GeditBookmarksPluginPrivate;
-
-/*
- * Main object structure
- */
 typedef struct _GeditBookmarksPlugin		GeditBookmarksPlugin;
+typedef struct _GeditBookmarksPluginPrivate	GeditBookmarksPluginPrivate;
+typedef struct _GeditBookmarksPluginClass	GeditBookmarksPluginClass;
 
 struct _GeditBookmarksPlugin
 {
-	GeditPlugin parent_instance;
-};
+	PeasExtensionBase parent_instance;
 
-/*
- * Class definition
- */
-typedef struct _GeditBookmarksPluginClass	GeditBookmarksPluginClass;
+	/*< private >*/
+	GeditBookmarksPluginPrivate *priv;
+};
 
 struct _GeditBookmarksPluginClass
 {
-	GeditPluginClass parent_class;
+	PeasExtensionBaseClass parent_class;
 };
 
-/*
- * Public methods
- */
-GType	gedit_bookmarks_plugin_get_type	(void) G_GNUC_CONST;
+GType			gedit_bookmarks_plugin_get_type	(void) G_GNUC_CONST;
 
-/* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_gedit_plugin (GTypeModule *module);
+G_MODULE_EXPORT void	peas_register_types		(PeasObjectModule *module);
 
 G_END_DECLS
 
