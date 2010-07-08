@@ -19,7 +19,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gedit, gtk
+from gi.repository import GObject, Gtk, Gedit
 import gettext
 import re
 from gpdefs import *
@@ -42,37 +42,41 @@ ui_str = """
 </ui>
 """
 
-class ColorPickerPluginInstance:
-    def __init__(self, plugin, window):
+class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
+    __gtype_name__ = "ColorPickerPlugin"
+
+    def __init__(self):
+        GObject.Object.__init__(self)
+        self._dialog = None
+
+    def do_activate(self, window):
         self._window = window
-        self._plugin = plugin
-        self._activate_id = 0
 
         self.insert_menu()
         self.update()
 
-        self._activate_id = self._window.connect('focus-in-event', \
-                self.on_window_activate)
-
-    def stop(self):
+    def do_deactivate(self, window):
         self.remove_menu()
 
-        if self._activate_id:
-            self._window.handler_disconnect(self._activate_id)
+    def do_update_state(self, window):
+        self.update()
 
-        self._window = None
-        self._plugin = None
-        self._action_group = None
-        self._activate_id = 0
+    def update(self):
+        tab = self._window.get_active_tab()
+        self._action_group.set_sensitive(tab != None)
+
+        if not tab and self._dialog and \
+                self._dialog.get_transient_for() == self._window:
+            self._dialog.response(Gtk.ResponseType.CLOSE)
 
     def insert_menu(self):
         manager = self._window.get_ui_manager()
 
-        self._action_group = gtk.ActionGroup("GeditColorPickerPluginActions")
-        self._action_group.add_actions( \
-                [("ColorPicker", None, _("Pick _Color..."), None, \
-                _("Pick a color from a dialog"), \
-                lambda a: self._plugin.on_color_picker_activate(self._window))])
+        self._action_group = Gtk.ActionGroup()
+        self._action_group.add_actions(
+                [("ColorPicker", None, _("Pick _Color..."), None,
+                 _("Pick a color from a dialog"),
+                 lambda a, b: self.on_color_picker_activate())])
 
         manager.insert_action_group(self._action_group, -1)
         self._ui_id = manager.add_ui_from_string(ui_str)
@@ -83,40 +87,6 @@ class ColorPickerPluginInstance:
         manager.remove_ui(self._ui_id)
         manager.remove_action_group(self._action_group)
         manager.ensure_update()
-
-    def update(self):
-        tab = self._window.get_active_tab()
-        self._action_group.set_sensitive(tab != None)
-
-        if not tab and self._plugin._dialog and \
-                self._plugin._dialog.get_transient_for() == self._window:
-            self._plugin._dialog.response(gtk.RESPONSE_CLOSE)
-
-    def on_window_activate(self, window, event):
-        self._plugin.dialog_transient_for(window)
-
-class ColorPickerPlugin(gedit.Plugin):
-    DATA_TAG = "ColorPickerPluginInstance"
-
-    def __init__(self):
-        gedit.Plugin.__init__(self)
-        self._dialog = None
-
-    def get_instance(self, window):
-        return window.get_data(self.DATA_TAG)
-
-    def set_instance(self, window, instance):
-        window.set_data(self.DATA_TAG, instance)
-
-    def activate(self, window):
-        self.set_instance(window, ColorPickerPluginInstance(self, window))
-
-    def deactivate(self, window):
-        self.get_instance(window).stop()
-        self.set_instance(window, None)
-
-    def update_ui(self, window):
-        self.get_instance(window).update()
 
     def skip_hex(self, buf, iter, next_char):
         while True:
@@ -136,7 +106,7 @@ class ColorPickerPlugin(gedit.Plugin):
     def get_color_position(self, buf):
         bounds = buf.get_selection_bounds()
 
-        if not bounds or bounds[0].equal(bounds[1]):
+        if not bounds[0] or bounds[1].equal(bounds[1]):
             # No selection, find color in the current cursor position
             start = buf.get_iter_at_mark(buf.get_insert())
 
@@ -148,7 +118,7 @@ class ColorPickerPlugin(gedit.Plugin):
         else:
             start, end = bounds
 
-        text = buf.get_text(start, end)
+        text = buf.get_text(start, end, False)
 
         if not re.match('#?[0-9a-zA-Z]+', text):
             return None
@@ -162,8 +132,7 @@ class ColorPickerPlugin(gedit.Plugin):
         return start, end
 
     def insert_color(self, text):
-        window = gedit.app_get_default().get_active_window()
-        view = window.get_active_view()
+        view = self._window.get_active_view()
 
         if not view or not view.get_editable():
             return
@@ -196,8 +165,7 @@ class ColorPickerPlugin(gedit.Plugin):
         color.blue = self.scale_color_component(color.blue)
 
     def get_current_color(self):
-        window = gedit.app_get_default().get_active_window()
-        doc = window.get_active_document()
+        doc = self._window.get_active_document()
 
         if not doc:
             return None
@@ -215,44 +183,43 @@ class ColorPickerPlugin(gedit.Plugin):
 
     # Signal handlers
 
-    def on_color_picker_activate(self, window):
+    def on_color_picker_activate(self):
         if not self._dialog:
-            self._dialog = gtk.ColorSelectionDialog(_('Pick Color'))
-            self._dialog.colorsel.set_has_palette(True)
+            self._dialog = Gtk.ColorSelectionDialog(_('Pick Color'))
+            self._dialog.get_color_selection().set_has_palette(True)
 
-            image = gtk.Image()
-            image.set_from_stock(gtk.STOCK_SELECT_COLOR, gtk.ICON_SIZE_BUTTON)
+            image = Gtk.Image()
+            image.set_from_stock(Gtk.STOCK_SELECT_COLOR, Gtk.IconSize.BUTTON)
 
-            self._dialog.ok_button.set_label(_('_Insert'))
-            self._dialog.ok_button.set_image(image)
+            ok_button = self._dialog.get_property("ok-button")
+            ok_button.set_label(_('_Insert'))
+            ok_button.set_image(image)
 
-            self._dialog.cancel_button.set_use_stock(True)
-            self._dialog.cancel_button.set_label(gtk.STOCK_CLOSE)
+            cancel_button = self._dialog.get_property("cancel-button")
+            cancel_button.set_use_stock(True)
+            cancel_button.set_label(Gtk.STOCK_CLOSE)
 
             self._dialog.connect('response', self.on_dialog_response)
 
-        color = self.get_current_color()
+        color_str = self.get_current_color()
 
-        if color:
-            try:
-                color = gtk.gdk.color_parse(color)
-            except ValueError:
-                color = None
+        if color_str:
+            parsed, color = Gdk.color_parse(color_str)
 
-            if color:
+            if parsed:
                 self._dialog.colorsel.set_current_color(color)
 
-        self._dialog.set_transient_for(window)
+        self._dialog.set_transient_for(self._window)
         self._dialog.present()
 
     def on_dialog_response(self, dialog, response):
-        if response == gtk.RESPONSE_OK:
-            color = dialog.colorsel.get_current_color()
+        if response == Gtk.ResponseType.OK:
+            color = dialog.get_color_selection().get_current_color()
 
             self.scale_color(color)
 
             self.insert_color("%02x%02x%02x" % (color.red, \
-                    color.green, color.blue))
+                                                color.green, color.blue))
         else:
             self._dialog.destroy()
             self._dialog = None

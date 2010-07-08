@@ -1,7 +1,7 @@
 SUBDIRS = $(BUILD_PLUGINS)
 DIST_SUBDIRS = $(DIST_PLUGINS)
 
-plugindir = $(libdir)/gedit-2/plugins
+plugindir = $(libdir)/gedit/plugins
 plugin_PYTHON =	\
 	gpdefs.py
 
