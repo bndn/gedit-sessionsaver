@@ -19,11 +19,15 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gedit
-import gtk
+from gi.repository import GObject, Gtk, Gdk, GtkSource, Gedit
 
-class SmartSpacesViewHelper(object):
-    def __init__(self, view):
+class SmartSpacesPlugin(GObject.Object, Gedit.ViewActivatable):
+    __gtype_name__ = "SmartSpacesPlugin"
+
+    def __init__(self):
+        GObject.Object.__init__(self)
+
+    def do_activate(self, view):
         self._view = view
 
         self._handlers = [
@@ -31,9 +35,8 @@ class SmartSpacesViewHelper(object):
             view.connect('notify::editable', self.on_notify),
             view.connect('notify::insert-spaces-instead-of-tabs', self.on_notify)
         ]
-        self.update_active()
 
-    def deactivate(self):
+    def do_deactivate(self, view):
         for handler in self._handlers:
             if handler is not None:
                 self._view.disconnect(handler)
@@ -54,19 +57,20 @@ class SmartSpacesViewHelper(object):
     def on_notify(self, view, pspec):
         self.update_active()
 
-    def get_real_indent_width(self, view):
-        indent_width = view.get_indent_width()
+    def get_real_indent_width(self):
+        indent_width = self._view.get_indent_width()
 
         if indent_width < 0:
-             indent_width = view.get_tab_width()
+             indent_width = self._view.get_tab_width()
 
         return indent_width
 
     def on_key_press_event(self, view, event):
         # Only take care of backspace and shift+backspace
-        mods = gtk.accelerator_get_default_mod_mask()
-        if event.keyval != gtk.keysyms.BackSpace or \
-	       event.state & mods != 0 and event.state & mods != gtk.gdk.SHIFT_MASK:
+        mods = Gtk.accelerator_get_default_mod_mask()
+
+        if event.key.keyval != Gdk.BackSpace or \
+           event.key.state & mods != 0 and event.key.state & mods != Gdk.ModifierType.SHIFT_MASK:
             return False
 
         doc = view.get_buffer()
@@ -85,12 +89,12 @@ class SmartSpacesViewHelper(object):
         prev = cur.copy()
         prev.backward_char()
 
-        # If the previus chars are spaces, try to remove
-        # them until the previus tab stop
-        max_move = offset % self.get_real_indent_width(view)
+        # If the previous chars are spaces, try to remove
+        # them until the previous tab stop
+        max_move = offset % self.get_real_indent_width()
 
         if max_move == 0:
-            max_move = self.get_real_indent_width(view)
+            max_move = self.get_real_indent_width()
 
         moved = 0
         while moved < max_move and prev.get_char() == ' ':
@@ -108,40 +112,7 @@ class SmartSpacesViewHelper(object):
         doc.begin_user_action()
         doc.delete(start, cur)
         doc.end_user_action()
+
         return True
-
-class SmartSpacesPlugin(gedit.Plugin):
-    WINDOW_DATA_KEY = "SmartSpacesPluginWindowData"
-    VIEW_DATA_KEY = "SmartSpacesPluginViewData"
-
-    def __init__(self):
-        gedit.Plugin.__init__(self)
-
-    def add_helper(self, view):
-        helper = SmartSpacesViewHelper(view)
-        view.set_data(self.VIEW_DATA_KEY, helper)
-
-    def remove_helper(self, view):
-        view.get_data(self.VIEW_DATA_KEY).deactivate()
-        view.set_data(self.VIEW_DATA_KEY, None)
-
-    def activate(self, window):
-        for view in window.get_views():
-            self.add_helper(view)
-
-        handler_id = window.connect("tab-added",
-                                    lambda w, t: self.add_helper(t.get_view()))
-        window.set_data(self.WINDOW_DATA_KEY, handler_id)
-
-    def deactivate(self, window):
-        handler_id = window.get_data(self.WINDOW_DATA_KEY)
-        window.disconnect(handler_id)
-        window.set_data(self.WINDOW_DATA_KEY, None)
-
-        for view in window.get_views():
-            self.remove_helper(view)
-
-    def update_ui(self, window):
-        pass
 
 # ex:ts=4:et:
