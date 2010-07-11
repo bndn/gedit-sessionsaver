@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-31 22:59+0200\n"
-"PO-Revision-Date: 2010-05-17 08:09+0200\n"
+"POT-Creation-Date: 2010-07-11 17:25+0200\n"
+"PO-Revision-Date: 2010-06-01 21:23+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,27 +32,27 @@ msgstr "Záložky"
 msgid "Easy document navigation with bookmarks"
 msgstr "Jednoduché procházení dokumentem pomocí záložek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:145
 msgid "Toggle Bookmark"
 msgstr "Přepnout záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:146
 msgid "Toggle bookmark status of the current line"
 msgstr "Přepnout stav záložky na aktuálním řádku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:148
 msgid "Goto Next Bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:139
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:149
 msgid "Goto the next bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:151
 msgid "Goto Previous Bookmark"
 msgstr "Přejít na předcházející záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:142
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:152
 msgid "Goto the previous bookmark"
 msgstr "Přejít na předcházející záložku"
 
@@ -65,7 +65,7 @@ msgid "Bracket Completion"
 msgstr "Doplňování závorek"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:288
+#: ../plugins/charmap/gedit-charmap-plugin.c:285
 msgid "Character Map"
 msgstr "Mapa znaků"
 
@@ -81,19 +81,19 @@ msgstr "Komentování kódu"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Zakomentovat nebo odkomentovat vybraný blok kódu."
 
-#: ../plugins/codecomment/codecomment.py:230
+#: ../plugins/codecomment/codecomment.py:90
 msgid "Co_mment Code"
 msgstr "_Komentovat kód"
 
-#: ../plugins/codecomment/codecomment.py:232
+#: ../plugins/codecomment/codecomment.py:92
 msgid "Comment the selected code"
 msgstr "Komentovat vybraný kód"
 
-#: ../plugins/codecomment/codecomment.py:236
+#: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "_Odkomentovat kód"
 
-#: ../plugins/codecomment/codecomment.py:238
+#: ../plugins/codecomment/codecomment.py:98
 msgid "Uncomment the selected code"
 msgstr "Odkomentovat vybraný kód"
 
@@ -106,19 +106,19 @@ msgstr "Barevná pipeta"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Vybrat barvu z dialogu a vložit její šestnáctkové vyjádření."
 
-#: ../plugins/colorpicker/colorpicker.py:73
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick _Color..."
 msgstr "Vybrat _barvu…"
 
-#: ../plugins/colorpicker/colorpicker.py:74
+#: ../plugins/colorpicker/colorpicker.py:78
 msgid "Pick a color from a dialog"
 msgstr "Vybrat barvu z dialogu"
 
-#: ../plugins/colorpicker/colorpicker.py:220
+#: ../plugins/colorpicker/colorpicker.py:188
 msgid "Pick Color"
 msgstr "Vybrat barvu"
 
-#: ../plugins/colorpicker/colorpicker.py:226
+#: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
 msgstr "_Vložit"
 
@@ -131,8 +131,9 @@ msgstr "Rozhraní příkazového řádku k pokročilým úpravám"
 msgid "Commander"
 msgstr "Commander"
 
+#. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Vykreslovat mezery"
 
@@ -140,110 +141,54 @@ msgstr "Vykreslovat mezery"
 msgid "Draw Spaces and Tabs"
 msgstr "Vykreslovat mezery a tabulátory"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
 msgid "Draw leading spaces"
 msgstr "Vykreslovat úvodní mezery"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Vykreslovat nové řádky"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "Vykreslovat nezlomitelné mezery"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
 msgid "Draw spaces"
 msgstr "Vykreslovat mezery"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:5
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
 msgstr "Vykreslovat mezery v textu"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:6
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "Vykreslovat tabulátory"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:7
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
 msgid "Draw trailing spaces"
 msgstr "Vykreslovat koncové mezery"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:146
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:128
 msgid "Show _White Space"
 msgstr "Zobrazovat _bílé znaky"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:129
 msgid "Show spaces and tabs"
 msgstr "Zobrazovat mezery a tabulátory"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:538
-msgid "Error dialog"
-msgstr "Chybový dialog"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
-msgid "Draw Leading Space"
-msgstr "Vykreslovat úvodní mezery"
-
 #: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
-#, fuzzy
-msgid "Draw Newline"
-msgstr "Vykreslovat zakončení řádků"
+msgid "Enabled"
+msgstr "Zapnuto"
 
 #: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Vykreslovat nezlomitelné mezery"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:5
-msgid "Draw Tabs"
-msgstr "Vykreslovat tabulátory"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:6
-#, fuzzy
-msgid "Draw Text Space"
-msgstr "Vykreslovat mezery"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:7
-#, fuzzy
-msgid "Draw Trailing Space"
-msgstr "Vykreslovat koncové mezery"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:8
-msgid "Enabled"
-msgstr ""
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:9
-msgid "IF TRUE spaces in text will be drawn."
-msgstr ""
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:10
 msgid "If TRUE drawing will be enabled."
-msgstr ""
+msgstr "Pokud je ZAPNUTO, bude se používat vykreslování bílých znaků."
 
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:11
-msgid "If TRUE leading space will be drawn."
-msgstr ""
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:12
-msgid "If TRUE newlines will be drawn."
-msgstr ""
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:13
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
 #, fuzzy
-msgid "If TRUE non-breaking spaces will be drawn."
-msgstr "Vykreslovat nezlomitelné mezery"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:14
-msgid "If TRUE spaces will be drawn."
-msgstr ""
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:15
-msgid "If TRUE tabs will be drawn."
-msgstr ""
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:16
-msgid "If TRUE trailing spaces will be drawn."
-msgstr ""
+msgid "The type of spaces to be drawn."
+msgstr "Pokud je ZAPNUTO, budou se vykreslovat mezery."
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -349,30 +294,6 @@ msgstr "Snadné zvětšování a zmenšování velikosti textu"
 msgid "Text Size"
 msgstr "Velikost textu"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:187
-msgid "Tab_bar"
-msgstr "Lišta _karet"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:188
-msgid "Show or hide the tabbar in the current window"
-msgstr "Zobrazit či skrýt lištu karet v aktuálním okně"
-
-#: ../plugins/showtabbar/org.gnome.gedit.showtabbar.gschema.xml.in.in.h:1
-msgid "Tabbar is Visible"
-msgstr "Lišta karet je viditelná"
-
-#: ../plugins/showtabbar/org.gnome.gedit.showtabbar.gschema.xml.in.in.h:2
-msgid "Whether the tabbar should be visible in editing windows."
-msgstr "Zda má být lišta karet viditelná v editačních oknech."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
-msgid "Add a menu entry to show/hide the tabbar."
-msgstr "Přidává položku nabídky pro zobrazení/skrytí lišty karet."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
-msgid "Show/Hide Tabbar"
-msgstr "Zobrazit/skrýt lištu karet"
-
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "_Uložená sezení"
@@ -447,7 +368,7 @@ msgstr "Terminál"
 msgid "C_hange Directory"
 msgstr "Změnit _adresář"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:58
 msgid "Document Words"
 msgstr "Slova dokumentu"
 
@@ -458,6 +379,63 @@ msgstr "Dokončování slov"
 #: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "Dokončování slov využívající vývojářský systém pro doplňování"
+
+#~ msgid "Error dialog"
+#~ msgstr "Chybový dialog"
+
+#~ msgid "Draw Leading Space"
+#~ msgstr "Vykreslovat úvodní mezery"
+
+#~ msgid "Draw Newline"
+#~ msgstr "Vykreslovat zalomení na nový řádek"
+
+#~ msgid "Draw Non-Breaking Spaces"
+#~ msgstr "Vykreslovat nezlomitelné mezery"
+
+#~ msgid "Draw Tabs"
+#~ msgstr "Vykreslovat tabulátory"
+
+#~ msgid "Draw Text Space"
+#~ msgstr "Vykreslovat mezery v textu"
+
+#~ msgid "Draw Trailing Space"
+#~ msgstr "Vykreslovat koncové mezery"
+
+#~ msgid "IF TRUE spaces in text will be drawn."
+#~ msgstr "Pokud je ZAPNUTO, budou se vykreslovat mezery v textu."
+
+#~ msgid "If TRUE leading space will be drawn."
+#~ msgstr "Pokud je ZAPNUTO, budou se vykreslovat úvodní mezery."
+
+#~ msgid "If TRUE newlines will be drawn."
+#~ msgstr "Pokud je ZAPNUTO, budou se vykreslovat zalomení na nový řádek."
+
+#~ msgid "If TRUE non-breaking spaces will be drawn."
+#~ msgstr "Pokud je ZAPNUTO, budou se vykreslovat nezalomitelné mezery."
+
+#~ msgid "If TRUE tabs will be drawn."
+#~ msgstr "Pokud je ZAPNUTO, budou se vykreslovat tabulátory."
+
+#~ msgid "If TRUE trailing spaces will be drawn."
+#~ msgstr "Pokud je ZAPNUTO, budou se vykreslovat koncové mezery."
+
+#~ msgid "Tab_bar"
+#~ msgstr "Lišta _karet"
+
+#~ msgid "Show or hide the tabbar in the current window"
+#~ msgstr "Zobrazit či skrýt lištu karet v aktuálním okně"
+
+#~ msgid "Tabbar is Visible"
+#~ msgstr "Lišta karet je viditelná"
+
+#~ msgid "Whether the tabbar should be visible in editing windows."
+#~ msgstr "Zda má být lišta karet viditelná v editačních oknech."
+
+#~ msgid "Add a menu entry to show/hide the tabbar."
+#~ msgstr "Přidává položku nabídky pro zobrazení/skrytí lišty karet."
+
+#~ msgid "Show/Hide Tabbar"
+#~ msgstr "Zobrazit/skrýt lištu karet"
 
 #~ msgid "Draw Spaces in Text"
 #~ msgstr "Vykreslovat mezery v textu"
