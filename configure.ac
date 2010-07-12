@@ -4,7 +4,7 @@ AC_PREREQ(2.59)
  
 m4_define(gedit_plugins_major_version,  2)
 m4_define(gedit_plugins_minor_version, 31)
-m4_define(gedit_plugins_micro_version,  3)
+m4_define(gedit_plugins_micro_version,  4)
 m4_define(gedit_plugins_version, gedit_plugins_major_version.gedit_plugins_minor_version.gedit_plugins_micro_version)
 
 AC_INIT(gedit-plugins, gedit_plugins_version, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
@@ -66,8 +66,8 @@ PKG_CHECK_MODULES(GEDIT, [
 	gio-2.0 >= 2.25.4
 	gtk+-3.0 >= 2.90.0
 	gtksourceview-3.0 >= 2.9.1
-	libpeas-1.0
-	libpeasui-1.0
+	libpeas-1.0 >= 0.5.2
+	libpeasui-1.0 >= 0.5.2
 	gedit >= 2.31.4
 ])
 
