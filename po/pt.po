@@ -1,19 +1,21 @@
 # gedit-plugins's Portuguese translation
 # Copyright © 2001, 2004, 2007, 2008, 2009 gedit-plugins
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2004.
-#
 # António Lima <amrlima@gmail.com>, 2007, 2008, 200, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.26\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-22 01:01+0000\n"
-"PO-Revision-Date: 2010-02-18 22:39-0100\n"
+"POT-Creation-Date: 2010-07-12 01:16+0100\n"
+"PO-Revision-Date: 2010-07-05 18:57+0000\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
-"Language-Team: Português <gnome_pt@yahoogroups.com>\n"
+"Language-Team: gnome_pt@yahoogroups.com\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8 bit\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.6.1\n"
 
 #: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
 msgid "Bookmarks"
@@ -23,27 +25,27 @@ msgstr "Marcadores"
 msgid "Easy document navigation with bookmarks"
 msgstr "Navegar por documentos facilmente com marcadores"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:145
 msgid "Toggle Bookmark"
 msgstr "Alternar Marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:146
 msgid "Toggle bookmark status of the current line"
 msgstr "Alternar estado do marcador da linha actual"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:148
 msgid "Goto Next Bookmark"
 msgstr "Ir Para Próximo Marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:149
 msgid "Goto the next bookmark"
 msgstr "Ir para o próximo marcador"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:151
 msgid "Goto Previous Bookmark"
 msgstr "Ir Para Marcador Anterior"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:152
 msgid "Goto the previous bookmark"
 msgstr "Ir para o marcador anterior"
 
@@ -56,7 +58,7 @@ msgid "Bracket Completion"
 msgstr "Conclusão de Chavetas"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:258
+#: ../plugins/charmap/gedit-charmap-plugin.c:285
 msgid "Character Map"
 msgstr "Mapa de Caracteres"
 
@@ -72,19 +74,19 @@ msgstr "Comentar código"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Comentar ou remover comentário de bloco de código seleccionado."
 
-#: ../plugins/codecomment/codecomment.py:230
+#: ../plugins/codecomment/codecomment.py:90
 msgid "Co_mment Code"
 msgstr "Co_mentar Código"
 
-#: ../plugins/codecomment/codecomment.py:232
+#: ../plugins/codecomment/codecomment.py:92
 msgid "Comment the selected code"
 msgstr "Comentar o código seleccionado"
 
-#: ../plugins/codecomment/codecomment.py:236
+#: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "_Remover Comentário do Código"
 
-#: ../plugins/codecomment/codecomment.py:238
+#: ../plugins/codecomment/codecomment.py:98
 msgid "Uncomment the selected code"
 msgstr "Remover o comentário do código seleccionado"
 
@@ -99,19 +101,19 @@ msgstr ""
 "Escolher uma cor a partir de uma janela de diálogo e inserir a sua "
 "representação hexadecimal."
 
-#: ../plugins/colorpicker/colorpicker.py:73
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick _Color..."
 msgstr "Escolher _Cor"
 
-#: ../plugins/colorpicker/colorpicker.py:74
+#: ../plugins/colorpicker/colorpicker.py:78
 msgid "Pick a color from a dialog"
 msgstr "Escolher uma cor a partir de uma janela de diálogo"
 
-#: ../plugins/colorpicker/colorpicker.py:220
+#: ../plugins/colorpicker/colorpicker.py:188
 msgid "Pick Color"
 msgstr "Escolher Cor"
 
-#: ../plugins/colorpicker/colorpicker.py:226
+#: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
 msgstr "_Inserir"
 
@@ -124,8 +126,9 @@ msgstr "Interface de linha de comando para edição avançada"
 msgid "Commander"
 msgstr "Commander"
 
+#. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Mostrar Espaços"
 
@@ -133,73 +136,53 @@ msgstr "Mostrar Espaços"
 msgid "Draw Spaces and Tabs"
 msgstr "Mostrar Espaços e Tabuladores"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
 msgid "Draw leading spaces"
 msgstr "Mostrar espaços iniciais"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Desenhar novas linhas"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "Mostrar espaços inquebráveis"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
 msgid "Draw spaces"
 msgstr "Mostrar espaços"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:5
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
 msgstr "Mostrar espaços no texto"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:6
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "Mostrar tabuladores"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:7
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
 msgid "Draw trailing spaces"
 msgstr "Mostrar espaços finais"
 
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
-msgid "Draw Leading Spaces"
-msgstr "Mostrar espaços iniciais"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
-msgid "Draw New lines"
-msgstr "Mostrar novas linhas"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Mostrar espaços de não quebra"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
-msgid "Draw Spaces in Text"
-msgstr "Mostrar espaços no texto"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
-msgid "Draw Tabs"
-msgstr "Mostrar tabuladores"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
-msgid "Draw Trailing Spaces"
-msgstr "Mostrar espaços finais"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
-msgid "Show White Spaces"
-msgstr "Mostrar espaços em branco"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:128
 msgid "Show _White Space"
 msgstr "Apresentar Espaço em _Branco"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:129
 msgid "Show spaces and tabs"
 msgstr "Apresentar espaços e tabuladores"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
-msgid "Error dialog"
-msgstr "Diálogo de erro"
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
+msgid "Enabled"
+msgstr "Activo"
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
+msgid "If TRUE drawing will be enabled."
+msgstr "Se TRUE desenho será activado."
+
+#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
+msgstr "O tipo de espaços a serem desenhados."
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -234,71 +217,79 @@ msgstr "Editar documento em vários locais simultâneamente"
 msgid "Multi Edit"
 msgstr "Multi Edição"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:279
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
 msgstr "Ponto de adição adicionado..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:417
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
 msgid "Column Mode..."
 msgstr "Modo de Coluna..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:535
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
 msgid "Removed edit point..."
 msgstr "Ponto de edição removido..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:685
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
 msgid "Cancelled column mode..."
 msgstr "Ponto de coluna cancelado..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:804
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
 msgid "Enter column edit mode using selection"
 msgstr "Entrar no modo de edição de coluna utilizando a selecção"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:805
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr ""
+"Entrar no modo <b>inteligente</b> de edição de coluna utilizando a selecção"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+msgid "<b>Smart</b> column align mode using selection"
+msgstr ""
+"Modo de alinhamento <b>inteligente</b> de coluna, utilizando a selecção"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+"Modo de alinhamento <b>inteligente</b> de coluna com espaço adicional, "
+"utilizando a selecção"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
 msgid "Toggle edit point"
 msgstr "Alternar ponto de edição"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:806
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
 msgid "Add edit point at beginning of line/selection"
 msgstr "Adicionar ponto de edição no início da linha/selecção"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:807
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
 msgid "Add edit point at end of line/selection"
 msgstr "Adicionar ponto de edição no final da linha/selecção"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:843
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+msgid "Align edit points"
+msgstr "Alinhar pontos de edição"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+msgid "Align edit points with additional space"
+msgstr "Alinhar pontos de edição com espaço adicional"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Modo de Edição Múltipla"
 
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Start multi edit mode"
 msgstr "Iniciar modo de edição múltipla"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
-msgid "Tab_bar"
-msgstr "_Barra de separadores"
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr "Aumentar ou diminuir o tamanho do texto facilmente"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
-msgid "Show or hide the tabbar in the current window"
-msgstr "Apresentar ou ocultar a barra de separadores na janela actual"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
-msgid "Tabbar is Visible"
-msgstr "Barra de Separadores Visível"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
-msgid "Whether the tabbar should be visible in editing windows."
-msgstr "Se a barra de separadores deve ser visível nas janelas de edição."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
-msgid "Add a menu entry to show/hide the tabbar."
-msgstr ""
-"Adicionar uma entrada de menu para apresentar/ocultar a barra de separadores."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
-msgid "Show/Hide Tabbar"
-msgstr "Apresentar/Ocultar a Barra de Separadores"
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:2
+msgid "Text Size"
+msgstr "Tamanho do Texto"
 
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
@@ -366,15 +357,15 @@ msgstr "Embutir uma consola no painel inferior."
 msgid "Embedded Terminal"
 msgstr "Consola Embutida"
 
-#: ../plugins/terminal/terminal.py:262
+#: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Consola"
 
-#: ../plugins/terminal/terminal.py:285
+#: ../plugins/terminal/terminal.py:329
 msgid "C_hange Directory"
 msgstr "A_lterar Directório"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:58
 msgid "Document Words"
 msgstr "Palavras do Documento"
 
@@ -385,6 +376,50 @@ msgstr "Conclusão de Palavras"
 #: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "Conclusão de palavras utilizando a ferramenta de conclusão"
+
+#~ msgid "Draw Leading Spaces"
+#~ msgstr "Mostrar espaços iniciais"
+
+#~ msgid "Draw New lines"
+#~ msgstr "Mostrar novas linhas"
+
+#~ msgid "Draw Non-Breaking Spaces"
+#~ msgstr "Mostrar espaços de não quebra"
+
+#~ msgid "Draw Spaces in Text"
+#~ msgstr "Mostrar espaços no texto"
+
+#~ msgid "Draw Tabs"
+#~ msgstr "Mostrar tabuladores"
+
+#~ msgid "Draw Trailing Spaces"
+#~ msgstr "Mostrar espaços finais"
+
+#~ msgid "Show White Spaces"
+#~ msgstr "Mostrar espaços em branco"
+
+#~ msgid "Error dialog"
+#~ msgstr "Diálogo de erro"
+
+#~ msgid "Tab_bar"
+#~ msgstr "_Barra de separadores"
+
+#~ msgid "Show or hide the tabbar in the current window"
+#~ msgstr "Apresentar ou ocultar a barra de separadores na janela actual"
+
+#~ msgid "Tabbar is Visible"
+#~ msgstr "Barra de Separadores Visível"
+
+#~ msgid "Whether the tabbar should be visible in editing windows."
+#~ msgstr "Se a barra de separadores deve ser visível nas janelas de edição."
+
+#~ msgid "Add a menu entry to show/hide the tabbar."
+#~ msgstr ""
+#~ "Adicionar uma entrada de menu para apresentar/ocultar a barra de "
+#~ "separadores."
+
+#~ msgid "Show/Hide Tabbar"
+#~ msgstr "Apresentar/Ocultar a Barra de Separadores"
 
 #~ msgid "Drawing color:"
 #~ msgstr "Cor da linha:"
