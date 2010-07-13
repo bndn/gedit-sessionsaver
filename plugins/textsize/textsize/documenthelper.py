@@ -21,8 +21,7 @@
 
 from signals import Signals
 import constants
-import pango
-import gtk
+from gi.repository import Gtk, Gdk, Pango
 
 class DocumentHelper(Signals):
     def __init__(self, view):
@@ -87,10 +86,10 @@ class DocumentHelper(Signals):
 
         buf = self._view.get_buffer()
         bounds = buf.get_selection_bounds()
-        size = description.get_size() / pango.SCALE
+        size = description.get_size() / Pango.SCALE
 
         if not bounds:
-            description.set_size(max(1, (size + amount)) * pango.SCALE)
+            description.set_size(max(1, (size + amount)) * Pango.SCALE)
 
             self._view.modify_font(description)
             self._last_font = description
@@ -104,12 +103,12 @@ class DocumentHelper(Signals):
                 # Simply use the overall font size as the base
                 newsize = size + amount
             elif len(tags) == 1:
-                newsize = tags[0].props.font_desc.get_size() / pango.SCALE + amount
+                newsize = tags[0].props.font_desc.get_size() / Pango.SCALE + amount
             else:
                 newsize = 0
 
                 for tag in tags:
-                    newsize += tag.props.font_desc.get_size() / pango.SCALE
+                    newsize += tag.props.font_desc.get_size() / Pango.SCALE
 
                 newsize = round(newsize / len(tags))
 
@@ -119,7 +118,7 @@ class DocumentHelper(Signals):
                 newtag = buf.create_tag(None)
 
                 desc = description.copy()
-                desc.set_size(newsize * pango.SCALE)
+                desc.set_size(newsize * Pango.SCALE)
 
                 newtag.props.font_desc = desc
                 self._font_tags[newsize] = newtag
@@ -156,24 +155,24 @@ class DocumentHelper(Signals):
                 buf.remove_tag(tag, bounds[0], bounds[1])
 
     def on_scroll_event(self, view, event):
-        state = event.state & gtk.accelerator_get_default_mod_mask()
+        state = event.scroll.state & Gtk.accelerator_get_default_mod_mask()
 
-        if state != gtk.gdk.CONTROL_MASK:
+        if state != Gdk.ModifierType.CONTROL_MASK:
             return False
 
-        if event.direction == gtk.gdk.SCROLL_UP:
+        if event.scroll.direction == Gdk.ScrollDirection.UP:
             self.increase_font_size()
             return True
-        elif event.direction == gtk.gdk.SCROLL_DOWN:
+        elif event.scroll.direction == Gdk.ScrollDirection.DOWN:
             self.decrease_font_size()
             return True
 
         return False
 
     def on_button_press_event(self, view, event):
-        state = event.state & gtk.accelerator_get_default_mod_mask()
+        state = event.button.state & Gtk.accelerator_get_default_mod_mask()
 
-        if state == gtk.gdk.CONTROL_MASK and event.button == 2:
+        if state == Gdk.ModifierType.CONTROL_MASK and event.button.button == 2:
             self.reset_font_size()
             return True
         else:

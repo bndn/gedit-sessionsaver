@@ -6,7 +6,6 @@ plugin_PYTHON =	\
 	constants.py \
 	documenthelper.py \
 	__init__.py \
-	signals.py \
-	windowhelper.py
+	signals.py
 
 -include $(top_srcdir)/git.mk
