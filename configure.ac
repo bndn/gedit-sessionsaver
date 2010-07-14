@@ -335,7 +335,7 @@ plugins/commander/modules/Makefile
 plugins/commander/modules/find/Makefile
 plugins/drawspaces/Makefile
 plugins/drawspaces/drawspaces.gedit-plugin.desktop.in
-plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in
+plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in
 plugins/joinlines/Makefile
 plugins/joinlines/joinlines.gedit-plugin.desktop.in
 plugins/multiedit/Makefile
