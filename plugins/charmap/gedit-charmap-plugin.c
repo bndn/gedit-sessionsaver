@@ -47,6 +47,12 @@ struct _GeditCharmapPluginPrivate
 	guint            context_id;
 };
 
+enum
+{
+	PROP_0,
+	PROP_WINDOW
+};
+
 static void gedit_window_activatable_iface_init (GeditWindowActivatableInterface *iface);
 
 G_DEFINE_DYNAMIC_TYPE_EXTENDED (GeditCharmapPlugin,
@@ -68,11 +74,59 @@ gedit_charmap_plugin_init (GeditCharmapPlugin *plugin)
 }
 
 static void
-gedit_charmap_plugin_finalize (GObject *object)
+gedit_charmap_plugin_dispose (GObject *object)
 {
-	gedit_debug_message (DEBUG_PLUGINS, "GeditCharmapPlugin finalizing");
+	GeditCharmapPlugin *plugin = GEDIT_CHARMAP_PLUGIN (object);
 
-	G_OBJECT_CLASS (gedit_charmap_plugin_parent_class)->finalize (object);
+	gedit_debug_message (DEBUG_PLUGINS, "GeditCharmapPlugin disposing");
+
+	if (plugin->priv->window != NULL)
+	{
+		g_object_unref (plugin->priv->window);
+		plugin->priv->window = NULL;
+	}
+
+	G_OBJECT_CLASS (gedit_charmap_plugin_parent_class)->dispose (object);
+}
+
+static void
+gedit_charmap_plugin_set_property (GObject      *object,
+                                   guint         prop_id,
+                                   const GValue *value,
+                                   GParamSpec   *pspec)
+{
+	GeditCharmapPlugin *plugin = GEDIT_CHARMAP_PLUGIN (object);
+
+	switch (prop_id)
+	{
+		case PROP_WINDOW:
+			plugin->priv->window = GEDIT_WINDOW (g_value_dup_object (value));
+			break;
+
+		default:
+			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+			break;
+	}
+}
+
+static void
+gedit_charmap_plugin_get_property (GObject    *object,
+                                   guint       prop_id,
+                                   GValue     *value,
+                                   GParamSpec *pspec)
+{
+	GeditCharmapPlugin *plugin = GEDIT_CHARMAP_PLUGIN (object);
+
+	switch (prop_id)
+	{
+		case PROP_WINDOW:
+			g_value_set_object (value, plugin->priv->window);
+			break;
+
+		default:
+			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+			break;
+	}
 }
 
 static void
@@ -252,8 +306,7 @@ create_charmap_panel (GeditCharmapPlugin *plugin)
 }
 
 static void
-gedit_charmap_plugin_activate (GeditWindowActivatable *activatable,
-			       GeditWindow            *window)
+gedit_charmap_plugin_activate (GeditWindowActivatable *activatable)
 {
 	GeditCharmapPluginPrivate *priv;
 	GeditPanel *panel;
@@ -264,9 +317,8 @@ gedit_charmap_plugin_activate (GeditWindowActivatable *activatable,
 	gedit_debug (DEBUG_PLUGINS);
 
 	priv = GEDIT_CHARMAP_PLUGIN (activatable)->priv;
-	priv->window = window;
 
-	panel = gedit_window_get_side_panel (window);
+	panel = gedit_window_get_side_panel (priv->window);
 
 	theme = gtk_icon_theme_get_default ();
 
@@ -287,14 +339,13 @@ gedit_charmap_plugin_activate (GeditWindowActivatable *activatable,
 
 	gtk_object_sink (GTK_OBJECT (image));
 
-	statusbar = GTK_STATUSBAR (gedit_window_get_statusbar (window));
+	statusbar = GTK_STATUSBAR (gedit_window_get_statusbar (priv->window));
 	priv->context_id = gtk_statusbar_get_context_id (statusbar,
 							 "Character Description");
 }
 
 static void
-gedit_charmap_plugin_deactivate (GeditWindowActivatable *activatable,
-				 GeditWindow            *window)
+gedit_charmap_plugin_deactivate (GeditWindowActivatable *activatable)
 {
 	GeditCharmapPluginPrivate *priv;
 	GeditPanel *panel;
@@ -309,7 +360,7 @@ gedit_charmap_plugin_deactivate (GeditWindowActivatable *activatable,
 	on_table_status_message (chartable, NULL,
 				 GEDIT_CHARMAP_PLUGIN (activatable));
 
-	panel = gedit_window_get_side_panel (window);
+	panel = gedit_window_get_side_panel (priv->window);
 	gedit_panel_remove_item (panel, priv->panel);
 }
 
@@ -318,7 +369,11 @@ gedit_charmap_plugin_class_init (GeditCharmapPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	object_class->finalize = gedit_charmap_plugin_finalize;
+	object_class->dispose = gedit_charmap_plugin_dispose;
+	object_class->set_property = gedit_charmap_plugin_set_property;
+	object_class->get_property = gedit_charmap_plugin_get_property;
+
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
 
 	g_type_class_add_private (object_class, sizeof (GeditCharmapPluginPrivate));
 }
