@@ -248,7 +248,7 @@ get_document_font ()
 	{
 		GSettings *system;
 
-		system = g_settings_new ("org.gnome.Desktop.Interface");
+		system = g_settings_new ("org.gnome.desktop.interface");
 		font = g_settings_get_string (system, "monospace-font-name");
 		g_object_unref (system);
 	}
