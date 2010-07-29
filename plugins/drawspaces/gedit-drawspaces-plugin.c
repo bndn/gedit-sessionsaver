@@ -92,6 +92,12 @@ enum
 	COLUMN_LOCATION
 };
 
+enum
+{
+	PROP_0,
+	PROP_WINDOW
+};
+
 static const gchar submenu [] = {
 "<ui>"
 "  <menubar name='MenuBar'>"
@@ -169,7 +175,53 @@ gedit_drawspaces_plugin_dispose (GObject *object)
 		plugin->priv->settings = NULL;
 	}
 
+	if (plugin->priv->window != NULL)
+	{
+		g_object_unref (plugin->priv->window);
+		plugin->priv->window = NULL;
+	}
+
 	G_OBJECT_CLASS (gedit_drawspaces_plugin_parent_class)->dispose (object);
+}
+
+static void
+gedit_drawspaces_plugin_set_property (GObject      *object,
+                                      guint         prop_id,
+                                      const GValue *value,
+                                      GParamSpec   *pspec)
+{
+	GeditDrawspacesPlugin *plugin = GEDIT_DRAWSPACES_PLUGIN (object);
+
+	switch (prop_id)
+	{
+		case PROP_WINDOW:
+			plugin->priv->window = GEDIT_WINDOW (g_value_dup_object (value));
+			break;
+
+		default:
+			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+			break;
+	}
+}
+
+static void
+gedit_drawspaces_plugin_get_property (GObject    *object,
+                                      guint       prop_id,
+                                      GValue     *value,
+                                      GParamSpec *pspec)
+{
+	GeditDrawspacesPlugin *plugin = GEDIT_DRAWSPACES_PLUGIN (object);
+
+	switch (prop_id)
+	{
+		case PROP_WINDOW:
+			g_value_set_object (value, plugin->priv->window);
+			break;
+
+		default:
+			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+			break;
+	}
 }
 
 static void
@@ -216,13 +268,10 @@ get_config_options (GeditDrawspacesPlugin *plugin)
 
 	priv->flags = g_settings_get_flags (priv->settings,
 					    SETTINGS_KEY_DRAW_SPACES);
-
-	g_message ("%d", priv->flags);
 }
 
 static void
-gedit_drawspaces_plugin_activate (GeditWindowActivatable *activatable,
-				  GeditWindow            *window)
+gedit_drawspaces_plugin_activate (GeditWindowActivatable *activatable)
 {
 	GeditDrawspacesPluginPrivate *priv;
 	GtkUIManager *manager;
@@ -232,11 +281,10 @@ gedit_drawspaces_plugin_activate (GeditWindowActivatable *activatable,
 	gedit_debug (DEBUG_PLUGINS);
 
 	priv = GEDIT_DRAWSPACES_PLUGIN (activatable)->priv;
-	priv->window = window;
 
 	get_config_options (GEDIT_DRAWSPACES_PLUGIN (activatable));
 
-	manager = gedit_window_get_ui_manager (window);
+	manager = gedit_window_get_ui_manager (priv->window);
 
 	priv->action_group = gtk_action_group_new ("GeditDrawspacesPluginActions");
 	gtk_action_group_set_translation_domain (priv->action_group,
@@ -271,13 +319,12 @@ gedit_drawspaces_plugin_activate (GeditWindowActivatable *activatable,
 		draw_spaces (GEDIT_DRAWSPACES_PLUGIN (activatable));
 	}
 
-	g_signal_connect (window, "tab-added",
+	g_signal_connect (priv->window, "tab-added",
 			  G_CALLBACK (tab_added_cb), activatable);
 }
 
 static void
-gedit_drawspaces_plugin_deactivate (GeditWindowActivatable *activatable,
-				    GeditWindow            *window)
+gedit_drawspaces_plugin_deactivate (GeditWindowActivatable *activatable)
 {
 	GeditDrawspacesPluginPrivate *priv;
 	GtkUIManager *manager;
@@ -286,12 +333,13 @@ gedit_drawspaces_plugin_deactivate (GeditWindowActivatable *activatable,
 
 	priv = GEDIT_DRAWSPACES_PLUGIN (activatable)->priv;
 
-	manager = gedit_window_get_ui_manager (window);
+	manager = gedit_window_get_ui_manager (priv->window);
 
 	priv->enable = FALSE;
 	draw_spaces (GEDIT_DRAWSPACES_PLUGIN (activatable));
 
-	g_signal_handlers_disconnect_by_func (window, tab_added_cb, activatable);
+	g_signal_handlers_disconnect_by_func (priv->window, tab_added_cb,
+					      activatable);
 
 	gtk_ui_manager_remove_ui (manager, priv->ui_id);
 	gtk_ui_manager_remove_action_group (manager, priv->action_group);
@@ -546,9 +594,13 @@ gedit_drawspaces_plugin_class_init (GeditDrawspacesPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	g_type_class_add_private (object_class, sizeof (GeditDrawspacesPluginPrivate));
-
 	object_class->dispose = gedit_drawspaces_plugin_dispose;
+	object_class->set_property = gedit_drawspaces_plugin_set_property;
+	object_class->get_property = gedit_drawspaces_plugin_get_property;
+
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
+
+	g_type_class_add_private (object_class, sizeof (GeditDrawspacesPluginPrivate));
 }
 
 static void
