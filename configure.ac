@@ -66,9 +66,9 @@ PKG_CHECK_MODULES(GEDIT, [
 	gio-2.0 >= 2.25.4
 	gtk+-3.0 >= 2.90.0
 	gtksourceview-3.0 >= 2.9.1
-	libpeas-1.0 >= 0.5.2
-	libpeasui-1.0 >= 0.5.2
-	gedit >= 2.31.4
+	libpeas-1.0 >= 0.5.3
+	libpeasui-1.0 >= 0.5.3
+	gedit >= 2.31.5
 ])
 
 dnl ================================================================
