@@ -41,9 +41,17 @@ G_DEFINE_DYNAMIC_TYPE_EXTENDED (GeditWordCompletionPlugin,
 
 struct _GeditWordCompletionPluginPrivate
 {
+	GeditWindow *window;
 	GtkSourceCompletionWords *provider;
+
 	gulong tab_added_id;
 	gulong tab_removed_id;
+};
+
+enum
+{
+	PROP_0,
+	PROP_WINDOW
 };
 
 static void
@@ -70,7 +78,53 @@ gedit_word_completion_plugin_dispose (GObject *object)
 		plugin->priv->provider = NULL;
 	}
 
+	if (plugin->priv->window != NULL)
+	{
+		g_object_unref (plugin->priv->window);
+		plugin->priv->window = NULL;
+	}
+
 	G_OBJECT_CLASS (gedit_word_completion_plugin_parent_class)->dispose (object);
+}
+
+static void
+gedit_word_completion_plugin_set_property (GObject      *object,
+                                           guint         prop_id,
+                                           const GValue *value,
+                                           GParamSpec   *pspec)
+{
+	GeditWordCompletionPlugin *plugin = GEDIT_WORD_COMPLETION_PLUGIN (object);
+
+	switch (prop_id)
+	{
+		case PROP_WINDOW:
+			plugin->priv->window = GEDIT_WINDOW (g_value_dup_object (value));
+			break;
+
+		default:
+			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+			break;
+	}
+}
+
+static void
+gedit_word_completion_plugin_get_property (GObject    *object,
+                                           guint       prop_id,
+                                           GValue     *value,
+                                           GParamSpec *pspec)
+{
+	GeditWordCompletionPlugin *plugin = GEDIT_WORD_COMPLETION_PLUGIN (object);
+
+	switch (prop_id)
+	{
+		case PROP_WINDOW:
+			g_value_set_object (value, plugin->priv->window);
+			break;
+
+		default:
+			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+			break;
+	}
 }
 
 static void
@@ -132,8 +186,7 @@ tab_removed_cb (GeditWindow               *window,
 }
 
 static void
-gedit_word_completion_plugin_activate (GeditWindowActivatable *activatable,
-				       GeditWindow            *window)
+gedit_word_completion_plugin_activate (GeditWindowActivatable *activatable)
 {
 	GeditWordCompletionPluginPrivate *priv;
 	GList *views, *l;
@@ -142,7 +195,7 @@ gedit_word_completion_plugin_activate (GeditWindowActivatable *activatable,
 
 	priv = GEDIT_WORD_COMPLETION_PLUGIN (activatable)->priv;
 
-	views = gedit_window_get_views (window);
+	views = gedit_window_get_views (priv->window);
 	for (l = views; l != NULL; l = g_list_next (l))
 	{
 		add_view (GEDIT_WORD_COMPLETION_PLUGIN (activatable),
@@ -150,18 +203,17 @@ gedit_word_completion_plugin_activate (GeditWindowActivatable *activatable,
 	}
 
 	priv->tab_added_id =
-		g_signal_connect (window, "tab-added",
+		g_signal_connect (priv->window, "tab-added",
 				  G_CALLBACK (tab_added_cb),
 				  activatable);
 	priv->tab_removed_id =
-		g_signal_connect (window, "tab-removed",
+		g_signal_connect (priv->window, "tab-removed",
 				  G_CALLBACK (tab_removed_cb),
 				  activatable);
 }
 
 static void
-gedit_word_completion_plugin_deactivate (GeditWindowActivatable *activatable,
-					 GeditWindow            *window)
+gedit_word_completion_plugin_deactivate (GeditWindowActivatable *activatable)
 {
 	GeditWordCompletionPluginPrivate *priv;
 	GList *views, *l;
@@ -170,15 +222,15 @@ gedit_word_completion_plugin_deactivate (GeditWindowActivatable *activatable,
 
 	priv = GEDIT_WORD_COMPLETION_PLUGIN (activatable)->priv;
 
-	views = gedit_window_get_views (window);
+	views = gedit_window_get_views (priv->window);
 	for (l = views; l != NULL; l = g_list_next (l))
 	{
 		remove_view (GEDIT_WORD_COMPLETION_PLUGIN (activatable),
 			     GTK_SOURCE_VIEW (l->data));
 	}
 
-	g_signal_handler_disconnect (window, priv->tab_added_id);
-	g_signal_handler_disconnect (window, priv->tab_removed_id);
+	g_signal_handler_disconnect (priv->window, priv->tab_added_id);
+	g_signal_handler_disconnect (priv->window, priv->tab_removed_id);
 }
 
 static void
@@ -187,6 +239,10 @@ gedit_word_completion_plugin_class_init (GeditWordCompletionPluginClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
 	object_class->dispose = gedit_word_completion_plugin_dispose;
+	object_class->set_property = gedit_word_completion_plugin_set_property;
+	object_class->get_property = gedit_word_completion_plugin_get_property;
+
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
 
 	g_type_class_add_private (klass, sizeof (GeditWordCompletionPluginPrivate));
 }
