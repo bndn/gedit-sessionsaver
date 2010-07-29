@@ -176,6 +176,9 @@ gedit_word_completion_view_activate (GeditViewActivatable *activatable)
 
 	priv->window = GEDIT_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (priv->view)));
 
+	/* We are disposing the window */
+	g_object_ref (priv->window);
+
 	completion = gtk_source_view_get_completion (GTK_SOURCE_VIEW (priv->view));
 	buf = gtk_text_view_get_buffer (GTK_TEXT_VIEW (priv->view));
 
