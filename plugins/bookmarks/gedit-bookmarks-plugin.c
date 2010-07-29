@@ -111,6 +111,12 @@ struct _GeditBookmarksPluginPrivate
 	guint ui_id;
 };
 
+enum
+{
+	PROP_0,
+	PROP_WINDOW
+};
+
 static void
 gedit_bookmarks_plugin_init (GeditBookmarksPlugin *plugin)
 {
@@ -132,7 +138,53 @@ gedit_bookmarks_plugin_dispose (GObject *object)
 		plugin->priv->action_group = NULL;
 	}
 
+	if (plugin->priv->window != NULL)
+	{
+		g_object_unref (plugin->priv->window);
+		plugin->priv->window = NULL;
+	}
+
 	G_OBJECT_CLASS (gedit_bookmarks_plugin_parent_class)->dispose (object);
+}
+
+static void
+gedit_bookmarks_plugin_set_property (GObject      *object,
+                                     guint         prop_id,
+                                     const GValue *value,
+                                     GParamSpec   *pspec)
+{
+	GeditBookmarksPlugin *plugin = GEDIT_BOOKMARKS_PLUGIN (object);
+
+	switch (prop_id)
+	{
+		case PROP_WINDOW:
+			plugin->priv->window = GEDIT_WINDOW (g_value_dup_object (value));
+			break;
+
+		default:
+			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+			break;
+	}
+}
+
+static void
+gedit_bookmarks_plugin_get_property (GObject    *object,
+                                     guint       prop_id,
+                                     GValue     *value,
+                                     GParamSpec *pspec)
+{
+	GeditBookmarksPlugin *plugin = GEDIT_BOOKMARKS_PLUGIN (object);
+
+	switch (prop_id)
+	{
+		case PROP_WINDOW:
+			g_value_set_object (value, plugin->priv->window);
+			break;
+
+		default:
+			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+			break;
+	}
 }
 
 static void
@@ -657,8 +709,7 @@ uninstall_messages (GeditWindow *window)
 }
 
 static void
-gedit_bookmarks_plugin_activate (GeditWindowActivatable *activatable,
-				 GeditWindow            *window)
+gedit_bookmarks_plugin_activate (GeditWindowActivatable *activatable)
 {
 	GeditBookmarksPluginPrivate *priv;
 	GList *views;
@@ -667,9 +718,8 @@ gedit_bookmarks_plugin_activate (GeditWindowActivatable *activatable,
 	gedit_debug (DEBUG_PLUGINS);
 
 	priv = GEDIT_BOOKMARKS_PLUGIN (activatable)->priv;
-	priv->window = window;
 
-	views = gedit_window_get_views (window);
+	views = gedit_window_get_views (priv->window);
 	for (item = views; item != NULL; item = item->next)
 	{
 		enable_bookmarks (GEDIT_VIEW (item->data),
@@ -679,14 +729,14 @@ gedit_bookmarks_plugin_activate (GeditWindowActivatable *activatable,
 
 	g_list_free (views);
 
-	g_signal_connect (window, "tab-added",
+	g_signal_connect (priv->window, "tab-added",
 			  G_CALLBACK (on_tab_added), activatable);
 
-	g_signal_connect (window, "tab-removed",
+	g_signal_connect (priv->window, "tab-removed",
 			  G_CALLBACK (on_tab_removed), activatable);
 
 	install_menu (GEDIT_BOOKMARKS_PLUGIN (activatable));
-	install_messages (window);
+	install_messages (priv->window);
 }
 
 static void
@@ -738,18 +788,20 @@ save_bookmark_metadata (GeditView *view)
 }
 
 static void
-gedit_bookmarks_plugin_deactivate (GeditWindowActivatable *activatable,
-				   GeditWindow            *window)
+gedit_bookmarks_plugin_deactivate (GeditWindowActivatable *activatable)
 {
+	GeditBookmarksPluginPrivate *priv;
 	GList *views;
 	GList *item;
 
 	gedit_debug (DEBUG_PLUGINS);
 
-	uninstall_menu (GEDIT_BOOKMARKS_PLUGIN (activatable));
-	uninstall_messages (window);
+	priv = GEDIT_BOOKMARKS_PLUGIN (activatable)->priv;
 
-	views = gedit_window_get_views (window);
+	uninstall_menu (GEDIT_BOOKMARKS_PLUGIN (activatable));
+	uninstall_messages (priv->window);
+
+	views = gedit_window_get_views (priv->window);
 
 	for (item = views; item != NULL; item = item->next)
 	{
@@ -758,8 +810,8 @@ gedit_bookmarks_plugin_deactivate (GeditWindowActivatable *activatable,
 
 	g_list_free (views);
 
-	g_signal_handlers_disconnect_by_func (window, on_tab_added, activatable);
-	g_signal_handlers_disconnect_by_func (window, on_tab_removed, activatable);
+	g_signal_handlers_disconnect_by_func (priv->window, on_tab_added, activatable);
+	g_signal_handlers_disconnect_by_func (priv->window, on_tab_removed, activatable);
 }
 
 static void
@@ -768,6 +820,10 @@ gedit_bookmarks_plugin_class_init (GeditBookmarksPluginClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
 	object_class->dispose = gedit_bookmarks_plugin_dispose;
+	object_class->set_property = gedit_bookmarks_plugin_set_property;
+	object_class->get_property = gedit_bookmarks_plugin_get_property;
+
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
 
 	g_type_class_add_private (klass, sizeof (GeditBookmarksPluginPrivate));
 }
