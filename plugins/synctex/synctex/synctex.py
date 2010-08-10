@@ -32,7 +32,7 @@ ui_str = """<ui>
     <menu name="ToolsMenu" action="Tools">
       <placeholder name="ToolsOps_2">
         <separator/>
-        <menuitem name="ExamplePy" action="SynctexForwardSearch"/>
+        <menuitem name="Synctex" action="SynctexForwardSearch"/>
       </placeholder>
     </menu>
   </menubar>
@@ -44,9 +44,6 @@ WINDOW_DATA_KEY = "SynctexPluginWindowData"
 
 
 class SynctexViewHelper:
-
-    mime_types = ['text/x-tex'];
-
     def __init__(self, view, window, tab):
         self._view = view
         self._window = window
@@ -60,8 +57,7 @@ class SynctexViewHelper:
         self.active = False
         self.last_iters = None
         self.uri = self._doc.get_uri()
-        self.mime_type = self._doc.get_mime_type()
-        self.update_uri_mime_type()
+        self.update_uri()
         self._highlight_tag = self._doc.create_tag()
         self._highlight_tag.set_property("background", "#dddddd")
 
@@ -69,7 +65,7 @@ class SynctexViewHelper:
         if event.button == 1 and event.state & gdk.CONTROL_MASK:
             self.sync_view()
     def on_saved_or_loaded(self, doc, data):
-        self.update_uri_mime_type()
+        self.update_uri()
 
     def on_cursor_moved(self, cur):
         self._unhighlight()
@@ -78,14 +74,13 @@ class SynctexViewHelper:
         for h in self._handlers:
             self._doc.disconnect(h)
 
-    def update_uri_mime_type(self):
+    def update_uri(self):
         uri = self._doc.get_uri()
         if uri is not None and uri != self.uri:
             self._window.get_data(WINDOW_DATA_KEY).view_dict[uri] = self
             self.uri = uri
         if self.uri is not None:
             self.file = gio.File(self.uri)
-        self.mime_type = self._doc.get_mime_type()
         self.update_active()
 
     def _highlight(self):
@@ -128,18 +123,18 @@ class SynctexViewHelper:
 
     def update_active(self):
         # Activate the plugin only if the doc is a LaTeX file. 
-        self.active = (self.mime_type in self.mime_types)
+        self.active = (self._doc.get_language() is not None and self._doc.get_language().get_name() == 'LaTeX')
 
         if self.active and self.window_proxy is None:
-            if self.uri.endswith(".tex"):
-                self._active_handlers = [
+            self._active_handlers = [
                         self._doc.connect('cursor-moved', self.on_cursor_moved),
                         self._view.connect('button-release-event',self.on_button_release)]
 
-                self._window.get_data(WINDOW_DATA_KEY)._action_group.set_sensitive(True)
-                uri_output = self.uri[:-3] + "pdf"
-                self.window_proxy = EvinceWindowProxy (uri_output, True)
-                self.window_proxy.set_source_handler (self.source_view_handler)
+            self._window.get_data(WINDOW_DATA_KEY)._action_group.set_sensitive(True)
+            filename = self.file.get_basename().partition('.')[0]
+            uri_output = self.file.get_parent().get_child(filename + ".pdf").get_uri()
+            self.window_proxy = EvinceWindowProxy (uri_output, True)
+            self.window_proxy.set_source_handler (self.source_view_handler)
         elif not self.active and self.window_proxy is not None:
             # destroy the evince window proxy.
             self._doc.disconnect(self._active_handlers[0])
@@ -152,8 +147,9 @@ class SynctexWindowHelper:
     def __init__(self, plugin, window):
         self._window = window
         self._plugin = plugin
-        self._insert_menu()
         self.view_dict = {}
+
+        self._insert_menu()
 
         for view in window.get_views():
             self.add_helper(view)
@@ -163,6 +159,7 @@ class SynctexWindowHelper:
             window.connect("tab-removed", lambda w, t: self.remove_helper(t.get_view())),
             window.connect("active-tab-changed", self.on_active_tab_changed)
         ]
+
     def on_active_tab_changed(self, window,  tab):
         view_helper = tab.get_view().get_data(VIEW_DATA_KEY)
         if view_helper is None:
@@ -192,15 +189,24 @@ class SynctexWindowHelper:
     def deactivate(self):
         for h in self.handlers:
             self._window.disconnect(h)
+        for view in self._window.get_views():
+            self.remove_helper(view)
+        self._remove_menu()
+
+    def _remove_menu(self):
+        manager = self._window.get_ui_manager()
+        manager.remove_ui(self._ui_id)
+        manager.remove_action_group(self._action_group)
+        manager.ensure_update()
 
     def _insert_menu(self):
         # Get the GtkUIManager
         manager = self._window.get_ui_manager()
 
         # Create a new action group
-        self._action_group = gtk.ActionGroup("ExamplePyPluginActions")
+        self._action_group = gtk.ActionGroup("SynctexPluginActions")
         self._action_group.add_actions([("SynctexForwardSearch", None, _("Forward Search"),
-                                         None, _("Forward Search"),
+                                         "<Ctrl><Alt>F", _("Forward Search"),
                                          self.forward_search_cb)])
 
         # Insert the action group

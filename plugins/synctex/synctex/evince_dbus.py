@@ -70,9 +70,7 @@ class EvinceWindowProxy:
 
 	def SyncView(self, input_file, data):
 		if self.status == CLOSED:
-			print "Evince is closed"
 			if self.spawn:
-				print "Spawning evince"
 				self._get_dbus_name(True)
 		# if self.status is still closed, it means there is a
 		# problem running evince.
