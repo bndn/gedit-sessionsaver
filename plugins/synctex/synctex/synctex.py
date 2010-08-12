@@ -78,7 +78,6 @@ class SynctexViewHelper:
         self.active = False
         self.last_iters = None
         self.gfile = None
-        self.update_location()
 
     def on_notify_style_scheme(self, doc, param_object):
         apply_style (doc.get_style_scheme().get_style('search-match'), self._highlight_tag)
@@ -89,6 +88,8 @@ class SynctexViewHelper:
     def on_saved_or_loaded(self, doc, data):
         self.update_location()
 
+    def on_key_press(self, a, b):
+        self._unhighlight()
     def on_cursor_moved(self, cur):
         self._unhighlight()
 
@@ -99,7 +100,7 @@ class SynctexViewHelper:
     def update_location(self):
         gfile = self._doc.get_location()
         if gfile is not None and (self.gfile is None or 
-				  gfile.get_uri() != self.gfile.get_uri()):
+            gfile.get_uri() != self.gfile.get_uri()):
             self._window.get_data(WINDOW_DATA_KEY).view_dict[gfile.get_uri()] = self
             self.gfile = gfile
         self.update_active()
@@ -129,12 +130,20 @@ class SynctexViewHelper:
         else:
             uri_input = self.gfile.get_parent().get_child(input_file).get_uri()
             view_dict = self._window.get_data(WINDOW_DATA_KEY).view_dict
-            if uri_input in view_dict:
-                view_dict[uri_input].goto_line(source_link[0] - 1)
+            if uri_input not in view_dict:
+                tab = self._window.create_tab_from_uri(uri_input,
+                                                 None, source_link[0] - 1, False, True)
+                helper =  tab.get_view().get_data(VIEW_DATA_KEY)
+                helper._goto_handler = tab.get_document().connect_object("loaded", 
+                                                SynctexViewHelper.goto_line_after_load, 
+                                                helper, source_link[0] - 1) 
             else:
-                self._window.create_tab_from_uri(uri_input,
-                                                 None, source_link[0]-1, False, True)
+                view_dict[uri_input].goto_line(source_link[0] - 1)
         self._window.present()
+
+    def goto_line_after_load(self, a, line):
+        self.goto_line(line)
+        self._doc.disconnect(self._goto_handler)
 
     def sync_view(self):
         if self.active:
@@ -151,6 +160,7 @@ class SynctexViewHelper:
         if self.active and self.window_proxy is None:
             self._active_handlers = [
                         self._doc.connect('cursor-moved', self.on_cursor_moved),
+                        self._view.connect('key-press-event', self.on_key_press),
                         self._view.connect('button-release-event', self.on_button_release),
                         self._doc.connect('notify::style-scheme', self.on_notify_style_scheme)]
 
@@ -159,9 +169,10 @@ class SynctexViewHelper:
 
             self._window.get_data(WINDOW_DATA_KEY)._action_group.set_sensitive(True)
             filename = self.gfile.get_basename().partition('.')[0]
-            uri_output = self.gfile.get_parent().get_child(filename + ".pdf").get_uri()
-            self.window_proxy = EvinceWindowProxy (uri_output, True)
-            self.window_proxy.set_source_handler (self.source_view_handler)
+            file_output = self.gfile.get_parent().get_child(filename + ".pdf")
+            if file_output.query_exists():
+                self.window_proxy = EvinceWindowProxy (file_output.get_uri(), True)
+                self.window_proxy.set_source_handler (self.source_view_handler)
 
         elif not self.active and self.window_proxy is not None:
             # destroy the evince window proxy.
