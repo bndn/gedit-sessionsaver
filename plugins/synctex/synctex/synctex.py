@@ -42,6 +42,26 @@ ui_str = """<ui>
 VIEW_DATA_KEY = "SynctexPluginViewData"
 WINDOW_DATA_KEY = "SynctexPluginWindowData"
 
+def apply_style (style, tag):
+    import pango
+    def apply_style_prop(tag, style, prop):
+        if style.get_property(prop + "-set"):
+            tag.set_property(prop, style.get_property(prop))
+        else:
+            tag.set_property(prop, None)
+    def apply_style_prop_bool(tag, style, prop, whentrue, whenfalse):
+        if style.get_property(prop + "-set"):
+            prop_value = whentrue if style.get_property(prop) else whenfalse
+            tag.set_property(prop, prop_value)
+
+    apply_style_prop(tag, style, "foreground")
+    apply_style_prop(tag, style, "background")
+
+    apply_style_prop_bool(tag, style, "bold", pango.WEIGHT_BOLD, pango.WEIGHT_NORMAL)
+    apply_style_prop_bool(tag, style, "italic", pango.STYLE_ITALIC, pango.STYLE_NORMAL)
+    apply_style_prop_bool(tag, style, "underline", pango.UNDERLINE_SINGLE,
+                                pango.UNDERLINE_NONE)
+    apply_style_prop(tag, style, "strikethrough")
 
 class SynctexViewHelper:
     def __init__(self, view, window, tab):
@@ -59,7 +79,10 @@ class SynctexViewHelper:
         self.uri = self._doc.get_uri()
         self.update_uri()
         self._highlight_tag = self._doc.create_tag()
-        self._highlight_tag.set_property("background", "#dddddd")
+
+
+    def on_notify_style_scheme(self, doc, param_object):
+        apply_style (doc.get_style_scheme().get_style('search-match'), self._highlight_tag)
 
     def on_button_release(self, view, event):
         if event.button == 1 and event.state & gdk.CONTROL_MASK:
@@ -128,7 +151,11 @@ class SynctexViewHelper:
         if self.active and self.window_proxy is None:
             self._active_handlers = [
                         self._doc.connect('cursor-moved', self.on_cursor_moved),
-                        self._view.connect('button-release-event',self.on_button_release)]
+                        self._view.connect('button-release-event', self.on_button_release),
+                        self._doc.connect('notify::style-scheme', self.on_notify_style_scheme)]
+
+            style = self._doc.get_style_scheme().get_style('search-match')
+            apply_style(style, self._highlight_tag)
 
             self._window.get_data(WINDOW_DATA_KEY)._action_group.set_sensitive(True)
             filename = self.file.get_basename().partition('.')[0]
