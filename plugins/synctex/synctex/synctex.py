@@ -74,12 +74,11 @@ class SynctexViewHelper:
             self._doc.connect('saved', self.on_saved_or_loaded),
             self._doc.connect('loaded', self.on_saved_or_loaded)
         ]
+        self._highlight_tag = self._doc.create_tag()
         self.active = False
         self.last_iters = None
-        self.uri = self._doc.get_uri()
-        self.update_uri()
-        self._highlight_tag = self._doc.create_tag()
-
+        self.gfile = None
+        self.update_location()
 
     def on_notify_style_scheme(self, doc, param_object):
         apply_style (doc.get_style_scheme().get_style('search-match'), self._highlight_tag)
@@ -88,7 +87,7 @@ class SynctexViewHelper:
         if event.button == 1 and event.state & gdk.CONTROL_MASK:
             self.sync_view()
     def on_saved_or_loaded(self, doc, data):
-        self.update_uri()
+        self.update_location()
 
     def on_cursor_moved(self, cur):
         self._unhighlight()
@@ -97,13 +96,12 @@ class SynctexViewHelper:
         for h in self._handlers:
             self._doc.disconnect(h)
 
-    def update_uri(self):
-        uri = self._doc.get_uri()
-        if uri is not None and uri != self.uri:
-            self._window.get_data(WINDOW_DATA_KEY).view_dict[uri] = self
-            self.uri = uri
-        if self.uri is not None:
-            self.file = gio.File(self.uri)
+    def update_location(self):
+        gfile = self._doc.get_location()
+        if gfile is not None and (self.gfile is None or 
+				  gfile.get_uri() != self.gfile.get_uri()):
+            self._window.get_data(WINDOW_DATA_KEY).view_dict[gfile.get_uri()] = self
+            self.gfile = gfile
         self.update_active()
 
     def _highlight(self):
@@ -115,7 +113,8 @@ class SynctexViewHelper:
 
     def _unhighlight(self):
         if self.last_iters is not None:
-            self._doc.remove_tag(self._highlight_tag, self.last_iters[0],self.last_iters[1])
+            self._doc.remove_tag(self._highlight_tag,
+                                 self.last_iters[0], self.last_iters[1])
         self.last_iters = None
 
     def goto_line (self, line):
@@ -125,10 +124,10 @@ class SynctexViewHelper:
         self._highlight()
 
     def source_view_handler(self, input_file, source_link):
-        if self.file.get_basename() == input_file:
+        if self.gfile.get_basename() == input_file:
             self.goto_line(source_link[0] - 1)
         else:
-            uri_input = self.file.get_parent().get_child(input_file).get_uri()
+            uri_input = self.gfile.get_parent().get_child(input_file).get_uri()
             view_dict = self._window.get_data(WINDOW_DATA_KEY).view_dict
             if uri_input in view_dict:
                 view_dict[uri_input].goto_line(source_link[0] - 1)
@@ -142,11 +141,12 @@ class SynctexViewHelper:
             cursor_iter =  self._doc.get_iter_at_mark(self._doc.get_insert())
             line = cursor_iter.get_line() + 1
             col = cursor_iter.get_line_offset()
-            self.window_proxy.SyncView(self.file.get_path(), (line, col))
+            self.window_proxy.SyncView(self.gfile.get_path(), (line, col))
 
     def update_active(self):
-        # Activate the plugin only if the doc is a LaTeX file. 
-        self.active = (self._doc.get_language() is not None and self._doc.get_language().get_name() == 'LaTeX')
+        # Activate the plugin only if the doc is a LaTeX file.
+        lang = self._doc.get_language() 
+        self.active = (lang is not None and lang.get_name() == 'LaTeX')
 
         if self.active and self.window_proxy is None:
             self._active_handlers = [
@@ -158,10 +158,11 @@ class SynctexViewHelper:
             apply_style(style, self._highlight_tag)
 
             self._window.get_data(WINDOW_DATA_KEY)._action_group.set_sensitive(True)
-            filename = self.file.get_basename().partition('.')[0]
-            uri_output = self.file.get_parent().get_child(filename + ".pdf").get_uri()
+            filename = self.gfile.get_basename().partition('.')[0]
+            uri_output = self.gfile.get_parent().get_child(filename + ".pdf").get_uri()
             self.window_proxy = EvinceWindowProxy (uri_output, True)
             self.window_proxy.set_source_handler (self.source_view_handler)
+
         elif not self.active and self.window_proxy is not None:
             # destroy the evince window proxy.
             self._doc.disconnect(self._active_handlers[0])
@@ -198,14 +199,14 @@ class SynctexWindowHelper:
 
     def add_helper(self, view, window, tab):
         helper = SynctexViewHelper(view, window, tab)
-        if helper.uri is not None:
-            self.view_dict[helper.uri] = helper
+        if helper.gfile is not None:
+            self.view_dict[helper.gfile.get_uri()] = helper
         view.set_data (VIEW_DATA_KEY, helper)
 
     def remove_helper(self, view):
         helper = view.get_data(VIEW_DATA_KEY)
-        if helper.uri is not None:
-            del self.view_dict[helper.uri]
+        if helper.gfile is not None:
+            del self.view_dict[helper.gfile.get_uri()]
         helper.deactivate()
         view.set_data(VIEW_DATA_KEY, None)
 
@@ -232,9 +233,9 @@ class SynctexWindowHelper:
 
         # Create a new action group
         self._action_group = gtk.ActionGroup("SynctexPluginActions")
-        self._action_group.add_actions([("SynctexForwardSearch", None, _("Forward Search"),
-                                         "<Ctrl><Alt>F", _("Forward Search"),
-                                         self.forward_search_cb)])
+        self._action_group.add_actions([("SynctexForwardSearch", None,
+                                        _("Forward Search"), "<Ctrl><Alt>F",
+                                        _("Forward Search"), self.forward_search_cb)])
 
         # Insert the action group
         manager.insert_action_group(self._action_group, -1)
