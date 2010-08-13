@@ -63,6 +63,13 @@ def apply_style (style, tag):
                                 pango.UNDERLINE_NONE)
     apply_style_prop(tag, style, "strikethrough")
 
+def parse_modeline(line):
+    index = line.find("mainfile:")
+    if line.startswith("%") and index > 0:
+        # Parse the modeline.
+        return line[index + len("mainfile:"):].strip()
+    return None
+
 class SynctexViewHelper:
     def __init__(self, view, window, tab):
         self._view = view
@@ -85,8 +92,20 @@ class SynctexViewHelper:
     def on_button_release(self, view, event):
         if event.button == 1 and event.state & gdk.CONTROL_MASK:
             self.sync_view()
+
     def on_saved_or_loaded(self, doc, data):
         self.update_location()
+
+    def get_output_file(self):
+        file_output = None
+        for i in range(min(3,self._doc.get_line_count())):
+            start = self._doc.get_iter_at_line(i)
+            end = start.copy()
+            end.forward_to_line_end()
+            file_output = parse_modeline(self._doc.get_text(start, end, False))
+            if file_output is not None:
+                break
+        return file_output
 
     def on_key_press(self, a, b):
         self._unhighlight()
@@ -103,6 +122,20 @@ class SynctexViewHelper:
             gfile.get_uri() != self.gfile.get_uri()):
             self._window.get_data(WINDOW_DATA_KEY).view_dict[gfile.get_uri()] = self
             self.gfile = gfile
+
+        modeline_output_file = self.get_output_file()
+
+        if modeline_output_file is not None:
+            filename = modeline_output_file
+        else:
+            filename = self.gfile.get_basename()
+        out_gfile = self.gfile.get_parent().get_child(filename.partition('.')[0] + ".pdf")
+
+        if out_gfile.query_exists():
+            self.out_gfile = out_gfile
+        else:
+            self.out_gfile = None
+
         self.update_active()
 
     def _highlight(self):
@@ -155,7 +188,8 @@ class SynctexViewHelper:
     def update_active(self):
         # Activate the plugin only if the doc is a LaTeX file.
         lang = self._doc.get_language() 
-        self.active = (lang is not None and lang.get_name() == 'LaTeX')
+        self.active = (lang is not None and lang.get_name() == 'LaTeX' and
+                        self.out_gfile is not None)
 
         if self.active and self.window_proxy is None:
             self._active_handlers = [
@@ -166,13 +200,9 @@ class SynctexViewHelper:
 
             style = self._doc.get_style_scheme().get_style('search-match')
             apply_style(style, self._highlight_tag)
-
             self._window.get_data(WINDOW_DATA_KEY)._action_group.set_sensitive(True)
-            filename = self.gfile.get_basename().partition('.')[0]
-            file_output = self.gfile.get_parent().get_child(filename + ".pdf")
-            if file_output.query_exists():
-                self.window_proxy = EvinceWindowProxy (file_output.get_uri(), True)
-                self.window_proxy.set_source_handler (self.source_view_handler)
+            self.window_proxy = EvinceWindowProxy (self.out_gfile.get_uri(), True)
+            self.window_proxy.set_source_handler (self.source_view_handler)
 
         elif not self.active and self.window_proxy is not None:
             # destroy the evince window proxy.
