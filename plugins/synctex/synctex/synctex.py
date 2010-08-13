@@ -173,7 +173,7 @@ class SynctexViewHelper:
         if self.gfile.get_basename() == input_file:
             self.goto_line(source_link[0] - 1)
         else:
-            uri_input = self.gfile.get_parent().get_child(input_file).get_uri()
+            uri_input = self.out_gfile.get_parent().get_child(input_file).get_uri()
             view_dict = self._plugin.view_dict
             if uri_input not in view_dict:
                 tab = self._window.create_tab_from_uri(uri_input,
