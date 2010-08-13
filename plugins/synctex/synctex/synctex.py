@@ -103,7 +103,8 @@ class SynctexViewHelper:
 
     def get_output_file(self):
         file_output = None
-        for i in range(min(3,self._doc.get_line_count())):
+        line_count = self._doc.get_line_count()
+        for i in range(min(3,line_count)) + range(max(0,line_count - 3), line_count):
             start = self._doc.get_iter_at_line(i)
             end = start.copy()
             end.forward_to_line_end()
@@ -122,6 +123,8 @@ class SynctexViewHelper:
             self._doc.disconnect(h)
 
     def update_location(self):
+        import os
+
         gfile = self._doc.get_location()
         if gfile is not None and (self.gfile is None or 
             gfile.get_uri() != self.gfile.get_uri()):
@@ -134,8 +137,10 @@ class SynctexViewHelper:
             filename = modeline_output_file
         else:
             filename = self.gfile.get_basename()
-        out_gfile = self.gfile.get_parent().get_child(filename.partition('.')[0] + ".pdf")
 
+        out_path = self.gfile.get_parent().get_child(filename).get_path()
+        out_path = os.path.splitext(out_path)
+        out_gfile = gio.File(out_path[0] + ".pdf")
         if out_gfile.query_exists():
             self.out_gfile = out_gfile
         else:
