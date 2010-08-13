@@ -3,8 +3,8 @@ dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.59)
  
 m4_define(gedit_plugins_major_version,  2)
-m4_define(gedit_plugins_minor_version, 31)
-m4_define(gedit_plugins_micro_version,  4)
+m4_define(gedit_plugins_minor_version, 90)
+m4_define(gedit_plugins_micro_version,  0)
 m4_define(gedit_plugins_version, gedit_plugins_major_version.gedit_plugins_minor_version.gedit_plugins_micro_version)
 
 AC_INIT(gedit-plugins, gedit_plugins_version, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
