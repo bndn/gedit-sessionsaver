@@ -195,11 +195,13 @@ class SynctexViewHelper:
                         self.out_gfile is not None)
 
         if self.active and self.window_proxy is None:
-            self._active_handlers = [
+            self._doc_active_handlers = [
                         self._doc.connect('cursor-moved', self.on_cursor_moved),
-                        self._view.connect('key-press-event', self.on_key_press),
-                        self._view.connect('button-release-event', self.on_button_release),
                         self._doc.connect('notify::style-scheme', self.on_notify_style_scheme)]
+            self._view_active_handlers = [
+                        self._view.connect('key-press-event', self.on_key_press),
+                        self._view.connect('button-release-event', self.on_button_release)]
+
 
             style = self._doc.get_style_scheme().get_style('search-match')
             apply_style(style, self._highlight_tag)
@@ -209,8 +211,11 @@ class SynctexViewHelper:
 
         elif not self.active and self.window_proxy is not None:
             # destroy the evince window proxy.
-            self._doc.disconnect(self._active_handlers[0])
-            self._view.disconnect(self._active_handlers[1])
+            for handler in self._doc_active_handlers:
+                self._doc.disconnect(handler)
+            for handler in self._view_active_handlers:
+                self._view.disconnect(handler)
+
             self._window.get_data(WINDOW_DATA_KEY)._action_group.get_sensitive(False)
             self.window_proxy = None
 
