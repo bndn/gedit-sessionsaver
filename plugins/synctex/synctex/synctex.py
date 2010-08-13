@@ -23,6 +23,7 @@ import gtk, gedit, gio , gtk.gdk as gdk
 from gettext import gettext as _
 from evince_dbus import EvinceWindowProxy
 import dbus.mainloop.glib
+import logging
 
 dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
 
@@ -41,6 +42,8 @@ ui_str = """<ui>
 
 VIEW_DATA_KEY = "SynctexPluginViewData"
 WINDOW_DATA_KEY = "SynctexPluginWindowData"
+
+_logger = logging.getLogger("SynctexPlugin")
 
 def apply_style (style, tag):
     import pango
@@ -201,7 +204,7 @@ class SynctexViewHelper:
             style = self._doc.get_style_scheme().get_style('search-match')
             apply_style(style, self._highlight_tag)
             self._window.get_data(WINDOW_DATA_KEY)._action_group.set_sensitive(True)
-            self.window_proxy = EvinceWindowProxy (self.out_gfile.get_uri(), True)
+            self.window_proxy = EvinceWindowProxy (self.out_gfile.get_uri(), True, _logger)
             self.window_proxy.set_source_handler (self.source_view_handler)
 
         elif not self.active and self.window_proxy is not None:
