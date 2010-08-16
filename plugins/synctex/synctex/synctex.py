@@ -90,6 +90,7 @@ class SynctexViewHelper:
         self.active = False
         self.last_iters = None
         self.gfile = None
+        self.update_location()
 
     def on_notify_style_scheme(self, doc, param_object):
         apply_style (doc.get_style_scheme().get_style('search-match'), self._highlight_tag)
@@ -119,15 +120,18 @@ class SynctexViewHelper:
         self._unhighlight()
 
     def deactivate(self):
+        self._unhighlight()
         for h in self._handlers:
             self._doc.disconnect(h)
+        del self._highlight_tag
 
     def update_location(self):
         import os
 
         gfile = self._doc.get_location()
-        if gfile is not None and (self.gfile is None or 
-            gfile.get_uri() != self.gfile.get_uri()):
+        if gfile is None:
+            return
+        if self.gfile is None or gfile.get_uri() != self.gfile.get_uri():
             self._plugin.view_dict[gfile.get_uri()] = self
             self.gfile = gfile
 
@@ -168,23 +172,6 @@ class SynctexViewHelper:
         self._highlight()
         self._window.present()
 
-    def source_view_handler(self, input_file, source_link):
-        window  = self._window
-        if self.gfile.get_basename() == input_file:
-            self.goto_line(source_link[0] - 1)
-        else:
-            uri_input = self.out_gfile.get_parent().get_child(input_file).get_uri()
-            view_dict = self._plugin.view_dict
-            if uri_input not in view_dict:
-                tab = self._window.create_tab_from_uri(uri_input,
-                                                 None, source_link[0] - 1, False, True)
-                helper =  tab.get_view().get_data(VIEW_DATA_KEY)
-                helper._goto_handler = tab.get_document().connect_object("loaded", 
-                                                SynctexViewHelper.goto_line_after_load, 
-                                                helper, source_link[0] - 1) 
-            else:
-                view_dict[uri_input].goto_line(source_link[0] - 1)
-
     def goto_line_after_load(self, a, line):
         self.goto_line(line)
         self._doc.disconnect(self._goto_handler)
@@ -214,17 +201,17 @@ class SynctexViewHelper:
             style = self._doc.get_style_scheme().get_style('search-match')
             apply_style(style, self._highlight_tag)
             self._window.get_data(WINDOW_DATA_KEY)._action_group.set_sensitive(True)
-            self.window_proxy = EvinceWindowProxy (self.out_gfile.get_uri(), True, _logger)
-            self.window_proxy.set_source_handler (self.source_view_handler)
+            self.window_proxy = self._plugin.ref_evince_proxy(self.out_gfile, self._window)
 
         elif not self.active and self.window_proxy is not None:
-            # destroy the evince window proxy.
+            #destroy the evince window proxy.
             for handler in self._doc_active_handlers:
                 self._doc.disconnect(handler)
             for handler in self._view_active_handlers:
                 self._view.disconnect(handler)
 
             self._window.get_data(WINDOW_DATA_KEY)._action_group.get_sensitive(False)
+            self._plugin.unref_evince_proxy(self.out_gfile)
             self.window_proxy = None
 
 
@@ -254,8 +241,9 @@ class SynctexWindowHelper:
 
     def add_helper(self, view, window, tab):
         helper = SynctexViewHelper(view, window, tab, self._plugin)
-        if helper.gfile is not None:
-            self._plugin.view_dict[helper.gfile.get_uri()] = helper
+        uri = view.get_buffer().get_uri()
+        if uri is not None:
+            self._plugin.view_dict[uri] = helper
         view.set_data (VIEW_DATA_KEY, helper)
 
     def remove_helper(self, view):
@@ -306,6 +294,7 @@ class SynctexPlugin(gedit.Plugin):
     def __init__(self):
         gedit.Plugin.__init__(self)
         self.view_dict = {}
+        self._proxy_dict = {}
 
     def activate(self, window):
         helper = SynctexWindowHelper(self, window)
@@ -315,6 +304,39 @@ class SynctexPlugin(gedit.Plugin):
         window.get_data(WINDOW_DATA_KEY).deactivate()
         window.set_data(WINDOW_DATA_KEY, None)
 
+    def source_view_handler(self, out_gfile, input_file, source_link):
+        uri_input = out_gfile.get_parent().get_child(input_file).get_uri()
+        
+        if uri_input not in self.view_dict:
+            window = self._proxy_dict[out_gfile.get_uri()][2]
+            tab = window.create_tab_from_uri(uri_input,
+                                                 None, source_link[0] - 1, False, True)
+            helper =  tab.get_view().get_data(VIEW_DATA_KEY)
+            helper._goto_handler = tab.get_document().connect_object("loaded", 
+                                                SynctexViewHelper.goto_line_after_load, 
+                                                helper, source_link[0] - 1) 
+        else:
+            self.view_dict[uri_input].goto_line(source_link[0] - 1)
+
+    def ref_evince_proxy(self, gfile, window):
+        uri = gfile.get_uri()
+        proxy = None
+        if uri not in self._proxy_dict:
+            proxy = EvinceWindowProxy (uri, True, _logger)
+            self._proxy_dict[uri] = [1, proxy, window]
+            proxy.set_source_handler (lambda i, s: self.source_view_handler(gio.File(uri), i, s))
+        else:
+            self._proxy_dict[uri][0]+=1
+            proxy = self._proxy_dict[uri][1]
+        return proxy
+
+    def unref_evince_proxy(self, gfile):
+        uri = gfile.get_uri()
+        if uri in self._proxy_dict:
+            self._proxy_dict[uri][0]-=1
+            if self._proxy_dict[uri][0] == 0:
+                del self._proxy_dict[uri]
+     
     def update_ui(self, window):
         pass
 # ex:ts=4:et:
