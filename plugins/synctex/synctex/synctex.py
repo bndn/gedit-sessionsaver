@@ -74,16 +74,18 @@ def parse_modeline(line):
     return None
 
 class SynctexViewHelper:
-    def __init__(self, view, window, tab):
+    def __init__(self, view, window, tab, plugin):
         self._view = view
         self._window = window
         self._tab = tab
+        self._plugin = plugin
         self._doc = view.get_buffer()
         self.window_proxy = None
         self._handlers = [
             self._doc.connect('saved', self.on_saved_or_loaded),
             self._doc.connect('loaded', self.on_saved_or_loaded)
         ]
+
         self._highlight_tag = self._doc.create_tag()
         self.active = False
         self.last_iters = None
@@ -123,7 +125,7 @@ class SynctexViewHelper:
         gfile = self._doc.get_location()
         if gfile is not None and (self.gfile is None or 
             gfile.get_uri() != self.gfile.get_uri()):
-            self._window.get_data(WINDOW_DATA_KEY).view_dict[gfile.get_uri()] = self
+            self._plugin.view_dict[gfile.get_uri()] = self
             self.gfile = gfile
 
         modeline_output_file = self.get_output_file()
@@ -159,13 +161,15 @@ class SynctexViewHelper:
         self._view.scroll_to_cursor()
         self._window.set_active_tab(self._tab)
         self._highlight()
+        self._window.present()
 
     def source_view_handler(self, input_file, source_link):
+        window  = self._window
         if self.gfile.get_basename() == input_file:
             self.goto_line(source_link[0] - 1)
         else:
             uri_input = self.gfile.get_parent().get_child(input_file).get_uri()
-            view_dict = self._window.get_data(WINDOW_DATA_KEY).view_dict
+            view_dict = self._plugin.view_dict
             if uri_input not in view_dict:
                 tab = self._window.create_tab_from_uri(uri_input,
                                                  None, source_link[0] - 1, False, True)
@@ -175,7 +179,6 @@ class SynctexViewHelper:
                                                 helper, source_link[0] - 1) 
             else:
                 view_dict[uri_input].goto_line(source_link[0] - 1)
-        self._window.present()
 
     def goto_line_after_load(self, a, line):
         self.goto_line(line)
@@ -224,7 +227,6 @@ class SynctexWindowHelper:
     def __init__(self, plugin, window):
         self._window = window
         self._plugin = plugin
-        self.view_dict = {}
 
         self._insert_menu()
 
@@ -236,7 +238,6 @@ class SynctexWindowHelper:
             window.connect("tab-removed", lambda w, t: self.remove_helper(t.get_view())),
             window.connect("active-tab-changed", self.on_active_tab_changed)
         ]
-
     def on_active_tab_changed(self, window,  tab):
         view_helper = tab.get_view().get_data(VIEW_DATA_KEY)
         if view_helper is None:
@@ -247,15 +248,15 @@ class SynctexWindowHelper:
 
 
     def add_helper(self, view, window, tab):
-        helper = SynctexViewHelper(view, window, tab)
+        helper = SynctexViewHelper(view, window, tab, self._plugin)
         if helper.gfile is not None:
-            self.view_dict[helper.gfile.get_uri()] = helper
+            self._plugin.view_dict[helper.gfile.get_uri()] = helper
         view.set_data (VIEW_DATA_KEY, helper)
 
     def remove_helper(self, view):
         helper = view.get_data(VIEW_DATA_KEY)
         if helper.gfile is not None:
-            del self.view_dict[helper.gfile.get_uri()]
+            del self._plugin.view_dict[helper.gfile.get_uri()]
         helper.deactivate()
         view.set_data(VIEW_DATA_KEY, None)
 
@@ -299,6 +300,7 @@ class SynctexPlugin(gedit.Plugin):
 
     def __init__(self):
         gedit.Plugin.__init__(self)
+        self.view_dict = {}
 
     def activate(self, window):
         helper = SynctexWindowHelper(self, window)
