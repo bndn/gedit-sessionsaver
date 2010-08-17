@@ -186,7 +186,7 @@ class SynctexViewHelper:
     def update_active(self):
         # Activate the plugin only if the doc is a LaTeX file.
         lang = self._doc.get_language() 
-        self.active = (lang is not None and lang.get_name() == 'LaTeX' and
+        self.active = (lang is not None and lang.get_id() == 'latex' and
                         self.out_gfile is not None)
 
         if self.active and self.window_proxy is None:
