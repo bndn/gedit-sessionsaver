@@ -2,6 +2,7 @@
 # Copyright (C) 2002,2003, 2006, 2009 the author(s) of gedit-plugins.
 # Copyright (C) 2003, 2004, 2005 Miloslav Trmac <mitr@volny.cz>.
 # This file is distributed under the same license as the gedit-plugins package.
+#
 # Michal Bukovjan <michal.bukovjan@openone.cz>, 2002.
 # Michal Bukovjan <bukm@centrum.cz>, 2003.
 # Miloslav Trmac <mitr@volny.cz>, 2003, 2004, 2005.
@@ -13,10 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 17:25+0200\n"
-"PO-Revision-Date: 2010-06-01 21:23+0200\n"
+"POT-Creation-Date: 2010-08-25 21:57+0200\n"
+"PO-Revision-Date: 2010-07-11 23:05+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,27 +34,27 @@ msgstr "Záložky"
 msgid "Easy document navigation with bookmarks"
 msgstr "Jednoduché procházení dokumentem pomocí záložek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:145
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
 msgid "Toggle Bookmark"
 msgstr "Přepnout záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:146
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
 msgid "Toggle bookmark status of the current line"
 msgstr "Přepnout stav záložky na aktuálním řádku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:148
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:149
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
 msgid "Goto the next bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:151
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
 msgid "Goto Previous Bookmark"
 msgstr "Přejít na předcházející záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:152
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
 msgid "Goto the previous bookmark"
 msgstr "Přejít na předcházející záložku"
 
@@ -65,7 +67,7 @@ msgid "Bracket Completion"
 msgstr "Doplňování závorek"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:285
+#: ../plugins/charmap/gedit-charmap-plugin.c:337
 msgid "Character Map"
 msgstr "Mapa znaků"
 
@@ -133,7 +135,7 @@ msgstr "Commander"
 
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Vykreslovat mezery"
 
@@ -169,26 +171,25 @@ msgstr "Vykreslovat tabulátory"
 msgid "Draw trailing spaces"
 msgstr "Vykreslovat koncové mezery"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:128
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
 msgid "Show _White Space"
 msgstr "Zobrazovat _bílé znaky"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:129
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
 msgid "Show spaces and tabs"
 msgstr "Zobrazovat mezery a tabulátory"
 
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
 msgstr "Zapnuto"
 
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "If TRUE drawing will be enabled."
 msgstr "Pokud je ZAPNUTO, bude se používat vykreslování bílých znaků."
 
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
-#, fuzzy
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
 msgid "The type of spaces to be drawn."
-msgstr "Pokud je ZAPNUTO, budou se vykreslovat mezery."
+msgstr "Typ mezer, které se mají vykreslovat."
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -368,7 +369,7 @@ msgstr "Terminál"
 msgid "C_hange Directory"
 msgstr "Změnit _adresář"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:58
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
 msgid "Document Words"
 msgstr "Slova dokumentu"
 
