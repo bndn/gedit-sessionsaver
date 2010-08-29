@@ -29,7 +29,7 @@
 #include <gedit/gedit-window.h>
 #include <gedit/gedit-window-activatable.h>
 #include <gedit/gedit-utils.h>
-#include <libpeasui/peas-ui-configurable.h>
+#include <libpeas-gtk/peas-gtk-configurable.h>
 
 #define DRAWSPACES_SETTINGS_BASE   "org.gnome.gedit.plugins.drawspaces"
 #define SETTINGS_KEY_ENABLE        "enable"
@@ -43,7 +43,7 @@
 				GeditDrawspacesPluginPrivate))
 
 static void gedit_window_activatable_iface_init (GeditWindowActivatableInterface *iface);
-static void peas_ui_configurable_iface_init (PeasUIConfigurableInterface *iface);
+static void peas_gtk_configurable_iface_init (PeasGtkConfigurableInterface *iface);
 
 G_DEFINE_DYNAMIC_TYPE_EXTENDED (GeditDrawspacesPlugin,
 				gedit_drawspaces_plugin,
@@ -51,8 +51,8 @@ G_DEFINE_DYNAMIC_TYPE_EXTENDED (GeditDrawspacesPlugin,
 				0,
 				G_IMPLEMENT_INTERFACE_DYNAMIC (GEDIT_TYPE_WINDOW_ACTIVATABLE,
 							       gedit_window_activatable_iface_init)
-				G_IMPLEMENT_INTERFACE_DYNAMIC (PEAS_UI_TYPE_CONFIGURABLE,
-							       peas_ui_configurable_iface_init))
+				G_IMPLEMENT_INTERFACE_DYNAMIC (PEAS_GTK_TYPE_CONFIGURABLE,
+							       peas_gtk_configurable_iface_init))
 
 struct _GeditDrawspacesPluginPrivate
 {
@@ -580,7 +580,7 @@ get_configuration_widget (GeditDrawspacesPlugin *plugin)
 }
 
 static GtkWidget *
-gedit_drawspaces_plugin_create_configure_widget (PeasUIConfigurable *configurable)
+gedit_drawspaces_plugin_create_configure_widget (PeasGtkConfigurable *configurable)
 {
 	DrawspacesConfigureWidget *widget;
 
@@ -609,7 +609,7 @@ gedit_drawspaces_plugin_class_finalize (GeditDrawspacesPluginClass *klass)
 }
 
 static void
-peas_ui_configurable_iface_init (PeasUIConfigurableInterface *iface)
+peas_gtk_configurable_iface_init (PeasGtkConfigurableInterface *iface)
 {
 	iface->create_configure_widget = gedit_drawspaces_plugin_create_configure_widget;
 }
@@ -630,7 +630,7 @@ peas_register_types (PeasObjectModule *module)
 						    GEDIT_TYPE_WINDOW_ACTIVATABLE,
 						    GEDIT_TYPE_DRAWSPACES_PLUGIN);
 	peas_object_module_register_extension_type (module,
-						    PEAS_UI_TYPE_CONFIGURABLE,
+						    PEAS_GTK_TYPE_CONFIGURABLE,
 						    GEDIT_TYPE_DRAWSPACES_PLUGIN);
 }
 
