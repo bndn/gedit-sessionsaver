@@ -11,6 +11,7 @@ plugin_PYTHON =	\
 	edit.py \
 	format.py \
 	goto.py \
+	grep.py \
 	help.py \
 	move.py \
 	reload.py \
