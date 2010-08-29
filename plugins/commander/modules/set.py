@@ -1,3 +1,24 @@
+# -*- coding: utf-8 -*-
+#
+#  set.py - set commander module
+#
+#  Copyright (C) 2010 - Jesse van den Kieboom
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 59 Temple Place, Suite 330,
+#  Boston, MA 02111-1307, USA.
+
 import commander.commands as commands
 import commander.commands.exceptions
 
@@ -7,129 +28,131 @@ import gtksourceview2 as gsv
 __commander_module__ = True
 
 def _complete_options(words, idx):
-	ret = []
+    ret = []
 
-	gb = globals()
+    gb = globals()
 
-	for k in gb:
-		if type(gb[k]) == types.FunctionType and not k.startswith('_'):
-			ret.append(k.replace('_', '-'))
+    for k in gb:
+        if type(gb[k]) == types.FunctionType and not k.startswith('_'):
+            ret.append(k.replace('_', '-'))
 
-	ret.sort()
-	return commands.completion.words(ret)(words, idx)
+    ret.sort()
+    return commands.completion.words(ret)(words, idx)
 
 def _complete_language(words, idx):
-	manager = gsv.language_manager_get_default()
-	ids = manager.get_language_ids()
-	ids.append('none')
-	ids.sort()
+    manager = gsv.language_manager_get_default()
+    ids = manager.get_language_ids()
+    ids.append('none')
+    ids.sort()
 
-	return commands.completion.words(ids)(words, idx)
+    return commands.completion.words(ids)(words, idx)
 
 def _complete_use_spaces(words, idx):
-	return commands.completion.words(['yes', 'no'])(words, idx)
+    return commands.completion.words(['yes', 'no'])(words, idx)
 
 def _complete_draw_spaces(words, idx):
-	ret = ['none', 'all', 'tabs', 'newlines', 'nbsp', 'spaces']
-	return commands.completion.words(ret)(words, idx)
+    ret = ['none', 'all', 'tabs', 'newlines', 'nbsp', 'spaces']
+    return commands.completion.words(ret)(words, idx)
 
 def _complete_value(words, idx):
-	# Depends a bit on the option
-	ret, completion = _complete_options(words, idx - 1)
+    # Depends a bit on the option
+    ret, completion = _complete_options(words, idx - 1)
 
-	if not ret:
-		return None
+    if not ret:
+        return None
 
-	completer = '_complete_' + ret[0].replace('-', '_')
-	gb = globals()
+    completer = '_complete_' + ret[0].replace('-', '_')
+    gb = globals()
 
-	if completer in gb:
-		return gb[completer](words[1:], idx - 1)
-	else:
-		return None
+    if completer in gb:
+        return gb[completer](words[1:], idx - 1)
+    else:
+        return None
 
 @commands.autocomplete(option=_complete_options, value=_complete_value)
 def __default__(view, option, value):
-	"""Set gedit option: set &lt;option&gt; &lt;value&gt;
+    """Set gedit option: set &lt;option&gt; &lt;value&gt;
 
 Sets a gedit option, such as document language, or indenting"""
 
-	option = option.replace('-', '_')
-	gb = globals()
+    option = option.replace('-', '_')
+    gb = globals()
 
-	if option in gb and type(gb[option]) == types.FunctionType:
-		return gb[option](view, value)
-	else:
-		raise commander.commands.exceptions.Execute('Invalid setting: ' + option)
+    if option in gb and type(gb[option]) == types.FunctionType:
+        return gb[option](view, value)
+    else:
+        raise commander.commands.exceptions.Execute('Invalid setting: ' + option)
 
 @commands.autocomplete(language=_complete_language)
 def language(view, language=None):
-	"""Set document language: set.language &lt;language&gt;
+    """Set document language: set.language &lt;language&gt;
 
 Set the document language to the language with the specified id"""
-	if not language or language == 'none':
-		view.get_buffer().set_language(None)
-		return False
+    if not language or language == 'none':
+        view.get_buffer().set_language(None)
+        return False
 
-	manager = gsv.language_manager_get_default()
-	lang = manager.get_language(language)
+    manager = gsv.language_manager_get_default()
+    lang = manager.get_language(language)
 
-	if lang:
-		view.get_buffer().set_language(lang)
-		return False
-	else:
-		raise commander.commands.exceptions.Execute('Invalid language: ' + language)
+    if lang:
+        view.get_buffer().set_language(lang)
+        return False
+    else:
+        raise commander.commands.exceptions.Execute('Invalid language: ' + language)
 
 def tab_width(view, width):
-	"""Set document tab width: set.tab-width &lt;width&gt;
+    """Set document tab width: set.tab-width &lt;width&gt;
 
 Set the document tab width"""
 
-	try:
-		width = int(width)
-	except:
-		raise commander.commands.exceptions.Execute("Invalid tab width: " + str(width))
+    try:
+        width = int(width)
+    except:
+        raise commander.commands.exceptions.Execute("Invalid tab width: " + str(width))
 
-	if width <= 0:
-		raise commander.commands.exceptions.Execute("Invalid tab width: " + str(width))
+    if width <= 0:
+        raise commander.commands.exceptions.Execute("Invalid tab width: " + str(width))
 
-	view.set_tab_width(width)
-	return False
+    view.set_tab_width(width)
+    return False
 
 tab_size = tab_width
 
 @commands.autocomplete(value=_complete_use_spaces)
 def use_spaces(view, value):
-	"""Use spaces instead of tabs: set.use-spaces &lt;yes/no&gt;
+    """Use spaces instead of tabs: set.use-spaces &lt;yes/no&gt;
 
 Set to true/yes to use spaces instead of tabs"""
 
-	setting = value in ('yes', 'true', '1')
-	view.set_insert_spaces_instead_of_tabs(setting)
+    setting = value in ('yes', 'true', '1')
+    view.set_insert_spaces_instead_of_tabs(setting)
 
-	return False
+    return False
 
 @commands.autocomplete({'*': _complete_draw_spaces})
 def draw_spaces(view, *args):
-	"""Draw spaces: set.draw-spaces &lt;none/all/tabs/newlines/nbsp/spaces&gt;
+    """Draw spaces: set.draw-spaces &lt;none/all/tabs/newlines/nbsp/spaces&gt;
 
 Set what kind of spaces should be drawn. Multiple options can be defined, e.g.
 for drawing spaces and tabs: <i>set.draw-spaces space tab</i>"""
-	m = {
-		'none': 0,
-		'all': gsv.DRAW_SPACES_ALL,
-		'tabs': gsv.DRAW_SPACES_TAB,
-		'newlines': gsv.DRAW_SPACES_NEWLINE,
-		'nbsp': gsv.DRAW_SPACES_NBSP,
-		'spaces': gsv.DRAW_SPACES_SPACE
-	}
+    m = {
+        'none': 0,
+        'all': gsv.DRAW_SPACES_ALL,
+        'tabs': gsv.DRAW_SPACES_TAB,
+        'newlines': gsv.DRAW_SPACES_NEWLINE,
+        'nbsp': gsv.DRAW_SPACES_NBSP,
+        'spaces': gsv.DRAW_SPACES_SPACE
+    }
 
-	flags = 0
+    flags = 0
 
-	for arg in args:
-		for a in m:
-			if a.startswith(arg):
-				flags = flags | m[a]
+    for arg in args:
+        for a in m:
+            if a.startswith(arg):
+                flags = flags | m[a]
 
-	view.set_draw_spaces(flags)
-	return False
+    view.set_draw_spaces(flags)
+    return False
+
+# vi:ex:ts=4:et
