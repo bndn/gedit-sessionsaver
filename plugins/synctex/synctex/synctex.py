@@ -223,7 +223,7 @@ class SynctexWindowHelper:
         self._insert_menu()
 
         for view in window.get_views():
-            self.add_helper(view)
+            self.add_helper(view, window, view.get_parent().get_parent())
 
         self.handlers = [
             window.connect("tab-added", lambda w, t: self.add_helper(t.get_view(),w, t)),
