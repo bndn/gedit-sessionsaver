@@ -11,9 +11,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2010-06-03 18:00+0000\n"
-"PO-Revision-Date: 2010-06-05 01:11+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-14 12:00+0200\n"
+"PO-Revision-Date: 2010-09-14 12:00+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "MIME-Version: 1.0\n"
@@ -30,27 +30,27 @@ msgstr "Könyvjelzők"
 msgid "Easy document navigation with bookmarks"
 msgstr "Egyszerű dokumentumnavigáció könyvjelzőkkel"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:135
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
 msgid "Toggle Bookmark"
 msgstr "Könyvjelző átváltása"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
 msgid "Toggle bookmark status of the current line"
 msgstr "Az aktuális sor könyvjelző állapotának átváltása"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "Ugrás a következő könyvjelzőre"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:139
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
 msgid "Goto the next bookmark"
 msgstr "Ugrás a következő könyvjelzőre"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
 msgid "Goto Previous Bookmark"
 msgstr "Ugrás az előző könyvjelzőre"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:142
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
 msgid "Goto the previous bookmark"
 msgstr "Ugrás az előző könyvjelzőre"
 
@@ -63,7 +63,7 @@ msgid "Bracket Completion"
 msgstr "Zárójel-kiegészítés"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:288
+#: ../plugins/charmap/gedit-charmap-plugin.c:337
 msgid "Character Map"
 msgstr "Karaktertábla"
 
@@ -79,19 +79,19 @@ msgstr "Kód megjegyzés"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Kijelölt kódblokk megjegyzésbe tétele vagy kivétele onnan"
 
-#: ../plugins/codecomment/codecomment.py:230
+#: ../plugins/codecomment/codecomment.py:90
 msgid "Co_mment Code"
 msgstr "A kó_d megjegyzés"
 
-#: ../plugins/codecomment/codecomment.py:232
+#: ../plugins/codecomment/codecomment.py:92
 msgid "Comment the selected code"
 msgstr "A kijelölt kód megjegyzésé tétele"
 
-#: ../plugins/codecomment/codecomment.py:236
+#: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "A kód _nem megjegyzés"
 
-#: ../plugins/codecomment/codecomment.py:238
+#: ../plugins/codecomment/codecomment.py:98
 msgid "Uncomment the selected code"
 msgstr "A kijelölt kód kivétele megjegyzésből"
 
@@ -102,21 +102,22 @@ msgstr "Színpipetta"
 
 #: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr "Szín választása párbeszédablakból, és hexadecimális ábrázolásának beszúrása"
+msgstr ""
+"Szín választása párbeszédablakból, és hexadecimális ábrázolásának beszúrása"
 
-#: ../plugins/colorpicker/colorpicker.py:73
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick _Color..."
 msgstr "_Válasszon színt…"
 
-#: ../plugins/colorpicker/colorpicker.py:74
+#: ../plugins/colorpicker/colorpicker.py:78
 msgid "Pick a color from a dialog"
 msgstr "Válasszon egy színt egy párbeszédablakból"
 
-#: ../plugins/colorpicker/colorpicker.py:220
+#: ../plugins/colorpicker/colorpicker.py:188
 msgid "Pick Color"
 msgstr "Válasszon színt"
 
-#: ../plugins/colorpicker/colorpicker.py:226
+#: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
 msgstr "_Beszúrás"
 
@@ -129,8 +130,9 @@ msgstr "Parancssoros felület speciális szerkesztéshez"
 msgid "Commander"
 msgstr "Parancsnok"
 
+#. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:4
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
 msgid "Draw Spaces"
 msgstr "Szóközök rajzolása"
 
@@ -138,110 +140,53 @@ msgstr "Szóközök rajzolása"
 msgid "Draw Spaces and Tabs"
 msgstr "Szóközök és tabok rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
 msgid "Draw leading spaces"
 msgstr "Nem törhető szóközök rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Új sorok rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "Nem törhető szóközök rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
 msgid "Draw spaces"
 msgstr "Szóközök rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:5
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
 msgstr "Szóközök rajzolása a szövegben"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:6
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "Tabok rajzolása"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:7
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
 msgid "Draw trailing spaces"
 msgstr "Záró szóközök rajzolása"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:146
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
 msgid "Show _White Space"
 msgstr "Üres helyek _megjelenítése"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:147
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
 msgid "Show spaces and tabs"
 msgstr "Szóközök és tabok megjelenítése"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:538
-msgid "Error dialog"
-msgstr "Hibaablak"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:1
-#| msgid "Draw Leading Spaces"
-msgid "Draw Leading Space"
-msgstr "Kezdő szóköz rajzolása"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:2
-#| msgid "Draw New lines"
-msgid "Draw Newline"
-msgstr "Új sor rajzolása"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Nem törhető szóközök rajzolása"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:5
-msgid "Draw Tabs"
-msgstr "Tabok rajzolása"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:6
-#| msgid "Draw Spaces"
-msgid "Draw Text Space"
-msgstr "Szöveg szóközeinek rajzolása"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:7
-#| msgid "Draw Trailing Spaces"
-msgid "Draw Trailing Space"
-msgstr "Záró szóköz rajzolása"
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:8
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
 msgstr "Engedélyezve"
 
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:9
-msgid "IF TRUE spaces in text will be drawn."
-msgstr "Ha igazra van állítva, akkor a szövegen belüli szóközök megrajzolásra kerülnek."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:10
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "If TRUE drawing will be enabled."
 msgstr "Ha igazra van állítva, akkor a rajzolás engedélyezve lesz."
 
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:11
-msgid "If TRUE leading space will be drawn."
-msgstr "Ha igazra van állítva, akkor a kezdő szóközök megrajzolásra kerülnek."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:12
-msgid "If TRUE newlines will be drawn."
-msgstr "Ha igazra van állítva, akkor az új sorok megrajzolásra kerülnek."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:13
-#| msgid "Draw non-breaking spaces"
-msgid "If TRUE non-breaking spaces will be drawn."
-msgstr "Ha igazra van állítva, akkor a nem törhető szóközök megrajzolásra kerülnek."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:14
-msgid "If TRUE spaces will be drawn."
-msgstr "Ha igazra van állítva, akkor a szóközök megrajzolásra kerülnek."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:15
-msgid "If TRUE tabs will be drawn."
-msgstr "Ha igazra van állítva, akkor a tabok megrajzolásra kerülnek."
-
-#: ../plugins/drawspaces/org.gnome.gedit.drawspaces.gschema.xml.in.in.h:16
-msgid "If TRUE trailing spaces will be drawn."
-msgstr "Ha igazra van állítva, akkor a záró szóközök megrajzolásra kerülnek."
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
+msgstr "A megrajzolandó szóközök típusa."
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -297,18 +242,20 @@ msgid "Enter column edit mode using selection"
 msgstr "Belépés az oszlopos szerkesztési módba a kijelölés használatával"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1261
-#| msgid "Enter column edit mode using selection"
 msgid "Enter <b>smart</b> column edit mode using selection"
-msgstr "Belépés az <b>intelligens</b> oszlopszerkesztési módba a kijelölés használatával"
+msgstr ""
+"Belépés az <b>intelligens</b> oszlopszerkesztési módba a kijelölés "
+"használatával"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1262
-#| msgid "Enter column edit mode using selection"
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "<b>Intelligens</b> oszlopigazítási mód a kijelölés használatával"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1263
 msgid "<b>Smart</b> column align mode with additional space using selection"
-msgstr "<b>Intelligens</b> oszlopigazítási mód további hellyel a kijelölés használatával"
+msgstr ""
+"<b>Intelligens</b> oszlopigazítási mód további hellyel a kijelölés "
+"használatával"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1265
 msgid "Toggle edit point"
@@ -323,7 +270,6 @@ msgid "Add edit point at end of line/selection"
 msgstr "Szerkesztési pont hozzáadása a sor vagy kijelölés végén"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1268
-#| msgid "Toggle edit point"
 msgid "Align edit points"
 msgstr "Szerkesztési pontok igazítása"
 
@@ -423,7 +369,7 @@ msgstr "Terminál"
 msgid "C_hange Directory"
 msgstr "Könyvtár_váltás"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
 msgid "Document Words"
 msgstr "Dokumentum szavai"
 
@@ -435,3 +381,15 @@ msgstr "Szókiegészítés"
 msgid "Word completion using the completion framework"
 msgstr "A szókiegészítés használata a kiegészítő keretrendszer használatával"
 
+#: ../plugins/synctex/synctex.gedit-plugin.desktop.in.in.h:1
+msgid "SyncTeX"
+msgstr "SyncTeX"
+
+#: ../plugins/synctex/synctex.gedit-plugin.desktop.in.in.h:2
+msgid "Synchronize between LaTeX and PDF with gedit and evince."
+msgstr "Szinkronizálás LaTeX és PDF között a gedit és evince használatával."
+
+#: ../plugins/synctex/synctex/synctex.py:280
+#: ../plugins/synctex/synctex/synctex.py:281
+msgid "Forward Search"
+msgstr "Keresés előre"
