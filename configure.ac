@@ -243,6 +243,32 @@ then
 fi
 
 # ================================================================
+# Synctex (dbus-python)
+# ================================================================
+plugin_defined synctex
+if test "$?" = 1
+then
+	DBUSPYTHON_REQUIRED=0.82
+	PKG_CHECK_MODULES([DBUSPYTHON],
+		[dbus-python >= $DBUSPYTHON_REQUIRED],
+		[have_synctex=yes],[have_synctex=no])
+
+	AC_SUBST([DBUS_PYTHON_CFLAGS])
+	AC_SUBST([DBUS_PYTHON_LIBS])
+
+	if test "x$have_synctex" = "xno"; then
+		plugin_defined_explicit synctex
+		if test "$?" = 1
+		then
+			AC_MSG_ERROR([dbus-python could not be found, needed for synctex plugin])
+		else
+			AC_MSG_WARN([dbus-python could not be found, synctex plugin will be disabled])
+			undef_plugin synctex "dbus-python not found"
+		fi
+	fi
+fi
+
+# ================================================================
 # Terminal plugin vte check
 # ================================================================
 plugin_defined terminal
