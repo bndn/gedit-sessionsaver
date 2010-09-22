@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-10 14:03+0100\n"
-"PO-Revision-Date: 2010-03-10 11:58+0100\n"
+"POT-Creation-Date: 2010-09-22 23:15+0200\n"
+"PO-Revision-Date: 2010-09-22 15:28+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
@@ -239,44 +239,67 @@ msgstr "Umożliwia modyfikowanie dokumentu w wielu miejscach na raz"
 msgid "Multi Edit"
 msgstr "Edycja w wielu miejscach"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:279
+#: ../plugins/multiedit/multiedit/documenthelper.py:315
 msgid "Added edit point..."
 msgstr "Dodano punkt modyfikowania..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:417
+#: ../plugins/multiedit/multiedit/documenthelper.py:651
 msgid "Column Mode..."
 msgstr "Tryb kolumny..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:535
+#: ../plugins/multiedit/multiedit/documenthelper.py:773
 msgid "Removed edit point..."
 msgstr "Usunięto punkt modyfikowania..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:685
+#: ../plugins/multiedit/multiedit/documenthelper.py:936
 msgid "Cancelled column mode..."
 msgstr "Anulowano tryb kolumny..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:804
+#: ../plugins/multiedit/multiedit/documenthelper.py:1274
 msgid "Enter column edit mode using selection"
 msgstr "Proszę podać tryb edycji kolumny używając zaznaczenia"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:805
+#: ../plugins/multiedit/multiedit/documenthelper.py:1275
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr ""
+"Proszę podać <b>inteligentny</b> tryb edycji kolumny używając zaznaczenia"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1276
+msgid "<b>Smart</b> column align mode using selection"
+msgstr "<b>Inteligentny</b> tryb dopasowania kolumny używając zaznaczenia"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1277
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+"<b>Inteligentny</b> tryb dopasowania kolumny za pomocą dodatkowego miejsca "
+"używając zaznaczenia"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1279
 msgid "Toggle edit point"
 msgstr "Przełącz punkt modyfikowania"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:806
+#: ../plugins/multiedit/multiedit/documenthelper.py:1280
 msgid "Add edit point at beginning of line/selection"
 msgstr "Dodaj punkt modyfikowania na początku wiersza/zaznaczenia"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:807
+#: ../plugins/multiedit/multiedit/documenthelper.py:1281
 msgid "Add edit point at end of line/selection"
 msgstr "Dodaj punkt modyfikowania na końcu wiersza/zaznaczenia"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:843
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/documenthelper.py:1282
+msgid "Align edit points"
+msgstr "Dopasuj punkt modyfikowania"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1283
+msgid "Align edit points with additional space"
+msgstr "Dopasuj punkty modyfikowania za pomocą dodatkowego miejsca"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1319
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Tryb edycji w wieli miejscach"
 
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Start multi edit mode"
 msgstr "Rozpocznij tryb edycji w wieli miejscach"
 
@@ -370,11 +393,11 @@ msgstr "Osadza terminal w dolnym panelu."
 msgid "Embedded Terminal"
 msgstr "Osadzony terminal"
 
-#: ../plugins/terminal/terminal.py:262
+#: ../plugins/terminal/terminal.py:286
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:285
+#: ../plugins/terminal/terminal.py:308
 msgid "C_hange Directory"
 msgstr "Zmień _katalog"
 
@@ -389,3 +412,26 @@ msgstr "Uzupełnianie słów"
 #: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "Uzupełnianie słów używając struktury uzupełniania"
+
+#: ../plugins/synctex/synctex.gedit-plugin.desktop.in.in.h:1
+msgid "SyncTeX"
+msgstr "SyncTeX"
+
+#: ../plugins/synctex/synctex.gedit-plugin.desktop.in.in.h:2
+msgid "Synchronize between LaTeX and PDF with gedit and evince."
+msgstr ""
+"Synchronizacja między plikami LaTeX i PDF za pomocą programów gedit i Evince."
+
+#: ../plugins/synctex/synctex/synctex.py:280
+#: ../plugins/synctex/synctex/synctex.py:281
+msgid "Forward Search"
+msgstr "Wyszukiwanie do przodu"
+
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr "Łatwe powiększanie i pomniejszanie rozmiaru tekstu"
+
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:2
+msgid "Text Size"
+msgstr "Rozmiar tekstu"
