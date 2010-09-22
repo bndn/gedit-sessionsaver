@@ -21,8 +21,6 @@ m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 AC_CONFIG_HEADERS([config.h])
 AC_DISABLE_STATIC
 
-IT_PROG_INTLTOOL([0.35.0])
-
 AC_PROG_LIBTOOL
 
 AC_ISC_POSIX
@@ -51,11 +49,14 @@ AM_CONDITIONAL(PLATFORM_WIN32, test "$platform_win32" = "yes")
 # ================================================================
 # Gettext stuff.
 # ================================================================
+IT_PROG_INTLTOOL([0.40.0])
+
+AM_GNU_GETTEXT_VERSION([0.17])
+AM_GNU_GETTEXT([external])
 
 GETTEXT_PACKAGE=gedit-plugins
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
-AM_GLIB_GNU_GETTEXT
 
 # ================================================================
 # Start of pkg-config checks
