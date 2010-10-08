@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins.HEAD.ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-26 00:44+0200\n"
-"PO-Revision-Date: 2010-01-26 00:44+0300\n"
+"POT-Creation-Date: 2010-10-08 20:10+0200\n"
+"PO-Revision-Date: 2010-10-08 20:10+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.5.1\n"
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.6.1\n"
 
 #: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
 msgid "Bookmarks"
@@ -28,27 +28,27 @@ msgstr "العلامات"
 msgid "Easy document navigation with bookmarks"
 msgstr "تصفح سهل للمستند باستخدام العلامات"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
 msgid "Toggle Bookmark"
 msgstr "بدّل العلامة"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
 msgid "Toggle bookmark status of the current line"
 msgstr "بدّل حالة تعليم السطر الحالي"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "اذهب للعلامة التالية"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
 msgid "Goto the next bookmark"
 msgstr "اذهب للعلامة التالية"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
 msgid "Goto Previous Bookmark"
 msgstr "اذهب للعلامة السابقة"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
 msgid "Goto the previous bookmark"
 msgstr "اذهب للعلامة السابقة"
 
@@ -61,7 +61,7 @@ msgid "Bracket Completion"
 msgstr "إكمال الأقواس"
 
 #: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:258
+#: ../plugins/charmap/gedit-charmap-plugin.c:337
 msgid "Character Map"
 msgstr "خريطة المحارف"
 
@@ -77,19 +77,19 @@ msgstr "تعليقات الكود"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "ضع أو احذف علامة التعليق من على جزء منتقى من الكود."
 
-#: ../plugins/codecomment/codecomment.py:230
+#: ../plugins/codecomment/codecomment.py:90
 msgid "Co_mment Code"
 msgstr "ا_جعل الكود تعليقا"
 
-#: ../plugins/codecomment/codecomment.py:232
+#: ../plugins/codecomment/codecomment.py:92
 msgid "Comment the selected code"
 msgstr "ضع علامة التعليق على الكود المحدد"
 
-#: ../plugins/codecomment/codecomment.py:236
+#: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "أزل ال_تعليق"
 
-#: ../plugins/codecomment/codecomment.py:238
+#: ../plugins/codecomment/codecomment.py:98
 msgid "Uncomment the selected code"
 msgstr "أزل علامة التعليق من الكود المحدد"
 
@@ -102,19 +102,19 @@ msgstr "مُنْتَقِى اللون"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "التقط لون من صندوق حوار وادرج تمثيله الست عشري."
 
-#: ../plugins/colorpicker/colorpicker.py:73
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick _Color..."
 msgstr "انتق _لونا..."
 
-#: ../plugins/colorpicker/colorpicker.py:74
+#: ../plugins/colorpicker/colorpicker.py:78
 msgid "Pick a color from a dialog"
 msgstr "التقط لون من صندوق حوار"
 
-#: ../plugins/colorpicker/colorpicker.py:220
+#: ../plugins/colorpicker/colorpicker.py:188
 msgid "Pick Color"
 msgstr "انتق لونا"
 
-#: ../plugins/colorpicker/colorpicker.py:226
+#: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
 msgstr "أ_درج"
 
@@ -127,8 +127,9 @@ msgstr "واجهة سطر أوامر للتحرير المتقدم"
 msgid "Commander"
 msgstr "الآمر"
 
+#. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
 msgid "Draw Spaces"
 msgstr "ارسم المسافات"
 
@@ -136,73 +137,53 @@ msgstr "ارسم المسافات"
 msgid "Draw Spaces and Tabs"
 msgstr "ارسم المسافات وعلامات التبويب"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
 msgid "Draw leading spaces"
 msgstr "ارسم المسافات البادئة"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "ارسم السطور الجديدة"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
 msgid "Draw non-breaking spaces"
 msgstr "ارسم المسافات غير القابلة للكسر"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
 msgid "Draw spaces"
 msgstr "ارسم المسافات"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:5
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
 msgstr "ارسم المسافات في النص"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:6
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "ارسم علامات التبويب"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:7
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
 msgid "Draw trailing spaces"
 msgstr "ارسم المسافات اللاحقة"
 
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
-msgid "Draw Leading Spaces"
-msgstr "ارسم المسافات البادئة"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
-msgid "Draw New lines"
-msgstr "ارسم السطور الجديدة"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "ارسم المسافات غير القابلة للكسر"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
-msgid "Draw Spaces in Text"
-msgstr "ارسم المسافات في النص"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
-msgid "Draw Tabs"
-msgstr "ارسم علامات التبويب"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
-msgid "Draw Trailing Spaces"
-msgstr "ارسم المسافات اللاحقة"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
-msgid "Show White Spaces"
-msgstr "اعرض المسافات"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
 msgid "Show _White Space"
 msgstr "اعرض الم_سافات"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
 msgid "Show spaces and tabs"
 msgstr "ارسم المسافات و علامات التبويب"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
-msgid "Error dialog"
-msgstr "مربع حوار الخطأ"
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
+msgid "Enabled"
+msgstr "مفعّل"
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
+msgid "If TRUE drawing will be enabled."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
+msgstr "نوع المسافات التي سترسم"
 
 #: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -237,70 +218,75 @@ msgstr "حرّر المستند في عدة أماكن مرة واحدة"
 msgid "Multi Edit"
 msgstr "تحرير متعدد"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:279
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
 msgstr "أضاف نقطة تحرير..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:417
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
 msgid "Column Mode..."
 msgstr "طور العمود..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:535
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
 msgid "Removed edit point..."
 msgstr "أزال نقطة تحرير..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:685
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
 msgid "Cancelled column mode..."
 msgstr "ألغى طور العمود..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:804
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
 msgid "Enter column edit mode using selection"
-msgstr "ادخل في طور العمود باستخدام التحديد"
+msgstr "ادخل في طور تحرير العمود باستخدام التحديد"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:805
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr "ادخل في طور تحرير العمود <b>الذكي</b> باستخدام التحديد"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+msgid "<b>Smart</b> column align mode using selection"
+msgstr "طور محاذاة العمود <b>الذكي</b> باستخدام التحديد"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr "طور محاذاة العمود <b>الذكي</b> بمسافات إضافية باستخدام التحديد"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
 msgid "Toggle edit point"
 msgstr "بدّل نقطة التحرير"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:806
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
 msgid "Add edit point at beginning of line/selection"
 msgstr "أضف نقطة تحرير في بداية السطر\\التحديد"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:807
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
 msgid "Add edit point at end of line/selection"
 msgstr "أضف نقطة تحرير في نهاية السطر\\التحديد"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:843
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+msgid "Align edit points"
+msgstr "حاذِ نقاط التحرير"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+msgid "Align edit points with additional space"
+msgstr "حاذِ نقاط التحرير بمسافات إضافية"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "طور التحرير المتعدد"
 
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Start multi edit mode"
 msgstr "ابدأ طور التحرير المتعدد"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
-msgid "Tab_bar"
-msgstr "شريط الأل_سنة"
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr "زوّد أو قلل حجم النص بسهولة"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
-msgid "Show or hide the tabbar in the current window"
-msgstr "أظهر أو أخف شريط الألسنة في النافذة الحالية"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
-msgid "Tabbar is Visible"
-msgstr "شريط الألسنة ظاهر"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
-msgid "Whether the tabbar should be visible in editing windows."
-msgstr "فيما إذا كان شريط الألسنة ظاهرا في نوافذ التحرير"
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
-msgid "Add a menu entry to show/hide the tabbar."
-msgstr "أضف مُدْخلة قائمة لعرض/إخفاء شريط الألسنة"
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
-msgid "Show/Hide Tabbar"
-msgstr "أظهر/أخف شريط الألسنة"
+#: ../plugins/textsize/textsize.gedit-plugin.desktop.in.in.h:2
+msgid "Text Size"
+msgstr "حجم النص"
 
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
@@ -368,15 +354,15 @@ msgstr "اغرس طرفية في الشريط السفلي."
 msgid "Embedded Terminal"
 msgstr "اغرس طرفية"
 
-#: ../plugins/terminal/terminal.py:262
+#: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "طرفية"
 
-#: ../plugins/terminal/terminal.py:285
+#: ../plugins/terminal/terminal.py:329
 msgid "C_hange Directory"
 msgstr "_غيّر الدليل"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
 msgid "Document Words"
 msgstr "كلمات المستند"
 
@@ -387,6 +373,61 @@ msgstr "إكمال الكلمات"
 #: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "إكمال الكلمات باستخدام بنية الإكمال"
+
+#: ../plugins/synctex/synctex.gedit-plugin.desktop.in.in.h:1
+msgid "SyncTeX"
+msgstr "SyncTeX"
+
+#: ../plugins/synctex/synctex.gedit-plugin.desktop.in.in.h:2
+msgid "Synchronize between LaTeX and PDF with gedit and evince."
+msgstr "زامن بين مستندات تخ وملفات PDF باستخدام محرر جنوم وجلاء."
+
+#: ../plugins/synctex/synctex/synctex.py:280
+#: ../plugins/synctex/synctex/synctex.py:281
+msgid "Forward Search"
+msgstr "بحث للأمام"
+
+#~ msgid "Draw Leading Spaces"
+#~ msgstr "ارسم المسافات البادئة"
+
+#~ msgid "Draw New lines"
+#~ msgstr "ارسم السطور الجديدة"
+
+#~ msgid "Draw Non-Breaking Spaces"
+#~ msgstr "ارسم المسافات غير القابلة للكسر"
+
+#~ msgid "Draw Spaces in Text"
+#~ msgstr "ارسم المسافات في النص"
+
+#~ msgid "Draw Tabs"
+#~ msgstr "ارسم علامات التبويب"
+
+#~ msgid "Draw Trailing Spaces"
+#~ msgstr "ارسم المسافات اللاحقة"
+
+#~ msgid "Show White Spaces"
+#~ msgstr "اعرض المسافات"
+
+#~ msgid "Error dialog"
+#~ msgstr "مربع حوار الخطأ"
+
+#~ msgid "Tab_bar"
+#~ msgstr "شريط الأل_سنة"
+
+#~ msgid "Show or hide the tabbar in the current window"
+#~ msgstr "أظهر أو أخف شريط الألسنة في النافذة الحالية"
+
+#~ msgid "Tabbar is Visible"
+#~ msgstr "شريط الألسنة ظاهر"
+
+#~ msgid "Whether the tabbar should be visible in editing windows."
+#~ msgstr "فيما إذا كان شريط الألسنة ظاهرا في نوافذ التحرير"
+
+#~ msgid "Add a menu entry to show/hide the tabbar."
+#~ msgstr "أضف مُدْخلة قائمة لعرض/إخفاء شريط الألسنة"
+
+#~ msgid "Show/Hide Tabbar"
+#~ msgstr "أظهر/أخف شريط الألسنة"
 
 #~ msgid "Drawing color:"
 #~ msgstr "لون الرسم:"
