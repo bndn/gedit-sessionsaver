@@ -88,9 +88,9 @@ GEDIT_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="bookmarks charmap drawspaces wordcompletion"
-USEFUL_PLUGINS="bookmarks charmap drawspaces wordcompletion"
-DEFAULT_PLUGINS="bookmarks charmap drawspaces wordcompletion"
+ALL_PLUGINS="bookmarks charmap drawspaces wordcompletion taglist"
+USEFUL_PLUGINS="bookmarks charmap drawspaces wordcompletion taglist"
+DEFAULT_PLUGINS="bookmarks charmap drawspaces wordcompletion taglist"
 
 PYTHON_ALL_PLUGINS="bracketcompletion codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
 PYTHON_USEFUL_PLUGINS="bracketcompletion codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
@@ -116,7 +116,7 @@ AC_ARG_WITH([plugins],
 			  build the specified plugins. Available:
 			  bracketcompletion, charmap, codecomment,
 			  colorpicker, drawspaces, joinlines, multiedit,
-			  textsize, sessionsaver, smartspaces,
+			  textsize, sessionsaver, smartspaces, taglist,
 			  terminal, wordcompletion, as well as the aliases
 			  default, all, and really-all],
 			  [plugins=$with_plugins],
@@ -344,44 +344,46 @@ AC_CONFIG_FILES([
 Makefile
 plugins/gpdefs.py
 plugins/Makefile
-plugins/bookmarks/Makefile
 plugins/bookmarks/bookmarks.gedit-plugin.desktop.in
-plugins/bracketcompletion/Makefile
+plugins/bookmarks/Makefile
 plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in
-plugins/charmap/Makefile
+plugins/bracketcompletion/Makefile
 plugins/charmap/charmap.gedit-plugin.desktop.in
-plugins/codecomment/Makefile
+plugins/charmap/Makefile
 plugins/codecomment/codecomment.gedit-plugin.desktop.in
-plugins/colorpicker/Makefile
+plugins/codecomment/Makefile
 plugins/colorpicker/colorpicker.gedit-plugin.desktop.in
-plugins/commander/Makefile
+plugins/colorpicker/Makefile
+plugins/commander/commander/commands/Makefile
 plugins/commander/commander.gedit-plugin.desktop.in
 plugins/commander/commander/Makefile
-plugins/commander/commander/commands/Makefile
-plugins/commander/modules/Makefile
+plugins/commander/Makefile
 plugins/commander/modules/find/Makefile
-plugins/drawspaces/Makefile
+plugins/commander/modules/Makefile
 plugins/drawspaces/drawspaces.gedit-plugin.desktop.in
+plugins/drawspaces/Makefile
 plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in
-plugins/joinlines/Makefile
 plugins/joinlines/joinlines.gedit-plugin.desktop.in
+plugins/joinlines/Makefile
 plugins/multiedit/Makefile
-plugins/multiedit/multiedit/Makefile
 plugins/multiedit/multiedit.gedit-plugin.desktop.in
-plugins/textsize/Makefile
-plugins/textsize/textsize/Makefile
-plugins/textsize/textsize.gedit-plugin.desktop.in
+plugins/multiedit/multiedit/Makefile
 plugins/sessionsaver/Makefile
 plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in
 plugins/smartspaces/Makefile
 plugins/smartspaces/smartspaces.gedit-plugin.desktop.in
+plugins/synctex/Makefile
+plugins/synctex/synctex.gedit-plugin.desktop.in
+plugins/synctex/synctex/Makefile
+plugins/taglist/taglist.gedit-plugin.desktop.in
+plugins/taglist/Makefile
 plugins/terminal/Makefile
 plugins/terminal/terminal.gedit-plugin.desktop.in
+plugins/textsize/Makefile
+plugins/textsize/textsize.gedit-plugin.desktop.in
+plugins/textsize/textsize/Makefile
 plugins/wordcompletion/Makefile
 plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in
-plugins/synctex/Makefile
-plugins/synctex/synctex/Makefile
-plugins/synctex/synctex.gedit-plugin.desktop.in
 po/Makefile.in])
 
 AC_OUTPUT
