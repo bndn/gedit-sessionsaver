@@ -346,7 +346,7 @@ gedit_drawspaces_plugin_deactivate (GeditWindowActivatable *activatable)
 }
 
 static void
-widget_destroyed (GtkObject *obj, gpointer widget_pointer)
+widget_destroyed (GtkWidget *obj, gpointer widget_pointer)
 {
 	DrawspacesConfigureWidget *widget = (DrawspacesConfigureWidget *)widget_pointer;
 
@@ -573,8 +573,10 @@ get_configuration_widget (GeditDrawspacesPlugin *plugin)
 			  G_CALLBACK (on_draw_trailing_toggled),
 			  widget);
 
-	g_signal_connect (widget->content, "destroy",
-			  G_CALLBACK (widget_destroyed), widget);
+	g_signal_connect (widget->content,
+			  "destroy",
+			  G_CALLBACK (widget_destroyed),
+			  widget);
 
 	return widget;
 }
