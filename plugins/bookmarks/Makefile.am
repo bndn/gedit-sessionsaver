@@ -20,11 +20,11 @@ libbookmarks_la_LDADD =	$(GEDIT_LIBS)
 support_DATA = bookmark.png
 
 # Plugin Info
-plugin_in_files = bookmarks.gedit-plugin.desktop.in
+plugin_in_files = bookmarks.plugin.desktop.in
 
-%.gedit-plugin: %.gedit-plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
+%.plugin: %.plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 
-BUILDFILES = $(plugin_in_files:.gedit-plugin.desktop.in=.gedit-plugin)
+BUILDFILES = $(plugin_in_files:.plugin.desktop.in=.plugin)
 
 plugin_DATA = $(BUILDFILES)
 
