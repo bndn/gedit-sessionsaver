@@ -1,32 +1,21 @@
-# French translation of gedit.
+# French translation of gedit-plugins.
 # Copyright (C) 1998-2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gedit package.
+# This file is distributed under the same license as the gedit-plugins package.
 #
-# Vincent Renardias <vincent@ldsol.com>, 1998-1999.
-# Joaquim Fellmann <joaquim@hrnet.fr>, 2000.
-# Christophe Merlet <redfox@redfoxcenter.org>, 2000-2005.
-# Christophe Fergeau <teuf@users.sourceforge.net>, 2002.
-# Laurent Richard <kouran@iespana.es>, 2002.
-# Yann Laviolette <borisgazoo@hotmail.com>, 2003.
-# Sébastien Bacher <seb128@debian.org>, 2004.
-# Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>, 2005-2006.
-# Guillaume Desmottes <cass@skynet.be>, 2005.
-# Stéphane Raimbault <stephane.raimbault@gmail.com>, 2005, 2007-2008.
-# Jonathan Ernst <jonathan@ernstfamily.ch>, 2006-2007.
-# Benoît Dejean <benoit@placenet.org>, 2006.
-# Robert-André Mauchin <zebob.m@pengzone.org>, 2006-2008.
-# Samuel Mutel <samuel.mutel@free.fr>, 2006.
-# Marc Lorber <linux-lorber@club-internet.fr>, 2006.
-# Claude Paroz <claude@2xlibre.net>, 2007-2010.
-# Bruno Brouard <annoa.b@gmail.com>, 2008.
-# Yannick Tailliez <ytdispatch-libre@yahoo.com>, 2008.
+# Christophe Merlet <redfox@redfoxcenter.org>, 2000-2006.
+# Jonathan Ernst <jonathan@ernstfamily.ch>, 2006.
+# Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.
+# Robert-André Mauchin <zebob.m@pengzone.org>, 2007.
+# Claude Paroz <claude@2xlibre.net>, 2008-2010.
+# Laurent Coudeur <laurentc@iol.ie>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit HEAD\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: gedit-plugins HEAD\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&component=Plugins\n"
 "POT-Creation-Date: 2010-11-07 13:10+0100\n"
-"PO-Revision-Date: 2010-03-02 17:58+0100\n"
+"PO-Revision-Date: 2010-11-07 21:16+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -43,87 +32,74 @@ msgid "Easy document navigation with bookmarks"
 msgstr "Navigation aisée dans vos documents avec des signets"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-#, fuzzy
 msgid "Toggle Bookmark"
-msgstr "Signets"
+msgstr "Activer/désactiver le signet"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
 msgid "Toggle bookmark status of the current line"
-msgstr "Affiche ou cache la barre d'état dans la fenêtre actuelle"
+msgstr "Inverse l'état de signet de la ligne actuelle"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "Aller au signet suivant"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
 msgid "Goto the next bookmark"
-msgstr "Va à l'emplacement visité suivant"
+msgstr "Va au signet suivant"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
 msgid "Goto Previous Bookmark"
-msgstr "Va à l'emplacement précédent"
+msgstr "Aller au signet précédent"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
 msgid "Goto the previous bookmark"
-msgstr "Afficher la page précédente"
+msgstr "Va au signet précédent"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "Codages détectés automatiquement"
+msgstr "Ajoute automatiquement les parenthèses fermantes."
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Bracket Completion"
-msgstr "Correspondance des parenthèses"
+msgstr "Complétion de parenthèses"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
 msgid "Character Map"
-msgstr "Caractères (sans les espaces)"
+msgstr "Table de caractères"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Insère des caractères spéciaux juste en cliquant dessus."
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "Commentaire"
+msgstr "Commentateur de code"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
-msgstr "Commente ou décommente un bloc de code sélectionnée."
+msgstr "Commente ou décommente un bloc de code sélectionné."
 
 #: ../plugins/codecomment/codecomment.py:90
-#, fuzzy
 msgid "Co_mment Code"
-msgstr "Commentaire"
+msgstr "_Commenter le code"
 
 #: ../plugins/codecomment/codecomment.py:92
-#, fuzzy
 msgid "Comment the selected code"
-msgstr "Supprime le texte sélectionné"
+msgstr "Commente le code sélectionné"
 
 #: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "_Décommenter le code"
 
 #: ../plugins/codecomment/codecomment.py:98
-#, fuzzy
 msgid "Uncomment the selected code"
-msgstr "Supprime le texte sélectionné"
+msgstr "Décommente le code sélectionné"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Color Picker"
-msgstr "Jeu de couleurs"
+msgstr "Sélecteur de couleurs"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
@@ -137,12 +113,11 @@ msgstr "Sélectionner une _couleur..."
 
 #: ../plugins/colorpicker/colorpicker.py:78
 msgid "Pick a color from a dialog"
-msgstr "Pioche une couleur depuis une boîte de dialogue"
+msgstr "Choisir une couleur à partir d'une boîte de dialogue"
 
 #: ../plugins/colorpicker/colorpicker.py:188
-#, fuzzy
 msgid "Pick Color"
-msgstr "Couleur des liens"
+msgstr "Sélectionner une couleur"
 
 #: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
@@ -154,39 +129,34 @@ msgid "Command line interface for advanced editing"
 msgstr "Interface en ligne de commande pour l'édition avancée"
 
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Commander"
-msgstr "Couleur des c_ommandes :"
+msgstr "Ligne de commande"
 
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
 msgid "Draw Spaces"
-msgstr "Utiliser des espaces"
+msgstr "Indicateur d'espaces"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Indique les espaces et les tabulations"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
 msgid "Draw leading spaces"
-msgstr "Espace insécable"
+msgstr "Indiquer les espaces de début"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Indiquer les sauts de ligne"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "Espace insécable"
+msgstr "Indiquer les espaces insécables"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
 msgid "Draw spaces"
-msgstr "Insérer des espaces"
+msgstr "Indiquer les espaces"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
@@ -197,19 +167,16 @@ msgid "Draw tabs"
 msgstr "Indiquer les tabulations"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "Enlever les espaces de fin"
+msgstr "Indiquer les espaces de fin"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
 msgid "Show _White Space"
-msgstr "Afficher la page suivante"
+msgstr "Afficher les _espaces"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "Insérer des _espaces au lieu des tabulations"
+msgstr "Affiche les espaces et les tabulations"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
@@ -220,9 +187,8 @@ msgid "If TRUE drawing will be enabled."
 msgstr "Si VRAI (TRUE), l'affichage des caractères blancs est activé."
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
-#, fuzzy
 msgid "The type of spaces to be drawn."
-msgstr "Si VRAI (TRUE), les espaces sont indiquées."
+msgstr "Le type d'espace à indiquer."
 
 #: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -233,23 +199,20 @@ msgid "Join/Split Lines"
 msgstr "Joindre/couper les lignes"
 
 #: ../plugins/joinlines/joinlines.py:56
-#, fuzzy
 msgid "_Join Lines"
-msgstr "Lignes"
+msgstr "_Joindre des lignes"
 
 #: ../plugins/joinlines/joinlines.py:57
-#, fuzzy
 msgid "Join the selected lines"
-msgstr "Couleur des liens sélectionnés"
+msgstr "Joint les lignes sélectionnées"
 
 #: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Couper des lignes"
 
 #: ../plugins/joinlines/joinlines.py:60
-#, fuzzy
 msgid "Split the selected lines"
-msgstr "Supprime le texte sélectionné"
+msgstr "Coupe les lignes sélectionnées"
 
 #. ex:ts=4:et:
 #: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
@@ -332,32 +295,28 @@ msgid "Easily increase and decrease the text size"
 msgstr "Augmente ou diminue facilement la taille du texte"
 
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Text Size"
-msgstr "Taille de la tabulation"
+msgstr "Taille de texte"
 
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "Sessions enre_gistrées"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "_Save current session"
-msgstr "Remplacer la sélection actuelle"
+msgstr "_Enregistrer la session actuelle"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "Save the current document list as a new session"
-msgstr "Déplace le document actuel dans une nouvelle fenêtre"
+msgstr "Enregistre la liste actuelle des documents dans une nouvelle session"
 
 #: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "_Gérer les sessions enregistrées..."
 
 #: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
 msgid "Open the saved session manager"
-msgstr "Ouvre le manuel de gedit"
+msgstr "Ouvre le gestionnaire des sessions enregistrées"
 
 #: ../plugins/sessionsaver/__init__.py:106
 #, python-format
@@ -394,33 +353,28 @@ msgid "Forget you're not using tabulations."
 msgstr "Oubliez que vous n'utilisez pas les tabulations."
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Smart Spaces"
-msgstr "Insérer des espaces"
+msgstr "Espaces intelligents"
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "Ouvre un terminal dans l'emplacement du document"
+msgstr "Intègre un terminal dans le panneau du bas."
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Embedded Terminal"
-msgstr "Objet embarqué"
+msgstr "Terminal intégré"
 
 #: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminal"
 
 #: ../plugins/terminal/terminal.py:329
-#, fuzzy
 msgid "C_hange Directory"
-msgstr "Remplacer _par :"
+msgstr "C_hanger de répertoire"
 
 #: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
-#, fuzzy
 msgid "Document Words"
-msgstr "Corps du document"
+msgstr "Mots du document"
 
 #: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
 msgid "Word Completion"
@@ -432,17 +386,16 @@ msgstr "Complétion de mots, utilise la structure de complétion"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
 msgid "SyncTeX"
-msgstr ""
+msgstr "SyncTeX"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
-msgstr ""
+msgstr "Synchroniser entre LaTeX et PDF avec gedit et evince."
 
 #: ../plugins/synctex/synctex/synctex.py:280
 #: ../plugins/synctex/synctex/synctex.py:281
-#, fuzzy
 msgid "Forward Search"
-msgstr "Lien inversé"
+msgstr "Recherche en avant"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
