@@ -1,4 +1,4 @@
-# German gedit translation.
+# German gedit-plugins translation.
 # Copyright (C) 1999-2005 Free Software Foundation, Inc.
 # Matthias Warkus <mawarkus@gnome.org>, 1999-2001.
 # Manuel Borchers <webmaster@matronix.de>, 2002.
@@ -13,10 +13,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:10+0100\n"
-"PO-Revision-Date: 2010-07-16 21:07+0100\n"
+"Project-Id-Version: gedit-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2010-11-07 13:09+0000\n"
+"PO-Revision-Date: 2010-11-07 16:35+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,58 +34,49 @@ msgid "Easy document navigation with bookmarks"
 msgstr "Einfache Navigation im Dokument mittels Lesezeichen"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-#, fuzzy
 msgid "Toggle Bookmark"
-msgstr "Lesezeichen"
+msgstr "Lesezeichen ein-/ausschalten"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
 msgid "Toggle bookmark status of the current line"
-msgstr "Die Statusleiste in diesem Fenster anzeigen/verbergen"
+msgstr "Lesezeichenstatus der aktuellen Zeile ändern"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "Nächstes Lesezeichen"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
 msgid "Goto the next bookmark"
-msgstr "Zum als nächsten besuchten Ort gehen"
+msgstr "Zum nächsten Lesezeichen gehen"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
 msgid "Goto Previous Bookmark"
-msgstr "Zum zuvor besuchten Ort gehen"
+msgstr "Zum vorherigen Lesezeichen gehen"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
 msgid "Goto the previous bookmark"
-msgstr "Zur vorherigen Seite gehen"
+msgstr "Zum vorherigen Lesezeichen gehen"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "Automatisch erkannte Zeichenkodierungen "
+msgstr "Fügt automatisch schließende Klammern hinzu."
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Bracket Completion"
-msgstr "Dateinamenserweiterung für Sicherungskopien"
+msgstr "Klammern schließen"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
 msgid "Character Map"
-msgstr "Zeichenkodierungen"
+msgstr "Zeichentabelle"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Sonderzeichen durch Anklicken einfügen."
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "Kommentar"
+msgstr "Quelltextkommentar"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
@@ -92,29 +84,25 @@ msgstr ""
 "Einen markierten Quelltextabsatz auskommentieren oder wieder unkommentieren"
 
 #: ../plugins/codecomment/codecomment.py:90
-#, fuzzy
 msgid "Co_mment Code"
-msgstr "Kommentar"
+msgstr "Quelltext ko_mmentieren"
 
 #: ../plugins/codecomment/codecomment.py:92
-#, fuzzy
 msgid "Comment the selected code"
-msgstr "Den markierten Text löschen"
+msgstr "Den markierten Quelltext auskommentieren"
 
 #: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "Quelltext u_nkommentieren"
 
 #: ../plugins/codecomment/codecomment.py:98
-#, fuzzy
 msgid "Uncomment the selected code"
-msgstr "Den markierten Text löschen"
+msgstr "Den markierten Quelltext unkommentieren"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Color Picker"
-msgstr "Farbschema"
+msgstr "Farbwähler"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
@@ -131,9 +119,8 @@ msgid "Pick a color from a dialog"
 msgstr "Eine Farbe aus einem Dialog auswählen"
 
 #: ../plugins/colorpicker/colorpicker.py:188
-#, fuzzy
 msgid "Pick Color"
-msgstr "Farbe von Verweisen"
+msgstr "Farbe auswählen"
 
 #: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
@@ -145,39 +132,34 @@ msgid "Command line interface for advanced editing"
 msgstr "Befehlszeilenschnittstelle für erweiterte Bearbeitung"
 
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Commander"
-msgstr "_Befehlsfarbe:"
+msgstr "Commander"
 
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
 msgid "Draw Spaces"
-msgstr "Leerzeichen verwenden"
+msgstr "Leerzeichen darstellen"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Leerzeichen und Einzüge anzeigen"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
 msgid "Draw leading spaces"
-msgstr "Geschütztes Leerzeichen"
+msgstr "Vorangestellte Leerzeichen anzeigen"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Zeilen einfügen"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "Geschütztes Leerzeichen"
+msgstr "Geschützte Leerzeichen anzeigen"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
 msgid "Draw spaces"
-msgstr "Leerzeichen einfügen"
+msgstr "Leerzeichen anzeigen"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
@@ -188,19 +170,16 @@ msgid "Draw tabs"
 msgstr "Einzüge anzeigen"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "Leerzeichen am Ende entfernen"
+msgstr "Angehängte Leerzeichen anzeigen"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
 msgid "Show _White Space"
-msgstr "Zur nächsten Seite gehen"
+msgstr "Leerzei_chen anzeigen"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "An Stelle von Tabulatoren _Leerzeichen einfügen"
+msgstr "Leerzeichen und Einzüge anzeigen"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
@@ -208,11 +187,11 @@ msgstr "Aktiviert"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "If TRUE drawing will be enabled."
-msgstr ""
+msgstr "Falls auf »wahr« gesetzt, wird die Anzeige aktiviert."
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
 msgid "The type of spaces to be drawn."
-msgstr ""
+msgstr "Der Typ der anzuzeigenden Leerzeichen."
 
 #: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -223,23 +202,20 @@ msgid "Join/Split Lines"
 msgstr "Zeilen zusammenfügen/umbrechen"
 
 #: ../plugins/joinlines/joinlines.py:56
-#, fuzzy
 msgid "_Join Lines"
-msgstr "Zeilen"
+msgstr "_Zeilen zusammenfügen"
 
 #: ../plugins/joinlines/joinlines.py:57
-#, fuzzy
 msgid "Join the selected lines"
-msgstr "Den Einzug der markierten Zeilen vermindern"
+msgstr "Die markierten Zeilen zusammenfügen"
 
 #: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "Zeilen umbrechen"
 
 #: ../plugins/joinlines/joinlines.py:60
-#, fuzzy
 msgid "Split the selected lines"
-msgstr "Den Einzug der markierten Zeilen vermindern"
+msgstr "Die markierten Zeilen umbrechen"
 
 #. ex:ts=4:et:
 #: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
@@ -318,36 +294,31 @@ msgstr "In den Mehrfachbearbeitungsmodus wechseln"
 #. ex:ts=4:et:
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
 msgid "Easily increase and decrease the text size"
-msgstr ""
+msgstr "Die Textgröße einfach ändern"
 
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Text Size"
-msgstr "Größe von Tabulatoren"
+msgstr "Textgröße"
 
 #: ../plugins/sessionsaver/__init__.py:64
-#, fuzzy
 msgid "Sa_ved sessions"
-msgstr "Datei _komprimiert speichern"
+msgstr "_Gespeicherte Sitzungen"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "_Save current session"
-msgstr "Momentan ausgewählten Text ersetzen"
+msgstr "Die aktuelle Sitzung _speichern"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "Save the current document list as a new session"
-msgstr "Das momentan geöffnete Dokument in ein neues Fenster verschieben"
+msgstr "Die aktuelle Dokumentenliste als neue Sitzung speichern"
 
 #: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "Gespeicherte Sitzungen _verwalten …"
 
 #: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
 msgid "Open the saved session manager"
-msgstr "Das gedit-Handbuch öffnen"
+msgstr "Gespeicherte Sitzungen verwalten"
 
 #: ../plugins/sessionsaver/__init__.py:106
 #, python-format
@@ -368,9 +339,8 @@ msgid "Session Saver"
 msgstr "Sitzungsspeicherung"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:1
-#, fuzzy
 msgid "Save session"
-msgstr "Datei _komprimiert speichern"
+msgstr "Sitzung speichern"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
@@ -385,33 +355,28 @@ msgid "Forget you're not using tabulations."
 msgstr "Vergessen Sie, dass Sie keine Einzüge benutzen"
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Smart Spaces"
-msgstr "Leerzeichen einfügen"
+msgstr "Intelligente Leerzeichen"
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "Öffnet ein Terminal im Ordner des Dokumentes"
+msgstr "Terminal in die untere Leiste einbetten."
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Embedded Terminal"
-msgstr "Eingebettetes Objekt"
+msgstr "Eingebettetes Terminal"
 
 #: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminal"
 
 #: ../plugins/terminal/terminal.py:329
-#, fuzzy
 msgid "C_hange Directory"
-msgstr "Ändern _in:"
+msgstr "_Ordner wechseln"
 
 #: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
-#, fuzzy
 msgid "Document Words"
-msgstr "Dokumentkörper"
+msgstr "Wörter im Dokument"
 
 #: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
 msgid "Word Completion"
@@ -431,9 +396,8 @@ msgstr "Abgleich zwischen LaTeX and PDF mit gedit und Evince."
 
 #: ../plugins/synctex/synctex/synctex.py:280
 #: ../plugins/synctex/synctex/synctex.py:281
-#, fuzzy
 msgid "Forward Search"
-msgstr "Vorwärtsverknüpfung"
+msgstr "Vorwärtssuche"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
@@ -1920,8 +1884,8 @@ msgstr "Umbrechen verhindern"
 
 #: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
 msgid ""
-"Provides a method to easily insert commonly used tags/strings into a "
-"document without having to type them."
+"Provides a method to easily insert commonly used tags/strings into a document "
+"without having to type them."
 msgstr ""
 "Dieses Plugin bietet die Möglichkeit, häufig verwendete Floskeln und "
 "Zeichenketten in ein Dokument einzufügen, ohne sie eingeben zu müssen."
