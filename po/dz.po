@@ -1,197 +1,2014 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Dzongkha translation of gedit
+# Copyright @ 2006 Free Software Foundation, Inc.
+# Mindu Dorji.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins\n"
+"Project-Id-Version: gedit.HEAD.Original\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-28 09:31+0100\n"
-"PO-Revision-Date: 2007-06-19 11:24+0530\n"
-"Last-Translator: yumkee lhamo <yumkeyl08@hotmail.com>\n"
-"Language-Team: dzongkha <pgeyleg@dit .gov.bt>\n"
+"POT-Creation-Date: 2010-11-07 13:10+0100\n"
+"PO-Revision-Date: 2008-09-10 09:27+0530\n"
+"Last-Translator: Dawa pemo <daws_403@hotmail.com>\n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2;plural=(n!=1);\n"
-"X-Poedit-Language: dzongkha\n"
-"X-Poedit-Country: bhutan\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Poedit-Language: Dzongkha\n"
+"X-Poedit-Country: BHUTAN\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: KBabel 1.10.2\n"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:1
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
+msgid "Bookmarks"
+msgstr "དེབ་རྟགས་ཚུ་"
+
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
+msgid "Easy document navigation with bookmarks"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
+#, fuzzy
+msgid "Toggle Bookmark"
+msgstr "དེབ་རྟགས་ཚུ་"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+#, fuzzy
+msgid "Toggle bookmark status of the current line"
+msgstr "ད་ལྟོའི་སྒོ་སྒྲིག་ནང་ གནས་ཚད་ཕྲ་རིང་སྟོན་ ཡང་ན་ སྦ་བཞག།"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
+msgid "Goto Next Bookmark"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+#, fuzzy
+msgid "Goto the next bookmark"
+msgstr "ཤུལ་མ་ལྟ་སྤྱོད་འབད་མི་གནས་ཁོངས་ལུ་འགྱོ།"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+#, fuzzy
+msgid "Goto Previous Bookmark"
+msgstr "གནས་ཁོངས་ཧེ་མམ་ལུ་འགྱོ་"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+#, fuzzy
+msgid "Goto the previous bookmark"
+msgstr "ཤོག་ལེབ་ཧེ་མམ་སྟོན།"
+
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
 msgid "Automatically adds closing brackets."
 msgstr "ཁ་བསྡམ་གུག་ཤད་ཚུ་ རང་བཞིན་གྱིས་ཁ་སྐོང་རྐྱབ་ཨིན།"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.h:2
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Bracket Completion"
-msgstr "གུག་ཤད་མཇུག་བསྡུ་བ་"
+msgstr "འདྲ་བཤུས་རྒྱ་བསྐྱེད་ཀྱི་རྒྱབ་ཐག"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:255
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:337
+#, fuzzy
 msgid "Character Map"
-msgstr "ཡིག་འབྲུའི་ས་ཁྲ་"
+msgstr "ཡིག་འབྲུའི་ཀོ་ཌིངསི།"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.h:2
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "དེ་གུ་ཨེབ་གཏང་འབད་ཐོག་ལས་ དམིགས་བསལ་ཡིག་འབྲུ་ཚུ་བཙུགས།"
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:1
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Code comment"
-msgstr "ཨང་རྟགས་བསམ་བཀོད་"
+msgstr "བསམ་བཀོད།"
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.h:2
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
-msgstr "ཨང་རྟ་གས་ཀྱི་སེལ་འཐུ་འབད་ཡོད་པའི་སྡེབ་ཚན་ཅིག་ བསམ་བཀོད་འབད་ ཡང་ན་ བསམ་བཀོད་འབད་བཤོལ།"
+msgstr ""
+"ཨང་རྟ་གས་ཀྱི་སེལ་འཐུ་འབད་ཡོད་པའི་སྡེབ་ཚན་ཅིག་ བསམ་བཀོད་འབད་ ཡང་ན་ བསམ་བཀོད་འབད་བཤོལ།"
 
-#: ../plugins/codecomment/codecomment.py:249
+#: ../plugins/codecomment/codecomment.py:90
+#, fuzzy
 msgid "Co_mment Code"
-msgstr "བསམ་བཀོད་ཨང་རྟགས་(_m)"
+msgstr "བསམ་བཀོད།"
 
-#: ../plugins/codecomment/codecomment.py:251
+#: ../plugins/codecomment/codecomment.py:92
+#, fuzzy
 msgid "Comment the selected code"
-msgstr "སེལ་འཐུ་འབད་ཡོད་པའི་ཨང་རྟགས་ བསམ་བཀོད་འབད་"
+msgstr "སེལ་འཐུ་ཅན་གྱི་ ཚིག་ཡིག་དེ་བཏོན་གཏང༌།"
 
-#: ../plugins/codecomment/codecomment.py:255
+#: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "ཨང་རྟགས་བསམ་བཀོད་འབད་བཤོལ་(_n)"
 
-#: ../plugins/codecomment/codecomment.py:257
+#: ../plugins/codecomment/codecomment.py:98
+#, fuzzy
 msgid "Uncomment the selected code"
-msgstr "སེལ་འཐུ་འབད་ཡོད་པའི་ཨང་རྟགས་ བསམ་བཀོད་འབད་བཤོལ་"
+msgstr "སེལ་འཐུ་ཅན་གྱི་ ཚིག་ཡིག་དེ་བཏོན་གཏང༌།"
 
 #. ex:ts=4:et:
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:1
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
 msgid "Color Picker"
 msgstr "ཚོས་གཞི་འཐུ་མི་"
 
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.h:2
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "ཌའི་ལོག་ཅིག་ནང་ལས་ ཚོས་གཞི་ཅིག་འཐུ་་ཞིནམ་ལས་ དེ་གི་ཧེག་ཟ་ཌེ་སི་མཱལ་ཁྱད་ཚབ་བཙུགས།"
 
-#: ../plugins/colorpicker/colorpicker.py:73
-msgid "_Color picker"
-msgstr "ཚོས་གཞི་འཐུ་མི་(_C)"
+#: ../plugins/colorpicker/colorpicker.py:77
+#, fuzzy
+msgid "Pick _Color..."
+msgstr "ཚོས་གཞི་ཅིག་འཐུ།"
 
-#: ../plugins/colorpicker/colorpicker.py:74
+#: ../plugins/colorpicker/colorpicker.py:78
+#, fuzzy
 msgid "Pick a color from a dialog"
-msgstr "ཌའི་ལོག་ཅིག་ནང་ལས་ཚོས་གཞི་ཅིག་འཐུ་"
+msgstr "ཚོས་གཞི་ཅིག་འཐུ།"
 
-#: ../plugins/colorpicker/colorpicker.py:220
-msgid "Color picker"
-msgstr "ཚོས་གཞི་འཐུ་མི་"
+#: ../plugins/colorpicker/colorpicker.py:188
+#, fuzzy
+msgid "Pick Color"
+msgstr "ཚོས་གཞི་ཅིག་འཐུ།"
 
-#: ../plugins/colorpicker/colorpicker.py:228
+#: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
-msgstr "བཙུགས་(_I)"
+msgstr "བཙུགས།(_I)"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:1
+#. ex:ts=4:et:
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:1
+msgid "Command line interface for advanced editing"
+msgstr ""
+
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Commander"
+msgstr "བརྡ་བཀོད་གཡོག་བཀོལ།"
+
+#. ex:set ts=8 noet:
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
+#, fuzzy
 msgid "Draw Spaces"
-msgstr "བར་སྟོང་ཚུ་འཐེན་"
+msgstr "བར་སྟོང་།"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "བར་སྟོང་ཚུ་དང་མཆོང་ལྡེ་ཚུ་འཐེན་"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:1
-msgid "Draw spaces"
-msgstr "བར་སྟོང་ཚུ་འཐེན་"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
+#, fuzzy
+msgid "Draw leading spaces"
+msgstr "རྒྱུན་ཆད་མེད་པའི་བར་སྟོང་"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:2
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
+msgid "Draw new lines"
+msgstr ""
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
+#, fuzzy
+msgid "Draw non-breaking spaces"
+msgstr "རྒྱུན་ཆད་མེད་པའི་བར་སྟོང་"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
+#, fuzzy
+msgid "Draw spaces"
+msgstr "བར་སྟོང་བཙུགས།"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
+#, fuzzy
+msgid "Draw spaces in text"
+msgstr "བར་སྟོང་བཙུགས།"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "མཆོང་ལྡེ་ཚུ་འཐེན་"
 
-#: ../plugins/drawspaces/drawspaces.glade.h:3
-msgid "Drawing color:"
-msgstr "པར་རིས་འབྲི་ནིའི་ཚོས་གཞི་:"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
+#, fuzzy
+msgid "Draw trailing spaces"
+msgstr "རྒྱབ་ལུས་བར་སྟོང་ཚུ་རྩ་བསྐྲད་གཏང་"
 
-#. ex:ts=4:et:
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
+#, fuzzy
+msgid "Show _White Space"
+msgstr "ཤོག་ལེབ་ཤུལ་མམ་སྟོན།"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
+#, fuzzy
+msgid "Show spaces and tabs"
+msgstr "མཆོང་ལྡེའི་ཚབ་ལུ་ བར་སྟོང་བཙུགས། (_s)"
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
+msgid "Enabled"
+msgstr "ལྕོགས་ཅན།"
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
+msgid "If TRUE drawing will be enabled."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
+msgstr ""
+
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "གྲལ་ཐིག་མང་ཤོས་ཅིག་མཐུད་ ཡང་ན་ རིངམོ་ཚུ་གཤག་"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.h:2
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "གྲལ་ཐིག་མཐུད་/གཤག་"
 
-#: ../plugins/joinlines/joinlines.py:68
+#: ../plugins/joinlines/joinlines.py:56
+#, fuzzy
 msgid "_Join Lines"
-msgstr "གྲལ་ཐིག་མཐུད་(_J)"
+msgstr "གྱལ་རིམ།"
 
-#: ../plugins/joinlines/joinlines.py:69
+#: ../plugins/joinlines/joinlines.py:57
+#, fuzzy
 msgid "Join the selected lines"
-msgstr "སེལ་འཐུ་འབད་ཡོད་པའི་གྲལ་ཐིག་ཚུ་མཐུད་"
+msgstr "སེལ་འཐུ་ཅན་གྱི་གྱལ་རིམ་ཚུ་གི་ འགོ་མཚམས་བཤོལ།"
 
-#: ../plugins/joinlines/joinlines.py:71
+#: ../plugins/joinlines/joinlines.py:59
+#, fuzzy
 msgid "_Split Lines"
-msgstr "གྲལ་ཐིག་ཚུ་གཤག་(_S)"
+msgstr "ཨའུཊི་པུཊི་གྱལ་རིམ།"
 
-#: ../plugins/joinlines/joinlines.py:72
+#: ../plugins/joinlines/joinlines.py:60
+#, fuzzy
 msgid "Split the selected lines"
-msgstr "སེལ་འཐུ་འབད་ཡོད་པའི་གྲལ་ཐིག་ཚུ་གཤག་"
+msgstr "སེལ་འཐུ་ཅན་གྱི་གྱལ་རིམ་ཚུ་གི་ འགོ་མཚམས་བཤོལ།"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
-msgid "Tab_bar"
-msgstr "མཆོང་ལྡེ་ཕྲ་རིང་(_b)"
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr ""
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
-msgid "Show or hide the tabbar in the current window"
-msgstr "ད་ལྟོའི་སྒོ་སྒྲིག་ནང་ལུ་ མཆོང་ལྡེ་ཕྲ་རིང་སྟོན་ ཡང་ན་ སྦ་"
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr ""
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
-msgid "Tabbar is Visible"
-msgstr "མཆོང་ལྡེ་ཕྲ་རིང་འདི་མཐོང་ཚུགས་"
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
+msgid "Added edit point..."
+msgstr ""
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
-msgid "Whether the tabbar should be visible in editing windows."
-msgstr "མཆོང་ལྡེ་འདི་ཞུན་དག་སྒོ་སྒྲིག་ནང་ལུ་མཐོང་དགོཔ་ཨིན་རུང་མེན་རུང་།"
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
+msgid "Column Mode..."
+msgstr ""
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:1
-msgid "Add a menu entry to show/hide the tabbar."
-msgstr "མཆོང་ལྡེ་ཕྲ་རིང་འདི་སྟོན་/སྦ་ནིའི་དོན་ལས་ དཀར་ཆག་ཐོ་བཀོད་ཅིག་ཁ་སྐོང་རྐྱབས།"
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
+msgid "Removed edit point..."
+msgstr ""
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.h:2
-msgid "Show/Hide Tabbar"
-msgstr "མཆོང་ལྡེ་ཕྲ་རིང་སྟོན་/སྦ་"
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
+msgid "Cancelled column mode..."
+msgstr ""
 
-#: ../plugins/sessionsaver/dialogs.py:165
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+msgid "Enter column edit mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+msgid "<b>Smart</b> column align mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+msgid "Toggle edit point"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+msgid "Add edit point at beginning of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+msgid "Add edit point at end of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+msgid "Align edit points"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+msgid "Align edit points with additional space"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Multi Edit Mode"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Start multi edit mode"
+msgstr ""
+
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr ""
+
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Text Size"
+msgstr "མཆོང་ལྡེའི་ཚད།"
+
+#: ../plugins/sessionsaver/__init__.py:64
+msgid "Sa_ved sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
+msgid "_Save current session"
+msgstr "ད་ལྟོའི་སེལ་འཐུའི་ཚབ་བཙུགས།"
+
+#: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
+msgid "Save the current document list as a new session"
+msgstr "ད་ལྟོའི་ཡིག་ཆ་དེ་ སྒོ་སྒྲིག་གསརཔ་ཅིག་ནང་ སྤོ་བཤུད་འབད།"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Manage saved sessions..."
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:66
+#, fuzzy
+msgid "Open the saved session manager"
+msgstr "ཇི་ཨེ་ཌིཊི་གི་ལག་དེབ་ཁ་ཕྱེ།"
+
+#: ../plugins/sessionsaver/__init__.py:106
+#, python-format
+msgid "Recover '%s' session"
+msgstr ""
+
+#: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
 msgstr "ལཱ་ཡུན་གྱི་མིང་"
 
 #. ex:ts=4:et:
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:1
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:1
 msgid "Save and restore your working sessions"
 msgstr "ཁྱོད་རའི་ལཱ་འབད་བའི་ལཱ་ཡུན་ཚུ་ སོར་ཆུད་དང་སྲུང་བཞག་འབད་"
 
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.h:2
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "ལཱ་ཡུན་ སྲུང་བ་པོ་"
 
-#: ../plugins/sessionsaver/sessionsaver.glade.h:1
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
+msgid "Save session"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
+msgid "Saved Sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
 msgstr "ལཱ་ཡུན་གྱི་མིང་:"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:1
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "ཁྱོད་ཀྱིས་ རེའུ་མིག་ལག་ལེན་འཐབ་དོ་མེདཔ་ལས་ བཀོག་བཞག"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.h:2
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Smart Spaces"
-msgstr "སྤུར་བསྒྱིར་དྲགས་ཀྱི་་བར་སྟོང་"
+msgstr "བར་སྟོང་བཙུགས།"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:1
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "གཤམ་གྱི་པཱན་ནང་ ཊར་མི་ནཱལ་ཅིག་གནས་འདྲེན་འབད།"
+msgstr "ཡིག་ཆའི་གནས་ཁོངས་འདི་ནང་ ཊར་མི་ནཱལ་ཅིག་ཁ་ཕྱེ།"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.h:2
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Embedded Terminal"
-msgstr "གནས་འདྲེན་འབད་ཡོད་པའི་ཊར་མི་ནཱལ་"
+msgstr "ཟུག་ཅན་དངོས་པོ།"
 
-#: ../plugins/terminal/terminal.py:206
+#: ../plugins/terminal/terminal.py:307
+#, fuzzy
 msgid "Terminal"
-msgstr "ཊར་མི་ནཱལ་"
+msgstr "ཏ་མིལ།"
 
-#: ../plugins/terminal/terminal.py:227
+#: ../plugins/terminal/terminal.py:329
+#, fuzzy
 msgid "C_hange Directory"
-msgstr "སྣོད་ཐོ་སོར་(_h)"
+msgstr "སྣོད་ཐོ་གསརཔ་(_N)"
 
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#, fuzzy
+msgid "Document Words"
+msgstr "ཡིག་ཆའི་མ་གཟུགས།"
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
+#, fuzzy
+msgid "Word Completion"
+msgstr "འདྲ་བཤུས་རྒྱ་བསྐྱེད་ཀྱི་རྒྱབ་ཐག"
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr ""
+
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
+msgid "SyncTeX"
+msgstr ""
+
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
+msgid "Synchronize between LaTeX and PDF with gedit and evince."
+msgstr ""
+
+#: ../plugins/synctex/synctex/synctex.py:280
+#: ../plugins/synctex/synctex/synctex.py:281
+#, fuzzy
+msgid "Forward Search"
+msgstr "འབྲེལ་ལམ་གདོང་བསྐྱོད་འབད།"
+
+#: ../plugins/taglist/gedit-taglist-plugin.c:165
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+msgid "Tags"
+msgstr "ངོ་རྟགས་ཚུ།"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:608
+msgid "Select the group of tags you want to use"
+msgstr "ཁྱོད་ཀྱིས་ལག་ལེན་འཐབ་དགོ་མནོ་མི་ ངོ་རྟགས་སྡེ་ཚན་དེ་ སེལ་འཐུ་འབད།"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:627
+msgid "_Preview"
+msgstr "སྔོན་ལྟ། (_P)"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+msgid "Available Tag Lists"
+msgstr "འཐོབ་ཚུགས་པའི་ ངོ་རྟགས་ཐོ་ཡིག་ཚུ།"
+
+#. ex:ts=8:noet:
+#: ../plugins/taglist/HTML.tags.xml.in.h:1
+msgid "Abbreviated form"
+msgstr "སྡུད་པའི་རྣམ་པ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:2
+msgid "Abbreviation"
+msgstr "སྡུད་ཚིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:3
+msgid "Above"
+msgstr "ལྟག་ལུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:4
+msgid "Accessibility key character"
+msgstr "འཛུལ་སྤྱོད་ཀྱི་ཡིག་འབྲུ་གཙོ་བོ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:5
+msgid "Acronym"
+msgstr "བསྡུ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:6
+msgid "Align"
+msgstr "ཕྲང་སྒྲིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:7
+msgid "Alignment character"
+msgstr "ཕྲང་སྒྲིག་ཡིག་འབྲུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:8
+msgid "Alternative"
+msgstr "ཐབས་གཞན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:9
+msgid "Anchor"
+msgstr "ཨེན་ཀོར།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:10
+msgid "Anchor URI"
+msgstr "ཨེན་ཀོར་ ཡུ་ཨར་ཨའི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:11
+msgid "Applet class file code"
+msgstr "ཡིག་སྣོད་ཨང་རྟགས་ཀྱི་ ཨེཔ་ལེཊི་དབྱེ་རིགས།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:13
+msgid "Applet class file code (deprecated)"
+msgstr "ཨེཔ་ལེཊི་དབྱེ་རིགས་ ཡིག་སྣོད་ཨང་རྟགས་ཀྱི་་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:14
+msgid "Array"
+msgstr "ཨེ་རེ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:15
+msgid "Associated information"
+msgstr "འབྲེལ་བ་ཡོད་པའི་བརྡ་དོན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:16
+msgid "Author info"
+msgstr "རྩོམ་པ་པོའི་བརྡ་དོན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:17
+msgid "Axis related headers"
+msgstr "མགོ་ཡིག་དང་འབྲེལ་བའི་ཚད་ཐིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:18
+msgid "Background color"
+msgstr "རྒྱབ་གཞིའི་ཚོས་གཞི།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:20
+msgid "Background color (deprecated)"
+msgstr "རྒྱབ་གཞིའི་ཚོས་གཞི་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:21
+msgid "Background texture tile"
+msgstr "རྒྱབ་གཞིའི་རེག་བྱའི་ཊ་ཡེལ།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:23
+msgid "Background texture tile (deprecated)"
+msgstr "རྒྱབ་གཞིའི་རེག་བྱའི་ཊ་ཡེལ་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:24
+msgid "Base URI"
+msgstr "གཞི་རྟེན་ཡུ་ཨར་ཨའི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:25
+msgid "Base font"
+msgstr "གཞི་རྟེན་ཡིག་གཟུགས།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:27
+msgid "Base font (deprecated)"
+msgstr "གཞི་རྟེན་ཡིག་གཟུགས་(ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:28
+msgid "Bold"
+msgstr "རྒྱགས་པ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:29
+msgid "Border"
+msgstr "མཐའ་མཚམས།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:31
+msgid "Border (deprecated)"
+msgstr "མཐའ་མཚམས་(ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:32
+msgid "Border color"
+msgstr "མཐའ་མཚམས་ཚོས་གཞི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:33
+msgid "Cell rowspan"
+msgstr "ནང་ཐིག་གི་ གྲལ་ཐིག་ཚད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:34
+msgid "Center"
+msgstr "དབུས།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:36
+msgid "Center (deprecated)"
+msgstr "དབུས་(ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:37
+msgid "Character encoding of linked resource"
+msgstr "འབྲེལ་ལམ་ཅན་གྱི་ཐོན་ཁུངས་ཀྱི་ ཡིག་འབྲུའི་ཨིན་ཀོ་ཌིང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:38
+msgid "Checked (state)"
+msgstr "ཞིབ་དཔྱད་ཚར། (གནས་ལུགས)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:39
+msgid "Checked state"
+msgstr "ཞིབ་དཔྱད་འབད་ཡོད་པའི་གནས་ལུགས་"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:40
+msgid "Citation"
+msgstr "ལུང་འདྲེན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:41
+msgid "Cite reason for change"
+msgstr "བསྒྱུར་བཅོས་འབད་དགོ་པའི་རྒྱུ་མཚན་བཀོད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:42
+msgid "Class implementation ID"
+msgstr "དབྱེ་རིགས་ལག་ལེན་གྱི་ཨའི་ཌི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:43
+msgid "Class list"
+msgstr "དབྱེ་རིགས་ཐོ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:44
+msgid "Clear text flow control"
+msgstr "ཡིག་ཚིག་འབྱུང་འབབ་ཀྱི་ཚད་འཛིན་བསལ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:45
+msgid "Code content type"
+msgstr "ཨང་རྟགས་ཀྱི་ནང་དོན་དབྱེ་བ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:46
+msgid "Color of selected links"
+msgstr "སེལ་འཐུ་འབད་མི་ འབྲེལ་ལམ་གྱི་ཚོས་གཞི།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:48
+msgid "Color of selected links (deprecated)"
+msgstr "སེལ་འཐུ་འབད་མི་ འབྲེལ་ལམ་གྱི་ཚོས་གཞི་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:49
+msgid "Column span"
+msgstr "ཀེར་ཐིག་གི་ཚད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:50
+msgid "Columns"
+msgstr "ཀེར་ཐིག་ཚུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:51
+msgid "Comment"
+msgstr "བསམ་བཀོད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:52
+msgid "Computer code fragment"
+msgstr "གློག་རིག་ཀོཌི་གི་ཆ་ཤས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:53
+msgid "Content scheme"
+msgstr "ནང་དོན་ལས་འཆར།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:54
+msgid "Content type"
+msgstr "ནང་དོན་དབྱེ་བ།"
+
+#. The "type" attribute is deprecated for the "ol" tag only,
+#. since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:57
+msgid "Content type (deprecated)"
+msgstr "ནང་དོན་དབྱེ་བ་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:58
+msgid "Coordinates"
+msgstr "མཉམ་འབྲེལ་འབདཝ་ཨིན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:59
+msgid "DIV Style container"
+msgstr "ཌི་ཨའི་ཝི་བཟོ་རྣམ་འཛིན་སྣོད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:60
+msgid "DIV container"
+msgstr "ཌི་ཨའི་ཝི་འཛིན་སྣོད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:61
+msgid "Date and time of change"
+msgstr "བསྒྱུར་བཅོས་ཀྱི་ ཚེས་གྲངས་དང་ཆུ་ཚོད།"
+
+#. NOTE: used in "object" tag
+#: ../plugins/taglist/HTML.tags.xml.in.h:63
+msgid "Declare flag"
+msgstr "ཟུར་རྟགས་གསལ་བསྒྲགས་འབད།"
+
+#. Translators: DEFER is an optional attribute of the <script> tag.
+#. It indicates that the script is not going to generate any document
+#. content. The browser can continue parsing and drawing the page.
+#: ../plugins/taglist/HTML.tags.xml.in.h:67
+msgid "Defer attribute"
+msgstr "ཁྱད་ཆོས་ཕར་འགྱངས་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:68
+msgid "Definition description"
+msgstr "ངེས་ཚིག་འགྲེལ་བཤད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:69
+msgid "Definition list"
+msgstr "ངེས་ཚིག་ཐོ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:70
+msgid "Definition term"
+msgstr "ངེས་ཚིག་གི་ཊརམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:71
+msgid "Deleted text"
+msgstr "བཏོན་བཏང་ཡོད་པའི་ཚིག་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:72
+msgid "Direction"
+msgstr "ཁ་ཕྱོགས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:73
+msgid "Directionality"
+msgstr "ཁ་ཕྱོགས།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:75
+msgid "Directionality (deprecated)"
+msgstr "ཁ་ཕྱོགས་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:76
+msgid "Directory list"
+msgstr "སྣོད་ཐོའི་ཐོ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:77
+msgid "Disabled"
+msgstr "ལྕོགས་མིན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:78
+msgid "Document base"
+msgstr "ཡིག་ཆའི་གཞི་རྟེན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:79
+msgid "Document body"
+msgstr "ཡིག་ཆའི་མ་གཟུགས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:80
+msgid "Document head"
+msgstr "ཡིག་ཆའི་མགོ"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:81
+msgid "Document title"
+msgstr "ཡིག་ཆའི་མགོ་མིང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:82
+msgid "Document type"
+msgstr "ཡིག་ཆའི་དབྱེ་བ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:83
+msgid "Element ID"
+msgstr "རྒྱུ་རྫས་ཀྱི་ཨའི་ཌི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:84
+msgid "Embedded object"
+msgstr "ཟུག་ཅན་དངོས་པོ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:85
+#: ../plugins/taglist/Latex.tags.xml.in.h:9
+msgid "Emphasis"
+msgstr "གཙོ་བཏོན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:86
+msgid "Encode type"
+msgstr "ཨིན་ཀོཌི་གི་དབྱེ་བ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:87
+msgid "Figure"
+msgstr "ཨང་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:88
+msgid "Font face"
+msgstr "ཡིག་གཟུགས་ཀྱི་བཀོད་རྣམ།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:90
+msgid "Font face (deprecated)"
+msgstr "ཡིག་གཟུགས་བཀོད་རྣམ་(ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:91
+msgid "For label"
+msgstr "ཁ་ཡིག་གི་དོན་ལུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:92
+msgid "Forced line break"
+msgstr "བང་བཙོང་གི་གྱལ་རིམ་མཚམས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:93
+msgid "Form"
+msgstr "གཞི་སྒྲུབ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:94
+msgid "Form action handler"
+msgstr "བྱ་བའི་ལེགས་སྐྱོང་པ་ གཞི་སྒྲུབ་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:95
+msgid "Form control group"
+msgstr "ཚད་འཛིན་སྡེ་ཚན་ གཞི་སྒྲུབ་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:96
+msgid "Form field label text"
+msgstr "ས་སྒོ་ཁ་ཡིག་གི་ཚིག་ཡིག་ གཞི་སྒྲུབ་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:97
+msgid "Form input"
+msgstr "ཨིན་པུཊི་ གཞི་སྒྲུབ་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:98
+msgid "Form input type"
+msgstr "ཨིན་པུཊི་གི་དབྱེ་བ་ གཞི་སྒྲུབ་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:99
+msgid "Form method"
+msgstr "ཐབས་ལམ་གཞི་སྒྲུབ་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:100
+msgid "Forward link"
+msgstr "འབྲེལ་ལམ་གདོང་བསྐྱོད་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:101
+msgid "Frame"
+msgstr "གཞི་ཁྲམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:102
+#, fuzzy
+msgid "Frame border"
+msgstr "གཞི་ཁྲམ་མཐའ་མཚམས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:103
+msgid "Frame render parts"
+msgstr "གཞི་ཁྲམ་ལྷག་སྟོན་ཡན་ལག "
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:104
+msgid "Frame source"
+msgstr "གཞི་ཁྲམ་འབྱུང་ཁུངས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:105
+#, fuzzy
+msgid "Frame spacing"
+msgstr "གཞི་ཁྲམ་བར་སྟོང་བཞག་ཐངས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:106
+msgid "Frame target"
+msgstr "གཞི་ཁྲམ་དམིགས་གཏད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:107
+msgid "Frameborder"
+msgstr "གཞི་ཁྲམ་མཐའ་མཚམས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:108
+msgid "Frameset"
+msgstr "གཞི་ཁྲམ་ཚན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:109
+msgid "Frameset columns"
+msgstr "གཞི་ཁྲམ་ཚན་གྱི་ཀེར་ཐིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:110
+msgid "Frameset rows"
+msgstr "གཞི་ཁྲམ་ཚན་གྱི་གྲལ་ཐིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:111
+msgid "Framespacing"
+msgstr "གཞི་ཁྲམ་བར་སྟོང་བཞག་ཐངས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:112
+msgid "Generic embedded object"
+msgstr "ཇེ་ནི་རིཀ་ཟུག་ཅན་ཡོད་པའི་དངོས་པོ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:113
+msgid "Generic metainformation"
+msgstr "ཇེ་ནི་རིཀ་གི་ མེ་ཊ་བརྡ་དོན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:114
+msgid "Generic span"
+msgstr "ཇེ་ནི་རིཀ་གི་ཚད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:115
+msgid "HREF URI"
+msgstr "ཨེཆ་ཨར་ཨི་ཨེཕ་ ཡུ་ཨར་ཨའི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:116
+msgid "HTML root element"
+msgstr "ཨེཆ་ཊི་ཨེམ་ཨེལ་ རྩ་བའི་རྒྱུ་ཆས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:117
+msgid "HTML version"
+msgstr "ཨེཆ་ཊི་ཨེམ་ཨེལ་ ཐོན་རིམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:118
+#, fuzzy
+msgid "HTML — Special Characters"
+msgstr "ཨེཆ་ཊི་ཨེམ་ཨེལ་-དམིགས་བསལ་ཡིག་འབྲུ་ཚུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:119
+#, fuzzy
+msgid "HTML — Tags"
+msgstr "ཨེཆ་ཊི་ཨེམ་ཨེལ་-ངོ་རྟགས་ཚུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:120
+msgid "HTTP header name"
+msgstr "ཨེཆ་ཊི་ཊི་པི་ མགོ་ཡིག་མིང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:121
+#, fuzzy
+msgid "Header cell IDs"
+msgstr "མགོ་ཡིག་ནང་ཐིག་གི་ཨའི་ཌི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:122
+msgid "Heading"
+msgstr "མགུ་རྒྱན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:123
+msgid "Heading 1"
+msgstr "མགུ་རྒྱན་ ༡།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:124
+msgid "Heading 2"
+msgstr "མགུ་རྒྱན་ ༢།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:125
+msgid "Heading 3"
+msgstr "མགུ་རྒྱན་ ༣།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:126
+msgid "Heading 4"
+msgstr "མགུ་རྒྱན་ ༤།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:127
+msgid "Heading 5"
+msgstr "མགུ་རྒྱན་ ༥།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:128
+msgid "Heading 6"
+msgstr "མགུ་རྒྱན་ ༦།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:129
+msgid "Height"
+msgstr "མཐོ་ཚད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:130
+msgid "Horizontal rule"
+msgstr "ཐད་སྙོམས་ལམ་ལུགས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:131
+msgid "Horizontal space"
+msgstr "ཐད་སྙོམས་བར་སྟོང་།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:133
+msgid "Horizontal space (deprecated)"
+msgstr "ཐད་སྙོམས་བར་སྟོང་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:134
+#, fuzzy
+msgid "I18N BiDi override"
+msgstr "ཨའི་༡༨ཨེན་ བི་ཨའི་ཌི་ཨའི་ ཆ་མེད་བཟོ་ནི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:135
+msgid "Image"
+msgstr "གཟུགས་བརྙན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:136
+msgid "Image map"
+msgstr "གཟུགས་བརྙན་ས་ཁྲ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:137
+msgid "Image map area"
+msgstr "གཟུགས་བརྙན་ས་ཁྲའི་མངའ་ཁོངས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:138
+msgid "Image map name"
+msgstr "གཟུགས་བརྙན་ས་ཁྲའི་མིང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:139
+msgid "Image source"
+msgstr "གཟུགས་བརྙན་འབྱུང་ཁུངས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:140
+msgid "Inline frame"
+msgstr "ཨིན་ལའིན་གྱི་གཞི་ཁྲམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:141
+msgid "Inline layer"
+msgstr "ཨིན་ལའིན་གྱི་བང་རིམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:142
+msgid "Inserted text"
+msgstr "ནང་བཙུགས་ཀྱི་ཚིག་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:143
+msgid "Instance definition"
+msgstr "དུས་སྐབས་ཀྱི་ངེས་ཚིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:144
+msgid "Italic text"
+msgstr "ཨའི་ཊ་ལིཀ་ཚིག་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:145
+msgid "Java applet"
+msgstr "ཇ་བ་ ཨེཔ་ལེཊི།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:147
+msgid "Java applet (deprecated)"
+msgstr "ཇ་བ་ ཨེཔ་ལེཊི་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:148
+msgid "Label"
+msgstr "ཁ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:149
+msgid "Language code"
+msgstr "སྐད་ཡིག་ཨང་རྟགས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:150
+msgid "Large text style"
+msgstr "ཚིག་ཡིག་ཆེ་བའི་བཟོ་རྣམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:151
+msgid "Layer"
+msgstr "བང་རིམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:152
+msgid "Link color"
+msgstr "འབྲེལ་ལམ་ཚོས་གཞི།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:154
+msgid "Link color (deprecated)"
+msgstr "འབྲེལ་ལམ་ཚོས་གཞི་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:155
+msgid "List item"
+msgstr "ཐོ་ཡིག་རྣམ་གྲངས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:156
+msgid "List of MIME types for file upload"
+msgstr "ཡིག་སྣོད་ཨཔ་ལོཌི་གི་དོན་ལུ་ མ་ཡིམདབྱེ་བའི་ཐོ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:157
+msgid "List of supported character sets"
+msgstr "རྒྱབ་སྐྱོར་ཡོད་པའི་ ཡིག་འབྲུའི་ཆ་ཚན་གྱི་ཐོ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:158
+msgid "Listing"
+msgstr "ཐོ་བཀོད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:159
+msgid "Local change to font"
+msgstr "ཡིག་གཟུགས་ལུ་ ཉེ་གནས་ཀྱི་བསྒྱུར་བཅོས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:160
+msgid "Long description link"
+msgstr "འགྲེལ་བཤད་རིང་བའི་འབྲེལ་ལམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:161
+msgid "Long quotation"
+msgstr "འདྲེན་ཚིག་རིངམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:162
+msgid "Mail link"
+msgstr "ཡིག་འཕྲིན་འབྲེལ་ལམ།"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:164
+msgid "Margin pixel height"
+msgstr "ས་སྟོང་གི་ པིག་སེལ་མཐོ་ཚད།"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:166
+msgid "Margin pixel width"
+msgstr "ས་སྟོང་གི་ པིག་སེལ་རྒྱ་ཚད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:167
+msgid "Marquee"
+msgstr "མར་ཀུའི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:168
+msgid "Maximum length of text field"
+msgstr "ཚིག་ཡིག་ས་སྒོ་གྱི་རིང་ཚད་མང་མཐའ།"
+
+#. Here I take some liberties: There's no mandatory attributes,
+#. but those are most common, and will likely be used.
+#: ../plugins/taglist/HTML.tags.xml.in.h:171
+msgid "Media-independent link"
+msgstr "བརྡ་ལམ་རང་དབང་གི་འབྲེལ་ལམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:172
+msgid "Menu list"
+msgstr "དཀར་ཆག་ཐོ་ཡིག"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:174
+msgid "Menu list (deprecated)"
+msgstr "དཀར་ཆག་ཐོ་ཡིག་(ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:175
+msgid "Multi-line text field"
+msgstr "འབྲེལ་ལམ་སྣ་མང་གི་ ཚིག་ཡིག་ས་སྒོ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:176
+msgid "Multicolumn"
+msgstr "སྣ་མང་ཀེར་ཐིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:177
+msgid "Multiple"
+msgstr "སྣ་མང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:178
+msgid "Name"
+msgstr "མིང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:179
+msgid "Named property value"
+msgstr "མིང་བཏགས་ཡོད་པའི་ རྒྱུ་དངོས་ཀྱི་གནས་གོང་"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:180
+msgid "Next ID"
+msgstr "ཤུལ་མའི་ཨའི་ཌི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:181
+msgid "No URI"
+msgstr "ཡུ་ཨར་ཨའི་ མིན་འདུག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:182
+msgid "No embedded objects"
+msgstr "ཟུག་ཅན་དངོས་པོ་མིན་འདུག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:183
+msgid "No frames"
+msgstr "གཞི་ཁྲམ་མིན་འདུག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:184
+msgid "No layers"
+msgstr "བང་རིམ་མིན་འདུག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:185
+msgid "No line break"
+msgstr "གྱལ་རིམ་བར་མཚམས་མིན་འདུག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:186
+msgid "No resize"
+msgstr "ཚད་གཞི་བསྐྱར་བཟོ་མིན་འདུག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:187
+msgid "No script"
+msgstr "ཡིག་ཚུགས་མིན་འདུག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:188
+msgid "No shade"
+msgstr "ནག་གྲིབ་མིན་འདུག"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:190
+msgid "No shade (deprecated)"
+msgstr "ནག་གྲིབ་མེད་(ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:191
+msgid "No word wrap"
+msgstr "མིང་ཚིག་གི་ ལོག་མཚམས་མིན་འདུག"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:193
+msgid "No word wrap (deprecated)"
+msgstr "མིང་ཚིག་གི་ ལོག་མཚམས་མིན་འདུག (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:194
+msgid "Non-breaking space"
+msgstr "རྒྱུན་ཆད་མེད་པའི་བར་སྟོང་"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:195
+msgid "Note"
+msgstr "དྲན་འཛིན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:196
+msgid "Object applet file"
+msgstr "དངོས་པོའི་ ཨེཔ་ལེཊི་ ཡིག་སྣོད།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:198
+msgid "Object applet file (deprecated)"
+msgstr "དངོས་པོའི་ ཨེཔ་ལེཊི་ ཡིག་སྣོད་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:199
+msgid "Object data reference"
+msgstr "དངོས་པོའི་གནད་སྡུད་གཞི་བསྟུན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:200
+msgid "Offset for alignment character"
+msgstr "ཕྲང་སྒྲིག་ཡིག་འབྲུའི་དོན་ལུ་ པར་ལེན་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:201
+msgid "OnBlur event"
+msgstr "རབ་རིབ་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:202
+msgid "OnChange event"
+msgstr "འགྱུར་བའི་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:203
+msgid "OnClick event"
+msgstr "ཨེབ་གཏང་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:204
+msgid "OnDblClick event"
+msgstr "ཨེབ་གཏང་ཐེངས་གཉིས་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:205
+msgid "OnFocus event"
+msgstr "ཆེད་དམིགས་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:206
+msgid "OnKeyDown event"
+msgstr "ལྡེ་མིག་མར་འཐེན་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:207
+msgid "OnKeyPress event"
+msgstr "ལྡེ་མིག་ཨེབ་ཐོག་ལུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:208
+msgid "OnKeyUp event"
+msgstr "ལྡེ་མིག་ཡར་འཐེན་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:209
+msgid "OnLoad event"
+msgstr "མངོན་གསལ་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:210
+msgid "OnMouseDown event"
+msgstr "མཱའུསི་ མར་འཐེན་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:211
+msgid "OnMouseMove event"
+msgstr "མཱའུསི་ འགུལ་སྤར་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:212
+msgid "OnMouseOut event"
+msgstr "མཱའུསི་ ཕྱིར་བསྐྱོད་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:213
+msgid "OnMouseOver event"
+msgstr "མཱའུསི་གི་ ལྟག་ལས་ཕར་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:214
+msgid "OnMouseUp event"
+msgstr "མཱའུསི་ ཡར་འཐེན་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:215
+msgid "OnReset event"
+msgstr "སླར་སྒྲིག་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:216
+msgid "OnSelect event"
+msgstr "སེལ་འཐུ་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:217
+msgid "OnSubmit event"
+msgstr "ཞུ་འབུལ་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:218
+msgid "OnUnload event"
+msgstr "མངོན་གསལ་བཤོལ་ནི་གུ་ཡོད་པའི་བྱུང་ལས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:219
+msgid "Option group"
+msgstr "གདམ་ཁའི་སྡེ་ཚན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:220
+msgid "Option selector"
+msgstr "གདམ་ཁ་སེལ་བྱེད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:221
+msgid "Ordered list"
+msgstr "གོ་རིམ་ལྡན་པའི་ཐོ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:222
+msgid "Output media"
+msgstr "ཨའུཊི་པུཊི་གི་ བརྡ་ལམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:223
+msgid "Paragraph"
+msgstr "དོན་མཚམས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:224
+msgid "Paragraph class"
+msgstr "དོན་མཚམས་དབྱེ་རིགས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:225
+msgid "Paragraph style"
+msgstr "དོན་མཚམས་བཟོ་རྣམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:226
+msgid "Preformatted listing"
+msgstr "སྔ་གོང་རྩ་སྒྲིག་འབད་བའི་ཐོ་བཀོད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:227
+msgid "Preformatted text"
+msgstr "སྔ་གོང་རྩ་སྒྲིག་འབད་བའི་ཚིག་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:228
+msgid "Profile metainfo dictionary"
+msgstr "གསལ་སྡུད་ཀྱི་ མེ་ཊ་བརྡ་དོན་ཚིག་མཛོད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:229
+msgid "Prompt message"
+msgstr "འཕྲིན་དོན་ནུས་སྤེལ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:230
+msgid "Push button"
+msgstr "ཨེབ་རྟ་འཕུལ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:231
+msgid "Quote"
+msgstr "ལུང་འདྲེན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:232
+msgid "Range"
+msgstr "ཁྱབ་ཚད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:233
+msgid "ReadOnly text and password"
+msgstr "ལྷག་ནི་ཙམ་ཅིག་གི་ ཚིག་ཡིག་དང་ཆོག་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:234
+msgid "Reduced spacing"
+msgstr "མར་ཕབ་ཅན་གྱི་བར་སྟོང་།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:236
+msgid "Reduced spacing (deprecated)"
+msgstr "མར་ཕབ་ཅན་གྱི་བར་སྟོང་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:237
+msgid "Reverse link"
+msgstr "འབྲེལ་ལམ་རིམ་ལོག་འབད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:238
+msgid "Root"
+msgstr "རྩ་བ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:239
+msgid "Rows"
+msgstr "གྲལ་ཐིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:240
+msgid "Rulings between rows and columns"
+msgstr "གྲལ་ཐིག་དང་ཀེར་ཐིག་ཚུ་གི་བར་ནའི་ཚད་བཟུང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:241
+msgid "Sample program output, scripts"
+msgstr "དཔེ་ཚད་ལས་རིམ་གྱི་ ཨའུཊི་པུཊི་ ཡིག་ཚུགས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:242
+msgid "Scope covered by header cells"
+msgstr "མགོ་ཡིག་ནང་ཐིག་གིས་ཁྱབ་པའི་འོས་སྐབས།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:244
+msgid "Script language name"
+msgstr "ཡིག་ཚུགས་སྐད་ཡིག་གི་མིང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:245
+#, fuzzy
+msgid "Script statements"
+msgstr "ཡིག་ཚུགས་ཀྱི་གསལ་བཤད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:246
+msgid "Scrollbar"
+msgstr "བཤུད་ཕྲ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:247
+msgid "Selectable option"
+msgstr "སེལ་འཐུ་འབད་བཏུབ་པའི་གདམ་ཁ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:248
+msgid "Selected"
+msgstr "སེལ་འཐུ་འབད་མི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:249
+msgid "Server-side image map"
+msgstr "སར་བར་ཕྱོགས་ཀྱི་ གཟུགས་བརྙན་ས་ཁྲ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:250
+msgid "Shape"
+msgstr "དབྱིབས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:251
+msgid "Short inline quotation"
+msgstr "ཨིན་ལའིན་གྱི་ འདྲེན་ཚིག་ཐུང་ཀུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:252
+msgid "Single line prompt"
+msgstr "གྱལ་རིམ་རྐྱང་པོའི་ནུས་སྤེལ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:253
+msgid "Size"
+msgstr "ཚད།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:255
+msgid "Size (deprecated)"
+msgstr "ཚད་(ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:256
+msgid "Small text style"
+msgstr "ཚིག་ཡིག་ཆུང་ཀུའི་བཟོ་རྣམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:257
+msgid "Soft line break"
+msgstr "འཇམ་ཁྱུག་གྱལ་རིམ་གྱི་བར་མཚམས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:258
+msgid "Sound"
+msgstr "སྒྲ་སྐད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:259
+msgid "Source"
+msgstr "འབྱུང་ཁུངས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:260
+#, fuzzy
+msgid "Space-separated archive list"
+msgstr "བར་སྟོང་གིས་ཁ་འཕྱལ་མི་ ཡིག་མཛོད་ཐོ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:261
+msgid "Spacer"
+msgstr "བར་སྟོང་བཞག་མི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:262
+msgid "Spacing between cells"
+msgstr "ནང་ཐིག་ཚུ་གི་བར་ནའི་བར་སྟོང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:263
+msgid "Spacing within cells"
+msgstr "ནང་ཐིག་ཚུ་གི་ནང་འཁོད་ཀྱི་བར་སྟོང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:264
+msgid "Span"
+msgstr "འཕར་ཚད་། "
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:265
+msgid "Square root"
+msgstr "སིཀོའེར་རུཊི།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:266
+#, fuzzy
+msgid "Standby load message"
+msgstr "མངོན་གསལ་འཕྲིན་དོན་གྱི་རྒྱབ་ཐག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:267
+msgid "Starting sequence number"
+msgstr "འབྱུང་རིམ་ཨང་གྲངས་ འགོ་བཙུགས་དོ།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:269
+msgid "Starting sequence number (deprecated)"
+msgstr "འབྱུང་རིམ་ཨང་གྲངས་ འགོ་བཙུགས་དོ་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:270
+msgid "Strike-through text"
+msgstr "སྦུག་འབྲེག་ཚིག་ཡིག"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:272
+msgid "Strike-through text (deprecated)"
+msgstr "སྦུག་འབྲེག་ཚིག་ཡིག་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:273
+msgid "Strike-through text style"
+msgstr "སྦུག་འབྲེག་ཚིག་ཡིག་གི་བཟོ་རྣམ།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:275
+msgid "Strike-through text style (deprecated)"
+msgstr "སྦུག་འབྲེག་ཚིག་ཡིག་གི་བཟོ་རྣམ་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:276
+msgid "Strong emphasis"
+msgstr "གཙོ་བཏོན་དྲག་པོ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:277
+msgid "Style info"
+msgstr "བཟོ་རྣམ་བརྡ་དོན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:278
+msgid "Subscript"
+msgstr "འོག་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:279
+msgid "Superscript"
+msgstr "སྟེང་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:280
+msgid "Tab order position"
+msgstr "མཆོང་ལྡེའི་གོ་རིམ་གནས་ས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:281
+msgid "Table"
+msgstr "ཐིག་ཁྲམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:282
+msgid "Table body"
+msgstr "ཐིག་ཁྲམ་མ་གཟུགས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:283
+msgid "Table caption"
+msgstr "ཐིག་ཁྲམ་འགོ་བརྗོད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:284
+msgid "Table column group properties"
+msgstr "ཐིག་ཁྲམ་ཀེར་ཐིག་སྡེ་ཚན་གྱི་རྒྱུ་དངོས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:285
+msgid "Table column properties"
+msgstr "ཐིག་ཁྲམ་ཀེར་ཐིག་གི་རྒྱུ་དངོས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:286
+msgid "Table data cell"
+msgstr "ཐིག་ཁྲམ་གནད་སྡུད་ནང་ཐིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:287
+msgid "Table footer"
+msgstr "ཐིག་ཁྲམ་མཇུག་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:288
+msgid "Table header"
+msgstr "ཐིག་ཁྲམ་མགོ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:289
+msgid "Table header cell"
+msgstr "ཐིག་ཁྲམ་མགོ་ཡིག་གི་ནང་ཐིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:290
+msgid "Table row"
+msgstr "ཐིག་ཁྲམ་གྲལ་ཐིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:291
+msgid "Table summary"
+msgstr "ཐིག་ཁྲམ་བཅུད་སྡུད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:292
+#, fuzzy
+msgid "Target — Blank"
+msgstr "དམིགས་གཏད་-སྟོངམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:293
+#, fuzzy
+msgid "Target — Parent"
+msgstr "དམིགས་གཏད་-རྩ་ལག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:294
+#, fuzzy
+msgid "Target — Self"
+msgstr "དམིགས་གཏད་-རང་ཉིད་ལུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:295
+#, fuzzy
+msgid "Target — Top"
+msgstr "དམིགས་གཏད་-མགོ་ལུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:296
+msgid "Teletype or monospace text style"
+msgstr "ཊེ་ལི་ཊའིབ་ ཡང་ཅིན་ མོ་ནོ་སི་པེསི་གི་ ཚིག་ཡིག་བཟོ་རྣམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:297
+msgid "Text"
+msgstr "ཚིག་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:298
+msgid "Text color"
+msgstr "ཚིག་ཡིག་ཚོས་གཞི།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:300
+msgid "Text color (deprecated)"
+msgstr "ཚིག་ཡིག་ཚོས་གཞི་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:301
+msgid "Text entered by user"
+msgstr "ལག་ལེན་པ་གིས་བཙུགས་མི་ཚིག་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:302
+msgid "Title"
+msgstr "མགོ་མིང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:303
+#, fuzzy
+msgid "Top margin in pixels"
+msgstr "མགོའི་ས་སྟོང་ པིག་སེལསི་ནང་།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:304
+msgid "URL"
+msgstr "ཡུ་ཨར་ཨེལ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:305
+msgid "Underlined text style"
+msgstr "འོག་ཐིག་བཀལ་མི་ ཚིག་ཡིག་གི་བཟོ་རྣམ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:306
+msgid "Unordered list"
+msgstr "གོ་རིམ་མེད་པའི་ཐོ་ཡིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:307
+msgid "Use image map"
+msgstr "གཟུགས་བརྙན་ས་ཁྲ་ལག་ལེན་འཐབ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:308
+msgid "Value"
+msgstr "བེ་ལུ།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:309
+msgid "Value interpretation"
+msgstr "བེ་ལུའི་གོ་དོན།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:310
+msgid "Variable or program argument"
+msgstr "འགྱུར་བ་ཅན་ ཡང་ན་ ལས་རིམ་གྱི་སྒྲུབ་རྟགས།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:311
+msgid "Vertical cell alignment"
+msgstr "ཀེར་ཕྲང་གི་ ནང་ཐིག་ཕྲང་སྒྲིག"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:312
+msgid "Vertical space"
+msgstr "ཀེར་ཕྲང་གི་བར་སྟོང་།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:314
+msgid "Vertical space (deprecated)"
+msgstr "ཀེར་ཕྲང་གི་བར་སྟོང་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:315
+msgid "Visited link color"
+msgstr "ལྟ་སྤྱོད་འབད་བའི་ འབྲེལ་ལམ་ཚོས་གཞི།"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:317
+msgid "Visited link color (deprecated)"
+msgstr "བལྟ་སྤྱོད་འབད་བའི་ འབྲེལ་ལམ་ཚོས་གཞི་ (ངོས་ལེན་མེད་པ་)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:318
+msgid "Width"
+msgstr "རྒྱ་ཚད།"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:319
+#, fuzzy
+msgid "XHTML 1.0 — Tags"
+msgstr "ཨེགསི་ཨེཆ་ཊི་ཨེམ་ཨེལ་ ༡.༠ - ངོ་རྟགས་ཚུ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:1
+msgid "Bibliography (cite)"
+msgstr "དེབ་ཐོ། (བརྗོད་པ)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:2
+msgid "Bibliography (item)"
+msgstr "དེབ་ཐོ། (རྣམ་གྲངས)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:3
+msgid "Bibliography (shortcite)"
+msgstr "དེབ་ཐོ། (བརྗོད་ཐུང་)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:4
+msgid "Bibliography (thebibliography)"
+msgstr "དེབ་ཐོ། (དེབ་ཐོ་དེ)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:5
+msgid "Brackets ()"
+msgstr "གུག་ཤད་ཚུ་()"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:6
+msgid "Brackets <>"
+msgstr "གུག་ཤད་ཚུ་ <>།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:7
+msgid "Brackets []"
+msgstr "གུག་ཤད་ཚུ་[]"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:8
+msgid "Brackets {}"
+msgstr "གུག་ཤད་ཚུ་{}"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:10
+msgid "File input"
+msgstr "ཡིག་སྣོད་ཀྱི་ ཨིན་པུཊི།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:11
+msgid "Footnote"
+msgstr "མཇུག་གི་དྲན་འཛིན།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:12
+#, fuzzy
+msgid "Function cosine"
+msgstr "ལས་འགན་ ཀོ་སའིན།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:13
+msgid "Function e^"
+msgstr "ལས་འགན་ ཨི^།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:14
+msgid "Function exp"
+msgstr "ལས་འགན་ ཨི་ཨེགསི་པི།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:15
+msgid "Function log"
+msgstr "ལས་འགན་ དྲན་དེབ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:16
+msgid "Function log10"
+msgstr "ལས་འགན་ དྲན་དེབ་ ༡༠།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:17
+msgid "Function sine"
+msgstr "ལས་འགན་ སའིན།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:18
+msgid "Greek alpha"
+msgstr "གིརིཀ་ ཨཱལ་ཕ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:19
+msgid "Greek beta"
+msgstr "གིརིཀ་ བེ་ཊ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:20
+msgid "Greek epsilon"
+msgstr "གིརིཀ་ ཨིཔ་སི་ལཱོན"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:21
+msgid "Greek gamma"
+msgstr "གིརིཀ་ གམ་མ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:22
+msgid "Greek lambda"
+msgstr "གིརིཀ་ ལེམ་ཌ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:23
+msgid "Greek rho"
+msgstr "གིརིཀ་ རཱོ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:24
+msgid "Greek tau"
+msgstr "གིརིཀ་ ཏའུ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:25
+msgid "Header 0 (chapter)"
+msgstr "མགོ་ཡིག་ ༠ (ལེའུ)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:26
+msgid "Header 0 (chapter*)"
+msgstr "མགོ་ཡིག་ ༠ (ལེའུ་*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:27
+msgid "Header 1 (section)"
+msgstr "མགོ་ཡིག་ ༡ (དབྱེ་ཚན)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:28
+msgid "Header 1 (section*)"
+msgstr "མགོ་ཡིག་ ༡ (དབྱེ་ཚན་*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:29
+msgid "Header 2 (subsection)"
+msgstr "མགོ་ཡིག་ ༢ (དབྱེ་ཚན་ཡན་ལག)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:30
+msgid "Header 2 (subsection*)"
+msgstr "མགོ་ཡིག་ ༢ (དབྱེ་ཚན་ཡན་ལག*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:31
+msgid "Header 3 (subsubsection)"
+msgstr "མགོ་ཡིག་ ༣ (དོན་ཚན་ཡན་ལག་ནང་གསེས)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:32
+msgid "Header 3 (subsubsection*)"
+msgstr "མགོ་ཡིག་ ༣ (དོན་ཚན་ཡན་ལག་ནང་གསེས*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:33
+msgid "Header 4 (paragraph)"
+msgstr "མགོ་ཡིག་ ༤ (དོན་མཚམས)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:34
+msgid "Header appendix"
+msgstr "མགོ་ཡིག་ཟུར་དེབ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:35
+msgid "Item"
+msgstr "རྣམ་གྲངས།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:36
+msgid "Item with label"
+msgstr "ཁ་ཡིག་དང་བཅས་པའི་རྣམ་གྲངས།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:37
+#, fuzzy
+msgid "Latex — Tags"
+msgstr "ལེ་ཊེགསི་-ངོ་རྟགས།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:38
+msgid "List description"
+msgstr "ཐོ་ཡིག་གི་འགྲེལ་བཤད།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:39
+msgid "List enumerate"
+msgstr "གྲངས་བཀོད་ཐོ་བཀོད་འབད།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:40
+msgid "List itemize"
+msgstr "རྣམ་གྲངས་ཐོ་བཀོད་འབད།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:41
+msgid "Maths (display)"
+msgstr "ཨང་རྩིས། (བཀྲམ་སྟོན)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:42
+msgid "Maths (inline)"
+msgstr "ཨང་རྩིས། (ཨིན་ལའིན)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:43
+msgid "Operator fraction"
+msgstr "བཀོལ་སྤྱོད་པའི་ཆ་ལག"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:44
+msgid "Operator integral (display)"
+msgstr "བཀོལ་སྤྱོད་པའི་གཅིག་སྒྲིལ། (བཀྲམ་སྟོན)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:45
+msgid "Operator integral (inline)"
+msgstr "བཀོལ་སྤྱོད་པའི་གཅིག་སྒྲིལ། (ཨིན་ལའིན)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:46
+msgid "Operator sum (display)"
+msgstr "བཀོལ་སྤྱོད་པའི་དངུལ་བསྡོམས། (བཀྲམ་སྟོན)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:47
+msgid "Operator sum (inline)"
+msgstr "བཀོལ་སྤྱོད་པའི་དངུལ་བསྡོམས། (ཨིན་ལའིན)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:48
+msgid "Reference label"
+msgstr "གཞི་བསྟུན་ཁ་ཡིག"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:49
+msgid "Reference ref"
+msgstr "གཞི་བསྟུན་ རེཕ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:50
+msgid "Symbol <<"
+msgstr "བརྡ་མཚོན་ <<།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:51
+msgid "Symbol <="
+msgstr "བརྡ་མཚོན་ <=།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:52
+msgid "Symbol >="
+msgstr "བརྡ་མཚོན་>=།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:53
+msgid "Symbol >>"
+msgstr "བརྡ་མཚོན་ >>།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:54
+msgid "Symbol and"
+msgstr "བརྡ་མཚོན་དང་།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:55
+msgid "Symbol const"
+msgstr "བརྡ་མཚོན་བཟོ་བསྐྲུན།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:56
+msgid "Symbol d-by-dt"
+msgstr "བརྡ་མཚོན་ ཌི་-བི་ཝའི་-ཌི་ཊི།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:57
+msgid "Symbol d-by-dt-partial"
+msgstr "བརྡ་མཚོན་ ཌི་-བི་ཝའི་-ཌི་ཊི-ཆ་ཤས།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:58
+msgid "Symbol d2-by-dt2-partial"
+msgstr "བརྡ་མཚོན་ ཌི་༢-བི་ཝའི་-ཌི་ཊི་༢-ཆ་ཤས།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:59
+msgid "Symbol dagger"
+msgstr "བརྡ་མཚོན་ ཌེ་གར།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:60
+#, fuzzy
+msgid "Symbol em-dash ---"
+msgstr "བརྡ་མཚོན་ སྦྲེལ་རྟགས་---"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:61
+#, fuzzy
+msgid "Symbol en-dash --"
+msgstr "བརྡ་མཚོན་ སྦྲེལ་རྟགས་--"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:62
+msgid "Symbol equiv"
+msgstr "བརྡ་མཚོན་འདྲ་མཉམ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:63
+msgid "Symbol infinity"
+msgstr "བརྡ་མཚོན་ ཚད་མེད།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:64
+msgid "Symbol mathspace ,"
+msgstr "བརྡ་མཚོན་ རྩིས་ཀྱི་བར་སྟོང་ ,།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:65
+msgid "Symbol mathspace ."
+msgstr "བརྡ་མཚོན་ རྩིས་ཀྱི་བར་སྟོང་ .།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:66
+msgid "Symbol mathspace _"
+msgstr "བརྡ་མཚོན་ རྩིས་ཀྱི་བར་སྟོང་_།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:67
+msgid "Symbol mathspace __"
+msgstr "བརྡ་མཚོན་ རྩིས་ཀྱི་བར་སྟོང་ __།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:68
+msgid "Symbol simeq"
+msgstr "བརྡ་མཚོན་ སི་མེཀ། "
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:69
+msgid "Symbol star"
+msgstr "བརྡ་མཚོན་ སྐར་མ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:70
+msgid "Typeface bold"
+msgstr "ཡིག་བཟོ་རྒྱགས་པ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:71
+msgid "Typeface italic"
+msgstr "ཡིག་བཟོ་ ཨའི་ཏ་ལིཀ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:72
+msgid "Typeface slanted"
+msgstr "ཡིག་བཟོ་ གཡོ་གཡོཝ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:73
+msgid "Typeface type"
+msgstr "ཡིག་བཟོའི་ དབྱེ་བ།"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:74
+msgid "Unbreakable text"
+msgstr "བར་བཏོག་འབད་མ་ཚུགས་པའི་ཚིག་ཡིག"
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
+#, fuzzy
+msgid ""
+"Provides a method to easily insert commonly used tags/strings into a "
+"document without having to type them."
+msgstr ""
+"ཡིག་དཔར་བརྐྱབ་མ་དགོ་པར་ ཐུན་མོང་གིས་ ལག་ལེན་འཐབ་མི་ ངོ་རྟགས་དང་/ཡིག་རྒྱུན་ཚུ་ ཡིག་ཆ་ཅིག་ནང་ "
+"འཇམ་ཏོང་ཏོ་སྦེ་ བཙུགས་ནིའི་ ཐབས་ལམ་ཅིག་སྤྲོདཔ་ཨིན།"
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
+msgid "Tag list"
+msgstr "ངོ་རྟགས་ཐོ་ཡིག"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:1
+#, fuzzy
+msgid "XSLT — Axes"
+msgstr "ཨེགསི་ཨེསི་ཨེལ་ཊི་-ཨེག་སེསི།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:2
+#, fuzzy
+msgid "XSLT — Elements"
+msgstr "ཨེགསི་ཨེསི་ཨེལ་ཊི་-རྒྱུ་རྫས།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:3
+#, fuzzy
+msgid "XSLT — Functions"
+msgstr "ཨེགསི་ཨེསི་ཨེལ་ཊི་-ལས་འགན།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:4
+msgid "ancestor"
+msgstr "ཕ་མས།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:5
+msgid "ancestor-or-self"
+msgstr "ཕ་མས་ ཡང་ཅིན་ རང་ཉིད།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:6
+msgid "attribute"
+msgstr "ཁྱད་ཆོས།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:7
+msgid "child"
+msgstr "ཆ་ལག"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:8
+msgid "descendant"
+msgstr "རྒྱུད་པ།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:9
+msgid "descendant-or-self"
+msgstr "རྒྱུད་པ་ ཡང་ན་ རང་ཉིད།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:10
+msgid "following"
+msgstr "འོག་གི།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:11
+msgid "following-sibling"
+msgstr "འོག་གི་སྤུན་ཆ།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:12
+msgid "namespace"
+msgstr "མིང་གི་བར་སྟོང་།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:13
+msgid "parent"
+msgstr "རྩ་ལག"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:14
+msgid "preceding"
+msgstr "སྦོམ་ཤོས།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:15
+msgid "preceding-sibling"
+msgstr "སྤུན་ཆ་སྦོམ་ཤོས།"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:16
+msgid "self"
+msgstr "རང་ཉིད།"
+
+#: ../plugins/taglist/XUL.tags.xml.in.h:1
+#, fuzzy
+msgid "XUL — Tags"
+msgstr "ཨེགསི་ཡུ་ཨེལ་ - ངོ་རྟགས་ཚུ།"

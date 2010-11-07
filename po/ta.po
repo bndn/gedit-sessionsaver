@@ -1,243 +1,350 @@
-# translation of gedit-plugins.master.ta.po to Tamil
+# translation of gedit.master.ta.po to Tamil
 # Tamil Translation of gedit
 # Copyright (C) 2001 Dinesh Nadarajah
 #
 # Dinesh Nadarajah, 2001 <n_dinesh@yahoo.com>.
-# I. Felix <ifelix@redhat.com>, 2009.
+# Dinesh Nadarajah, 2004 <dinesh_list@sbcglobal.net>.
+# Jayaradha N <jaya@pune.redhat.com>, 2004.
+# Felix <ifelix@redhat.com>, 2006.
+# Dr.T.Vasudevan <agnihot3@gmail.com>, 2007.
+# I. Felix <ifelix@redhat.com>, 2008, 2009.
+# Dr.T.Vasudevan <agnihot3@gmail.com>, 2009.
+# Dr,T,Vasudevan <agnihot3@gmail.com>, 2009, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins.master.ta\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2009-10-18 20:14+0000\n"
-"PO-Revision-Date: 2009-10-28 15:53+0530\n"
-"Last-Translator: I. Felix <ifelix@redhat.com>\n"
-"Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
+"Project-Id-Version: gedit.master.ta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-07 13:12+0100\n"
+"PO-Revision-Date: 2010-03-03 22:01+0530\n"
+"Last-Translator: Dr,T,Vasudevan <agnihot3@gmail.com>\n"
+"Language-Team: American English <Ubuntu-l10n-tam@lists.ubuntu.com>>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
 "\n"
 "\n"
 "\n"
+"\n"
+"\n"
 
-#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
 msgid "Bookmarks"
 msgstr "புத்தகக்குறிகள்"
 
-#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
 msgid "Easy document navigation with bookmarks"
 msgstr "புத்தகக்குறிகளுடன்  எளிய ஆவண நகர்த்தல்"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:130
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
+#, fuzzy
 msgid "Toggle Bookmark"
-msgstr "டோகுல் புத்தக்குறி"
+msgstr "புத்தகக்குறிகள்"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:131
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+#, fuzzy
 msgid "Toggle bookmark status of the current line"
-msgstr "நடப்பு கோட்டில் டோகும் புத்தக்குறியின் நிலை"
+msgstr "நடப்பு சாளரத்தின் நிலைப்பட்டையை காட்டவும் அல்லது மறைக்கவும்"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:133
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "அடுத்த புத்தக் குறிக்கு செல்"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:134
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+#, fuzzy
 msgid "Goto the next bookmark"
-msgstr "அடுத்த புத்தக்குறிப்பிற்கு செல்லவும்"
+msgstr "அடுத்து பார்வையிட்ட இடத்திற்கு செல்லவும்"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:136
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+#, fuzzy
 msgid "Goto Previous Bookmark"
-msgstr "முந்தைய புத்தக குறிப்புகளுக்கு செல்"
+msgstr "முந்தைய இடத்திற்கு செல்லவும்"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+#, fuzzy
 msgid "Goto the previous bookmark"
-msgstr "முந்தைய புத்தக குறிப்புகளுக்கு செல்லவும்"
+msgstr "முந்தைய பக்கத்தை காட்டுக"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "தானாகவே அடைப்புக்குறிகளை சேர்ப்பதற்கு மூடுகிறது."
+msgstr "தானாக கண்டறிந்த குறியீட்டாக்கம்"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Bracket Completion"
-msgstr "அடைப்புக்குறி முடிவுற்றது"
+msgstr "அடைப்புக்குறி ஒப்பீடு"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:258
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:337
+#, fuzzy
 msgid "Character Map"
-msgstr "வரைப்பட எழுத்துக்கள்் அல்லா)"
+msgstr "எழுத்து குறியீடுகள்"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "குறிப்பிட்ட எழுத்துக்களை அவற்றை கிளிக் செய்து உள்நுழைக்கவும்."
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Code comment"
-msgstr "குறியீடு குறிப்புஎண்ணி"
+msgstr "குறிப்பு"
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "குறிப்பு வெளியே அல்லது குறிப்பில்லாத ஒரு தேர்ந்தெடுக்கப்பட்ட தொகுதி குறியீடு."
 
-#: ../plugins/codecomment/codecomment.py:230
+#: ../plugins/codecomment/codecomment.py:90
+#, fuzzy
 msgid "Co_mment Code"
-msgstr "விளக்க குறியீடு (_m)"
+msgstr "குறிப்பு"
 
-#: ../plugins/codecomment/codecomment.py:232
+#: ../plugins/codecomment/codecomment.py:92
+#, fuzzy
 msgid "Comment the selected code"
-msgstr "தேர்ந்தெடுக்கப்பட்ட குறியீட்டுக்கு குறிப்புஉரையை நீக்கு"
+msgstr "தேர்வு செய்த உரையை நீக்குக"
 
-#: ../plugins/codecomment/codecomment.py:236
+#: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "குறிப்பில்லாத குறியீடு (_n)"
 
-#: ../plugins/codecomment/codecomment.py:238
+#: ../plugins/codecomment/codecomment.py:98
+#, fuzzy
 msgid "Uncomment the selected code"
-msgstr "தெரிவு செய்த உரையை நீக்கு"
+msgstr "தேர்வு செய்த உரையை நீக்குக"
 
 #. ex:ts=4:et:
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Color Picker"
-msgstr "நிறத்தை எடுப்பவர்"
+msgstr "வண்ணதிட்டங்கள்"
 
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "உரையாடலிலிருந்து ஒரு நிறத்தை எடுத்து அதன் எண்ம தசமத்தில் நுழைக்கவும்"
 
-#: ../plugins/colorpicker/colorpicker.py:73
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick _Color..."
 msgstr "வண்ணத்தை எடுக்கவும் (_C)..."
 
-#: ../plugins/colorpicker/colorpicker.py:74
+#: ../plugins/colorpicker/colorpicker.py:78
 msgid "Pick a color from a dialog"
 msgstr "உரையாடலிருந்து ஒரு வண்ணத்தை எடுக்கவும்"
 
-#: ../plugins/colorpicker/colorpicker.py:220
+#: ../plugins/colorpicker/colorpicker.py:188
+#, fuzzy
 msgid "Pick Color"
-msgstr "வண்ணத்தை எடு"
+msgstr "தொடுப்பு நிறம்"
 
-#: ../plugins/colorpicker/colorpicker.py:226
+#: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
-msgstr "உள்நுழை (_I)"
+msgstr "_I நுழைக்க"
 
 #. ex:ts=4:et:
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-msgid "Draw Spaces"
-msgstr "இடைவெளிகளை இழுக்கவும்"
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:1
+msgid "Command line interface for advanced editing"
+msgstr ""
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Commander"
+msgstr "கட்டளை நிறம் (_o):"
+
+#. ex:set ts=8 noet:
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
+#, fuzzy
+msgid "Draw Spaces"
+msgstr "இடைவெளிகளை பயன்படுத்து"
+
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "இடைவெளி மற்றும் ஓட்டுகளை இழுக்கவும்"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:1
-#| msgid "Draw non-breaking spaces"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
+#, fuzzy
 msgid "Draw leading spaces"
-msgstr "முன்னு இடைவெளிகளை இழுக்கவும்"
+msgstr "முறிக்காத வெற்றிடம்"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "புதிய கோடுகளை இழுக்கவும்"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
+#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "உடையப்படாத இடைவெளிகளை இழுக்கவும்"
+msgstr "முறிக்காத வெற்றிடம்"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
+#, fuzzy
 msgid "Draw spaces"
-msgstr "இடைவெளியை இழு"
+msgstr "இடைவெளிகளை செருகவும்"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:5
-#| msgid "Draw spaces"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
 msgstr "உரையினுள் இடைவெளியை இழு"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:6
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "ஒட்டுகளை இழு"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:7
-#| msgid "Draw non-breaking spaces"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
+#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "பின்னாலுள்ள இடைவெளிகளை இழுக்கவும்"
+msgstr "தொடரும் வெற்றிடங்களை நீக்குக"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:163
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
+#, fuzzy
 msgid "Show _White Space"
-msgstr "வெள்ளை இடைவெளியை காட்டு (_W)"
+msgstr "அடுத்த பக்கத்தை காட்டுக"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:164
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
+#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "இடைவெளிகள் மற்றும் ஒட்டுகளை காட்டு"
+msgstr "_s தத்தலுக்கு பதிலாக இடைவெளியை சொருகு"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:626
-msgid "Error dialog"
-msgstr "பிழை உரையாடல்"
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
+msgid "Enabled"
+msgstr "இயலுமைபடுத்தப் பட்டது"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
+msgid "If TRUE drawing will be enabled."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
+msgstr ""
+
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "சில கோடுகளை சேர்க்கவும் அல்லது நீளமான ஒன்றை பிளக்கவும்"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "கோடுகளை சேர்க்கவும்/பிளக்கவும்"
 
 #: ../plugins/joinlines/joinlines.py:56
+#, fuzzy
 msgid "_Join Lines"
-msgstr "கோடுகளுடன் சேர் (_J)"
+msgstr "கோடுகள்"
 
 #: ../plugins/joinlines/joinlines.py:57
+#, fuzzy
 msgid "Join the selected lines"
-msgstr "தேர்ந்தெடுக்கப்பட்ட கோடுகளுடன் சேரவும்ியை அமை வடிவப்படுத்து"
+msgstr "தேர்வுசெய்த வரிசைகளின் உள் தள்ளலை நீக்குக"
 
 #: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "பிளவுப்பட்ட கோடுகள் (_S)"
 
 #: ../plugins/joinlines/joinlines.py:60
+#, fuzzy
 msgid "Split the selected lines"
-msgstr "தேர்ந்தெடுக்கப்பட்ட கோடுகளை பிரிக்கவும்"
+msgstr "தேர்வுசெய்த வரிசைகளின் உள் தள்ளலை நீக்குக"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
-msgid "Tab_bar"
-msgstr "ஒட்டு பட்டி (_b)"
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr ""
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
-msgid "Show or hide the tabbar in the current window"
-msgstr "ஒட்டு பட்டி நடப்பு சாளரத்தில் காட்டு அல்லது மறை"
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr ""
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
-msgid "Tabbar is Visible"
-msgstr "ஒட்டுபட்டி தெரிகிறது"
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
+msgid "Added edit point..."
+msgstr ""
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
-msgid "Whether the tabbar should be visible in editing windows."
-msgstr "திருத்தப்பட்ட சாளரங்களில் ஒட்டுபட்டி தெரியுமா."
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
+msgid "Column Mode..."
+msgstr ""
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
-msgid "Add a menu entry to show/hide the tabbar."
-msgstr "தத்தலை பட்டையை காட்ட/மறைக்க ஒரு மெனு உள்ளீட்டை சேர்."
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
+msgid "Removed edit point..."
+msgstr ""
 
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
-msgid "Show/Hide Tabbar"
-msgstr "ஒட்டுபட்டியை காட்டு/மறை"
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
+msgid "Cancelled column mode..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+msgid "Enter column edit mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+msgid "<b>Smart</b> column align mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+msgid "Toggle edit point"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+msgid "Add edit point at beginning of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+msgid "Add edit point at end of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+msgid "Align edit points"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+msgid "Align edit points with additional space"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Multi Edit Mode"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Start multi edit mode"
+msgstr ""
+
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr ""
+
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Text Size"
+msgstr "தத்தல் அளவு"
 
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "சேமிக்கப்பட்ட அமர்வுகள் (_v)"
 
 #: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
 msgid "_Save current session"
-msgstr "நடப்பு அமர்வை சேமிக்கவும் (_S)"
+msgstr "நடப்பு தேர்வினை இதனால் மாற்றுக"
 
 #: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
 msgid "Save the current document list as a new session"
-msgstr "தற்போதைய ஆவணப் பட்டியலை ஒரு புதிய அமர்வாக சேமிக்கவும்"
+msgstr "இந்த ஆவணத்தை புதிய சாளரத்திற்கு நகர்த்து"
 
 #: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "சேமிக்கப்பட்ட அமர்வுகளை மேலாண்மை செய் (_M)..."
 
 #: ../plugins/sessionsaver/__init__.py:66
+#, fuzzy
 msgid "Open the saved session manager"
-msgstr "சேமிக்கப்பட்ட அமர்வு மேலாளரை திறக்கவும் திறக்கவும்"
+msgstr "கெடிட் கையேட்டை திறக்கவும்"
 
 #: ../plugins/sessionsaver/__init__.py:106
 #, python-format
@@ -249,11 +356,11 @@ msgid "Session Name"
 msgstr "அமர்வின் பெயர்"
 
 #. ex:ts=4:et:
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:1
 msgid "Save and restore your working sessions"
 msgstr "உங்களுடைய பணிபுரியும் அமர்வுகளை மறுசேகரித்து மற்றும் சேமிக்கவும்"
 
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "அமர்வு சேமிப்பவர்"
 
@@ -269,40 +376,1632 @@ msgstr "அமர்வுகள் சேமிக்கப்பட்டத�
 msgid "Session name:"
 msgstr "அமர்வின்வகையின:் பெயர்"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "நீங்கள் தத்தலை பயன்படுத்த மறந்துவிட்டீர்கள்."
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Smart Spaces"
-msgstr "சுருக்க இடைவெளிகள்"
+msgstr "இடைவெளிகளை செருகவும்"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "ஒரு முனையத்தை கீழ் பலகத்தில் உட்பொதியவும்."
+msgstr "தற்போது திறக்கப்பட்ட அடைவில் ஒரு முனையத்தை திறக்கவும்"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Embedded Terminal"
-msgstr "உட்பொதியப்பட்ட முனையம்"
+msgstr "உட்பொதி பொருள்"
 
-#: ../plugins/terminal/terminal.py:262
+#: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "முடிவு"
 
-#: ../plugins/terminal/terminal.py:285
+#: ../plugins/terminal/terminal.py:329
+#, fuzzy
 msgid "C_hange Directory"
-msgstr "அடைவை மாற்று (_h)"
+msgstr "_tஇதற்கு மாற்றுக"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#, fuzzy
 msgid "Document Words"
-msgstr "ஆவண வார்த்தைகள்"
+msgstr "ஆவண பாகம்"
 
-#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
-#| msgid "Bracket Completion"
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
 msgid "Word Completion"
 msgstr "வார்த்தை முடிவுற்றது"
 
-#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "முடிவடைந்த frameworkஐ பயன்படுத்தி வார்த்தை முடிவடைகிறது"
 
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
+msgid "SyncTeX"
+msgstr ""
+
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
+msgid "Synchronize between LaTeX and PDF with gedit and evince."
+msgstr ""
+
+#: ../plugins/synctex/synctex/synctex.py:280
+#: ../plugins/synctex/synctex/synctex.py:281
+#, fuzzy
+msgid "Forward Search"
+msgstr "முன்னோக்கு இணைப்பு"
+
+#: ../plugins/taglist/gedit-taglist-plugin.c:165
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+msgid "Tags"
+msgstr "குறிகள் (Tags)"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:608
+msgid "Select the group of tags you want to use"
+msgstr "புழங்க விரும்பும் குறிகளை தேர்வு செய்யவும்"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:627
+msgid "_Preview"
+msgstr "_P முன்பார்வை"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+msgid "Available Tag Lists"
+msgstr "இருக்கும் குறிகளின் பட்டியல்கள்"
+
+#. ex:ts=8:noet:
+#: ../plugins/taglist/HTML.tags.xml.in.h:1
+msgid "Abbreviated form"
+msgstr "சுருங்கிய வடிவம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:2
+msgid "Abbreviation"
+msgstr "சுருக்கம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:3
+msgid "Above"
+msgstr "மேலே"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:4
+msgid "Accessibility key character"
+msgstr "விசை எழுத்துக்களை அணுகவும்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:5
+msgid "Acronym"
+msgstr "சுருக்கப்பெயர்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:6
+msgid "Align"
+msgstr "ஒழுங்கு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:7
+msgid "Alignment character"
+msgstr "எழுத்து ஒழுங்கு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:8
+msgid "Alternative"
+msgstr "மாற்று"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:9
+msgid "Anchor"
+msgstr "நங்கூரம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:10
+msgid "Anchor URI"
+msgstr "URI பொருத்து"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:11
+msgid "Applet class file code"
+msgstr "குறுநிரல் வகுப்பு கோப்பு குறியீடு"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:13
+msgid "Applet class file code (deprecated)"
+msgstr "குறுநிரல் வகுப்பு கோப்பு குறியீடு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:14
+msgid "Array"
+msgstr "வரிசை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:15
+msgid "Associated information"
+msgstr "தொடர்புடைய விவரம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:16
+msgid "Author info"
+msgstr "ஆசிரியர் விவரம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:17
+msgid "Axis related headers"
+msgstr "தலைப்புகள் தொடர்பான அச்சு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:18
+msgid "Background color"
+msgstr "பின்னணி வண்ணம்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:20
+msgid "Background color (deprecated)"
+msgstr "பின்னணி நிறம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:21
+msgid "Background texture tile"
+msgstr "பின்னணி இழை ஓடு"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:23
+msgid "Background texture tile (deprecated)"
+msgstr "பின்னணி இழை ஓடு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:24
+msgid "Base URI"
+msgstr "அடிப்படை URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:25
+msgid "Base font"
+msgstr "அடிப்படை எழுத்துரு"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:27
+msgid "Base font (deprecated)"
+msgstr "ஆதார எழுத்துரு (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:28
+msgid "Bold"
+msgstr "தடித்த"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:29
+msgid "Border"
+msgstr "எல்லை"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:31
+msgid "Border (deprecated)"
+msgstr "எல்லை (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:32
+msgid "Border color"
+msgstr "எல்லை நிறம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:33
+msgid "Cell rowspan"
+msgstr "அறை நிரை அளவு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:34
+msgid "Center"
+msgstr "மையம்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:36
+msgid "Center (deprecated)"
+msgstr "மையம் (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:37
+msgid "Character encoding of linked resource"
+msgstr "இணைக்கப்பட்ட மூலத்தின் எழுத்து குறிமுறை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:38
+msgid "Checked (state)"
+msgstr "சரிபார்க்கப்பட்டது (நிலை)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:39
+msgid "Checked state"
+msgstr "சரிபார்க்கப்பட்ட நிலை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:40
+msgid "Citation"
+msgstr "மேற்கோள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:41
+msgid "Cite reason for change"
+msgstr "மாற்றத்துக்கான காரணத்தை மேற்கோள் காட்டுக"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:42
+msgid "Class implementation ID"
+msgstr "வகுப்பு செயல்படுத்தும் குறி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:43
+msgid "Class list"
+msgstr "வகுப்பு பட்டியல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:44
+msgid "Clear text flow control"
+msgstr "உரை திசை கட்டுப்பாட்டை துடை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:45
+msgid "Code content type"
+msgstr "குறியீடு உள்ளடக்க வகை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:46
+msgid "Color of selected links"
+msgstr "தேர்ந்தெடுக்கப்பட்ட இணைப்புகளின் நிறம்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:48
+msgid "Color of selected links (deprecated)"
+msgstr "தேர்ந்தெடுக்கப்பட்ட இணைப்புகளின் நிறம் (கை விடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:49
+msgid "Column span"
+msgstr "நெடு வரிசை வீச்சு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:50
+msgid "Columns"
+msgstr "நெடுவரிசைகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:51
+msgid "Comment"
+msgstr "குறிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:52
+msgid "Computer code fragment"
+msgstr "கணினி குறி துணுக்கு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:53
+msgid "Content scheme"
+msgstr "உள்ளடக்க திட்டம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:54
+msgid "Content type"
+msgstr "உள்ளடக்க வகை"
+
+#. The "type" attribute is deprecated for the "ol" tag only,
+#. since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:57
+msgid "Content type (deprecated)"
+msgstr "உள்ளடக்கம் வகை (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:58
+msgid "Coordinates"
+msgstr "ஆயத்தொலைவுகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:59
+msgid "DIV Style container"
+msgstr "DIV Style container"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:60
+msgid "DIV container"
+msgstr "DIV container"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:61
+msgid "Date and time of change"
+msgstr "தேதி மற்றும் நேரத்தின் மாற்றம்"
+
+#. NOTE: used in "object" tag
+#: ../plugins/taglist/HTML.tags.xml.in.h:63
+msgid "Declare flag"
+msgstr "கொடியை அறிவி"
+
+#. Translators: DEFER is an optional attribute of the <script> tag.
+#. It indicates that the script is not going to generate any document
+#. content. The browser can continue parsing and drawing the page.
+#: ../plugins/taglist/HTML.tags.xml.in.h:67
+msgid "Defer attribute"
+msgstr "மதிப்புருக்களை நீட்டிப்பு செய்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:68
+msgid "Definition description"
+msgstr "பொருள் வரையரை விவரம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:69
+msgid "Definition list"
+msgstr "பொருள் வரையரை பட்டியல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:70
+msgid "Definition term"
+msgstr "பொருள் வரையரை உரை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:71
+msgid "Deleted text"
+msgstr "அழிக்கப்பட்ட உரை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:72
+msgid "Direction"
+msgstr "திசை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:73
+msgid "Directionality"
+msgstr "வழி நடத்தல்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:75
+msgid "Directionality (deprecated)"
+msgstr "வழி நடத்தல் (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:76
+msgid "Directory list"
+msgstr "அடைவு பட்டியல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:77
+msgid "Disabled"
+msgstr "இயலுமை நீக்கிய"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:78
+msgid "Document base"
+msgstr "ஆவண அடிப்படை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:79
+msgid "Document body"
+msgstr "ஆவண பாகம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:80
+msgid "Document head"
+msgstr "ஆவண தலை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:81
+msgid "Document title"
+msgstr "ஆவணம் தலைப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:82
+msgid "Document type"
+msgstr "ஆவண வகை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:83
+msgid "Element ID"
+msgstr "உறுப்பு குறி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:84
+msgid "Embedded object"
+msgstr "உட்பொதி பொருள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:85
+#: ../plugins/taglist/Latex.tags.xml.in.h:9
+msgid "Emphasis"
+msgstr "சொல்லழுத்தம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:86
+msgid "Encode type"
+msgstr "குறிமுறை வகை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:87
+msgid "Figure"
+msgstr "உருவம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:88
+msgid "Font face"
+msgstr "எழுத்துரு முகம்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:90
+msgid "Font face (deprecated)"
+msgstr "எழுத்துரு முகம் (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:91
+msgid "For label"
+msgstr "பெயருக்கு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:92
+msgid "Forced line break"
+msgstr "வலியுறுத்தப்பட்ட வரி பிரிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:93
+msgid "Form"
+msgstr "படிவம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:94
+msgid "Form action handler"
+msgstr "படிவ செயல் கையாளி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:95
+msgid "Form control group"
+msgstr "படிவ கட்டுப்பாடு குழு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:96
+msgid "Form field label text"
+msgstr "படிவ புல பெயர் உரை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:97
+msgid "Form input"
+msgstr "படிவ உள்ளீடு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:98
+msgid "Form input type"
+msgstr "படிவ உள்ளீடு வகை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:99
+msgid "Form method"
+msgstr "படிவ முறை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:100
+msgid "Forward link"
+msgstr "முன்னோக்கு இணைப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:101
+msgid "Frame"
+msgstr "சட்டம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:102
+msgid "Frame border"
+msgstr "சட்ட எல்லை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:103
+msgid "Frame render parts"
+msgstr "சட்ட நடைமுறை பகுதிகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:104
+msgid "Frame source"
+msgstr "சட்ட மூலம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:105
+msgid "Frame spacing"
+msgstr "சட்ட இடைவெளி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:106
+msgid "Frame target"
+msgstr "சட்ட இலக்கு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:107
+msgid "Frameborder"
+msgstr "சட்ட எல்லை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:108
+msgid "Frameset"
+msgstr "சட்டமை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:109
+msgid "Frameset columns"
+msgstr "சட்டமை நெடு வரிசைகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:110
+msgid "Frameset rows"
+msgstr "சட்டமை வரிசைகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:111
+msgid "Framespacing"
+msgstr "சட்ட இடைவெளி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:112
+msgid "Generic embedded object"
+msgstr "பொதுவான உட்பொதியப்பட்ட பொருள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:113
+msgid "Generic metainformation"
+msgstr "பொதுவான மெட்டா தகவல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:114
+msgid "Generic span"
+msgstr "பொதுவான வீச்சு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:115
+msgid "HREF URI"
+msgstr "HREF URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:116
+msgid "HTML root element"
+msgstr "ஹெச்டிஎம்எல்(HTML) ரூட் உருப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:117
+msgid "HTML version"
+msgstr "ஹெச்டிஎம்எல்(HTML) பதிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:118
+#, fuzzy
+msgid "HTML — Special Characters"
+msgstr "ஹெச்டிஎம்எல்(HTML) - சிறப்பு எழுத்துக்கள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:119
+#, fuzzy
+msgid "HTML — Tags"
+msgstr "ஹெச்டிஎம்எல்(HTML) - ஒட்டுகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:120
+msgid "HTTP header name"
+msgstr "ஹெச்டிடிபி(HTTP) தலைப்பு பெயர்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:121
+msgid "Header cell IDs"
+msgstr "தலைப்பு அறையின் ஐடிகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:122
+msgid "Heading"
+msgstr "தலைப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:123
+msgid "Heading 1"
+msgstr "தலைப்பு 1"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:124
+msgid "Heading 2"
+msgstr "தலைப்பு 2"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:125
+msgid "Heading 3"
+msgstr "தலைப்பு 3"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:126
+msgid "Heading 4"
+msgstr "தலைப்பு 4"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:127
+msgid "Heading 5"
+msgstr "தலைப்பு 5"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:128
+msgid "Heading 6"
+msgstr "தலைப்பு 6"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:129
+msgid "Height"
+msgstr "உயரம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:130
+msgid "Horizontal rule"
+msgstr "கிடைமட்ட அளவு கோல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:131
+msgid "Horizontal space"
+msgstr "கிடைமட்ட இடைவெளி"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:133
+msgid "Horizontal space (deprecated)"
+msgstr "கிடைமட்ட இடைவெளி (கை விடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:134
+msgid "I18N BiDi override"
+msgstr "I18N BiDi மேலாணை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:135
+msgid "Image"
+msgstr "பிம்பம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:136
+msgid "Image map"
+msgstr "பிம்ப ஒப்பிடு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:137
+msgid "Image map area"
+msgstr "பிம்ப ஒப்பீடு பகுதி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:138
+msgid "Image map name"
+msgstr "பிம்ப ஒப்பீடு பெயர்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:139
+msgid "Image source"
+msgstr "பிம்ப மூலம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:140
+msgid "Inline frame"
+msgstr "உள்ளமை சட்டம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:141
+msgid "Inline layer"
+msgstr "உள்ளமை அடுக்கு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:142
+msgid "Inserted text"
+msgstr "நுழைக்கப்பட்ட உரை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:143
+msgid "Instance definition"
+msgstr "நிகழ்வு விளக்கம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:144
+msgid "Italic text"
+msgstr "சாய்ந்த உரை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:145
+msgid "Java applet"
+msgstr "ஜாவா குறுநிரல்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:147
+msgid "Java applet (deprecated)"
+msgstr "ஜாவா குறுநிரல் (கை விடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:148
+msgid "Label"
+msgstr "விளக்கச்சீட்டு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:149
+msgid "Language code"
+msgstr "மொழிகள் குறியீடு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:150
+msgid "Large text style"
+msgstr "பெரிய உரை தோற்றம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:151
+msgid "Layer"
+msgstr "அடுக்கு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:152
+msgid "Link color"
+msgstr "தொடுப்பு நிறம்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:154
+msgid "Link color (deprecated)"
+msgstr "தொடுப்பு நிறம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:155
+msgid "List item"
+msgstr "பட்டியல் உருப்படி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:156
+msgid "List of MIME types for file upload"
+msgstr "கோப்பு ஏற்றுவதற்கு மைம்(MIME) வகைகள் பட்டியல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:157
+msgid "List of supported character sets"
+msgstr "ஆதரவுள்ள எழுத்து அமைப்புகள் பட்டியல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:158
+msgid "Listing"
+msgstr "பட்டியலிடுதல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:159
+msgid "Local change to font"
+msgstr "எழுத்துருக்கு உள்ளமை மாற்றம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:160
+msgid "Long description link"
+msgstr "நீளமான விவரம் இணைப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:161
+msgid "Long quotation"
+msgstr "நீளமான மேற்கோள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:162
+msgid "Mail link"
+msgstr "அஞ்சல் இணைப்பு"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:164
+msgid "Margin pixel height"
+msgstr "ஓர பிக்ஸல் நீளம்"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:166
+msgid "Margin pixel width"
+msgstr "ஓர பிக்ஸல் அகலம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:167
+msgid "Marquee"
+msgstr "சுற்றுதல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:168
+msgid "Maximum length of text field"
+msgstr "உரை புலத்தின் அதிகபட்ச எண்ணிக்கை"
+
+#. Here I take some liberties: There's no mandatory attributes,
+#. but those are most common, and will likely be used.
+#: ../plugins/taglist/HTML.tags.xml.in.h:171
+msgid "Media-independent link"
+msgstr "ஊடகம் சாரா இணைப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:172
+msgid "Menu list"
+msgstr "பட்டி பட்டியல்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:174
+msgid "Menu list (deprecated)"
+msgstr "பட்டி பட்டியல் (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:175
+msgid "Multi-line text field"
+msgstr "பல-வரி உரை புலம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:176
+msgid "Multicolumn"
+msgstr "பல பத்திகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:177
+msgid "Multiple"
+msgstr "பல"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:178
+msgid "Name"
+msgstr "பெயர்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:179
+msgid "Named property value"
+msgstr "பெயரிடப்பட்ட பண்பு மதிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:180
+msgid "Next ID"
+msgstr "அடுத்த ஐடி(ID)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:181
+msgid "No URI"
+msgstr "யூஆர்ஐ(URI) இல்லை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:182
+msgid "No embedded objects"
+msgstr "உட்பொதியப்பட்ட பொருட்கள் இல்லை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:183
+msgid "No frames"
+msgstr "சட்டங்கள் இல்லை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:184
+msgid "No layers"
+msgstr "அடுக்குகள் இல்லை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:185
+msgid "No line break"
+msgstr "வரி பிரிப்பு இல்லை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:186
+msgid "No resize"
+msgstr "மறு அளவீடு இல்லை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:187
+msgid "No script"
+msgstr "குறுநிரல் இல்லை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:188
+msgid "No shade"
+msgstr "நிழலிடல் இல்லை"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:190
+msgid "No shade (deprecated)"
+msgstr "நிழலிடல் இல்லை (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:191
+msgid "No word wrap"
+msgstr "சொல் மடிப்பு இல்லை"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:193
+msgid "No word wrap (deprecated)"
+msgstr "சொல் மடிப்பு இல்லை (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:194
+msgid "Non-breaking space"
+msgstr "முறிக்காத வெற்றிடம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:195
+msgid "Note"
+msgstr "குறிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:196
+msgid "Object applet file"
+msgstr "பொருள் குறுநிரல் கோப்பு"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:198
+msgid "Object applet file (deprecated)"
+msgstr "பொருள் குறுநிரல் கோப்பு (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:199
+msgid "Object data reference"
+msgstr "பொருள் தரவு குறிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:200
+msgid "Offset for alignment character"
+msgstr "நேர்த்தி எழுத்துக்கு ஒதுக்கீடு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:201
+msgid "OnBlur event"
+msgstr "ஆன்ப்ளர்(OnBlur) நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:202
+msgid "OnChange event"
+msgstr "ஆன்சேஞ்ச்(OnChange) நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:203
+msgid "OnClick event"
+msgstr "ஆன்கிளிக்(OnClick) நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:204
+msgid "OnDblClick event"
+msgstr "OnDblClick நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:205
+msgid "OnFocus event"
+msgstr "OnFocus நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:206
+msgid "OnKeyDown event"
+msgstr "OnKeyDown நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:207
+msgid "OnKeyPress event"
+msgstr "OnKeyPress நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:208
+msgid "OnKeyUp event"
+msgstr "OnKeyUp நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:209
+msgid "OnLoad event"
+msgstr "OnLoad நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:210
+msgid "OnMouseDown event"
+msgstr "OnMouseDown நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:211
+msgid "OnMouseMove event"
+msgstr "OnMouseMove நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:212
+msgid "OnMouseOut event"
+msgstr "OnMouseOut நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:213
+msgid "OnMouseOver event"
+msgstr "OnMouseOver நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:214
+msgid "OnMouseUp event"
+msgstr "OnMouseUp நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:215
+msgid "OnReset event"
+msgstr "OnReset நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:216
+msgid "OnSelect event"
+msgstr "OnSelect நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:217
+msgid "OnSubmit event"
+msgstr "OnSubmit நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:218
+msgid "OnUnload event"
+msgstr "OnUnload நிகழ்வு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:219
+msgid "Option group"
+msgstr "விருப்ப குழு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:220
+msgid "Option selector"
+msgstr "விருப்ப தேர்வாளர்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:221
+msgid "Ordered list"
+msgstr "ஒழுங்கான பட்டியல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:222
+msgid "Output media"
+msgstr "வெளியீட்டு ஊடகம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:223
+msgid "Paragraph"
+msgstr "பத்தி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:224
+msgid "Paragraph class"
+msgstr "பத்தி வகுப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:225
+msgid "Paragraph style"
+msgstr "பத்தி தோற்றம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:226
+msgid "Preformatted listing"
+msgstr "முன் சீரமைப்பட்ட பட்டியல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:227
+msgid "Preformatted text"
+msgstr "முன் சீரமைப்பட்ட உரை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:228
+msgid "Profile metainfo dictionary"
+msgstr "விவரக்குறிப்பு மெட்டா தகவல் அகராதி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:229
+msgid "Prompt message"
+msgstr "குறிப்பு செய்தி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:230
+msgid "Push button"
+msgstr "தள்ளு பொத்தான்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:231
+msgid "Quote"
+msgstr "மேற்கோள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:232
+msgid "Range"
+msgstr "வீச்சு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:233
+msgid "ReadOnly text and password"
+msgstr "வாசிப்பு மட்டும் உரை மற்றும் கடவுச்சொல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:234
+msgid "Reduced spacing"
+msgstr "இடைவெளியை குறைக்கிறது"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:236
+msgid "Reduced spacing (deprecated)"
+msgstr "இடைவெளியை குறைக்கிறது (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:237
+msgid "Reverse link"
+msgstr "இணைப்பை திருப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:238
+msgid "Root"
+msgstr "ரூட்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:239
+msgid "Rows"
+msgstr "வரிகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:240
+msgid "Rulings between rows and columns"
+msgstr "நிரைகளுக்கும் நிரல்களுக்குமிடையேயான அளவிடுதல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:241
+msgid "Sample program output, scripts"
+msgstr "மாதிரி நிரல் வெளியீடு. குறிப்புகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:242
+msgid "Scope covered by header cells"
+msgstr "தலைப்பு அறைகளால் மூடப்பட்டது"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:244
+msgid "Script language name"
+msgstr "சிறுநிரல் மொழி பெயர்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:245
+msgid "Script statements"
+msgstr "சிறுநிரல் அறிக்கைகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:246
+msgid "Scrollbar"
+msgstr "சுருள் பட்டை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:247
+msgid "Selectable option"
+msgstr "தேர்ந்தெடுக்கப்படும் விருப்பம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:248
+msgid "Selected"
+msgstr "தேர்ந்தெடுக்கப்பட்டது"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:249
+msgid "Server-side image map"
+msgstr "சேவையக-பக்க பிம்ப ஒப்பீடு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:250
+msgid "Shape"
+msgstr "வடிவம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:251
+msgid "Short inline quotation"
+msgstr "குறைந்த உள்ளமை குறிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:252
+msgid "Single line prompt"
+msgstr "ஒற்றை வரி குறிப்பிடல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:253
+msgid "Size"
+msgstr "அளவு"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:255
+msgid "Size (deprecated)"
+msgstr "அளவு (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:256
+msgid "Small text style"
+msgstr "சிறிய உரை தோற்றம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:257
+msgid "Soft line break"
+msgstr "மென் வரி பிரிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:258
+msgid "Sound"
+msgstr "ஒலி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:259
+msgid "Source"
+msgstr "மூலம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:260
+msgid "Space-separated archive list"
+msgstr "இடைவெளி பிரித்த காப்பு பட்டியல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:261
+msgid "Spacer"
+msgstr "இடைவெளி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:262
+msgid "Spacing between cells"
+msgstr "அறைகளுக்கிடையேயான இடைவெளி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:263
+msgid "Spacing within cells"
+msgstr "அறைகளுக்களுக்குள் இடைவெளி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:264
+msgid "Span"
+msgstr "வீச்சு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:265
+msgid "Square root"
+msgstr "வர்க்க மூலம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:266
+msgid "Standby load message"
+msgstr "காத்திருப்பு ஏற்ற செய்தி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:267
+msgid "Starting sequence number"
+msgstr "வரிசை எண்ணின் துவக்கம்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:269
+msgid "Starting sequence number (deprecated)"
+msgstr "வரிசை எண்ணின் துவக்கம் (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:270
+msgid "Strike-through text"
+msgstr "அடிக்கப்பட்ட உரை"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:272
+msgid "Strike-through text (deprecated)"
+msgstr "அடிக்கப்பட்ட உரை (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:273
+msgid "Strike-through text style"
+msgstr "அடிக்கப்பட்ட உரை பாணி"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:275
+msgid "Strike-through text style (deprecated)"
+msgstr "அடிக்கப்பட்ட உரை பாணி (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:276
+msgid "Strong emphasis"
+msgstr "தீவிர சொல்லழுத்தம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:277
+msgid "Style info"
+msgstr "பாணி தகவல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:278
+msgid "Subscript"
+msgstr "கீழொட்டு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:279
+msgid "Superscript"
+msgstr "மேலொட்டு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:280
+msgid "Tab order position"
+msgstr "தத்தல் வரிசை இடம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:281
+msgid "Table"
+msgstr "அட்டவணை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:282
+msgid "Table body"
+msgstr "அட்டவணை பாகம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:283
+msgid "Table caption"
+msgstr "அட்டவணை தலைப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:284
+msgid "Table column group properties"
+msgstr "அட்டவணை நிரல் குழு பண்புகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:285
+msgid "Table column properties"
+msgstr "அட்டவணை நிரல் பண்புகள்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:286
+msgid "Table data cell"
+msgstr "அட்டவணை தரவு அறை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:287
+msgid "Table footer"
+msgstr "அட்டவணை அடிக்குறிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:288
+msgid "Table header"
+msgstr "அட்டவணை தலைப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:289
+msgid "Table header cell"
+msgstr "அட்டவணை தலைப்பு அறை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:290
+msgid "Table row"
+msgstr "அட்டவணை நிரை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:291
+msgid "Table summary"
+msgstr "அட்டவணை சுருக்கம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:292
+#, fuzzy
+msgid "Target — Blank"
+msgstr "இலக்கு - வெற்று"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:293
+#, fuzzy
+msgid "Target — Parent"
+msgstr "இலக்கு - பெற்றோர்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:294
+#, fuzzy
+msgid "Target — Self"
+msgstr "இலக்கு - சுய"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:295
+#, fuzzy
+msgid "Target — Top"
+msgstr "இலக்கு - மேல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:296
+msgid "Teletype or monospace text style"
+msgstr "டெலிடைப் அல்லது மோனேஸ்பேஸ் உரை தோற்றம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:297
+msgid "Text"
+msgstr "உரை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:298
+msgid "Text color"
+msgstr "உரை நிறம்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:300
+msgid "Text color (deprecated)"
+msgstr "உரை நிறம் (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:301
+msgid "Text entered by user"
+msgstr "பயனரால் உள்ளிடப்பட்ட உரை"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:302
+msgid "Title"
+msgstr "தலைப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:303
+msgid "Top margin in pixels"
+msgstr "பிக்ஸிலில் மேல் ஓரம் "
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:304
+msgid "URL"
+msgstr "யூஆர்எல்(URL)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:305
+msgid "Underlined text style"
+msgstr "அடிக்கோடிட்ட உரை தோற்றம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:306
+msgid "Unordered list"
+msgstr "ஒழுங்கற்ற பட்டியல்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:307
+msgid "Use image map"
+msgstr "பிம்ப ஒப்பீடை பயன்படுத்து"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:308
+msgid "Value"
+msgstr "மதிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:309
+msgid "Value interpretation"
+msgstr "மதிப்பு பெயர்ப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:310
+msgid "Variable or program argument"
+msgstr "மாறி அல்லது நிரல் மதிப்பு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:311
+msgid "Vertical cell alignment"
+msgstr "செங்குத்து அறை ஒழங்கு"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:312
+msgid "Vertical space"
+msgstr "செங்குத்து இடைவெளி"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:314
+msgid "Vertical space (deprecated)"
+msgstr "செங்குத்து இடைவெளி"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:315
+msgid "Visited link color"
+msgstr "உலாவிய இணைப்பு நிறம்"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:317
+msgid "Visited link color (deprecated)"
+msgstr "உலாவிய இணைப்பு நிறம் (கைவிடப்பட்டது)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:318
+msgid "Width"
+msgstr "அகலம்"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:319
+#, fuzzy
+msgid "XHTML 1.0 — Tags"
+msgstr "எக்ஸ்ஹெச்டிஎம்எல்(XHTML)1.0- ஒட்டுகள்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:1
+msgid "Bibliography (cite)"
+msgstr "நூல் விவரக்குறிப்பு (மேற்கோள்)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:2
+msgid "Bibliography (item)"
+msgstr "நூல் விவரக்குறிப்பு (உருப்படி)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:3
+msgid "Bibliography (shortcite)"
+msgstr "நூல் விவரக்குறிப்பு (சிறிய மேற்கோள்)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:4
+msgid "Bibliography (thebibliography)"
+msgstr "நூல் விவரக்குறிப்பு (நூல் விவரக்குறிப்பு)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:5
+msgid "Brackets ()"
+msgstr "அடைப்புக்குறிகள் ()"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:6
+msgid "Brackets <>"
+msgstr "அடைப்புக்குறிகள் <>"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:7
+msgid "Brackets []"
+msgstr "அடைப்புக்குறிகள் []"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:8
+msgid "Brackets {}"
+msgstr "அடைப்புக்குறிகள் {}"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:10
+msgid "File input"
+msgstr "கோப்பு உள்ளீடு"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:11
+msgid "Footnote"
+msgstr "அடிக்குறிப்பு"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:12
+msgid "Function cosine"
+msgstr "சார்பு கோசைன்(cosin)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:13
+msgid "Function e^"
+msgstr "சார்பு e^"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:14
+msgid "Function exp"
+msgstr "சார்பு exp"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:15
+msgid "Function log"
+msgstr "சார்பு லாக்(log)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:16
+msgid "Function log10"
+msgstr "சார்பு லாக்(log)10"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:17
+msgid "Function sine"
+msgstr "சார்பு சைன்(sine)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:18
+msgid "Greek alpha"
+msgstr "கிரீக் ஆல்ஃபா"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:19
+msgid "Greek beta"
+msgstr "கிரீக் பீட்டா"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:20
+msgid "Greek epsilon"
+msgstr "கீரிக் எப்சிலான்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:21
+msgid "Greek gamma"
+msgstr "கிரீக் காமா"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:22
+msgid "Greek lambda"
+msgstr "கீரிக் லாம்டா"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:23
+msgid "Greek rho"
+msgstr "கிரீக் ரோ"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:24
+msgid "Greek tau"
+msgstr "கிரீக் டோ"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:25
+msgid "Header 0 (chapter)"
+msgstr "தலைப்பு 0 (அத்தியாயம்)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:26
+msgid "Header 0 (chapter*)"
+msgstr "தலைப்பு 0 (அத்தியாயம்*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:27
+msgid "Header 1 (section)"
+msgstr "தலைப்பு 1 (பிரிவு)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:28
+msgid "Header 1 (section*)"
+msgstr "தலைப்பு 1 (பிரிவு*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:29
+msgid "Header 2 (subsection)"
+msgstr "தலைப்பு 2 (துணைப்பிரிவு)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:30
+msgid "Header 2 (subsection*)"
+msgstr "தலைப்பு 2 (துணைப்பிரிவு*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:31
+msgid "Header 3 (subsubsection)"
+msgstr "தலைப்பு 3 (துணைப்பிரிவு)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:32
+msgid "Header 3 (subsubsection*)"
+msgstr "தலைப்பு 3 (துணைப்பிரிவு*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:33
+msgid "Header 4 (paragraph)"
+msgstr "தலைப்பு 4 (பத்தி)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:34
+msgid "Header appendix"
+msgstr "தலைப்பு பிற்சேர்க்கை"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:35
+msgid "Item"
+msgstr "உருப்படி"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:36
+msgid "Item with label"
+msgstr "பெயருடன் உருப்படி"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:37
+#, fuzzy
+msgid "Latex — Tags"
+msgstr "லாடக்ஸ்(Latex) - ஒட்டுக்கள்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:38
+msgid "List description"
+msgstr "பட்டியல் விவரம்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:39
+msgid "List enumerate"
+msgstr "பட்டியல் எண்ணுதல்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:40
+msgid "List itemize"
+msgstr "பட்டியல் உருப்படியுடன்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:41
+msgid "Maths (display)"
+msgstr "கணிதம் (காட்சி)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:42
+msgid "Maths (inline)"
+msgstr "கணித (உள்ளமை)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:43
+msgid "Operator fraction"
+msgstr "குறியீடு பின்னம்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:44
+msgid "Operator integral (display)"
+msgstr "குறியீடு ஒருங்கிணைத்தல் (காட்சி)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:45
+msgid "Operator integral (inline)"
+msgstr "குறியீடு ஒருகிணைப்பு (உள்ளமை)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:46
+msgid "Operator sum (display)"
+msgstr "குறியீடு கூட்டல் (காட்சி)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:47
+msgid "Operator sum (inline)"
+msgstr "குறியீடு கூட்டல் (உள்ளமை)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:48
+msgid "Reference label"
+msgstr "குறிப்பு பெயர்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:49
+msgid "Reference ref"
+msgstr "குறிப்பு ref"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:50
+msgid "Symbol <<"
+msgstr "குறியீடு <<"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:51
+msgid "Symbol <="
+msgstr "குறியீடு <="
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:52
+msgid "Symbol >="
+msgstr "குறியீடு >="
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:53
+msgid "Symbol >>"
+msgstr "குறியீடு >>"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:54
+msgid "Symbol and"
+msgstr "குறியீடு மற்றும்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:55
+msgid "Symbol const"
+msgstr "குறியீடு மாறிலி"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:56
+msgid "Symbol d-by-dt"
+msgstr "குறியீடு d-by-dt"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:57
+msgid "Symbol d-by-dt-partial"
+msgstr "குறியீடு d-by-dt-பகுதி"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:58
+msgid "Symbol d2-by-dt2-partial"
+msgstr "குறியீடு d2-by-dt2-பகுதி"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:59
+msgid "Symbol dagger"
+msgstr "அச்சு குறியீடு"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:60
+msgid "Symbol em-dash ---"
+msgstr "குறியீடு எம் இடைக்கோடு ---"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:61
+msgid "Symbol en-dash --"
+msgstr "குறியீடு என் இடைக்கோடு --"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:62
+msgid "Symbol equiv"
+msgstr "குறியீடு equiv"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:63
+msgid "Symbol infinity"
+msgstr "குறியீடு எண்ணற்ற"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:64
+msgid "Symbol mathspace ,"
+msgstr "குறியீடு கணித இடைவெளி ,"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:65
+msgid "Symbol mathspace ."
+msgstr "குறியீடு கணித இடைவெளி ."
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:66
+msgid "Symbol mathspace _"
+msgstr "குறியீடு கணித இடைவெளி _"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:67
+msgid "Symbol mathspace __"
+msgstr "குறியீடு கணித இடைவெளி __"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:68
+msgid "Symbol simeq"
+msgstr "குறியீடு simeq"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:69
+msgid "Symbol star"
+msgstr "குறியீடு நட்சத்திரம்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:70
+msgid "Typeface bold"
+msgstr "எழுத்துரு தடிமன்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:71
+msgid "Typeface italic"
+msgstr "எழுத்துரு இட்டாலிக்"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:72
+msgid "Typeface slanted"
+msgstr "எழுத்துரு சாய்வு"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:73
+msgid "Typeface type"
+msgstr "எழுத்துரு வகை"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:74
+msgid "Unbreakable text"
+msgstr "பிரியாத உரை"
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
+msgid ""
+"Provides a method to easily insert commonly used tags/strings into a "
+"document without having to type them."
+msgstr ""
+"பொதுவாக உபயோகப்படுத்தும் குறிகள்/எழுத்துகள் ஆகியவைகளை தட்டச்சு செய்யாமல் எளிதாக "
+"சொருகும் வழிமுறையை வழங்கும்."
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
+msgid "Tag list"
+msgstr "ஒட்டு பட்டியல்"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:1
+#, fuzzy
+msgid "XSLT — Axes"
+msgstr "XSLT - Axes"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:2
+#, fuzzy
+msgid "XSLT — Elements"
+msgstr "XSLT - உருப்படிகள்"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:3
+#, fuzzy
+msgid "XSLT — Functions"
+msgstr "XSLT - சார்புகள்"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:4
+msgid "ancestor"
+msgstr "மூதாதையர்"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:5
+msgid "ancestor-or-self"
+msgstr "மூதாதையர்-அல்லது-தான்"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:6
+msgid "attribute"
+msgstr "மதிப்புரு"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:7
+msgid "child"
+msgstr "சேய்"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:8
+msgid "descendant"
+msgstr "வழிதோன்றல்"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:9
+msgid "descendant-or-self"
+msgstr "வழித்தோன்றல்-அல்லது-தான்"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:10
+msgid "following"
+msgstr "பின்வருபவை"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:11
+msgid "following-sibling"
+msgstr "பின்வரும்-உடன்பிறப்பு"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:12
+msgid "namespace"
+msgstr "பெயர் இடைவெளி"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:13
+msgid "parent"
+msgstr "பெற்றோர்"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:14
+msgid "preceding"
+msgstr "முந்தைய"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:15
+msgid "preceding-sibling"
+msgstr "முந்தைய-உடன்பிறப்பு"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:16
+msgid "self"
+msgstr "தான்"
+
+#: ../plugins/taglist/XUL.tags.xml.in.h:1
+#, fuzzy
+msgid "XUL — Tags"
+msgstr "எக்ஸ்யூஎல்(XUL )- ஒட்டுகள்"

@@ -1,6 +1,6 @@
-# translation of gedit-plugins to Kinyarwanda.
+# translation of gedit to Kinyarwanda.
 # Copyright (C) 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gedit-plugins package.
+# This file is distributed under the same license as the gedit package.
 # Steve Murphy <murf@e-tools.com>, 2005
 # Steve performed initial rough translation from compendium built from translations provided by the following translators:
 # Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
@@ -13,289 +13,2337 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins HEAD\n"
+"Project-Id-Version: gedit 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-04-01 12:12-0700\n"
-"PO-Revision-Date: 2005-03-31 20:55-0700\n"
+"POT-Creation-Date: 2010-11-07 13:12+0100\n"
+"PO-Revision-Date: 2005-03-28 19:34-0700\n"
 "Last-Translator: Steve Murphy <murf@e-tools.com>\n"
 "Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"ULL NAME <EMAIL@ADDRESS>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
+msgid "Bookmarks"
 msgstr ""
 
-#: plugins/ASCII/ascii.c:46
-#, fuzzy
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Hejuru a Ikiganiro"
-
-# sc/source\core\src\compiler.src:RID_SC_FUNCTION_NAMES.SC_OPCODE_CHAR.text
-#: plugins/ASCII/ascii.c:303
-#, fuzzy
-msgid "Char"
-msgstr "INYUGUTI"
-
-# 1483
-#: plugins/ASCII/ascii.c:310
-#, fuzzy
-msgid "Dec#"
-msgstr "Ukub.( Ukuboza)"
-
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
+msgid "Easy document navigation with bookmarks"
 msgstr ""
 
-#: plugins/ASCII/ascii.c:324
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
+msgid "Toggle Bookmark"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+msgid "Toggle bookmark status of the current line"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
+msgid "Goto Next Bookmark"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+msgid "Goto the next bookmark"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+msgid "Goto Previous Bookmark"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+msgid "Goto the previous bookmark"
+msgstr ""
+
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr ""
+
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
+msgid "Bracket Completion"
+msgstr ""
+
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:337
+#, fuzzy
+msgid "Character Map"
+msgstr "Oya Imyanya"
+
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
+msgid "Insert special characters just by clicking on them."
+msgstr ""
+
+# padmin/source\padialog.src:RID_TXT_TESTPAGE_COMMENT.text
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
+#, fuzzy
+msgid "Code comment"
+msgstr "Icyo wongeraho"
+
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
+msgid "Comment out or uncomment a selected block of code."
+msgstr ""
+
+# padmin/source\padialog.src:RID_TXT_TESTPAGE_COMMENT.text
+#: ../plugins/codecomment/codecomment.py:90
+#, fuzzy
+msgid "Co_mment Code"
+msgstr "Icyo wongeraho"
+
+#: ../plugins/codecomment/codecomment.py:92
+#, fuzzy
+msgid "Comment the selected code"
+msgstr "Byahiswemo Umwandiko"
+
+#: ../plugins/codecomment/codecomment.py:96
+msgid "U_ncomment Code"
+msgstr ""
+
+#: ../plugins/codecomment/codecomment.py:98
+#, fuzzy
+msgid "Uncomment the selected code"
+msgstr "Byahiswemo Umwandiko"
+
+#. ex:ts=4:et:
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
+msgid "Color Picker"
+msgstr ""
+
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
+msgstr ""
+
+#: ../plugins/colorpicker/colorpicker.py:77
+#, fuzzy
+msgid "Pick _Color..."
+msgstr "a Ibara"
+
+#: ../plugins/colorpicker/colorpicker.py:78
+#, fuzzy
+msgid "Pick a color from a dialog"
+msgstr "a Ibara"
+
+#: ../plugins/colorpicker/colorpicker.py:188
+#, fuzzy
+msgid "Pick Color"
+msgstr "a Ibara"
+
+# basctl/source\basicide\basidesh.src:RID_POPUP_TABBAR.RID_INSERT.text
+#: ../plugins/colorpicker/colorpicker.py:195
+#, fuzzy
+msgid "_Insert"
+msgstr "Kongeramo"
+
+#. ex:ts=4:et:
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:1
+msgid "Command line interface for advanced editing"
+msgstr ""
+
+# padmin/source\padialog.src:RID_PADIALOG.RID_PA_TXT_COMMAND.text
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Commander"
+msgstr "Komandi:"
+
+# svx/source\dialog\sdstring.src:RID_SVXSTR_BMP5.text
+#. ex:set ts=8 noet:
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
+#, fuzzy
+msgid "Draw Spaces"
+msgstr "Umwanya"
+
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
+msgid "Draw Spaces and Tabs"
+msgstr ""
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
+msgid "Draw leading spaces"
+msgstr ""
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
+#, fuzzy
+msgid "Draw new lines"
+msgstr "Imirongo"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
+msgid "Draw non-breaking spaces"
+msgstr ""
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
+#, fuzzy
+msgid "Draw spaces"
+msgstr "Imyanya"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
+msgid "Draw spaces in text"
+msgstr ""
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
+msgid "Draw tabs"
+msgstr ""
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
+msgid "Draw trailing spaces"
+msgstr ""
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
+msgid "Show _White Space"
+msgstr ""
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
+#, fuzzy
+msgid "Show spaces and tabs"
+msgstr "Imyanya Bya Amasimbuka"
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
+msgid "Enabled"
+msgstr "Bikora"
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
+msgid "If TRUE drawing will be enabled."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
+msgstr ""
+
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
+msgid "Join several lines or split long ones"
+msgstr ""
+
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
+msgid "Join/Split Lines"
+msgstr ""
+
+#: ../plugins/joinlines/joinlines.py:56
+#, fuzzy
+msgid "_Join Lines"
+msgstr "Gya kumurongo"
+
+#: ../plugins/joinlines/joinlines.py:57
+#, fuzzy
+msgid "Join the selected lines"
+msgstr "Byahiswemo Imirongo"
+
+#: ../plugins/joinlines/joinlines.py:59
+#, fuzzy
+msgid "_Split Lines"
+msgstr "Gya kumurongo"
+
+#: ../plugins/joinlines/joinlines.py:60
+#, fuzzy
+msgid "Split the selected lines"
+msgstr "Byahiswemo Imirongo"
+
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
+msgid "Added edit point..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
+msgid "Column Mode..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
+msgid "Removed edit point..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
+msgid "Cancelled column mode..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+msgid "Enter column edit mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+msgid "<b>Smart</b> column align mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+msgid "Toggle edit point"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+msgid "Add edit point at beginning of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+msgid "Add edit point at end of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+msgid "Align edit points"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+msgid "Align edit points with additional space"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Multi Edit Mode"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Start multi edit mode"
+msgstr ""
+
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr ""
+
+# #-#-#-#-#  goodies.pot (Gnome 2.12)  #-#-#-#-#
+# goodies/source\filter.vcl\eos2met\dlgeos2.src:DLG_EXPORT_EMET.GRP_SIZE.text
+# #-#-#-#-#  goodies.pot (Gnome 2.12)  #-#-#-#-#
+# goodies/source\filter.vcl\epict\dlgepct.src:DLG_EXPORT_EPCT.GRP_SIZE.text
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Text Size"
+msgstr "Ingano"
+
+#: ../plugins/sessionsaver/__init__.py:64
+msgid "Sa_ved sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
+msgid "_Save current session"
+msgstr "Kubika KIGEZWEHO IDOSIYE"
+
+#: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
+msgid "Save the current document list as a new session"
+msgstr "KIGEZWEHO Inyandiko Kuri a Gishya Idirishya"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Manage saved sessions..."
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:66
+#, fuzzy
+msgid "Open the saved session manager"
+msgstr "Bikorwa"
+
+#: ../plugins/sessionsaver/__init__.py:106
+#, python-format
+msgid "Recover '%s' session"
+msgstr ""
+
+#: ../plugins/sessionsaver/dialogs.py:167
+msgid "Session Name"
+msgstr ""
+
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:1
+msgid "Save and restore your working sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
+msgid "Session Saver"
+msgstr ""
+
+# #-#-#-#-#  dbaccess.pot (Gnome 2.12)  #-#-#-#-#
+# #-#-#-#-#  dbaccess.pot (Gnome 2.12)  #-#-#-#-#
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
+#, fuzzy
+msgid "Save session"
+msgstr "Kubika nka"
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
+msgid "Saved Sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
+msgid "Session name:"
+msgstr ""
+
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr ""
+
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Smart Spaces"
+msgstr "Imyanya"
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr ""
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Embedded Terminal"
+msgstr "Igikoresho"
+
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\dialog\charmap.src:RID_SUBSETMAP.RID_SUBSETSTR_TAMIL.text
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\dialog\langtab.src:RID_SVXSTR_LANGUAGE_TABLE.137.text
+#: ../plugins/terminal/terminal.py:307
+#, fuzzy
+msgid "Terminal"
+msgstr "Tamili"
+
+#: ../plugins/terminal/terminal.py:329
+#, fuzzy
+msgid "C_hange Directory"
+msgstr "bushyinguro"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#, fuzzy
+msgid "Document Words"
+msgstr "Umubiri"
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
+msgid "Word Completion"
+msgstr ""
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr ""
+
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
+msgid "SyncTeX"
+msgstr ""
+
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
+msgid "Synchronize between LaTeX and PDF with gedit and evince."
+msgstr ""
+
+#: ../plugins/synctex/synctex/synctex.py:280
+#: ../plugins/synctex/synctex/synctex.py:281
+#, fuzzy
+msgid "Forward Search"
+msgstr "Ihuza"
+
+#: ../plugins/taglist/gedit-taglist-plugin.c:165
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+msgid "Tags"
+msgstr ""
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:608
+#, fuzzy
+msgid "Select the group of tags you want to use"
+msgstr "Itsinda Bya Kuri Gukoresha"
+
+# sc/source\ui\src\scstring.src:SCSTR_PREVIEWSHELL.text
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:627
+#, fuzzy
+msgid "_Preview"
+msgstr "Igaragazambere ryo Gucapa"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+msgid "Available Tag Lists"
+msgstr ""
+
+#. ex:ts=8:noet:
+#: ../plugins/taglist/HTML.tags.xml.in.h:1
+#, fuzzy
+msgid "Abbreviated form"
+msgstr "Ifishi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:2
+msgid "Abbreviation"
+msgstr "Impine"
+
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\dialog\test.src:RID_SVXPAGE_POSITION.LB_ORIENT.2.text
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\dialog\transfrm.src:RID_SVXPAGE_POSITION_SIZE.LB_ORIENT.2.text
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\items\svxitems.src:RID_SVXITEMS_EMPHASIS_ABOVE_POS.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:3
+msgid "Above"
+msgstr "Hejuru"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:4
+#, fuzzy
+msgid "Accessibility key character"
+msgstr "Urufunguzo Inyuguti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:5
+msgid "Acronym"
+msgstr ""
+
+# Align menu items
+#: ../plugins/taglist/HTML.tags.xml.in.h:6
+msgid "Align"
+msgstr "Itunganya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:7
+#, fuzzy
+msgid "Alignment character"
+msgstr "Inyuguti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:8
+msgid "Alternative"
+msgstr ""
+
+# officecfg/registry\schema\org\openoffice\Office\Calc.xcs:....Content.Display.Anchor.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:9
+msgid "Anchor"
+msgstr "Agafashi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:10
+msgid "Anchor URI"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:11
+#, fuzzy
+msgid "Applet class file code"
+msgstr "ishuri IDOSIYE ITEGEKONGENGA"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:13
+#, fuzzy
+msgid "Applet class file code (deprecated)"
+msgstr "ishuri IDOSIYE ITEGEKONGENGA"
+
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\formdlg\dwfunctr.src:FID_FUNCTION_BOX.CB_CAT.9.text
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\formdlg\formdlgs.src:RID_SCTAB_FUNCTION.LB_CATEGORY.9.text
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\formdlg\formdlgs.src:RID_SCDLG_FORMULA.BTN_MATRIX.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:14
+msgid "Array"
+msgstr "Imbonerahamwe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:15
+#, fuzzy
+msgid "Associated information"
+msgstr "Ibisobanuro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:16
+#, fuzzy
+msgid "Author info"
+msgstr "Ibisobanuro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:17
+#, fuzzy
+msgid "Axis related headers"
+msgstr "Imitwe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:18
+msgid "Background color"
+msgstr "Ibara rya mbuganyuma"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:20
+#, fuzzy
+msgid "Background color (deprecated)"
+msgstr "Ibara rya mbuganyuma"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:21
+#, fuzzy
+msgid "Background texture tile"
+msgstr "Ibara risize Agakaro"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:23
+#, fuzzy
+msgid "Background texture tile (deprecated)"
+msgstr "Ibara risize Agakaro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:24
+#, fuzzy
+msgid "Base URI"
+msgstr "Base"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:25
+#, fuzzy
+msgid "Base font"
+msgstr "Base Intego- nyuguti"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:27
+msgid "Base font (deprecated)"
+msgstr ""
+
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Revision.TextDisplay.Insert.Attribute..1.text
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Revision.TextDisplay.Delete.Attribute..1.text
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Revision.TextDisplay.ChangedAttribute.Attribute..1.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:28
+msgid "Bold"
+msgstr "Bitsindagiye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:29
+msgid "Border"
+msgstr "Imbibi"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:31
+msgid "Border (deprecated)"
+msgstr ""
+
+# svx/source\tbxctrls\tbcontrl.src:RID_SVXSTR_FRAME_COLOR.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:32
+#, fuzzy
+msgid "Border color"
+msgstr "Ibara ry'urubibi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:33
+msgid "Cell rowspan"
+msgstr ""
+
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....AlignmentType.Position..6.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:34
+msgid "Center"
+msgstr "Hagati"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:36
+msgid "Center (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:37
+#, fuzzy
+msgid "Character encoding of linked resource"
+msgstr "Imisobekere: Bya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:38
+#, fuzzy
+msgid "Checked (state)"
+msgstr "Leta"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:39
+#, fuzzy
+msgid "Checked state"
+msgstr "Leta"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:40
+#, fuzzy
+msgid "Citation"
+msgstr "Iyerekana"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:41
+#, fuzzy
+msgid "Cite reason for change"
+msgstr "kugirango Guhindura>>"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:42
+msgid "Class implementation ID"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:43
+#, fuzzy
+msgid "Class list"
+msgstr "Urutonde"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:44
+#, fuzzy
+msgid "Clear text flow control"
+msgstr "Umwandiko Igenzura"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:45
+#, fuzzy
+msgid "Code content type"
+msgstr "Ibikubiyemo Ubwoko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:46
+#, fuzzy
+msgid "Color of selected links"
+msgstr "Bya Byahiswemo amahuza"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:48
+#, fuzzy
+msgid "Color of selected links (deprecated)"
+msgstr "Bya Byahiswemo amahuza"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:49
+#, fuzzy
+msgid "Column span"
+msgstr "Igihe ky'inkingi:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:50
+msgid "Columns"
+msgstr "Inkingi"
+
+# padmin/source\padialog.src:RID_TXT_TESTPAGE_COMMENT.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:51
+msgid "Comment"
+msgstr "Icyo wongeraho"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:52
+#, fuzzy
+msgid "Computer code fragment"
+msgstr "ITEGEKONGENGA"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:53
+#, fuzzy
+msgid "Content scheme"
+msgstr "Igishusho"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:54
+msgid "Content type"
+msgstr "Ubwoko bw'ibikubiyemo"
+
+#. The "type" attribute is deprecated for the "ol" tag only,
+#. since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:57
+#, fuzzy
+msgid "Content type (deprecated)"
+msgstr "Ubwoko bw'ibikubiyemo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:58
+msgid "Coordinates"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:59
+msgid "DIV Style container"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:60
+msgid "DIV container"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:61
+#, fuzzy
+msgid "Date and time of change"
+msgstr "Na Igihe Bya Guhindura>>"
+
+#. NOTE: used in "object" tag
+#: ../plugins/taglist/HTML.tags.xml.in.h:63
+#, fuzzy
+msgid "Declare flag"
+msgstr "Ibendera"
+
+#. Translators: DEFER is an optional attribute of the <script> tag.
+#. It indicates that the script is not going to generate any document
+#. content. The browser can continue parsing and drawing the page.
+#: ../plugins/taglist/HTML.tags.xml.in.h:67
+#, fuzzy
+msgid "Defer attribute"
+msgstr "Ikiranga"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:68
+#, fuzzy
+msgid "Definition description"
+msgstr "Isobanuramiterere"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:69
+#, fuzzy
+msgid "Definition list"
+msgstr "Ilisiti y'Insobanuro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:70
+#, fuzzy
+msgid "Definition term"
+msgstr "Ijambo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:71
+#, fuzzy
+msgid "Deleted text"
+msgstr "Umwandiko"
+
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\src\miscdlgs.src:RID_SCDLG_FILLSERIES.FL_DIRECTION.text
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\src\sortdlg.src:RID_SCPAGE_SORT_OPTIONS.FL_DIRECTION.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:72
+msgid "Direction"
+msgstr "Icyerekezo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:73
+msgid "Directionality"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:75
+msgid "Directionality (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:76
+#, fuzzy
+msgid "Directory list"
+msgstr "Urutonde"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:77
+msgid "Disabled"
+msgstr "Yahagaritswe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:78
+#, fuzzy
+msgid "Document base"
+msgstr "SHINGIRO"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:79
+#, fuzzy
+msgid "Document body"
+msgstr "Umubiri"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:80
+msgid "Document head"
+msgstr ""
+
+# 1747
+#: ../plugins/taglist/HTML.tags.xml.in.h:81
+msgid "Document title"
+msgstr "Umutwe-Nyandiko"
+
+# svx/source\options\optsave.src:RID_SFXPAGE_SAVE.FT_APP.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:82
+#, fuzzy
+msgid "Document type"
+msgstr "Ubwoko bw'inyandiko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:83
+msgid "Element ID"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:84
+#, fuzzy
+msgid "Embedded object"
+msgstr "Igikoresho"
+
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCHR_HTML_EMPHASIS.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:85
+#: ../plugins/taglist/Latex.tags.xml.in.h:9
+msgid "Emphasis"
+msgstr "Gushimangira"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:86
+#, fuzzy
+msgid "Encode type"
+msgstr "Ubwoko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:87
+msgid "Figure"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:88
+msgid "Font face"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:90
+msgid "Font face (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:91
+#, fuzzy
+msgid "For label"
+msgstr "Akarango"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:92
+#, fuzzy
+msgid "Forced line break"
+msgstr "Umurongo itandukanya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:93
+msgid "Form"
+msgstr "Ifishi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:94
+#, fuzzy
+msgid "Form action handler"
+msgstr "Igikorwa"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:95
+#, fuzzy
+msgid "Form control group"
+msgstr "Igenzura Itsinda"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:96
+#, fuzzy
+msgid "Form field label text"
+msgstr "Umwanya Akarango Umwandiko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:97
+#, fuzzy
+msgid "Form input"
+msgstr "Iyinjiza"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:98
+#, fuzzy
+msgid "Form input type"
+msgstr "Iyinjiza Ubwoko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:99
+#, fuzzy
+msgid "Form method"
+msgstr "Uburyo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:100
+#, fuzzy
+msgid "Forward link"
+msgstr "Ihuza"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:101
+msgid "Frame"
+msgstr "Ikadiri"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:102
+#, fuzzy
+msgid "Frame border"
+msgstr "Inkomoko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:103
+msgid "Frame render parts"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:104
+#, fuzzy
+msgid "Frame source"
+msgstr "Inkomoko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:105
+#, fuzzy
+msgid "Frame spacing"
+msgstr "Isigamwanya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:106
+#, fuzzy
+msgid "Frame target"
+msgstr "Intego"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:107
+msgid "Frameborder"
+msgstr ""
+
+# sfx2/source\view\fsetview.src:RID_FRAMESETEDIT_TOOLBOX.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:108
+#, fuzzy
+msgid "Frameset"
+msgstr "Ikadiri"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:109
+#, fuzzy
+msgid "Frameset columns"
+msgstr "Inkingi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:110
+#, fuzzy
+msgid "Frameset rows"
+msgstr "Imbariro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:111
+msgid "Framespacing"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:112
+#, fuzzy
+msgid "Generic embedded object"
+msgstr "Gitsindiye Igikoresho"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:113
+msgid "Generic metainformation"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:114
+msgid "Generic span"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:115
+msgid "HREF URI"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:116
+#, fuzzy
+msgid "HTML root element"
+msgstr "Imizi Ikigize:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:117
+#, fuzzy
+msgid "HTML version"
+msgstr "Verisiyo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:118
+msgid "HTML — Special Characters"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:119
+#, fuzzy
+msgid "HTML — Tags"
+msgstr "Amatagi ya HTML"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:120
+#, fuzzy
+msgid "HTTP header name"
+msgstr "Umutwempangano Izina:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:121
+#, fuzzy
+msgid "Header cell IDs"
+msgstr "Akazu"
+
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....DefaultFont.Heading.text
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....DefaultFontCJK.Heading.text
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....DefaultFontCTL.Heading.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:122
+msgid "Heading"
+msgstr "Umutwempangano"
+
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCOLL_HEADLINE1.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:123
+msgid "Heading 1"
+msgstr "Umutwe 1"
+
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCOLL_HEADLINE2.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:124
+msgid "Heading 2"
+msgstr "Umutwe 2"
+
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCOLL_HEADLINE3.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:125
+msgid "Heading 3"
+msgstr "Umutwe 3"
+
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCOLL_HEADLINE4.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:126
+msgid "Heading 4"
+msgstr "Umutwe 4"
+
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCOLL_HEADLINE5.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:127
+msgid "Heading 5"
+msgstr "Umutwe 5"
+
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCOLL_HEADLINE6.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:128
+msgid "Heading 6"
+msgstr "Umutwe 6"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:129
+msgid "Height"
+msgstr "Ubuhagarike"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:130
+msgid "Horizontal rule"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:131
+#, fuzzy
+msgid "Horizontal space"
+msgstr "Umwanya"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:133
+#, fuzzy
+msgid "Horizontal space (deprecated)"
+msgstr "Umwanya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:134
+#, fuzzy
+msgid "I18N BiDi override"
+msgstr "KURI"
+
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Common.xcs:....Image.text
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Insert.Caption.OfficeObject.Image.Enable.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:135
+msgid "Image"
+msgstr "Ishusho"
+
+# sw/source\ui\frmdlg\frmpage.src:TP_FRM_URL.FL_IMAGE.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:136
+msgid "Image map"
+msgstr "Ikarita y'ishusho"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:137
+#, fuzzy
+msgid "Image map area"
+msgstr "Ubuso"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:138
+#, fuzzy
+msgid "Image map name"
+msgstr "Izina:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:139
+#, fuzzy
+msgid "Image source"
+msgstr "Inkomoko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:140
+#, fuzzy
+msgid "Inline frame"
+msgstr "Ikadiri"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:141
+#, fuzzy
+msgid "Inline layer"
+msgstr "Akugara"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:142
+#, fuzzy
+msgid "Inserted text"
+msgstr "Umwandiko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:143
+#, fuzzy
+msgid "Instance definition"
+msgstr "Insobanuro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:144
+#, fuzzy
+msgid "Italic text"
+msgstr "Umwandiko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:145
+#, fuzzy
+msgid "Java applet"
+msgstr "Apuleti..."
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:147
+#, fuzzy
+msgid "Java applet (deprecated)"
+msgstr "Apuleti..."
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:148
+msgid "Label"
+msgstr "Akarango"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:149
+#, fuzzy
+msgid "Language code"
+msgstr "ITEGEKONGENGA"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:150
+#, fuzzy
+msgid "Large text style"
+msgstr "Umwandiko IMISUSIRE"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:151
+msgid "Layer"
+msgstr "Akugara"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:152
+#, fuzzy
+msgid "Link color"
+msgstr "Ibara"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:154
+#, fuzzy
+msgid "Link color (deprecated)"
+msgstr "Ibara"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:155
+#, fuzzy
+msgid "List item"
+msgstr "Ibigize by'ilisiti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:156
+#, fuzzy
+msgid "List of MIME types for file upload"
+msgstr "Bya kugirango IDOSIYE"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:157
+#, fuzzy
+msgid "List of supported character sets"
+msgstr "Bya Inyuguti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:158
+msgid "Listing"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:159
+#, fuzzy
+msgid "Local change to font"
+msgstr "Guhindura>> Kuri Intego- nyuguti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:160
+#, fuzzy
+msgid "Long description link"
+msgstr "Isobanuramiterere Ihuza"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:161
+#, fuzzy
+msgid "Long quotation"
+msgstr "Gusubiramo ibyavuzwe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:162
+#, fuzzy
+msgid "Mail link"
+msgstr "Ihuza"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:164
+#, fuzzy
+msgid "Margin pixel height"
+msgstr "Ubuhagarike"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:166
+#, fuzzy
+msgid "Margin pixel width"
+msgstr "Ubugari"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:167
+msgid "Marquee"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:168
+#, fuzzy
+msgid "Maximum length of text field"
+msgstr "Uburebure Bya Umwandiko Umwanya"
+
+#. Here I take some liberties: There's no mandatory attributes,
+#. but those are most common, and will likely be used.
+#: ../plugins/taglist/HTML.tags.xml.in.h:171
+#, fuzzy
+msgid "Media-independent link"
+msgstr "Ihuza"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:172
+#, fuzzy
+msgid "Menu list"
+msgstr "Urutonde"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:174
+msgid "Menu list (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:175
+#, fuzzy
+msgid "Multi-line text field"
+msgstr "Umurongo Umwandiko Umwanya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:176
+msgid "Multicolumn"
+msgstr ""
+
+# scaddins/source\analysis\analysis.src:RID_ANALYSIS_FUNCTION_DESCRIPTIONS.ANALYSIS_Mround.4.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:177
+msgid "Multiple"
+msgstr "Igikubo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:178
 msgid "Name"
 msgstr "Izina"
 
-#: plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
+#: ../plugins/taglist/HTML.tags.xml.in.h:179
+#, fuzzy
+msgid "Named property value"
+msgstr "indangakintu Agaciro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:180
+msgid "Next ID"
 msgstr ""
 
-#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
-#, fuzzy
-msgid "_Insert char"
-msgstr "INYUGUTI"
-
-#: plugins/ASCII/asciitable.glade2.h:1
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:1
-#, fuzzy
-msgid "ASCII table"
-msgstr "imbonerahamwe#"
-
-#: plugins/ASCII/ascii.gedit-plugin.desktop.in.h:2
-#, fuzzy
-msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-msgstr "a Hejuru Ikiganiro Kirimo"
-
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
+#: ../plugins/taglist/HTML.tags.xml.in.h:181
+msgid "No URI"
 msgstr ""
 
-#: plugins/cvschangelog/cvschangelog.c:52
+#: ../plugins/taglist/HTML.tags.xml.in.h:182
 #, fuzzy
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "kugirango in i KIGEZWEHO Inyandiko Na"
+msgid "No embedded objects"
+msgstr "Gitsindiye Ibintu"
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:1
+#: ../plugins/taglist/HTML.tags.xml.in.h:183
 #, fuzzy
-msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-msgstr "A Byabonetse in Ubutumwa"
+msgid "No frames"
+msgstr "Amakadiri"
 
-#: plugins/cvschangelog/cvschangelog.gedit-plugin.desktop.in.h:2
-msgid "CVS ChangeLog"
+#: ../plugins/taglist/HTML.tags.xml.in.h:184
+msgid "No layers"
 msgstr ""
 
-#: plugins/diff/diff.c:64
-msgid "Co_mpare Files..."
+#: ../plugins/taglist/HTML.tags.xml.in.h:185
+#, fuzzy
+msgid "No line break"
+msgstr "Umurongo itandukanya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:186
+#, fuzzy
+msgid "No resize"
+msgstr "Ihindurangero"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:187
+#, fuzzy
+msgid "No script"
+msgstr "IYANDIKA"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:188
+msgid "No shade"
 msgstr ""
 
-#: plugins/diff/diff.c:67
-#, fuzzy
-msgid "Makes a diff file from two documents or files"
-msgstr "a IDOSIYE Bivuye Inyandiko Cyangwa Idosiye"
-
-#. Create the dialog
-#: plugins/diff/diff.c:270 plugins/diff/diff.gedit-plugin.desktop.in.h:1
-msgid "Compare Files"
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:190
+msgid "No shade (deprecated)"
 msgstr ""
 
-# sfx2/source\dialog\versdlg.src:DLG_VERSIONS.PB_COMPARE.text
-#: plugins/diff/diff.c:284
+#: ../plugins/taglist/HTML.tags.xml.in.h:191
 #, fuzzy
-msgid "C_ompare"
-msgstr "Kugereranya"
+msgid "No word wrap"
+msgstr "ijambo Gufunika"
 
-#: plugins/diff/diff.c:511
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:193
 #, fuzzy
-msgid "Executed command"
-msgstr "Komandi:"
+msgid "No word wrap (deprecated)"
+msgstr "ijambo Gufunika"
 
-#: plugins/diff/diff.c:652
+#: ../plugins/taglist/HTML.tags.xml.in.h:194
+msgid "Non-breaking space"
+msgstr ""
+
+# sc/source\ui\pagedlg\hfedtdlg.src:RID_HFBASE.FL_INFO.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:195
+msgid "Note"
+msgstr "Igisobanuro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:196
 #, fuzzy
-msgid "The two documents you selected are the same."
-msgstr "Inyandiko Byahiswemo i"
+msgid "Object applet file"
+msgstr "Apuleti... IDOSIYE"
 
-#: plugins/diff/diff.c:660
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:198
+#, fuzzy
+msgid "Object applet file (deprecated)"
+msgstr "Apuleti... IDOSIYE"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:199
+#, fuzzy
+msgid "Object data reference"
+msgstr "Ibyatanzwe Indango"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:200
+#, fuzzy
+msgid "Offset for alignment character"
+msgstr "kugirango Itunganya Inyuguti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:201
+#, fuzzy
+msgid "OnBlur event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:202
+#, fuzzy
+msgid "OnChange event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:203
+#, fuzzy
+msgid "OnClick event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:204
+#, fuzzy
+msgid "OnDblClick event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:205
+#, fuzzy
+msgid "OnFocus event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:206
+#, fuzzy
+msgid "OnKeyDown event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:207
+#, fuzzy
+msgid "OnKeyPress event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:208
+#, fuzzy
+msgid "OnKeyUp event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:209
+#, fuzzy
+msgid "OnLoad event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:210
+#, fuzzy
+msgid "OnMouseDown event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:211
+#, fuzzy
+msgid "OnMouseMove event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:212
+#, fuzzy
+msgid "OnMouseOut event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:213
+#, fuzzy
+msgid "OnMouseOver event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:214
+#, fuzzy
+msgid "OnMouseUp event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:215
+#, fuzzy
+msgid "OnReset event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:216
+#, fuzzy
+msgid "OnSelect event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:217
+#, fuzzy
+msgid "OnSubmit event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:218
+#, fuzzy
+msgid "OnUnload event"
+msgstr "Icyabaye"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:219
+#, fuzzy
+msgid "Option group"
+msgstr "Itsinda ry'Ihitamo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:220
+msgid "Option selector"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:221
+#, fuzzy
+msgid "Ordered list"
+msgstr "Urutonde"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:222
+#, fuzzy
+msgid "Output media"
+msgstr "Ibitangazamakuru"
+
+# sc/source\ui\src\textdlgs.src:RID_SCDLG_PARAGRAPH.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:223
+msgid "Paragraph"
+msgstr "Igika"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:224
+#, fuzzy
+msgid "Paragraph class"
+msgstr "ishuri"
+
+# svx/source\items\svxitems.src:RID_SVXITEMS_SEARCHSTYL_PARA.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:225
+#, fuzzy
+msgid "Paragraph style"
+msgstr "Imisusire y'Igika"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:226
+msgid "Preformatted listing"
+msgstr ""
+
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCOLL_HTML_PRE.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:227
+#, fuzzy
+msgid "Preformatted text"
+msgstr "Umwandiko wahawe imiterere mbere"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:228
+#, fuzzy
+msgid "Profile metainfo dictionary"
+msgstr "Inkoranyamagambo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:229
+#, fuzzy
+msgid "Prompt message"
+msgstr "Ubutumwa"
+
+# svx/sdi\svxslots.src:SID_FM_PUSHBUTTON.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:230
+#, fuzzy
+msgid "Push button"
+msgstr "Kanda Buto"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:231
+msgid "Quote"
+msgstr "Gushyiraho akugarizo"
+
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\miscdlgs\acredlin.src:RID_SCDLG_CHANGES.FT_ASSIGN.text
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\src\crnrdlg.src:RID_SCDLG_COLROWNAMERANGES.FL_ASSIGN.text
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\src\globstr.src:RID_GLOBSTR.STR_AREA.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:232
+msgid "Range"
+msgstr "Igice"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:233
+#, fuzzy
+msgid "ReadOnly text and password"
+msgstr "Umwandiko Na Ijambobanga..."
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:234
+#, fuzzy
+msgid "Reduced spacing"
+msgstr "Isigamwanya"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:236
+#, fuzzy
+msgid "Reduced spacing (deprecated)"
+msgstr "Isigamwanya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:237
+#, fuzzy
+msgid "Reverse link"
+msgstr "Ihuza ryahinduye ikerekezo"
+
+# 5214
+#: ../plugins/taglist/HTML.tags.xml.in.h:238
+msgid "Root"
+msgstr "Imizi"
+
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Label.Format.Row.text
+# #-#-#-#-#  officecfg.pot (Gnome 2.12)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....BusinessCard.Format.Row.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:239
+msgid "Rows"
+msgstr "Imbariro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:240
+#, fuzzy
+msgid "Rulings between rows and columns"
+msgstr "hagati Imbariro Na Inkingi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:241
+#, fuzzy
+msgid "Sample program output, scripts"
+msgstr "Porogaramu Ibisohoka Inyandikoporogaramu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:242
+#, fuzzy
+msgid "Scope covered by header cells"
+msgstr "ku Umutwempangano Utudirishya..."
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:244
+#, fuzzy
+msgid "Script language name"
+msgstr "Ururimi Izina:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:245
+msgid "Script statements"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:246
+msgid "Scrollbar"
+msgstr "Agafashsagenda"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:247
+#, fuzzy
+msgid "Selectable option"
+msgstr "Ihitamo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:248
+msgid "Selected"
+msgstr "Byahiswemo"
+
+# sw/source\ui\frmdlg\frmpage.src:TP_FRM_URL.CB_SERVER.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:249
+#, fuzzy
+msgid "Server-side image map"
+msgstr "Ikarita y'ishusho yo ku ruhande rwa mugabuzi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:250
+msgid "Shape"
+msgstr "Imisusire"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:251
+#, fuzzy
+msgid "Short inline quotation"
+msgstr "Mumurongo Gusubiramo ibyavuzwe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:252
+#, fuzzy
+msgid "Single line prompt"
+msgstr "Umurongo Urwinjiriro"
+
+# #-#-#-#-#  goodies.pot (Gnome 2.12)  #-#-#-#-#
+# goodies/source\filter.vcl\eos2met\dlgeos2.src:DLG_EXPORT_EMET.GRP_SIZE.text
+# #-#-#-#-#  goodies.pot (Gnome 2.12)  #-#-#-#-#
+# goodies/source\filter.vcl\epict\dlgepct.src:DLG_EXPORT_EPCT.GRP_SIZE.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:253
+msgid "Size"
+msgstr "Ingano"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:255
+msgid "Size (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:256
+#, fuzzy
+msgid "Small text style"
+msgstr "Umwandiko IMISUSIRE"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:257
+#, fuzzy
+msgid "Soft line break"
+msgstr "Umurongo itandukanya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:258
+msgid "Sound"
+msgstr "Ijwi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:259
+msgid "Source"
+msgstr "Inkomoko"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:260
+#, fuzzy
+msgid "Space-separated archive list"
+msgstr "Urutonde"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:261
+msgid "Spacer"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:262
+#, fuzzy
+msgid "Spacing between cells"
+msgstr "hagati Utudirishya..."
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:263
+#, fuzzy
+msgid "Spacing within cells"
+msgstr "muri Utudirishya..."
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:264
+msgid "Span"
+msgstr ""
+
+# starmath/source\smres.src:RID_TOOLBOXWINDOW.4.RID_SQRTX.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:265
+#, fuzzy
+msgid "Square root"
+msgstr "Umwikube Kabiri"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:266
+#, fuzzy
+msgid "Standby load message"
+msgstr "Ibirimo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:267
+#, fuzzy
+msgid "Starting sequence number"
+msgstr "Umubare"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:269
+#, fuzzy
+msgid "Starting sequence number (deprecated)"
+msgstr "Umubare"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:270
+#, fuzzy
+msgid "Strike-through text"
+msgstr "Gihinguranya Umwandiko"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:272
+#, fuzzy
+msgid "Strike-through text (deprecated)"
+msgstr "Gihinguranya Umwandiko IMISUSIRE"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:273
+#, fuzzy
+msgid "Strike-through text style"
+msgstr "Gihinguranya Umwandiko IMISUSIRE"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:275
+#, fuzzy
+msgid "Strike-through text style (deprecated)"
+msgstr "Gihinguranya Umwandiko IMISUSIRE"
+
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCHR_HTML_STRONG.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:276
+#, fuzzy
+msgid "Strong emphasis"
+msgstr "Gushimangira cyane"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:277
+#, fuzzy
+msgid "Style info"
+msgstr "Ibisobanuro"
+
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/sdi\svxslots.src:SID_SET_SUB_SCRIPT.text
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\dialog\chardlg.src:RID_SVXPAGE_CHAR_POSITION.RB_LOWPOS.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:278
+msgid "Subscript"
+msgstr "Inyandiko nyesi"
+
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/sdi\svxslots.src:SID_SET_SUPER_SCRIPT.text
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\dialog\chardlg.src:RID_SVXPAGE_CHAR_POSITION.RB_HIGHPOS.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:279
+msgid "Superscript"
+msgstr "Inyandiko nyejuru"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:280
+#, fuzzy
+msgid "Tab order position"
+msgstr "Itondekanya Ibirindiro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:281
+msgid "Table"
+msgstr "Imbonerahamwe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:282
+#, fuzzy
+msgid "Table body"
+msgstr "Umubiri"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:283
+#, fuzzy
+msgid "Table caption"
+msgstr "Akarango"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:284
+#, fuzzy
+msgid "Table column group properties"
+msgstr "Inkingi Itsinda Indangakintu..."
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:285
+#, fuzzy
+msgid "Table column properties"
+msgstr "Inkingi Indangakintu..."
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:286
+#, fuzzy
+msgid "Table data cell"
+msgstr "Ibyatanzwe Akazu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:287
+#, fuzzy
+msgid "Table footer"
+msgstr "Imperampangano"
+
+# sw/source\ui\chrdlg\ccoll.src:TP_CONDCOLL.STR_REGIONS.1.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:288
+#, fuzzy
+msgid "Table header"
+msgstr "Umutwempangano w'imbonerahamwe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:289
+#, fuzzy
+msgid "Table header cell"
+msgstr "Umutwempangano Akazu"
+
+# sw/source\ui\shells\shells.src:STR_SWBG_TABLE_ROW.text
+#: ../plugins/taglist/HTML.tags.xml.in.h:290
+msgid "Table row"
+msgstr "Urubariro rw'imbonerahamwe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:291
+#, fuzzy
+msgid "Table summary"
+msgstr "Imbonerahamwe y'incamake:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:292
+msgid "Target — Blank"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:293
+msgid "Target — Parent"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:294
+msgid "Target — Self"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:295
+msgid "Target — Top"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:296
+#, fuzzy
+msgid "Teletype or monospace text style"
+msgstr "Cyangwa Monospace: Umwandiko IMISUSIRE"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:297
+msgid "Text"
+msgstr "Umwandiko"
+
+# 6204
+#: ../plugins/taglist/HTML.tags.xml.in.h:298
+msgid "Text color"
+msgstr "ibara ry'amagambo"
+
+# 6204
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:300
+#, fuzzy
+msgid "Text color (deprecated)"
+msgstr "ibara ry'amagambo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:301
+#, fuzzy
+msgid "Text entered by user"
+msgstr "ku Ukoresha:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:302
+msgid "Title"
+msgstr "Umutwe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:303
+#, fuzzy
+msgid "Top margin in pixels"
+msgstr "in Pigiseli"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:304
+msgid "URL"
+msgstr "URL"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:305
+#, fuzzy
+msgid "Underlined text style"
+msgstr "Umwandiko IMISUSIRE"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:306
+#, fuzzy
+msgid "Unordered list"
+msgstr "Urutonde"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:307
+#, fuzzy
+msgid "Use image map"
+msgstr "Ishusho"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:308
+msgid "Value"
+msgstr "Agaciro"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:309
+msgid "Value interpretation"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:310
+#, fuzzy
+msgid "Variable or program argument"
+msgstr "Cyangwa Porogaramu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:311
+#, fuzzy
+msgid "Vertical cell alignment"
+msgstr "Akazu Itunganya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:312
+#, fuzzy
+msgid "Vertical space"
+msgstr "Umwanya"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:314
+#, fuzzy
+msgid "Vertical space (deprecated)"
+msgstr "Umwanya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:315
+#, fuzzy
+msgid "Visited link color"
+msgstr "Ibara y'Ihuza yasuwe"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:317
+#, fuzzy
+msgid "Visited link color (deprecated)"
+msgstr "Ibara y'Ihuza yasuwe"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:318
+msgid "Width"
+msgstr "Ubugari"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:319
+#, fuzzy
+msgid "XHTML 1.0 — Tags"
+msgstr "Amatagi ya HTML"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:1
+#, fuzzy
+msgid "Bibliography (cite)"
+msgstr "Ikintu"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:2
+#, fuzzy
+msgid "Bibliography (item)"
+msgstr "Ikintu"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:3
+#, fuzzy
+msgid "Bibliography (shortcite)"
+msgstr "Ikintu"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:4
+#, fuzzy
+msgid "Bibliography (thebibliography)"
+msgstr "Ikintu"
+
+# starmath/source\commands.src:RID_COMMANDMENU.RID_BRACKETS_MENU.text
+#: ../plugins/taglist/Latex.tags.xml.in.h:5
+#, fuzzy
+msgid "Brackets ()"
+msgstr "Udusodeko"
+
+# starmath/source\commands.src:RID_COMMANDMENU.RID_BRACKETS_MENU.text
+#: ../plugins/taglist/Latex.tags.xml.in.h:6
+#, fuzzy
+msgid "Brackets <>"
+msgstr "Udusodeko"
+
+# starmath/source\commands.src:RID_COMMANDMENU.RID_BRACKETS_MENU.text
+#: ../plugins/taglist/Latex.tags.xml.in.h:7
+#, fuzzy
+msgid "Brackets []"
+msgstr "Udusodeko"
+
+# starmath/source\commands.src:RID_COMMANDMENU.RID_BRACKETS_MENU.text
+#: ../plugins/taglist/Latex.tags.xml.in.h:8
+#, fuzzy
+msgid "Brackets {}"
+msgstr "Udusodeko"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:10
+#, fuzzy
+msgid "File input"
+msgstr "Idosiye Iyinjiza"
+
+# #-#-#-#-#  sw.pot (Gnome 2.12)  #-#-#-#-#
+# sw/sdi\swslots.src:FN_EDIT_FOOTNOTE.text
+# #-#-#-#-#  sw.pot (Gnome 2.12)  #-#-#-#-#
+# sw/source\ui\chrdlg\ccoll.src:TP_CONDCOLL.STR_REGIONS.5.text
+# #-#-#-#-#  sw.pot (Gnome 2.12)  #-#-#-#-#
+# sw/source\ui\fmtui\tmpdlg.src:STR_PAGE_FOOTNOTE.text
+# #-#-#-#-#  sw.pot (Gnome 2.12)  #-#-#-#-#
+# sw/source\ui\ribbar\workctrl.src:RID_SCROLL_NAVIGATION_WIN.ST_FTN.text
+# #-#-#-#-#  sw.pot (Gnome 2.12)  #-#-#-#-#
+# sw/source\ui\utlui\poolfmt.src:STR_POOLCOLL_FOOTNOTE.text
+# #-#-#-#-#  sw.pot (Gnome 2.12)  #-#-#-#-#
+# sw/source\ui\utlui\poolfmt.src:STR_POOLPAGE_FOOTNOTE.text
+#: ../plugins/taglist/Latex.tags.xml.in.h:11
+msgid "Footnote"
+msgstr "Ubusobanuro mpezarupapuro"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:12
+#, fuzzy
+msgid "Function cosine"
+msgstr "Sinisi"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:13
+#, fuzzy
+msgid "Function e^"
+msgstr "E"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:14
+#, fuzzy
+msgid "Function exp"
+msgstr "EXP"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:15
+#, fuzzy
+msgid "Function log"
+msgstr "LOG"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:16
+#, fuzzy
+msgid "Function log10"
+msgstr "LOG10"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:17
+#, fuzzy
+msgid "Function sine"
+msgstr "Sinisi"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:18
+#, fuzzy
+msgid "Greek alpha"
+msgstr "Alufa"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:19
+#, fuzzy
+msgid "Greek beta"
+msgstr "beta"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:20
+#, fuzzy
+msgid "Greek epsilon"
+msgstr "ebusiloni"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:21
+#, fuzzy
+msgid "Greek gamma"
+msgstr "Gama"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:22
+#, fuzzy
+msgid "Greek lambda"
+msgstr "lamuda"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:23
+#, fuzzy
+msgid "Greek rho"
+msgstr "ro"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:24
+#, fuzzy
+msgid "Greek tau"
+msgstr "tawu"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:25
+#, fuzzy
+msgid "Header 0 (chapter)"
+msgstr "0 Umutwe"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:26
+#, fuzzy
+msgid "Header 0 (chapter*)"
+msgstr "0 Umutwe"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:27
+#, fuzzy
+msgid "Header 1 (section)"
+msgstr "1. Icyiciro"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:28
+#, fuzzy
+msgid "Header 1 (section*)"
+msgstr "1. Icyiciro"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:29
+#, fuzzy
+msgid "Header 2 (subsection)"
+msgstr "2."
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:30
+#, fuzzy
+msgid "Header 2 (subsection*)"
+msgstr "2."
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:31
+#, fuzzy
+msgid "Header 3 (subsubsection)"
+msgstr "3."
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:32
+#, fuzzy
+msgid "Header 3 (subsubsection*)"
+msgstr "3."
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:33
+#, fuzzy
+msgid "Header 4 (paragraph)"
+msgstr "4. Igika"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:34
+msgid "Header appendix"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:35
+msgid "Item"
+msgstr "Ikintu"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:36
+#, fuzzy
+msgid "Item with label"
+msgstr "Na: Akarango"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:37
+msgid "Latex — Tags"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:38
+#, fuzzy
+msgid "List description"
+msgstr "Isobanuramiterere"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:39
+msgid "List enumerate"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:40
+msgid "List itemize"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:41
+#, fuzzy
+msgid "Maths (display)"
+msgstr "Kugaragaza"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:42
+#, fuzzy
+msgid "Maths (inline)"
+msgstr "Mumurongo"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:43
+#, fuzzy
+msgid "Operator fraction"
+msgstr "Imigabane"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:44
+#, fuzzy
+msgid "Operator integral (display)"
+msgstr "Umubare Wuzuye Kugaragaza"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:45
+#, fuzzy
+msgid "Operator integral (inline)"
+msgstr "Umubare Wuzuye Mumurongo"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:46
+#, fuzzy
+msgid "Operator sum (display)"
+msgstr "Igiteranyo Kugaragaza"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:47
+#, fuzzy
+msgid "Operator sum (inline)"
+msgstr "Igiteranyo Mumurongo"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:48
+#, fuzzy
+msgid "Reference label"
+msgstr "Akarango"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:49
+#, fuzzy
+msgid "Reference ref"
+msgstr "indango"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:50
+#, fuzzy
+msgid "Symbol <<"
+msgstr "Na"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:51
+#, fuzzy
+msgid "Symbol <="
+msgstr "Na"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:52
+#, fuzzy
+msgid "Symbol >="
+msgstr "Na"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:53
+#, fuzzy
+msgid "Symbol >>"
+msgstr "Na"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:54
+#, fuzzy
+msgid "Symbol and"
+msgstr "Na"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:55
+msgid "Symbol const"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:56
+#, fuzzy
+msgid "Symbol d-by-dt"
+msgstr "D ku"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:57
+#, fuzzy
+msgid "Symbol d-by-dt-partial"
+msgstr "D ku Bituzuye"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:58
+#, fuzzy
+msgid "Symbol d2-by-dt2-partial"
+msgstr "ku Bituzuye"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:59
+msgid "Symbol dagger"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:60
+#, fuzzy
+msgid "Symbol em-dash ---"
+msgstr "D ku"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:61
+#, fuzzy
+msgid "Symbol en-dash --"
+msgstr "Na"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:62
+msgid "Symbol equiv"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:63
+#, fuzzy
+msgid "Symbol infinity"
+msgstr "Bidashira"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:64
+msgid "Symbol mathspace ,"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:65
+msgid "Symbol mathspace ."
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:66
+msgid "Symbol mathspace _"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:67
+msgid "Symbol mathspace __"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:68
+msgid "Symbol simeq"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:69
+#, fuzzy
+msgid "Symbol star"
+msgstr "star"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:70
+#, fuzzy
+msgid "Typeface bold"
+msgstr "UTSINDAGIYE"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:71
+#, fuzzy
+msgid "Typeface italic"
+msgstr "IBERAMYE"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:72
+msgid "Typeface slanted"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:73
+#, fuzzy
+msgid "Typeface type"
+msgstr "Ubwoko"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:74
+#, fuzzy
+msgid "Unbreakable text"
+msgstr "Umwandiko"
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
 #, fuzzy
 msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr "Itangira IDOSIYE Byahiswemo OYA a Byemewe IDOSIYE"
+"Provides a method to easily insert commonly used tags/strings into a "
+"document without having to type them."
+msgstr "a Uburyo Kuri Kongeramo a Inyandiko Ikurikiranyanyuguti Kuri Ubwoko"
 
-#: plugins/diff/diff.c:669
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
 #, fuzzy
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr "ISEGONDA IDOSIYE Byahiswemo OYA a Byemewe IDOSIYE"
+msgid "Tag list"
+msgstr "Urutonde"
 
-#: plugins/diff/diff.c:677
-#, fuzzy
-msgid "The two files you selected are the same."
-msgstr "Idosiye Byahiswemo i"
-
-#: plugins/diff/diff.c:694
-#, fuzzy
-msgid "The \"first\" document contains no text."
-msgstr "Itangira Inyandiko Kirimo Oya Umwandiko"
-
-#: plugins/diff/diff.c:728
-#, fuzzy
-msgid "The \"second\" document contains no text."
-msgstr "ISEGONDA Inyandiko Kirimo Oya Umwandiko"
-
-#. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:754
-#, fuzzy
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
+#: ../plugins/taglist/XSLT.tags.xml.in.h:1
+msgid "XSLT — Axes"
 msgstr ""
-"Kuri Kugereranya# i Byahiswemo Inyandiko OYA Kurema a By'igihe gito IDOSIYE"
 
-#: plugins/diff/diff.c:778 plugins/diff/diff.c:791
+# sw/source\ui\wizard\wizbmp.src:STR_Pag_DefsElem.text
+#: ../plugins/taglist/XSLT.tags.xml.in.h:2
 #, fuzzy
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr "Kuri Kugereranya# i Byahiswemo Inyandiko Gukora:%s i Komandi:"
+msgid "XSLT — Elements"
+msgstr "Ibintu"
 
-#: plugins/diff/diff.c:813
-#, fuzzy
-msgid "No differences were found between the selected documents."
-msgstr "Byabonetse hagati i Byahiswemo Inyandiko"
-
-#: plugins/diff/diff.c:854
-#, fuzzy
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
+#: ../plugins/taglist/XSLT.tags.xml.in.h:3
+msgid "XSLT — Functions"
 msgstr ""
-"Kuri Kugereranya# i Byahiswemo Inyandiko Igisubizo Kirimo Sibyo 8 Ibyatanzwe"
 
-#: plugins/diff/diff.glade2.h:1
-msgid "*"
-msgstr "*"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:4
+msgid "ancestor"
+msgstr ""
 
-#: plugins/diff/diff.glade2.h:2
+#: ../plugins/taglist/XSLT.tags.xml.in.h:5
 #, fuzzy
-msgid "Choose the files to compare."
-msgstr "i Idosiye Kuri Kugereranya#"
+msgid "ancestor-or-self"
+msgstr "Cyangwa"
 
-#: plugins/diff/diff.glade2.h:3
+#: ../plugins/taglist/XSLT.tags.xml.in.h:6
 #, fuzzy
-msgid "Compare files..."
-msgstr "Idosiye"
+msgid "attribute"
+msgstr "Ikiranga"
 
-#: plugins/diff/diff.glade2.h:4
+#: ../plugins/taglist/XSLT.tags.xml.in.h:7
+msgid "child"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:8
+msgid "descendant"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:9
 #, fuzzy
-msgid "F_rom document"
-msgstr "Inyandiko"
+msgid "descendant-or-self"
+msgstr "Cyangwa"
 
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Itangira"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:10
+msgid "following"
+msgstr ""
 
-#: plugins/diff/diff.glade2.h:6
+#: ../plugins/taglist/XSLT.tags.xml.in.h:11
+msgid "following-sibling"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:12
+msgid "namespace"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:13
+msgid "parent"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:14
+msgid "preceding"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:15
+msgid "preceding-sibling"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:16
+msgid "self"
+msgstr ""
+
+#: ../plugins/taglist/XUL.tags.xml.in.h:1
 #, fuzzy
-msgid "First file from disk"
-msgstr "IDOSIYE Bivuye"
-
-#: plugins/diff/diff.glade2.h:7
-#, fuzzy
-msgid "First file from open document"
-msgstr "IDOSIYE Bivuye Gufungura Inyandiko"
-
-#: plugins/diff/diff.glade2.h:8
-#, fuzzy
-msgid "From _document"
-msgstr "Inyandiko"
-
-#: plugins/diff/diff.glade2.h:9
-#, fuzzy
-msgid "From a _file on disk"
-msgstr "a IDOSIYE ku"
-
-#: plugins/diff/diff.glade2.h:10
-#, fuzzy
-msgid "From a file o_n disk"
-msgstr "a IDOSIYE ku"
-
-#: plugins/diff/diff.glade2.h:11
-#, fuzzy
-msgid "Ignore _blanks (-b option)"
-msgstr "B Ihitamo"
-
-#: plugins/diff/diff.glade2.h:12
-#, fuzzy
-msgid "Note that this option is only supported by GNU diff"
-msgstr "iyi Ihitamo ni ku"
-
-# sc/source\core\src\compiler.src:RID_SC_FUNCTION_NAMES.SC_OPCODE_GET_SEC.text
-#: plugins/diff/diff.glade2.h:13
-#, fuzzy
-msgid "Second"
-msgstr "ISEGONDA"
-
-#: plugins/diff/diff.glade2.h:14
-#, fuzzy
-msgid "Second file from disk"
-msgstr "IDOSIYE Bivuye"
-
-#: plugins/diff/diff.glade2.h:15
-#, fuzzy
-msgid "Second file from open document"
-msgstr "IDOSIYE Bivuye Gufungura Inyandiko"
-
-#: plugins/diff/diff.glade2.h:16
-#, fuzzy
-msgid "Select the \"first\" file..."
-msgstr "i Itangira IDOSIYE"
-
-#: plugins/diff/diff.glade2.h:17
-#, fuzzy
-msgid "Select the \"second\" file..."
-msgstr "i ISEGONDA IDOSIYE"
-
-#: plugins/diff/diff.glade2.h:18
-#, fuzzy
-msgid "Select the first file to compare"
-msgstr "i Itangira IDOSIYE Kuri Kugereranya#"
-
-#: plugins/diff/diff.glade2.h:19
-#, fuzzy
-msgid "Select the first open document to compare"
-msgstr "i Itangira Gufungura Inyandiko Kuri Kugereranya#"
-
-#: plugins/diff/diff.glade2.h:20
-#, fuzzy
-msgid "Select the second file to compare"
-msgstr "i ISEGONDA IDOSIYE Kuri Kugereranya#"
-
-#: plugins/diff/diff.glade2.h:21
-#, fuzzy
-msgid "Select the second open document to compare"
-msgstr "i ISEGONDA Gufungura Inyandiko Kuri Kugereranya#"
-
-#: plugins/diff/diff.glade2.h:22
-#, fuzzy
-msgid "Use the _unified output format (-u option)"
-msgstr "i Ibisohoka Imiterere u Ihitamo"
-
-#: plugins/diff/diff.gedit-plugin.desktop.in.h:2
-#, fuzzy
-msgid ""
-"The Compare Files plugin uses the \"diff\" program to compare two documents "
-"or files on disk."
-msgstr "i Porogaramu Kuri Kugereranya# Inyandiko Cyangwa Idosiye ku"
+msgid "XUL — Tags"
+msgstr "Amatagi ya HTML"

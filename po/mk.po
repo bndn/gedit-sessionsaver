@@ -1,3051 +1,2018 @@
-# translation of gedit.HEAD.mk.po to Macedonian
-# Copyright (C) 2002 Free Software Foundation, Inc.
-# Igor Petreski <dierektor@pcinfo.com.mk>, 2002
+# translation of mk.po to Macedonian
+# translation of gedit.HEAD.mk.po to
+# Copyright (C) 2002,2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 #
+#
+# Igor Petreski <dierektor@pcinfo.com.mk>, 2002.
+# Arangel Angov <ufo@linux.net.mk>, 2003, 2004, 2006, 2008.
+# Ime Prezime <email@adresa.com>, 2003.
+# Igor Popovski <igor@popovski.com.mk>, 2003.
+# Darko Spasovski <darko@ultra.com.mk>, 2003.
+# Tomislav Markovski <herrera@users.sourceforge.net>, 2004.
+# Arangel Angov <ufo@users.ossm.org.mk>, 2005.
+# Арангел Ангов <ufo@linux.net.mk>, 2005.
+# Ivica Micev <icko@elfasko.org.mk>, 2006.
+# Jovan Naumovski <jovan@lugola.net>, 2006, 2007.
+# Arangel Angov <arangel@linux.net.mk>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit.HEAD.mk\n"
-"POT-Creation-Date: 2002-12-13 05:47+0100\n"
-"PO-Revision-Date: 2002-12-14 16:40+0100\n"
-"Last-Translator: Igor Petreski <dierektor@pcinfo.com.mk>\n"
-"Language-Team: Macedonian <mk@li.org>\n"
+"Project-Id-Version: mk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-07 13:11+0100\n"
+"PO-Revision-Date: 2008-08-24 20:57+0200\n"
+"Last-Translator: Arangel Angov <ufo@linux.net.mk>\n"
+"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=3; plural= n==1 || n%10==1 ? 0 : 1\n"
+"X-Generator: KBabel 1.11.4\n"
 
-#: data/GNOME_Gedit.server.in.h:1
-msgid "gedit application"
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
+msgid "Bookmarks"
+msgstr "Обележувачи"
+
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
+msgid "Easy document navigation with bookmarks"
 msgstr ""
 
-#: data/GNOME_Gedit.server.in.h:2
-msgid "gedit automation factory"
-msgstr ""
-
-#: data/gedit.desktop.in.h:1
-msgid "Edit text files"
-msgstr "Ажурирај текстуални фајлови"
-
-#: data/gedit.desktop.in.h:2 src/gedit2.c:336
-msgid "Text Editor"
-msgstr "Текст едитор"
-
-#: data/gedit.schemas.in.h:1
-msgid ""
-"A custom font that will be used for the editing area. This will only take "
-"effect if the \"Use Default Font\" option is turned off."
-msgstr ""
-
-#: data/gedit.schemas.in.h:2
-msgid "Auto Save"
-msgstr ""
-
-#: data/gedit.schemas.in.h:3
-msgid "Auto Save Interval"
-msgstr ""
-
-#: data/gedit.schemas.in.h:4
-msgid "Auto indent"
-msgstr ""
-
-#: data/gedit.schemas.in.h:5
-msgid "Background Color"
-msgstr ""
-
-#: data/gedit.schemas.in.h:6
-msgid ""
-"Background color for selected text in the editing area. This will only take "
-"effect if the \"Use Default Colors\" option is turned off."
-msgstr ""
-
-#: data/gedit.schemas.in.h:7
-msgid ""
-"Background color for unselected text in the editing area. This will only "
-"take effect if the \"Use Default Colors\" option is turned off."
-msgstr ""
-
-#: data/gedit.schemas.in.h:8
-msgid "Backup Copy Extension"
-msgstr ""
-
-#: data/gedit.schemas.in.h:9
-msgid "Body Font for Printing"
-msgstr ""
-
-#: data/gedit.schemas.in.h:10
-msgid "Create Backup Copies"
-msgstr ""
-
-#: data/gedit.schemas.in.h:11
-msgid "Display Line Numbers"
-msgstr ""
-
-#: data/gedit.schemas.in.h:12
-msgid "Editor Font"
-msgstr ""
-
-#: data/gedit.schemas.in.h:13
-msgid "Encoding for Saving"
-msgstr ""
-
-#: data/gedit.schemas.in.h:14 src/dialogs/gedit-preferences-dialog.c:2290
-#: src/dialogs/gedit-encodings-dialog.c:257
-#: src/dialogs/gedit-encodings-dialog.glade2.h:2
-msgid "Encodings"
-msgstr ""
-
-#: data/gedit.schemas.in.h:15
-msgid ""
-"Extension or suffix to use for backup file names. This will only take effect "
-"if the \"Create Backup Copies\" option is turned on."
-msgstr ""
-
-#: data/gedit.schemas.in.h:16
-msgid ""
-"Foreground color for selected text in the editing area. This will only take "
-"effect if the \"Use Default Colors\" option is turned off."
-msgstr ""
-
-#: data/gedit.schemas.in.h:17
-msgid ""
-"Foreground color for the unselected text in the editing area. This will only "
-"take effect if the \"Use Default Colors\" option is turned off."
-msgstr ""
-
-#: data/gedit.schemas.in.h:18
-msgid "Header Font for Printing"
-msgstr ""
-
-#: data/gedit.schemas.in.h:19
-msgid ""
-"If this value is 0, then no line numbers will be inserted when printing a "
-"document. Otherwise, gedit will print line numbers every such number of "
-"lines."
-msgstr ""
-
-#: data/gedit.schemas.in.h:20
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
 #, fuzzy
-msgid "Insert spaces"
-msgstr "Внеси кориснички _име"
+msgid "Toggle Bookmark"
+msgstr "Обележувачи"
 
-#: data/gedit.schemas.in.h:21
-msgid "Line Number Font for Printing"
-msgstr ""
-
-#: data/gedit.schemas.in.h:22
-msgid "Line Wrapping Mode"
-msgstr ""
-
-#: data/gedit.schemas.in.h:23
-msgid ""
-"List of encodings used by gedit for reading files not encoded in UTF-8 or in "
-"the current locale encoding."
-msgstr ""
-
-#: data/gedit.schemas.in.h:24
-msgid "Maximum Recent Files"
-msgstr ""
-
-#: data/gedit.schemas.in.h:25
-msgid "Maximum number of actions that gedit will be able to undo or redo."
-msgstr ""
-
-#: data/gedit.schemas.in.h:26
-msgid ""
-"Number of minutes after which gedit will automatically save modified files. "
-"This will only take effect if the \"Auto Save\" option is turned on."
-msgstr ""
-
-#: data/gedit.schemas.in.h:27
-msgid "Print Header"
-msgstr ""
-
-#: data/gedit.schemas.in.h:28
-msgid "Print Line Numbers"
-msgstr ""
-
-#: data/gedit.schemas.in.h:29
-msgid "Printing Line Wrapping Mode"
-msgstr ""
-
-#: data/gedit.schemas.in.h:30
-msgid "Selected Text Color"
-msgstr ""
-
-#: data/gedit.schemas.in.h:31
-msgid "Selection Color"
-msgstr ""
-
-#: data/gedit.schemas.in.h:32
-msgid "Show Cursor Position"
-msgstr ""
-
-#: data/gedit.schemas.in.h:33
-msgid "Show Overwrite Mode"
-msgstr ""
-
-#: data/gedit.schemas.in.h:34
-msgid ""
-"Specifies how to wrap long lines for printing. Use \"GTK_WRAP_NONE\" for no "
-"wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
-"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
-"the values are case-sensitive, so make sure they appear exactly as mentioned "
-"here."
-msgstr ""
-
-#: data/gedit.schemas.in.h:35
-msgid ""
-"Specifies how to wrap long lines in the editing area. Use \"GTK_WRAP_NONE\" "
-"for no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
-"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
-"the values are case-sensitive, so make sure they appear exactly as mentioned "
-"here."
-msgstr ""
-
-#: data/gedit.schemas.in.h:36
-msgid "Specifies the font to use for a document's body when printing documents."
-msgstr ""
-
-#: data/gedit.schemas.in.h:37
-msgid ""
-"Specifies the font to use for line numbers when printing. This will only "
-"take effect if the \"Print Line Numbers\" option is non-zero."
-msgstr ""
-
-#: data/gedit.schemas.in.h:38
-msgid ""
-"Specifies the font to use for page headers when printing a document. This "
-"will only take effect if the \"Print Header\" option is turned on."
-msgstr ""
-
-#: data/gedit.schemas.in.h:39
-msgid ""
-"Specifies the maximum number of recently opened files that will be displayed "
-"in the \"Recent Files\" submenu."
-msgstr ""
-
-#: data/gedit.schemas.in.h:40
-msgid ""
-"Specifies the number of spaces that should be displayed instead of Tab "
-"characters."
-msgstr ""
-
-#: data/gedit.schemas.in.h:41
-msgid "Status Bar is Visible"
-msgstr ""
-
-#: data/gedit.schemas.in.h:42
-msgid ""
-"Style for the toolbar buttons. Possible values are \"GEDIT_TOOLBAR_SYSTEM\" "
-"to use the system's default style, \"GEDIT_TOOLBAR_ICONS\" to display icons "
-"only, \"GEDIT_TOOLBAR_ICONS_AND_TEXT\" to display both icons and text, and "
-"\"GEDIT_TOOLBAR_ICONS_BOTH_HORIZ\" to display prioritized text beside icons. "
-"Note that the values are case-sensitive, so make sure they appear exactly as "
-"mentioned here."
-msgstr ""
-
-#: data/gedit.schemas.in.h:43
-msgid "Tab Size"
-msgstr ""
-
-#: data/gedit.schemas.in.h:44
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
 #, fuzzy
-msgid "Text Color"
-msgstr "Текст едитор"
+msgid "Toggle bookmark status of the current line"
+msgstr "Покажи или скриј ја статусната лента во тековниот прозорец"
 
-#: data/gedit.schemas.in.h:45
-msgid ""
-"The encoding method to use for saving files. Possible values are "
-"\"GEDIT_SAVE_ALWAYS_UTF8\" for mandatory UTF-8 saving, "
-"\"GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE\" if you want gedit to try to "
-"convert the document it is saving to your current locale's encoding, "
-"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE\" if you want gedit to try "
-"to use the original file encoding (new files in UTF8) and "
-"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" if you want gedit to "
-"try to use the original file encoding (new files in current locale's "
-"encoding). If the conversion is successful, it will be used. Otherwise, UTF-"
-"8 will be used. Note that the values are case-sensitive, so make sure they "
-"appear exactly as mentioned here."
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
+msgid "Goto Next Bookmark"
 msgstr ""
 
-#: data/gedit.schemas.in.h:46
-msgid "Toolbar Buttons Style"
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+#, fuzzy
+msgid "Goto the next bookmark"
+msgstr "Оди на следната локација"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+#, fuzzy
+msgid "Goto Previous Bookmark"
+msgstr "Оди до претходната локација"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+#, fuzzy
+msgid "Goto the previous bookmark"
+msgstr "Прикажи ја претходната страница"
+
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
+msgid "Automatically adds closing brackets."
 msgstr ""
 
-#: data/gedit.schemas.in.h:47
-msgid "Toolbar is Visible"
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Bracket Completion"
+msgstr "Екстензија на сигурносната копија"
+
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:337
+#, fuzzy
+msgid "Character Map"
+msgstr "Кодирање на знаци"
+
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
+msgid "Insert special characters just by clicking on them."
 msgstr ""
 
-#: data/gedit.schemas.in.h:48
-msgid "Undo Actions Limit"
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
+#, fuzzy
+msgid "Code comment"
+msgstr "Коментар"
+
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
+msgid "Comment out or uncomment a selected block of code."
 msgstr ""
 
-#: data/gedit.schemas.in.h:49
-msgid "Use Default Colors"
+#: ../plugins/codecomment/codecomment.py:90
+#, fuzzy
+msgid "Co_mment Code"
+msgstr "Коментар"
+
+#: ../plugins/codecomment/codecomment.py:92
+#, fuzzy
+msgid "Comment the selected code"
+msgstr "Избриши го избраниот текст"
+
+#: ../plugins/codecomment/codecomment.py:96
+msgid "U_ncomment Code"
 msgstr ""
 
-#: data/gedit.schemas.in.h:50
-msgid "Use Default Font"
+#: ../plugins/codecomment/codecomment.py:98
+#, fuzzy
+msgid "Uncomment the selected code"
+msgstr "Избриши го избраниот текст"
+
+#. ex:ts=4:et:
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
+msgid "Color Picker"
 msgstr ""
 
-#: data/gedit.schemas.in.h:51
-msgid ""
-"Whether gedit should automatically save modified files after a time "
-"interval. You can set the time interval with the \"Auto Save Interval\" "
-"option."
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 
-#: data/gedit.schemas.in.h:52
-msgid ""
-"Whether gedit should create backup copies for the files it saves. You can "
-"set the backup file extension with the \"Backup Copy Extension\" option."
+#: ../plugins/colorpicker/colorpicker.py:77
+msgid "Pick _Color..."
 msgstr ""
 
-#: data/gedit.schemas.in.h:53
-msgid "Whether gedit should display line numbers in the editing area."
+#: ../plugins/colorpicker/colorpicker.py:78
+msgid "Pick a color from a dialog"
 msgstr ""
 
-#: data/gedit.schemas.in.h:54
-msgid "Whether gedit should enable auto indentation."
+#: ../plugins/colorpicker/colorpicker.py:188
+#, fuzzy
+msgid "Pick Color"
+msgstr "Боја на врската"
+
+#: ../plugins/colorpicker/colorpicker.py:195
+msgid "_Insert"
+msgstr "_Внеси"
+
+#. ex:ts=4:et:
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:1
+msgid "Command line interface for advanced editing"
 msgstr ""
 
-#: data/gedit.schemas.in.h:55
-msgid "Whether gedit should include a document header when printing documents."
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Commander"
+msgstr "Ко_манда(и):"
+
+#. ex:set ts=8 noet:
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
+msgid "Draw Spaces"
 msgstr ""
 
-#: data/gedit.schemas.in.h:56
-msgid "Whether gedit should insert spaces instead of tabs."
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
+msgid "Draw Spaces and Tabs"
 msgstr ""
 
-#: data/gedit.schemas.in.h:57
-msgid "Whether the status bar at the bottom of editing windows should be visible."
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
+#, fuzzy
+msgid "Draw leading spaces"
+msgstr "Непрекинат празен простор"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
+msgid "Draw new lines"
 msgstr ""
 
-#: data/gedit.schemas.in.h:58
-msgid ""
-"Whether the status bar should show the cursor position in editing windows. "
-"Make sure you turn on the \"Status Bar is Visible\" option for this to take "
-"effect."
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
+#, fuzzy
+msgid "Draw non-breaking spaces"
+msgstr "Непрекинат празен простор"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
+#, fuzzy
+msgid "Draw spaces"
+msgstr "Внеси места"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
+msgid "Draw spaces in text"
 msgstr ""
 
-#: data/gedit.schemas.in.h:59
-msgid ""
-"Whether the status bar should show the insert/overwrite mode in editing "
-"windows. Make sure you turn on the \"Status Bar is Visible\" option for this "
-"to take effect."
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
+msgid "Draw tabs"
 msgstr ""
 
-#: data/gedit.schemas.in.h:60
-msgid "Whether the toolbar should be visible in editing windows."
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
+#, fuzzy
+msgid "Draw trailing spaces"
+msgstr "Отстрани ги местата за следење"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
+#, fuzzy
+msgid "Show _White Space"
+msgstr "Прикажи ја следната страница"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
+#, fuzzy
+msgid "Show spaces and tabs"
+msgstr "Вметни _празни места наместо табови"
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
+msgid "Enabled"
+msgstr "Овозможено"
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
+msgid "If TRUE drawing will be enabled."
 msgstr ""
 
-#: data/gedit.schemas.in.h:61
-msgid ""
-"Whether to use the system's default colors for the editing area. If this "
-"option is turned off, then the colors of the editing area will be those "
-"specified in the \"Background Color\", \"Text Color\", \"Selected Text Color"
-"\", and \"Selection Color\" options."
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
 msgstr ""
 
-#: data/gedit.schemas.in.h:62
-msgid ""
-"Whether to use the system's default font for editing text instead of a font "
-"specific to gedit. If this option is turned off, then the font named in the "
-"\"Editor Font\" option will be used instead of the system font."
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
+msgid "Join several lines or split long ones"
 msgstr ""
 
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "_ASCII табела"
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
+msgid "Join/Split Lines"
+msgstr ""
 
-#: plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Дијалог прозорче кое содржи ASCII tабела"
+#: ../plugins/joinlines/joinlines.py:56
+#, fuzzy
+msgid "_Join Lines"
+msgstr "Линии"
 
-#: plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Карактер"
+#: ../plugins/joinlines/joinlines.py:57
+#, fuzzy
+msgid "Join the selected lines"
+msgstr "Поништи го порамнувањето на избраните линии"
 
-#: plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "Децимално#"
+#: ../plugins/joinlines/joinlines.py:59
+#, fuzzy
+msgid "_Split Lines"
+msgstr "Медиа излез"
 
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "Хексадецимално#"
+#: ../plugins/joinlines/joinlines.py:60
+#, fuzzy
+msgid "Split the selected lines"
+msgstr "Поништи го порамнувањето на избраните линии"
 
-#: plugins/ASCII/ascii.c:324
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
+msgid "Added edit point..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
+msgid "Column Mode..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
+msgid "Removed edit point..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
+msgid "Cancelled column mode..."
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+msgid "Enter column edit mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+msgid "<b>Smart</b> column align mode using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+msgid "Toggle edit point"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+msgid "Add edit point at beginning of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+msgid "Add edit point at end of line/selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+msgid "Align edit points"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+msgid "Align edit points with additional space"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Multi Edit Mode"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Start multi edit mode"
+msgstr ""
+
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr ""
+
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Text Size"
+msgstr "Големина на Tab"
+
+#: ../plugins/sessionsaver/__init__.py:64
+msgid "Sa_ved sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
+msgid "_Save current session"
+msgstr "Замени тековна селекција"
+
+#: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
+msgid "Save the current document list as a new session"
+msgstr "Премести го актуелниот документ во нов прозорец"
+
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Manage saved sessions..."
+msgstr ""
+
+#: ../plugins/sessionsaver/__init__.py:66
+#, fuzzy
+msgid "Open the saved session manager"
+msgstr "Отвори го упатството за gedit"
+
+#: ../plugins/sessionsaver/__init__.py:106
+#, python-format
+msgid "Recover '%s' session"
+msgstr ""
+
+#: ../plugins/sessionsaver/dialogs.py:167
+msgid "Session Name"
+msgstr ""
+
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:1
+msgid "Save and restore your working sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
+msgid "Session Saver"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
+#, fuzzy
+msgid "Save session"
+msgstr "Зачувај како"
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
+msgid "Saved Sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
+#, fuzzy
+msgid "Session name:"
+msgstr "Фонт"
+
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr ""
+
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Smart Spaces"
+msgstr "Внеси места"
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
+#, fuzzy
+msgid "Embed a terminal in the bottom pane."
+msgstr "Отвори терминал во локацијата на документот"
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Embedded Terminal"
+msgstr "Вграден објект"
+
+#: ../plugins/terminal/terminal.py:307
+msgid "Terminal"
+msgstr ""
+
+#: ../plugins/terminal/terminal.py:329
+#, fuzzy
+msgid "C_hange Directory"
+msgstr "Смени _во:"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#, fuzzy
+msgid "Document Words"
+msgstr "Тело на документот"
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
+msgid "Word Completion"
+msgstr ""
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr ""
+
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
+msgid "SyncTeX"
+msgstr ""
+
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
+msgid "Synchronize between LaTeX and PDF with gedit and evince."
+msgstr ""
+
+#: ../plugins/synctex/synctex/synctex.py:280
+#: ../plugins/synctex/synctex/synctex.py:281
+#, fuzzy
+msgid "Forward Search"
+msgstr "Повратна врска"
+
+#: ../plugins/taglist/gedit-taglist-plugin.c:165
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+msgid "Tags"
+msgstr "Етикети"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:608
+msgid "Select the group of tags you want to use"
+msgstr "Изберија групата на табови кои сакаш да ги користиш"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:627
+msgid "_Preview"
+msgstr "_Преглед"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+msgid "Available Tag Lists"
+msgstr "Достапни листи со ознака"
+
+#. ex:ts=8:noet:
+#: ../plugins/taglist/HTML.tags.xml.in.h:1
+msgid "Abbreviated form"
+msgstr "Скратена форма"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:2
+msgid "Abbreviation"
+msgstr "Скратеница"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:3
+msgid "Above"
+msgstr "Горе"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:4
+msgid "Accessibility key character"
+msgstr "Знак на копче за достапност"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:5
+msgid "Acronym"
+msgstr "Акроним"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:6
+msgid "Align"
+msgstr "Подреди"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:7
+msgid "Alignment character"
+msgstr "Знак за подредување"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:8
+msgid "Alternative"
+msgstr "Алтернативно"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:9
+msgid "Anchor"
+msgstr "Котва"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:10
+msgid "Anchor URI"
+msgstr "Адреса на котва"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:11
+msgid "Applet class file code"
+msgstr "Код од аплет"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:13
+msgid "Applet class file code (deprecated)"
+msgstr "Код од класа на аплет (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:14
+msgid "Array"
+msgstr "Построи"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:15
+msgid "Associated information"
+msgstr "Поврзана информација"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:16
+msgid "Author info"
+msgstr "Информации за авторот"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:17
+msgid "Axis related headers"
+msgstr "Заглавија поврзани со оската"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:18
+msgid "Background color"
+msgstr "Боја на позадина"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:20
+msgid "Background color (deprecated)"
+msgstr "Боја на позадина (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:21
+msgid "Background texture tile"
+msgstr "Текстура на позадина"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:23
+msgid "Background texture tile (deprecated)"
+msgstr "Текстура на позадина (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:24
+msgid "Base URI"
+msgstr "Основна адреса"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:25
+msgid "Base font"
+msgstr "Основен фонт"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:27
+msgid "Base font (deprecated)"
+msgstr "Основен фонт (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:28
+msgid "Bold"
+msgstr "Задебелено"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:29
+msgid "Border"
+msgstr "Рамка"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:31
+msgid "Border (deprecated)"
+msgstr "Рамка (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:32
+msgid "Border color"
+msgstr "Боја на рамка"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:33
+msgid "Cell rowspan"
+msgstr "Растојание меѓу келиите во редот"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:34
+msgid "Center"
+msgstr "Средина"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:36
+msgid "Center (deprecated)"
+msgstr "Центар (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:37
+msgid "Character encoding of linked resource"
+msgstr "Енкодинг на врзани ресурси"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:38
+msgid "Checked (state)"
+msgstr "Обележано (состојба)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:39
+msgid "Checked state"
+msgstr "Обележана состојба"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:40
+msgid "Citation"
+msgstr "Цитат"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:41
+msgid "Cite reason for change"
+msgstr "Наведи причина за промена"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:42
+msgid "Class implementation ID"
+msgstr "ID на класна имплементација"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:43
+msgid "Class list"
+msgstr "Листа со класи"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:44
+msgid "Clear text flow control"
+msgstr "Избриши ја контролата на текот на текстот"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:45
+msgid "Code content type"
+msgstr "Тип на содржина на код"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:46
+msgid "Color of selected links"
+msgstr "Боја на избраните врски"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:48
+msgid "Color of selected links (deprecated)"
+msgstr "Боја на избраните врски (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:49
+msgid "Column span"
+msgstr "Растојание меѓу колоните"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:50
+msgid "Columns"
+msgstr "Колони"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:51
+msgid "Comment"
+msgstr "Коментар"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:52
+msgid "Computer code fragment"
+msgstr "Парче компјутерски код"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:53
+msgid "Content scheme"
+msgstr "Шема на содржина"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:54
+msgid "Content type"
+msgstr "Тип на содржина"
+
+#. The "type" attribute is deprecated for the "ol" tag only,
+#. since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:57
+msgid "Content type (deprecated)"
+msgstr "Тип на содржина (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:58
+msgid "Coordinates"
+msgstr "Координати"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:59
+msgid "DIV Style container"
+msgstr "DIV Style контејнер"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:60
+msgid "DIV container"
+msgstr "DIV контејнер"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:61
+msgid "Date and time of change"
+msgstr "Дата и време на измена"
+
+#. NOTE: used in "object" tag
+#: ../plugins/taglist/HTML.tags.xml.in.h:63
+msgid "Declare flag"
+msgstr "Објави знаме"
+
+#. Translators: DEFER is an optional attribute of the <script> tag.
+#. It indicates that the script is not going to generate any document
+#. content. The browser can continue parsing and drawing the page.
+#: ../plugins/taglist/HTML.tags.xml.in.h:67
+msgid "Defer attribute"
+msgstr "Атрибут на разлика"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:68
+msgid "Definition description"
+msgstr "Опис"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:69
+msgid "Definition list"
+msgstr "Листа на дефиниции"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:70
+msgid "Definition term"
+msgstr "Поим за дефинирање"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:71
+msgid "Deleted text"
+msgstr "Избришан текст"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:72
+msgid "Direction"
+msgstr "Насока"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:73
+msgid "Directionality"
+msgstr "Насочување"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:75
+msgid "Directionality (deprecated)"
+msgstr "Насочување (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:76
+msgid "Directory list"
+msgstr "Листа на директориуми"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:77
+msgid "Disabled"
+msgstr "Оневозможено"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:78
+msgid "Document base"
+msgstr "Основа на документот"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:79
+msgid "Document body"
+msgstr "Тело на документот"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:80
+msgid "Document head"
+msgstr "Глава на документот"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:81
+msgid "Document title"
+msgstr "Наслов на документот"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:82
+msgid "Document type"
+msgstr "Тип на документ"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:83
+msgid "Element ID"
+msgstr "ID на елементи"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:84
+msgid "Embedded object"
+msgstr "Вграден објект"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:85
+#: ../plugins/taglist/Latex.tags.xml.in.h:9
+msgid "Emphasis"
+msgstr "Нагласок"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:86
+msgid "Encode type"
+msgstr "Тип на енкодирање"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:87
+msgid "Figure"
+msgstr "Фигура"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:88
+msgid "Font face"
+msgstr "Фонт"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:90
+msgid "Font face (deprecated)"
+msgstr "Фонт (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:91
+msgid "For label"
+msgstr "За ознака"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:92
+msgid "Forced line break"
+msgstr "Присилен прекин на линија"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:93
+msgid "Form"
+msgstr "Формулар"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:94
+msgid "Form action handler"
+msgstr "Ракувач со дејствата на формуларите"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:95
+msgid "Form control group"
+msgstr "Контролна група на формулари"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:96
+msgid "Form field label text"
+msgstr "Термин на дефиниција"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:97
+msgid "Form input"
+msgstr "Внес на формулар"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:98
+msgid "Form input type"
+msgstr "Врста на внес на формулар"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:99
+msgid "Form method"
+msgstr "Метод формулар"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:100
+msgid "Forward link"
+msgstr "Повратна врска"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:101
+msgid "Frame"
+msgstr "Рамка"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:102
+#, fuzzy
+msgid "Frame border"
+msgstr "Раб на рамка"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:103
+msgid "Frame render parts"
+msgstr "Исцртани делови на рамка"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:104
+msgid "Frame source"
+msgstr "Извор на рамка"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:105
+#, fuzzy
+msgid "Frame spacing"
+msgstr "Места помеѓу фрејмови"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:106
+msgid "Frame target"
+msgstr "Мета на рамка"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:107
+msgid "Frameborder"
+msgstr "Раб на рамка"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:108
+msgid "Frameset"
+msgstr "Фрејмсет"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:109
+msgid "Frameset columns"
+msgstr "Колони на фрејмсет"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:110
+msgid "Frameset rows"
+msgstr "Редови на фрејмсет"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:111
+msgid "Framespacing"
+msgstr "Места помеѓу фрејмови"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:112
+msgid "Generic embedded object"
+msgstr "Стандарден вграден објект"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:113
+msgid "Generic metainformation"
+msgstr "Генерички метаподатоци"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:114
+msgid "Generic span"
+msgstr "Стандардно растојание"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:115
+msgid "HREF URI"
+msgstr "HREF URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:116
+msgid "HTML root element"
+msgstr "HTML root елемент"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:117
+msgid "HTML version"
+msgstr "HTML верзија"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:118
+#, fuzzy
+msgid "HTML — Special Characters"
+msgstr "HTML - Специјални знаци"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:119
+#, fuzzy
+msgid "HTML — Tags"
+msgstr "HTML - Етикети"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:120
+msgid "HTTP header name"
+msgstr "HTTP име на заглавје"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:121
+#, fuzzy
+msgid "Header cell IDs"
+msgstr "ID на ќелија во заглавијето"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:122
+msgid "Heading"
+msgstr "Заглавје"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:123
+msgid "Heading 1"
+msgstr "Заглавје 1"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:124
+msgid "Heading 2"
+msgstr "Заглавје·2"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:125
+msgid "Heading 3"
+msgstr "Заглавје 3"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:126
+msgid "Heading 4"
+msgstr "Заглавје 4"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:127
+msgid "Heading 5"
+msgstr "Заглавје 5"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:128
+msgid "Heading 6"
+msgstr "Заглавје 6"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:129
+msgid "Height"
+msgstr "Висина"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:130
+msgid "Horizontal rule"
+msgstr "Хоризонтално правило"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:131
+msgid "Horizontal space"
+msgstr "Хоризонтален простор"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:133
+msgid "Horizontal space (deprecated)"
+msgstr "Хоризонтален простор (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:134
+#, fuzzy
+msgid "I18N BiDi override"
+msgstr "I18N BiDi over-ride"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:135
+msgid "Image"
+msgstr "Слика"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:136
+msgid "Image map"
+msgstr "Мапа на слика"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:137
+msgid "Image map area"
+msgstr "Област на мапата на сликата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:138
+msgid "Image map name"
+msgstr "Име на областа на мапата на сликата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:139
+msgid "Image source"
+msgstr "Извор на слика"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:140
+msgid "Inline frame"
+msgstr "Внатрешна рамка"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:141
+msgid "Inline layer"
+msgstr "Внатрешен слој"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:142
+msgid "Inserted text"
+msgstr "Внесен текст"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:143
+msgid "Instance definition"
+msgstr "Дефиниција за пример"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:144
+msgid "Italic text"
+msgstr "Закосен текст"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:145
+msgid "Java applet"
+msgstr "Јава аплет"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:147
+msgid "Java applet (deprecated)"
+msgstr "Java аплет (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:148
+msgid "Label"
+msgstr "Ознака"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:149
+msgid "Language code"
+msgstr "Код на јазик"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:150
+msgid "Large text style"
+msgstr "Стил со голем текст"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:151
+msgid "Layer"
+msgstr "Слој"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:152
+msgid "Link color"
+msgstr "Боја на врската"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:154
+msgid "Link color (deprecated)"
+msgstr "Боја на врската (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:155
+msgid "List item"
+msgstr "Листа со предмети"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:156
+msgid "List of MIME types for file upload"
+msgstr "Листа на MIME типови за подигнување на датотеки"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:157
+msgid "List of supported character sets"
+msgstr "Листа на поддржани знаци"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:158
+msgid "Listing"
+msgstr "Листање"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:159
+msgid "Local change to font"
+msgstr "Локална промена на фонтот"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:160
+msgid "Long description link"
+msgstr "Врска на подолг опис"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:161
+msgid "Long quotation"
+msgstr "Долг цитат"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:162
+msgid "Mail link"
+msgstr "Врска на пошта"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:164
+msgid "Margin pixel height"
+msgstr "Висина на маргините во пиксели"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:166
+msgid "Margin pixel width"
+msgstr "Ширина на маргините во пиксели"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:167
+msgid "Marquee"
+msgstr "Marquee"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:168
+msgid "Maximum length of text field"
+msgstr "Максимална должина на поле со текст"
+
+#. Here I take some liberties: There's no mandatory attributes,
+#. but those are most common, and will likely be used.
+#: ../plugins/taglist/HTML.tags.xml.in.h:171
+msgid "Media-independent link"
+msgstr "Независна врска"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:172
+msgid "Menu list"
+msgstr "Листа на мени"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:174
+msgid "Menu list (deprecated)"
+msgstr "Мени листа (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:175
+msgid "Multi-line text field"
+msgstr "Поле за текст од повеќе редови"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:176
+msgid "Multicolumn"
+msgstr "Повеќе колони"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:177
+msgid "Multiple"
+msgstr "Повеќе"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:178
 msgid "Name"
 msgstr "Име"
 
-#: plugins/ASCII/ascii.c:369
+#: ../plugins/taglist/HTML.tags.xml.in.h:179
+msgid "Named property value"
+msgstr "Именувана вредност на својство"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:180
+msgid "Next ID"
+msgstr "Следно ID"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:181
+msgid "No URI"
+msgstr "Нема адреса"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:182
+msgid "No embedded objects"
+msgstr "Без вградени објекти"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:183
+msgid "No frames"
+msgstr "Без рамки"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:184
+msgid "No layers"
+msgstr "Без слоеви"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:185
+msgid "No line break"
+msgstr "Без разделување на редовите"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:186
+msgid "No resize"
+msgstr "Без промена на големина"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:187
+msgid "No script"
+msgstr "Без скрипта"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:188
+msgid "No shade"
+msgstr "Без сенка"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:190
+msgid "No shade (deprecated)"
+msgstr "Без сенка (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:191
+msgid "No word wrap"
+msgstr "Без завиткување на зборови"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:193
+msgid "No word wrap (deprecated)"
+msgstr "Без префрлување на зборови (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:194
+msgid "Non-breaking space"
+msgstr "Непрекинат празен простор"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:195
+msgid "Note"
+msgstr "Белешка"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:196
+msgid "Object applet file"
+msgstr "Отвори аплет"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:198
+msgid "Object applet file (deprecated)"
+msgstr "Датотека за објект-аплет (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:199
+msgid "Object data reference"
+msgstr "Референца за објектни податоци"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:200
+msgid "Offset for alignment character"
+msgstr "Пренос за порамнување на знак"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:201
+msgid "OnBlur event"
+msgstr "OnBlur настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:202
+msgid "OnChange event"
+msgstr "OnChange настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:203
+msgid "OnClick event"
+msgstr "OnClick настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:204
+msgid "OnDblClick event"
+msgstr "OnDblClick настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:205
+msgid "OnFocus event"
+msgstr "OnFocus настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:206
+msgid "OnKeyDown event"
+msgstr "OnKeyDown настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:207
+msgid "OnKeyPress event"
+msgstr "OnKeyPress настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:208
+msgid "OnKeyUp event"
+msgstr "OnKeyUp настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:209
+msgid "OnLoad event"
+msgstr "OnLoad настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:210
+msgid "OnMouseDown event"
+msgstr "OnMouseDown настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:211
+msgid "OnMouseMove event"
+msgstr "OnMouseMove настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:212
+msgid "OnMouseOut event"
+msgstr "OnMouseOut настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:213
+msgid "OnMouseOver event"
+msgstr "OnMouseOver настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:214
+msgid "OnMouseUp event"
+msgstr "OnMouseUp настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:215
+msgid "OnReset event"
+msgstr "OnReset настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:216
+msgid "OnSelect event"
+msgstr "OnSelect настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:217
+msgid "OnSubmit event"
+msgstr "OnSubmit настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:218
+msgid "OnUnload event"
+msgstr "OnUnload настан"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:219
+msgid "Option group"
+msgstr "Група со опции"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:220
+msgid "Option selector"
+msgstr "Избор на опции"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:221
+msgid "Ordered list"
+msgstr "Подредена листа"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:222
+msgid "Output media"
+msgstr "Медиа излез"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:223
+msgid "Paragraph"
+msgstr "Параграф"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:224
+msgid "Paragraph class"
+msgstr "Класа на параграф"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:225
+msgid "Paragraph style"
+msgstr "Стил на параграф"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:226
+msgid "Preformatted listing"
+msgstr "Преформатиран листинг"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:227
+msgid "Preformatted text"
+msgstr "Преформатиран текст"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:228
+msgid "Profile metainfo dictionary"
+msgstr "Речник за метаинфо профил"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:229
+msgid "Prompt message"
+msgstr "Дијалог порака"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:230
+msgid "Push button"
+msgstr "Копче"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:231
+msgid "Quote"
+msgstr "Цитат"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:232
+msgid "Range"
+msgstr "Опсег"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:233
+msgid "ReadOnly text and password"
+msgstr "Лозинка и текст само за читање"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:234
+msgid "Reduced spacing"
+msgstr "Намален проред"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:236
+msgid "Reduced spacing (deprecated)"
+msgstr "Намален проред (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:237
+msgid "Reverse link"
+msgstr "Повратна врска"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:238
+msgid "Root"
+msgstr "Корен"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:239
+msgid "Rows"
+msgstr "Редови"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:240
+msgid "Rulings between rows and columns"
+msgstr "Простор помеѓу колони и редови"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:241
+msgid "Sample program output, scripts"
+msgstr "Резултат од пример програма, скрипти"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:242
+msgid "Scope covered by header cells"
+msgstr "Опсегот е покриен од ќелиите на заглавјето"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:244
+msgid "Script language name"
+msgstr "Постави јазик"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:245
 #, fuzzy
-msgid "ASCII Table"
-msgstr "_ASCII табела"
+msgid "Script statements"
+msgstr "Изјави на скрипта"
 
-#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "_Внеси карактер"
+#: ../plugins/taglist/HTML.tags.xml.in.h:246
+msgid "Scrollbar"
+msgstr "Лента за движење"
 
-#: plugins/ASCII/asciitable.glade2.h:1
-msgid "ASCII table"
-msgstr "ASCII табела"
+#: ../plugins/taglist/HTML.tags.xml.in.h:247
+msgid "Selectable option"
+msgstr "Изборна опција"
 
-#. AFAIK, all cvs commit messages start with this
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "Отвори ги CVS Change-логовите"
+#: ../plugins/taglist/HTML.tags.xml.in.h:248
+msgid "Selected"
+msgstr "Избрани"
 
-#: plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "Пребарува за Change-логови во активниот документ и ги отвара"
+#: ../plugins/taglist/HTML.tags.xml.in.h:249
+msgid "Server-side image map"
+msgstr "Слика од мапа од серверската страна"
 
-#: plugins/diff/diff.c:65
-msgid "Co_mpare Files..."
-msgstr "Спо_реди датотеки..."
+#: ../plugins/taglist/HTML.tags.xml.in.h:250
+msgid "Shape"
+msgstr "Облик"
 
-#: plugins/diff/diff.c:68
-msgid "Makes a diff file from two documents or files"
-msgstr "Прави diff датотека од два документи или дадотеки"
+#: ../plugins/taglist/HTML.tags.xml.in.h:251
+msgid "Short inline quotation"
+msgstr "Краток внатрешен цитат"
 
-#. Create the dialog
-#: plugins/diff/diff.c:271
+#: ../plugins/taglist/HTML.tags.xml.in.h:252
+msgid "Single line prompt"
+msgstr "Појавување на една линија"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:253
+msgid "Size"
+msgstr "Големина"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:255
+msgid "Size (deprecated)"
+msgstr "Големина (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:256
+msgid "Small text style"
+msgstr "Стил со мал текст"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:257
+msgid "Soft line break"
+msgstr "Меко прекршување на линија"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:258
+msgid "Sound"
+msgstr "Звук"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:259
+msgid "Source"
+msgstr "Извор"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:260
 #, fuzzy
-msgid "Compare Files"
-msgstr "Споредува датотеки"
+msgid "Space-separated archive list"
+msgstr "Листа на архива поделена со места"
 
-#: plugins/diff/diff.c:285
-msgid "C_ompare"
-msgstr "С_поредува"
+#: ../plugins/taglist/HTML.tags.xml.in.h:261
+msgid "Spacer"
+msgstr "Празен простор"
 
-#: plugins/diff/diff.c:513
-msgid "Executed command"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:262
+msgid "Spacing between cells"
+msgstr "Простор помеѓу ќелии"
 
-#: plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "Двата документи кои ги селектиравте се исти"
+#: ../plugins/taglist/HTML.tags.xml.in.h:263
+msgid "Spacing within cells"
+msgstr "Празни места во табелата"
 
-#: plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"\"првaта\" датотека која ја селектиравте не постои. \n"
-"Изберете валидна датотека"
+#: ../plugins/taglist/HTML.tags.xml.in.h:264
+msgid "Span"
+msgstr "Растојание"
 
-#: plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"\"Втората\" датотека која ја селектиравте не постои \n"
-"\n"
-"Изберете валидна датотека "
+#: ../plugins/taglist/HTML.tags.xml.in.h:265
+msgid "Square root"
+msgstr "Квадратен корен"
 
-#: plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "Двете датотеки кои ги селектиравте се исти"
-
-#: plugins/diff/diff.c:695
-msgid "The \"first\" document contains no text."
-msgstr "\"Првиот\" документ не содржи текст"
-
-#: plugins/diff/diff.c:730
-msgid "The \"second\" document contains no text."
-msgstr "\"Вториот\" документ не содржи текст"
-
-#. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:756
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"Невозмжно е да се споредат двата селектирани документи.\n"
-"\n"
-"gedit неможе да креира привремена датотека"
-
-#: plugins/diff/diff.c:776 plugins/diff/diff.c:789
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"Невозможно е да се споредат двата селектирани документи.\n"
-"\n"
-"Се јави грешка при извршување на diff командата."
-
-#: plugins/diff/diff.c:811
-msgid "No differences were found between the selected documents."
-msgstr "Нема разлика помеѓу двата селектирани документи."
-
-#: plugins/diff/diff.c:852
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"Невозможно е да се споредат селектирантите документи.\n"
-"\n"
-"Резултатот содржи невалидни UTF-8 податоци."
-
-#: plugins/diff/diff.glade2.h:1 plugins/shell_output/shell_output.glade2.h:1
-#: plugins/time/time.glade2.h:2 plugins/spell/spell-checker.glade2.h:1
-#: src/dialogs/replace.glade2.h:1 src/dialogs/uri.glade2.h:1
-msgid "*"
-msgstr ""
-
-#: plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Избери ги датотеките за споредување"
-
-#: plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Спореди датотеки..."
-
-#: plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "О_д документ"
-
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Прв"
-
-#: plugins/diff/diff.glade2.h:6
+#: ../plugins/taglist/HTML.tags.xml.in.h:266
 #, fuzzy
-msgid "First file from disk"
-msgstr "Од датотека н_а дискот"
+msgid "Standby load message"
+msgstr "Порака за чекање при вчитување"
 
-#: plugins/diff/diff.glade2.h:7
+#: ../plugins/taglist/HTML.tags.xml.in.h:267
+msgid "Starting sequence number"
+msgstr "Почетен број"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:269
+msgid "Starting sequence number (deprecated)"
+msgstr "Почетен број (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:270
+msgid "Strike-through text"
+msgstr "Прешкртано"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:272
+msgid "Strike-through text (deprecated)"
+msgstr "Прешкртано (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:273
+msgid "Strike-through text style"
+msgstr "Прешкртано"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:275
+msgid "Strike-through text style (deprecated)"
+msgstr "Прешкртано (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:276
+msgid "Strong emphasis"
+msgstr "Силен нагласок"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:277
+msgid "Style info"
+msgstr "Информации за стил"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:278
+msgid "Subscript"
+msgstr "Подскрипта"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:279
+msgid "Superscript"
+msgstr "Superscript"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:280
+msgid "Tab order position"
+msgstr "Позиција на јазичињата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:281
+msgid "Table"
+msgstr "Табела"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:282
+msgid "Table body"
+msgstr "Тело на табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:283
+msgid "Table caption"
+msgstr "Наслов на табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:284
+msgid "Table column group properties"
+msgstr "Својства на групата колони на табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:285
+msgid "Table column properties"
+msgstr "Својства на колоните на табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:286
+msgid "Table data cell"
+msgstr "Келија со податоци на табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:287
+msgid "Table footer"
+msgstr "Подножје на табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:288
+msgid "Table header"
+msgstr "Заглавје на табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:289
+msgid "Table header cell"
+msgstr "Келија на заглавјето на табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:290
+msgid "Table row"
+msgstr "Ред од табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:291
+msgid "Table summary"
+msgstr "Преглед на табелата"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:292
 #, fuzzy
-msgid "First file from open document"
-msgstr "Прикажи ги информациите за моменталниот документ"
+msgid "Target — Blank"
+msgstr "Мета - Празно"
 
-#: plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "Од _документ"
-
-#: plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "Од _датотека на дискот"
-
-#: plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "Од датотека н_а дискот"
-
-#: plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "Игнорирај ги празните _полиња (-b опција)"
-
-#: plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr "Оваа опција е подржана само од GNU diff"
-
-#: plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Секунда"
-
-#: plugins/diff/diff.glade2.h:14
+#: ../plugins/taglist/HTML.tags.xml.in.h:293
 #, fuzzy
-msgid "Second file from disk"
-msgstr "Од _датотека на дискот"
+msgid "Target — Parent"
+msgstr "Цел - Родител"
 
-#: plugins/diff/diff.glade2.h:15
+#: ../plugins/taglist/HTML.tags.xml.in.h:294
 #, fuzzy
-msgid "Second file from open document"
-msgstr "Прикажи ги информациите за моменталниот документ"
+msgid "Target — Self"
+msgstr "Цел - Сам себе"
 
-#: plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr ""
-
-#: plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr ""
-
-#: plugins/diff/diff.glade2.h:18
+#: ../plugins/taglist/HTML.tags.xml.in.h:295
 #, fuzzy
-msgid "Select the first file to compare"
-msgstr "Избери ги датотеките за споредување"
-
-#: plugins/diff/diff.glade2.h:19
-#, fuzzy
-msgid "Select the first open document to compare"
-msgstr "Изберија групата табови кои сакаш да ги користиш"
-
-#: plugins/diff/diff.glade2.h:20
-#, fuzzy
-msgid "Select the second file to compare"
-msgstr "Избери ги датотеките за споредување"
-
-#: plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr ""
-
-#: plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Употреби го првиот _унифициран излезен формат (-u опција)"
-
-#: plugins/docinfo/docinfo.c:46
-msgid "_Document Statistics"
-msgstr ""
-
-#: plugins/docinfo/docinfo.c:49
-#, fuzzy
-msgid "Get statistic info on current document"
-msgstr "Прикажи ги информациите за моменталниот документ"
-
-#: plugins/docinfo/docinfo.c:142
-msgid "Document Statistics"
-msgstr ""
-
-#: plugins/docinfo/docinfo.c:153
-msgid "_Update"
-msgstr "_Надградба"
-
-#: plugins/docinfo/docinfo.glade2.h:1
-msgid "0"
-msgstr "0"
-
-#: plugins/docinfo/docinfo.glade2.h:2
-msgid "Bytes"
-msgstr "бајти"
-
-#: plugins/docinfo/docinfo.glade2.h:3
-msgid "Characters (no spaces)"
-msgstr "Карактери (без празни места)"
-
-#: plugins/docinfo/docinfo.glade2.h:4
-msgid "Characters (with spaces)"
-msgstr "Карактери (со празни места)"
-
-#: plugins/docinfo/docinfo.glade2.h:5
-msgid "File Name"
-msgstr "Име на датотеката"
-
-#: plugins/docinfo/docinfo.glade2.h:6 src/gedit-print.c:318
-msgid "Lines"
-msgstr "Линии"
-
-#: plugins/docinfo/docinfo.glade2.h:7
-msgid "Update"
-msgstr "Надградба"
-
-#: plugins/docinfo/docinfo.glade2.h:8
-msgid "Words"
-msgstr "Зборови"
-
-#: plugins/docinfo/docinfo.glade2.h:9
-msgid "gedit: Document Info plugin"
-msgstr "gedit: Информации за додатокот "
-
-#: plugins/sample/sample.c:43
-#, fuzzy
-msgid "Insert User Na_me"
-msgstr "Внеси кориснички _име"
-
-#: plugins/sample/sample.c:46
-msgid "Insert the user name at the cursor position"
-msgstr "Внеси го корисничкото име кадешто се наоѓа курсорот"
-
-#: plugins/sample/sample.c:172
-msgid "User name"
-msgstr "Корисничко име"
-
-#: plugins/sample/sample.c:173
-msgid "Inserts the user name at the cursor position."
-msgstr "Внеси го корисничкото име кадешто се наоѓа курсорот"
-
-#: plugins/sample/sample.c:175
-msgid "Copyright (C) 2002 - Paolo Maggi"
-msgstr "Сите права се (С) 2002 Paolo Maggi"
-
-#: plugins/shell_output/shell_output.c:56
-msgid "_Run Command..."
-msgstr ""
-
-#: plugins/shell_output/shell_output.c:59
-msgid "Run a command"
-msgstr ""
-
-#: plugins/shell_output/shell_output.c:161
-#: plugins/shell_output/shell_output.c:516
-msgid "Stopped"
-msgstr ""
-
-#: plugins/shell_output/shell_output.c:246
-msgid "An error occurs while running the selected command."
-msgstr ""
-
-#: plugins/shell_output/shell_output.c:302
-msgid "Run Command"
-msgstr ""
-
-#: plugins/shell_output/shell_output.c:318
-msgid "_Run"
-msgstr "_Во тек"
-
-#: plugins/shell_output/shell_output.c:522
-msgid "Done"
-msgstr ""
-
-#: plugins/shell_output/shell_output.c:524
-msgid "Failed"
-msgstr ""
-
-#: plugins/shell_output/shell_output.c:696
-msgid ""
-"The shell command entry is empty.\n"
-"\n"
-"Please, insert a valid shell command."
-msgstr ""
-"Shell командата не е внесена. \n"
-"Внеси валидна команда "
-
-#: plugins/shell_output/shell_output.c:729
-msgid ""
-"Error parsing the shell command.\n"
-"\n"
-"Please, insert a valid shell command."
-msgstr ""
-"Се јави грешка при интерпретирањето на shell командата \n"
-"Внеси валидна команда"
-
-#: plugins/shell_output/shell_output.c:815
-msgid "Executing command"
-msgstr ""
-
-#: plugins/shell_output/shell_output.glade2.h:2
-msgid "Co_mmand:"
-msgstr ""
-
-#: plugins/shell_output/shell_output.glade2.h:3
-#, fuzzy
-msgid "Select the working directory..."
-msgstr "_Работен директориум"
-
-#: plugins/shell_output/shell_output.glade2.h:4
-msgid "_Show results in Output Window"
-msgstr ""
-
-#: plugins/shell_output/shell_output.glade2.h:5
-msgid "_Working directory:"
-msgstr "_Работен директориум"
-
-#: plugins/shell_output/shell_output.glade2.h:6
-msgid "gedit: Shell Output plugin"
-msgstr "gedit: Shell Output додаток"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:136
-msgid "Tag list plugin"
-msgstr "Таг листа додаток"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:154
-#, fuzzy
-msgid "Select the group of tags you want to use"
-msgstr "Изберија групата табови кои сакаш да ги користиш"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:176
-msgid "Tag Groups Combo"
-msgstr "Tag Groups Combo"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:178
-msgid "Tags Name List"
-msgstr "Tags Name List"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:188
-msgid "Double-click on a tag to insert it in the current document"
-msgstr "Двоен клик на таг за да го внесеш во моменталниот документ "
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:199
-msgid "Tags"
-msgstr ""
-
-#: plugins/taglist/gedit-taglist-plugin.c:46
-msgid "Tag _List"
-msgstr "Таг _листа"
-
-#.
-#. #define MENU_ITEM_NAME		"TagList"
-#.
-#: plugins/taglist/gedit-taglist-plugin.c:51
-msgid "Show the tag list window"
-msgstr "Покажи го прозорецот со листата на тагови"
-
-#: plugins/time/time.c:48
-#, fuzzy
-msgid "In_sert Date and Time..."
-msgstr "Внеси Дата/Време"
-
-#: plugins/time/time.c:51
-msgid "Insert current date and time at the cursor position"
-msgstr "Внеси ја моменталната дата и време на местото кадешто се наоѓа курсорот"
-
-#: plugins/time/time.c:448
-msgid "Available formats"
-msgstr "Достапни формати"
-
-#: plugins/time/time.c:552
-#, fuzzy
-msgid "Configure insert date/time plugin..."
-msgstr "Конфигурирај го додатокот за внесување на време и дата"
-
-#: plugins/time/time.glade2.h:1 src/dialogs/gedit-preferences.glade2.h:1
-msgid "    "
-msgstr ""
-
-#: plugins/time/time.glade2.h:3
-msgid "<span size=\"small\">01/11/2002 17:52:00</span>"
-msgstr ""
-
-#: plugins/time/time.glade2.h:4
-msgid "<span weight=\"bold\"> When inserting date/time...</span>"
-msgstr ""
-
-#: plugins/time/time.glade2.h:5
-#, fuzzy
-msgid "Configure date/time plugin"
-msgstr "Конфигурирај го додатокот за внесување на време и дата"
-
-#: plugins/time/time.glade2.h:6
-#, fuzzy
-msgid "Insert Date and Time"
-msgstr "Внеси Дата/Време"
-
-#: plugins/time/time.glade2.h:7
-msgid "Use the _selected format"
-msgstr ""
-
-#: plugins/time/time.glade2.h:8
-#, fuzzy
-msgid "_Insert"
-msgstr "_Внеси карактер"
-
-#: plugins/time/time.glade2.h:9
-msgid "_Prompt for a format"
-msgstr ""
-
-#: plugins/time/time.glade2.h:10
-msgid "_Use custom format"
-msgstr ""
-
-#: plugins/indent/indent.c:45
-msgid "_Indent"
-msgstr ""
-
-#: plugins/indent/indent.c:47
-msgid "Indent selected lines"
-msgstr ""
-
-#: plugins/indent/indent.c:49
-msgid "U_nindent"
-msgstr ""
-
-#: plugins/indent/indent.c:51
-msgid "Unindent selected lines"
-msgstr ""
-
-#: plugins/sort/sort.glade2.h:1
-msgid "R_emove duplicates"
-msgstr ""
-
-#: plugins/sort/sort.glade2.h:2
-msgid "S_tart at column:"
-msgstr ""
-
-#: plugins/sort/sort.glade2.h:3
-msgid "Sort"
-msgstr ""
-
-#: plugins/sort/sort.glade2.h:4
-msgid "You cannot undo a sort operation"
-msgstr ""
-
-#: plugins/sort/sort.glade2.h:5
-msgid "_Ignore case"
-msgstr ""
-
-#: plugins/sort/sort.glade2.h:6
-msgid "_Reverse order"
-msgstr ""
-
-#: plugins/sort/sort.glade2.h:7
-msgid "_Sort"
-msgstr ""
-
-#: plugins/spell/gedit-automatic-spell-checker.c:318
-#: plugins/spell/gedit-spell-checker-dialog.c:504
-msgid "(no suggested words)"
-msgstr ""
-
-#: plugins/spell/gedit-automatic-spell-checker.c:342
-msgid "_More..."
-msgstr ""
-
-#. Ignore all
-#: plugins/spell/gedit-automatic-spell-checker.c:395
-msgid "_Ignore All"
-msgstr ""
-
-#. + Add to Dictionary
-#: plugins/spell/gedit-automatic-spell-checker.c:408
-msgid "_Add"
-msgstr ""
-
-#: plugins/spell/gedit-automatic-spell-checker.c:445
-msgid "_Spelling Suggestions..."
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker-dialog.c:285
-msgid "Check Spelling"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker-dialog.c:296
-msgid "Suggestions"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker-dialog.c:608
-msgid "(correct spelling)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker-dialog.c:785
-msgid "Completed spell checking"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:73
-msgid "Breton"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:74
-msgid "Catalan"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:75
-msgid "Czech"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:76
-msgid "Danish"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:77
-msgid "German (Germany)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:78
-msgid "German (Swiss)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:79
-msgid "English (American)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:80
-msgid "English (British)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:81
-msgid "English (Canadian)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:82
-msgid "Esperanto"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:83
-msgid "Spanish"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:84
-msgid "Faroese"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:85
-msgid "French (France)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:86
-msgid "French (Swiss)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:87
-msgid "Italian"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:88
-msgid "Dutch"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:89
-msgid "Norwegian"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:90
-msgid "Polish"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:91
-msgid "Portuguese (Portugal)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:92
-msgid "Portuguese (Brazilian)"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:93
-msgid "Russian"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:94
-msgid "Swedish"
-msgstr ""
-
-#: plugins/spell/gedit-spell-checker.c:653
-msgid "Default"
-msgstr ""
-
-#: plugins/spell/gedit-spell-language-dialog.c:229
-#: src/dialogs/gedit-dialog-goto-line.c:165
-#: src/dialogs/gedit-plugin-program-location-dialog.c:96
-#: src/dialogs/gedit-encodings-dialog.c:238
-#, c-format
-msgid "Could not find the required widgets inside %s."
-msgstr ""
-
-#: plugins/spell/gedit-spell-language-dialog.c:249
-msgid "Languages"
-msgstr ""
-
-#: plugins/spell/languages-dialog.glade2.h:1
-#, fuzzy
-msgid "Select the _language of the current document."
-msgstr "Внеси shell output во документот"
-
-#: plugins/spell/languages-dialog.glade2.h:2
-msgid "Set language"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:2
-msgid "<b>Language</b>"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:3
-msgid "<b>word</b>"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:4
-msgid "Add w_ord"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:5
-#, fuzzy
-msgid "Cha_nge"
-msgstr "CVS Change-лог"
-
-#: plugins/spell/spell-checker.glade2.h:6
-msgid "Change A_ll"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:7
-msgid "Change _to:"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:8
-msgid "Check _Word"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:9
-msgid "Check spelling"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:10
-msgid "Ignore _All"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:11
-msgid "Language:"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:12
-msgid "Mispelled word:"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:13
-msgid "User dictionary:"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:14
-msgid "_Ignore"
-msgstr ""
-
-#: plugins/spell/spell-checker.glade2.h:15
-msgid "_Suggestions:"
-msgstr ""
-
-#. Key in case the plugin ever needs any settings
-#: plugins/sort/sort.c:26
-msgid "S_ort..."
-msgstr ""
-
-#: plugins/sort/sort.c:29
-msgid "Sort the current document or selection."
-msgstr ""
-
-#: plugins/spell/spell.c:51
-msgid "_Check Spelling"
-msgstr ""
-
-#: plugins/spell/spell.c:54
-msgid "Check the current document for incorrect spelling"
-msgstr ""
-
-#: plugins/spell/spell.c:56
-msgid "_Autocheck Spelling"
-msgstr ""
-
-#: plugins/spell/spell.c:59
-#, fuzzy
-msgid "Automatically spell-check the current document"
-msgstr "Внеси shell output во документот"
-
-#: plugins/spell/spell.c:61
-msgid "Set _Language"
-msgstr ""
-
-#: plugins/spell/spell.c:64
-#, fuzzy
-msgid "Set the language of the current document"
-msgstr "Внеси shell output во документот"
-
-#: plugins/spell/spell.c:549
-#, fuzzy
-msgid "The document is empty."
-msgstr "\"Првиот\" документ не содржи текст"
-
-#: plugins/spell/spell.c:567
-msgid "The selected text does not contain mispelled words."
-msgstr ""
-
-#: plugins/spell/spell.c:568
-msgid "The document does not contain mispelled words."
-msgstr ""
-
-#: src/bonobo-mdi.c:549 src/bonobo-mdi.c:1962
-#, c-format
-msgid "Activate %s"
-msgstr "Активирај %s"
-
-#: src/dialogs/gedit-dialog-goto-line.c:139
-#, fuzzy
-msgid "Go to Line"
-msgstr "_Оди на линија"
-
-#. Add Goto Line button
-#: src/dialogs/gedit-dialog-goto-line.c:149
-#, fuzzy
-msgid "_Go to Line"
-msgstr "_Оди на линија"
-
-#: src/dialogs/gedit-dialog-replace.c:130
-#: src/dialogs/gedit-dialog-replace.c:900 src/gedit-commands.c:362
-#, c-format
-msgid "The text \"%s\" was not found."
-msgstr ""
-
-#: src/dialogs/gedit-dialog-replace.c:238 src/dialogs/replace.glade2.h:4
-#: src/gedit-ui.xml.h:51
-msgid "Replace"
-msgstr ""
-
-#: src/dialogs/gedit-dialog-replace.c:249
-msgid "Replace _All"
-msgstr ""
-
-#. Add Replace button
-#: src/dialogs/gedit-dialog-replace.c:252 src/gedit-file-selector-util.c:129
-msgid "_Replace"
-msgstr ""
-
-#: src/dialogs/gedit-dialog-replace.c:368 src/gedit-ui.xml.h:22
-msgid "Find"
-msgstr ""
-
-#: src/dialogs/gedit-dialog-replace.c:909
-#, c-format
-msgid "Found and replaced %d occurences."
-msgstr ""
-
-#: src/dialogs/gedit-dialog-uri.c:83
-msgid "Open Location"
-msgstr ""
-
-#: src/dialogs/gedit-plugin-manager.c:53
-msgid "Plugin"
-msgstr ""
-
-#: src/dialogs/gedit-plugin-manager.c:54
-msgid "Load"
-msgstr ""
-
-#: src/dialogs/gedit-plugin-manager.c:320
-msgid "Module file name"
-msgstr ""
-
-#: src/dialogs/gedit-plugin-manager.c:321
-msgid "Author(s)"
-msgstr ""
-
-#: src/dialogs/gedit-plugin-manager.c:488
-msgid "Could not find plugin-manager.glade2, reinstall gedit.\n"
-msgstr ""
-
-#: src/dialogs/gedit-plugin-manager.c:511
-msgid "Invalid glade file for plugin manager -- not all widgets found.\n"
-msgstr ""
-
-#: src/dialogs/gedit-plugin-program-location-dialog.c:74
-#: src/dialogs/program-location-dialog.glade2.h:1
-msgid "Set program location..."
-msgstr ""
-
-#: src/dialogs/gedit-plugin-program-location-dialog.c:102
-#, c-format
-msgid ""
-"The %s plugin uses an external program, called <tt>%s</tt>, to perform its "
-"task.\n"
-"\n"
-"Please, specify the location of the <tt>%s</tt> program."
-msgstr ""
-
-#: src/dialogs/gedit-plugin-program-location-dialog.c:148
-msgid "The selected file is not executable."
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:232
-msgid "Font & Colors"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:234
-#: src/dialogs/gedit-preferences.glade2.h:47
-msgid "Tabs"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:235
-msgid "Wrap Mode"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:236
-msgid "Auto Indent"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:237
-msgid "Line Numbers"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:239 src/gedit-ui.xml.h:32
-msgid "Open"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:240
-#: src/dialogs/gedit-preferences.glade2.h:42 src/gedit-ui.xml.h:55
-msgid "Save"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:241
-#: src/dialogs/gedit-preferences.glade2.h:50 src/gedit-ui.xml.h:72
-msgid "Undo"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:249
-msgid "Page"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:251
-msgid "Fonts"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:258
-msgid "Manager"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:266
-msgid "Editor"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:267
-#: src/dialogs/gedit-preferences.glade2.h:38 src/gedit-print.c:309
-#: src/gedit-ui.xml.h:41
-msgid "Print"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:268
-msgid "Plugins"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:341
-msgid "Cat_egories:"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:363
-msgid "Preferences"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:602
-msgid "Categories"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:835
-msgid "Push this button to select the font to be used by the editor"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:838
-msgid "Push this button to configure text color"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:840
-msgid "Push this button to configure background color"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:842
-msgid ""
-"Push this button to configure the color in which the selected text should "
-"appear"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:845
-msgid ""
-"Push this button to configure the color in which the selected text should be "
-"marked"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:1850
-msgid "Push this button to select the font to be used to print the body"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:1852
-msgid "Push this button to select the font to be used to print the headers"
-msgstr ""
-
-#: src/dialogs/gedit-preferences-dialog.c:1854
-msgid "Push this button to select the font to be used to print line numbers"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:2
-msgid "<b>Font</b>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:3
-msgid "<span weight=\"bold\" size=\"x-large\">Auto Indent</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:4
-msgid "<span weight=\"bold\" size=\"x-large\">Font &amp; Colors</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:5
-msgid "<span weight=\"bold\" size=\"x-large\">Fonts</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:6
-msgid "<span weight=\"bold\" size=\"x-large\">Line Numbers</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:7
-msgid "<span weight=\"bold\" size=\"x-large\">Manager</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:8
-msgid "<span weight=\"bold\" size=\"x-large\">Open</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:9
-msgid "<span weight=\"bold\" size=\"x-large\">Page</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:10
-msgid "<span weight=\"bold\" size=\"x-large\">Save</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:11
-msgid "<span weight=\"bold\" size=\"x-large\">Tabs</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:12
-msgid "<span weight=\"bold\" size=\"x-large\">Undo</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:13
-msgid "<span weight=\"bold\" size=\"x-large\">Wrap Mode</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:14
-msgid "<span weight=\"bold\">Colors</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:15
-msgid "<span weight=\"bold\">When saving a new file...</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:16
-msgid "<span weight=\"bold\">When saving an existing file...</span>"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:17
-msgid "Add new encodings"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:18
-msgid "Always use U_TF-8 encoding (faster)"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:19
-msgid "Always use _UTF-8 encoding (faster)"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:20
-msgid "Create a _backup copy of files before saving"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:21
-msgid "Do not _split words over two lines"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:22
-msgid "Editor _font: "
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:23
-msgid "Enable _auto indentation"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:24
-msgid "Enable text _wrapping"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:25
-msgid "Fonts & Colors"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:26
-msgid "Insert _spaces instead of tabs"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:27
-msgid "LOGO"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:28
-msgid "Line _numbers:"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:29
-msgid "Line numbers"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:30
-msgid "Move down"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:31
-msgid "Move up"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:32
-msgid "Page he_aders:"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:33
-msgid "Pick the background color"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:34
-msgid "Pick the selected text color"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:35
-msgid "Pick the selection color"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:36
-msgid "Pick the text color"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:37
-msgid "Plugin manager"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:39
-msgid "Print _line numbers every"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:40
-msgid "Print fonts"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:41
-msgid "Remove an encoding"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:43
-msgid "Se_lection color:"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:44
-msgid "Selecte_d text color:"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:45
-msgid "Set _tabs width equivalent to"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:46
-msgid "Set limit on _undo actions to"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:48
-msgid "U_se default theme colors"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:49
-msgid "U_se original file encoding if possible"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:51
-msgid "Use cu_rrent locale's encoding if possible"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:52
-msgid "Use current _locale's encoding if possible"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:53
-msgid "Wrap mode"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:54
-msgid "_Autosave current file every"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:55
-msgid "_Background color:"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:56
-msgid "_Body:"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:57
-msgid "_Display line numbers"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:58
-msgid "_Print headers"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:59
-msgid "_Restore Default Fonts"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:60
-msgid "_Supported encodings:"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:61
-msgid "_Text color:"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:62
-msgid "_Use default theme font"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:63
-msgid "_Wrap lines (at character boundaries)"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:64
-msgid "_action(s)"
-msgstr ""
-
-#: src/dialogs/gedit-preferences.glade2.h:65
-#, fuzzy
-msgid "_line(s)"
-msgstr "Линии"
-
-#: src/dialogs/gedit-preferences.glade2.h:66
-#, fuzzy
-msgid "_minutes"
-msgstr "Линии"
-
-#: src/dialogs/gedit-preferences.glade2.h:67
-#, fuzzy
-msgid "character(s)"
-msgstr "Карактери (без празни места)"
-
-#: src/dialogs/gnome-print-font-dialog.c:107
-msgid "_Insert a new preview phrase."
-msgstr ""
-
-#: src/dialogs/gnome-print-font-dialog.c:113
-msgid "Modify preview phrase..."
-msgstr ""
-
-#: src/dialogs/gnome-print-font-dialog.c:167
-msgid "Preview"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-dialog.c:180
-msgid "_Modify preview phrase..."
-msgstr ""
-
-#: src/dialogs/gnome-print-font-dialog.c:243
-msgid "Font Selection"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:89
-msgid "sans 12"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:90
-msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:91
-msgid "Pick a Font"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:176
+msgid "Target — Top"
+msgstr "Мета - Врв"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:296
+msgid "Teletype or monospace text style"
+msgstr "Телетип или моноспејс стил на текст"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:297
+msgid "Text"
+msgstr "Текст"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:298
+msgid "Text color"
+msgstr "Боја на текст"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:300
+msgid "Text color (deprecated)"
+msgstr "Боја на текст (застарено)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:301
+msgid "Text entered by user"
+msgstr "Текст внесен од корисникот"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:302
 msgid "Title"
-msgstr ""
+msgstr "Титула"
 
-#: src/dialogs/gnome-print-font-picker.c:177
-msgid "The title of the selection dialog box"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:197
-msgid "Font name"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:198
-msgid "Name of the selected font"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:206
-msgid "Preview text"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:207
-msgid "Preview text shown in the dialog"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:215
-msgid "Use font in label"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:216
-msgid "Use font in the label in font info mode"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:224
-msgid "Font size for label"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:225
-msgid "Font size for label in font info mode"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:235
-msgid "Show size"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:236
-msgid "Show size in font info mode"
-msgstr ""
-
-#: src/dialogs/gnome-print-font-picker.c:1014
-msgid "Font"
-msgstr ""
-
-#. gnome_print_font_picker_update_font_info
-#: src/dialogs/goto-line.glade2.h:1
-msgid "Goto Line"
-msgstr ""
-
-#: src/dialogs/goto-line.glade2.h:2
-msgid "_Line number:"
-msgstr ""
-
-#: src/dialogs/plugin-manager.glade2.h:1
-msgid "C_onfigure plugin"
-msgstr ""
-
-#: src/dialogs/plugin-manager.glade2.h:2
-msgid "Configure the selected plugin"
-msgstr ""
-
-#: src/dialogs/plugin-manager.glade2.h:3
-msgid "De_tails"
-msgstr ""
-
-#: src/dialogs/plugin-manager.glade2.h:4
-msgid "_Description"
-msgstr ""
-
-#: src/dialogs/plugin-manager.glade2.h:5
-msgid "dialog1"
-msgstr ""
-
-#: src/dialogs/program-location-dialog.glade2.h:2
-msgid "_Location to search for:"
-msgstr ""
-
-#: src/dialogs/program-location-dialog.glade2.h:3
-msgid "label"
-msgstr ""
-
-#: src/dialogs/replace.glade2.h:2
-msgid "Find Next"
-msgstr ""
-
-#: src/dialogs/replace.glade2.h:3
-msgid "Match _entire word only"
-msgstr ""
-
-#: src/dialogs/replace.glade2.h:5
-msgid "Replace All"
-msgstr ""
-
-#: src/dialogs/replace.glade2.h:6
-msgid "Replace _with: "
-msgstr ""
-
-#: src/dialogs/replace.glade2.h:7
-msgid "_Match case"
-msgstr ""
-
-#: src/dialogs/replace.glade2.h:8
-msgid "_Search for: "
-msgstr ""
-
-#: src/dialogs/replace.glade2.h:9
+#: ../plugins/taglist/HTML.tags.xml.in.h:303
 #, fuzzy
-msgid "_Wrap around"
-msgstr "_Броење на зборовите"
+msgid "Top margin in pixels"
+msgstr "Горната маргина во пиксели"
 
-#: src/dialogs/uri.glade2.h:2
-msgid "Enter the _location (URI) of the file you would like to open:"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:304
+msgid "URL"
+msgstr "Адреса"
 
-#: src/dialogs/uri.glade2.h:3
-msgid "Open from URI"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:305
+msgid "Underlined text style"
+msgstr "Подвлечено"
 
-#: src/gedit-commands.c:471
-msgid "translator_credits"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:306
+msgid "Unordered list"
+msgstr "Неподредена листа"
 
-#: src/gedit-commands.c:496
-msgid "gedit"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:307
+msgid "Use image map"
+msgstr "Користи слика на мапа"
 
-#: src/gedit-commands.c:497
-msgid ""
-"(C) 1998-2000 Evan Lawrence and Alex Robert\n"
-"(C) 2000-2002 Chema Celorio and Paolo Maggi"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:308
+msgid "Value"
+msgstr "Вредност"
 
-#: src/gedit-commands.c:499
-msgid "gedit is a small and lightweight text editor for Gnome"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:309
+msgid "Value interpretation"
+msgstr "Интерпретација на вредност"
 
-#: src/gedit-document.c:545 src/gedit-document.c:563
-#, c-format
-msgid "%s %d"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:310
+msgid "Variable or program argument"
+msgstr "Променлива или аргумент за програма"
 
-#: src/gedit-document.c:545 src/gedit-document.c:563
-msgid "Untitled"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:311
+msgid "Vertical cell alignment"
+msgstr "Вертикално порамнување на ќелии"
 
-#: src/gedit-document.c:551 src/gedit-document.c:598
-msgid "Invalid file name"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:312
+msgid "Vertical space"
+msgstr "Вертикален простор"
 
-#: src/gedit-document.c:710 src/gedit-document.c:794
-msgid "Invalid UTF-8 data"
-msgstr ""
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:314
+msgid "Vertical space (deprecated)"
+msgstr "Вертикален простор (застарено)"
 
-#: src/gedit-document.c:1024
-#, c-format
-msgid "Could not read symbolic link information for %s"
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:315
+msgid "Visited link color"
+msgstr "Боја на посетените врски"
 
-#: src/gedit-document.c:1070
-msgid "The file has too many symbolic links."
-msgstr ""
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:317
+msgid "Visited link color (deprecated)"
+msgstr "Боја на посетените врски (застарено)"
 
-#: src/gedit-document.c:1126
-#, c-format
-msgid "gedit cannot handle %s: locations in write mode."
-msgstr ""
+#: ../plugins/taglist/HTML.tags.xml.in.h:318
+msgid "Width"
+msgstr "Ширина"
 
-#: src/gedit-document.c:1133
-msgid "gedit cannot handle this kind of location in write mode."
-msgstr ""
-
-#: src/gedit-document.c:1146
-msgid "Invalid filename."
-msgstr ""
-
-#: src/gedit-document.c:1286
-msgid ""
-"There is not enough disk space to save the file.\n"
-"Please free some disk space and try again."
-msgstr ""
-
-#: src/gedit-document.c:1291
-msgid ""
-"The disk where you are trying to save the file has a limitation on file "
-"sizes.  Please try saving a smaller file or saving it to a disk that does "
-"not have this limitation."
-msgstr ""
-
-#: src/gedit-document.c:1330
-msgid "Could not create a backup file."
-msgstr ""
-
-#: src/gedit-document.c:1448
-msgid "It is not possible to revert an Untitled document"
-msgstr ""
-
-#: src/gedit-file-selector-util.c:147
-#, c-format
-msgid ""
-"A file named \"%s\" already exists.\n"
-"Do you want to replace it with the one you are saving?"
-msgstr ""
-
-#: src/gedit-file-selector-util.c:158
-#, c-format
-msgid ""
-"The file \"%s\" is read-only.\n"
-"Do you want to try to replace it with the one you are saving?"
-msgstr ""
-
-#: src/gedit-file-selector-util.c:544
-msgid "Select a filename to save"
-msgstr ""
-
-#: src/gedit-file.c:151
+#: ../plugins/taglist/HTML.tags.xml.in.h:319
 #, fuzzy
-msgid "Open File..."
-msgstr "Спо_реди датотеки..."
+msgid "XHTML 1.0 — Tags"
+msgstr "XHTML 1.0 - Етикети"
 
-#: src/gedit-file.c:177 src/gedit-file.c:887
-#, c-format
-msgid "Loaded file '%s'"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:1
+msgid "Bibliography (cite)"
+msgstr "Библиографија"
 
-#: src/gedit-file.c:309 src/gedit-file.c:455
-#, c-format
-msgid "Saving file '%s'..."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:2
+msgid "Bibliography (item)"
+msgstr "Библиографија (предмет)"
 
-#: src/gedit-file.c:337 src/gedit-file.c:470
-msgid "The document has not been saved."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:3
+msgid "Bibliography (shortcite)"
+msgstr "Библиографија (кратко цитат)"
 
-#: src/gedit-file.c:351 src/gedit-file.c:467
-#, c-format
-msgid "File '%s' saved."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:4
+msgid "Bibliography (thebibliography)"
+msgstr "Библиографија (библиографијата)"
 
-#: src/gedit-file.c:434
-msgid "Save as..."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:5
+msgid "Brackets ()"
+msgstr "Загради ()"
 
-#: src/gedit-file.c:628
-#, c-format
-msgid ""
-"Do you want to revert to saved the document '%s'?\n"
-"\n"
-"You will not be able to undo this operation."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:6
+msgid "Brackets <>"
+msgstr "Загради <>"
 
-#: src/gedit-file.c:638 src/gedit-ui.xml.h:99
-msgid "_Revert"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:7
+msgid "Brackets []"
+msgstr "Загради []"
 
-#: src/gedit-file.c:672
-#, c-format
-msgid "Reverting file '%s'..."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:8
+msgid "Brackets {}"
+msgstr "Загради {}"
 
-#: src/gedit-file.c:685
-msgid "The document has not been reverted."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:10
+msgid "File input"
+msgstr "Увоз на датотека"
 
-#: src/gedit-file.c:695
-#, c-format
-msgid "File '%s' reverted."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:11
+msgid "Footnote"
+msgstr "Фуснота"
 
-#: src/gedit-file.c:721
-#, fuzzy, c-format
-msgid "Loading %d files..."
-msgstr "Спореди датотеки..."
-
-#: src/gedit-file.c:757
-#, c-format
-msgid "The file \"%s\" does not exist. Would you like to create it?"
-msgstr ""
-
-#: src/gedit-file.c:812
-#, c-format
-msgid "Loaded %i files"
-msgstr ""
-
-#: src/gedit-file.c:945
-msgid "Could not read data from stdin."
-msgstr ""
-
-#. Read only
-#: src/gedit-mdi-child.c:215
-msgid "RO"
-msgstr ""
-
-#. Add the detach tab button
-#: src/gedit-mdi-child.c:539 src/gedit-ui.xml.h:89
-msgid "_Move to New Window"
-msgstr ""
-
-#: src/gedit-mdi.c:446
-msgid "Open a file."
-msgstr ""
-
-#: src/gedit-mdi.c:1032
-#, c-format
-msgid ""
-"Do you want to save the changes you made to the document \"%s\"? \n"
-"\n"
-"Your changes will be lost if you don't save them."
-msgstr ""
-
-#: src/gedit-mdi.c:1037
-msgid "Do_n't save"
-msgstr ""
-
-#: src/gedit-mdi.c:1056
-msgid "_Don't quit"
-msgstr ""
-
-#: src/gedit-mdi.c:1060
-msgid "_Don't close"
-msgstr ""
-
-#: src/gedit-mdi.c:1150
-msgid "(modified)"
-msgstr ""
-
-#: src/gedit-mdi.c:1156
-msgid "(readonly)"
-msgstr ""
-
-#: src/gedit-plugins-engine.c:352
-#, c-format
-msgid "Error, unable to open module file '%s'\n"
-msgstr ""
-
-#: src/gedit-plugins-engine.c:362
-#, c-format
-msgid "Error, plugin '%s' does not contain init function."
-msgstr ""
-
-#: src/gedit-plugins-engine.c:372
-#, c-format
-msgid "Error, plugin '%s' does not contain activate function."
-msgstr ""
-
-#: src/gedit-plugins-engine.c:382
-#, c-format
-msgid "Error, plugin '%s' does not contain deactivate function."
-msgstr ""
-
-#: src/gedit-plugins-engine.c:407
-#, c-format
-msgid "Error, impossible to initialize plugin '%s'"
-msgstr ""
-
-#: src/gedit-plugins-engine.c:458
-#, c-format
-msgid "Error, impossible to destroy plugin '%s'"
-msgstr ""
-
-#: src/gedit-plugins-engine.c:541 src/gedit-plugins-engine.c:629
-#, c-format
-msgid "Error, impossible to activate plugin '%s'"
-msgstr ""
-
-#: src/gedit-plugins-engine.c:580
-#, c-format
-msgid "Error, impossible to deactivate plugin '%s'"
-msgstr ""
-
-#: src/gedit-plugins-engine.c:673
-#, c-format
-msgid "Error, impossible to update ui of the plugin '%s'"
-msgstr ""
-
-#: src/gedit-prefs-manager.c:335
-msgid "Cannot initialize preferences manager."
-msgstr ""
-
-#: src/gedit-prefs-manager.c:1756
-#, c-format
-msgid "Expected `%s' got `%s' for key %s"
-msgstr ""
-
-#: src/gedit-print.c:191
-msgid ""
-"gedit is unable to print since it cannot find\n"
-"one of the required fonts."
-msgstr ""
-
-#: src/gedit-print.c:377
-#, c-format
-msgid "File: %s"
-msgstr ""
-
-#. Print right text
-#: src/gedit-print.c:384
-#, c-format
-msgid "Page: %d"
-msgstr ""
-
-#: src/gedit-print.c:525
-msgid "gedit - Print Preview"
-msgstr ""
-
-#: src/gedit-print.c:603
-#, c-format
-msgid ""
-"An error occurred while printing.\n"
-"\n"
-"%s,"
-msgstr ""
-
-#: src/gedit-ui.xml.h:1
-msgid "About this application"
-msgstr ""
-
-#: src/gedit-ui.xml.h:2
-msgid "C_ustomize Statusbar"
-msgstr ""
-
-#: src/gedit-ui.xml.h:3
+#: ../plugins/taglist/Latex.tags.xml.in.h:12
 #, fuzzy
-msgid "Change the visibility of the output window in the current window"
-msgstr "Внеси shell output во документот"
+msgid "Function cosine"
+msgstr "Функција cosin"
 
-#: src/gedit-ui.xml.h:4
-msgid "Change the visibility of the statusbar in the current window"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:13
+msgid "Function e^"
+msgstr "Функција e^"
 
-#: src/gedit-ui.xml.h:5
-msgid "Change the visibility of the toolbar in the current window"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:14
+msgid "Function exp"
+msgstr "Функција exp"
 
-#: src/gedit-ui.xml.h:6
-msgid "Close"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:15
+msgid "Function log"
+msgstr "Функција log"
 
-#: src/gedit-ui.xml.h:7
-msgid "Close all open files"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:16
+msgid "Function log10"
+msgstr "Функција log10"
 
-#: src/gedit-ui.xml.h:8
-msgid "Close the current file"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:17
+msgid "Function sine"
+msgstr "Функција sine"
 
-#: src/gedit-ui.xml.h:9
-msgid "Configure the application"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:18
+msgid "Greek alpha"
+msgstr "Грчка алфа"
 
-#: src/gedit-ui.xml.h:10
-msgid "Copy"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:19
+msgid "Greek beta"
+msgstr "Грчка бета"
 
-#: src/gedit-ui.xml.h:11
-msgid "Copy the selection"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:20
+msgid "Greek epsilon"
+msgstr "Грчки епсилон"
 
-#: src/gedit-ui.xml.h:12
-msgid "Create a new document"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:21
+msgid "Greek gamma"
+msgstr "Грчка гама"
 
-#: src/gedit-ui.xml.h:13
-msgid "Cu_t"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:22
+msgid "Greek lambda"
+msgstr "Грчка ламбда"
 
-#: src/gedit-ui.xml.h:14
-msgid "Customize"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:23
+msgid "Greek rho"
+msgstr "Грчко ро"
 
-#: src/gedit-ui.xml.h:15
-msgid "Customize toolbars"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:24
+msgid "Greek tau"
+msgstr "Грчко тау"
 
-#: src/gedit-ui.xml.h:16
-msgid "Cut"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:25
+msgid "Header 0 (chapter)"
+msgstr "Заглавие 0 (поглавје)"
 
-#: src/gedit-ui.xml.h:17
-msgid "Cut the selection"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:26
+msgid "Header 0 (chapter*)"
+msgstr "Заглавие·0·(поглавје*)"
 
-#: src/gedit-ui.xml.h:18
-msgid "Delete"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:27
+msgid "Header 1 (section)"
+msgstr "Заглавие 1 (дел)"
 
-#: src/gedit-ui.xml.h:19
-msgid "Delete the selected text"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:28
+msgid "Header 1 (section*)"
+msgstr "Заглавие·1·(дел*)"
 
-#: src/gedit-ui.xml.h:20
-msgid "Dump XML"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:29
+msgid "Header 2 (subsection)"
+msgstr "Заглавие·2·(поддел)"
 
-#: src/gedit-ui.xml.h:21
-msgid "Dump the UI Xml description"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:30
+msgid "Header 2 (subsection*)"
+msgstr "Заглавие·2·(поддел*)"
 
-#: src/gedit-ui.xml.h:23
-msgid "Find Again"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:31
+msgid "Header 3 (subsubsection)"
+msgstr "Заглавие·3·(подподдел)"
 
-#: src/gedit-ui.xml.h:24
-msgid "Find Ne_xt"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:32
+msgid "Header 3 (subsubsection*)"
+msgstr "Заглавие 3 (подподдел*)"
 
-#: src/gedit-ui.xml.h:25
+#: ../plugins/taglist/Latex.tags.xml.in.h:33
+msgid "Header 4 (paragraph)"
+msgstr "Заглавие 4 (параграф)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:34
+msgid "Header appendix"
+msgstr "Заглавје на крајот на книгата"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:35
+msgid "Item"
+msgstr "Предмет"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:36
+msgid "Item with label"
+msgstr "Предмет со натпис"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:37
 #, fuzzy
-msgid "Go to _Line..."
-msgstr "Оди на линија..."
+msgid "Latex — Tags"
+msgstr "Latex - Етикети"
 
-#: src/gedit-ui.xml.h:26
-msgid "Go to a specific line number"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:38
+msgid "List description"
+msgstr "Опис на листа"
 
-#: src/gedit-ui.xml.h:27
-msgid "Icon and _Text"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:39
+msgid "List enumerate"
+msgstr "Oдредување на листа"
 
-#: src/gedit-ui.xml.h:28
-msgid "Main toolbar"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:40
+msgid "List itemize"
+msgstr "Предметизација на листа"
 
-#: src/gedit-ui.xml.h:29
-msgid "Move the current document to a new window"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:41
+msgid "Maths (display)"
+msgstr "Математика (приказ)"
 
-#: src/gedit-ui.xml.h:30
-msgid "New"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:42
+msgid "Maths (inline)"
+msgstr "Математика (внатрешно)"
 
-#: src/gedit-ui.xml.h:31
-msgid "Only show icons in the toolbar"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:43
+msgid "Operator fraction"
+msgstr "Математички симбол фракција"
 
-#: src/gedit-ui.xml.h:33
-msgid "Open Location..."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:44
+msgid "Operator integral (display)"
+msgstr "Математички симбол интеграл (прикажи)"
 
-#: src/gedit-ui.xml.h:34
-msgid "Open _Location..."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:45
+msgid "Operator integral (inline)"
+msgstr "Математички симбол (inline)"
 
-#: src/gedit-ui.xml.h:35
-msgid "Open a file"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:46
+msgid "Operator sum (display)"
+msgstr "Математички симбол сума (прикажи)"
 
-#: src/gedit-ui.xml.h:36
-msgid "Open a file from a specified location"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:47
+msgid "Operator sum (inline)"
+msgstr "Математички симбол сума (inline)"
 
-#: src/gedit-ui.xml.h:37
-msgid "Open the gedit manual"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:48
+msgid "Reference label"
+msgstr "Ознака за референца"
 
-#: src/gedit-ui.xml.h:38
-msgid "Paste"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:49
+msgid "Reference ref"
+msgstr "Референца ref"
 
-#: src/gedit-ui.xml.h:39
-msgid "Paste the clipboard"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:50
+msgid "Symbol <<"
+msgstr "Симбол <<"
 
-#: src/gedit-ui.xml.h:40
-msgid "Pr_eferences"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:51
+msgid "Symbol <="
+msgstr "Симбол <="
 
-#: src/gedit-ui.xml.h:42
-msgid "Print Previe_w..."
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:52
+msgid "Symbol >="
+msgstr "Симбол >="
 
-#: src/gedit-ui.xml.h:43
-msgid "Print Preview"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:53
+msgid "Symbol >>"
+msgstr "Симбол >>"
 
-#: src/gedit-ui.xml.h:44
-msgid "Print Setup"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:54
+msgid "Symbol and"
+msgstr "Симбол „и“"
 
-#: src/gedit-ui.xml.h:45
-msgid "Print preview"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:55
+msgid "Symbol const"
+msgstr "Симбол const"
 
-#: src/gedit-ui.xml.h:46
-msgid "Print the current file"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:56
+msgid "Symbol d-by-dt"
+msgstr "Симбол d-by-dt"
 
-#: src/gedit-ui.xml.h:47
-msgid "Quit"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:57
+msgid "Symbol d-by-dt-partial"
+msgstr "Симбол d-by-dt-partial"
 
-#: src/gedit-ui.xml.h:48
-msgid "Quit the program"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:58
+msgid "Symbol d2-by-dt2-partial"
+msgstr "Симбол d2-by-dt2-partial"
 
-#: src/gedit-ui.xml.h:49
-msgid "Redo"
-msgstr ""
+#: ../plugins/taglist/Latex.tags.xml.in.h:59
+msgid "Symbol dagger"
+msgstr "Симбол dagger"
 
-#: src/gedit-ui.xml.h:50
-msgid "Redo the undone action"
-msgstr ""
-
-#: src/gedit-ui.xml.h:52
-msgid "Replace a string"
-msgstr ""
-
-#: src/gedit-ui.xml.h:53
-msgid "Revert"
-msgstr ""
-
-#: src/gedit-ui.xml.h:54
-msgid "Revert to a saved version of the file"
-msgstr ""
-
-#: src/gedit-ui.xml.h:56
-msgid "Save As"
-msgstr ""
-
-#: src/gedit-ui.xml.h:57
-msgid "Save _As..."
-msgstr ""
-
-#: src/gedit-ui.xml.h:58
-msgid "Save all open files"
-msgstr ""
-
-#: src/gedit-ui.xml.h:59
-msgid "Save the current file"
-msgstr ""
-
-#: src/gedit-ui.xml.h:60
-msgid "Save the current file with a different name"
-msgstr ""
-
-#: src/gedit-ui.xml.h:61
-msgid "Search again for the same string"
-msgstr ""
-
-#: src/gedit-ui.xml.h:62
-msgid "Search for a string"
-msgstr ""
-
-#: src/gedit-ui.xml.h:63
-msgid "Select All"
-msgstr ""
-
-#: src/gedit-ui.xml.h:64
-msgid "Select _All"
-msgstr ""
-
-#: src/gedit-ui.xml.h:65
-msgid "Select the entire document"
-msgstr ""
-
-#: src/gedit-ui.xml.h:66
-msgid "Set toolbar button style according to desktop default"
-msgstr ""
-
-#: src/gedit-ui.xml.h:67
-msgid "Setup the page settings for your current printer"
-msgstr ""
-
-#: src/gedit-ui.xml.h:68
-msgid "Show _Cursor Position"
-msgstr ""
-
-#: src/gedit-ui.xml.h:69
-msgid "Show _Overwrite Mode"
-msgstr ""
-
-#: src/gedit-ui.xml.h:70
-msgid "Show cursor position in the statusbar"
-msgstr ""
-
-#: src/gedit-ui.xml.h:71
-msgid "Show overwrite mode in the statusbar"
-msgstr ""
-
-#: src/gedit-ui.xml.h:73
-msgid "Undo the last action"
-msgstr ""
-
-#: src/gedit-ui.xml.h:74
-msgid "_About"
-msgstr ""
-
-#: src/gedit-ui.xml.h:75
-msgid "_Close"
-msgstr ""
-
-#: src/gedit-ui.xml.h:76
-msgid "_Close All"
-msgstr ""
-
-#: src/gedit-ui.xml.h:77
-msgid "_Contents"
-msgstr ""
-
-#: src/gedit-ui.xml.h:78
-msgid "_Copy"
-msgstr ""
-
-#: src/gedit-ui.xml.h:79
-msgid "_Customize Toolbar"
-msgstr ""
-
-#: src/gedit-ui.xml.h:80
-msgid "_Debug"
-msgstr ""
-
-#: src/gedit-ui.xml.h:81
-msgid "_Delete"
-msgstr ""
-
-#: src/gedit-ui.xml.h:82
-msgid "_Desktop Default"
-msgstr ""
-
-#: src/gedit-ui.xml.h:83
-msgid "_Documents"
-msgstr ""
-
-#: src/gedit-ui.xml.h:84
-msgid "_Edit"
-msgstr ""
-
-#: src/gedit-ui.xml.h:85
-msgid "_File"
-msgstr ""
-
-#: src/gedit-ui.xml.h:86
-msgid "_Find..."
-msgstr ""
-
-#: src/gedit-ui.xml.h:87
-msgid "_Help"
-msgstr ""
-
-#: src/gedit-ui.xml.h:88
-msgid "_Icon"
-msgstr ""
-
-#: src/gedit-ui.xml.h:90
-msgid "_New"
-msgstr ""
-
-#: src/gedit-ui.xml.h:91
-msgid "_Open..."
-msgstr ""
-
-#: src/gedit-ui.xml.h:92
-msgid "_Output Window"
-msgstr ""
-
-#: src/gedit-ui.xml.h:93
-msgid "_Paste"
-msgstr ""
-
-#: src/gedit-ui.xml.h:94
-msgid "_Print..."
-msgstr ""
-
-#: src/gedit-ui.xml.h:95
-msgid "_Priority Text beside Icons"
-msgstr ""
-
-#: src/gedit-ui.xml.h:96
-msgid "_Quit"
-msgstr ""
-
-#: src/gedit-ui.xml.h:97
-msgid "_Redo"
-msgstr ""
-
-#: src/gedit-ui.xml.h:98
-msgid "_Replace..."
-msgstr ""
-
-#: src/gedit-ui.xml.h:100
-msgid "_Save"
-msgstr ""
-
-#: src/gedit-ui.xml.h:101
-msgid "_Save All"
-msgstr ""
-
-#: src/gedit-ui.xml.h:102
-msgid "_Search"
-msgstr ""
-
-#: src/gedit-ui.xml.h:103
-msgid "_Statusbar"
-msgstr ""
-
-#: src/gedit-ui.xml.h:104
-msgid "_Toolbar"
-msgstr ""
-
-#: src/gedit-ui.xml.h:105
-msgid "_Tools"
-msgstr ""
-
-#: src/gedit-ui.xml.h:106
-msgid "_Undo"
-msgstr ""
-
-#: src/gedit-ui.xml.h:107
-msgid "_View"
-msgstr ""
-
-#: src/gedit-utils.c:796
-#, c-format
-msgid ""
-"Could not find the file \"%s\".\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-
-#: src/gedit-utils.c:803
-#, c-format
-msgid "Could not open the file \"%s\" because it contains corrupted data."
-msgstr ""
-
-#: src/gedit-utils.c:814
-#, c-format
-msgid "Could not open the file \"%s\" because gedit cannot handle %s: locations."
-msgstr ""
-
-#: src/gedit-utils.c:820
-#, c-format
-msgid "Could not open the file \"%s\""
-msgstr ""
-
-#: src/gedit-utils.c:830
-#, c-format
-msgid "Could not open the file \"%s\" because it contains data in an invalid format."
-msgstr ""
-
-#: src/gedit-utils.c:837
-#, c-format
-msgid "Could not open the file \"%s\" because it is too big."
-msgstr ""
-
-#: src/gedit-utils.c:844
-#, c-format
-msgid ""
-"\"%s\" is not a valid location.\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-
-#: src/gedit-utils.c:851
-#, c-format
-msgid "Could not open the file \"%s\" because access was denied."
-msgstr ""
-
-#: src/gedit-utils.c:858
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because there are too many open files.\n"
-"\n"
-"Please, close some open file and try again."
-msgstr ""
-
-#: src/gedit-utils.c:866
-#, c-format
-msgid ""
-"\"%s\" is a directory.\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-
-#: src/gedit-utils.c:873
-#, c-format
-msgid ""
-"Not enough available memory to open the file \"%s\". Please, close some "
-"running application and try again."
-msgstr ""
-
-#: src/gedit-utils.c:899
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because no host \"%s\" could be found.\n"
-"\n"
-"Please, check that you typed the location correctly and that your proxy "
-"settings are correct and then try again."
-msgstr ""
-
-#: src/gedit-utils.c:914
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because the host name was invalid.\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-
-#: src/gedit-utils.c:921
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because the host name was empty.\n"
-"\n"
-"Please, check that your proxy settings are correct and try again."
-msgstr ""
-
-#: src/gedit-utils.c:928
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because the attempt to log in failed.\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-
-#: src/gedit-utils.c:936
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because it contains invalid UTF-8 data.\n"
-"\n"
-"Probably, you are trying to open a binary file."
-msgstr ""
-
-#: src/gedit-utils.c:974
-#, c-format
-msgid "Could not open the file \"%s\"."
-msgstr ""
-
-#: src/gedit-utils.c:1025
-#, c-format
-msgid "Could not save the file \"%s\"."
-msgstr ""
-
-#: src/gedit-utils.c:1029
-#, c-format
-msgid ""
-"Could not save the file \"%s\".\n"
-"\n"
-"%s"
-msgstr ""
-
-#: src/gedit-utils.c:1082
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because gedit cannot find it.\n"
-"\n"
-"Perhaps, it has recently been deleted."
-msgstr ""
-
-#: src/gedit-utils.c:1089
-#, c-format
-msgid "Could not revert the file \"%s\" because it contains corrupted data."
-msgstr ""
-
-#: src/gedit-utils.c:1100
-#, c-format
-msgid "Could not revert the file \"%s\" because gedit cannot handle %s: locations."
-msgstr ""
-
-#: src/gedit-utils.c:1106 src/gedit-utils.c:1246
-#, c-format
-msgid "Could not revert the file \"%s\"."
-msgstr ""
-
-#: src/gedit-utils.c:1116
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because it contains data in an invalid "
-"format."
-msgstr ""
-
-#: src/gedit-utils.c:1123
-#, c-format
-msgid "Could not revert the file \"%s\" because it is too big."
-msgstr ""
-
-#: src/gedit-utils.c:1130
-#, c-format
-msgid "Could not revert the file \"%s\" because access was denied."
-msgstr ""
-
-#: src/gedit-utils.c:1137
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because there are too many open files.\n"
-"\n"
-"Please, close some open file and try again."
-msgstr ""
-
-#: src/gedit-utils.c:1145
-#, c-format
-msgid ""
-"Not enough available memory to revert the file \"%s\". Please, close some "
-"running application and try again."
-msgstr ""
-
-#: src/gedit-utils.c:1171
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because no host \"%s\" could be found.\n"
-"\n"
-"Please, check that your proxy settings are correct and try again."
-msgstr ""
-
-#: src/gedit-utils.c:1185
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because the host name was empty.\n"
-"\n"
-"Please, check that your proxy settings are correct and try again."
-msgstr ""
-
-#: src/gedit-utils.c:1192
-#, c-format
-msgid "Could not revert the file \"%s\" because the attempt to log in failed."
-msgstr ""
-
-#: src/gedit-utils.c:1199
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because it contains invalid UTF-8 data.\n"
-"\n"
-"Probably, you are trying to revert a binary file."
-msgstr ""
-
-#: src/gedit-utils.c:1208
-msgid "It is not possible to revert an Untitled document."
-msgstr ""
-
-#: src/gedit-utils.c:1297
-#, c-format
-msgid "The file \"%s\" already exists."
-msgstr ""
-
-#: src/gedit-utils.c:1303
-#, c-format
-msgid ""
-"\"%s\" is a directory.\n"
-"\n"
-"Please, check that you typed the location correctly."
-msgstr ""
-
-#: src/gedit-utils.c:1312
-#, c-format
-msgid ""
-"Cannot create the file \"%s\".\n"
-"\n"
-"Make sure you have the appropriate write permissions."
-msgstr ""
-
-#: src/gedit-utils.c:1319
-#, c-format
-msgid ""
-"Cannot create the file \"%s\".\n"
-"\n"
-"The file name is too long."
-msgstr ""
-
-#: src/gedit-utils.c:1326
-#, c-format
-msgid ""
-"Cannot create the file \"%s\".\n"
-"\n"
-"A directory component in the file name does not exist or is a dangling "
-"symbolic link."
-msgstr ""
-
-#: src/gedit-utils.c:1335
-#, c-format
-msgid ""
-"There is not enough disk space to create the file \"%s\".\n"
-"\n"
-"Please free some disk space and try again."
-msgstr ""
-
-#: src/gedit-utils.c:1341
-#, c-format
-msgid "Could not create the file \"%s\"."
-msgstr ""
-
-#.
-#. if (col == chars)
-#. msg = g_strdup_printf (_("  Ln %d, Col. %d"), row + 1, col + 1);
-#. else
-#. msg = g_strdup_printf (_("  Ln %d, Col. %d-%d"), row + 1, chars + 1, col + 1);
-#.
-#: src/gedit-view.c:1046
-#, c-format
-msgid "  Ln %d, Col. %d"
-msgstr ""
-
-#: src/gedit-view.c:1084
-msgid "  OVR"
-msgstr ""
-
-#: src/gedit-view.c:1086
-msgid "  INS"
-msgstr ""
-
-#: src/gedit2.c:77
-msgid "Show utility debugging messages."
-msgstr ""
-
-#: src/gedit2.c:80
-msgid "Show mdi debugging messages."
-msgstr ""
-
-#: src/gedit2.c:83
-msgid "Show commands debugging messages."
-msgstr ""
-
-#: src/gedit2.c:86
-msgid "Show document debugging messages."
-msgstr ""
-
-#: src/gedit2.c:89
-msgid "Show file debugging messages."
-msgstr ""
-
-#: src/gedit2.c:92
-msgid "Show plugin debugging messages."
-msgstr ""
-
-#: src/gedit2.c:95
-msgid "Show prefs debugging messages."
-msgstr ""
-
-#: src/gedit2.c:98
-msgid "Show printing debugging messages."
-msgstr ""
-
-#: src/gedit2.c:101
-msgid "Show search debugging messages."
-msgstr ""
-
-#: src/gedit2.c:104
-msgid "Show undo debugging messages."
-msgstr ""
-
-#: src/gedit2.c:107
-msgid "Show view debugging messages."
-msgstr ""
-
-#: src/gedit2.c:110
-msgid "Show recent debugging messages."
-msgstr ""
-
-#: src/gedit2.c:113
-msgid "Show session management debugging messages."
-msgstr ""
-
-#: src/gedit2.c:116
-msgid "Turn on all debugging messages."
-msgstr ""
-
-#: src/gedit2.c:119
-msgid "Quit an existing instance of gedit"
-msgstr ""
-
-#: src/gedit2.c:122
-msgid "Create a new toplevel window in an existing instance of gedit"
-msgstr ""
-
-#: src/gedit2.c:125
-msgid "Create a new document in an existing instance of gedit"
-msgstr ""
-
-#: src/gedit-output-window.c:278
+#: ../plugins/taglist/Latex.tags.xml.in.h:60
 #, fuzzy
-msgid "Close the output window"
-msgstr "Покажи го прозорецот со листата на тагови"
+msgid "Symbol em-dash ---"
+msgstr "Симбол hyphen ---"
 
-#: src/gedit-output-window.c:316
-msgid "Copy selected lines"
-msgstr ""
-
-#: src/gedit-output-window.c:336
-msgid "Clear the output window"
-msgstr ""
-
-#: src/gedit-output-window.c:374
-msgid "Output Lines"
-msgstr ""
-
-#: src/dialogs/gedit-encodings-dialog.glade2.h:1
-msgid "Choose one or more e_ncodings:"
-msgstr ""
-
-#: src/gedit-encodings.c:142 src/gedit-encodings.c:166
-#: src/gedit-encodings.c:207 src/gedit-encodings.c:257
-#: src/gedit-encodings.c:282
-msgid "Western"
-msgstr ""
-
-#: src/gedit-encodings.c:144
-msgid "South European"
-msgstr ""
-
-#: src/gedit-encodings.c:146 src/gedit-encodings.c:162
-#: src/gedit-encodings.c:292
-msgid "Baltic"
-msgstr ""
-
-#: src/gedit-encodings.c:148 src/gedit-encodings.c:211
-#: src/gedit-encodings.c:224 src/gedit-encodings.c:228
-#: src/gedit-encodings.c:241 src/gedit-encodings.c:280
-msgid "Cyrillic"
-msgstr ""
-
-#: src/gedit-encodings.c:150 src/gedit-encodings.c:217
-#: src/gedit-encodings.c:235 src/gedit-encodings.c:290
-msgid "Arabic"
-msgstr ""
-
-#: src/gedit-encodings.c:152 src/gedit-encodings.c:247
-#: src/gedit-encodings.c:284
-msgid "Greek"
-msgstr ""
-
-#: src/gedit-encodings.c:154
-msgid "Hebrew Visual"
-msgstr ""
-
-#: src/gedit-encodings.c:156 src/gedit-encodings.c:215
-#: src/gedit-encodings.c:253 src/gedit-encodings.c:288
-msgid "Hebrew"
-msgstr ""
-
-#: src/gedit-encodings.c:158 src/gedit-encodings.c:213
-#: src/gedit-encodings.c:261 src/gedit-encodings.c:286
-msgid "Turkish"
-msgstr ""
-
-#: src/gedit-encodings.c:160
-msgid "Nordic"
-msgstr ""
-
-#: src/gedit-encodings.c:164
-msgid "Celtic"
-msgstr ""
-
-#: src/gedit-encodings.c:168 src/gedit-encodings.c:259
-msgid "Romanian"
-msgstr ""
-
-#: src/gedit-encodings.c:171 src/gedit-encodings.c:173
-#: src/gedit-encodings.c:175 src/gedit-encodings.c:177
-msgid "Unicode"
-msgstr ""
-
-#: src/gedit-encodings.c:180
-msgid "Armenian"
-msgstr ""
-
-#: src/gedit-encodings.c:182 src/gedit-encodings.c:184
-#: src/gedit-encodings.c:193
-msgid "Chinese Traditional"
-msgstr ""
-
-#: src/gedit-encodings.c:186
-msgid "Cyrillic/Russian"
-msgstr ""
-
-#: src/gedit-encodings.c:189 src/gedit-encodings.c:220
-#: src/gedit-encodings.c:267
-msgid "Japanese"
-msgstr ""
-
-#: src/gedit-encodings.c:191 src/gedit-encodings.c:222
-#: src/gedit-encodings.c:226 src/gedit-encodings.c:273
-msgid "Korean"
-msgstr ""
-
-#: src/gedit-encodings.c:196 src/gedit-encodings.c:198
-#: src/gedit-encodings.c:200 src/gedit-encodings.c:204
-msgid "Chinese Simplified"
-msgstr ""
-
-#: src/gedit-encodings.c:202
-msgid "Georgian"
-msgstr ""
-
-#: src/gedit-encodings.c:209 src/gedit-encodings.c:237
-#: src/gedit-encodings.c:278
-msgid "Central European"
-msgstr ""
-
-#: src/gedit-encodings.c:230 src/gedit-encodings.c:263
-msgid "Cyrillic/Ukrainian"
-msgstr ""
-
-#: src/gedit-encodings.c:239
-msgid "Croatian"
-msgstr ""
-
-#: src/gedit-encodings.c:243
-msgid "Hindi"
-msgstr ""
-
-#: src/gedit-encodings.c:245
+#: ../plugins/taglist/Latex.tags.xml.in.h:61
 #, fuzzy
-msgid "Farsi"
-msgstr "Прв"
+msgid "Symbol en-dash --"
+msgstr "Симбол hyphen --"
 
-#: src/gedit-encodings.c:249
-msgid "Gujarati"
+#: ../plugins/taglist/Latex.tags.xml.in.h:62
+msgid "Symbol equiv"
+msgstr "Симбол equiv"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:63
+msgid "Symbol infinity"
+msgstr "Симбол „бесконечност“"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:64
+msgid "Symbol mathspace ,"
+msgstr "Симбол mathspace ,"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:65
+msgid "Symbol mathspace ."
+msgstr "Симбол mathspace ."
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:66
+msgid "Symbol mathspace _"
+msgstr "Симбол mathspace _"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:67
+msgid "Symbol mathspace __"
+msgstr "Симбол mathspace __"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:68
+msgid "Symbol simeq"
+msgstr "Симбол simeq"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:69
+msgid "Symbol star"
+msgstr "Симбол star"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:70
+msgid "Typeface bold"
+msgstr "Тајпфејс задебелено"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:71
+msgid "Typeface italic"
+msgstr "Тајпфејс закосено"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:72
+msgid "Typeface slanted"
+msgstr "Тајпфејс еднонасочно"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:73
+msgid "Typeface type"
+msgstr "Тајпфејс тип"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:74
+msgid "Unbreakable text"
+msgstr "Неразделлив текст"
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
+#, fuzzy
+msgid ""
+"Provides a method to easily insert commonly used tags/strings into a "
+"document without having to type them."
 msgstr ""
+"Додатокот за листа со ознака обезбедува метод за лесно вметнување на често "
+"користени зборови/низи од зборовите во документот."
 
-#: src/gedit-encodings.c:251
-msgid "Gurmukhi"
-msgstr ""
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
+msgid "Tag list"
+msgstr "Таг листа"
 
-#: src/gedit-encodings.c:255
-msgid "Icelandic"
-msgstr ""
+#: ../plugins/taglist/XSLT.tags.xml.in.h:1
+#, fuzzy
+msgid "XSLT — Axes"
+msgstr "XSLT - Оски"
 
-#: src/gedit-encodings.c:269 src/gedit-encodings.c:275
-#: src/gedit-encodings.c:294
-msgid "Vietnamese"
-msgstr ""
+#: ../plugins/taglist/XSLT.tags.xml.in.h:2
+#, fuzzy
+msgid "XSLT — Elements"
+msgstr "XSLT - Елементи"
 
-#: src/gedit-encodings.c:271
-msgid "Thai"
-msgstr ""
+#: ../plugins/taglist/XSLT.tags.xml.in.h:3
+#, fuzzy
+msgid "XSLT — Functions"
+msgstr "XSLT - Функции"
 
-#: src/recent-files/egg-recent-vfs-utils.c:90
-msgid " (invalid Unicode)"
-msgstr ""
+#: ../plugins/taglist/XSLT.tags.xml.in.h:4
+msgid "ancestor"
+msgstr "предок"
 
-#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-#~ msgstr "Овој додаток прикажува дијалог прозорец кој содржи ASCII табела"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:5
+msgid "ancestor-or-self"
+msgstr "предок-или-само"
 
-#~ msgid "Copyright (C) 2001-2002 Paolo Maggi"
-#~ msgstr "Сите права се  (С) 2002-2002 Paolo Maggi"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:6
+msgid "attribute"
+msgstr "атрибут"
 
-#~ msgid ""
-#~ "If you wish to insert any of the characters in to the active \n"
-#~ "document, select the character and click the \"Insert Char\" \n"
-#~ "button or double click the character in the table."
-#~ msgstr ""
-#~ "Доколку сакаш да внесеш било каков карактер во активниот документ, "
-#~ "селектирај го истиот и кликни на \"Внеси карактер\" или пак двапати "
-#~ "кликни на карактерот"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:7
+msgid "child"
+msgstr "дете"
 
-#~ msgid "Insert char"
-#~ msgstr "Внеси карактер"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:8
+msgid "descendant"
+msgstr "потомок"
 
-#~ msgid "gedit: ASCII table"
-#~ msgstr "gedit: ASCII табела"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:9
+msgid "descendant-or-self"
+msgstr "потомок-или-само"
 
-#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-#~ msgstr "Додаток кој отвара Change-логови пронајдени во CVS пораки"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:10
+msgid "following"
+msgstr "следи"
 
-#~ msgid "Copyright (C) 2002 - James Willcox"
-#~ msgstr "Сите права се (С) 2002 - James Willcox"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:11
+msgid "following-sibling"
+msgstr "следи-ист родител"
 
-#~ msgid "Compare two files..."
-#~ msgstr "Споредува два "
+#: ../plugins/taglist/XSLT.tags.xml.in.h:12
+msgid "namespace"
+msgstr "namespace"
 
-#~ msgid ""
-#~ "Makes a diff file from two documents or files on disk.\n"
-#~ "\n"
-#~ "For more info on \"diff\" program, type \"man diff\" in a shell prompt.\n"
-#~ msgstr ""
-#~ "Прави diff фајл од два документи или датотеки на дискот.\n"
-#~ "\n"
-#~ "За повеќе информации околу \"diff\", напишете \"man diff\" во конзола.\n"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:13
+msgid "parent"
+msgstr "parent"
 
-#~ msgid ""
-#~ "Copyright (C) 2000 - 2001 Chema Celorio \n"
-#~ "Copyright (C) 2002 Paolo Maggi"
-#~ msgstr ""
-#~ "Сите права се (С) 2000 - 2001 Chema Celorio \n"
-#~ "Сите права се (С) 2002 Paolo Maggi"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:14
+msgid "preceding"
+msgstr "претходи"
 
-#~ msgid "Word count"
-#~ msgstr "Броење на зборови"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:15
+msgid "preceding-sibling"
+msgstr "претходи-ист родител"
 
-#~ msgid ""
-#~ "The word count plugin analyzes the current document and determines the "
-#~ "number of words, lines, characters and non-space characters in it and "
-#~ "display the result."
-#~ msgstr ""
-#~ "Додатокот за броење на зборови го анализира моменталниот документ и го "
-#~ "одредува бројот на зборови, линии и карактери и го прикажува резултатот"
+#: ../plugins/taglist/XSLT.tags.xml.in.h:16
+msgid "self"
+msgstr "само"
 
-#~ msgid "Insert Shell _Output"
-#~ msgstr "Внеси Shell _Output"
-
-#~ msgid "Shell output"
-#~ msgstr "Shell output"
-
-#~ msgid ""
-#~ "Execute a program and insert its output in the current document at the "
-#~ "current cursor position"
-#~ msgstr ""
-#~ "Извршува програма и нејзиниот output го сместува во моменталниот "
-#~ "документ, на моменталната позиција на курсорот"
-
-#~ msgid "Specify the working directory and the command you want to run."
-#~ msgstr ""
-#~ "Специфицирај го работниот директориум и командата која сакате да ја "
-#~ "извршите"
-
-#~ msgid "_Shell command:"
-#~ msgstr "_Shell команда "
-
-#~ msgid "Tag list"
-#~ msgstr "Таг листа"
-
-#~ msgid ""
-#~ "The tag list plugin provides a method to easily insert into a document "
-#~ "commonly used tabs/strings without having to type them."
-#~ msgstr ""
-#~ "Додатокот за таг листа обезбедува метод за лесно вметнување на често "
-#~ "користени зборови/низи од зборови во документот."
-
-#~ msgid "_Insert Date/Time"
-#~ msgstr "Внеси Дата/Време"
-
-#~ msgid "Inserts current date and time at the cursor position."
-#~ msgstr ""
-#~ "Ја внесува моменталната дата и време на местото кадешто се наоѓа курсорот"
-
-#~ msgid "Select the format to use when inserting date/time."
-#~ msgstr ""
-#~ "Избери го форматот кој сакаш да се користи при внесување на дата и време"
-
+#: ../plugins/taglist/XUL.tags.xml.in.h:1
+#, fuzzy
+msgid "XUL — Tags"
+msgstr "XUL - Етикети"

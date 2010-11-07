@@ -4,3038 +4,2079 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: besar\n"
-"POT-Creation-Date: 2002-12-19 21:17+0800\n"
-"PO-Revision-Date: 2002-12-19 21:17+0800\n"
-"Last-Translator: Hasbullah Bin Pit <sebol@ikhlas.com>\n"
+"Project-Id-Version: gedit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-07 13:11+0100\n"
+"PO-Revision-Date: 2004-09-12 08:30+0730\n"
+"Last-Translator: Hasbullah Bin Pit <sebol@my-penguin.org>\n"
 "Language-Team: Projek Gabai <gabai-penyumbang@lists.sourceforge.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/GNOME_Gedit.server.in.h:1
-msgid "gedit application"
-msgstr "aplikasi gedit"
-
-#: data/GNOME_Gedit.server.in.h:2
-msgid "gedit automation factory"
-msgstr "kilang automasi gedit"
-
-#
-#: data/gedit.desktop.in.h:1
-msgid "Edit text files"
-msgstr "Edit fail teks"
-
-#: data/gedit.desktop.in.h:2 src/gedit2.c:336
-msgid "Text Editor"
-msgstr "Editor Teks"
-
-#: data/gedit.schemas.in.h:1
-msgid ""
-"A custom font that will be used for the editing area. This will only take "
-"effect if the \"Use Default Font\" option is turned off."
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
+msgid "Bookmarks"
 msgstr ""
-"Font tersendiri akan digunakan untuk kawasan mengedit. Ini hanya berkesan "
-"jika opsyen \"Guna Font Default\" dimatikan."
 
-#: data/gedit.schemas.in.h:2
-msgid "Auto Save"
-msgstr "Auto Simpan"
-
-#: data/gedit.schemas.in.h:3
-msgid "Auto Save Interval"
-msgstr "Selang masa Auto Simpan"
-
-#: data/gedit.schemas.in.h:4
-msgid "Auto indent"
-msgstr "Auto inden"
-
-#: data/gedit.schemas.in.h:5
-msgid "Background Color"
-msgstr "Warna Latar Belakang"
-
-#: data/gedit.schemas.in.h:6
-msgid ""
-"Background color for selected text in the editing area. This will only take "
-"effect if the \"Use Default Colors\" option is turned off."
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
+msgid "Easy document navigation with bookmarks"
 msgstr ""
-"Warna latar belakang bagi teks dipilih pada kawasan mengedit. Ia akan "
-"berkesan jika opsyen \"Guna Warna Defauilt\" dimatikan."
 
-#: data/gedit.schemas.in.h:7
-msgid ""
-"Background color for unselected text in the editing area. This will only "
-"take effect if the \"Use Default Colors\" option is turned off."
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
+msgid "Toggle Bookmark"
 msgstr ""
-"Warna latar belakang bagi teks tidak dipilih pada kawasan mengedit. Ia akan "
-"berkesan jika opsyen \"Guna Warna Default\" dimatikan."
 
-#: data/gedit.schemas.in.h:8
-msgid "Backup Copy Extension"
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+msgid "Toggle bookmark status of the current line"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
+msgid "Goto Next Bookmark"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+msgid "Goto the next bookmark"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+msgid "Goto Previous Bookmark"
+msgstr ""
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+msgid "Goto the previous bookmark"
+msgstr ""
+
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
+msgid "Automatically adds closing brackets."
+msgstr ""
+
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Bracket Completion"
 msgstr "Penghujungan Salinan Backup"
 
-#: data/gedit.schemas.in.h:9
-msgid "Body Font for Printing"
-msgstr "Font Badan untuk Cetakan"
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:337
+#, fuzzy
+msgid "Character Map"
+msgstr "Pengenkodan aksara"
 
-#: data/gedit.schemas.in.h:10
-msgid "Create Backup Copies"
-msgstr "Cipta Salinan Backup"
-
-#: data/gedit.schemas.in.h:11
-msgid "Display Line Numbers"
-msgstr "Papar Nombor Baris"
-
-#: data/gedit.schemas.in.h:12
-msgid "Editor Font"
-msgstr "Font Editor"
-
-#: data/gedit.schemas.in.h:13
-msgid "Encoding for Saving"
-msgstr "Pengenkodan bagi Simpanan"
-
-#: data/gedit.schemas.in.h:14 src/dialogs/gedit-encodings-dialog.c:257
-#: src/dialogs/gedit-encodings-dialog.glade2.h:2
-#: src/dialogs/gedit-preferences-dialog.c:2290
-msgid "Encodings"
-msgstr "Pengenkodan"
-
-#: data/gedit.schemas.in.h:15
-msgid ""
-"Extension or suffix to use for backup file names. This will only take effect "
-"if the \"Create Backup Copies\" option is turned on."
-msgstr ""
-"Penghujungan atau suffiks digunakan bagi nama fail backup. Ia hanya berkesan "
-"jika opsyen \"Cipta Salinan Backup\" dihidupkan."
-
-#: data/gedit.schemas.in.h:16
-msgid ""
-"Foreground color for selected text in the editing area. This will only take "
-"effect if the \"Use Default Colors\" option is turned off."
-msgstr ""
-"Warna latar belakang bagi teks dipilih pada kawasan mengedit. Ia akan "
-"berkesan jika opsyen \"Guna Warna Defauilt\" dimatikan."
-
-#: data/gedit.schemas.in.h:17
-msgid ""
-"Foreground color for the unselected text in the editing area. This will only "
-"take effect if the \"Use Default Colors\" option is turned off."
-msgstr ""
-"Warna latar depan bagi teks tidak dipilih pada kawasan mengedit. Ia akan "
-"berkesan jika opsyen \"Guna Warna Default\" dimatikan."
-
-#: data/gedit.schemas.in.h:18
-msgid "Header Font for Printing"
-msgstr "Font Pengepala untuk Cetakan"
-
-#: data/gedit.schemas.in.h:19
-msgid ""
-"If this value is 0, then no line numbers will be inserted when printing a "
-"document. Otherwise, gedit will print line numbers every such number of "
-"lines."
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
+msgid "Insert special characters just by clicking on them."
 msgstr ""
 
-#: data/gedit.schemas.in.h:20
-msgid "Insert spaces"
-msgstr "Selit ruang"
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
+#, fuzzy
+msgid "Code comment"
+msgstr "_Kandungan"
 
-#: data/gedit.schemas.in.h:21
-msgid "Line Number Font for Printing"
-msgstr "Font Bilangan Baris bagi Cetakan"
-
-#: data/gedit.schemas.in.h:22
-msgid "Line Wrapping Mode"
-msgstr "Mod Balutan Baris"
-
-#: data/gedit.schemas.in.h:23
-msgid ""
-"List of encodings used by gedit for reading files not encoded in UTF-8 or in "
-"the current locale encoding."
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
+msgid "Comment out or uncomment a selected block of code."
 msgstr ""
 
-#: data/gedit.schemas.in.h:24
-msgid "Maximum Recent Files"
-msgstr "Fail baru-baru ini Maksima"
+#: ../plugins/codecomment/codecomment.py:90
+#, fuzzy
+msgid "Co_mment Code"
+msgstr "_Kandungan"
 
-#: data/gedit.schemas.in.h:25
-msgid "Maximum number of actions that gedit will be able to undo or redo."
+#: ../plugins/codecomment/codecomment.py:92
+#, fuzzy
+msgid "Comment the selected code"
+msgstr "Padam teks yang dipilih"
+
+#: ../plugins/codecomment/codecomment.py:96
+msgid "U_ncomment Code"
 msgstr ""
 
-#: data/gedit.schemas.in.h:26
-msgid ""
-"Number of minutes after which gedit will automatically save modified files. "
-"This will only take effect if the \"Auto Save\" option is turned on."
+#: ../plugins/codecomment/codecomment.py:98
+#, fuzzy
+msgid "Uncomment the selected code"
+msgstr "Padam teks yang dipilih"
+
+#. ex:ts=4:et:
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
+msgid "Color Picker"
 msgstr ""
 
-#: data/gedit.schemas.in.h:27
-msgid "Print Header"
-msgstr "Cetak Pengepala"
-
-#: data/gedit.schemas.in.h:28
-msgid "Print Line Numbers"
-msgstr "Cetak Nombor Baris"
-
-#: data/gedit.schemas.in.h:29
-msgid "Printing Line Wrapping Mode"
-msgstr "Mod Balutan Baris Cetakan"
-
-#: data/gedit.schemas.in.h:30
-msgid "Selected Text Color"
-msgstr "Warna Teks Dipilih"
-
-#: data/gedit.schemas.in.h:31
-msgid "Selection Color"
-msgstr "Warna Pilihan"
-
-#: data/gedit.schemas.in.h:32
-msgid "Show Cursor Position"
-msgstr "Papar Posisi Kursor"
-
-#: data/gedit.schemas.in.h:33
-msgid "Show Overwrite Mode"
-msgstr "Papar Mod Tindihan"
-
-#: data/gedit.schemas.in.h:34
-msgid ""
-"Specifies how to wrap long lines for printing. Use \"GTK_WRAP_NONE\" for no "
-"wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
-"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
-"the values are case-sensitive, so make sure they appear exactly as mentioned "
-"here."
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
+msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 
-#: data/gedit.schemas.in.h:35
-msgid ""
-"Specifies how to wrap long lines in the editing area. Use \"GTK_WRAP_NONE\" "
-"for no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
-"\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note that "
-"the values are case-sensitive, so make sure they appear exactly as mentioned "
-"here."
-msgstr ""
-
-#: data/gedit.schemas.in.h:36
-msgid ""
-"Specifies the font to use for a document's body when printing documents."
-msgstr "Nyatakan font digunakan pada badan dokumen bila mencetak dokumen."
-
-#: data/gedit.schemas.in.h:37
-msgid ""
-"Specifies the font to use for line numbers when printing. This will only "
-"take effect if the \"Print Line Numbers\" option is non-zero."
-msgstr ""
-
-#: data/gedit.schemas.in.h:38
-msgid ""
-"Specifies the font to use for page headers when printing a document. This "
-"will only take effect if the \"Print Header\" option is turned on."
-msgstr ""
-
-#: data/gedit.schemas.in.h:39
-msgid ""
-"Specifies the maximum number of recently opened files that will be displayed "
-"in the \"Recent Files\" submenu."
-msgstr ""
-
-#: data/gedit.schemas.in.h:40
-msgid ""
-"Specifies the number of spaces that should be displayed instead of Tab "
-"characters."
-msgstr ""
-
-#: data/gedit.schemas.in.h:41
-msgid "Status Bar is Visible"
-msgstr "Bar Status adalah Tampak"
-
-#: data/gedit.schemas.in.h:42
-msgid ""
-"Style for the toolbar buttons. Possible values are \"GEDIT_TOOLBAR_SYSTEM\" "
-"to use the system's default style, \"GEDIT_TOOLBAR_ICONS\" to display icons "
-"only, \"GEDIT_TOOLBAR_ICONS_AND_TEXT\" to display both icons and text, and "
-"\"GEDIT_TOOLBAR_ICONS_BOTH_HORIZ\" to display prioritized text beside icons. "
-"Note that the values are case-sensitive, so make sure they appear exactly as "
-"mentioned here."
-msgstr ""
-
-#: data/gedit.schemas.in.h:43
-msgid "Tab Size"
-msgstr "Saiz Tab"
-
-#: data/gedit.schemas.in.h:44
-msgid "Text Color"
-msgstr "Warna Teks"
-
-#: data/gedit.schemas.in.h:45
-msgid ""
-"The encoding method to use for saving files. Possible values are "
-"\"GEDIT_SAVE_ALWAYS_UTF8\" for mandatory UTF-8 saving, "
-"\"GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE\" if you want gedit to try to "
-"convert the document it is saving to your current locale's encoding, "
-"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE\" if you want gedit to try "
-"to use the original file encoding (new files in UTF8) and "
-"\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" if you want gedit to "
-"try to use the original file encoding (new files in current locale's "
-"encoding). If the conversion is successful, it will be used. Otherwise, UTF-"
-"8 will be used. Note that the values are case-sensitive, so make sure they "
-"appear exactly as mentioned here."
-msgstr ""
-
-#: data/gedit.schemas.in.h:46
-msgid "Toolbar Buttons Style"
-msgstr "Gaya Butang Toolbar"
-
-#: data/gedit.schemas.in.h:47
-msgid "Toolbar is Visible"
-msgstr "Toolbar adalah Tampak"
-
-#: data/gedit.schemas.in.h:48
-msgid "Undo Actions Limit"
-msgstr "Had Aksi Nyahcara"
-
-#: data/gedit.schemas.in.h:49
-msgid "Use Default Colors"
-msgstr "Guna Warna Default"
-
-#: data/gedit.schemas.in.h:50
-msgid "Use Default Font"
-msgstr "Guna Font Default"
-
-#: data/gedit.schemas.in.h:51
-msgid ""
-"Whether gedit should automatically save modified files after a time "
-"interval. You can set the time interval with the \"Auto Save Interval\" "
-"option."
-msgstr ""
-"Samada gedit patut automatik simpan fail diubahsuai selepas selang masa "
-"tertentu.Anda boleh menetapkan selang masa dengan opsyen \"Selang Masa Auto "
-"Simpan\"."
-
-#: data/gedit.schemas.in.h:52
-msgid ""
-"Whether gedit should create backup copies for the files it saves. You can "
-"set the backup file extension with the \"Backup Copy Extension\" option."
-msgstr ""
-"Samada gedit patut mencipta salinan fail backup bagi fail yang disimpan. "
-"Anda boleh menetapkan penghujungan fail backup dengan opsyen \"Penghujungan "
-"Salinan Backup\"."
-
-#: data/gedit.schemas.in.h:53
-msgid "Whether gedit should display line numbers in the editing area."
-msgstr "Samada gedit patut memapar bilangan baris pada kawasan mengedit."
-
-#: data/gedit.schemas.in.h:54
-msgid "Whether gedit should enable auto indentation."
-msgstr "Samada gedit patut menghidupkan auto pengindenan."
-
-#: data/gedit.schemas.in.h:55
-msgid "Whether gedit should include a document header when printing documents."
-msgstr "Samada gedit patut sertakan pengepala dokumen bila mencetak dokumen."
-
-#: data/gedit.schemas.in.h:56
-msgid "Whether gedit should insert spaces instead of tabs."
-msgstr "Samada gedit patut menyelit ruang selain drpd tab."
-
-#: data/gedit.schemas.in.h:57
-msgid ""
-"Whether the status bar at the bottom of editing windows should be visible."
-msgstr "Samada bar status pada bawah tetingkap mengedit patut tampak."
-
-#: data/gedit.schemas.in.h:58
-msgid ""
-"Whether the status bar should show the cursor position in editing windows. "
-"Make sure you turn on the \"Status Bar is Visible\" option for this to take "
-"effect."
-msgstr ""
-
-#: data/gedit.schemas.in.h:59
-msgid ""
-"Whether the status bar should show the insert/overwrite mode in editing "
-"windows. Make sure you turn on the \"Status Bar is Visible\" option for this "
-"to take effect."
-msgstr ""
-
-#: data/gedit.schemas.in.h:60
-msgid "Whether the toolbar should be visible in editing windows."
-msgstr ""
-
-#: data/gedit.schemas.in.h:61
-msgid ""
-"Whether to use the system's default colors for the editing area. If this "
-"option is turned off, then the colors of the editing area will be those "
-"specified in the \"Background Color\", \"Text Color\", \"Selected Text Color"
-"\", and \"Selection Color\" options."
-msgstr ""
-
-#: data/gedit.schemas.in.h:62
-msgid ""
-"Whether to use the system's default font for editing text instead of a font "
-"specific to gedit. If this option is turned off, then the font named in the "
-"\"Editor Font\" option will be used instead of the system font."
-msgstr ""
-
-#: plugins/ASCII/ascii.c:43
-msgid "_ASCII Table"
-msgstr "Jadual _ASCII"
-
-#: plugins/ASCII/ascii.c:46
-msgid "Pop-up a dialog containing an ASCII Table"
-msgstr "Pop-up dialog mengandungi Jadual ASCII"
-
-#: plugins/ASCII/ascii.c:303
-msgid "Char"
-msgstr "Aksara"
-
-#: plugins/ASCII/ascii.c:310
-msgid "Dec#"
-msgstr "Des#"
-
-#: plugins/ASCII/ascii.c:317
-msgid "Hex#"
-msgstr "Heks#"
-
-#: plugins/ASCII/ascii.c:324
-msgid "Name"
-msgstr "Nama"
-
-#: plugins/ASCII/ascii.c:369
-msgid "ASCII Table"
-msgstr "Jadual ASCII"
-
-#: plugins/ASCII/ascii.c:382 plugins/ASCII/asciitable.glade2.h:2
-msgid "_Insert char"
-msgstr "Sel_it aksara"
-
-#: plugins/ASCII/asciitable.glade2.h:1
-msgid "ASCII table"
-msgstr "Jadual ASCII"
-
-#. AFAIK, all cvs commit messages start with this
-#: plugins/cvschangelog/cvschangelog.c:49
-msgid "Open CVS Chan_geLogs"
-msgstr "Buka Chan_geLog CVS"
-
-#: plugins/cvschangelog/cvschangelog.c:52
-msgid "Searches for ChangeLogs in the current document and opens them"
-msgstr "Cari ChangeLog pada dokumen semasa dan buka."
-
-#: plugins/diff/diff.c:65
-msgid "Co_mpare Files..."
-msgstr "_Banding Fail..."
-
-#: plugins/diff/diff.c:68
-msgid "Makes a diff file from two documents or files"
-msgstr "Buat fail diff daripada dua dokumen atau fail"
-
-#. Create the dialog
-#: plugins/diff/diff.c:271
-msgid "Compare Files"
-msgstr "Banding Fail"
-
-#: plugins/diff/diff.c:285
-msgid "C_ompare"
-msgstr "_Banding"
-
-#: plugins/diff/diff.c:513
-msgid "Executed command"
-msgstr "Arahan dilaksana"
-
-#: plugins/diff/diff.c:652
-msgid "The two documents you selected are the same."
-msgstr "Dua dokumen yang anda pilih adalah sama."
-
-#: plugins/diff/diff.c:660
-msgid ""
-"The \"first\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Fail \"Pertama\" yang anda pilih tidka wujud\n"
-"\n"
-" Sila bekalkan fail yang sah."
-
-#: plugins/diff/diff.c:669
-msgid ""
-"The \"second\" file you selected does not exist.\n"
-"\n"
-"Please provide a valid file."
-msgstr ""
-"Fail \"Kedua\" yang anda pilih tidka wujud\n"
-"\n"
-" Sila bekalkan fail yang sah."
-
-#: plugins/diff/diff.c:677
-msgid "The two files you selected are the same."
-msgstr "Dua fail yang anda pilih adalah sama."
-
-#: plugins/diff/diff.c:695
-msgid "The \"first\" document contains no text."
-msgstr "Dokumen \"Pertama\" tidak mengandungi teks."
-
-#: plugins/diff/diff.c:730
-msgid "The \"second\" document contains no text."
-msgstr "Dokumen \"kedua\" tidak mengandungi teks."
-
-#. FIXME: do better error reporting ... . Chema
-#: plugins/diff/diff.c:756
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"gedit could not create a temporary file."
-msgstr ""
-"Mustahil untuk membanding dokumen dipilih.\n"
-"\n"
-"gedit tak dapat mencipta fail sementara."
-
-#: plugins/diff/diff.c:776 plugins/diff/diff.c:789
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"Error executing the diff command."
-msgstr ""
-"Mustahil untuk membanding dokumen dipilih.\n"
-"\n"
-"Ralat melaksanakan arahan diff."
-
-#: plugins/diff/diff.c:811
-msgid "No differences were found between the selected documents."
-msgstr "Tiada perbezaan dijumpai diantara dokumen dipilih."
-
-#: plugins/diff/diff.c:852
-msgid ""
-"Impossible to compare the selected documents.\n"
-"\n"
-"The result contains invalid UTF-8 data."
-msgstr ""
-"Mustahil untuk membanding dokumen dipilih.\n"
-"\n"
-"Hasil mengandungi data UTF-8 yang tidak sah."
-
-#: plugins/diff/diff.glade2.h:1 plugins/shell_output/shell_output.glade2.h:1
-#: plugins/spell/spell-checker.glade2.h:1 plugins/time/time.glade2.h:2
-#: src/dialogs/replace.glade2.h:1 src/dialogs/uri.glade2.h:1
-msgid "*"
-msgstr "*"
-
-#: plugins/diff/diff.glade2.h:2
-msgid "Choose the files to compare."
-msgstr "Pilih beberapa fail untuk dibanding"
-
-#: plugins/diff/diff.glade2.h:3
-msgid "Compare files..."
-msgstr "Banding fail ..."
-
-#: plugins/diff/diff.glade2.h:4
-msgid "F_rom document"
-msgstr "Da_ripada Dokumen"
-
-#: plugins/diff/diff.glade2.h:5
-msgid "First"
-msgstr "Pertama"
-
-#: plugins/diff/diff.glade2.h:6
-msgid "First file from disk"
-msgstr "Fail pertama daripada cakera"
-
-#: plugins/diff/diff.glade2.h:7
-msgid "First file from open document"
-msgstr "Fail pertama daripada dokumen dibuka"
-
-#: plugins/diff/diff.glade2.h:8
-msgid "From _document"
-msgstr "Daripada _dokumen"
-
-#: plugins/diff/diff.glade2.h:9
-msgid "From a _file on disk"
-msgstr "Daripada _fail pada cakera"
-
-#: plugins/diff/diff.glade2.h:10
-msgid "From a file o_n disk"
-msgstr "Daripada fail pada cakera"
-
-#: plugins/diff/diff.glade2.h:11
-msgid "Ignore _blanks (-b option)"
-msgstr "Abaikan _kosong (opsyen -b)"
-
-#: plugins/diff/diff.glade2.h:12
-msgid "Note that this option is only supported by GNU diff"
-msgstr "Dimaklumkan bahawa opsyen ini hanya disokong oleh GNU diff"
-
-# kadang2 'Saat'
-#: plugins/diff/diff.glade2.h:13
-msgid "Second"
-msgstr "Kedua"
-
-#: plugins/diff/diff.glade2.h:14
-msgid "Second file from disk"
-msgstr "Fail kedua daripada cakera"
-
-#: plugins/diff/diff.glade2.h:15
-msgid "Second file from open document"
-msgstr "Fail kedua daripada dokumen dibuka"
-
-#: plugins/diff/diff.glade2.h:16
-msgid "Select the \"first\" file..."
-msgstr "Pilih fail \"pertama\"..."
-
-#: plugins/diff/diff.glade2.h:17
-msgid "Select the \"second\" file..."
-msgstr "Pilih fail \"kedua\"..."
-
-#: plugins/diff/diff.glade2.h:18
-msgid "Select the first file to compare"
-msgstr "Pilih fail pertama untuk dibanding"
-
-#: plugins/diff/diff.glade2.h:19
-msgid "Select the first open document to compare"
-msgstr "Pilih dokumen pertama dibuka untuk dibanding"
-
-#: plugins/diff/diff.glade2.h:20
-msgid "Select the second file to compare"
-msgstr "Pilih  fail kedua untuk dibanding"
-
-#: plugins/diff/diff.glade2.h:21
-msgid "Select the second open document to compare"
-msgstr "Pilih dokumen kedua dibuka untuk dibanding"
-
-#: plugins/diff/diff.glade2.h:22
-msgid "Use the _unified output format (-u option)"
-msgstr "Guna format output _unified (opsyen -u)"
-
-#: plugins/docinfo/docinfo.c:46
-msgid "_Document Statistics"
-msgstr "Statistik _Dokumen"
-
-#: plugins/docinfo/docinfo.c:49
-msgid "Get statistic info on current document"
-msgstr "Dapatkan statistik dokumen semasa"
-
-#: plugins/docinfo/docinfo.c:142
-msgid "Document Statistics"
-msgstr "Statistik Dokumen"
-
-#: plugins/docinfo/docinfo.c:153
-msgid "_Update"
-msgstr "_Kemaskini"
-
-#: plugins/docinfo/docinfo.glade2.h:1
-msgid "0"
-msgstr "0"
-
-#: plugins/docinfo/docinfo.glade2.h:2
-msgid "Bytes"
-msgstr "Byte"
-
-#: plugins/docinfo/docinfo.glade2.h:3
-msgid "Characters (no spaces)"
-msgstr "Aksara (tiada ruang)"
-
-#: plugins/docinfo/docinfo.glade2.h:4
-msgid "Characters (with spaces)"
-msgstr "Aksara (dengan ruang)"
-
-#: plugins/docinfo/docinfo.glade2.h:5
-msgid "File Name"
-msgstr "Nama Fail"
-
-#: plugins/docinfo/docinfo.glade2.h:6 src/gedit-print.c:315
-msgid "Lines"
-msgstr "Baris"
-
-#: plugins/docinfo/docinfo.glade2.h:7
-msgid "Update"
-msgstr "Kemaskini"
-
-#: plugins/docinfo/docinfo.glade2.h:8
-msgid "Words"
-msgstr "Perkataan"
-
-#: plugins/docinfo/docinfo.glade2.h:9
-msgid "gedit: Document Info plugin"
-msgstr "gedit: Plugin Maklumat Dokumen"
-
-#: plugins/sample/sample.c:43
-msgid "Insert User Na_me"
-msgstr "Selit _Nama Pengguna"
-
-#: plugins/sample/sample.c:46
-msgid "Insert the user name at the cursor position"
-msgstr "Selitkan nama pengguna pada posisi kursor"
-
-#: plugins/sample/sample.c:172
-msgid "User name"
-msgstr "Nama pengguna"
-
-#: plugins/sample/sample.c:173
-msgid "Inserts the user name at the cursor position."
-msgstr "Selitkan nama pengguna pada posisi kursor."
-
-#: plugins/sample/sample.c:175
-msgid "Copyright (C) 2002 - Paolo Maggi"
-msgstr "Hakcipta (C) 2002 - Paolo Maggi"
-
-#: plugins/shell_output/shell_output.c:56
-msgid "_Run Command..."
-msgstr "_Laksana Arahan..."
-
-#: plugins/shell_output/shell_output.c:59
-msgid "Run a command"
-msgstr "Laksana satu arahan"
-
-#: plugins/shell_output/shell_output.c:161
-#: plugins/shell_output/shell_output.c:516
-msgid "Stopped"
-msgstr "Terhenti"
-
-#: plugins/shell_output/shell_output.c:246
-msgid "An error occurs while running the selected command."
-msgstr "Ralat berlaku bila melaksanakan arahang dipilih."
-
-#: plugins/shell_output/shell_output.c:302
-msgid "Run Command"
-msgstr "Laksanakan Arahan"
-
-#: plugins/shell_output/shell_output.c:318
-msgid "_Run"
-msgstr "_Laksana"
-
-#: plugins/shell_output/shell_output.c:522
-msgid "Done"
-msgstr "Selesai"
-
-#: plugins/shell_output/shell_output.c:524
-msgid "Failed"
-msgstr "Gagal"
-
-#: plugins/shell_output/shell_output.c:696
-msgid ""
-"The shell command entry is empty.\n"
-"\n"
-"Please, insert a valid shell command."
-msgstr ""
-"Kemasukan arahan shell adalah kosong.\n"
-"\n"
-" Sila selitkan arahan shell yang sah."
-
-#: plugins/shell_output/shell_output.c:729
-msgid ""
-"Error parsing the shell command.\n"
-"\n"
-"Please, insert a valid shell command."
-msgstr ""
-"Ralat menghantar arahan shell/\n"
-"\n"
-" Sila selitkan arahan shell yang sah."
-
-#: plugins/shell_output/shell_output.c:815
-msgid "Executing command"
-msgstr "Melaksanakan arahan"
-
-#: plugins/shell_output/shell_output.glade2.h:2
-msgid "Co_mmand:"
-msgstr "_Arahan:"
-
-#: plugins/shell_output/shell_output.glade2.h:3
-msgid "Select the working directory..."
-msgstr "Pilih direktori kerja..."
-
-#: plugins/shell_output/shell_output.glade2.h:4
-msgid "_Show results in Output Window"
-msgstr "Papar hasil di Tetingkap Output"
-
-#: plugins/shell_output/shell_output.glade2.h:5
-msgid "_Working directory:"
-msgstr "Direktori _kerja:"
-
-#: plugins/shell_output/shell_output.glade2.h:6
-msgid "gedit: Shell Output plugin"
-msgstr "gedit: Plugin Output Shell"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:136
-msgid "Tag list plugin"
-msgstr "Plugin Senarai Tag"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:154
-msgid "Select the group of tags you want to use"
-msgstr "Pilih kumpulan tag yang anda ingin gunakan"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:176
-msgid "Tag Groups Combo"
-msgstr "Kombo Kumpulan Tag"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:178
-msgid "Tags Name List"
-msgstr "Senarai Nama Tag"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:188
-msgid "Double-click on a tag to insert it in the current document"
-msgstr "Dwi-klik pada tag untuk menyelitkannya pada dokumen semasa"
-
-#: plugins/taglist/gedit-taglist-plugin-window.c:199
-msgid "Tags"
-msgstr "Tag"
-
-#: plugins/taglist/gedit-taglist-plugin.c:46
-msgid "Tag _List"
-msgstr "_Senarai Tag"
-
-#.
-#. #define MENU_ITEM_NAME		"TagList"
-#.
-#: plugins/taglist/gedit-taglist-plugin.c:51
-msgid "Show the tag list window"
-msgstr "Papar tetingkap senarai tag"
-
-#: plugins/time/time.c:48
-msgid "In_sert Date and Time..."
-msgstr "_Selit Tarikh/Masa..."
-
-#: plugins/time/time.c:51
-msgid "Insert current date and time at the cursor position"
-msgstr "Selitkan tarikh dan masa semasa pada posisi kursor"
-
-#: plugins/time/time.c:448
-msgid "Available formats"
-msgstr "Format yang ada"
-
-#: plugins/time/time.c:552
-msgid "Configure insert date/time plugin..."
-msgstr "Konfigurasi plugin penyelitan tarikh/masa..."
-
-#: plugins/time/time.glade2.h:1 src/dialogs/gedit-preferences.glade2.h:1
-msgid "    "
-msgstr "    "
-
-#: plugins/time/time.glade2.h:3
-msgid "<span size=\"small\">01/11/2002 17:52:00</span>"
-msgstr "<span size=\"small\">01/11/2002 17:52:00</span>"
-
-#: plugins/time/time.glade2.h:4
-msgid "<span weight=\"bold\"> When inserting date/time...</span>"
-msgstr "<span weight=\"bold\"> Bila menyelit tarikh/masa...</span>"
-
-#: plugins/time/time.glade2.h:5
-msgid "Configure date/time plugin"
-msgstr "Konfigurasi plugin tarikh/masa"
-
-#: plugins/time/time.glade2.h:6
-msgid "Insert Date and Time"
-msgstr "Selit Tarikh dan Masa"
-
-#: plugins/time/time.glade2.h:7
-msgid "Use the _selected format"
-msgstr "Guna format yang _dipilih"
-
-#: plugins/time/time.glade2.h:8
+#: ../plugins/colorpicker/colorpicker.py:77
+#, fuzzy
+msgid "Pick _Color..."
+msgstr "Pilih satu warna"
+
+#: ../plugins/colorpicker/colorpicker.py:78
+#, fuzzy
+msgid "Pick a color from a dialog"
+msgstr "Pilih satu warna"
+
+#: ../plugins/colorpicker/colorpicker.py:188
+#, fuzzy
+msgid "Pick Color"
+msgstr "Pilih satu warna"
+
+#: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
 msgstr "Sel_it"
 
-#: plugins/time/time.glade2.h:9
-msgid "_Prompt for a format"
-msgstr "_Pinta satu format"
+#. ex:ts=4:et:
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:1
+msgid "Command line interface for advanced editing"
+msgstr ""
 
-#: plugins/time/time.glade2.h:10
-msgid "_Use custom format"
-msgstr "_Guna format tersendiri"
-
-#: plugins/indent/indent.c:45
-msgid "_Indent"
-msgstr "_Inden"
-
-#: plugins/indent/indent.c:47
-msgid "Indent selected lines"
-msgstr "Inden baris dipilih"
-
-#: plugins/indent/indent.c:49
-msgid "U_nindent"
-msgstr "_Nyahinden"
-
-#: plugins/indent/indent.c:51
-msgid "Unindent selected lines"
-msgstr "Nyah inden baris dipilih"
-
-#: plugins/sort/sort.glade2.h:1
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:2
 #, fuzzy
-msgid "R_emove duplicates"
-msgstr "Tambah/Buang plugin"
-
-#: plugins/sort/sort.glade2.h:2
-msgid "S_tart at column:"
-msgstr "Ber_mula pada kolum:"
-
-#: plugins/sort/sort.glade2.h:3
-msgid "Sort"
-msgstr "Isih"
-
-#: plugins/sort/sort.glade2.h:4
-msgid "You cannot undo a sort operation"
-msgstr "Anda tak boleh nyahcara operasi isihan"
-
-#: plugins/sort/sort.glade2.h:5
-msgid "_Ignore case"
-msgstr "_Abaikan huruf kecil/besar"
-
-#: plugins/sort/sort.glade2.h:6
-msgid "_Reverse order"
-msgstr "Turutan _Songsang"
-
-#: plugins/sort/sort.glade2.h:7
-msgid "_Sort"
-msgstr "_Isih"
-
-#: plugins/spell/gedit-automatic-spell-checker.c:318
-#: plugins/spell/gedit-spell-checker-dialog.c:504
-msgid "(no suggested words)"
-msgstr "(tiada perkataan dicadangkan)"
-
-#: plugins/spell/gedit-automatic-spell-checker.c:342
-msgid "_More..."
-msgstr "_Lebih..."
-
-#. Ignore all
-#: plugins/spell/gedit-automatic-spell-checker.c:395
-msgid "_Ignore All"
-msgstr "_Abai Semua"
-
-#. + Add to Dictionary
-#: plugins/spell/gedit-automatic-spell-checker.c:408
-msgid "_Add"
-msgstr "_Tambah"
-
-#: plugins/spell/gedit-automatic-spell-checker.c:445
-msgid "_Spelling Suggestions..."
-msgstr "Cadangan _Ejaan..."
-
-#: plugins/spell/gedit-spell-checker-dialog.c:285
-msgid "Check Spelling"
-msgstr "Semak Ejaan"
-
-#: plugins/spell/gedit-spell-checker-dialog.c:296
-msgid "Suggestions"
-msgstr "Cadangan"
-
-#: plugins/spell/gedit-spell-checker-dialog.c:608
-msgid "(correct spelling)"
-msgstr "(Ejaan betul)"
-
-#: plugins/spell/gedit-spell-checker-dialog.c:785
-msgid "Completed spell checking"
-msgstr "Selesai menyemak ejaan"
-
-#: plugins/spell/gedit-spell-checker.c:73
-msgid "Breton"
-msgstr "Breton"
-
-#: plugins/spell/gedit-spell-checker.c:74
-msgid "Catalan"
-msgstr "Catalan"
-
-#: plugins/spell/gedit-spell-checker.c:75
-msgid "Czech"
-msgstr "Czech"
-
-#: plugins/spell/gedit-spell-checker.c:76
-msgid "Danish"
-msgstr "Danish"
-
-#: plugins/spell/gedit-spell-checker.c:77
-msgid "German (Germany)"
-msgstr "Jerman (Jermany)"
-
-#: plugins/spell/gedit-spell-checker.c:78
-msgid "German (Swiss)"
-msgstr "Jerman (Swiss)"
-
-#: plugins/spell/gedit-spell-checker.c:79
-msgid "English (American)"
-msgstr "Inggeris (Amerika)"
-
-#: plugins/spell/gedit-spell-checker.c:80
-msgid "English (British)"
-msgstr "Inggeris(British)"
-
-#: plugins/spell/gedit-spell-checker.c:81
-msgid "English (Canadian)"
-msgstr "Inggeris(Kanada)"
-
-#: plugins/spell/gedit-spell-checker.c:82
-msgid "Esperanto"
-msgstr "Esperanto"
-
-#: plugins/spell/gedit-spell-checker.c:83
-msgid "Spanish"
-msgstr "Sepanyol"
-
-#: plugins/spell/gedit-spell-checker.c:84
-msgid "Faroese"
-msgstr "Faroese"
-
-#: plugins/spell/gedit-spell-checker.c:85
-msgid "French (France)"
-msgstr "Peranchis (Peranchis)"
-
-#: plugins/spell/gedit-spell-checker.c:86
-msgid "French (Swiss)"
-msgstr "Peranchis (Swiss)"
-
-#: plugins/spell/gedit-spell-checker.c:87
-msgid "Italian"
-msgstr "Itali"
-
-#: plugins/spell/gedit-spell-checker.c:88
-msgid "Dutch"
-msgstr "Belanda"
-
-#: plugins/spell/gedit-spell-checker.c:89
-msgid "Norwegian"
-msgstr "Norwegian"
-
-#: plugins/spell/gedit-spell-checker.c:90
-msgid "Polish"
-msgstr "Polish"
-
-#: plugins/spell/gedit-spell-checker.c:91
-msgid "Portuguese (Portugal)"
-msgstr "Portugis (Portugal)"
-
-#: plugins/spell/gedit-spell-checker.c:92
-msgid "Portuguese (Brazilian)"
-msgstr "Portugis (Brazil)"
-
-#: plugins/spell/gedit-spell-checker.c:93
-msgid "Russian"
-msgstr "Rusia"
-
-#: plugins/spell/gedit-spell-checker.c:94
-msgid "Swedish"
-msgstr "Swedish"
-
-#: plugins/spell/gedit-spell-checker.c:653
-msgid "Default"
-msgstr "Default"
-
-#: plugins/spell/gedit-spell-language-dialog.c:229
-#: src/dialogs/gedit-dialog-goto-line.c:165
-#: src/dialogs/gedit-encodings-dialog.c:238
-#: src/dialogs/gedit-plugin-program-location-dialog.c:96
-#, c-format
-msgid "Could not find the required widgets inside %s."
-msgstr "Tak dapat menjumpai wiget yang diperlukan pada %s."
-
-#: plugins/spell/gedit-spell-language-dialog.c:249
-msgid "Languages"
-msgstr "Bahasa"
-
-#: plugins/spell/languages-dialog.glade2.h:1
-msgid "Select the _language of the current document."
-msgstr "Pilih _bahasa bagi dokumen semasa."
-
-#: plugins/spell/languages-dialog.glade2.h:2
-msgid "Set language"
-msgstr "Tetapkan Bahasa"
-
-#: plugins/spell/spell-checker.glade2.h:2
-msgid "<b>Language</b>"
-msgstr "<b>Bahasa</b>"
-
-#: plugins/spell/spell-checker.glade2.h:3
-msgid "<b>word</b>"
-msgstr "<b>Perkataan</b>"
-
-#: plugins/spell/spell-checker.glade2.h:4
-msgid "Add w_ord"
-msgstr "Tambah per_kataan"
-
-#: plugins/spell/spell-checker.glade2.h:5
-msgid "Cha_nge"
-msgstr "_Tukar"
-
-#: plugins/spell/spell-checker.glade2.h:6
-msgid "Change A_ll"
-msgstr "Tukar _Semua"
-
-#: plugins/spell/spell-checker.glade2.h:7
-msgid "Change _to:"
-msgstr "Tukar _ke:"
-
-#: plugins/spell/spell-checker.glade2.h:8
-msgid "Check _Word"
-msgstr "Semak _Perkataan"
-
-#: plugins/spell/spell-checker.glade2.h:9
-msgid "Check spelling"
-msgstr "Semak ejaan"
-
-#: plugins/spell/spell-checker.glade2.h:10
-msgid "Ignore _All"
-msgstr "Abai _Semua"
-
-#: plugins/spell/spell-checker.glade2.h:11
-msgid "Language:"
-msgstr "Bahasa:"
-
-#: plugins/spell/spell-checker.glade2.h:12
-msgid "Mispelled word:"
-msgstr "Perkataan salah ejaan:"
-
-#: plugins/spell/spell-checker.glade2.h:13
-msgid "User dictionary:"
-msgstr "Kamus pengguna:"
-
-#: plugins/spell/spell-checker.glade2.h:14
-msgid "_Ignore"
-msgstr "_Abai"
-
-#: plugins/spell/spell-checker.glade2.h:15
-msgid "_Suggestions:"
-msgstr "_Cadangan:"
-
-#. Key in case the plugin ever needs any settings
-#: plugins/sort/sort.c:26
-msgid "S_ort..."
-msgstr "_Isih...."
-
-#: plugins/sort/sort.c:29
-msgid "Sort the current document or selection."
-msgstr "Pilih dokumen semasa atai pilihan."
-
-#: plugins/spell/spell.c:51
-msgid "_Check Spelling"
-msgstr "_Semak Ejaan"
-
-#: plugins/spell/spell.c:54
-msgid "Check the current document for incorrect spelling"
-msgstr "Semak kesalahan ejaan dokumen semasa"
-
-#: plugins/spell/spell.c:56
-msgid "_Autocheck Spelling"
-msgstr "_Autosemak Ejaan"
-
-#: plugins/spell/spell.c:59
-msgid "Automatically spell-check the current document"
-msgstr "Automatik semak-ejaan  dokumen semasa"
-
-#: plugins/spell/spell.c:61
-msgid "Set _Language"
-msgstr "Tetapkan _Bahasa"
-
-#: plugins/spell/spell.c:64
-msgid "Set the language of the current document"
-msgstr "Tetapkan bahasa bagi dokumen semasa."
-
-#: plugins/spell/spell.c:549
-msgid "The document is empty."
-msgstr "Dokumen adalah kosong."
-
-#: plugins/spell/spell.c:567
-msgid "The selected text does not contain mispelled words."
-msgstr "Teks dipilih tidak mengandungi kesalahan ejaan."
-
-#: plugins/spell/spell.c:568
-msgid "The document does not contain mispelled words."
-msgstr "Dokumen tidak mengandungi kesalahan ejaan."
-
-#: src/bonobo-mdi.c:549 src/bonobo-mdi.c:1962
-#, c-format
-msgid "Activate %s"
-msgstr "aktifkan %s"
-
-#: src/dialogs/gedit-dialog-goto-line.c:139
-msgid "Go to Line"
-msgstr "Pergi ke Baris"
-
-#. Add Goto Line button
-#: src/dialogs/gedit-dialog-goto-line.c:149
-msgid "_Go to Line"
-msgstr "_Pergi ke Baris"
-
-#: src/dialogs/gedit-dialog-replace.c:132
-#: src/dialogs/gedit-dialog-replace.c:1025 src/gedit-commands.c:362
-#, c-format
-msgid "The text \"%s\" was not found."
-msgstr "Teks \"%s\" tidak dijumpai"
-
-#: src/dialogs/gedit-dialog-replace.c:240 src/dialogs/replace.glade2.h:4
-#: src/gedit-ui.xml.h:51
-msgid "Replace"
-msgstr "Ganti"
-
-#: src/dialogs/gedit-dialog-replace.c:251
-msgid "Replace _All"
-msgstr "Gantikan Semu_a"
-
-#. Add Replace button
-#: src/dialogs/gedit-dialog-replace.c:254 src/gedit-file-selector-util.c:129
-msgid "_Replace"
-msgstr "_Ganti"
-
-#: src/dialogs/gedit-dialog-replace.c:376 src/gedit-ui.xml.h:22
-msgid "Find"
-msgstr "Cari"
-
-#: src/dialogs/gedit-dialog-replace.c:1034
-#, c-format
-msgid "Found and replaced %d occurences."
-msgstr "Jumpa dan gantikan %d kali"
-
-#: src/dialogs/gedit-dialog-uri.c:83
-msgid "Open Location"
-msgstr "Buka Lokasi"
-
-#: src/dialogs/gedit-plugin-manager.c:53
-msgid "Plugin"
-msgstr "Plugin"
-
-#: src/dialogs/gedit-plugin-manager.c:54
-msgid "Load"
-msgstr "Muatkan"
-
-#: src/dialogs/gedit-plugin-manager.c:320
-msgid "Module file name"
-msgstr "Nama fail modul"
-
-#: src/dialogs/gedit-plugin-manager.c:321
-msgid "Author(s)"
-msgstr "Penulis"
-
-#: src/dialogs/gedit-plugin-manager.c:488
-msgid "Could not find plugin-manager.glade2, reinstall gedit.\n"
-msgstr "Tak dapat menjumpai find plugin-manager.glade2, ulangpasang gedit.\n"
-
-#: src/dialogs/gedit-plugin-manager.c:511
-msgid "Invalid glade file for plugin manager -- not all widgets found.\n"
-msgstr ""
-"Fail glade tak sah bagi Pengurus Plugin -- tidak semua widget dijumpai.\n"
-
-#: src/dialogs/gedit-plugin-program-location-dialog.c:74
-#: src/dialogs/program-location-dialog.glade2.h:1
-msgid "Set program location..."
-msgstr "Tetapkan lokasi program..."
-
-#: src/dialogs/gedit-plugin-program-location-dialog.c:102
-#, c-format
-msgid ""
-"The %s plugin uses an external program, called <tt>%s</tt>, to perform its "
-"task.\n"
-"\n"
-"Please, specify the location of the <tt>%s</tt> program."
-msgstr ""
-"Plugin %s menggunakan program luaran, <tt>%s</tt> dipanggil untuk melakukan "
-"tugasnya\n"
-"\n"
-"Sila nyatakan lokasi bagi program <tt>%s</tt>. "
-
-#: src/dialogs/gedit-plugin-program-location-dialog.c:148
-msgid "The selected file is not executable."
-msgstr "Fail dipilih adalah tidak boleh dilaksanakan"
-
-#: src/dialogs/gedit-preferences-dialog.c:232
-msgid "Font & Colors"
-msgstr "Font & Warna"
-
-#: src/dialogs/gedit-preferences-dialog.c:234
-#: src/dialogs/gedit-preferences.glade2.h:47
-msgid "Tabs"
-msgstr "Tab"
-
-#: src/dialogs/gedit-preferences-dialog.c:235
-msgid "Wrap Mode"
-msgstr "Mod Balut"
-
-#: src/dialogs/gedit-preferences-dialog.c:236
-msgid "Auto Indent"
-msgstr "Auto inden"
-
-#: src/dialogs/gedit-preferences-dialog.c:237
-msgid "Line Numbers"
-msgstr "Nombor Baris"
-
-#: src/dialogs/gedit-preferences-dialog.c:239 src/gedit-ui.xml.h:32
-msgid "Open"
-msgstr "Buka"
-
-#: src/dialogs/gedit-preferences-dialog.c:240
-#: src/dialogs/gedit-preferences.glade2.h:42 src/gedit-ui.xml.h:55
-msgid "Save"
+msgid "Commander"
+msgstr "_Arahan:"
+
+#. ex:set ts=8 noet:
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
+#, fuzzy
+msgid "Draw Spaces"
 msgstr "Simpan"
 
-#: src/dialogs/gedit-preferences-dialog.c:241
-#: src/dialogs/gedit-preferences.glade2.h:50 src/gedit-ui.xml.h:72
-msgid "Undo"
-msgstr "Nyahcara"
-
-#: src/dialogs/gedit-preferences-dialog.c:249
-msgid "Page"
-msgstr "Halaman"
-
-#: src/dialogs/gedit-preferences-dialog.c:251
-msgid "Fonts"
-msgstr "Font"
-
-#: src/dialogs/gedit-preferences-dialog.c:258
-msgid "Manager"
-msgstr "Pengurus"
-
-#: src/dialogs/gedit-preferences-dialog.c:266
-msgid "Editor"
-msgstr "Editor"
-
-#: src/dialogs/gedit-preferences-dialog.c:267
-#: src/dialogs/gedit-preferences.glade2.h:38 src/gedit-print.c:306
-#: src/gedit-ui.xml.h:41
-msgid "Print"
-msgstr "Cetak"
-
-#: src/dialogs/gedit-preferences-dialog.c:268
-msgid "Plugins"
-msgstr "Plugin"
-
-#: src/dialogs/gedit-preferences-dialog.c:341
-msgid "Cat_egories:"
-msgstr "Kat_egori:"
-
-#: src/dialogs/gedit-preferences-dialog.c:363
-msgid "Preferences"
-msgstr "Keutamaan"
-
-#: src/dialogs/gedit-preferences-dialog.c:602
-msgid "Categories"
-msgstr "Kategori"
-
-#: src/dialogs/gedit-preferences-dialog.c:835
-msgid "Push this button to select the font to be used by the editor"
-msgstr "Tekan butang ini untuk memilih font digunakan oleh editor"
-
-#: src/dialogs/gedit-preferences-dialog.c:838
-msgid "Push this button to configure text color"
-msgstr "Tekan butang ini untuk mengkonfigurasi warna teks"
-
-#: src/dialogs/gedit-preferences-dialog.c:840
-msgid "Push this button to configure background color"
-msgstr "Tekan butang ini untuk mengkonfigurasi warna latar belakang"
-
-#: src/dialogs/gedit-preferences-dialog.c:842
-msgid ""
-"Push this button to configure the color in which the selected text should "
-"appear"
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
+msgid "Draw Spaces and Tabs"
 msgstr ""
-"Tekan butang ini untuk mengkonfigurasi warna sebagaimana teks dipilih patut "
-"dilihat"
 
-#: src/dialogs/gedit-preferences-dialog.c:845
-msgid ""
-"Push this button to configure the color in which the selected text should be "
-"marked"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
+msgid "Draw leading spaces"
 msgstr ""
-"Tekan butang ini untuk mengkonfigurasikan warna sebagaimana teks dipilih "
-"supaya ditanda"
 
-#: src/dialogs/gedit-preferences-dialog.c:1850
-msgid "Push this button to select the font to be used to print the body"
-msgstr "Tekan butang ini untuk memilih font digunakan untuk mencetak badan"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
+#, fuzzy
+msgid "Draw new lines"
+msgstr "Inden baris"
 
-#: src/dialogs/gedit-preferences-dialog.c:1852
-msgid "Push this button to select the font to be used to print the headers"
-msgstr "Tekan butang ini untuk memilih font digunakan untuk mencetak pengepala"
-
-#: src/dialogs/gedit-preferences-dialog.c:1854
-msgid "Push this button to select the font to be used to print line numbers"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
+msgid "Draw non-breaking spaces"
 msgstr ""
-"Tekan butang ini untuk memilih font digunakan untuk mencetak nombor baris"
 
-#: src/dialogs/gedit-preferences.glade2.h:2
-msgid "<b>Font</b>"
-msgstr "<b>Font</b>"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
+#, fuzzy
+msgid "Draw spaces"
+msgstr "Selit ruang"
 
-#: src/dialogs/gedit-preferences.glade2.h:3
-msgid "<span weight=\"bold\" size=\"x-large\">Auto Indent</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Auto Inden</span>"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
+msgid "Draw spaces in text"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:4
-msgid "<span weight=\"bold\" size=\"x-large\">Font &amp; Colors</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Font &amp; Warna</span>"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
+msgid "Draw tabs"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:5
-msgid "<span weight=\"bold\" size=\"x-large\">Fonts</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Font</span>"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
+msgid "Draw trailing spaces"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:6
-msgid "<span weight=\"bold\" size=\"x-large\">Line Numbers</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Nombor Baris</span>"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
+msgid "Show _White Space"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:7
-msgid "<span weight=\"bold\" size=\"x-large\">Manager</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Pengurus</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:8
-msgid "<span weight=\"bold\" size=\"x-large\">Open</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Buka</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:9
-msgid "<span weight=\"bold\" size=\"x-large\">Page</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Halaman</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:10
-msgid "<span weight=\"bold\" size=\"x-large\">Save</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Simpan</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:11
-msgid "<span weight=\"bold\" size=\"x-large\">Tabs</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Tab</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:12
-msgid "<span weight=\"bold\" size=\"x-large\">Undo</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Nyahcara</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:13
-msgid "<span weight=\"bold\" size=\"x-large\">Wrap Mode</span>"
-msgstr "<span weight=\"bold\" size=\"x-large\">Mod Balut</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:14
-msgid "<span weight=\"bold\">Colors</span>"
-msgstr "<span weight=\"bold\">Warna</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:15
-msgid "<span weight=\"bold\">When saving a new file...</span>"
-msgstr "<span weight=\"bold\">Bila menyimpan fail baru...</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:16
-msgid "<span weight=\"bold\">When saving an existing file...</span>"
-msgstr "<span weight=\"bold\">Bila menyimpan fail sedia ada...</span>"
-
-#: src/dialogs/gedit-preferences.glade2.h:17
-msgid "Add new encodings"
-msgstr "Tambah pengenkodan baru"
-
-#: src/dialogs/gedit-preferences.glade2.h:18
-msgid "Always use U_TF-8 encoding (faster)"
-msgstr "Sentiasa guna penenkodan _UTF-8 (lebih pantas)"
-
-#: src/dialogs/gedit-preferences.glade2.h:19
-msgid "Always use _UTF-8 encoding (faster)"
-msgstr "Sentiasa guna penenkodan _UTF-8 (lebih pantas)"
-
-#: src/dialogs/gedit-preferences.glade2.h:20
-msgid "Create a _backup copy of files before saving"
-msgstr "Cipta salinan backup bagi fail sebelum disimpan"
-
-#: src/dialogs/gedit-preferences.glade2.h:21
-msgid "Do not _split words over two lines"
-msgstr "Jangan pisahkan perkataan kepada 2 baris"
-
-#: src/dialogs/gedit-preferences.glade2.h:22
-msgid "Editor _font: "
-msgstr "_Font editor:"
-
-#: src/dialogs/gedit-preferences.glade2.h:23
-msgid "Enable _auto indentation"
-msgstr "Hidupkan auto-inden"
-
-#: src/dialogs/gedit-preferences.glade2.h:24
-msgid "Enable text _wrapping"
-msgstr "Hidupkan pembalutan teks"
-
-#: src/dialogs/gedit-preferences.glade2.h:25
-msgid "Fonts & Colors"
-msgstr "Font & Warna"
-
-#: src/dialogs/gedit-preferences.glade2.h:26
-msgid "Insert _spaces instead of tabs"
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
+#, fuzzy
+msgid "Show spaces and tabs"
 msgstr "Selitkan _ruang selain tab"
 
-#: src/dialogs/gedit-preferences.glade2.h:27
-msgid "LOGO"
-msgstr "LOGO"
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
+msgid "Enabled"
+msgstr "Dihidupkan"
 
-#: src/dialogs/gedit-preferences.glade2.h:28
-msgid "Line _numbers:"
-msgstr "Baris ke"
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
+msgid "If TRUE drawing will be enabled."
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:29
-msgid "Line numbers"
-msgstr "Baris ke"
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:30
-msgid "Move down"
-msgstr "Turun bawah"
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
+msgid "Join several lines or split long ones"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:31
-msgid "Move up"
-msgstr "Naik atas"
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
+msgid "Join/Split Lines"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:32
-msgid "Page he_aders:"
-msgstr "_Pengepala halaman:"
+#: ../plugins/joinlines/joinlines.py:56
+#, fuzzy
+msgid "_Join Lines"
+msgstr "_Pergi ke Baris"
 
-#: src/dialogs/gedit-preferences.glade2.h:33
-msgid "Pick the background color"
-msgstr "Pilih warna latar"
+#: ../plugins/joinlines/joinlines.py:57
+#, fuzzy
+msgid "Join the selected lines"
+msgstr "Nyah inden baris dipilih"
 
-#: src/dialogs/gedit-preferences.glade2.h:34
-msgid "Pick the selected text color"
-msgstr "Pilih warna teks pilihan"
+#: ../plugins/joinlines/joinlines.py:59
+#, fuzzy
+msgid "_Split Lines"
+msgstr "Baris Output"
 
-#: src/dialogs/gedit-preferences.glade2.h:35
-msgid "Pick the selection color"
-msgstr "Pilih warna pilihan"
+#: ../plugins/joinlines/joinlines.py:60
+#, fuzzy
+msgid "Split the selected lines"
+msgstr "Salin baris dipilih"
 
-#: src/dialogs/gedit-preferences.glade2.h:36
-msgid "Pick the text color"
-msgstr "Pilih warna teks"
+#. ex:ts=4:et:
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
+msgid "Edit document in multiple places at once"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:37
-msgid "Plugin manager"
-msgstr "Pengurus plugin"
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
+msgid "Multi Edit"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:39
-msgid "Print _line numbers every"
-msgstr "Cetak nombor baris setiap"
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
+msgid "Added edit point..."
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:40
-msgid "Print fonts"
-msgstr "Cetak font"
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
+msgid "Column Mode..."
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:41
-msgid "Remove an encoding"
-msgstr "Buang satu Pengenkodan"
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
+msgid "Removed edit point..."
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:43
-msgid "Se_lection color:"
-msgstr "Warna dipilih:"
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
+msgid "Cancelled column mode..."
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:44
-msgid "Selecte_d text color:"
-msgstr "Warna teks _dipilih:"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+msgid "Enter column edit mode using selection"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:45
-msgid "Set _tabs width equivalent to"
-msgstr "Tetapkan _tab setara dengan"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:46
-msgid "Set limit on _undo actions to"
-msgstr "Tetapkan had pada _nyahcara ke"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+msgid "<b>Smart</b> column align mode using selection"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:48
-msgid "U_se default theme colors"
-msgstr "_Guna warna tema default"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:49
-msgid "U_se original file encoding if possible"
-msgstr "_Guna pengenkodan fail asal jka boleh"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+msgid "Toggle edit point"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:51
-msgid "Use cu_rrent locale's encoding if possible"
-msgstr "Guna pengenkodan lokaliti semasa bila boleh"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+msgid "Add edit point at beginning of line/selection"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:52
-msgid "Use current _locale's encoding if possible"
-msgstr "Guna pengenkodan _lokaliti semasa bila boleh"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+msgid "Add edit point at end of line/selection"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:53
-msgid "Wrap mode"
-msgstr "Mod Balut"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+msgid "Align edit points"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:54
-msgid "_Autosave current file every"
-msgstr "_Autosimpan fail semasa setiap"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+msgid "Align edit points with additional space"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:55
-msgid "_Background color:"
-msgstr "_Warna latarbelakang:"
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Multi Edit Mode"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:56
-msgid "_Body:"
-msgstr "_Badan:"
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
+msgid "Start multi edit mode"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:57
-msgid "_Display line numbers"
-msgstr "_Papar nombor Baris"
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:58
-msgid "_Print page headers"
-msgstr "Cetak _pengepala halaman"
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Text Size"
+msgstr "Saiz Tab"
 
-#: src/dialogs/gedit-preferences.glade2.h:59
-msgid "_Restore Default Fonts"
-msgstr "_Pulihkan Font Default"
+#: ../plugins/sessionsaver/__init__.py:64
+msgid "Sa_ved sessions"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:60
-msgid "_Supported encodings:"
-msgstr "Pengengkodan di_sokong:"
+#: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
+msgid "_Save current session"
+msgstr "Simpan fail semasa"
 
-#: src/dialogs/gedit-preferences.glade2.h:61
-msgid "_Text color:"
-msgstr "Warna _Teks:"
+#: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
+msgid "Save the current document list as a new session"
+msgstr "Pindah dokumen ini ke tetingkap baru"
 
-#: src/dialogs/gedit-preferences.glade2.h:62
-msgid "_Use default theme font"
-msgstr "_Guna font tema default"
+#: ../plugins/sessionsaver/__init__.py:66
+msgid "_Manage saved sessions..."
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:63
-msgid "_action(s)"
-msgstr "_aksi"
+#: ../plugins/sessionsaver/__init__.py:66
+#, fuzzy
+msgid "Open the saved session manager"
+msgstr "Buka Manual Gedit"
 
-#: src/dialogs/gedit-preferences.glade2.h:64
-msgid "_minutes"
-msgstr "_minit"
+#: ../plugins/sessionsaver/__init__.py:106
+#, python-format
+msgid "Recover '%s' session"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:65
-msgid "character(s)"
-msgstr " aksara"
+#: ../plugins/sessionsaver/dialogs.py:167
+msgid "Session Name"
+msgstr ""
 
-#: src/dialogs/gedit-preferences.glade2.h:66
-msgid "li_ne(s)"
+#. ex:ts=4:et:
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:1
+msgid "Save and restore your working sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
+msgid "Session Saver"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:1
+#, fuzzy
+msgid "Save session"
+msgstr "Simpan Sebagai"
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:2
+msgid "Saved Sessions"
+msgstr ""
+
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
+#, fuzzy
+msgid "Session name:"
+msgstr "Nama font"
+
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
+msgid "Forget you're not using tabulations."
+msgstr ""
+
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Smart Spaces"
+msgstr "Selit ruang"
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
+msgid "Embed a terminal in the bottom pane."
+msgstr ""
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
+msgid "Embedded Terminal"
+msgstr ""
+
+#: ../plugins/terminal/terminal.py:307
+#, fuzzy
+msgid "Terminal"
+msgstr "Siam"
+
+#: ../plugins/terminal/terminal.py:329
+#, fuzzy
+msgid "C_hange Directory"
+msgstr "Direktori _kerja:"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#, fuzzy
+msgid "Document Words"
+msgstr "_Dokumen"
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
+msgid "Word Completion"
+msgstr ""
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr ""
+
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
+msgid "SyncTeX"
+msgstr ""
+
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
+msgid "Synchronize between LaTeX and PDF with gedit and evince."
+msgstr ""
+
+#: ../plugins/synctex/synctex/synctex.py:280
+#: ../plugins/synctex/synctex/synctex.py:281
+msgid "Forward Search"
+msgstr ""
+
+#: ../plugins/taglist/gedit-taglist-plugin.c:165
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+msgid "Tags"
+msgstr "Tag"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:608
+msgid "Select the group of tags you want to use"
+msgstr "Pilih kumpulan tag yang anda ingin gunakan"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:627
+#, fuzzy
+msgid "_Preview"
+msgstr "Prebiu Cetakan"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+msgid "Available Tag Lists"
+msgstr "Senarai Tag yang ada"
+
+#. ex:ts=8:noet:
+#: ../plugins/taglist/HTML.tags.xml.in.h:1
+#, fuzzy
+msgid "Abbreviated form"
+msgstr "Format yang ada"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:2
+#, fuzzy
+msgid "Abbreviation"
+msgstr "Armenia"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:3
+msgid "Above"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:4
+msgid "Accessibility key character"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:5
+msgid "Acronym"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:6
+#, fuzzy
+msgid "Align"
 msgstr "baris"
 
-#: src/dialogs/gnome-print-font-dialog.c:107
-msgid "_Insert a new preview phrase."
-msgstr "_Selit frasa prebiu baru."
+#: ../plugins/taglist/HTML.tags.xml.in.h:7
+msgid "Alignment character"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-dialog.c:113
-msgid "Modify preview phrase..."
-msgstr "Ubahsuai frasa prebiu..."
+#: ../plugins/taglist/HTML.tags.xml.in.h:8
+msgid "Alternative"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-dialog.c:167
-msgid "Preview"
-msgstr "Prebiu"
+#: ../plugins/taglist/HTML.tags.xml.in.h:9
+msgid "Anchor"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-dialog.c:180
-msgid "_Modify preview phrase..."
-msgstr "_Ubahsuai frasa prebiu..."
+#: ../plugins/taglist/HTML.tags.xml.in.h:10
+msgid "Anchor URI"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-dialog.c:243
-msgid "Font Selection"
+#: ../plugins/taglist/HTML.tags.xml.in.h:11
+#, fuzzy
+msgid "Applet class file code"
+msgstr "Pilih satu fail untuk dibuka"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:13
+#, fuzzy
+msgid "Applet class file code (deprecated)"
+msgstr "Pilih satu fail untuk dibuka"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:14
+msgid "Array"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:15
+msgid "Associated information"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:16
+#, fuzzy
+msgid "Author info"
+msgstr "Auto inden"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:17
+#, fuzzy
+msgid "Axis related headers"
+msgstr "Cetak _pengepala halaman"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:18
+#, fuzzy
+msgid "Background color"
+msgstr "_Warna latarbelakang:"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:20
+#, fuzzy
+msgid "Background color (deprecated)"
+msgstr "_Warna latarbelakang:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:21
+#, fuzzy
+msgid "Background texture tile"
+msgstr "Warna Latar Belakang"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:23
+#, fuzzy
+msgid "Background texture tile (deprecated)"
+msgstr "Warna Latar Belakang"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:24
+msgid "Base URI"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:25
+#, fuzzy
+msgid "Base font"
+msgstr "Guna font pada label"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:27
+msgid "Base font (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:28
+msgid "Bold"
+msgstr "Bold"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:29
+#, fuzzy
+msgid "Border"
+msgstr "Bold"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:31
+msgid "Border (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:32
+#, fuzzy
+msgid "Border color"
+msgstr "_Warna latarbelakang:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:33
+#, fuzzy
+msgid "Cell rowspan"
+msgstr "Eropah Tengah"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:34
+#, fuzzy
+msgid "Center"
+msgstr "Umum"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:36
+msgid "Center (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:37
+#, fuzzy
+msgid "Character encoding of linked resource"
+msgstr "Pengenkodan aksara"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:38
+msgid "Checked (state)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:39
+msgid "Checked state"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:40
+#, fuzzy
+msgid "Citation"
+msgstr "aks_i"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:41
+msgid "Cite reason for change"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:42
+msgid "Class implementation ID"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:43
+#, fuzzy
+msgid "Class list"
+msgstr "Senarai Tag"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:44
+msgid "Clear text flow control"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:45
+msgid "Code content type"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:46
+#, fuzzy
+msgid "Color of selected links"
+msgstr "Salin baris dipilih"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:48
+#, fuzzy
+msgid "Color of selected links (deprecated)"
+msgstr "Salin baris dipilih"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:49
+msgid "Column span"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:50
+msgid "Columns"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:51
+#, fuzzy
+msgid "Comment"
+msgstr "_Kandungan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:52
+msgid "Computer code fragment"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:53
+#, fuzzy
+msgid "Content scheme"
+msgstr "_Kandungan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:54
+#, fuzzy
+msgid "Content type"
+msgstr "_Kandungan"
+
+#. The "type" attribute is deprecated for the "ol" tag only,
+#. since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:57
+#, fuzzy
+msgid "Content type (deprecated)"
+msgstr "_Kandungan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:58
+#, fuzzy
+msgid "Coordinates"
+msgstr "_Kandungan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:59
+msgid "DIV Style container"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:60
+msgid "DIV container"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:61
+msgid "Date and time of change"
+msgstr ""
+
+#. NOTE: used in "object" tag
+#: ../plugins/taglist/HTML.tags.xml.in.h:63
+msgid "Declare flag"
+msgstr ""
+
+#. Translators: DEFER is an optional attribute of the <script> tag.
+#. It indicates that the script is not going to generate any document
+#. content. The browser can continue parsing and drawing the page.
+#: ../plugins/taglist/HTML.tags.xml.in.h:67
+msgid "Defer attribute"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:68
+#, fuzzy
+msgid "Definition description"
+msgstr "_Huraian:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:69
+msgid "Definition list"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:70
+msgid "Definition term"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:71
+#, fuzzy
+msgid "Deleted text"
+msgstr "Padam teks yang dipilih"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:72
+#, fuzzy
+msgid "Direction"
+msgstr "Breton"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:73
+msgid "Directionality"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:75
+msgid "Directionality (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:76
+msgid "Directory list"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:77
+#, fuzzy
+msgid "Disabled"
+msgstr "Dihidupkan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:78
+#, fuzzy
+msgid "Document base"
+msgstr "_Dokumen"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:79
+#, fuzzy
+msgid "Document body"
+msgstr "_Dokumen"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:80
+#, fuzzy
+msgid "Document head"
+msgstr "_Dokumen"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:81
+#, fuzzy
+msgid "Document title"
+msgstr "Statistik Dokumen"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:82
+#, fuzzy
+msgid "Document type"
+msgstr "_Dokumen"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:83
+#, fuzzy
+msgid "Element ID"
+msgstr "Unsur"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:84
+msgid "Embedded object"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:85
+#: ../plugins/taglist/Latex.tags.xml.in.h:9
+msgid "Emphasis"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:86
+msgid "Encode type"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:87
+msgid "Figure"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:88
+#, fuzzy
+msgid "Font face"
+msgstr "Nama font"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:90
+msgid "Font face (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:91
+#, fuzzy
+msgid "For label"
+msgstr "label"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:92
+msgid "Forced line break"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:93
+#, fuzzy
+msgid "Form"
+msgstr "Normal"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:94
+msgid "Form action handler"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:95
+msgid "Form control group"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:96
+msgid "Form field label text"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:97
+msgid "Form input"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:98
+msgid "Form input type"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:99
+msgid "Form method"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:100
+msgid "Forward link"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:101
+#, fuzzy
+msgid "Frame"
+msgstr "Nama:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:102
+#, fuzzy
+msgid "Frame border"
+msgstr "Turutan _Songsang"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:103
+msgid "Frame render parts"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:104
+msgid "Frame source"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:105
+#, fuzzy
+msgid "Frame spacing"
+msgstr "Selit ruang"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:106
+msgid "Frame target"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:107
+msgid "Frameborder"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:108
+#, fuzzy
+msgid "Frameset"
+msgstr "Faroese"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:109
+#, fuzzy
+msgid "Frameset columns"
+msgstr "Ber_mula pada kolum:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:110
+msgid "Frameset rows"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:111
+msgid "Framespacing"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:112
+msgid "Generic embedded object"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:113
+msgid "Generic metainformation"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:114
+#, fuzzy
+msgid "Generic span"
+msgstr "Umum"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:115
+msgid "HREF URI"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:116
+msgid "HTML root element"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:117
+msgid "HTML version"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:118
+msgid "HTML — Special Characters"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:119
+msgid "HTML — Tags"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:120
+msgid "HTTP header name"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:121
+msgid "Header cell IDs"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:122
+msgid "Heading"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:123
+msgid "Heading 1"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:124
+msgid "Heading 2"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:125
+msgid "Heading 3"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:126
+msgid "Heading 4"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:127
+msgid "Heading 5"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:128
+msgid "Heading 6"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:129
+msgid "Height"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:130
+msgid "Horizontal rule"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:131
+msgid "Horizontal space"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:133
+msgid "Horizontal space (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:134
+msgid "I18N BiDi override"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:135
+msgid "Image"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:136
+msgid "Image map"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:137
+msgid "Image map area"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:138
+msgid "Image map name"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:139
+msgid "Image source"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:140
+#, fuzzy
+msgid "Inline frame"
+msgstr "Nama fail tidak sah"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:141
+msgid "Inline layer"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:142
+#, fuzzy
+msgid "Inserted text"
+msgstr "Selit Tarikh/Masa"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:143
+msgid "Instance definition"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:144
+#, fuzzy
+msgid "Italic text"
+msgstr "Italik"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:145
+msgid "Java applet"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:147
+msgid "Java applet (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:148
+#, fuzzy
+msgid "Label"
+msgstr "label"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:149
+#, fuzzy
+msgid "Language code"
+msgstr "Bahasa"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:150
+msgid "Large text style"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:151
+msgid "Layer"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:152
+#, fuzzy
+msgid "Link color"
+msgstr "Pilih satu warna"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:154
+#, fuzzy
+msgid "Link color (deprecated)"
+msgstr "Pilih satu warna"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:155
+msgid "List item"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:156
+msgid "List of MIME types for file upload"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:157
+msgid "List of supported character sets"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:158
+msgid "Listing"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:159
+#, fuzzy
+msgid "Local change to font"
+msgstr "Pilih font editor"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:160
+#, fuzzy
+msgid "Long description link"
+msgstr "_Huraian:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:161
+msgid "Long quotation"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:162
+msgid "Mail link"
+msgstr ""
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:164
+msgid "Margin pixel height"
+msgstr ""
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:166
+msgid "Margin pixel width"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:167
+msgid "Marquee"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:168
+msgid "Maximum length of text field"
+msgstr ""
+
+#. Here I take some liberties: There's no mandatory attributes,
+#. but those are most common, and will likely be used.
+#: ../plugins/taglist/HTML.tags.xml.in.h:171
+msgid "Media-independent link"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:172
+msgid "Menu list"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:174
+msgid "Menu list (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:175
+msgid "Multi-line text field"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:176
+msgid "Multicolumn"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:177
+msgid "Multiple"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:178
+#, fuzzy
+msgid "Name"
+msgstr "Nama:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:179
+msgid "Named property value"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:180
+msgid "Next ID"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:181
+msgid "No URI"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:182
+msgid "No embedded objects"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:183
+msgid "No frames"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:184
+msgid "No layers"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:185
+msgid "No line break"
+msgstr ""
+
+# Saiz bra
+#: ../plugins/taglist/HTML.tags.xml.in.h:186
+#, fuzzy
+msgid "No resize"
+msgstr "Papar saiz"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:187
+msgid "No script"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:188
+msgid "No shade"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:190
+msgid "No shade (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:191
+msgid "No word wrap"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:193
+msgid "No word wrap (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:194
+msgid "Non-breaking space"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:195
+msgid "Note"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:196
+#, fuzzy
+msgid "Object applet file"
+msgstr "Buka fail"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:198
+#, fuzzy
+msgid "Object applet file (deprecated)"
+msgstr "Buka fail"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:199
+msgid "Object data reference"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:200
+msgid "Offset for alignment character"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:201
+msgid "OnBlur event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:202
+#, fuzzy
+msgid "OnChange event"
+msgstr "Tukar Jenis Saiz"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:203
+msgid "OnClick event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:204
+msgid "OnDblClick event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:205
+msgid "OnFocus event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:206
+msgid "OnKeyDown event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:207
+msgid "OnKeyPress event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:208
+msgid "OnKeyUp event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:209
+msgid "OnLoad event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:210
+msgid "OnMouseDown event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:211
+msgid "OnMouseMove event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:212
+msgid "OnMouseOut event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:213
+msgid "OnMouseOver event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:214
+msgid "OnMouseUp event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:215
+msgid "OnReset event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:216
+msgid "OnSelect event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:217
+msgid "OnSubmit event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:218
+msgid "OnUnload event"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:219
+msgid "Option group"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:220
+#, fuzzy
+msgid "Option selector"
 msgstr "Pilihan font"
 
-#: src/dialogs/gnome-print-font-picker.c:89
-msgid "sans 12"
-msgstr "sans 12"
+#: ../plugins/taglist/HTML.tags.xml.in.h:221
+msgid "Ordered list"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-picker.c:90
-msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
-msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+#: ../plugins/taglist/HTML.tags.xml.in.h:222
+#, fuzzy
+msgid "Output media"
+msgstr "Baris Output"
 
-#: src/dialogs/gnome-print-font-picker.c:91
-msgid "Pick a Font"
-msgstr "Pilih satu Font"
+#: ../plugins/taglist/HTML.tags.xml.in.h:223
+msgid "Paragraph"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-picker.c:176
+#: ../plugins/taglist/HTML.tags.xml.in.h:224
+msgid "Paragraph class"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:225
+msgid "Paragraph style"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:226
+msgid "Preformatted listing"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:227
+#, fuzzy
+msgid "Preformatted text"
+msgstr "Prebiu teks"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:228
+msgid "Profile metainfo dictionary"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:229
+msgid "Prompt message"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:230
+#, fuzzy
+msgid "Push button"
+msgstr "button1"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:231
+#, fuzzy
+msgid "Quote"
+msgstr "Keluar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:232
+#, fuzzy
+msgid "Range"
+msgstr "_Tukar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:233
+msgid "ReadOnly text and password"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:234
+msgid "Reduced spacing"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:236
+msgid "Reduced spacing (deprecated)"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:237
+#, fuzzy
+msgid "Reverse link"
+msgstr "Turutan _Songsang"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:238
+msgid "Root"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:239
+msgid "Rows"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:240
+msgid "Rulings between rows and columns"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:241
+msgid "Sample program output, scripts"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:242
+msgid "Scope covered by header cells"
+msgstr ""
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:244
+#, fuzzy
+msgid "Script language name"
+msgstr "Tetapkan Bahasa"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:245
+msgid "Script statements"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:246
+msgid "Scrollbar"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:247
+#, fuzzy
+msgid "Selectable option"
+msgstr "Pilih satu fail untuk dibuka"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:248
+#, fuzzy
+msgid "Selected"
+msgstr "_Simpan Dipilih"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:249
+msgid "Server-side image map"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:250
+#, fuzzy
+msgid "Shape"
+msgstr "Simpan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:251
+msgid "Short inline quotation"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:252
+msgid "Single line prompt"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:253
+#, fuzzy
+msgid "Size"
+msgstr "Saiz Tab"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:255
+msgid "Size (deprecated)"
+msgstr ""
+
+#
+#: ../plugins/taglist/HTML.tags.xml.in.h:256
+#, fuzzy
+msgid "Small text style"
+msgstr "Semua Fail teks"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:257
+msgid "Soft line break"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:258
+msgid "Sound"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:259
+msgid "Source"
+msgstr "Sumber"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:260
+msgid "Space-separated archive list"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:261
+#, fuzzy
+msgid "Spacer"
+msgstr "Ganti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:262
+msgid "Spacing between cells"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:263
+msgid "Spacing within cells"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:264
+#, fuzzy
+msgid "Span"
+msgstr "Sepanyol"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:265
+msgid "Square root"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:266
+msgid "Standby load message"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:267
+#, fuzzy
+msgid "Starting sequence number"
+msgstr "Cetak nombor _baris"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:269
+#, fuzzy
+msgid "Starting sequence number (deprecated)"
+msgstr "Cetak nombor _baris"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:270
+#, fuzzy
+msgid "Strike-through text"
+msgstr "Coret tembus"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:272
+#, fuzzy
+msgid "Strike-through text (deprecated)"
+msgstr "Coret tembus"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:273
+#, fuzzy
+msgid "Strike-through text style"
+msgstr "Coret tembus"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:275
+#, fuzzy
+msgid "Strike-through text style (deprecated)"
+msgstr "Coret tembus"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:276
+msgid "Strong emphasis"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:277
+msgid "Style info"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:278
+msgid "Subscript"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:279
+#, fuzzy
+msgid "Superscript"
+msgstr "_Huraian:"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:280
+msgid "Tab order position"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:281
+#, fuzzy
+msgid "Table"
+msgstr "Dihidupkan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:282
+msgid "Table body"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:283
+#, fuzzy
+msgid "Table caption"
+msgstr "Buka Lokasi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:284
+msgid "Table column group properties"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:285
+msgid "Table column properties"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:286
+msgid "Table data cell"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:287
+msgid "Table footer"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:288
+msgid "Table header"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:289
+msgid "Table header cell"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:290
+msgid "Table row"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:291
+msgid "Table summary"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:292
+msgid "Target — Blank"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:293
+msgid "Target — Parent"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:294
+msgid "Target — Self"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:295
+msgid "Target — Top"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:296
+msgid "Teletype or monospace text style"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:297
+msgid "Text"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:298
+#, fuzzy
+msgid "Text color"
+msgstr "Warna Teks"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:300
+#, fuzzy
+msgid "Text color (deprecated)"
+msgstr "Warna Teks"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:301
+msgid "Text entered by user"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:302
 msgid "Title"
 msgstr "Tajuk"
 
-#: src/dialogs/gnome-print-font-picker.c:177
-msgid "The title of the selection dialog box"
-msgstr "Tajuk bagi kekotak dialog pilihan"
+#: ../plugins/taglist/HTML.tags.xml.in.h:303
+msgid "Top margin in pixels"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-picker.c:197
-msgid "Font name"
-msgstr "Nama font"
+#: ../plugins/taglist/HTML.tags.xml.in.h:304
+msgid "URL"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-picker.c:198
-msgid "Name of the selected font"
-msgstr "Nama bagi font yang dipilih"
+#: ../plugins/taglist/HTML.tags.xml.in.h:305
+#, fuzzy
+msgid "Underlined text style"
+msgstr "Garisbawah"
 
-#: src/dialogs/gnome-print-font-picker.c:206
-msgid "Preview text"
-msgstr "Prebiu teks"
+#: ../plugins/taglist/HTML.tags.xml.in.h:306
+#, fuzzy
+msgid "Unordered list"
+msgstr "Garisbawah"
 
-#: src/dialogs/gnome-print-font-picker.c:207
-msgid "Preview text shown in the dialog"
-msgstr "Prebiu teks dipapar pada dialog"
+#: ../plugins/taglist/HTML.tags.xml.in.h:307
+msgid "Use image map"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-picker.c:215
-msgid "Use font in label"
-msgstr "Guna font pada label"
+#: ../plugins/taglist/HTML.tags.xml.in.h:308
+msgid "Value"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-picker.c:216
-msgid "Use font in the label in font info mode"
-msgstr "Guna font pada label dalam mod maklumat font"
+#: ../plugins/taglist/HTML.tags.xml.in.h:309
+msgid "Value interpretation"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-picker.c:224
-msgid "Font size for label"
-msgstr "Saiz font bagi label"
+#: ../plugins/taglist/HTML.tags.xml.in.h:310
+msgid "Variable or program argument"
+msgstr ""
 
-#: src/dialogs/gnome-print-font-picker.c:225
-msgid "Font size for label in font info mode"
-msgstr "Saiz font bagi label dalam mod maklumat font"
+#: ../plugins/taglist/HTML.tags.xml.in.h:311
+msgid "Vertical cell alignment"
+msgstr ""
 
-# Saiz bra
-#: src/dialogs/gnome-print-font-picker.c:235
-msgid "Show size"
-msgstr "Papar saiz"
+#: ../plugins/taglist/HTML.tags.xml.in.h:312
+#, fuzzy
+msgid "Vertical space"
+msgstr "Selit ruang"
 
-#: src/dialogs/gnome-print-font-picker.c:236
-msgid "Show size in font info mode"
-msgstr "Papar saiz dalam mod maklumat font"
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:314
+#, fuzzy
+msgid "Vertical space (deprecated)"
+msgstr "Selit ruang"
 
-#: src/dialogs/gnome-print-font-picker.c:1014
-msgid "Font"
+#: ../plugins/taglist/HTML.tags.xml.in.h:315
+#, fuzzy
+msgid "Visited link color"
+msgstr "Pilih warna pilihan"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:317
+#, fuzzy
+msgid "Visited link color (deprecated)"
+msgstr "Pilih warna pilihan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:318
+msgid "Width"
+msgstr ""
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:319
+msgid "XHTML 1.0 — Tags"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:1
+msgid "Bibliography (cite)"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:2
+msgid "Bibliography (item)"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:3
+msgid "Bibliography (shortcite)"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:4
+msgid "Bibliography (thebibliography)"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:5
+msgid "Brackets ()"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:6
+msgid "Brackets <>"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:7
+msgid "Brackets []"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:8
+msgid "Brackets {}"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:10
+msgid "File input"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:11
+#, fuzzy
+msgid "Footnote"
 msgstr "Font"
 
-#. gnome_print_font_picker_update_font_info
-#: src/dialogs/goto-line.glade2.h:1
-msgid "Goto Line"
-msgstr "Pergi ke Baris"
-
-#: src/dialogs/goto-line.glade2.h:2
-msgid "_Line number:"
-msgstr "_Baris ke:"
-
-#: src/dialogs/plugin-manager.glade2.h:1
-msgid "C_onfigure plugin"
-msgstr "K_onfigurasikan plugin"
-
-#: src/dialogs/plugin-manager.glade2.h:2
-msgid "Configure the selected plugin"
-msgstr "Konfigurasi plugin dipilih"
-
-#: src/dialogs/plugin-manager.glade2.h:3
-msgid "De_tails"
-msgstr "P_erincian"
-
-#: src/dialogs/plugin-manager.glade2.h:4
-msgid "_Description"
-msgstr "_Huraian:"
-
-#: src/dialogs/plugin-manager.glade2.h:5
-msgid "dialog1"
-msgstr "dialog1"
-
-#: src/dialogs/program-location-dialog.glade2.h:2
-msgid "_Location to search for:"
-msgstr "_Lokasi utnuk dicari:"
-
-#: src/dialogs/program-location-dialog.glade2.h:3
-msgid "label"
-msgstr "label"
-
-#: src/dialogs/replace.glade2.h:2
-msgid "Find Next"
-msgstr "Cari Lagi"
-
-#: src/dialogs/replace.glade2.h:3
-msgid "Match _entire word only"
-msgstr "Padan ke_seluruhan perkataan sahaja"
-
-#: src/dialogs/replace.glade2.h:5
-msgid "Replace All"
-msgstr "Gantikan Semua"
-
-#: src/dialogs/replace.glade2.h:6
-msgid "Replace _with: "
-msgstr "Ganti _dengan:"
-
-#: src/dialogs/replace.glade2.h:7
-msgid "_Match case"
-msgstr "_Padan huruf kecil/besar"
-
-#: src/dialogs/replace.glade2.h:8
-msgid "_Search for: "
-msgstr "_Cari: "
-
-#: src/dialogs/replace.glade2.h:9
-msgid "_Wrap around"
-msgstr "_Balut sekeliling"
-
-#: src/dialogs/uri.glade2.h:2
-msgid "Enter the _location (URI) of the file you would like to open:"
-msgstr "Masukkan _lokasi (URI) bagi fail yang anda ingin buka:"
-
-#: src/dialogs/uri.glade2.h:3
-msgid "Open from URI"
-msgstr "Buka daripada URI"
-
-#: src/gedit-commands.c:471
-msgid "translator_credits"
-msgstr "Hasbullah Bin Pit <sebol@ikhlas.com>, Merlimau."
-
-#: src/gedit-commands.c:496
-msgid "gedit"
-msgstr "gedit"
-
-#: src/gedit-commands.c:497
-msgid ""
-"(C) 1998-2000 Evan Lawrence and Alex Robert\n"
-"(C) 2000-2002 Chema Celorio and Paolo Maggi"
-msgstr ""
-"(C) 1998-2000 Evan Lawrence and Alex Robert\n"
-"(C) 2000-2002 Chema Celorio and Paolo Maggi"
-
-#: src/gedit-commands.c:499
-msgid "gedit is a small and lightweight text editor for Gnome"
-msgstr "gedit adalah editor teks untuk Gnome yang kecil dan ringan"
-
-#: src/gedit-document.c:545 src/gedit-document.c:563
-#, c-format
-msgid "%s %d"
-msgstr "%s %d"
-
-#: src/gedit-document.c:545 src/gedit-document.c:563
-msgid "Untitled"
-msgstr "Tiadatajuk"
-
-#: src/gedit-document.c:551 src/gedit-document.c:598
-msgid "Invalid file name"
-msgstr "Nama fail tidak sah"
-
-#: src/gedit-document.c:710 src/gedit-document.c:794
-msgid "Invalid UTF-8 data"
-msgstr "Data UTF-8 tidak sah"
-
-#: src/gedit-document.c:1024
-#, c-format
-msgid "Could not read symbolic link information for %s"
-msgstr "Tak dapat baca maklumat pautan simbolik bagi %s"
-
-#: src/gedit-document.c:1070
-msgid "The file has too many symbolic links."
-msgstr "Fail terlalu banyak pautan simbolik."
-
-#: src/gedit-document.c:1126
-#, c-format
-msgid "gedit cannot handle %s: locations in write mode."
-msgstr "gedit tak dapat mengendali lokasi %s: dalam mod tulis."
-
-#: src/gedit-document.c:1133
-msgid "gedit cannot handle this kind of location in write mode."
-msgstr "gedit tak dapat mengendali jenis lokasi ini pada mod tulis."
-
-#: src/gedit-document.c:1146
-msgid "Invalid filename."
-msgstr "Nama fail tidak sah."
-
-#: src/gedit-document.c:1286
-msgid ""
-"There is not enough disk space to save the file.\n"
-"Please free some disk space and try again."
-msgstr ""
-"Tak cukup ruang cakera untuk menyimpan fail.\n"
-"Sila, bebaskan sedikit ruang pada cakera dan cuba lagi."
-
-#: src/gedit-document.c:1291
-msgid ""
-"The disk where you are trying to save the file has a limitation on file "
-"sizes.  Please try saving a smaller file or saving it to a disk that does "
-"not have this limitation."
-msgstr ""
-"Cakera dimana anda cuba simpankan fail mempunyai had saiz fail. Sila cuba "
-"simpan fail lebih kecil atau simpan ke cakera yang tidak mempunyai had ini."
-
-#: src/gedit-document.c:1330
-msgid "Could not create a backup file."
-msgstr "Tak dapat mencipta fail backup."
-
-#: src/gedit-document.c:1448
-msgid "It is not possible to revert an Untitled document"
-msgstr "Mustahil untuk berbalik ke dokuken tiadatajuk"
-
-#: src/gedit-file-selector-util.c:147
-#, c-format
-msgid ""
-"A file named \"%s\" already exists.\n"
-"Do you want to replace it with the one you are saving?"
-msgstr ""
-"Nama fail \"%s\" sudah wujud.\n"
-"Adakah anda ingin menggantikannya dengan apa yang anda hendak simpan?"
-
-#: src/gedit-file-selector-util.c:158
-#, c-format
-msgid ""
-"The file \"%s\" is read-only.\n"
-"Do you want to try to replace it with the one you are saving?"
-msgstr ""
-"Nama fail \"%s\" adalah baca-sahaja.\n"
-"Adakah anda ingin menggantikannya dengan apa yang anda hendak simpan?"
-
-#: src/gedit-file-selector-util.c:544
-msgid "Select a filename to save"
-msgstr "Pilih satu nama fail untuk disimpan"
-
-#: src/gedit-file.c:151
-msgid "Open File..."
-msgstr "Buka Fail..."
-
-#: src/gedit-file.c:177 src/gedit-file.c:887
-#, c-format
-msgid "Loaded file '%s'"
-msgstr "Fail '%s' dimuatkan"
-
-#: src/gedit-file.c:309 src/gedit-file.c:455
-#, c-format
-msgid "Saving file '%s'..."
-msgstr "Menyimpan fail '%s' ..."
-
-#: src/gedit-file.c:337 src/gedit-file.c:470
-msgid "The document has not been saved."
-msgstr "Dokumen tidak akan disimpan."
-
-#: src/gedit-file.c:351 src/gedit-file.c:467
-#, c-format
-msgid "File '%s' saved."
-msgstr "Fail '%s' disimpan."
-
-#: src/gedit-file.c:434
-msgid "Save as..."
-msgstr "Simpan sebagai..."
-
-#: src/gedit-file.c:628
-#, c-format
-msgid ""
-"Do you want to revert to saved the document '%s'?\n"
-"\n"
-"You will not be able to undo this operation."
-msgstr ""
-"Adakah anda ingin berbalik ke dokumen disimpan '%s'? \n"
-"\n"
-"Anda tidak akan boleh nyahcara operasi ini."
-
-#: src/gedit-file.c:638 src/gedit-ui.xml.h:99
-msgid "_Revert"
-msgstr "Be_rbalik"
-
-#: src/gedit-file.c:672
-#, c-format
-msgid "Reverting file '%s'..."
-msgstr "Berbalik ke fail '%s'..."
-
-#: src/gedit-file.c:685
-msgid "The document has not been reverted."
-msgstr "Dokumen tidak boleh diberbalikkan."
-
-#: src/gedit-file.c:695
-#, c-format
-msgid "File '%s' reverted."
-msgstr "Fail '%s' diberbalikkan."
-
-#: src/gedit-file.c:721
-#, c-format
-msgid "Loading %d files..."
-msgstr "Memuatkan %d fail..."
-
-#: src/gedit-file.c:757
-#, c-format
-msgid "The file \"%s\" does not exist. Would you like to create it?"
-msgstr "Fail \"%s\" tidak wujud. Adakah anda ingin menciptanya?"
-
-#: src/gedit-file.c:812
-#, c-format
-msgid "Loaded %i files"
-msgstr "%i fail dimuatkan"
-
-#: src/gedit-file.c:945
-msgid "Could not read data from stdin."
-msgstr "Tak dapat membaca data dari stdin."
-
-#. Read only
-#: src/gedit-mdi-child.c:215
-msgid "RO"
-msgstr "RO"
-
-#. Add the detach tab button
-#: src/gedit-mdi-child.c:539 src/gedit-ui.xml.h:89
-msgid "_Move to New Window"
-msgstr "_Pindah ke Tetingkap Baru"
-
-#: src/gedit-mdi.c:446
-msgid "Open a file."
-msgstr "Buka fail."
-
-#: src/gedit-mdi.c:1032
-#, c-format
-msgid ""
-"Do you want to save the changes you made to the document \"%s\"? \n"
-"\n"
-"Your changes will be lost if you don't save them."
-msgstr ""
-"Adakah anda ingin menyimpan perubahan pada dokumen \"%s\"? \n"
-"\n"
-"Perubahan itu akan hilang jika anda tidak menyimpannya."
-
-#: src/gedit-mdi.c:1037
-msgid "Do_n't save"
-msgstr "Ja_ngan simpan"
-
-#: src/gedit-mdi.c:1056
-msgid "_Don't quit"
-msgstr "_Jangan keluar"
-
-#: src/gedit-mdi.c:1060
-msgid "_Don't close"
-msgstr "_Jangan tutup"
-
-#: src/gedit-mdi.c:1150
-msgid "(modified)"
-msgstr "(diubah)"
-
-#: src/gedit-mdi.c:1156
-msgid "(readonly)"
-msgstr "(bacasahaja)"
-
-#: src/gedit-plugins-engine.c:352
-#, c-format
-msgid "Error, unable to open module file '%s'\n"
-msgstr "Ralat, Gagal membuka fail modul '%s'\n"
-
-#: src/gedit-plugins-engine.c:362
-#, c-format
-msgid "Error, plugin '%s' does not contain init function."
-msgstr "Ralat, plugin '%s' tidak mengandungi fungsi init."
-
-#: src/gedit-plugins-engine.c:372
-#, c-format
-msgid "Error, plugin '%s' does not contain activate function."
-msgstr "Ralat, plugin '%s' tidak mengandungi fungsi pengaktifan."
-
-#: src/gedit-plugins-engine.c:382
-#, c-format
-msgid "Error, plugin '%s' does not contain deactivate function."
-msgstr "Ralat, plugin '%s' tidak mengandungi fungsi pengenyahaktifan."
-
-#: src/gedit-plugins-engine.c:407
-#, c-format
-msgid "Error, impossible to initialize plugin '%s'"
-msgstr "Ralat, mustahil untuk meinitialisasikan plugin '%s'"
-
-#: src/gedit-plugins-engine.c:458
-#, c-format
-msgid "Error, impossible to destroy plugin '%s'"
-msgstr "Ralat, mustahil untuk memusnahkan plugin '%s'"
-
-#: src/gedit-plugins-engine.c:541 src/gedit-plugins-engine.c:629
-#, c-format
-msgid "Error, impossible to activate plugin '%s'"
-msgstr "Ralat, mustahil untuk mengaktifkan plugin '%s'"
-
-#: src/gedit-plugins-engine.c:580
-#, c-format
-msgid "Error, impossible to deactivate plugin '%s'"
-msgstr "Ralat, mustahil untuk mengenyahaktifkan plugin '%s'"
-
-#: src/gedit-plugins-engine.c:673
-#, c-format
-msgid "Error, impossible to update ui of the plugin '%s'"
-msgstr "Ralat, mustahil untuk mengemaskini UI bagi plugin '%s'"
-
-#: src/gedit-prefs-manager.c:335
-msgid "Cannot initialize preferences manager."
-msgstr "Tak dapat menginitialisasi pengurus keutamaan."
-
-#: src/gedit-prefs-manager.c:1756
-#, c-format
-msgid "Expected `%s' got `%s' for key %s"
-msgstr "Menjangka `%s' dapat `%s' bagi kekunci %s"
-
-#: src/gedit-print.c:188
-msgid ""
-"gedit is unable to print since it cannot find\n"
-"one of the required fonts."
-msgstr ""
-"gedit tak dapat mencetak kerana ia tidak menjumpai\n"
-"salah satu daripada font yang diperlukan."
-
-#: src/gedit-print.c:374
-#, c-format
-msgid "File: %s"
-msgstr "Fail: %s"
-
-#. Print right text
-#: src/gedit-print.c:381
-#, c-format
-msgid "Page: %d"
-msgstr "Halaman: %d"
-
-#: src/gedit-print.c:522
-msgid "gedit - Print Preview"
-msgstr "gedit - Prebiu Cetakan"
-
-#: src/gedit-print.c:600
-#, c-format
-msgid ""
-"An error occurred while printing.\n"
-"\n"
-"%s,"
-msgstr ""
-"Ralat berlaku ketika mencetak.\n"
-"\n"
-"%s,"
-
-#: src/gedit-ui.xml.h:1
-msgid "About this application"
-msgstr "Perihal aplikasi ini"
-
-#: src/gedit-ui.xml.h:2
-msgid "C_ustomize Statusbar"
-msgstr "Pers_onalisasi Bar Status"
-
-#: src/gedit-ui.xml.h:3
-msgid "Change the visibility of the output window in the current window"
-msgstr "Tukar ketampakan bagi tetingkap output pada tetingkap semasa"
-
-#: src/gedit-ui.xml.h:4
-msgid "Change the visibility of the statusbar in the current window"
-msgstr "Tukar ketampakan bar status pada tetingkap semasa"
-
-#: src/gedit-ui.xml.h:5
-msgid "Change the visibility of the toolbar in the current window"
-msgstr "Tukar ketampakan bagi toolbar pada tetingkap semasa"
-
-#: src/gedit-ui.xml.h:6
-msgid "Close"
-msgstr "Tutup"
-
-#: src/gedit-ui.xml.h:7
-msgid "Close all open files"
-msgstr "Tutup semua fail yang dibuka"
-
-#: src/gedit-ui.xml.h:8
-msgid "Close the current file"
-msgstr "Tutup fail semasa"
-
-#: src/gedit-ui.xml.h:9
-msgid "Configure the application"
-msgstr "Konfigurasikan aplikasi"
-
-#: src/gedit-ui.xml.h:10
-msgid "Copy"
-msgstr "Salin"
-
-#: src/gedit-ui.xml.h:11
-msgid "Copy the selection"
-msgstr "Salin pilihan"
-
-#: src/gedit-ui.xml.h:12
-msgid "Create a new document"
-msgstr "Cipta dokumen baru"
-
-#: src/gedit-ui.xml.h:13
-msgid "Cu_t"
-msgstr "_Potong"
-
-#: src/gedit-ui.xml.h:14
-msgid "Customize"
-msgstr "Personalisasi"
-
-#: src/gedit-ui.xml.h:15
-msgid "Customize toolbars"
-msgstr "Susun toolbar"
-
-#: src/gedit-ui.xml.h:16
-msgid "Cut"
-msgstr "Potong"
-
-#: src/gedit-ui.xml.h:17
-msgid "Cut the selection"
-msgstr "Potong pilihan"
-
-#: src/gedit-ui.xml.h:18
-msgid "Delete"
-msgstr "Padam"
-
-#: src/gedit-ui.xml.h:19
-msgid "Delete the selected text"
-msgstr "Padam teks yang dipilih"
-
-#: src/gedit-ui.xml.h:20
-msgid "Dump XML"
-msgstr "Dump XML"
-
-#: src/gedit-ui.xml.h:21
-msgid "Dump the UI Xml description"
-msgstr "Dump huraian UI XML"
-
-#: src/gedit-ui.xml.h:23
-msgid "Find Again"
-msgstr "Cari Lagi"
-
-#: src/gedit-ui.xml.h:24
-msgid "Find Ne_xt"
-msgstr "Cari _Lagi"
-
-#: src/gedit-ui.xml.h:25
-msgid "Go to _Line..."
-msgstr "Pergi ke _Baris..."
-
-#: src/gedit-ui.xml.h:26
-msgid "Go to a specific line number"
-msgstr "Pergi ke baris tertentu"
-
-#: src/gedit-ui.xml.h:27
-msgid "Icon and _Text"
-msgstr "Ikon dan _Teks"
-
-#: src/gedit-ui.xml.h:28
-msgid "Main toolbar"
-msgstr "Toolbar utama"
-
-#: src/gedit-ui.xml.h:29
-msgid "Move the current document to a new window"
-msgstr "Pindah dokumen ini ke tetingkap baru"
-
-#: src/gedit-ui.xml.h:30
-msgid "New"
-msgstr "Baru"
-
-#: src/gedit-ui.xml.h:31
-msgid "Only show icons in the toolbar"
-msgstr "Hanya papar ikon pada toolbar"
-
-#: src/gedit-ui.xml.h:33
-msgid "Open Location..."
-msgstr "Buka Lokasi ..."
-
-#: src/gedit-ui.xml.h:34
-msgid "Open _Location..."
-msgstr "Buka _Lokasi ..."
-
-#: src/gedit-ui.xml.h:35
-msgid "Open a file"
-msgstr "Buka fail"
-
-#: src/gedit-ui.xml.h:36
-msgid "Open a file from a specified location"
-msgstr "Buka fail daripada lokasi yang dinyatakan"
-
-#: src/gedit-ui.xml.h:37
-msgid "Open the gedit manual"
-msgstr "Buka Manual Gedit"
-
-#: src/gedit-ui.xml.h:38
-msgid "Paste"
-msgstr "Tepek"
-
-#: src/gedit-ui.xml.h:39
-msgid "Paste the clipboard"
-msgstr "Tepek Papanklip"
-
-#: src/gedit-ui.xml.h:40
-msgid "Pr_eferences"
-msgstr "Ke_utamaan"
-
-#: src/gedit-ui.xml.h:42
-msgid "Print Previe_w..."
-msgstr "_Prebiu Cetakan..."
-
-#: src/gedit-ui.xml.h:43
-msgid "Print Preview"
-msgstr "Prebiu Cetakan"
-
-#: src/gedit-ui.xml.h:44
-msgid "Print Setup"
-msgstr "Tetapan Cetakan"
-
-#: src/gedit-ui.xml.h:45
-msgid "Print preview"
-msgstr "Prebiu Cetakan"
-
-#: src/gedit-ui.xml.h:46
-msgid "Print the current file"
-msgstr "Cetak fail semasa"
-
-#: src/gedit-ui.xml.h:47
-msgid "Quit"
-msgstr "Keluar"
-
-#: src/gedit-ui.xml.h:48
-msgid "Quit the program"
-msgstr "Keluar program"
-
-#: src/gedit-ui.xml.h:49
-msgid "Redo"
-msgstr "Ulangcara"
-
-#: src/gedit-ui.xml.h:50
-msgid "Redo the undone action"
-msgstr "Ulangcara aksi nyahcara"
-
-#: src/gedit-ui.xml.h:52
-msgid "Replace a string"
-msgstr "Ganti rentetan"
-
-#: src/gedit-ui.xml.h:53
-msgid "Revert"
-msgstr "Berbalik"
-
-#: src/gedit-ui.xml.h:54
-msgid "Revert to a saved version of the file"
-msgstr "Berbalik ke versi fail yang tersimpan"
-
-#: src/gedit-ui.xml.h:56
-msgid "Save As"
-msgstr "Simpan Sebagai"
-
-#: src/gedit-ui.xml.h:57
-msgid "Save _As..."
-msgstr "Simpan Seb_agai..."
-
-#: src/gedit-ui.xml.h:58
-msgid "Save all open files"
-msgstr "Simpan semua fail yang dibuka"
-
-#: src/gedit-ui.xml.h:59
-msgid "Save the current file"
-msgstr "Simpan fail semasa"
-
-#: src/gedit-ui.xml.h:60
-msgid "Save the current file with a different name"
-msgstr "Simpan fail semasa dengan nama lain"
-
-#: src/gedit-ui.xml.h:61
-msgid "Search again for the same string"
-msgstr "Cari rentetan yang sama lagi"
-
-#: src/gedit-ui.xml.h:62
-msgid "Search for a string"
-msgstr "Cari rentetan"
-
-#: src/gedit-ui.xml.h:63
-msgid "Select All"
-msgstr "Pilih Semua"
-
-#: src/gedit-ui.xml.h:64
-msgid "Select _All"
-msgstr "Pilih Semu_a"
-
-#: src/gedit-ui.xml.h:65
-msgid "Select the entire document"
-msgstr "Pilih seluruh dokumen"
-
-#: src/gedit-ui.xml.h:66
-msgid "Set toolbar button style according to desktop default"
-msgstr "Tetapkan gaya butang toolbar berdasarkan default desktop"
-
-#: src/gedit-ui.xml.h:67
-msgid "Setup the page settings for your current printer"
-msgstr "Tetapan halaman bagi pencetak semasa"
-
-#: src/gedit-ui.xml.h:68
-msgid "Show _Cursor Position"
-msgstr "Papar Posisi _Kursor"
-
-#: src/gedit-ui.xml.h:69
-msgid "Show _Overwrite Mode"
-msgstr "Papar Mod _Tindihan"
-
-#: src/gedit-ui.xml.h:70
-msgid "Show cursor position in the statusbar"
-msgstr "Papar posisi kursor pada bar status"
-
-#: src/gedit-ui.xml.h:71
-msgid "Show overwrite mode in the statusbar"
-msgstr "Papar mod tindihan pada bar status"
-
-#: src/gedit-ui.xml.h:73
-msgid "Undo the last action"
-msgstr "Nyahcara aksi terkhir"
-
-#: src/gedit-ui.xml.h:74
-msgid "_About"
-msgstr "_Perihal"
-
-#: src/gedit-ui.xml.h:75
-msgid "_Close"
-msgstr "_Tutup"
-
-#: src/gedit-ui.xml.h:76
-msgid "_Close All"
-msgstr "_Tutup Semua"
-
-#: src/gedit-ui.xml.h:77
-msgid "_Contents"
-msgstr "_Kandungan"
-
-#: src/gedit-ui.xml.h:78
-msgid "_Copy"
-msgstr "_Salin"
-
-#: src/gedit-ui.xml.h:79
-msgid "_Customize Toolbar"
-msgstr "Per_sonalisasi Toolbar"
-
-#: src/gedit-ui.xml.h:80
-msgid "_Debug"
-msgstr "_Nyahpepijat"
-
-#: src/gedit-ui.xml.h:81
-msgid "_Delete"
-msgstr "Pa_dam"
-
-#: src/gedit-ui.xml.h:82
-msgid "_Desktop Default"
-msgstr "_Default Desktop"
-
-#: src/gedit-ui.xml.h:83
-msgid "_Documents"
-msgstr "_Dokumen"
-
-#: src/gedit-ui.xml.h:84
-msgid "_Edit"
-msgstr "_Edit"
-
-#: src/gedit-ui.xml.h:85
-msgid "_File"
-msgstr "_Fail"
-
-#: src/gedit-ui.xml.h:86
-msgid "_Find..."
-msgstr "_Cari..."
-
-#: src/gedit-ui.xml.h:87
-msgid "_Help"
-msgstr "_Bantuan"
-
-#: src/gedit-ui.xml.h:88
-msgid "_Icon"
-msgstr "_Ikon"
-
-#: src/gedit-ui.xml.h:90
-msgid "_New"
-msgstr "_Baru"
-
-#: src/gedit-ui.xml.h:91
-msgid "_Open..."
-msgstr "_Buka..."
-
-#: src/gedit-ui.xml.h:92
-msgid "_Output Window"
-msgstr "Tetingkap _Output"
-
-#: src/gedit-ui.xml.h:93
-msgid "_Paste"
-msgstr "_Tepek"
-
-#: src/gedit-ui.xml.h:94
-msgid "_Print..."
-msgstr "_Cetak..."
-
-#: src/gedit-ui.xml.h:95
-msgid "_Priority Text beside Icons"
-msgstr "Teks _Prioriti di Sebelah Ikon"
-
-#: src/gedit-ui.xml.h:96
-msgid "_Quit"
-msgstr "_Keluar"
-
-#: src/gedit-ui.xml.h:97
-msgid "_Redo"
-msgstr "_Ulangcara"
-
-#: src/gedit-ui.xml.h:98
-msgid "_Replace..."
-msgstr "Ganti..."
-
-#: src/gedit-ui.xml.h:100
-msgid "_Save"
-msgstr "_Simpan"
-
-#: src/gedit-ui.xml.h:101
-msgid "_Save All"
-msgstr "_Simpan Semua"
-
-#: src/gedit-ui.xml.h:102
-msgid "_Search"
-msgstr "_Cari"
-
-#: src/gedit-ui.xml.h:103
-msgid "_Statusbar"
-msgstr "Bar _status"
-
-#: src/gedit-ui.xml.h:104
-msgid "_Toolbar"
-msgstr "_Toolbar"
-
-#: src/gedit-ui.xml.h:105
-msgid "_Tools"
-msgstr "_Radas"
-
-#: src/gedit-ui.xml.h:106
-msgid "_Undo"
-msgstr "_Nyahcara"
-
-#: src/gedit-ui.xml.h:107
-msgid "_View"
-msgstr "_Lihat"
-
-#: src/gedit-utils.c:795
-#, c-format
-msgid ""
-"Could not find the file \"%s\".\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-"Tak dapat menjumpai fail  \"%s\".\n"
-"\n"
-"Sila pastikan anda menaip lokasi dengan betul dan cuba lagi."
-
-#: src/gedit-utils.c:802
-#, c-format
-msgid "Could not open the file \"%s\" because it contains corrupted data."
-msgstr "Tak dapat membuka fail \"%s\" kerana ia mengandungi data yang rosak."
-
-#: src/gedit-utils.c:813
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because gedit cannot handle %s: locations."
-msgstr ""
-"Tak dapat membuka fail \"%s\" kerana gedit tak boleh kendali lokasi %s: ."
-
-#: src/gedit-utils.c:819
-#, c-format
-msgid "Could not open the file \"%s\""
-msgstr "Tak dapat membuka fail \"%s\""
-
-#: src/gedit-utils.c:829
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because it contains data in an invalid format."
-msgstr ""
-"Tak dapat membuka fail  \"%s\" kerana ia mengandungi data dalam format yang "
-"tidak sah."
-
-#: src/gedit-utils.c:836
-#, c-format
-msgid "Could not open the file \"%s\" because it is too big."
-msgstr "Tak dapat membukafail \"%s\" kerana ianya terlalu besar."
-
-#: src/gedit-utils.c:843
-#, c-format
-msgid ""
-"\"%s\" is not a valid location.\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-"\"%s\" adalah lokasi tidak sah.\n"
-"\n"
-"Sila pastikan anda menaip lokasi dengan betul dan cuba lagi."
-
-#: src/gedit-utils.c:850
-#, c-format
-msgid "Could not open the file \"%s\" because access was denied."
-msgstr "Tak dapat membukafail \"%s\" keran akses dinafikan."
-
-#: src/gedit-utils.c:857
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because there are too many open files.\n"
-"\n"
-"Please, close some open file and try again."
-msgstr ""
-"Tak dapat membuka fail \"%s\" kerana terdapat terlalu banyak fail dibuka.\n"
-"\n"
-"Sila tutup sedikit fail dan cuba lagi."
-
-#: src/gedit-utils.c:865
-#, c-format
-msgid ""
-"\"%s\" is a directory.\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-"\"%s\" adalah direktori.\n"
-"\n"
-"Sila semak lokasi yang anda taip itu betul dan cuba lagi."
-
-#: src/gedit-utils.c:872
-#, c-format
-msgid ""
-"Not enough available memory to open the file \"%s\". Please, close some "
-"running application and try again."
-msgstr ""
-"Tidak cukup memori untuk membuka fail \"%s\". Sila tutup sedikit aplikasi "
-"terlaksana dan cuba lagi."
-
-#: src/gedit-utils.c:898
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because no host \"%s\" could be found.\n"
-"\n"
-"Please, check that you typed the location correctly and that your proxy "
-"settings are correct and then try again."
-msgstr ""
-"Tak dapat membuka fail  \"%s\" kerana tiada hos \"%s\" dijumpai.\n"
-"\n"
-"Sila semak samada lokasi yang ditaip adalah betul dan tetapan proksi adalah "
-"betul dan cuba lagi."
-
-#: src/gedit-utils.c:913
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because the host name was invalid.\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-"Tak dapat membuka fail  \"%s\" kerana nama hos tidak sah.\n"
-"\n"
-"Sila semak lokasi yang anda taip adalah betul dan cuba lagi."
-
-#: src/gedit-utils.c:920
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because the host name was empty.\n"
-"\n"
-"Please, check that your proxy settings are correct and try again."
-msgstr ""
-"Tak dapat membuka fail  \"%s\" kerana nama hos adalah kosong.\n"
-"\n"
-"Sila semak samada tetapan proksi adlaah betul dan cuba lagi."
-
-#: src/gedit-utils.c:927
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because the attempt to log in failed.\n"
-"\n"
-"Please, check that you typed the location correctly and try again."
-msgstr ""
-"Tak dapat membuka fail  \"%s\" kerana cubaan logmasuk gagal.\n"
-"\n"
-"Sila semak samada lokasi yang anda taip adalah betul dan cuba lagi."
-
-#: src/gedit-utils.c:935
-#, c-format
-msgid ""
-"Could not open the file \"%s\" because it contains invalid UTF-8 data.\n"
-"\n"
-"Probably, you are trying to open a binary file."
-msgstr ""
-"Tak dapat membuka fail \"%s\" kerana ia mengandungi data UTF-8 yang tak "
-"sah.\n"
-"\n"
-"Mungkin anda cuma membuka fail binari."
-
-#: src/gedit-utils.c:973
-#, c-format
-msgid "Could not open the file \"%s\"."
-msgstr "Tak dapat membukafail \"%s\"."
-
-#: src/gedit-utils.c:1024
-#, c-format
-msgid "Could not save the file \"%s\"."
-msgstr "Tak dapat menyimpan fail \"%s\"."
-
-#: src/gedit-utils.c:1028
-#, c-format
-msgid ""
-"Could not save the file \"%s\".\n"
-"\n"
-"%s"
-msgstr ""
-"Tak dapat menyimpan fail \"%s\":\n"
-"\n"
-"%s"
-
-#: src/gedit-utils.c:1081
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because gedit cannot find it.\n"
-"\n"
-"Perhaps, it has recently been deleted."
-msgstr ""
-"Tak dapat memberbalik fail \"%s\" kerana gedit tak menjumpainyai.\n"
-"\n"
-"Mungkin dianya baru sahaja dipadam."
-
-#: src/gedit-utils.c:1088
-#, c-format
-msgid "Could not revert the file \"%s\" because it contains corrupted data."
-msgstr "Tak dapat memberbalikkan fail \"%s\" kerana ia mengandungi fail rosak"
-
-#: src/gedit-utils.c:1099
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because gedit cannot handle %s: locations."
-msgstr ""
-"Tak dapat memberbalik fail \"%s\" kerana gedit tak boleh kendali lokasi %s: ."
-
-#: src/gedit-utils.c:1105 src/gedit-utils.c:1245
-#, c-format
-msgid "Could not revert the file \"%s\"."
-msgstr "Tak dapat memberbalikkan fail \"%s\"."
-
-#: src/gedit-utils.c:1115
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because it contains data in an invalid "
-"format."
-msgstr ""
-"Tak dapat memberbalik fail \"%s\" kerana ia mengandungi data dalam format "
-"yang tidak sah."
-
-#: src/gedit-utils.c:1122
-#, c-format
-msgid "Could not revert the file \"%s\" because it is too big."
-msgstr "Tak dapat memberbalikkan fail \"%s\"i kerana ianya terlalu besar"
-
-#: src/gedit-utils.c:1129
-#, c-format
-msgid "Could not revert the file \"%s\" because access was denied."
-msgstr "Tak dapat memberbalikkan fail \"%s\" kerana akses dinafikan."
-
-#: src/gedit-utils.c:1136
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because there are too many open files.\n"
-"\n"
-"Please, close some open file and try again."
-msgstr ""
-"Tak dapat memberbalikkan fail \"%s\" kerana terlalu banyak fail dibuka.\n"
-"\n"
-"Sila tutup sedikit fail dan cuba lagi."
-
-#: src/gedit-utils.c:1144
-#, c-format
-msgid ""
-"Not enough available memory to revert the file \"%s\". Please, close some "
-"running application and try again."
-msgstr ""
-"Tak cukup memori untuk memberbalikkan fail \"%s\". SIla tutup sedikit "
-"aplikasi terlaksana dan cuba lago."
-
-#: src/gedit-utils.c:1170
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because no host \"%s\" could be found.\n"
-"\n"
-"Please, check that your proxy settings are correct and try again."
-msgstr ""
-"Tak dapat memberbalikkan fail \"%s\" kerana tiada hos \"%s\" dijumpai\n"
-"\n"
-"Sila pastikan tetapan proksi adalah betul dan cuba lagi."
-
-#: src/gedit-utils.c:1184
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because the host name was empty.\n"
-"\n"
-"Please, check that your proxy settings are correct and try again."
-msgstr ""
-"Tak dapat memberbalik fail \"%s\" kerana nama hos kosong\n"
-"\n"
-"Sila semak samada tetapan proksi adalah betul dan cuba lagi."
-
-#: src/gedit-utils.c:1191
-#, c-format
-msgid "Could not revert the file \"%s\" because the attempt to log in failed."
-msgstr "Tak dapat memberbalikkan fail \"%s\" kerana cubaan logmasuk gagal."
-
-#: src/gedit-utils.c:1198
-#, c-format
-msgid ""
-"Could not revert the file \"%s\" because it contains invalid UTF-8 data.\n"
-"\n"
-"Probably, you are trying to revert a binary file."
-msgstr ""
-"Tak dapat memberbalikkan fail \"%s\" kerana ia mengandungi data UTF-8 yang "
-"tak sah\n"
-"\n"
-"Mungkin anda cuba memberbalik fail binari."
-
-#: src/gedit-utils.c:1207
-msgid "It is not possible to revert an Untitled document."
-msgstr "Mustahil untuk berbalik ke dokumen Tiadatajuk."
-
-#: src/gedit-utils.c:1296
-#, c-format
-msgid "The file \"%s\" already exists."
-msgstr "Fail \"%s\" tersedia wujud."
-
-#: src/gedit-utils.c:1302
-#, c-format
-msgid ""
-"\"%s\" is a directory.\n"
-"\n"
-"Please, check that you typed the location correctly."
-msgstr ""
-"\"%s\" adalah direktori.\n"
-"\n"
-"Sila semak lokasi anda anda menaip lokasi dengan betul."
-
-#: src/gedit-utils.c:1311
-#, c-format
-msgid ""
-"Cannot create the file \"%s\".\n"
-"\n"
-"Make sure you have the appropriate write permissions."
-msgstr ""
-"Tak dapat mencipta fail \"%s\".\n"
-"\n"
-"Pastikan anda mempunyai keizinan menulis yang sepatutnya."
-
-#: src/gedit-utils.c:1318
-#, c-format
-msgid ""
-"Cannot create the file \"%s\".\n"
-"\n"
-"The file name is too long."
-msgstr ""
-"Tak dapat mencipta fail \"%s\".\n"
-"\n"
-" nama fail terlalu panjang"
-
-#: src/gedit-utils.c:1325
-#, c-format
-msgid ""
-"Cannot create the file \"%s\".\n"
-"\n"
-"A directory component in the file name does not exist or is a dangling "
-"symbolic link."
+#: ../plugins/taglist/Latex.tags.xml.in.h:12
+msgid "Function cosine"
 msgstr ""
 
-#: src/gedit-utils.c:1334
-#, c-format
-msgid ""
-"There is not enough disk space to create the file \"%s\".\n"
-"\n"
-"Please free some disk space and try again."
-msgstr ""
-"Tak cukup ruang cakera untuk mencipta fail \"%s\".\n"
-"\n"
-"Sila, bebaskan sedikit ruang pada cakera dan cuba lagi."
-
-#: src/gedit-utils.c:1340
-#, c-format
-msgid "Could not create the file \"%s\"."
-msgstr "Tak dapat mencipta fail \"%s\"."
-
-#.
-#. if (col == chars)
-#. msg = g_strdup_printf (_("  Ln %d, Col. %d"), row + 1, col + 1);
-#. else
-#. msg = g_strdup_printf (_("  Ln %d, Col. %d-%d"), row + 1, chars + 1, col + 1);
-#.
-#: src/gedit-view.c:1045
-#, c-format
-msgid "  Ln %d, Col. %d"
-msgstr " brs %d, Kol. %d"
-
-#: src/gedit-view.c:1083
-msgid "  OVR"
-msgstr " OVR"
-
-#: src/gedit-view.c:1085
-msgid "  INS"
-msgstr " INS"
-
-#: src/gedit2.c:77
-msgid "Show utility debugging messages."
-msgstr "Papar utiliti mesej nyahpepijat fail."
-
-#: src/gedit2.c:80
-msgid "Show mdi debugging messages."
-msgstr "Papar mesej peyahpepijatan mdi"
-
-#: src/gedit2.c:83
-msgid "Show commands debugging messages."
-msgstr "Papar mesej nyahpepijat arahan."
-
-#: src/gedit2.c:86
-msgid "Show document debugging messages."
-msgstr "Papar mesej nyahpepijat dokumen."
-
-#: src/gedit2.c:89
-msgid "Show file debugging messages."
-msgstr "Papar mesej nyahpepijat fail"
-
-#: src/gedit2.c:92
-msgid "Show plugin debugging messages."
-msgstr "Papar mesej nyahpepijat plugin."
-
-#: src/gedit2.c:95
-msgid "Show prefs debugging messages."
-msgstr "Papar mesej nyahpepijat pref."
-
-#: src/gedit2.c:98
-msgid "Show printing debugging messages."
-msgstr "Papar mesej nyahpepijat cetakan."
-
-#: src/gedit2.c:101
-msgid "Show search debugging messages."
-msgstr "Papar mesej nyahpepijat carian."
-
-#: src/gedit2.c:104
-msgid "Show undo debugging messages."
-msgstr "Papar mesej nyahpepijat nyahcara."
-
-#: src/gedit2.c:107
-msgid "Show view debugging messages."
-msgstr "Papar mesej nyahpepijat lihat."
-
-#: src/gedit2.c:110
-msgid "Show recent debugging messages."
-msgstr "Papar mesej nyahpepijat terkini"
-
-#: src/gedit2.c:113
-msgid "Show session management debugging messages."
-msgstr "Papar mesej nyahpepijat pengurusan sessi."
-
-#: src/gedit2.c:116
-msgid "Turn on all debugging messages."
-msgstr "Hidupkan semua mesej nyahpepijat"
-
-#: src/gedit2.c:119
-msgid "Quit an existing instance of gedit"
-msgstr "Keluar instans gedit yang ada"
-
-#: src/gedit2.c:122
-msgid "Create a new toplevel window in an existing instance of gedit"
-msgstr "Cipta tetingkap aras-atas baru pada instans gedit yang ada"
-
-#: src/gedit2.c:125
-msgid "Create a new document in an existing instance of gedit"
+#: ../plugins/taglist/Latex.tags.xml.in.h:13
+msgid "Function e^"
 msgstr ""
 
-#: src/gedit-output-window.c:278
-msgid "Close the output window"
-msgstr "Tutup tetingkap output"
+#: ../plugins/taglist/Latex.tags.xml.in.h:14
+msgid "Function exp"
+msgstr ""
 
-#: src/gedit-output-window.c:316
-msgid "Copy selected lines"
-msgstr "Salin baris dipilih"
+#: ../plugins/taglist/Latex.tags.xml.in.h:15
+msgid "Function log"
+msgstr ""
 
-#: src/gedit-output-window.c:336
-msgid "Clear the output window"
-msgstr "Kosongkan tetingkap output"
+#: ../plugins/taglist/Latex.tags.xml.in.h:16
+msgid "Function log10"
+msgstr ""
 
-#: src/gedit-output-window.c:374
-msgid "Output Lines"
-msgstr "Baris Output"
+#: ../plugins/taglist/Latex.tags.xml.in.h:17
+msgid "Function sine"
+msgstr ""
 
-#: src/dialogs/gedit-encodings-dialog.glade2.h:1
-msgid "Choose one or more e_ncodings:"
-msgstr "Pilih satu atau lebih peng_enkodan:"
-
-#: src/gedit-encodings.c:142 src/gedit-encodings.c:166
-#: src/gedit-encodings.c:207 src/gedit-encodings.c:257
-#: src/gedit-encodings.c:282
-msgid "Western"
-msgstr "Barat"
-
-#: src/gedit-encodings.c:144
-msgid "South European"
-msgstr "Eropah Selatan"
-
-#: src/gedit-encodings.c:146 src/gedit-encodings.c:162
-#: src/gedit-encodings.c:292
-msgid "Baltic"
-msgstr "Baltik"
-
-#: src/gedit-encodings.c:148 src/gedit-encodings.c:211
-#: src/gedit-encodings.c:224 src/gedit-encodings.c:228
-#: src/gedit-encodings.c:241 src/gedit-encodings.c:280
-msgid "Cyrillic"
-msgstr "Cyrillic"
-
-#: src/gedit-encodings.c:150 src/gedit-encodings.c:217
-#: src/gedit-encodings.c:235 src/gedit-encodings.c:290
-msgid "Arabic"
-msgstr "Arab"
-
-#: src/gedit-encodings.c:152 src/gedit-encodings.c:247
-#: src/gedit-encodings.c:284
-msgid "Greek"
+#: ../plugins/taglist/Latex.tags.xml.in.h:18
+#, fuzzy
+msgid "Greek alpha"
 msgstr "Yunani"
 
-#: src/gedit-encodings.c:154
-msgid "Hebrew Visual"
-msgstr "Hebrew Tampak"
+#: ../plugins/taglist/Latex.tags.xml.in.h:19
+#, fuzzy
+msgid "Greek beta"
+msgstr "Yunani"
 
-#: src/gedit-encodings.c:156 src/gedit-encodings.c:215
-#: src/gedit-encodings.c:253 src/gedit-encodings.c:288
-msgid "Hebrew"
-msgstr "Hebrew"
+#: ../plugins/taglist/Latex.tags.xml.in.h:20
+msgid "Greek epsilon"
+msgstr ""
 
-#: src/gedit-encodings.c:158 src/gedit-encodings.c:213
-#: src/gedit-encodings.c:261 src/gedit-encodings.c:286
-msgid "Turkish"
-msgstr "Turki"
+#: ../plugins/taglist/Latex.tags.xml.in.h:21
+#, fuzzy
+msgid "Greek gamma"
+msgstr "Yunani"
 
-#: src/gedit-encodings.c:160
-msgid "Nordic"
-msgstr "Nordic"
+#: ../plugins/taglist/Latex.tags.xml.in.h:22
+msgid "Greek lambda"
+msgstr ""
 
-#: src/gedit-encodings.c:164
-msgid "Celtic"
-msgstr "Celtic"
+#: ../plugins/taglist/Latex.tags.xml.in.h:23
+#, fuzzy
+msgid "Greek rho"
+msgstr "Yunani"
 
-#: src/gedit-encodings.c:168 src/gedit-encodings.c:259
-msgid "Romanian"
-msgstr "Romania"
+#: ../plugins/taglist/Latex.tags.xml.in.h:24
+#, fuzzy
+msgid "Greek tau"
+msgstr "Yunani"
 
-#: src/gedit-encodings.c:171 src/gedit-encodings.c:173
-#: src/gedit-encodings.c:175 src/gedit-encodings.c:177
-msgid "Unicode"
-msgstr "Unicode"
+#: ../plugins/taglist/Latex.tags.xml.in.h:25
+msgid "Header 0 (chapter)"
+msgstr ""
 
-#: src/gedit-encodings.c:180
-msgid "Armenian"
-msgstr "Armenia"
+#: ../plugins/taglist/Latex.tags.xml.in.h:26
+msgid "Header 0 (chapter*)"
+msgstr ""
 
-#: src/gedit-encodings.c:182 src/gedit-encodings.c:184
-#: src/gedit-encodings.c:193
-msgid "Chinese Traditional"
-msgstr "Cina Tradisional"
+#: ../plugins/taglist/Latex.tags.xml.in.h:27
+msgid "Header 1 (section)"
+msgstr ""
 
-#: src/gedit-encodings.c:186
-msgid "Cyrillic/Russian"
-msgstr "Cyrillic/Rusia"
+#: ../plugins/taglist/Latex.tags.xml.in.h:28
+msgid "Header 1 (section*)"
+msgstr ""
 
-#: src/gedit-encodings.c:189 src/gedit-encodings.c:220
-#: src/gedit-encodings.c:267
-msgid "Japanese"
-msgstr "Jepun"
+#: ../plugins/taglist/Latex.tags.xml.in.h:29
+msgid "Header 2 (subsection)"
+msgstr ""
 
-#: src/gedit-encodings.c:191 src/gedit-encodings.c:222
-#: src/gedit-encodings.c:226 src/gedit-encodings.c:273
-msgid "Korean"
-msgstr "Korea"
+#: ../plugins/taglist/Latex.tags.xml.in.h:30
+msgid "Header 2 (subsection*)"
+msgstr ""
 
-#: src/gedit-encodings.c:196 src/gedit-encodings.c:198
-#: src/gedit-encodings.c:200 src/gedit-encodings.c:204
-msgid "Chinese Simplified"
-msgstr "Cina Dipermudah"
+#: ../plugins/taglist/Latex.tags.xml.in.h:31
+msgid "Header 3 (subsubsection)"
+msgstr ""
 
-#: src/gedit-encodings.c:202
-msgid "Georgian"
-msgstr "Georgia"
+#: ../plugins/taglist/Latex.tags.xml.in.h:32
+msgid "Header 3 (subsubsection*)"
+msgstr ""
 
-#: src/gedit-encodings.c:209 src/gedit-encodings.c:237
-#: src/gedit-encodings.c:278
-msgid "Central European"
-msgstr "Eropah Tengah"
+#: ../plugins/taglist/Latex.tags.xml.in.h:33
+msgid "Header 4 (paragraph)"
+msgstr ""
 
-#: src/gedit-encodings.c:230 src/gedit-encodings.c:263
-msgid "Cyrillic/Ukrainian"
-msgstr "Cyrillic/Ukrainian"
+#: ../plugins/taglist/Latex.tags.xml.in.h:34
+msgid "Header appendix"
+msgstr ""
 
-#: src/gedit-encodings.c:239
-msgid "Croatian"
-msgstr "Croatia"
+#: ../plugins/taglist/Latex.tags.xml.in.h:35
+msgid "Item"
+msgstr ""
 
-#: src/gedit-encodings.c:243
-msgid "Hindi"
-msgstr "Hindi"
+#: ../plugins/taglist/Latex.tags.xml.in.h:36
+msgid "Item with label"
+msgstr ""
 
-#: src/gedit-encodings.c:245
-msgid "Farsi"
-msgstr "Parsi"
+#: ../plugins/taglist/Latex.tags.xml.in.h:37
+msgid "Latex — Tags"
+msgstr ""
 
-#: src/gedit-encodings.c:249
-msgid "Gujarati"
-msgstr "Gujarati"
+#: ../plugins/taglist/Latex.tags.xml.in.h:38
+#, fuzzy
+msgid "List description"
+msgstr "_Huraian:"
 
-#: src/gedit-encodings.c:251
-msgid "Gurmukhi"
-msgstr "Gurmukhi"
+#: ../plugins/taglist/Latex.tags.xml.in.h:39
+msgid "List enumerate"
+msgstr ""
 
-#: src/gedit-encodings.c:255
-msgid "Icelandic"
-msgstr "Icelandic"
+#: ../plugins/taglist/Latex.tags.xml.in.h:40
+msgid "List itemize"
+msgstr ""
 
-#: src/gedit-encodings.c:269 src/gedit-encodings.c:275
-#: src/gedit-encodings.c:294
-msgid "Vietnamese"
-msgstr "Vietnam"
+#: ../plugins/taglist/Latex.tags.xml.in.h:41
+msgid "Maths (display)"
+msgstr ""
 
-#: src/gedit-encodings.c:271
-msgid "Thai"
-msgstr "Siam"
+#: ../plugins/taglist/Latex.tags.xml.in.h:42
+msgid "Maths (inline)"
+msgstr ""
 
-#: src/recent-files/egg-recent-vfs-utils.c:90
-msgid " (invalid Unicode)"
-msgstr "(Unicode tidak sah)"
+#: ../plugins/taglist/Latex.tags.xml.in.h:43
+#, fuzzy
+msgid "Operator fraction"
+msgstr "Buka Lokasi"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:44
+msgid "Operator integral (display)"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:45
+msgid "Operator integral (inline)"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:46
+msgid "Operator sum (display)"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:47
+msgid "Operator sum (inline)"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:48
+#, fuzzy
+msgid "Reference label"
+msgstr "Keutamaan"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:49
+#, fuzzy
+msgid "Reference ref"
+msgstr "Keutamaan"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:50
+msgid "Symbol <<"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:51
+msgid "Symbol <="
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:52
+msgid "Symbol >="
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:53
+msgid "Symbol >>"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:54
+msgid "Symbol and"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:55
+msgid "Symbol const"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:56
+msgid "Symbol d-by-dt"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:57
+msgid "Symbol d-by-dt-partial"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:58
+msgid "Symbol d2-by-dt2-partial"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:59
+msgid "Symbol dagger"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:60
+msgid "Symbol em-dash ---"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:61
+msgid "Symbol en-dash --"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:62
+msgid "Symbol equiv"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:63
+msgid "Symbol infinity"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:64
+msgid "Symbol mathspace ,"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:65
+msgid "Symbol mathspace ."
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:66
+msgid "Symbol mathspace _"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:67
+msgid "Symbol mathspace __"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:68
+msgid "Symbol simeq"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:69
+msgid "Symbol star"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:70
+msgid "Typeface bold"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:71
+msgid "Typeface italic"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:72
+msgid "Typeface slanted"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:73
+msgid "Typeface type"
+msgstr ""
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:74
+msgid "Unbreakable text"
+msgstr ""
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
+#, fuzzy
+msgid ""
+"Provides a method to easily insert commonly used tags/strings into a "
+"document without having to type them."
+msgstr ""
+"Membekalkan satu kaedah mudah untuk menyelit tag/rentetan yg sering "
+"digunakan ke dokumen tanpa menaipnya."
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
+msgid "Tag list"
+msgstr "Senarai Tag"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:1
+msgid "XSLT — Axes"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:2
+#, fuzzy
+msgid "XSLT — Elements"
+msgstr "Unsur"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:3
+msgid "XSLT — Functions"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:4
+msgid "ancestor"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:5
+msgid "ancestor-or-self"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:6
+msgid "attribute"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:7
+msgid "child"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:8
+msgid "descendant"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:9
+msgid "descendant-or-self"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:10
+msgid "following"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:11
+msgid "following-sibling"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:12
+#, fuzzy
+msgid "namespace"
+msgstr "Selit ruang"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:13
+#, fuzzy
+msgid "parent"
+msgstr "Buka"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:14
+msgid "preceding"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:15
+msgid "preceding-sibling"
+msgstr ""
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:16
+msgid "self"
+msgstr ""
+
+#: ../plugins/taglist/XUL.tags.xml.in.h:1
+msgid "XUL — Tags"
+msgstr ""

@@ -1,324 +1,344 @@
-# Swedish messages for gedit-plugins. 
+# Swedish messages for gedit. 
 # Copyright (C) 1998-2010 Free Software Foundation, Inc.
 # Martin Wahlen <mva@sslug.dk>, 1998.
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 1999, 2000.
 # Andreas Hyden <a.hyden@cyberpoint.se>, 2000.
-# Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004.
+# Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit-plugins\n"
+"Project-Id-Version: gedit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-12 08:42+0100\n"
-"PO-Revision-Date: 2010-03-12 08:43+0100\n"
+"POT-Creation-Date: 2010-11-07 13:12+0100\n"
+"PO-Revision-Date: 2010-07-28 00:19+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
 msgid "Bookmarks"
 msgstr "Bokmärken"
 
-#: ../plugins/bookmarks/bookmarks.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
 msgid "Easy document navigation with bookmarks"
 msgstr "Enkel dokumentnavigering med bokmärken"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:137
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
+#, fuzzy
 msgid "Toggle Bookmark"
-msgstr "Växla bokmärke"
+msgstr "Bokmärken"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:138
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+#, fuzzy
 msgid "Toggle bookmark status of the current line"
-msgstr "Växla bokmärkesstatus för aktuell rad"
+msgstr "Visa eller dölj statusraden i det aktuella fönstret"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:140
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "Gå till nästa bokmärke"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:141
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+#, fuzzy
 msgid "Goto the next bookmark"
-msgstr "Gå till nästa bokmärke"
+msgstr "Gå till nästa besökta plats"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:143
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+#, fuzzy
 msgid "Goto Previous Bookmark"
-msgstr "Gå till föregående bokmärke"
+msgstr "Gå till föregående plats"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:144
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+#, fuzzy
 msgid "Goto the previous bookmark"
-msgstr "Gå till föregående bokmärke"
+msgstr "Visa föregående sida"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "Lägger automatiskt till avslutande paranteser."
+msgstr "Automatiskt identifierade kodningar"
 
-#: ../plugins/bracketcompletion/bracketcompletion.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
 msgid "Bracket Completion"
 msgstr "Paranteskomplettering"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:258
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
+#: ../plugins/charmap/gedit-charmap-plugin.c:337
+#, fuzzy
 msgid "Character Map"
-msgstr "Teckenkarta"
+msgstr "Tecken (utan blanksteg)"
 
-#: ../plugins/charmap/charmap.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Infoga specialtecken genom att klicka på dem."
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Code comment"
-msgstr "Kodkommentar"
+msgstr "Kommentar"
 
-#: ../plugins/codecomment/codecomment.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Kommentera ut eller avkommentera ett markerat kodblock."
 
-#: ../plugins/codecomment/codecomment.py:230
+#: ../plugins/codecomment/codecomment.py:90
+#, fuzzy
 msgid "Co_mment Code"
-msgstr "Ko_mmentera kod"
+msgstr "Kommentar"
 
-#: ../plugins/codecomment/codecomment.py:232
+#: ../plugins/codecomment/codecomment.py:92
+#, fuzzy
 msgid "Comment the selected code"
-msgstr "Kommentera den markerade koden"
+msgstr "Ta bort den markerade texten"
 
-#: ../plugins/codecomment/codecomment.py:236
+#: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "A_vkommentera kod"
 
-#: ../plugins/codecomment/codecomment.py:238
+#: ../plugins/codecomment/codecomment.py:98
+#, fuzzy
 msgid "Uncomment the selected code"
-msgstr "Avkommentera den markerade koden"
+msgstr "Ta bort den markerade texten"
 
 #. ex:ts=4:et:
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Color Picker"
-msgstr "Färgväljare"
+msgstr "Färgschema"
 
-#: ../plugins/colorpicker/colorpicker.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Välj en färg från en dialog och infoga dess hexadecimala motsvarighet."
 
-#: ../plugins/colorpicker/colorpicker.py:73
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick _Color..."
 msgstr "Välj _färg..."
 
-#: ../plugins/colorpicker/colorpicker.py:74
+#: ../plugins/colorpicker/colorpicker.py:78
 msgid "Pick a color from a dialog"
 msgstr "Välj en färg från en dialog"
 
-#: ../plugins/colorpicker/colorpicker.py:220
+#: ../plugins/colorpicker/colorpicker.py:188
+#, fuzzy
 msgid "Pick Color"
-msgstr "Välj färg"
+msgstr "Länkfärg"
 
-#: ../plugins/colorpicker/colorpicker.py:226
+#: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
 msgstr "_Infoga"
 
 #. ex:ts=4:et:
-#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:1
 msgid "Command line interface for advanced editing"
 msgstr "Kommandoradsgränssnitt för avancerad redigering"
 
-#: ../plugins/commander/commander.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Commander"
-msgstr "Kommendör"
+msgstr "Färg för k_ommandon:"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:4
+#. ex:set ts=8 noet:
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
+#, fuzzy
 msgid "Draw Spaces"
-msgstr "Rita ut blanksteg"
+msgstr "Använd blanksteg"
 
-#: ../plugins/drawspaces/drawspaces.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Rita ut blanksteg och tabulatorer"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:1
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
+#, fuzzy
 msgid "Draw leading spaces"
-msgstr "Rita ut inledande blanksteg"
+msgstr "Icke-brytande mellanrum"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:2
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Rita ut nya rader"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:3
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
+#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "Rita ut icke-brytande blanksteg"
+msgstr "Icke-brytande mellanrum"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:4
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
+#, fuzzy
 msgid "Draw spaces"
-msgstr "Rita ut blanksteg"
+msgstr "Infoga blanksteg"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:5
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
 msgstr "Rita ut blanksteg i text"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:6
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "Rita ut tabulatorer"
 
-#: ../plugins/drawspaces/drawspaces.ui.h:7
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
+#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "Rita ut efterliggande blanksteg"
+msgstr "Ta bort eftersläpande blanksteg"
 
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:1
-msgid "Draw Leading Spaces"
-msgstr "Rita ut inledande blanksteg"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:2
-msgid "Draw New lines"
-msgstr "Rita ut nya rader"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:3
-msgid "Draw Non-Breaking Spaces"
-msgstr "Rita ut icke-brytande blanksteg"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:5
-msgid "Draw Spaces in Text"
-msgstr "Rita ut blanksteg i text"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:6
-msgid "Draw Tabs"
-msgstr "Rita ut tabulatorer"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:7
-msgid "Draw Trailing Spaces"
-msgstr "Rita ut efterliggande blanksteg"
-
-#: ../plugins/drawspaces/gedit-drawspaces.schemas.in.h:8
-msgid "Show White Spaces"
-msgstr "Visa blanktecken"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:167
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
+#, fuzzy
 msgid "Show _White Space"
-msgstr "Visa _blanktecken"
+msgstr "Visa nästa sida"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:168
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
+#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "Visa blanksteg och tabulatorer"
+msgstr "Infoga _blanksteg istället för tabulatortecken"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:612
-msgid "Error dialog"
-msgstr "Feldialog"
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
+#, fuzzy
+msgid "Enabled"
+msgstr "Inaktiverad"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
+msgid "If TRUE drawing will be enabled."
+msgstr ""
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
+msgid "The type of spaces to be drawn."
+msgstr ""
+
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
 msgstr "Sammanfoga flera rader eller dela långa rader"
 
-#: ../plugins/joinlines/joinlines.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "Sammanfoga/Dela rader"
 
 #: ../plugins/joinlines/joinlines.py:56
+#, fuzzy
 msgid "_Join Lines"
-msgstr "_Sammanfoga rader"
+msgstr "Rader"
 
 #: ../plugins/joinlines/joinlines.py:57
+#, fuzzy
 msgid "Join the selected lines"
-msgstr "Sammanfoga de markerade raderna"
+msgstr "Färg på markerade länkar"
 
 #: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Dela rader"
 
 #: ../plugins/joinlines/joinlines.py:60
+#, fuzzy
 msgid "Split the selected lines"
-msgstr "Dela upp de markerade rader"
+msgstr "Ta bort den markerade texten"
 
 #. ex:ts=4:et:
-#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
 msgid "Edit document in multiple places at once"
 msgstr "Redigera dokument på flera ställen samtidigt"
 
-#: ../plugins/multiedit/multiedit.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
 msgid "Multi Edit"
 msgstr "Multipel redigering"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:279
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
 msgstr "Lade till redigeringspunkt..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:417
+#: ../plugins/multiedit/multiedit/documenthelper.py:637
 msgid "Column Mode..."
 msgstr "Kolumnläge..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:535
+#: ../plugins/multiedit/multiedit/documenthelper.py:759
 msgid "Removed edit point..."
 msgstr "Tog bort redigeringspunkt..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:685
+#: ../plugins/multiedit/multiedit/documenthelper.py:922
 msgid "Cancelled column mode..."
 msgstr "Avbröt kolumnläge..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:804
+#: ../plugins/multiedit/multiedit/documenthelper.py:1260
 msgid "Enter column edit mode using selection"
 msgstr "Gå in i kolumnredigeringsläge med markeringen"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:805
+#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+#, fuzzy
+msgid "Enter <b>smart</b> column edit mode using selection"
+msgstr "Gå in i kolumnredigeringsläge med markeringen"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+#, fuzzy
+msgid "<b>Smart</b> column align mode using selection"
+msgstr "Gå in i kolumnredigeringsläge med markeringen"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+msgid "<b>Smart</b> column align mode with additional space using selection"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1265
 msgid "Toggle edit point"
 msgstr "Växla redigeringspunkt"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:806
+#: ../plugins/multiedit/multiedit/documenthelper.py:1266
 msgid "Add edit point at beginning of line/selection"
 msgstr "Lägg till redigeringspunkt i början av rad/markering"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:807
+#: ../plugins/multiedit/multiedit/documenthelper.py:1267
 msgid "Add edit point at end of line/selection"
 msgstr "Lägg till redigeringspunkt i slutet av rad/markering"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:843
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+#, fuzzy
+msgid "Align edit points"
+msgstr "Växla redigeringspunkt"
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+msgid "Align edit points with additional space"
+msgstr ""
+
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
 msgstr "Multipelt redigeringsläge"
 
-#: ../plugins/multiedit/multiedit/windowhelper.py:69
+#: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Start multi edit mode"
 msgstr "Starta multipelt redigeringsläge"
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:208
-msgid "Tab_bar"
-msgstr "Tabulator_rad"
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
+msgid "Easily increase and decrease the text size"
+msgstr ""
 
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.c:209
-msgid "Show or hide the tabbar in the current window"
-msgstr "Visa eller dölj tabulatorraden i det aktuella fönstret"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:1
-msgid "Tabbar is Visible"
-msgstr "Tabulatorraden är synlig"
-
-#: ../plugins/showtabbar/gedit-show-tabbar-plugin.schemas.in.h:2
-msgid "Whether the tabbar should be visible in editing windows."
-msgstr "Huruvida tabulatorraden ska vara synlig i redigeringsfönster."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:1
-msgid "Add a menu entry to show/hide the tabbar."
-msgstr "Lägg till ett menyobjekt för att visa/dölja tabulatorraden."
-
-#: ../plugins/showtabbar/showtabbar.gedit-plugin.desktop.in.in.h:2
-msgid "Show/Hide Tabbar"
-msgstr "Visa/Dölj tabulatorrad"
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
+#, fuzzy
+msgid "Text Size"
+msgstr "Tabulatorbredd"
 
 #: ../plugins/sessionsaver/__init__.py:64
+#, fuzzy
 msgid "Sa_ved sessions"
-msgstr "Spa_rade sessioner"
+msgstr "_Spara med komprimering"
 
 #: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
 msgid "_Save current session"
-msgstr "_Spara aktuell session"
+msgstr "Ersätt aktuell markering"
 
 #: ../plugins/sessionsaver/__init__.py:65
+#, fuzzy
 msgid "Save the current document list as a new session"
-msgstr "Spara den aktuella dokumentlistan som en ny session"
+msgstr "Flytta det aktuella dokumentet till ett nytt fönster"
 
 #: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "_Hantera sparade sessioner..."
 
 #: ../plugins/sessionsaver/__init__.py:66
+#, fuzzy
 msgid "Open the saved session manager"
-msgstr "Öppna hanteraren för sparade sessioner"
+msgstr "Öppna gedit-manualen"
 
 #: ../plugins/sessionsaver/__init__.py:106
 #, python-format
@@ -330,17 +350,18 @@ msgid "Session Name"
 msgstr "Sessionsnamn"
 
 #. ex:ts=4:et:
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:1
 msgid "Save and restore your working sessions"
 msgstr "Spara och återskapa dina arbetssessioner"
 
-#: ../plugins/sessionsaver/sessionsaver.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "Sessionssparare"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:1
+#, fuzzy
 msgid "Save session"
-msgstr "Spara session"
+msgstr "_Spara med komprimering"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
@@ -350,989 +371,1621 @@ msgstr "Sparade sessioner"
 msgid "Session name:"
 msgstr "Sessionsnamn:"
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Glöm att du inte använder tabulatorer."
 
-#: ../plugins/smartspaces/smartspaces.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Smart Spaces"
-msgstr "Smarta blanksteg"
+msgstr "Infoga blanksteg"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
+#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "Bädda in en terminal i bottenpanelen."
+msgstr "Öppna en terminal i dokumentkatalogen"
 
-#: ../plugins/terminal/terminal.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Embedded Terminal"
-msgstr "Inbäddad terminal"
+msgstr "Inbäddat objekt"
 
-#: ../plugins/terminal/terminal.py:262
+#: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:285
+#: ../plugins/terminal/terminal.py:329
+#, fuzzy
 msgid "C_hange Directory"
-msgstr "B_yt katalog"
+msgstr "Ändra _till:"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:144
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#, fuzzy
 msgid "Document Words"
-msgstr "Dokumentord"
+msgstr "Dokumenttext"
 
-#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:1
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
 msgid "Word Completion"
 msgstr "Ordkomplettering"
 
-#: ../plugins/wordcompletion/wordcompletion.gedit-plugin.desktop.in.in.h:2
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
 msgstr "Ordkomplettering som använder kompletteringsramverket"
 
-#~ msgid "Drawing color:"
-#~ msgstr "Ritfärg:"
-#~ msgid "_Color picker"
-#~ msgstr "_Färgväljare"
-#~ msgid "Color picker"
-#~ msgstr "Färgväljare"
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-#~ msgid "gtk-close"
-#~ msgstr "gtk-close"
-#~ msgid "gtk-delete"
-#~ msgstr "gtk-delete"
-#~ msgid "gtk-open"
-#~ msgstr "gtk-open"
-#~ msgid "gtk-save"
-#~ msgstr "gtk-save"
-#~ msgid "_ASCII Table"
-#~ msgstr "_ASCII-tabell"
-#~ msgid "Pop-up a dialog containing an ASCII Table"
-#~ msgstr "Visa ett dialogfönster som innehåller en ASCII-tabell"
-#~ msgid "Char"
-#~ msgstr "Tecken"
-#~ msgid "Dec#"
-#~ msgstr "Dec"
-#~ msgid "Hex#"
-#~ msgstr "Hex"
-#~ msgid "Name"
-#~ msgstr "Namn"
-#~ msgid "ASCII Table"
-#~ msgstr "ASCII-tabell"
-#~ msgid "_Insert char"
-#~ msgstr "_Infoga tecken"
-#~ msgid "ASCII table"
-#~ msgstr "ASCII-tabell"
-#~ msgid "This plugin displays a pop-up dialog which contains an ASCII Table."
-#~ msgstr ""
-#~ "Denna insticksmodul visar ett popupfönster som innehåller en ASCII-tabell."
-#~ msgid "Open CVS Chan_geLogs"
-#~ msgstr "Öppna CVS Chan_geLog-filer"
-#~ msgid "Searches for ChangeLogs in the current document and opens them"
-#~ msgstr ""
-#~ "Söker efter ChangeLog-filer i det aktuella dokumentet och öppnar dem"
-#~ msgid "A plugin that opens ChangeLogs found in CVS commit messages."
-#~ msgstr ""
-#~ "En insticksmodul som öppnar ChangeLog-filer som hittas i CVS commit-"
-#~ "meddelanden."
-#~ msgid "CVS ChangeLog"
-#~ msgstr "CVS-ChangeLog"
-#~ msgid "Co_mpare Files..."
-#~ msgstr "_Jämför filer..."
-#~ msgid "Makes a diff file from two documents or files"
-#~ msgstr "Gör en diff-fil från två dokument eller filer"
-#~ msgid "Compare Files"
-#~ msgstr "Jämför filer"
-#~ msgid "C_ompare"
-#~ msgstr "J_ämför"
-#~ msgid "Executed command"
-#~ msgstr "Kört kommando"
-#~ msgid "The two documents you selected are the same."
-#~ msgstr "De två dokument du markerade är samma."
-#~ msgid ""
-#~ "The \"first\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
-#~ msgstr ""
-#~ "Den \"första\" filen du valde finns inte.\n"
-#~ "\n"
-#~ "Var vänlig och ange en giltig fil."
-#~ msgid ""
-#~ "The \"second\" file you selected does not exist.\n"
-#~ "\n"
-#~ "Please provide a valid file."
-#~ msgstr ""
-#~ "Den \"andra\" filen du valde finns inte.\n"
-#~ "\n"
-#~ "Var vänlig och ange en giltig fil."
-#~ msgid "The two files you selected are the same."
-#~ msgstr "De två filerna du valde är samma."
-#~ msgid "The \"first\" document contains no text."
-#~ msgstr "Det \"första\" dokumentet innehåller ingen text."
-#~ msgid "The \"second\" document contains no text."
-#~ msgstr "Det \"andra\" dokumentet innehåller ingen text."
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "gedit could not create a temporary file."
-#~ msgstr ""
-#~ "Kan inte jämföra de valda dokumenten.\n"
-#~ "\n"
-#~ "gedit kunde inte skapa en temporär fil."
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "Error executing the diff command."
-#~ msgstr ""
-#~ "Kan inte jämföra de valda dokumenten.\n"
-#~ "\n"
-#~ "Fel vid körning av diff-kommandot."
-#~ msgid "No differences were found between the selected documents."
-#~ msgstr "Inga skillnader hittades mellan de valda dokumenten."
-#~ msgid ""
-#~ "Impossible to compare the selected documents.\n"
-#~ "\n"
-#~ "The result contains invalid UTF-8 data."
-#~ msgstr ""
-#~ "Kan inte jämföra de valda dokumenten.\n"
-#~ "\n"
-#~ "Resultatet innehåller ogiltig UTF-8-data."
-#~ msgid "*"
-#~ msgstr "*"
-#~ msgid "Choose the files to compare."
-#~ msgstr "Välj filerna som ska jämföras."
-#~ msgid "Compare files..."
-#~ msgstr "Jämför filer..."
-#~ msgid "F_rom document"
-#~ msgstr "F_rån dokument"
-#~ msgid "First"
-#~ msgstr "Första"
-#~ msgid "First file from disk"
-#~ msgstr "Första fil från disk"
-#~ msgid "First file from open document"
-#~ msgstr "Första fil från öppet dokument"
-#~ msgid "From _document"
-#~ msgstr "Från _dokument"
-#~ msgid "From a _file on disk"
-#~ msgstr "Från en _fil på disk"
-#~ msgid "From a file o_n disk"
-#~ msgstr "Från en fil _på disk"
-#~ msgid "Ignore _blanks (-b option)"
-#~ msgstr "Ignorera _blanksteg (flaggan -b)"
-#~ msgid "Note that this option is only supported by GNU diff"
-#~ msgstr "Observera att denna flagga endast stöds av GNU diff"
-#~ msgid "Second"
-#~ msgstr "Andra"
-#~ msgid "Second file from disk"
-#~ msgstr "Andra fil från disk"
-#~ msgid "Second file from open document"
-#~ msgstr "Andra fil från öppet dokument"
-#~ msgid "Select the \"first\" file..."
-#~ msgstr "Välj den \"första\" filen..."
-#~ msgid "Select the \"second\" file..."
-#~ msgstr "Välj den \"andra\" filen..."
-#~ msgid "Select the first file to compare"
-#~ msgstr "Välj första filen att jämföra"
-#~ msgid "Select the first open document to compare"
-#~ msgstr "Välj första öppna dokumentet att jämföra"
-#~ msgid "Select the second file to compare"
-#~ msgstr "Välj den andra filen att jämföra"
-#~ msgid "Select the second open document to compare"
-#~ msgstr "Välj det andra öppna dokumentet att jämföra"
-#~ msgid "Use the _unified output format (-u option)"
-#~ msgstr "Använd det _universella utdataformatet (flaggan -u)"
-#~ msgid ""
-#~ "The Compare Files plugin uses the \"diff\" program to compare two "
-#~ "documents or files on disk."
-#~ msgstr ""
-#~ "Insticksmodulen \"Jämför filer\" använder programmet \"diff\" för att "
-#~ "jämföra två dokument eller filer på disken."
-#~ msgid "gedit application"
-#~ msgstr "gedit-program"
-#~ msgid "gedit automation factory"
-#~ msgstr "gedit-automatikfabrik"
-#~ msgid "Edit text files"
-#~ msgstr "Redigera textfiler"
-#~ msgid "Text Editor"
-#~ msgstr "Textredigerare"
-#~ msgid ""
-#~ "A custom font that will be used for the editing area. This will only take "
-#~ "effect if the \"Use Default Font\" option is turned off."
-#~ msgstr ""
-#~ "Ett anpassat typsnitt som används för redigeringsytan. Detta kommer "
-#~ "endast att ha effekt om alternativet \"Använd standardtypsnitt\" är "
-#~ "frånslaget."
-#~ msgid "Auto Save"
-#~ msgstr "Spara automatiskt"
-#~ msgid "Auto Save Interval"
-#~ msgstr "Intervall för automatiskt sparande"
-#~ msgid "Auto indent"
-#~ msgstr "Automatiskt indrag"
-#~ msgid "Background Color"
-#~ msgstr "Bakgrundsfärg"
-#~ msgid ""
-#~ "Background color for selected text in the editing area. This will only "
-#~ "take effect if the \"Use Default Colors\" option is turned off."
-#~ msgstr ""
-#~ "Bakgrundsfärg för markerad text i redigeringsytan. Detta kommer endast "
-#~ "att ha effekt om alternativet \"Använd standardfärger\" är frånslaget."
-#~ msgid ""
-#~ "Background color for unselected text in the editing area. This will only "
-#~ "take effect if the \"Use Default Colors\" option is turned off."
-#~ msgstr ""
-#~ "Bakgrundsfärg för omarkerad text i redigeringsytan. Detta kommer endast "
-#~ "att ha effekt om alternativet \"Använd standardfärger\" är frånslaget."
-#~ msgid "Body Font for Printing"
-#~ msgstr "Texttypsnitt för utskrift"
-#~ msgid "Create Backup Copies"
-#~ msgstr "Skapa säkerhetskopior"
-#~ msgid "Display Line Numbers"
-#~ msgstr "Visa radnummer"
-#~ msgid "Editor Font"
-#~ msgstr "Redigerartypsnitt"
-#~ msgid "Encoding for Saving"
-#~ msgstr "Kodning vid sparande"
-#~ msgid "Encodings"
-#~ msgstr "Kodningar"
-#~ msgid ""
-#~ "Extension or suffix to use for backup file names. This will only take "
-#~ "effect if the \"Create Backup Copies\" option is turned on."
-#~ msgstr ""
-#~ "Ändelse eller suffix att använda i filnamnen på säkerhetskopior. Detta "
-#~ "har endast effekt om alternativet \"Skapa säkerhetskopior\" är påslaget."
-#~ msgid ""
-#~ "Foreground color for selected text in the editing area. This will only "
-#~ "take effect if the \"Use Default Colors\" option is turned off."
-#~ msgstr ""
-#~ "Förgrundsfärg för markerad text i redigeringsytan. Detta har endast "
-#~ "effekt om alternativet \"Använd standardfärger\" är frånslaget."
-#~ msgid ""
-#~ "Foreground color for the unselected text in the editing area. This will "
-#~ "only take effect if the \"Use Default Colors\" option is turned off."
-#~ msgstr ""
-#~ "Förgrundsfärg för den omarkerade texten i redigeringsytan. Detta har "
-#~ "endast effekt om alternativet \"Använd standardfärger\" är frånslaget."
-#~ msgid "Header Font for Printing"
-#~ msgstr "Sidhuvudstypsnitt för utskrift"
-#~ msgid ""
-#~ "If this value is 0, then no line numbers will be inserted when printing a "
-#~ "document. Otherwise, gedit will print line numbers every such number of "
-#~ "lines."
-#~ msgstr ""
-#~ "Om detta värde är 0 kommer inga radnummer att infogas vid utskrift av ett "
-#~ "dokument. Annars kommer gedit att skriva ut radnummer med detta "
-#~ "radintervall."
-#~ msgid "Line Number Font for Printing"
-#~ msgstr "Radnummerstypsnitt för utskrift"
-#~ msgid "Line Wrapping Mode"
-#~ msgstr "Radbrytningsläge"
-#~ msgid ""
-#~ "List of encodings used by gedit for reading files not encoded in UTF-8 or "
-#~ "in the current locale encoding."
-#~ msgstr ""
-#~ "Lista med kodningar som används av gedit för att läsa filer som inte är "
-#~ "kodade i UTF-8 eller kodningen för den aktuella lokalen."
-#~ msgid "Maximum Recent Files"
-#~ msgstr "Maximalt antal senaste filer"
-#~ msgid "Maximum number of actions that gedit will be able to undo or redo."
-#~ msgstr "Maximalt antal åtgärder som gedit kan ångra eller göra om."
-#~ msgid ""
-#~ "Number of minutes after which gedit will automatically save modified "
-#~ "files. This will only take effect if the \"Auto Save\" option is turned "
-#~ "on."
-#~ msgstr ""
-#~ "Antal minuter efter vilket gedit kommer att automatiskt spara ändrade "
-#~ "filer. Detta har endast effekt då alternativet \"Spara automatiskt\" är "
-#~ "påslaget."
-#~ msgid "Print Header"
-#~ msgstr "Skriv ut sidhuvud"
-#~ msgid "Print Line Numbers"
-#~ msgstr "Skriv ut radnummer"
-#~ msgid "Printing Line Wrapping Mode"
-#~ msgstr "Radbrytningsläge för utskrift"
-#~ msgid "Selected Text Color"
-#~ msgstr "Färg på markerad text"
-#~ msgid "Selection Color"
-#~ msgstr "Markeringsfärg"
-#~ msgid "Show Cursor Position"
-#~ msgstr "Visa markörposition"
-#~ msgid "Show Overwrite Mode"
-#~ msgstr "Visa överskrivningsläge"
-#~ msgid ""
-#~ "Specifies how to wrap long lines for printing. Use \"GTK_WRAP_NONE\" for "
-#~ "no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, and "
-#~ "\"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. Note "
-#~ "that the values are case-sensitive, so make sure they appear exactly as "
-#~ "mentioned here."
-#~ msgstr ""
-#~ "Anger hur långa rader ska radbrytas vid utskrift. Använd \"GTK_WRAP_NONE"
-#~ "\" för ingen radbrytning, \"GTK_WRAP_WORD\" för radbrytning vid "
-#~ "ordgränser och \"GTK_WRAP_CHAR\" för radbrytning vid enskilda "
-#~ "teckengränser. Observera att det görs skillnad på versaler och gemener i "
-#~ "värdena, så försäkra dig om att de visas exakt som de visas här."
-#~ msgid ""
-#~ "Specifies how to wrap long lines in the editing area. Use \"GTK_WRAP_NONE"
-#~ "\" for no wrapping, \"GTK_WRAP_WORD\" for wrapping at word boundaries, "
-#~ "and \"GTK_WRAP_CHAR\" for wrapping at individual character boundaries. "
-#~ "Note that the values are case-sensitive, so make sure they appear exactly "
-#~ "as mentioned here."
-#~ msgstr ""
-#~ "Anger hur långa rader ska radbrytas i redigeringsytan. Använd "
-#~ "\"GTK_WRAP_NONE\" för ingen radbrytning, \"GTK_WRAP_WORD\" för "
-#~ "radbrytning vid ordgränser och \"GTK_WRAP_CHAR\" för radbrytning vid "
-#~ "enskilda teckengränser. Observera att det görs skillnad på versaler och "
-#~ "gemener i värdena, så försäkra dig om att de visas exakt som de visas här."
-#~ msgid ""
-#~ "Specifies the font to use for a document's body when printing documents."
-#~ msgstr ""
-#~ "Anger det typsnitt som ska användas för dokumentets text vid utskrift av "
-#~ "dokument."
-#~ msgid ""
-#~ "Specifies the font to use for line numbers when printing. This will only "
-#~ "take effect if the \"Print Line Numbers\" option is non-zero."
-#~ msgstr ""
-#~ "Anger det typsnitt som ska användas för radnummer vid utskrift. Detta "
-#~ "kommer endast att ha effekt om alternativet \"Skriv ut radnummer\" inte "
-#~ "är noll."
-#~ msgid ""
-#~ "Specifies the font to use for page headers when printing a document. This "
-#~ "will only take effect if the \"Print Header\" option is turned on."
-#~ msgstr ""
-#~ "Anger det typsnitt som ska användas för sidhuvud vid utskrift av ett "
-#~ "dokument. Detta kommer endast att ha effekt om alternativet \"Skriv ut "
-#~ "huvud\" är påslaget."
-#~ msgid ""
-#~ "Specifies the maximum number of recently opened files that will be "
-#~ "displayed in the \"Recent Files\" submenu."
-#~ msgstr ""
-#~ "Anger det maximala antalet senast öppnade filer som kommer att visas i "
-#~ "undermenyn \"Senaste filer\"."
-#~ msgid ""
-#~ "Specifies the number of spaces that should be displayed instead of Tab "
-#~ "characters."
-#~ msgstr "Anger antalet blanksteg som ska visas istället för tabulatortecken."
-#~ msgid "Status Bar is Visible"
-#~ msgstr "Statusrad är synlig"
-#~ msgid ""
-#~ "Style for the toolbar buttons. Possible values are \"GEDIT_TOOLBAR_SYSTEM"
-#~ "\" to use the system's default style, \"GEDIT_TOOLBAR_ICONS\" to display "
-#~ "icons only, \"GEDIT_TOOLBAR_ICONS_AND_TEXT\" to display both icons and "
-#~ "text, and \"GEDIT_TOOLBAR_ICONS_BOTH_HORIZ\" to display prioritized text "
-#~ "beside icons. Note that the values are case-sensitive, so make sure they "
-#~ "appear exactly as mentioned here."
-#~ msgstr ""
-#~ "Stil på verktygsradsknapparna. Möjliga värden är \"GEDIT_TOOLBAR_SYSTEM\" "
-#~ "för att använda systemets standardstil, \"GEDIT_TOOLBAR_ICONS\" för att "
-#~ "endast visa ikoner, \"GEDIT_TOOLBAR_ICONS_AND_TEXT\" för att visa både "
-#~ "ikoner och text, och \"GEDIT_TOOLBAR_ICONS_BOTH_HORIZ\" för att visa "
-#~ "prioriterad text bredvid ikoner. Observera att det görs skillnad på "
-#~ "versaler och gemener i värdena, så försäkra dig om att de visas exakt som "
-#~ "de visas här."
-#~ msgid "Tab Size"
-#~ msgstr "Tabulatorstorlek"
-#~ msgid "Text Color"
-#~ msgstr "Textfärg"
-#~ msgid ""
-#~ "The encoding method to use for saving files. Possible values are "
-#~ "\"GEDIT_SAVE_ALWAYS_UTF8\" for mandatory UTF-8 saving, "
-#~ "\"GEDIT_SAVE_CURRENT_LOCALE_IF_POSSIBLE\" if you want gedit to try to "
-#~ "convert the document it is saving to your current locale's encoding, "
-#~ "\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE\" if you want gedit to "
-#~ "try to use the original file encoding (new files in UTF8) and "
-#~ "\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" if you want gedit "
-#~ "to try to use the original file encoding (new files in current locale's "
-#~ "encoding). If the conversion is successful, it will be used. Otherwise, "
-#~ "UTF-8 will be used. Note that the values are case-sensitive, so make sure "
-#~ "they appear exactly as mentioned here."
-#~ msgstr ""
-#~ "Kodningsmetoden som används för sparande av filer. Möjliga värden är "
-#~ "\"GEDIT_SAVE_ALWAYS_UTF8\" för obligatoriskt UTF-8-sparande, och "
-#~ "\"GEDIT_SAVE_CURRENT_LOCALE_WHEN_POSSIBLE\" om du vill att gedit ska "
-#~ "försöka att konvertera dokumentet som det sparar till kodningen för din "
-#~ "aktuella lokal, \"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE\" om du "
-#~ "vill försöka använda originalfilens kodning (nya filer i UTF-8) och "
-#~ "\"GEDIT_SAVE_ORIGINAL_FILE_ENCODING_IF_POSSIBLE_NCL\" om du vill försöka "
-#~ "använda originalfilens kodning (nya filer i aktuella lokalens kodning). "
-#~ "Om konverteringen lyckas kommer den att användas. Annars kommer UTF-8 att "
-#~ "användas. Observera att det görs skillnad på versaler och gemener i "
-#~ "värdena, så försäkra dig om att de visas exakt så som de visas här."
-#~ msgid "Toolbar Buttons Style"
-#~ msgstr "Stil på verktygsradsknappar"
-#~ msgid "Undo Actions Limit"
-#~ msgstr "Gräns för ångraåtgärder"
-#~ msgid "Use Default Colors"
-#~ msgstr "Använd standardfärger"
-#~ msgid "Use Default Font"
-#~ msgstr "Använd standardtypsnitt"
-#~ msgid ""
-#~ "Whether gedit should automatically save modified files after a time "
-#~ "interval. You can set the time interval with the \"Auto Save Interval\" "
-#~ "option."
-#~ msgstr ""
-#~ "Huruvida gedit automatiskt ska spara ändrade filer efter ett "
-#~ "tidsintervall. Du kan ange tidsintervallet med alternativet \"Intervall "
-#~ "för automatiskt sparande\"."
-#~ msgid ""
-#~ "Whether gedit should create backup copies for the files it saves. You can "
-#~ "set the backup file extension with the \"Backup Copy Extension\" option."
-#~ msgstr ""
-#~ "Huruvida gedit ska skapa säkerhetskopior för de filer som det sparar. Du "
-#~ "kan ange filändelsen för säkerhetskopior med alternativet \"Ändelse på "
-#~ "säkerhetskopior\"."
-#~ msgid "Whether gedit should display line numbers in the editing area."
-#~ msgstr "Huruvida gedit ska visa radnummer i redigeringsytan."
-#~ msgid "Whether gedit should enable auto indentation."
-#~ msgstr "Huruvida gedit ska aktivera automatiskt indrag."
-#~ msgid ""
-#~ "Whether gedit should include a document header when printing documents."
-#~ msgstr ""
-#~ "Huruvida gedit ska inkludera ett dokumenthuvud vid utskrift av dokument."
-#~ msgid "Whether gedit should insert spaces instead of tabs."
-#~ msgstr "Huruvida gedit ska infoga blanksteg istället för tabulatortecken."
-#~ msgid ""
-#~ "Whether the status bar at the bottom of editing windows should be visible."
-#~ msgstr ""
-#~ "Huruvida statusraden i nederkanten på redigeringsfönster ska vara synlig."
-#~ msgid ""
-#~ "Whether the status bar should show the cursor position in editing "
-#~ "windows. Make sure you turn on the \"Status Bar is Visible\" option for "
-#~ "this to take effect."
-#~ msgstr ""
-#~ "Huruvida statusraden ska visa markörpositionen i redigeringsfönster. "
-#~ "Försäkra dig om att du slår på alternativet \"Statusrad är synlig\" för "
-#~ "att detta ska ha effekt."
-#~ msgid ""
-#~ "Whether the status bar should show the insert/overwrite mode in editing "
-#~ "windows. Make sure you turn on the \"Status Bar is Visible\" option for "
-#~ "this to take effect."
-#~ msgstr ""
-#~ "Huruvida statusraden ska visa infognings-/överskrivningsläget i "
-#~ "redigeringsfönster. Försäkra dig om att alternativet \"Statusraden är "
-#~ "synlig\" är påslaget för att detta ska ha effekt."
-#~ msgid ""
-#~ "Whether to use the system's default colors for the editing area. If this "
-#~ "option is turned off, then the colors of the editing area will be those "
-#~ "specified in the \"Background Color\", \"Text Color\", \"Selected Text "
-#~ "Color\", and \"Selection Color\" options."
-#~ msgstr ""
-#~ "Huruvida systemets standardfärger ska användas för redigeringsytan. Om "
-#~ "detta alternativ är frånslaget kommer färgerna i redigeringsytan att vara "
-#~ "de som är angivna i alternativen \"Bakgrundsfärg\", \"Textfärg\", \"Färg "
-#~ "på markerad text\" och \"Markeringsfärg\"."
-#~ msgid ""
-#~ "Whether to use the system's default font for editing text instead of a "
-#~ "font specific to gedit. If this option is turned off, then the font named "
-#~ "in the \"Editor Font\" option will be used instead of the system font."
-#~ msgstr ""
-#~ "Huruvida systemets standardtypsnitt ska användas för redigering av text "
-#~ "istället för ett typsnitt som är specifikt för gedit. Om detta alternativ "
-#~ "är frånslaget kommer typsnittet som är angivet i alternativet "
-#~ "\"Redigerartypsnitt\" att användas istället för systemtypsnittet."
-#~ msgid "_Document Statistics"
-#~ msgstr "_Dokumentstatistik"
-#~ msgid "Get statistic info on current document"
-#~ msgstr "Få statistikinformation om det aktuella dokumentet"
-#~ msgid "_Update"
-#~ msgstr "_Uppdatera"
-#~ msgid "0"
-#~ msgstr "0"
-#~ msgid "Bytes"
-#~ msgstr "Byte"
-#~ msgid "Characters (no spaces)"
-#~ msgstr "Tecken (utan blanksteg)"
-#~ msgid "Characters (with spaces)"
-#~ msgstr "Tecken (inklusive blanksteg)"
-#~ msgid "File Name"
-#~ msgstr "Filnamn"
-#~ msgid "Lines"
-#~ msgstr "Rader"
-#~ msgid "Update"
-#~ msgstr "Uppdatera"
-#~ msgid "Words"
-#~ msgstr "Ord"
-#~ msgid "gedit: Document Info plugin"
-#~ msgstr "gedit: Insticksmodul för dokumentinformation"
-#~ msgid ""
-#~ "The Document Statistics plugin analyzes the current document and "
-#~ "determines the number of words, lines, characters and non-space "
-#~ "characters in it and displays the result."
-#~ msgstr ""
-#~ "Insticksmodulen för dokumentstatistik analyserar det aktuella dokumentet "
-#~ "och avgör antalet ord, rader, tecken och icke-blanka tecken i det och "
-#~ "visar resultatet."
-#~ msgid "Insert User Na_me"
-#~ msgstr "Infoga användarna_mn"
-#~ msgid "Insert the user name at the cursor position"
-#~ msgstr "Infoga användarnamnet vid markörpositionen"
-#~ msgid "Inserts the user name at the cursor position."
-#~ msgstr "Infogar användarnamnet vid markörpositionen."
-#~ msgid "User name"
-#~ msgstr "Användarnamn"
-#~ msgid "_Run Command..."
-#~ msgstr "_Kör kommando..."
-#~ msgid "Run a command"
-#~ msgstr "Kör ett kommando"
-#~ msgid "Stopped"
-#~ msgstr "Stoppad"
-#~ msgid "An error occurs while running the selected command."
-#~ msgstr "Ett fel uppstår vid körning av det valda kommandot."
-#~ msgid "_Run"
-#~ msgstr "_Kör"
-#~ msgid "Done"
-#~ msgstr "Klar"
-#~ msgid "Failed"
-#~ msgstr "Misslyckades"
-#~ msgid ""
-#~ "The shell command entry is empty.\n"
-#~ "\n"
-#~ "Please, insert a valid shell command."
-#~ msgstr ""
-#~ "Fältet för skalkommando är tomt.\n"
-#~ "\n"
-#~ "Var vänlig och ange ett giltigt skalkommando."
-#~ msgid ""
-#~ "Error parsing the shell command.\n"
-#~ "\n"
-#~ "Please, insert a valid shell command."
-#~ msgstr ""
-#~ "Fel vid tolkning av skalkommandot.\n"
-#~ "\n"
-#~ "Ange ett giltigt skalkommando."
-#~ msgid "Executing command"
-#~ msgstr "Kör kommando"
-#~ msgid "Select the working directory..."
-#~ msgstr "Ange arbetskatalogen..."
-#~ msgid "_Show results in Output Window"
-#~ msgstr "_Visa resultat i utdatafönster"
-#~ msgid "gedit: Shell Output plugin"
-#~ msgstr "gedit: Insticksmodul för skalutdata"
-#~ msgid ""
-#~ "Execute an external program and eventually grabs its output in the output "
-#~ "window."
-#~ msgstr "Kör ett externt program och infoga dess utdata i utdatafönstret."
-#~ msgid "Shell command"
-#~ msgstr "Skalkommando"
-#~ msgid "Tag list plugin"
-#~ msgstr "Insticksmodul för tagglistor"
-#~ msgid "Select the group of tags you want to use"
-#~ msgstr "Välj den grupp med taggar som du vill använda"
-#~ msgid "Tag Groups Combo"
-#~ msgstr "Taggruppskombo"
-#~ msgid "Tags Name List"
-#~ msgstr "Taggnamnslista"
-#~ msgid "Double-click on a tag to insert it in the current document"
-#~ msgstr ""
-#~ "Dubbelklicka på en tagg för att infoga det i det aktuella dokumentet"
-#~ msgid "Tags"
-#~ msgstr "Taggar"
-#~ msgid "Tag _List"
-#~ msgstr "Tagg_lista"
-#~ msgid "Show the tag list window"
-#~ msgstr "Visa tagglistefönstret"
-#~ msgid "Tag list"
-#~ msgstr "Tagglista"
-#~ msgid ""
-#~ "The tag list plugin provides a method to easily insert into a document "
-#~ "commonly used tags/strings without having to type them."
-#~ msgstr ""
-#~ "Tagglisteinsticksmodulen tillhandahåller en metod för att enkelt infoga "
-#~ "vanligt använda taggar/strängar i dokument utan att behöva skriva dem."
-#~ msgid "In_sert Date and Time..."
-#~ msgstr "In_foga datum och tid..."
-#~ msgid "Insert current date and time at the cursor position"
-#~ msgstr "Infoga aktuellt datum och tid vid markörpositionen"
-#~ msgid "Available formats"
-#~ msgstr "Tillgängliga format"
-#~ msgid "Configure insert date/time plugin..."
-#~ msgstr "Konfigurera insticksmodulen för infogande av datum/tid..."
-#~ msgid "    "
-#~ msgstr "    "
-#~ msgid "<span size=\"small\">01/11/2002 17:52:00</span>"
-#~ msgstr "<span size=\"small\">2002-11-01 17.52.00</span>"
-#~ msgid "<span weight=\"bold\"> When inserting date/time...</span>"
-#~ msgstr "<span weight=\"bold\"> Vid infogande av datum/tid...</span>"
-#~ msgid "Configure date/time plugin"
-#~ msgstr "Konfigurera insticksmodulen för infogande av datum/tid"
-#~ msgid "Insert Date and Time"
-#~ msgstr "Infoga datum och tid"
-#~ msgid "Use the _selected format"
-#~ msgstr "Använd det _valda formatet"
-#~ msgid "_Prompt for a format"
-#~ msgstr "_Fråga efter ett format"
-#~ msgid "_Use custom format"
-#~ msgstr "_Använd anpassat format"
-#~ msgid "Insert Date/Time"
-#~ msgstr "Infoga datum/tid"
-#~ msgid "Inserts current date and time at the cursor position."
-#~ msgstr "Infogar aktuellt datum och tid vid markörpositionen."
-#~ msgid "_Indent"
-#~ msgstr "_Gör indrag"
-#~ msgid "Indent selected lines"
-#~ msgstr "Dra in de markerade raderna"
-#~ msgid "U_nindent"
-#~ msgstr "Dra _ut"
-#~ msgid "Indent or un-indent selected lines."
-#~ msgstr "Dra in eller dra ut de markerade raderna."
-#~ msgid "R_emove duplicates"
-#~ msgstr "_Ta bort dubletter"
-#~ msgid "S_tart at column:"
-#~ msgstr "_Börja vid kolumn:"
-#~ msgid "Sort"
-#~ msgstr "Sortera"
-#~ msgid "You cannot undo a sort operation"
-#~ msgstr "Du kan inte ångra en sorteringsåtgärd"
-#~ msgid "_Ignore case"
-#~ msgstr "_Gör ingen skillnad på gemener/VERSALER"
-#~ msgid "_Reverse order"
-#~ msgstr "_Baklänges"
-#~ msgid "_Sort"
-#~ msgstr "_Sortera"
-#~ msgid "Sorts a document or selected text."
-#~ msgstr "Sorterar ett dokument eller markerad text."
-#~ msgid "(no suggested words)"
-#~ msgstr "(inga föreslagna ord)"
-#~ msgid "_More..."
-#~ msgstr "_Mer..."
-#~ msgid "_Ignore All"
-#~ msgstr "_Ignorera alla"
-#~ msgid "_Add"
-#~ msgstr "_Lägg till"
-#~ msgid "_Spelling Suggestions..."
-#~ msgstr "_Stavningsförslag..."
-#~ msgid "Check Spelling"
-#~ msgstr "Kontrollera stavning"
-#~ msgid "Suggestions"
-#~ msgstr "Förslag"
-#~ msgid "(correct spelling)"
-#~ msgstr "(korrigera stavning)"
-#~ msgid "Completed spell checking"
-#~ msgstr "Stavningskontrollen färdig"
-#~ msgid "Breton"
-#~ msgstr "Bretonska"
-#~ msgid "Catalan"
-#~ msgstr "Katalanska"
-#~ msgid "Czech"
-#~ msgstr "Tjeckiska"
-#~ msgid "Danish"
-#~ msgstr "Danska"
-#~ msgid "German (Germany)"
-#~ msgstr "Tyska (Tyskland)"
-#~ msgid "German (Swiss)"
-#~ msgstr "Tyska (Schweiz)"
-#~ msgid "English (American)"
-#~ msgstr "Engelska (amerikansk)"
-#~ msgid "English (British)"
-#~ msgstr "Engelska (brittisk)"
-#~ msgid "English (Canadian)"
-#~ msgstr "Engelska (kanadensisk)"
-#~ msgid "Esperanto"
-#~ msgstr "Esperanto"
-#~ msgid "Spanish"
-#~ msgstr "Spanska"
-#~ msgid "Faroese"
-#~ msgstr "Färöiska"
-#~ msgid "French (France)"
-#~ msgstr "Franska (Frankrike)"
-#~ msgid "French (Swiss)"
-#~ msgstr "Franska (Schweiz)"
-#~ msgid "Italian"
-#~ msgstr "Italienska"
-#~ msgid "Dutch"
-#~ msgstr "Holländska"
-#~ msgid "Norwegian"
-#~ msgstr "Norska"
-#~ msgid "Polish"
-#~ msgstr "Polska"
-#~ msgid "Portuguese (Portugal)"
-#~ msgstr "Portugisiska (Portugal)"
-#~ msgid "Portuguese (Brazilian)"
-#~ msgstr "Portugisiska (brasiliansk)"
-#~ msgid "Russian"
-#~ msgstr "Ryska"
-#~ msgid "Swedish"
-#~ msgstr "Svenska"
-#~ msgid "Default"
-#~ msgstr "Standard"
-#~ msgid "Could not find the required widgets inside %s."
-#~ msgstr "Kunde inte hitta de nödvändiga widgetarna i %s."
-#~ msgid "Languages"
-#~ msgstr "Språk"
-#~ msgid "Checks the spelling of the current document."
-#~ msgstr "Kontrollerar stavningen i det aktuella dokumentet."
-#~ msgid "Spell checker"
-#~ msgstr "Stavningskontroll"
-#~ msgid "Select the _language of the current document."
-#~ msgstr "Välj _språket i det aktuella dokumentet."
-#~ msgid "Set language"
-#~ msgstr "Ställ in språk"
-#~ msgid "<b>Language</b>"
-#~ msgstr "<b>Språk</b>"
-#~ msgid "<b>word</b>"
-#~ msgstr "<b>ord</b>"
-#~ msgid "Add w_ord"
-#~ msgstr "Lägg till _ord"
-#~ msgid "Cha_nge"
-#~ msgstr "Ä_ndra"
-#~ msgid "Change A_ll"
-#~ msgstr "Ändra a_lla"
-#~ msgid "Change _to:"
-#~ msgstr "Ändra _till:"
-#~ msgid "Check _Word"
-#~ msgstr "Kontrollera o_rd"
-#~ msgid "Check spelling"
-#~ msgstr "Kontrollera stavning"
-#~ msgid "Ignore _All"
-#~ msgstr "Ignorera _alla"
-#~ msgid "Language:"
-#~ msgstr "Språk:"
-#~ msgid "Mispelled word:"
-#~ msgstr "Felstavat ord:"
-#~ msgid "User dictionary:"
-#~ msgstr "Användarordbok:"
-#~ msgid "_Ignore"
-#~ msgstr "_Ignorera"
-#~ msgid "_Suggestions:"
-#~ msgstr "_Förslag:"
-#~ msgid "S_ort..."
-#~ msgstr "S_ortera..."
-#~ msgid "_Check Spelling"
-#~ msgstr "_Kontrollera stavning"
-#~ msgid "Check the current document for incorrect spelling"
-#~ msgstr "Kontrollera det aktuella dokumentets stavning"
-#~ msgid "_Autocheck Spelling"
-#~ msgstr "Kontrollera stavning _automatiskt"
-#~ msgid "Automatically spell-check the current document"
-#~ msgstr "Stavningskontrollera automatiskt det aktuella dokumentet"
-#~ msgid "Set _Language"
-#~ msgstr "Ställ in _språk"
-#~ msgid "Set the language of the current document"
-#~ msgstr "Ställ in språket på det aktuella dokumentet"
-#~ msgid "The document is empty."
-#~ msgstr "Dokumentet är tomt."
-#~ msgid "The selected text does not contain mispelled words."
-#~ msgstr "Den markerade texten innehåller inga felstavade ord."
-#~ msgid "The document does not contain mispelled words."
-#~ msgstr "Dokumentet innehåller inga felstavade ord."
-#~ msgid "Activate %s"
-#~ msgstr "Aktivera %s"
-#~ msgid "Go to Line"
-#~ msgstr "Gå till rad"
-#~ msgid "The text \"%s\" was not found."
-#~ msgstr "Texten \"%s\" hittades inte."
-#~ msgid "Replace"
-#~ msgstr "Ersätt"
-#~ msgid "Replace _All"
-#~ msgstr "Ersätt _alla"
-#~ msgid "_Replace"
-#~ msgstr "_Ersätt"
-#~ msgid "Find"
-#~ msgstr "Sök"
-#~ msgid "Found and replaced %d occurences."
-#~ msgstr "Hittade och ersatte %d förekomster."
-#~ msgid "Open Location"
-#~ msgstr "Öppna plats"
-#~ msgid "Plugin"
-#~ msgstr "Insticksmodul"
-#~ msgid "Load"
-#~ msgstr "Läs in"
-#~ msgid "Module file name"
-#~ msgstr "Modulfilnamn"
-#~ msgid "Author(s)"
-#~ msgstr "Författare"
-#~ msgid "Could not find plugin-manager.glade2, reinstall gedit.\n"
-#~ msgstr "Kunde inte hitta plugin-manager.glade2. Installera om gedit.\n"
-#~ msgid "Invalid glade file for plugin manager -- not all widgets found.\n"
-#~ msgstr ""
-#~ "Ogiltig glade-fil för insticksmodulhanterare -- alla widgetar hittades "
-#~ "inte.\n"
-#~ msgid "Set program location..."
-#~ msgstr "Ställ in programplats..."
-#~ msgid ""
-#~ "The %s plugin uses an external program, called <tt>%s</tt>, to perform "
-#~ "its task.\n"
-#~ "\n"
-#~ "Please, specify the location of the <tt>%s</tt> program."
-#~ msgstr ""
-#~ "Insticksmodulen %s använder ett externt program, kallat <tt>%s</tt>, för "
-#~ "att utföra dess uppgift.\n"
-#~ "\n"
-#~ "Ange sökvägen till programmet <tt>%s</tt>."
-#~ msgid "The selected file is not executable."
-#~ msgstr "Den valda filen är inte körbar."
-#~ msgid "Font & Colors"
-#~ msgstr "Typsnitt och färger"
-#~ msgid "Tabs"
-#~ msgstr "Flikar"
-#~ msgid "Wrap Mode"
-#~ msgstr "Radbrytningsläge"
-#~ msgid "Auto Indent"
-#~ msgstr "Automatiskt indrag"
-#~ msgid "Line Numbers"
-#~ msgstr "Radnummer"
-#~ msgid "Open"
-#~ msgstr "Öppna"
-#~ msgid "Save"
-#~ msgstr "Spara"
-#~ msgid "Undo"
-#~ msgstr "Ångra"
-#~ msgid "Page"
-#~ msgstr "Sida"
-#~ msgid "Fonts"
-#~ msgstr "Typsnitt"
-#~ msgid "Manager"
-#~ msgstr "Hanterare"
-#~ msgid "Editor"
-#~ msgstr "Redigerare"
-#~ msgid "Print"
-#~ msgstr "Skriv ut"
-#~ msgid "Plugins"
-#~ msgstr "Insticksmoduler"
-#~ msgid "Cat_egories:"
-#~ msgstr "Kat_egorier:"
-#~ msgid "Preferences"
-#~ msgstr "Inställningar"
-#~ msgid "Categories"
-#~ msgstr "Kategorier"
-#~ msgid "Push this button to select the font to be used by the editor"
-#~ msgstr ""
-#~ "Tryck på denna knapp för att välja det typsnitt som används av redigeraren"
-#~ msgid "Push this button to configure text color"
-#~ msgstr "Tryck på denna knapp för att konfigurera textfärg"
-#~ msgid "Push this button to configure background color"
-#~ msgstr "Tryck på denna knapp för att konfigurera bakgrundsfärg"
-#~ msgid ""
-#~ "Push this button to configure the color in which the selected text should "
-#~ "appear"
-#~ msgstr ""
-#~ "Tryck på denna knapp för att konfigurera den färg som markerad text ska "
-#~ "visas med"
-#~ msgid ""
-#~ "Push this button to configure the color in which the selected text should "
-#~ "be marked"
-#~ msgstr ""
-#~ "Tryck på denna knapp för att konfigurera den färg som markerad text ska "
-#~ "vara markerad med"
-#~ msgid "Push this button to select the font to be used to print the body"
-#~ msgstr ""
-#~ "Tryck på denna knapp för att välja det typsnitt som ska användas för "
-#~ "utskrift av kroppen."
-#~ msgid "Push this button to select the font to be used to print the headers"
-#~ msgstr ""
-#~ "Tryck på denna knapp för att välja det typsnitt som används för utskrift "
-#~ "av huvudena"
-#~ msgid "Push this button to select the font to be used to print line numbers"
-#~ msgstr ""
-#~ "Tryck på denna knapp för att välja det typsnitt som används för att "
-#~ "skriva ut radnummer"
-#~ msgid "<b>Font</b>"
-#~ msgstr "<b>Typsnitt</b>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Auto Indent</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Automatiskt indrag</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Font &amp; Colors</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Typsnitt och färger</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Fonts</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Typsnitt</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Line Numbers</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Radnummer</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Manager</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Hanterare</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Open</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Öppna</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Page</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Sida</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Save</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Spara</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Tabs</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Flikar</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Undo</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Ångra</span>"
-#~ msgid "<span weight=\"bold\" size=\"x-large\">Wrap Mode</span>"
-#~ msgstr "<span weight=\"bold\" size=\"x-large\">Radbrytningsläge</span>"
-#~ msgid "<span weight=\"bold\">Colors</span>"
-#~ msgstr "<span weight=\"bold\">Färger</span>"
-#~ msgid "<span weight=\"bold\">When saving a new file...</span>"
-#~ msgstr "<span weight=\"bold\">Vid sparande av ny fil...</span>"
-#~ msgid "<span weight=\"bold\">When saving an existing file...</span>"
-#~ msgstr "<span weight=\"bold\">Vid sparande av befintlig fil...</span>"
-#~ msgid "Add new encodings"
-#~ msgstr "Lägg till nya kodningar"
-#~ msgid "Always use U_TF-8 encoding (faster)"
-#~ msgstr "Använd alltid U_TF-8-kodning (snabbare)"
-#~ msgid "Always use _UTF-8 encoding (faster)"
-#~ msgstr "Använd alltid _UTF-8-kodning (snabbare)"
-#~ msgid "Create a _backup copy of files before saving"
-#~ msgstr "Skapa en s_äkerhetskopia av filen innan den sparas"
-#~ msgid "Do not _split words over two lines"
-#~ msgstr "_Dela inte ord över två rader"
-#~ msgid "Editor _font: "
-#~ msgstr "Redigerar_typsnitt: "
-#~ msgid "Enable _auto indentation"
-#~ msgstr "Aktivera _automatiskt indrag"
-#~ msgid "Enable text _wrapping"
-#~ msgstr "Aktivera text_radbrytning"
-#~ msgid "Fonts & Colors"
-#~ msgstr "Typsnitt och färger"
-#~ msgid "Insert _spaces instead of tabs"
-#~ msgstr "Infoga _blanksteg istället för tabulatortecken"
-#~ msgid "LOGO"
-#~ msgstr "LOGOTYP"
-#~ msgid "Line _numbers:"
-#~ msgstr "Rad_nummer:"
-#~ msgid "Line numbers"
-#~ msgstr "Radnummer"
-#~ msgid "Move down"
-#~ msgstr "Flytta ned"
-#~ msgid "Move up"
-#~ msgstr "Flytta upp"
-#~ msgid "Page he_aders:"
-#~ msgstr "Sidh_uvud:"
-#~ msgid "Pick the background color"
-#~ msgstr "Välj bakgrundsfärg"
-#~ msgid "Pick the selected text color"
-#~ msgstr "Välj färgen på markerad text"
-#~ msgid "Pick the selection color"
-#~ msgstr "Välj markeringsfärgen"
-#~ msgid "Plugin manager"
-#~ msgstr "Insticksmodulhanterare"
-#~ msgid "Print _line numbers every"
-#~ msgstr "Skriv ut _radnummer var"
-#~ msgid "Print fonts"
-#~ msgstr "Utskriftstypsnitt"
-#~ msgid "Remove an encoding"
-#~ msgstr "Ta bort en kodning"
-#~ msgid "Se_lection color:"
-#~ msgstr "Ma_rkeringsfärg:"
-#~ msgid "Selecte_d text color:"
-#~ msgstr "Färg på markera_d text:"
-#~ msgid "Set _tabs width equivalent to"
-#~ msgstr "Ställ in _tabulatorbredd lika med"
-#~ msgid "Set limit on _undo actions to"
-#~ msgstr "Sätt gräns på antalet _ångra-åtgärder till"
-#~ msgid "U_se default theme colors"
-#~ msgstr "Anv_änd standardtemafärger"
-#~ msgid "U_se original file encoding if possible"
-#~ msgstr "A_nvänd om möjligt originalfilens kodning"
-#~ msgid "Use cu_rrent locale's encoding if possible"
-#~ msgstr "Använd om möjligt a_ktuell lokals kodning"
-#~ msgid "Use current _locale's encoding if possible"
-#~ msgstr "Använd om möjligt aktuell _lokals kodning"
-#~ msgid "Wrap mode"
-#~ msgstr "Radbrytningsläge"
-#~ msgid "_Autosave current file every"
-#~ msgstr "Spara aktuell fil _automatiskt var"
-#~ msgid "_Background color:"
-#~ msgstr "_Bakgrundsfärg:"
-#~ msgid "_Body:"
-#~ msgstr "_Kropp:"
-#~ msgid "_Display line numbers"
-#~ msgstr "_Visa radnummer"
-#~ msgid "_Print page headers"
-#~ msgstr "Skriv _ut sidhuvud"
-#~ msgid "_Restore Default Fonts"
-#~ msgstr "_Återställ standardtypsnitt"
-#~ msgid "_Supported encodings:"
-#~ msgstr "_Kodningar som stöds:"
-#~ msgid "_Text color:"
-#~ msgstr "_Textfärg:"
-#~ msgid "_Use default theme font"
-#~ msgstr "_Använd standardtypsnitt i tema"
-#~ msgid "_action(s)"
-#~ msgstr "_åtgärd(er)"
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
+msgid "SyncTeX"
+msgstr ""
 
+#: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
+msgid "Synchronize between LaTeX and PDF with gedit and evince."
+msgstr ""
+
+#: ../plugins/synctex/synctex/synctex.py:280
+#: ../plugins/synctex/synctex/synctex.py:281
+#, fuzzy
+msgid "Forward Search"
+msgstr "Framåtlänk"
+
+#: ../plugins/taglist/gedit-taglist-plugin.c:165
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+msgid "Tags"
+msgstr "Taggar"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:608
+msgid "Select the group of tags you want to use"
+msgstr "Välj den grupp med taggar som du vill använda"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:627
+msgid "_Preview"
+msgstr "_Förhandsgranska"
+
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+msgid "Available Tag Lists"
+msgstr "Tillgängliga tagglistor"
+
+#. ex:ts=8:noet:
+#: ../plugins/taglist/HTML.tags.xml.in.h:1
+msgid "Abbreviated form"
+msgstr "Förkortad form"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:2
+msgid "Abbreviation"
+msgstr "Förkortning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:3
+msgid "Above"
+msgstr "Ovanför"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:4
+msgid "Accessibility key character"
+msgstr "Tecken för tillgänglighetstangent"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:5
+msgid "Acronym"
+msgstr "Akronym"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:6
+msgid "Align"
+msgstr "Justera"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:7
+msgid "Alignment character"
+msgstr "Justeringstecken"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:8
+msgid "Alternative"
+msgstr "Alternativ"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:9
+msgid "Anchor"
+msgstr "Ankare"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:10
+msgid "Anchor URI"
+msgstr "Ankar-URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:11
+msgid "Applet class file code"
+msgstr "Applet-klassfilsnamn"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:13
+msgid "Applet class file code (deprecated)"
+msgstr "Applet-klassfilsnamn (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:14
+msgid "Array"
+msgstr "Vektor"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:15
+msgid "Associated information"
+msgstr "Associerad information"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:16
+msgid "Author info"
+msgstr "Författarinformation"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:17
+msgid "Axis related headers"
+msgstr "Axelrelaterade huvuden"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:18
+msgid "Background color"
+msgstr "Bakgrundsfärg"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:20
+msgid "Background color (deprecated)"
+msgstr "Bakgrundsfärg (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:21
+msgid "Background texture tile"
+msgstr "Bakgrundstexturbricka"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:23
+msgid "Background texture tile (deprecated)"
+msgstr "Bakgrundstexturbricka (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:24
+msgid "Base URI"
+msgstr "Bas-URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:25
+msgid "Base font"
+msgstr "Bastypsnitt"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:27
+msgid "Base font (deprecated)"
+msgstr "Grundtypsnitt (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:28
+msgid "Bold"
+msgstr "Fet"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:29
+msgid "Border"
+msgstr "Kant"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:31
+msgid "Border (deprecated)"
+msgstr "Ram (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:32
+msgid "Border color"
+msgstr "Kantfärg"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:33
+msgid "Cell rowspan"
+msgstr "Cellradvidd"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:34
+msgid "Center"
+msgstr "Mitt"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:36
+msgid "Center (deprecated)"
+msgstr "Centrera (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:37
+msgid "Character encoding of linked resource"
+msgstr "Teckenkodning för länkad resurs"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:38
+msgid "Checked (state)"
+msgstr "Ikryssat (tillstånd)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:39
+msgid "Checked state"
+msgstr "Ikryssat tillstånd"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:40
+msgid "Citation"
+msgstr "Citering"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:41
+msgid "Cite reason for change"
+msgstr "Ange orsak för ändring"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:42
+msgid "Class implementation ID"
+msgstr "Id för klassimplementation"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:43
+msgid "Class list"
+msgstr "Klasslista"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:44
+msgid "Clear text flow control"
+msgstr "Töm textflödeskontroll"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:45
+msgid "Code content type"
+msgstr "Typ av kodinnehåll"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:46
+msgid "Color of selected links"
+msgstr "Färg på markerade länkar"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:48
+msgid "Color of selected links (deprecated)"
+msgstr "Färg på markerade länkar (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:49
+msgid "Column span"
+msgstr "Kolumnvidd"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:50
+msgid "Columns"
+msgstr "Kolumner"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:51
+msgid "Comment"
+msgstr "Kommentar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:52
+msgid "Computer code fragment"
+msgstr "Datorkodfragment"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:53
+msgid "Content scheme"
+msgstr "Innehållsschema"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:54
+msgid "Content type"
+msgstr "Innehållstyp"
+
+#. The "type" attribute is deprecated for the "ol" tag only,
+#. since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:57
+msgid "Content type (deprecated)"
+msgstr "Innehållstyp (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:58
+msgid "Coordinates"
+msgstr "Koordinater"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:59
+msgid "DIV Style container"
+msgstr "DIV-stilcontainer"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:60
+msgid "DIV container"
+msgstr "DIV-container"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:61
+msgid "Date and time of change"
+msgstr "Datum och tid för ändring"
+
+#. NOTE: used in "object" tag
+#: ../plugins/taglist/HTML.tags.xml.in.h:63
+msgid "Declare flag"
+msgstr "Deklarera flagga"
+
+#. Translators: DEFER is an optional attribute of the <script> tag.
+#. It indicates that the script is not going to generate any document
+#. content. The browser can continue parsing and drawing the page.
+#: ../plugins/taglist/HTML.tags.xml.in.h:67
+msgid "Defer attribute"
+msgstr "Defer-attribut"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:68
+msgid "Definition description"
+msgstr "Definitionsbeskrivning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:69
+msgid "Definition list"
+msgstr "Definitionslista"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:70
+msgid "Definition term"
+msgstr "Definitionsterm"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:71
+msgid "Deleted text"
+msgstr "Borttagen text"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:72
+msgid "Direction"
+msgstr "Riktning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:73
+msgid "Directionality"
+msgstr "Riktning"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:75
+msgid "Directionality (deprecated)"
+msgstr "Riktning (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:76
+msgid "Directory list"
+msgstr "Kataloglista"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:77
+msgid "Disabled"
+msgstr "Inaktiverad"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:78
+msgid "Document base"
+msgstr "Dokumentbas"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:79
+msgid "Document body"
+msgstr "Dokumenttext"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:80
+msgid "Document head"
+msgstr "Dokumenthuvud"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:81
+msgid "Document title"
+msgstr "Dokumenttitel"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:82
+msgid "Document type"
+msgstr "Dokumenttyp"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:83
+msgid "Element ID"
+msgstr "Element-id"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:84
+msgid "Embedded object"
+msgstr "Inbäddat objekt"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:85
+#: ../plugins/taglist/Latex.tags.xml.in.h:9
+msgid "Emphasis"
+msgstr "Betoning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:86
+msgid "Encode type"
+msgstr "Kodningstyp"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:87
+msgid "Figure"
+msgstr "Figur"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:88
+msgid "Font face"
+msgstr "Typsnitt"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:90
+msgid "Font face (deprecated)"
+msgstr "Typsnitt (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:91
+msgid "For label"
+msgstr "För etikett"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:92
+msgid "Forced line break"
+msgstr "Framtvingad radbrytning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:93
+msgid "Form"
+msgstr "Formulär"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:94
+msgid "Form action handler"
+msgstr "Formuläråtgärdshanterare"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:95
+msgid "Form control group"
+msgstr "Formulärkontrollgrupp"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:96
+msgid "Form field label text"
+msgstr "Etikettext för formulärfält"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:97
+msgid "Form input"
+msgstr "Formulärinmatning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:98
+msgid "Form input type"
+msgstr "Typ av formulärinmatning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:99
+msgid "Form method"
+msgstr "Formulärmetod"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:100
+msgid "Forward link"
+msgstr "Framåtlänk"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:101
+msgid "Frame"
+msgstr "Ram"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:102
+msgid "Frame border"
+msgstr "Ramkant"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:103
+msgid "Frame render parts"
+msgstr "Ramrenderingsdelar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:104
+msgid "Frame source"
+msgstr "Ramkälla"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:105
+msgid "Frame spacing"
+msgstr "Rammellanrum"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:106
+msgid "Frame target"
+msgstr "Rammål"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:107
+msgid "Frameborder"
+msgstr "Ramkant"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:108
+msgid "Frameset"
+msgstr "Ramsamling"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:109
+msgid "Frameset columns"
+msgstr "Ramsamlingskolumner"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:110
+msgid "Frameset rows"
+msgstr "Ramsamlingsrader"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:111
+msgid "Framespacing"
+msgstr "Rammellanrum"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:112
+msgid "Generic embedded object"
+msgstr "Allmänt inbäddat objekt"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:113
+msgid "Generic metainformation"
+msgstr "Allmän metainformation"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:114
+msgid "Generic span"
+msgstr "Allmän vidd"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:115
+msgid "HREF URI"
+msgstr "HREF-URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:116
+msgid "HTML root element"
+msgstr "HTML-rotelement"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:117
+msgid "HTML version"
+msgstr "HTML-version"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:118
+msgid "HTML — Special Characters"
+msgstr "HTML — Specialtecken"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:119
+msgid "HTML — Tags"
+msgstr "HTML — Taggar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:120
+msgid "HTTP header name"
+msgstr "Namn på HTTP-huvud"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:121
+msgid "Header cell IDs"
+msgstr "Huvudcell-id"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:122
+msgid "Heading"
+msgstr "Rubrik"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:123
+msgid "Heading 1"
+msgstr "Rubrik 1"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:124
+msgid "Heading 2"
+msgstr "Rubrik 2"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:125
+msgid "Heading 3"
+msgstr "Rubrik 3"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:126
+msgid "Heading 4"
+msgstr "Rubrik 4"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:127
+msgid "Heading 5"
+msgstr "Rubrik 5"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:128
+msgid "Heading 6"
+msgstr "Rubrik 6"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:129
+msgid "Height"
+msgstr "Höjd"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:130
+msgid "Horizontal rule"
+msgstr "Horisontell linje"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:131
+msgid "Horizontal space"
+msgstr "Horisontellt mellanrum"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:133
+msgid "Horizontal space (deprecated)"
+msgstr "Horisontellt mellanrum (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:134
+msgid "I18N BiDi override"
+msgstr "Åsidosättning av I18N BiDi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:135
+msgid "Image"
+msgstr "Bild"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:136
+msgid "Image map"
+msgstr "Bildkarta"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:137
+msgid "Image map area"
+msgstr "Bildkarteområde"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:138
+msgid "Image map name"
+msgstr "Bildkartenamn"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:139
+msgid "Image source"
+msgstr "Bildkälla"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:140
+msgid "Inline frame"
+msgstr "Inline-ram"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:141
+msgid "Inline layer"
+msgstr "Inline-lager"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:142
+msgid "Inserted text"
+msgstr "Infogad text"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:143
+msgid "Instance definition"
+msgstr "Instansdefinition"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:144
+msgid "Italic text"
+msgstr "Kursiv text"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:145
+msgid "Java applet"
+msgstr "Java-applet"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:147
+msgid "Java applet (deprecated)"
+msgstr "Java-applet (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:148
+msgid "Label"
+msgstr "Etikett"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:149
+msgid "Language code"
+msgstr "Språkkod"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:150
+msgid "Large text style"
+msgstr "Stor textstil"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:151
+msgid "Layer"
+msgstr "Lager"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:152
+msgid "Link color"
+msgstr "Länkfärg"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:154
+msgid "Link color (deprecated)"
+msgstr "Länkfärg (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:155
+msgid "List item"
+msgstr "Listobjekt"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:156
+msgid "List of MIME types for file upload"
+msgstr "Lista med MIME-typer för fillämning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:157
+msgid "List of supported character sets"
+msgstr "Lista med teckentabeller som stöds"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:158
+msgid "Listing"
+msgstr "Lista"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:159
+msgid "Local change to font"
+msgstr "Lokal ändring av typsnitt"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:160
+msgid "Long description link"
+msgstr "Lång beskrivningslänk"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:161
+msgid "Long quotation"
+msgstr "Långt citat"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:162
+msgid "Mail link"
+msgstr "E-postlänk"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:164
+msgid "Margin pixel height"
+msgstr "Bildpunktshöjd för marginal"
+
+#. Supported in XHTML 1.0 Frameset DTD only.
+#: ../plugins/taglist/HTML.tags.xml.in.h:166
+msgid "Margin pixel width"
+msgstr "Bildpunktsbredd för marginal"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:167
+msgid "Marquee"
+msgstr "Skärmtak"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:168
+msgid "Maximum length of text field"
+msgstr "Maximal längd på textfält"
+
+#. Here I take some liberties: There's no mandatory attributes,
+#. but those are most common, and will likely be used.
+#: ../plugins/taglist/HTML.tags.xml.in.h:171
+msgid "Media-independent link"
+msgstr "Mediaoberoende länk"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:172
+msgid "Menu list"
+msgstr "Menylista"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:174
+msgid "Menu list (deprecated)"
+msgstr "Menylista (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:175
+msgid "Multi-line text field"
+msgstr "Flerradigt textfält"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:176
+msgid "Multicolumn"
+msgstr "Flera kolumner"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:177
+msgid "Multiple"
+msgstr "Flertal"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:178
+msgid "Name"
+msgstr "Namn"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:179
+msgid "Named property value"
+msgstr "Värde på namngiven egenskap"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:180
+msgid "Next ID"
+msgstr "Nästa id"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:181
+msgid "No URI"
+msgstr "Ingen URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:182
+msgid "No embedded objects"
+msgstr "Inga inbäddade objekt"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:183
+msgid "No frames"
+msgstr "Inga ramar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:184
+msgid "No layers"
+msgstr "Inga lager"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:185
+msgid "No line break"
+msgstr "Ingen radbrytning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:186
+msgid "No resize"
+msgstr "Ingen storleksändring"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:187
+msgid "No script"
+msgstr "Inget skript"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:188
+msgid "No shade"
+msgstr "Ingen skuggning"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:190
+msgid "No shade (deprecated)"
+msgstr "Ingen skuggning (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:191
+msgid "No word wrap"
+msgstr "Ingen ordbrytning"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:193
+msgid "No word wrap (deprecated)"
+msgstr "Ingen ordbrytning (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:194
+msgid "Non-breaking space"
+msgstr "Icke-brytande mellanrum"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:195
+msgid "Note"
+msgstr "Anteckning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:196
+msgid "Object applet file"
+msgstr "Fil för objekt-applet"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:198
+msgid "Object applet file (deprecated)"
+msgstr "Fil för objekt-applet (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:199
+msgid "Object data reference"
+msgstr "Objektdatareferens"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:200
+msgid "Offset for alignment character"
+msgstr "Avstånd för justeringstecken"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:201
+msgid "OnBlur event"
+msgstr "Suddningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:202
+msgid "OnChange event"
+msgstr "Ändringshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:203
+msgid "OnClick event"
+msgstr "Klickhändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:204
+msgid "OnDblClick event"
+msgstr "Dubbelklickshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:205
+msgid "OnFocus event"
+msgstr "Fokushändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:206
+msgid "OnKeyDown event"
+msgstr "Tangentnedtryckningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:207
+msgid "OnKeyPress event"
+msgstr "Tangenttryckningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:208
+msgid "OnKeyUp event"
+msgstr "Tangentuppsläppningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:209
+msgid "OnLoad event"
+msgstr "Inläsningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:210
+msgid "OnMouseDown event"
+msgstr "Musklickningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:211
+msgid "OnMouseMove event"
+msgstr "Musflyttningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:212
+msgid "OnMouseOut event"
+msgstr "Musutflyttningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:213
+msgid "OnMouseOver event"
+msgstr "Musöverflyttningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:214
+msgid "OnMouseUp event"
+msgstr "Musuppsläppningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:215
+msgid "OnReset event"
+msgstr "Återställningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:216
+msgid "OnSelect event"
+msgstr "Markeringshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:217
+msgid "OnSubmit event"
+msgstr "Skickandehändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:218
+msgid "OnUnload event"
+msgstr "Utläsningshändelse"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:219
+msgid "Option group"
+msgstr "Alternativgrupp"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:220
+msgid "Option selector"
+msgstr "Alternativväljare"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:221
+msgid "Ordered list"
+msgstr "Sorterad lista"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:222
+msgid "Output media"
+msgstr "Utdatamedia"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:223
+msgid "Paragraph"
+msgstr "Stycke"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:224
+msgid "Paragraph class"
+msgstr "Styckeklass"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:225
+msgid "Paragraph style"
+msgstr "Styckestil"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:226
+msgid "Preformatted listing"
+msgstr "Förformaterad lista"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:227
+msgid "Preformatted text"
+msgstr "Förformaterad text"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:228
+msgid "Profile metainfo dictionary"
+msgstr "Katalog för profilmetainformation"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:229
+msgid "Prompt message"
+msgstr "Frågemeddelande"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:230
+msgid "Push button"
+msgstr "Tryckknapp"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:231
+msgid "Quote"
+msgstr "Citat"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:232
+msgid "Range"
+msgstr "Intervall"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:233
+msgid "ReadOnly text and password"
+msgstr "Skrivskyddad text och lösenord"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:234
+msgid "Reduced spacing"
+msgstr "Reducerat mellanrum"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:236
+msgid "Reduced spacing (deprecated)"
+msgstr "Reducerat mellanrum (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:237
+msgid "Reverse link"
+msgstr "Baklängeslänk"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:238
+msgid "Root"
+msgstr "Rot"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:239
+msgid "Rows"
+msgstr "Rader"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:240
+msgid "Rulings between rows and columns"
+msgstr "Linjer mellan rader och kolumner"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:241
+msgid "Sample program output, scripts"
+msgstr "Exempelprogramutdata, skript"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:242
+msgid "Scope covered by header cells"
+msgstr "Omfattning som täcks av huvudceller"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:244
+msgid "Script language name"
+msgstr "Namn på skriptspråk"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:245
+msgid "Script statements"
+msgstr "Skriptsatser"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:246
+msgid "Scrollbar"
+msgstr "Rullningslist"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:247
+msgid "Selectable option"
+msgstr "Valbart alternativ"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:248
+msgid "Selected"
+msgstr "Markerad"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:249
+msgid "Server-side image map"
+msgstr "Bildkarta på serversida"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:250
+msgid "Shape"
+msgstr "Form"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:251
+msgid "Short inline quotation"
+msgstr "Kort inline-citat"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:252
+msgid "Single line prompt"
+msgstr "Enkelradsfråga"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:253
+msgid "Size"
+msgstr "Storlek"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:255
+msgid "Size (deprecated)"
+msgstr "Storlek (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:256
+msgid "Small text style"
+msgstr "Liten textstil"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:257
+msgid "Soft line break"
+msgstr "Mjuk radbrytning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:258
+msgid "Sound"
+msgstr "Ljud"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:259
+msgid "Source"
+msgstr "Källa"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:260
+msgid "Space-separated archive list"
+msgstr "Blankstegsseparerad arkivlista"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:261
+msgid "Spacer"
+msgstr "Utfyllnad"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:262
+msgid "Spacing between cells"
+msgstr "Mellanrum mellan celler"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:263
+msgid "Spacing within cells"
+msgstr "Mellanrum i celler"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:264
+msgid "Span"
+msgstr "Vidd"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:265
+msgid "Square root"
+msgstr "Kvadratrot"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:266
+msgid "Standby load message"
+msgstr "Standby-inläsningsmeddelande"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:267
+msgid "Starting sequence number"
+msgstr "Startsekvensnummer"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:269
+msgid "Starting sequence number (deprecated)"
+msgstr "Startsekvensnummer (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:270
+msgid "Strike-through text"
+msgstr "Genomstruken text"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:272
+msgid "Strike-through text (deprecated)"
+msgstr "Genomstruken textstil (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:273
+msgid "Strike-through text style"
+msgstr "Genomstruken textstil"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:275
+msgid "Strike-through text style (deprecated)"
+msgstr "Genomstruken textstil (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:276
+msgid "Strong emphasis"
+msgstr "Stark betoning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:277
+msgid "Style info"
+msgstr "Stilinformation"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:278
+msgid "Subscript"
+msgstr "Nedsänkt"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:279
+msgid "Superscript"
+msgstr "Upphöjd"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:280
+msgid "Tab order position"
+msgstr "Position för fliksortering"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:281
+msgid "Table"
+msgstr "Tabell"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:282
+msgid "Table body"
+msgstr "Tabelltext"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:283
+msgid "Table caption"
+msgstr "Tabellrubrik"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:284
+msgid "Table column group properties"
+msgstr "Gruppegenskaper för tabellkolumn"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:285
+msgid "Table column properties"
+msgstr "Egenskaper för tabellkolumn"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:286
+msgid "Table data cell"
+msgstr "Tabelldatacell"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:287
+msgid "Table footer"
+msgstr "Tabellfot"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:288
+msgid "Table header"
+msgstr "Tabellhuvud"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:289
+msgid "Table header cell"
+msgstr "Tabellhuvudcell"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:290
+msgid "Table row"
+msgstr "Tabellrad"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:291
+msgid "Table summary"
+msgstr "Tabellsammanfattning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:292
+msgid "Target — Blank"
+msgstr "Mål — Tomt"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:293
+msgid "Target — Parent"
+msgstr "Mål — Förälder"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:294
+msgid "Target — Self"
+msgstr "Mål — Själv"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:295
+msgid "Target — Top"
+msgstr "Mål — Överst"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:296
+msgid "Teletype or monospace text style"
+msgstr "Textstil med fast breddsteg"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:297
+msgid "Text"
+msgstr "Text"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:298
+msgid "Text color"
+msgstr "Textfärg"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:300
+msgid "Text color (deprecated)"
+msgstr "Textfärg (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:301
+msgid "Text entered by user"
+msgstr "Text angiven av användaren"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:302
+msgid "Title"
+msgstr "Titel"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:303
+msgid "Top margin in pixels"
+msgstr "Överkantsmarginal i bildpunkter"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:304
+msgid "URL"
+msgstr "URL"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:305
+msgid "Underlined text style"
+msgstr "Understruken textstil"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:306
+msgid "Unordered list"
+msgstr "Osorterad lista"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:307
+msgid "Use image map"
+msgstr "Använd bildkarta"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:308
+msgid "Value"
+msgstr "Värde"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:309
+msgid "Value interpretation"
+msgstr "Värdetolkning"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:310
+msgid "Variable or program argument"
+msgstr "Variabel eller programargument"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:311
+msgid "Vertical cell alignment"
+msgstr "Vertikal celljustering"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:312
+msgid "Vertical space"
+msgstr "Vertikalt blanksteg"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:314
+msgid "Vertical space (deprecated)"
+msgstr "Vertikalt blanksteg (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:315
+msgid "Visited link color"
+msgstr "Färg på besökt länk"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:317
+msgid "Visited link color (deprecated)"
+msgstr "Färg på besökt länk (utfasad)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:318
+msgid "Width"
+msgstr "Bredd"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:319
+msgid "XHTML 1.0 — Tags"
+msgstr "XHTML 1.0 — Taggar"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:1
+msgid "Bibliography (cite)"
+msgstr "Bibliografi (citat)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:2
+msgid "Bibliography (item)"
+msgstr "Bibliografi (objekt)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:3
+msgid "Bibliography (shortcite)"
+msgstr "Bibliografi (kort citat)"
+
+# Märkligt meddelande...
+#: ../plugins/taglist/Latex.tags.xml.in.h:4
+msgid "Bibliography (thebibliography)"
+msgstr "Bibliografi (bibliografin)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:5
+msgid "Brackets ()"
+msgstr "Klamrar ()"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:6
+msgid "Brackets <>"
+msgstr "Klamrar <>"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:7
+msgid "Brackets []"
+msgstr "Klamrar []"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:8
+msgid "Brackets {}"
+msgstr "Klamrar {}"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:10
+msgid "File input"
+msgstr "Filindata"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:11
+msgid "Footnote"
+msgstr "Fotnot"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:12
+msgid "Function cosine"
+msgstr "Funktionen cosinus"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:13
+msgid "Function e^"
+msgstr "Funktionen e^"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:14
+msgid "Function exp"
+msgstr "Funktionen exp"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:15
+msgid "Function log"
+msgstr "Funktionen log"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:16
+msgid "Function log10"
+msgstr "Funktionen log10"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:17
+msgid "Function sine"
+msgstr "Funktionen sinus"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:18
+msgid "Greek alpha"
+msgstr "Grekiskt alfa"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:19
+msgid "Greek beta"
+msgstr "Grekiskt beta"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:20
+msgid "Greek epsilon"
+msgstr "Grekiskt epsilon"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:21
+msgid "Greek gamma"
+msgstr "Grekiskt gamma"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:22
+msgid "Greek lambda"
+msgstr "Grekiskt lambda"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:23
+msgid "Greek rho"
+msgstr "Grekiskiskt rho"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:24
+msgid "Greek tau"
+msgstr "Grekiskt tau"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:25
+msgid "Header 0 (chapter)"
+msgstr "Rubrik 0 (kapitel)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:26
+msgid "Header 0 (chapter*)"
+msgstr "Rubrik 0 (kapitel*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:27
+msgid "Header 1 (section)"
+msgstr "Rubrik 1 (avsnitt)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:28
+msgid "Header 1 (section*)"
+msgstr "Rubrik 1 (avsnitt*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:29
+msgid "Header 2 (subsection)"
+msgstr "Rubrik 2 (underavsnitt)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:30
+msgid "Header 2 (subsection*)"
+msgstr "Rubrik 2 (underavsnitt*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:31
+msgid "Header 3 (subsubsection)"
+msgstr "Rubrik 3 (underunderavsnitt)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:32
+msgid "Header 3 (subsubsection*)"
+msgstr "Rubrik 3 (underunderavsnitt*)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:33
+msgid "Header 4 (paragraph)"
+msgstr "Rubrik 4 (stycke)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:34
+msgid "Header appendix"
+msgstr "Rubrikappendix"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:35
+msgid "Item"
+msgstr "Objekt"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:36
+msgid "Item with label"
+msgstr "Objekt med etikett"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:37
+msgid "Latex — Tags"
+msgstr "Latex — Taggar"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:38
+msgid "List description"
+msgstr "Listbeskrivning"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:39
+msgid "List enumerate"
+msgstr "Listnumrering"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:40
+msgid "List itemize"
+msgstr "Listobjektifiering"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:41
+msgid "Maths (display)"
+msgstr "Matematik (visning)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:42
+msgid "Maths (inline)"
+msgstr "Matematik (inline)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:43
+msgid "Operator fraction"
+msgstr "Operatorn bråkdel"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:44
+msgid "Operator integral (display)"
+msgstr "Operatorn integral (visning)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:45
+msgid "Operator integral (inline)"
+msgstr "Operatorn integral (inline)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:46
+msgid "Operator sum (display)"
+msgstr "Operatorn summa (visning)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:47
+msgid "Operator sum (inline)"
+msgstr "Operatorn summa (inline)"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:48
+msgid "Reference label"
+msgstr "Referensetikett"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:49
+msgid "Reference ref"
+msgstr "Referens ref"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:50
+msgid "Symbol <<"
+msgstr "Symbolen <<"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:51
+msgid "Symbol <="
+msgstr "Symbolen <="
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:52
+msgid "Symbol >="
+msgstr "Symbolen >="
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:53
+msgid "Symbol >>"
+msgstr "Symbolen >>"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:54
+msgid "Symbol and"
+msgstr "Symbolen and"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:55
+msgid "Symbol const"
+msgstr "Symbolen const"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:56
+msgid "Symbol d-by-dt"
+msgstr "Symbolen d-dt"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:57
+msgid "Symbol d-by-dt-partial"
+msgstr "Symbolen d-dt-delvis"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:58
+msgid "Symbol d2-by-dt2-partial"
+msgstr "Symbolen d2-dt2-delvis"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:59
+msgid "Symbol dagger"
+msgstr "Symbolen dagger"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:60
+msgid "Symbol em-dash ---"
+msgstr "Symbolen streck ---"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:61
+msgid "Symbol en-dash --"
+msgstr "Symbolen streck --"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:62
+msgid "Symbol equiv"
+msgstr "Symbolen equiv"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:63
+msgid "Symbol infinity"
+msgstr "Symbolen oändligheten"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:64
+msgid "Symbol mathspace ,"
+msgstr "Symbolen mathspace ,"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:65
+msgid "Symbol mathspace ."
+msgstr "Symbolen mathspace ."
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:66
+msgid "Symbol mathspace _"
+msgstr "Symbolen mathspace _"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:67
+msgid "Symbol mathspace __"
+msgstr "Symbolen mathspace __"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:68
+msgid "Symbol simeq"
+msgstr "Symbolen simeq"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:69
+msgid "Symbol star"
+msgstr "Symbolen stjärna"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:70
+msgid "Typeface bold"
+msgstr "Fett typsnitt"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:71
+msgid "Typeface italic"
+msgstr "Kursivt typsnitt"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:72
+msgid "Typeface slanted"
+msgstr "Lutat typsnitt"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:73
+msgid "Typeface type"
+msgstr "Typtypsnitt"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:74
+msgid "Unbreakable text"
+msgstr "Obrytbar text"
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
+msgid ""
+"Provides a method to easily insert commonly used tags/strings into a "
+"document without having to type them."
+msgstr ""
+"Tillhandahåller en metod för att enkelt infoga ofta använda taggar/strängar "
+"i ett dokument utan att behöva skriva dem."
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
+msgid "Tag list"
+msgstr "Tagglista"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:1
+msgid "XSLT — Axes"
+msgstr "XSLT — Axlar"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:2
+msgid "XSLT — Elements"
+msgstr "XSLT — Element"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:3
+msgid "XSLT — Functions"
+msgstr "XSLT — Funktioner"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:4
+msgid "ancestor"
+msgstr "förfader"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:5
+msgid "ancestor-or-self"
+msgstr "förfader-eller-själv"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:6
+msgid "attribute"
+msgstr "attribut"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:7
+msgid "child"
+msgstr "barn"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:8
+msgid "descendant"
+msgstr "avkomma"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:9
+msgid "descendant-or-self"
+msgstr "avkomma-eller-själv"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:10
+msgid "following"
+msgstr "följande"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:11
+msgid "following-sibling"
+msgstr "följande-syskon"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:12
+msgid "namespace"
+msgstr "namnrymd"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:13
+msgid "parent"
+msgstr "förälder"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:14
+msgid "preceding"
+msgstr "föregående"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:15
+msgid "preceding-sibling"
+msgstr "föregående-syskon"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:16
+msgid "self"
+msgstr "själv"
+
+#: ../plugins/taglist/XUL.tags.xml.in.h:1
+msgid "XUL — Tags"
+msgstr "XUL — Taggar"
