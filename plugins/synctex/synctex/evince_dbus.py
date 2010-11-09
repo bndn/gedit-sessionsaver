@@ -55,12 +55,19 @@ class EvinceWindowProxy:
                 EvinceWindowProxy.daemon = EvinceWindowProxy.bus.get_object(EV_DAEMON_NAME,
                                                 EV_DAEMON_PATH,
                                                 follow_name_owner_changes=True)
+            EvinceWindowProxy.bus.add_signal_receiver(self._on_doc_loaded, signal_name="DocumentLoaded", 
+                                                      dbus_interface = EV_WINDOW_IFACE, 
+                                                      sender_keyword='sender')
             self._get_dbus_name(False)
 
         except dbus.DBusException:
             if self._log:
                 self._log.debug("Could not connect to the Evince Daemon")
 
+    def _on_doc_loaded(self, uri, **keyargs):
+        if uri == self.uri and self._handler is None:
+            self.handle_find_document_reply(keyargs['sender'])
+        
     def _get_dbus_name(self, spawn):
         EvinceWindowProxy.daemon.FindDocument(self.uri,spawn,
                      reply_handler=self.handle_find_document_reply,
