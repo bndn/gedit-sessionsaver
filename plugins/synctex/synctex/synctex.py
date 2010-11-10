@@ -19,7 +19,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gtk, gedit, gio , gtk.gdk as gdk
+from gi.repository import GObject, Gtk, Gedit, Peas, PeasGtk, Gio, Gdk
 from gettext import gettext as _
 from evince_dbus import EvinceWindowProxy
 import dbus.mainloop.glib
@@ -96,7 +96,9 @@ class SynctexViewHelper:
         apply_style (doc.get_style_scheme().get_style('search-match'), self._highlight_tag)
 
     def on_button_release(self, view, event):
-        if event.button == 1 and event.state & gdk.CONTROL_MASK:
+        modifier_mask = Gtk.accelerator_get_default_mod_mask()
+        event_state = event.button.state & modifier_mask
+        if event.button.button == 1 and event_state == Gdk.ModifierType.CONTROL_MASK:
             self.sync_view()
 
     def on_saved_or_loaded(self, doc, data):
@@ -132,7 +134,7 @@ class SynctexViewHelper:
         if gfile is None:
             return
         if self.gfile is None or gfile.get_uri() != self.gfile.get_uri():
-            self._plugin.view_dict[gfile.get_uri()] = self
+            SynctexPlugin.view_dict[gfile.get_uri()] = self
             self.gfile = gfile
 
         modeline_output_file = self.get_output_file()
@@ -144,8 +146,8 @@ class SynctexViewHelper:
 
         out_path = self.gfile.get_parent().get_child(filename).get_path()
         out_path = os.path.splitext(out_path)
-        out_gfile = gio.File(out_path[0] + ".pdf")
-        if out_gfile.query_exists():
+        out_gfile = Gio.file_new_for_path(out_path[0] + ".pdf")
+        if out_gfile.query_exists(None):
             self.out_gfile = out_gfile
         else:
             self.out_gfile = None
@@ -241,15 +243,16 @@ class SynctexWindowHelper:
 
     def add_helper(self, view, window, tab):
         helper = SynctexViewHelper(view, window, tab, self._plugin)
-        uri = view.get_buffer().get_uri()
-        if uri is not None:
-            self._plugin.view_dict[uri] = helper
+        location = view.get_buffer().get_location()
+
+        if location is not None:
+            SynctexPlugin.view_dict[location.get_uri()] = helper
         view.set_data (VIEW_DATA_KEY, helper)
 
     def remove_helper(self, view):
         helper = view.get_data(VIEW_DATA_KEY)
         if helper.gfile is not None:
-            del self._plugin.view_dict[helper.gfile.get_uri()]
+            del SynctexPlugin.view_dict[helper.gfile.get_uri()]
         helper.deactivate()
         view.set_data(VIEW_DATA_KEY, None)
 
@@ -275,7 +278,7 @@ class SynctexWindowHelper:
         manager = self._window.get_ui_manager()
 
         # Create a new action group
-        self._action_group = gtk.ActionGroup("SynctexPluginActions")
+        self._action_group = Gtk.ActionGroup(name="SynctexPluginActions")
         self._action_group.add_actions([("SynctexForwardSearch", None,
                                         _("Forward Search"), "<Ctrl><Alt>F",
                                         _("Forward Search"), self.forward_search_cb)])
@@ -286,29 +289,36 @@ class SynctexWindowHelper:
         # Merge the UI
         self._ui_id = manager.add_ui_from_string(ui_str)
 
-    def forward_search_cb(self, action):
+    def forward_search_cb(self, action, what):
+        print self, action, what
         self._window.get_active_view().get_data(VIEW_DATA_KEY).sync_view()
 
-class SynctexPlugin(gedit.Plugin):
+class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
+    __gtype_name__ = "SynctexPlugin"
+
+    window = GObject.property(type=GObject.Object)
+    view_dict = {}
+    _proxy_dict = {}
 
     def __init__(self):
-        gedit.Plugin.__init__(self)
-        self.view_dict = {}
-        self._proxy_dict = {}
+        GObject.Object.__init__(self)
 
-    def activate(self, window):
+
+    def do_activate(self):
+        window = self.window
         helper = SynctexWindowHelper(self, window)
         window.set_data(WINDOW_DATA_KEY, helper)
 
-    def deactivate(self, window):
+    def do_deactivate(self):
+        window = self.window
         window.get_data(WINDOW_DATA_KEY).deactivate()
         window.set_data(WINDOW_DATA_KEY, None)
 
     def source_view_handler(self, out_gfile, input_file, source_link):
-        uri_input = out_gfile.get_parent().get_child(input_file).get_uri()
+        uri_input = out_gfile.get_parent().get_child(str(input_file)).get_uri()
         
-        if uri_input not in self.view_dict:
-            window = self._proxy_dict[out_gfile.get_uri()][2]
+        if uri_input not in SynctexPlugin.view_dict:
+            window = SynctexPlugin._proxy_dict[out_gfile.get_uri()][2]
             tab = window.create_tab_from_uri(uri_input,
                                                  None, source_link[0] - 1, False, True)
             helper =  tab.get_view().get_data(VIEW_DATA_KEY)
@@ -316,26 +326,26 @@ class SynctexPlugin(gedit.Plugin):
                                                 SynctexViewHelper.goto_line_after_load, 
                                                 helper, source_link[0] - 1) 
         else:
-            self.view_dict[uri_input].goto_line(source_link[0] - 1)
+            SynctexPlugin.view_dict[uri_input].goto_line(source_link[0] - 1)
 
     def ref_evince_proxy(self, gfile, window):
         uri = gfile.get_uri()
         proxy = None
-        if uri not in self._proxy_dict:
+        if uri not in SynctexPlugin._proxy_dict:
             proxy = EvinceWindowProxy (uri, True, _logger)
-            self._proxy_dict[uri] = [1, proxy, window]
-            proxy.set_source_handler (lambda i, s: self.source_view_handler(gio.File(uri), i, s))
+            SynctexPlugin._proxy_dict[uri] = [1, proxy, window]
+            proxy.set_source_handler (lambda i, s: self.source_view_handler(Gio.file_new_for_uri(uri), i, s))
         else:
-            self._proxy_dict[uri][0]+=1
-            proxy = self._proxy_dict[uri][1]
+            SynctexPlugin._proxy_dict[uri][0]+=1
+            proxy = SynctexPlugin._proxy_dict[uri][1]
         return proxy
 
     def unref_evince_proxy(self, gfile):
         uri = gfile.get_uri()
-        if uri in self._proxy_dict:
-            self._proxy_dict[uri][0]-=1
-            if self._proxy_dict[uri][0] == 0:
-                del self._proxy_dict[uri]
+        if uri in SynctexPlugin._proxy_dict:
+            SynctexPlugin._proxy_dict[uri][0]-=1
+            if SynctexPlugin._proxy_dict[uri][0] == 0:
+                del SynctexPlugin._proxy_dict[uri]
      
     def update_ui(self, window):
         pass
