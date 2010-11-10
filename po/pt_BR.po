@@ -20,20 +20,23 @@
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008, 2009.
 # Carlos José Pereira <carlao2005@gmail.com>, 2009
 # Henrique P. Machado <hpmachado@gnome.org>, 2010.
-#
+# Krix Apolinário <krixapolinario@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit 2.24\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:12+0100\n"
-"PO-Revision-Date: 2010-03-14 11:12-0500\n"
-"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2010-11-09 14:05+0000\n"
+"PO-Revision-Date: 2010-11-10 14:55-0300\n"
+"Last-Translator: Krix Apolinário <krixapolinario@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_BR-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
 msgid "Bookmarks"
@@ -44,87 +47,74 @@ msgid "Easy document navigation with bookmarks"
 msgstr "Navegação fácil de documentos com marcadores"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-#, fuzzy
 msgid "Toggle Bookmark"
-msgstr "Marcadores"
+msgstr "Alternar marcador"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
 msgid "Toggle bookmark status of the current line"
-msgstr "Mostra ou oculta a barra de status na janela atual"
+msgstr "Alterna o status do marcador da linha atual"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "Ir ao próximo marcador"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
 msgid "Goto the next bookmark"
-msgstr "Vai para a localização visitada posteriormente"
+msgstr "Ir ao próximo marcador"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
 msgid "Goto Previous Bookmark"
-msgstr "Vai para a localização anterior"
+msgstr "Ir ao marcador anterior"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
 msgid "Goto the previous bookmark"
-msgstr "Mostrar página anterior"
+msgstr "Ir ao marcador anterior"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "Codificações detectadas automaticamente"
+msgstr "Fecha parênteses automaticamente."
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Bracket Completion"
-msgstr "Parênteses correspondentes"
+msgstr "Fechamento de parênteses"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
 msgid "Character Map"
-msgstr "Codificações de caracteres"
+msgstr "Mapa de caracteres"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Insere caracteres especiais apenas clicando neles."
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "Comentário"
+msgstr "Comentar código"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Comenta ou descomenta um determinado bloco de código."
 
 #: ../plugins/codecomment/codecomment.py:90
-#, fuzzy
 msgid "Co_mment Code"
-msgstr "Comentário"
+msgstr "Co_mentar código"
 
 #: ../plugins/codecomment/codecomment.py:92
-#, fuzzy
 msgid "Comment the selected code"
-msgstr "Exclui o texto selecionado"
+msgstr "Comenta código selecionado"
 
 #: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "Descome_ntar código"
 
 #: ../plugins/codecomment/codecomment.py:98
-#, fuzzy
 msgid "Uncomment the selected code"
-msgstr "Exclui o texto selecionado"
+msgstr "Descomentar o código selecionado"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Color Picker"
-msgstr "Esquema de cores"
+msgstr "Seletor de Cores"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
@@ -139,9 +129,8 @@ msgid "Pick a color from a dialog"
 msgstr "Seleciona uma cor a partir de um diálogo"
 
 #: ../plugins/colorpicker/colorpicker.py:188
-#, fuzzy
 msgid "Pick Color"
-msgstr "Cor do link"
+msgstr "Selecionar cor"
 
 #: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
@@ -150,42 +139,37 @@ msgstr "_Inserir"
 #. ex:ts=4:et:
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:1
 msgid "Command line interface for advanced editing"
-msgstr "Interface de Linha de comando para edição avançada"
+msgstr "Interface de linha de comando para edição avançada"
 
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Commander"
-msgstr "C_or do comando:"
+msgstr "Comando"
 
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
 msgid "Draw Spaces"
-msgstr "Usar espaços"
+msgstr "Desenhar espaços"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Desenha espaços e tabulações"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
 msgid "Draw leading spaces"
-msgstr "Espaço não-quebrável"
+msgstr "Desenhar espaços à esquerda"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Desenhar novas linhas"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "Espaço não-quebrável"
+msgstr "Desenhar espaços não-quebráveis"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
 msgid "Draw spaces"
-msgstr "Inserir espaços"
+msgstr "Desenhar espaços"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
@@ -196,19 +180,16 @@ msgid "Draw tabs"
 msgstr "Desenhar tabulações"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "Remover espaços à direita"
+msgstr "Desenhar espaços perdidos"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
 msgid "Show _White Space"
-msgstr "Mostrar próxima página"
+msgstr "Mostrar _espaço em branco"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "Inserir _espaços em vez de tabulações"
+msgstr "Mostrar espaços e tabulações"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
@@ -216,11 +197,11 @@ msgstr "Habilitado"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "If TRUE drawing will be enabled."
-msgstr ""
+msgstr "Se VERDADEIRO o drawing será habilitado."
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
 msgid "The type of spaces to be drawn."
-msgstr ""
+msgstr "O tipo de espaços a serem desenhados."
 
 #: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -231,23 +212,20 @@ msgid "Join/Split Lines"
 msgstr "Juntar/Dividir linhas"
 
 #: ../plugins/joinlines/joinlines.py:56
-#, fuzzy
 msgid "_Join Lines"
-msgstr "Linhas"
+msgstr "_Juntar linhas"
 
 #: ../plugins/joinlines/joinlines.py:57
-#, fuzzy
 msgid "Join the selected lines"
-msgstr "Desativa recuo das linhas selecionadas"
+msgstr "Juntar as linhas selecionadas"
 
 #: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Dividir linhas"
 
 #: ../plugins/joinlines/joinlines.py:60
-#, fuzzy
 msgid "Split the selected lines"
-msgstr "Desativa recuo das linhas selecionadas"
+msgstr "Divide as linhas selecionadas"
 
 #. ex:ts=4:et:
 #: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
@@ -327,32 +305,28 @@ msgid "Easily increase and decrease the text size"
 msgstr "Aumente e diminua o facilmente o tamanho do texto"
 
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Text Size"
-msgstr "Tamanho da tabulação"
+msgstr "Tamanho do texto"
 
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "Sessões sal_vas"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "_Save current session"
-msgstr "Substituir seleção atual"
+msgstr "_Salvar sessão atual"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "Save the current document list as a new session"
-msgstr "Move o documento atual para uma nova janela"
+msgstr "Salva a lista atual de documentos como uma nova sessão"
 
 #: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "_Gerenciar sessões salvas..."
 
 #: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
 msgid "Open the saved session manager"
-msgstr "Abre o manual do gedit"
+msgstr "Abre o gerenciador de sessões salvas"
 
 #: ../plugins/sessionsaver/__init__.py:106
 #, python-format
@@ -389,33 +363,28 @@ msgid "Forget you're not using tabulations."
 msgstr "Esqueça que não está usando tabulações."
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Smart Spaces"
-msgstr "Inserir espaços"
+msgstr "Espaços inteligentes"
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "Abre um terminal no mesmo local do documento"
+msgstr "Embute um terminal no painel inferior."
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Embedded Terminal"
-msgstr "Objetos embutidos"
+msgstr "Terminal embutido"
 
 #: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminal"
 
 #: ../plugins/terminal/terminal.py:329
-#, fuzzy
 msgid "C_hange Directory"
-msgstr "Alterar _para:"
+msgstr "Al_ternar diretório"
 
 #: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
-#, fuzzy
 msgid "Document Words"
-msgstr "Corpo do documento"
+msgstr "Palavras do documento"
 
 #: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
 msgid "Word Completion"
@@ -427,11 +396,11 @@ msgstr "Completar palavras usando o framework de completar"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
 msgid "SyncTeX"
-msgstr ""
+msgstr "SyncTeX"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
-msgstr ""
+msgstr "Sincroniza entre LaTeX e PDF com gedit e evince."
 
 # http://www.w3.org/TR/html4/struct/links.html
 # rel = link-types [CI]
@@ -440,9 +409,8 @@ msgstr ""
 # space-separated list of link types.
 #: ../plugins/synctex/synctex/synctex.py:280
 #: ../plugins/synctex/synctex/synctex.py:281
-#, fuzzy
 msgid "Forward Search"
-msgstr "Relação com o link"
+msgstr "Pesquisa seguinte"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
@@ -893,14 +861,12 @@ msgid "HTML version"
 msgstr "Versão HTML"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:118
-#, fuzzy
 msgid "HTML — Special Characters"
-msgstr "HTML - Caracteres especiais"
+msgstr "HTML — Caracteres especiais"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:119
-#, fuzzy
 msgid "HTML — Tags"
-msgstr "HTML - Marcas"
+msgstr "HTML — Marcas"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:120
 msgid "HTTP header name"
@@ -1014,7 +980,7 @@ msgstr "Rótulo"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:149
 msgid "Language code"
-msgstr "Código de Idioma"
+msgstr "Código de idioma"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:150
 msgid "Large text style"
@@ -1540,24 +1506,20 @@ msgid "Table summary"
 msgstr "Resumo da tabela"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:292
-#, fuzzy
 msgid "Target — Blank"
-msgstr "Destino - Vazio"
+msgstr "Destino — Vazio"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:293
-#, fuzzy
 msgid "Target — Parent"
-msgstr "Destino - Pai"
+msgstr "Destino — Pai"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:294
-#, fuzzy
 msgid "Target — Self"
-msgstr "Destino - Próprio"
+msgstr "Destino — Próprio"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:295
-#, fuzzy
 msgid "Target — Top"
-msgstr "Destino - Topo"
+msgstr "Destino — Topo"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:296
 msgid "Teletype or monospace text style"
@@ -1643,9 +1605,8 @@ msgid "Width"
 msgstr "Largura"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:319
-#, fuzzy
 msgid "XHTML 1.0 — Tags"
-msgstr "XHTML 1.0 - Marcas"
+msgstr "XHTML 1.0 — Marcas"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:1
 msgid "Bibliography (cite)"
@@ -1669,7 +1630,7 @@ msgstr "Parênteses ()"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:6
 msgid "Brackets <>"
-msgstr "Menor que/Maior que <>"
+msgstr "Parênteses <>"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:7
 msgid "Brackets []"
@@ -1788,9 +1749,8 @@ msgid "Item with label"
 msgstr "Item com rótulo"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:37
-#, fuzzy
 msgid "Latex — Tags"
-msgstr "Latex - Marcas"
+msgstr "Latex — Marcas"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:38
 msgid "List description"
@@ -1953,19 +1913,16 @@ msgid "Tag list"
 msgstr "Lista de marcas"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:1
-#, fuzzy
 msgid "XSLT — Axes"
-msgstr "XSLT - Eixos"
+msgstr "XSLT — Eixos"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:2
-#, fuzzy
 msgid "XSLT — Elements"
-msgstr "XSLT - Elementos"
+msgstr "XSLT — Elementos"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:3
-#, fuzzy
 msgid "XSLT — Functions"
-msgstr "XSLT - Funções"
+msgstr "XSLT — Funções"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:4
 msgid "ancestor"
@@ -2020,6 +1977,5 @@ msgid "self"
 msgstr "próprio"
 
 #: ../plugins/taglist/XUL.tags.xml.in.h:1
-#, fuzzy
 msgid "XUL — Tags"
-msgstr "XUL - Marcas"
+msgstr "XUL — Marcas"
