@@ -1,24 +1,23 @@
-# Slovenian translations for gedit.
+# Slovenian translations for gedit-plugins.
 # Copyright (C) 2005-2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gedit package.
-# 
-# Andraž Tori <andraz.tori1@guest.arnes.si>, 2000 - 2005.
-# Matic Žgur <mr.zgur@gmail.com>, 2006 - 2007.
-# 
-# Matej Urbančič <mateju@svn.gnome.org>, 2007 - 2010., 2010.
+# This file is distributed under the same license as the gedit-plugins package.
+#
+# Andraž Tori <andraz.tori1@guest.arnes.si>, 2000.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007 - 2010.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:12+0100\n"
-"PO-Revision-Date: 2010-09-16 19:24+0200\n"
+"Project-Id-Version: gedit-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2010-11-11 10:30+0000\n"
+"PO-Revision-Date: 2010-11-16 13:47+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Language: Slovenian\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -32,58 +31,49 @@ msgid "Easy document navigation with bookmarks"
 msgstr "Enostavno upravljanje dokumentov z zaznamki"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-#, fuzzy
 msgid "Toggle Bookmark"
-msgstr "Zaznamki"
+msgstr "Preklopi zaznamek"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
 msgid "Toggle bookmark status of the current line"
-msgstr "Pokaži ali skrij vrstico stanja v trenutnem oknu"
+msgstr "Preklopi stanje zaznamka v trenutni vrstici"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "Pojdi na naslednji zaznamek"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
 msgid "Goto the next bookmark"
-msgstr "Pojdi na naslednje obiskano mesto"
+msgstr "Pojdi na naslednji zaznamek"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
 msgid "Goto Previous Bookmark"
-msgstr "Pojdi na prejšnje mesto"
+msgstr "Pojdi na predhodni zaznamek"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
 msgid "Goto the previous bookmark"
-msgstr "Pokaži prejšnjo stran"
+msgstr "Pojdi na predhodni zaznamek"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "Samodejno zaznan nabor znakov"
+msgstr "Samodejno doda zaklepaje"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Bracket Completion"
-msgstr "Ujemanje oklepajev"
+msgstr "Dopolnjevanje oklepajev"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
 msgid "Character Map"
-msgstr "Število znakov (brez presledkov)"
+msgstr "Nabor znakov"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Vstavljanje posebnih znakov le s klikom nanje."
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "Opomba"
+msgstr "Opomba h kodi"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
@@ -116,7 +106,7 @@ msgstr "Barvna shema"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr "Izbor barve iz pogovornega okna in jo vstavi v šestnajstiškem zapisu."
+msgstr "Izberi barvo iz pogovornega okna in jo vstavi v šestnajstiškem zapisu."
 
 #: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick _Color..."
@@ -177,7 +167,7 @@ msgstr "Vstavi presledke"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
-msgstr "Izris presledkov v besedilu"
+msgstr "Izris preslednih znakov v besedilu"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
@@ -276,9 +266,7 @@ msgstr "<b>Pametni</b> način poravnave stolpcev z uporabo izbire"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1263
 msgid "<b>Smart</b> column align mode with additional space using selection"
-msgstr ""
-"<b>Pametni</b> način poravnave stolpcev z dodatnimi presledki z uporabo "
-"izbire"
+msgstr "<b>Pametni</b> način poravnave stolpcev z dodatnimi presledki z uporabo izbire"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1265
 msgid "Toggle edit point"
@@ -294,7 +282,7 @@ msgstr "Dodaj točko urejanja na konec vrstice oziroma izbire"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1268
 msgid "Align edit points"
-msgstr "Poravnaj točke povezav"
+msgstr "Poravnaj točke urejanja"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1269
 msgid "Align edit points with additional space"
@@ -315,12 +303,11 @@ msgid "Easily increase and decrease the text size"
 msgstr "Enostavno prilagajanje velikosti besedila"
 
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Text Size"
-msgstr "Velikost zamika"
+msgstr "Velikost besedila"
 
-#: ../plugins/sessionsaver/__init__.py:64
-msgid "Sa_ved sessions"
+#: ../plugins/sessionsaver/__init__.py:6
+msgid "Sa_ved sessions
 msgstr "_Shranjene seje"
 
 #: ../plugins/sessionsaver/__init__.py:65
@@ -335,7 +322,7 @@ msgstr "Prestavi trenutni dokument v novo okno"
 
 #: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
-msgstr "_Upravljanje s shranjenimi sejami"
+msgstr "_Upravljanje s shranjenimi sejami ..."
 
 #: ../plugins/sessionsaver/__init__.py:66
 #, fuzzy
@@ -345,7 +332,7 @@ msgstr "Odpri priročnik za gedit"
 #: ../plugins/sessionsaver/__init__.py:106
 #, python-format
 msgid "Recover '%s' session"
-msgstr "Obnovi '%s' sejo"
+msgstr "Obnovi sejo '%s'"
 
 #: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
@@ -360,8 +347,8 @@ msgstr "Shranjevanje in obnavljanje delovne seje"
 msgid "Session Saver"
 msgstr "Shranjevalnik seje"
 
-#: ../plugins/sessionsaver/sessionsaver.ui.h:1
-msgid "Save session"
+#: ../plugins/sessionsaver/sessionsaver.ui.h:
+msgid "Save session
 msgstr "Shrani sejo"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:2
@@ -377,9 +364,8 @@ msgid "Forget you're not using tabulations."
 msgstr "Pozabi, da tabulatorji niso v uporabi."
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Smart Spaces"
-msgstr "Vstavi presledke"
+msgstr "Pametni presledki"
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
 #, fuzzy
@@ -423,9 +409,8 @@ msgstr "Usklajevanje med LaTeX in PDF datotekami s programoma gedit in evince."
 
 #: ../plugins/synctex/synctex/synctex.py:280
 #: ../plugins/synctex/synctex/synctex.py:281
-#, fuzzy
 msgid "Forward Search"
-msgstr "Povezava naprej"
+msgstr "Iskanje naprej"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
@@ -1353,7 +1338,7 @@ msgstr "Drsnik"
 msgid "Selectable option"
 msgstr "Izbirna možnost"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:248
+#: ../plugins/taglist/HTML.tags.xml.in.h:24
 msgid "Selected"
 msgstr "Izbrano"
 
@@ -1518,24 +1503,20 @@ msgid "Table summary"
 msgstr "Povzetek preglednice"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:292
-#, fuzzy
 msgid "Target — Blank"
-msgstr "Cilj - Prazno"
+msgstr "Cilj — Prazno"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:293
-#, fuzzy
 msgid "Target — Parent"
-msgstr "Cilj - nadrejeni predmet"
+msgstr "Cilj — Nadrejeni predmet"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:294
-#, fuzzy
 msgid "Target — Self"
-msgstr "Cilj - Sam"
+msgstr "Cilj — Samo"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:295
-#, fuzzy
 msgid "Target — Top"
-msgstr "Cilj - Na vrhu"
+msgstr "Cilj — Na vrhu"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:296
 msgid "Teletype or monospace text style"
@@ -1621,9 +1602,8 @@ msgid "Width"
 msgstr "Širina"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:319
-#, fuzzy
 msgid "XHTML 1.0 — Tags"
-msgstr "XHTML 1.0 - Oznake"
+msgstr "XHTML 1.0 — Oznake"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:1
 msgid "Bibliography (cite)"
@@ -1766,9 +1746,8 @@ msgid "Item with label"
 msgstr "Predmet z oznako"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:37
-#, fuzzy
 msgid "Latex — Tags"
-msgstr "Latex - oznake"
+msgstr "Latex — Oznake"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:38
 msgid "List description"
@@ -1919,31 +1898,24 @@ msgid "Unbreakable text"
 msgstr "Nelomljiva pisava"
 
 #: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
-msgid ""
-"Provides a method to easily insert commonly used tags/strings into a "
-"document without having to type them."
-msgstr ""
-"Omogoča enostavno vstavljanje pogosto uporabljenih oznak/nizov v dokument "
-"brez tipkanja."
+msgid "Provides a method to easily insert commonly used tags/strings into a document without having to type them."
+msgstr "Omogoča enostavno vstavljanje pogosto uporabljenih oznak/nizov v dokument brez tipkanja."
 
 #: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
 msgid "Tag list"
 msgstr "Seznam oznak"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:1
-#, fuzzy
 msgid "XSLT — Axes"
-msgstr "XLST - Osi"
+msgstr "XLST — Osi"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:2
-#, fuzzy
 msgid "XSLT — Elements"
-msgstr "XSLT - Predmeti"
+msgstr "XSLT — Predmeti"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:3
-#, fuzzy
 msgid "XSLT — Functions"
-msgstr "XSLT - Funkcije"
+msgstr "XSLT — Funkcije"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:4
 msgid "ancestor"
@@ -1998,6 +1970,5 @@ msgid "self"
 msgstr "sam"
 
 #: ../plugins/taglist/XUL.tags.xml.in.h:1
-#, fuzzy
 msgid "XUL — Tags"
-msgstr "XUL - Oznake"
+msgstr "XUL — Oznake"
