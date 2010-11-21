@@ -3,6 +3,7 @@
 # Copyright (C) 2003, 2004, 2005, 2006 Miloslav Trmac <mitr@volny.cz>.
 # Copyright (C) 2006 Lukas Novotny <lukasnov@cvs.gnome.org>.
 # This file is distributed under the same license as the gedit package.
+#
 # Michal Bukovjan <michal.bukovjan@openone.cz>, 2002.
 # Michal Bukovjan <bukm@centrum.cz>, 2003.
 # Miloslav Trmac <mitr@volny.cz>, 2003, 2004, 2005, 2006.
@@ -10,18 +11,20 @@
 # Petr Tomeš <ptomes@gmail.com>, 2006.
 # Jakub Friedl <jfriedl@suse.cz>, 2006, 2007.
 # Jiří Eischmann <jiri@eischmann.cz>, 2008, 2009.
-# Petr Kovar <pknbe@volny.cz>, 2008, 2009, 2010.
 # Kamil Páral <ripper42@gmail.com>, 2009.
 # Lucas Lommer <llommer@svn.gnome.org>, 2009. (just one fix).
+# Petr Kovar <pknbe@volny.cz>, 2008, 2009, 2010.
 # Marek Černocký <marek@manet.cz>, 2009, 2010.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:10+0100\n"
-"PO-Revision-Date: 2010-03-31 15:32+0200\n"
+"POT-Creation-Date: 2010-11-21 22:16+0100\n"
+"PO-Revision-Date: 2010-11-08 10:48+0100\n"
 "Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,87 +41,74 @@ msgid "Easy document navigation with bookmarks"
 msgstr "Jednoduché procházení dokumentem pomocí záložek"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-#, fuzzy
 msgid "Toggle Bookmark"
-msgstr "Záložky"
+msgstr "Přepnout záložku"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
 msgid "Toggle bookmark status of the current line"
-msgstr "Zobrazit nebo skrýt stavovou lištu v aktuálním okně"
+msgstr "Přepnout stav záložky na současném řádku"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto Next Bookmark"
 msgstr "Přejít na následující záložku"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
 msgid "Goto the next bookmark"
-msgstr "Přejít na další navštívené umístění"
+msgstr "Přejít na následující záložku"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
 msgid "Goto Previous Bookmark"
-msgstr "Přejít na předchozí umístění"
+msgstr "Přejít na předchozí záložku"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
 msgid "Goto the previous bookmark"
-msgstr "Zobrazit předchozí stránku"
+msgstr "Přejít na předchozí záložku"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "Automaticky zjistit kódování"
+msgstr "Automaticky přidává zavírací závorky."
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Bracket Completion"
-msgstr "Odpovídající závorky"
+msgstr "Dokončování závorek"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
 msgid "Character Map"
-msgstr "Kódování znaku"
+msgstr "Mapa znaků"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Vkládání speciálních znaků pouhým kliknutím."
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "Poznámka"
+msgstr "Komentování kódu"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Zakomentovat nebo odkomentovat vybraný blok kódu."
 
 #: ../plugins/codecomment/codecomment.py:90
-#, fuzzy
 msgid "Co_mment Code"
-msgstr "Poznámka"
+msgstr "Zako_mentovat kód"
 
 #: ../plugins/codecomment/codecomment.py:92
-#, fuzzy
 msgid "Comment the selected code"
-msgstr "Smazat vybraný text"
+msgstr "Zakomentovat vybraný kód"
 
 #: ../plugins/codecomment/codecomment.py:96
 msgid "U_ncomment Code"
 msgstr "_Odkomentovat kód"
 
 #: ../plugins/codecomment/codecomment.py:98
-#, fuzzy
 msgid "Uncomment the selected code"
-msgstr "Smazat vybraný text"
+msgstr "Odkomentovat vybraný kód"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Color Picker"
-msgstr "Barevné schéma"
+msgstr "Barevná pipeta"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
@@ -133,9 +123,8 @@ msgid "Pick a color from a dialog"
 msgstr "Vybrat barvu z dialogu"
 
 #: ../plugins/colorpicker/colorpicker.py:188
-#, fuzzy
 msgid "Pick Color"
-msgstr "Barva odkazu"
+msgstr "Výběr barvy"
 
 #: ../plugins/colorpicker/colorpicker.py:195
 msgid "_Insert"
@@ -147,39 +136,34 @@ msgid "Command line interface for advanced editing"
 msgstr "Rozhraní příkazového řádku k pokročilým úpravám"
 
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Commander"
-msgstr "_Barva příkazu:"
+msgstr "Příkazový režim"
 
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
 msgid "Draw Spaces"
-msgstr "Použít mezery"
+msgstr "Vykreslovat mezery"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Vykreslovat mezery a tabulátory"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
 msgid "Draw leading spaces"
-msgstr "Nedělitelná mezera"
+msgstr "Vykreslovat úvodní mezery"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Vykreslovat nové řádky"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "Nedělitelná mezera"
+msgstr "Vykreslovat nezalomitelné mezery"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
 msgid "Draw spaces"
-msgstr "Vložit mezery"
+msgstr "Vykreslovat mezery"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
@@ -190,19 +174,16 @@ msgid "Draw tabs"
 msgstr "Vykreslovat tabulátory"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "Odstranit koncové mezery"
+msgstr "Vykreslovat koncové mezery"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
 msgid "Show _White Space"
-msgstr "Zobrazit následující stránku"
+msgstr "Ukázat _bílé znaky"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "Vkládat _mezery místo tabelátorů"
+msgstr "Ukázat mezery a tabulátory"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
@@ -225,23 +206,20 @@ msgid "Join/Split Lines"
 msgstr "Spojit/Rozdělit řádky"
 
 #: ../plugins/joinlines/joinlines.py:56
-#, fuzzy
 msgid "_Join Lines"
-msgstr "Řádek"
+msgstr "Spo_jit řádky"
 
 #: ../plugins/joinlines/joinlines.py:57
-#, fuzzy
 msgid "Join the selected lines"
-msgstr "Barva vybraných odkazů"
+msgstr "Spojit vybrané řádky"
 
 #: ../plugins/joinlines/joinlines.py:59
 msgid "_Split Lines"
 msgstr "_Rozdělit řádky"
 
 #: ../plugins/joinlines/joinlines.py:60
-#, fuzzy
 msgid "Split the selected lines"
-msgstr "Smazat vybraný text"
+msgstr "Rozdělit vybrané řádky"
 
 #. ex:ts=4:et:
 #: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
@@ -320,32 +298,28 @@ msgid "Easily increase and decrease the text size"
 msgstr "Snadné zvětšování a zmenšování velikosti textu"
 
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Text Size"
-msgstr "Velikost tabelátoru"
+msgstr "Velikost textu"
 
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
 msgstr "_Uložená sezení"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "_Save current session"
-msgstr "Nahradit výběr"
+msgstr "Uložit současné _sezení"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "Save the current document list as a new session"
-msgstr "Přesunout aktuální dokument do nového okna"
+msgstr "Uložit seznam aktuálních dokumentů jako nové sezení"
 
 #: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "Spravovat _uložená sezení…"
 
 #: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
 msgid "Open the saved session manager"
-msgstr "Otevřít příručku aplikace GEdit"
+msgstr "Otevřít správce uložených sezení"
 
 #: ../plugins/sessionsaver/__init__.py:106
 #, python-format
@@ -382,33 +356,28 @@ msgid "Forget you're not using tabulations."
 msgstr "Zapomeňte, že nepoužíváte tabulace."
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Smart Spaces"
-msgstr "Vložit mezery"
+msgstr "Inteligentní mezery"
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "Otevřít terminál v umístění dokumentu"
+msgstr "Vložit terminál do dolního panelu."
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Embedded Terminal"
-msgstr "Vložený objekt"
+msgstr "Vestavěný terminál"
 
 #: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "Terminál"
 
 #: ../plugins/terminal/terminal.py:329
-#, fuzzy
 msgid "C_hange Directory"
-msgstr "Změni_t na:"
+msgstr "Z_měnit složku"
 
 #: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
-#, fuzzy
 msgid "Document Words"
-msgstr "Tělo dokumentu"
+msgstr "Slova dokumentu"
 
 #: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
 msgid "Word Completion"
@@ -426,11 +395,10 @@ msgstr "SyncTeX"
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr "Synchronizovat mezi formáty LaTeX a PDF s aplikacemi gedit a evince."
 
-#: ../plugins/synctex/synctex/synctex.py:280
-#: ../plugins/synctex/synctex/synctex.py:281
-#, fuzzy
+#: ../plugins/synctex/synctex/synctex.py:283
+#: ../plugins/synctex/synctex/synctex.py:284
 msgid "Forward Search"
-msgstr "Odkaz vpřed"
+msgstr "Hledat vpřed"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
@@ -876,14 +844,12 @@ msgid "HTML version"
 msgstr "Verze HTML"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:118
-#, fuzzy
 msgid "HTML — Special Characters"
-msgstr "HTML - Speciální znaky"
+msgstr "HTML — speciální znaky"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:119
-#, fuzzy
 msgid "HTML — Tags"
-msgstr "HTML - Tagy"
+msgstr "HTML — značky"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:120
 msgid "HTTP header name"
@@ -1153,7 +1119,7 @@ msgstr "Bez lámání řádků (zastaralé)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:194
 msgid "Non-breaking space"
-msgstr "Nedělitelná mezera"
+msgstr "Nezalomitelná mezera"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:195
 msgid "Note"
@@ -1523,24 +1489,20 @@ msgid "Table summary"
 msgstr "Souhrn tabulky"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:292
-#, fuzzy
 msgid "Target — Blank"
-msgstr "Cíl - prázdný"
+msgstr "Cíl — prázdný"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:293
-#, fuzzy
 msgid "Target — Parent"
-msgstr "Cíl - rodič"
+msgstr "Cíl — rodič"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:294
-#, fuzzy
 msgid "Target — Self"
-msgstr "Cíl - tentýž"
+msgstr "Cíl — tentýž"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:295
-#, fuzzy
 msgid "Target — Top"
-msgstr "Cíl - vršek"
+msgstr "Cíl — vršek"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:296
 msgid "Teletype or monospace text style"
@@ -1626,9 +1588,8 @@ msgid "Width"
 msgstr "Šířka"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:319
-#, fuzzy
 msgid "XHTML 1.0 — Tags"
-msgstr "XHTML 1.0 - Tagy"
+msgstr "XHTML 1.0 — značky"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:1
 msgid "Bibliography (cite)"
@@ -1771,9 +1732,8 @@ msgid "Item with label"
 msgstr "Položka s popiskem"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:37
-#, fuzzy
 msgid "Latex — Tags"
-msgstr "Latex - Tagy"
+msgstr "Latex — značky"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:38
 msgid "List description"
@@ -1936,19 +1896,16 @@ msgid "Tag list"
 msgstr "Seznam tagů"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:1
-#, fuzzy
 msgid "XSLT — Axes"
-msgstr "XSLT - Osy"
+msgstr "XSLT — osy"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:2
-#, fuzzy
 msgid "XSLT — Elements"
-msgstr "XSLT - Elementy"
+msgstr "XSLT — elementy"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:3
-#, fuzzy
 msgid "XSLT — Functions"
-msgstr "XSLT - Funkce"
+msgstr "XSLT — funkce"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:4
 msgid "ancestor"
@@ -2003,6 +1960,5 @@ msgid "self"
 msgstr "self"
 
 #: ../plugins/taglist/XUL.tags.xml.in.h:1
-#, fuzzy
 msgid "XUL — Tags"
-msgstr "XUL - Tagy"
+msgstr "XUL — značky"
