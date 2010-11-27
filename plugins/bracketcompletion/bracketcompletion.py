@@ -19,9 +19,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gedit
-import gtk
-from gtk import gdk
+from gi.repository import GObject, Gtk, Gdk, Gedit
 
 common_brackets = {
     '(' : ')',
@@ -47,16 +45,22 @@ language_brackets = {
 }
 
 
-class BracketCompletionViewHelper(object):
-    def __init__(self, view):
-        self._view = view
-        self._doc = view.get_buffer()
+class BracketCompletionPlugin(GObject.Object, Gedit.ViewActivatable):
+    __gtype_name__ = "BracketCompletion"
+
+    view = GObject.property(type=GObject.Object)
+
+    def __init__(self):
+        GObject.Object.__init__(self)
+
+    def do_activate(self):
+        self._doc = self.view.get_buffer()
         self._last_iter = None
         self._stack = []
         self._relocate_marks = True
         self.update_language()
 
-        #Add the markers to the buffer
+        # Add the markers to the buffer
         insert = self._doc.get_iter_at_mark(self._doc.get_insert())
         self._mark_begin = self._doc.create_mark(None, insert, True)
         self._mark_end = self._doc.create_mark(None, insert, False)
@@ -64,18 +68,18 @@ class BracketCompletionViewHelper(object):
         self._handlers = [
             None,
             None,
-            view.connect('notify::editable', self.on_notify_editable),
+            self.view.connect('notify::editable', self.on_notify_editable),
             self._doc.connect('notify::language', self.on_notify_language),
             None,
         ]
         self.update_active()
 
-    def deactivate(self):
+    def do_deactivate(self):
         if self._handlers[0]:
-            self._view.disconnect(self._handlers[0])
-            self._view.disconnect(self._handlers[1])
+            self.view.disconnect(self._handlers[0])
+            self.view.disconnect(self._handlers[1])
             self._doc.disconnect(self._handlers[4])
-        self._view.disconnect(self._handlers[2])
+        self.view.disconnect(self._handlers[2])
         self._doc.disconnect(self._handlers[3])
         self._doc.delete_mark(self._mark_begin)
         self._doc.delete_mark(self._mark_end)
@@ -83,20 +87,20 @@ class BracketCompletionViewHelper(object):
     def update_active(self):
         # Don't activate the feature if the buffer isn't editable or if
         # there are no brackets for the language
-        active = self._view.get_editable() and \
+        active = self.view.get_editable() and \
                  self._brackets is not None
 
         if active and self._handlers[0] is None:
-            self._handlers[0] = self._view.connect('event-after',
+            self._handlers[0] = self.view.connect('event-after',
                                                    self.on_event_after)
-            self._handlers[1] = self._view.connect('key-press-event',
+            self._handlers[1] = self.view.connect('key-press-event',
                                                    self.on_key_press_event)
             self._handlers[4] = self._doc.connect('delete-range',
                                                   self.on_delete_range)
         elif not active and self._handlers[0] is not None:
-            self._view.disconnect(self._handlers[0])
+            self.view.disconnect(self._handlers[0])
             self._handlers[0] = None
-            self._view.disconnect(self._handlers[1])
+            self.view.disconnect(self._handlers[1])
             self._handlers[1] = None
             self._doc.disconnect(self._handlers[4])
             self._handlers[4] = None
@@ -118,11 +122,11 @@ class BracketCompletionViewHelper(object):
         # get the corresponding keyvals
         self._bracket_keyvals = set()
         for b in self._brackets:
-            kv = gtk.gdk.unicode_to_keyval(ord(b[-1]))
+            kv = Gdk.unicode_to_keyval(ord(b[-1]))
             if (kv):
                 self._bracket_keyvals.add(kv)
         for b in close_brackets:
-            kv = gtk.gdk.unicode_to_keyval(ord(b[-1]))
+            kv = Gdk.unicode_to_keyval(ord(b[-1]))
             if (kv):
                 self._bracket_keyvals.add(kv)
 
@@ -191,13 +195,13 @@ class BracketCompletionViewHelper(object):
         self.update_active()
 
     def on_key_press_event(self, view, event):
-        if event.state & (gdk.CONTROL_MASK | gdk.MOD1_MASK):
+        if event.state & (Gdk.ModifierType.CONTROL_MASK | Gdk.ModifierType.MOD1_MASK):
             return False
 
-        if event.keyval in (gtk.keysyms.Left, gtk.keysyms.Right):
+        if event.keyval in (Gdk.KEY_Left, Gdk.KEY_Right):
             self._stack = []
 
-        if event.keyval == gtk.keysyms.BackSpace:
+        if event.keyval == Gdk.KEY_BackSpace:
             self._stack = []
 
             if self._last_iter == None:
@@ -211,7 +215,7 @@ class BracketCompletionViewHelper(object):
             self._last_iter = None
             return True
 
-        if event.keyval in (gtk.keysyms.Return, gtk.keysyms.KP_Enter) and \
+        if event.keyval in (Gdk.KEY_Return, Gdk.KEY_KP_Enter) and \
            view.get_auto_indent() and self._last_iter != None:
             # This code has barely been adapted from gtksourceview.c
             # Note: it might break IM!
@@ -231,7 +235,7 @@ class BracketCompletionViewHelper(object):
             # Leave the cursor where we want it to be
             iter.backward_chars(len(indent))
             self._doc.place_cursor(iter)
-            self._view.scroll_mark_onscreen(mark)
+            self.view.scroll_mark_onscreen(mark)
 
             self._last_iter = None
             return True
@@ -240,8 +244,8 @@ class BracketCompletionViewHelper(object):
         return False
 
     def on_event_after(self, view, event):
-        if event.type != gdk.KEY_PRESS or \
-           event.state & (gdk.CONTROL_MASK | gdk.MOD1_MASK) or \
+        if event.type != Gdk.EventType.KEY_PRESS or \
+           event.state & (Gdk.ModifierType.CONTROL_MASK | Gdk.ModifierType.MOD1_MASK) or \
            event.keyval not in self._bracket_keyvals:
             return
 
@@ -286,7 +290,7 @@ class BracketCompletionViewHelper(object):
         # Example: word = ) and word2 = )
         if word == word2:
             if bracket2 != None and self._stack != [] and \
-               self._stack[len(self._stack) - 1] == bracket2:
+              self._stack[len(self._stack) - 1] == bracket2:
                 self._stack.pop()
                 self._doc.handler_block(self._handlers[4])
                 self._doc.delete(start, end)
@@ -308,42 +312,5 @@ class BracketCompletionViewHelper(object):
 
     def on_delete_range(self, doc, start, end):
         self._stack = []
-
-class BracketCompletionPlugin(gedit.Plugin):
-    WINDOW_DATA_KEY = "BracketCompletionPluginWindowData"
-    VIEW_DATA_KEY = "BracketCompletionPluginViewData"
-
-    def __init__(self):
-        super(BracketCompletionPlugin, self).__init__()
-
-    def add_helper(self, view):
-        helper = BracketCompletionViewHelper(view)
-        view.set_data(self.VIEW_DATA_KEY, helper)
-
-    def remove_helper(self, view):
-        view.get_data(self.VIEW_DATA_KEY).deactivate()
-        view.set_data(self.VIEW_DATA_KEY, None)
-
-    def activate(self, window):
-        for view in window.get_views():
-            self.add_helper(view)
-
-        added_hid = window.connect("tab-added",
-                                   lambda w, t: self.add_helper(t.get_view()))
-        removed_hid = window.connect("tab-removed",
-                                     lambda w, t: self.remove_helper(t.get_view()))
-        window.set_data(self.WINDOW_DATA_KEY, (added_hid, removed_hid))
-
-    def deactivate(self, window):
-        handlers = window.get_data(self.WINDOW_DATA_KEY)
-        for handler_id in handlers:
-            window.disconnect(handler_id)
-        window.set_data(self.WINDOW_DATA_KEY, None)
-
-        for view in window.get_views():
-            self.remove_helper(view)
-
-    def update_ui(self, window):
-        pass
 
 # ex:ts=4:et:
