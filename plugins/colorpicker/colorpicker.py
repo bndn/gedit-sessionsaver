@@ -45,45 +45,43 @@ ui_str = """
 class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
     __gtype_name__ = "ColorPickerPlugin"
 
+    window = GObject.property(type=GObject.Object)
+
     def __init__(self):
         GObject.Object.__init__(self)
         self._dialog = None
 
-    def do_activate(self, window):
-        self._window = window
+    def do_activate(self):
+        self._insert_menu()
+        self._update()
 
-        self.insert_menu()
-        self.update()
+    def do_deactivate(self):
+        self._remove_menu()
 
-    def do_deactivate(self, window):
-        self.remove_menu()
+    def do_update_state(self):
+        self._update()
 
-    def do_update_state(self, window):
-        self.update()
-
-    def update(self):
-        tab = self._window.get_active_tab()
+    def _update(self):
+        tab = self.window.get_active_tab()
         self._action_group.set_sensitive(tab != None)
 
         if not tab and self._dialog and \
-                self._dialog.get_transient_for() == self._window:
+                self._dialog.get_transient_for() == self.window:
             self._dialog.response(Gtk.ResponseType.CLOSE)
 
-    def insert_menu(self):
-        manager = self._window.get_ui_manager()
-
-        self._action_group = Gtk.ActionGroup()
+    def _insert_menu(self):
+        manager = self.window.get_ui_manager()
+        self._action_group = Gtk.ActionGroup(name="GeditColorPickerPluginActions")
         self._action_group.add_actions(
                 [("ColorPicker", None, _("Pick _Color..."), None,
                  _("Pick a color from a dialog"),
                  lambda a, b: self.on_color_picker_activate())])
 
-        manager.insert_action_group(self._action_group, -1)
+        manager.insert_action_group(self._action_group)
         self._ui_id = manager.add_ui_from_string(ui_str)
 
-    def remove_menu(self):
-        manager = self._window.get_ui_manager()
-
+    def _remove_menu(self):
+        manager = self.window.get_ui_manager()
         manager.remove_ui(self._ui_id)
         manager.remove_action_group(self._action_group)
         manager.ensure_update()
@@ -105,8 +103,7 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
 
     def get_color_position(self, buf):
         bounds = buf.get_selection_bounds()
-
-        if not bounds[0] or bounds[1].equal(bounds[1]):
+        if bounds == ():
             # No selection, find color in the current cursor position
             start = buf.get_iter_at_mark(buf.get_insert())
 
@@ -132,7 +129,7 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
         return start, end
 
     def insert_color(self, text):
-        view = self._window.get_active_view()
+        view = self.window.get_active_view()
 
         if not view or not view.get_editable():
             return
@@ -165,7 +162,7 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
         color.blue = self.scale_color_component(color.blue)
 
     def get_current_color(self):
-        doc = self._window.get_active_document()
+        doc = self.window.get_active_document()
 
         if not doc:
             return None
@@ -209,7 +206,7 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
             if parsed:
                 self._dialog.colorsel.set_current_color(color)
 
-        self._dialog.set_transient_for(self._window)
+        self._dialog.set_transient_for(self.window)
         self._dialog.present()
 
     def on_dialog_response(self, dialog, response):
