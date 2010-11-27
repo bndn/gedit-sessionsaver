@@ -24,44 +24,44 @@ from gi.repository import GObject, Gtk, Gdk, GtkSource, Gedit
 class SmartSpacesPlugin(GObject.Object, Gedit.ViewActivatable):
     __gtype_name__ = "SmartSpacesPlugin"
 
+    view = GObject.property(type=GObject.Object)
+
     def __init__(self):
         GObject.Object.__init__(self)
 
-    def do_activate(self, view):
-        self._view = view
-
+    def do_activate(self):
         self._handlers = [
             None,
-            view.connect('notify::editable', self.on_notify),
-            view.connect('notify::insert-spaces-instead-of-tabs', self.on_notify)
+            self.view.connect('notify::editable', self.on_notify),
+            self.view.connect('notify::insert-spaces-instead-of-tabs', self.on_notify)
         ]
 
-    def do_deactivate(self, view):
+    def do_deactivate(self):
         for handler in self._handlers:
             if handler is not None:
-                self._view.disconnect(handler)
+                self.view.disconnect(handler)
 
     def update_active(self):
         # Don't activate the feature if the buffer isn't editable or if
         # we're using tabs
-        active = self._view.get_editable() and \
-                 self._view.get_insert_spaces_instead_of_tabs()
+        active = self.view.get_editable() and \
+                 self.view.get_insert_spaces_instead_of_tabs()
 
         if active and self._handlers[0] is None:
-            self._handlers[0] = self._view.connect('key-press-event',
+            self._handlers[0] = self.view.connect('key-press-event',
                                                    self.on_key_press_event)
         elif not active and self._handlers[0] is not None:
-            self._view.disconnect(self._handlers[0])
+            self.view.disconnect(self._handlers[0])
             self._handlers[0] = None
 
     def on_notify(self, view, pspec):
         self.update_active()
 
     def get_real_indent_width(self):
-        indent_width = self._view.get_indent_width()
+        indent_width = self.view.get_indent_width()
 
         if indent_width < 0:
-             indent_width = self._view.get_tab_width()
+             indent_width = self.view.get_tab_width()
 
         return indent_width
 
@@ -69,7 +69,7 @@ class SmartSpacesPlugin(GObject.Object, Gedit.ViewActivatable):
         # Only take care of backspace and shift+backspace
         mods = Gtk.accelerator_get_default_mod_mask()
 
-        if event.key.keyval != Gdk.BackSpace or \
+        if event.key.keyval != Gdk.KEY_BackSpace or \
            event.key.state & mods != 0 and event.key.state & mods != Gdk.ModifierType.SHIFT_MASK:
             return False
 
