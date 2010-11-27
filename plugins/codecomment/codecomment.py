@@ -54,18 +54,19 @@ ui_str = """
 class CodeCommentPlugin(GObject.Object, Gedit.WindowActivatable):
     __gtype_name__ = "CodeCommentPlugin"
 
+    window = GObject.property(type=GObject.Object)
+
     def __init__(self):
         GObject.Object.__init__(self)
 
-    def do_activate(self, window):
-        self._window = window
+    def do_activate(self):
         self._insert_menu()
 
-    def do_deactivate(self, window):
+    def do_deactivate(self):
         self._remove_menu()
 
-    def do_update_state(self, window):
-        doc = self._window.get_active_document()
+    def do_update_state(self):
+        doc = self.window.get_active_document()
         if doc:
             #FIXME: This crashes
             #lang = doc.get_language()
@@ -77,14 +78,14 @@ class CodeCommentPlugin(GObject.Object, Gedit.WindowActivatable):
         self._action_group.set_sensitive(True)
 
     def _remove_menu(self):
-        manager = self._window.get_ui_manager()
+        manager = self.window.get_ui_manager()
         manager.remove_ui(self._ui_id)
         manager.remove_action_group(self._action_group)
         manager.ensure_update()
 
     def _insert_menu(self):
-        manager = self._window.get_ui_manager()
-        self._action_group = Gtk.ActionGroup()
+        manager = self.window.get_ui_manager()
+        self._action_group = Gtk.ActionGroup(name="GeditCodeCommentPluginActions")
         self._action_group.add_actions([("CodeComment",
                                          None,
                                          _("Co_mment Code"),
@@ -97,9 +98,9 @@ class CodeCommentPlugin(GObject.Object, Gedit.WindowActivatable):
                                          "<control><shift>M",
                                          _("Uncomment the selected code"),
                                          lambda a, w: self.do_comment (w.get_active_document(), True))],
-                                        self._window)
+                                        self.window)
 
-        manager.insert_action_group(self._action_group, -1)
+        manager.insert_action_group(self._action_group)
         self._ui_id = manager.add_ui_from_string(ui_str)
 
     def get_block_comment_tags(self, lang):
@@ -214,10 +215,11 @@ class CodeCommentPlugin(GObject.Object, Gedit.WindowActivatable):
         document.delete_mark(emark)
 
     def do_comment(self, document, unindent=False):
-        selected, start, end = document.get_selection_bounds()
+        sel = document.get_selection_bounds()
         currentPosMark = document.get_insert()
         deselect = False
-        if selected:
+        if sel != ():
+            (start, end) = sel
             if start.ends_line():
                 start.forward_line()
             elif not start.starts_line():
