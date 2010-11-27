@@ -55,7 +55,6 @@ typedef struct
 	guint user_action;
 } InsertData;
 
-static void update_background_color		(GeditView   *view);
 static void on_style_scheme_notify		(GObject     *object,
 						 GParamSpec  *pspec,
 						 GeditView   *view);
@@ -262,6 +261,7 @@ uninstall_menu (GeditBookmarksPlugin *plugin)
 	gtk_ui_manager_remove_action_group (manager, priv->action_group);
 
 	g_object_unref (priv->action_group);
+	priv->action_group = NULL;
 }
 
 static void
@@ -292,6 +292,12 @@ disable_bookmarks (GeditView *view)
 	g_object_set_data (G_OBJECT (buffer), INSERT_DATA_KEY, NULL);
 }
 
+static GtkSourceMarkCategory *
+get_bookmark_category (GtkSourceView *view)
+{
+	return gtk_source_view_get_mark_category (view, BOOKMARK_CATEGORY);
+}
+
 static GdkPixbuf *
 get_bookmark_pixbuf (GeditBookmarksPlugin *plugin)
 {
@@ -310,6 +316,37 @@ get_bookmark_pixbuf (GeditBookmarksPlugin *plugin)
 }
 
 static void
+update_background_color (GtkSourceMarkCategory *category, GtkSourceBuffer *buffer)
+{
+	GtkSourceStyleScheme *scheme;
+	GtkSourceStyle *style;
+
+	scheme = gtk_source_buffer_get_style_scheme (buffer);
+	style = gtk_source_style_scheme_get_style (scheme, "search-match");
+
+	if (style)
+	{
+		gboolean bgset;
+		gchar *bg;
+
+		g_object_get (style, "background-set", &bgset, "background", &bg, NULL);
+
+		if (bgset)
+		{
+			GdkColor color;
+
+			gdk_color_parse (bg, &color);
+			gtk_source_mark_category_set_background (category, &color);
+			g_free (bg);
+
+			return;
+		}
+	}
+
+	gtk_source_mark_category_set_background (category, NULL);
+}
+
+static void
 enable_bookmarks (GeditView            *view,
 		  GeditBookmarksPlugin *plugin)
 {
@@ -320,13 +357,15 @@ enable_bookmarks (GeditView            *view,
 	/* Make sure the category pixbuf is set */
 	if (pixbuf)
 	{
+		GtkSourceMarkCategory *category;
+		GtkTextBuffer *buffer;
 		InsertData *data;
-		GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
 
-		update_background_color (view);
-		gtk_source_view_set_mark_category_icon_from_pixbuf (GTK_SOURCE_VIEW (view),
-								    BOOKMARK_CATEGORY,
-								    pixbuf);
+		category = get_bookmark_category (GTK_SOURCE_VIEW (view));
+		buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
+
+		update_background_color (category, GTK_SOURCE_BUFFER (buffer));
+		gtk_source_mark_category_set_pixbuf (category, pixbuf);
 		g_object_unref (pixbuf);
 
 		gtk_source_view_set_show_line_marks (GTK_SOURCE_VIEW (view), TRUE);
@@ -834,56 +873,22 @@ gedit_bookmarks_plugin_class_finalize (GeditBookmarksPluginClass *klass)
 }
 
 static void
-update_background_color (GeditView *view)
-{
-	GtkSourceView *source_view = GTK_SOURCE_VIEW (view);
-	GtkSourceStyle *style;
-	GtkSourceStyleScheme *scheme;
-	GtkTextBuffer *buffer;
-
-	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
-
-	scheme = gtk_source_buffer_get_style_scheme (GTK_SOURCE_BUFFER (buffer));
-	style = gtk_source_style_scheme_get_style (scheme, "search-match");
-
-	if (style)
-	{
-		gboolean bgset;
-		gchar *bg;
-
-		g_object_get (style, "background-set", &bgset, "background", &bg, NULL);
-
-		if (bgset)
-		{
-			GdkColor color;
-			gdk_color_parse (bg, &color);
-			gtk_source_view_set_mark_category_background (source_view,
-								      BOOKMARK_CATEGORY,
-								      &color);
-			g_free (bg);
-
-			return;
-		}
-	}
-
-	gtk_source_view_set_mark_category_background (source_view,
-						      BOOKMARK_CATEGORY,
-						      NULL);
-}
-
-static void
 on_style_scheme_notify (GObject     *object,
 			GParamSpec  *pspec,
 			GeditView   *view)
 {
-	update_background_color (view);
+	GtkSourceMarkCategory *category;
+
+	category = get_bookmark_category (GTK_SOURCE_VIEW (view));
+
+	update_background_color (category, GTK_SOURCE_BUFFER (object));
 }
 
 static void
 on_delete_range (GtkTextBuffer *buffer,
-	     	 GtkTextIter   *start,
-	     	 GtkTextIter   *end,
-	     	 gpointer       user_data)
+		 GtkTextIter   *start,
+		 GtkTextIter   *end,
+		 gpointer       user_data)
 {
 	GtkTextIter iter;
 	GSList *marks;
