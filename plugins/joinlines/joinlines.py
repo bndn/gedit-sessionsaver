@@ -19,7 +19,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gedit, gtk
+from gi.repository import GObject, Gtk, Gedit
 import gettext
 
 try:
@@ -43,95 +43,94 @@ ui_str = """
 </ui>
 """
 
-class JoinLinesPlugin(gedit.Plugin):
+class JoinLinesPlugin(GObject.Object, Gedit.WindowActivatable):
+    __gtype_name__ = "JoinLinesPlugin"
+
+    window = GObject.property(type=GObject.Object)
+
     def __init__(self):
-        gedit.Plugin.__init__(self)
+        GObject.Object.__init__(self)
 
-    def activate(self, window):
-        manager = window.get_ui_manager()
-        data = dict()
+    def do_activate(self):
+        self._insert_menu()
 
-        data["action_group"] = gtk.ActionGroup("GeditJoinLinesPluginActions")
-        data["action_group"].add_actions(
+    def do_deactivate(self):
+        self._remove_menu()
+
+    def do_update_state(self):
+        view = self.window.get_active_view()
+        self._action_group.set_sensitive(view is not None and \
+                                         view.get_editable())
+
+    def _remove_menu(self):
+        manager = self.window.get_ui_manager()
+        manager.remove_ui(self._ui_id)
+        manager.remove_action_group(self._action_group)
+        manager.ensure_update()
+
+    def _insert_menu(self):
+        manager = self.window.get_ui_manager()
+        self._action_group = Gtk.ActionGroup(name="GeditJoinLinesPluginActions")
+        self._action_group.add_actions(
             [("JoinLines", None, _("_Join Lines"), "<Ctrl>J",
               _("Join the selected lines"),
               lambda a, w: join_lines(w)),
              ("SplitLines", None, _('_Split Lines'), "<Shift><Ctrl>J",
               _("Split the selected lines"),
               lambda a, w: split_lines(w))],
-            window)
+            self.window)
 
-        manager.insert_action_group(data["action_group"], -1)
-        data["ui_id"] = manager.add_ui_from_string(ui_str)
-
-        window.set_data("JoinLinesPluginInfo", data)
-        update_sensitivity(window)
-
-    def deactivate(self, window):
-        data = window.get_data("JoinLinesPluginInfo")
-        manager = window.get_ui_manager()
-        manager.remove_ui(data["ui_id"])
-        manager.remove_action_group(data["action_group"])
-        manager.ensure_update()
-        window.set_data("JoinLinesPluginInfo", None)
-
-    def update_ui(self, window):
-        update_sensitivity(window)
-
-def update_sensitivity(window):
-    data = window.get_data("JoinLinesPluginInfo")
-    view = window.get_active_view()
-    data["action_group"].set_sensitive(view is not None and \
-                                       view.get_editable())
+        manager.insert_action_group(self._action_group)
+        self._ui_id = manager.add_ui_from_string(ui_str)
 
 def join_lines(window):
-    document = window.get_active_document()
-    if document is None:
+    doc = window.get_active_document()
+    if doc is None:
         return
 
-    document.begin_user_action()
+    doc.begin_user_action()
 
     # If there is a selection use it, otherwise join the
     # next line
     try:
-        start, end = document.get_selection_bounds()
+        start, end = doc.get_selection_bounds()
     except ValueError:
-        start = document.get_iter_at_mark(document.get_insert())
+        start = doc.get_iter_at_mark(doc.get_insert())
         end = start.copy()
         end.forward_line()
 
-    end_mark = document.create_mark(None, end)
+    end_mark = doc.create_mark(None, end)
 
     if not start.ends_line():
         start.forward_to_line_end()
 
-    while document.get_iter_at_mark(end_mark).compare(start) == 1:
+    while doc.get_iter_at_mark(end_mark).compare(start) == 1:
         end = start.copy()
         while end.get_char() in ('\r', '\n', ' ', '\t'):
             end.forward_char()
-        document.delete(start, end)
+        doc.delete(start, end)
 
-        document.insert(start, ' ')
+        doc.insert(start, ' ')
         start.forward_to_line_end()
 
-    document.delete_mark(end_mark)
-    document.end_user_action()
+    doc.delete_mark(end_mark)
+    doc.end_user_action()
 
 def split_lines(window):
     view = window.get_active_view()
     if view is None:
         return
 
-    document = view.get_buffer()
+    doc = view.get_buffer()
 
     width = view.get_right_margin_position()
     tabwidth = view.get_tab_width()
 
-    document.begin_user_action()
+    doc.begin_user_action()
 
     try:
         # get selection bounds
-        start, end = document.get_selection_bounds()
+        start, end = doc.get_selection_bounds()
 
         # measure indent until selection start
         indent_iter = start.copy()
@@ -145,7 +144,7 @@ def split_lines(window):
             indent_iter.forward_char()
     except ValueError:
         # select from start to line end
-        start = document.get_iter_at_mark(document.get_insert())
+        start = doc.get_iter_at_mark(doc.get_insert())
         start.set_line_offset(0)
         end = start.copy()
         if not end.ends_line():
@@ -158,7 +157,7 @@ def split_lines(window):
             indent = indent + indent_iter.get_char()
             indent_iter.forward_char()
 
-    end_mark = document.create_mark(None, end)
+    end_mark = doc.create_mark(None, end)
 
     # ignore first word
     previous_word_end = start.copy()
@@ -173,26 +172,26 @@ def split_lines(window):
         forward_to_word_end(current_word_end)
 
         if ord(current_word_end.get_char()) and \
-           document.get_iter_at_mark(end_mark).compare(current_word_end) >= 0:
+           doc.get_iter_at_mark(end_mark).compare(current_word_end) >= 0:
 
             word_length = current_word_end.get_offset() - \
                           current_word_start.get_offset()
 
-            document.delete(previous_word_end, current_word_start)
+            doc.delete(previous_word_end, current_word_start)
 
             line_offset = get_line_offset(current_word_start, tabwidth) + word_length
             if line_offset > width - 1:
-                document.insert(current_word_start, '\n' + indent)
+                doc.insert(current_word_start, '\n' + indent)
             else:
-                document.insert(current_word_start, ' ')
+                doc.insert(current_word_start, ' ')
 
             previous_word_end = current_word_start.copy()
             previous_word_end.forward_chars(word_length)
         else:
             break
 
-    document.delete_mark(end_mark)
-    document.end_user_action()
+    doc.delete_mark(end_mark)
+    doc.end_user_action()
 
 def get_line_offset(text_iter, tabwidth):
     offset_iter = text_iter.copy()
