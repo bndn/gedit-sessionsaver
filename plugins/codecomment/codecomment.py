@@ -66,16 +66,13 @@ class CodeCommentPlugin(GObject.Object, Gedit.WindowActivatable):
         self._remove_menu()
 
     def do_update_state(self):
+        sensitive = False
         doc = self.window.get_active_document()
         if doc:
-            #FIXME: This crashes
-            #lang = doc.get_language()
-            lang = None
+            lang = doc.get_language()
             if lang is not None:
                 sensitive = self.get_comment_tags(lang) != (None, None)
-                self._action_group.set_sensitive(sensitive)
-                return
-        self._action_group.set_sensitive(True)
+        self._action_group.set_sensitive(sensitive)
 
     def _remove_menu(self):
         manager = self.window.get_ui_manager()
