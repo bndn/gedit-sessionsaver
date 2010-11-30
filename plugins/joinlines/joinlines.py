@@ -103,6 +103,11 @@ def join_lines(window):
     if not start.ends_line():
         start.forward_to_line_end()
 
+    # Include trailing spaces in the chunk to be removed
+    while start.backward_char() and start.get_char() in ('\t', ' '):
+        pass
+    start.forward_char()
+
     while doc.get_iter_at_mark(end_mark).compare(start) == 1:
         end = start.copy()
         while end.get_char() in ('\r', '\n', ' ', '\t'):
