@@ -19,25 +19,15 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gedit
-import gtksourceview2 as gsv
-import gtk
-import glib
 import re
-
+import time
+import xml.sax.saxutils
+from gettext import gettext as _
+from gi.repository import GLib, Pango, Gdk, Gtk, Gedit
 from signals import Signals
 import constants
-import time
-import pango
-import xml.sax.saxutils
 
 from gpdefs import *
-
-try:
-    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
-except:
-    _ = lambda s: s
 
 class DocumentHelper(Signals):
     def __init__(self, view):
@@ -60,7 +50,7 @@ class DocumentHelper(Signals):
 
         self.connect_signal(self._view, 'notify::buffer', self.on_notify_buffer)
         self.connect_signal(self._view, 'key-press-event', self.on_key_press_event)
-        self.connect_signal(self._view, 'expose-event', self.on_view_expose_event)
+        self.connect_signal(self._view, 'draw', self.on_view_draw)
         self.connect_signal(self._view, 'style-set', self.on_view_style_set)
         self.connect_signal(self._view, 'undo', self.on_view_undo)
         self.connect_signal(self._view, 'copy-clipboard', self.on_copy_clipboard)
@@ -95,8 +85,12 @@ class DocumentHelper(Signals):
     def _update_selection_tag(self):
         style = self._view.get_style()
 
-        fg = style.text[gtk.STATE_SELECTED]
-        bg = style.base[gtk.STATE_SELECTED]
+# TODO: this is broken in pygi, but since style are going to change in
+# gtk it is not worth fixing
+#        fg = style.text[Gtk.StateType.SELECTED]
+#        bg = style.base[Gtk.StateType.SELECTED]
+        fg = Gdk.Color(0, 0, 0)
+        bg = Gdk.Color(1, 0, 0)
 
         self._selection_tag.props.foreground_gdk = fg
         self._selection_tag.props.background_gdk = bg
@@ -111,7 +105,7 @@ class DocumentHelper(Signals):
 
         self._buffer = None
 
-        if newbuf == None or not isinstance(newbuf, gedit.Document):
+        if newbuf == None or not isinstance(newbuf, Gedit.Document):
             return
 
         if newbuf != None:
@@ -141,27 +135,27 @@ class DocumentHelper(Signals):
         self._view = None
 
         if self._status_timeout != 0:
-            glib.source_remove(self._status_timeout)
+            GLib.source_remove(self._status_timeout)
             self._status_timeout = 0
 
         if self._delete_mode_id != 0:
-            glib.source_remove(self._delete_mode_id)
+            GLib.source_remove(self._delete_mode_id)
             self._delete_mode_id = 0
 
     def initialize_event_handlers(self):
         self._event_handlers = [
             [('Escape',), 0, self.do_escape_mode, True],
             [('Return',), 0, self.do_column_edit, True],
-            [('Return',), gtk.gdk.CONTROL_MASK, self.do_smart_column_edit, True],
-            [('Return',), gtk.gdk.CONTROL_MASK | gtk.gdk.SHIFT_MASK, self.do_smart_column_align, True],
-            [('Return',), gtk.gdk.CONTROL_MASK | gtk.gdk.SHIFT_MASK | gtk.gdk.MOD1_MASK, self.do_smart_column_align, True],
-            [('Home',), gtk.gdk.CONTROL_MASK, self.do_mark_start, True],
-            [('End',), gtk.gdk.CONTROL_MASK, self.do_mark_end, True],
-            [('e',), gtk.gdk.CONTROL_MASK, self.do_toggle_edit_point, True]
+            [('Return',), Gdk.ModifierType.CONTROL_MASK, self.do_smart_column_edit, True],
+            [('Return',), Gdk.ModifierType.CONTROL_MASK | Gdk.ModifierType.SHIFT_MASK, self.do_smart_column_align, True],
+            [('Return',), Gdk.ModifierType.CONTROL_MASK | Gdk.ModifierType.SHIFT_MASK | Gdk.ModifierType.MOD1_MASK, self.do_smart_column_align, True],
+            [('Home',), Gdk.ModifierType.CONTROL_MASK, self.do_mark_start, True],
+            [('End',), Gdk.ModifierType.CONTROL_MASK, self.do_mark_end, True],
+            [('e',), Gdk.ModifierType.CONTROL_MASK, self.do_toggle_edit_point, True]
         ]
 
         for handler in self._event_handlers:
-            handler[0] = map(lambda x: gtk.gdk.keyval_from_name(x), handler[0])
+            handler[0] = map(lambda x: Gdk.keyval_from_name(x), handler[0])
 
     def disable_multi_edit(self):
         if self._column_mode:
@@ -169,14 +163,14 @@ class DocumentHelper(Signals):
 
         self._in_mode = False
 
-        self._view.set_border_window_size(gtk.TEXT_WINDOW_TOP, 0)
+        self._view.set_border_window_size(Gtk.TextWindowType.TOP, 0)
         self.remove_edit_points()
 
         if self.toggle_callback:
             self.toggle_callback()
 
     def enable_multi_edit(self):
-        self._view.set_border_window_size(gtk.TEXT_WINDOW_TOP, 20)
+        self._view.set_border_window_size(Gtk.TextWindowType.TOP, 20)
         self._in_mode = True
 
         if self.toggle_callback:
@@ -328,9 +322,9 @@ class DocumentHelper(Signals):
         if not self._in_mode:
             return
 
-        window = self._view.get_window(gtk.TEXT_WINDOW_TOP)
+        window = self._view.get_window(Gtk.TextWindowType.TOP)
         geom = window.get_geometry()
-        window.invalidate_rect(gtk.gdk.Rectangle(0, 0, geom[2], geom[3]), False)
+        window.invalidate_rect(Gdk.Rectangle(0, 0, geom[2], geom[3]), False)
 
     def _remove_status(self):
         self._status = None
@@ -524,7 +518,7 @@ class DocumentHelper(Signals):
             cp = piter.copy()
             moffset = offset
 
-            if (event.state & gtk.gdk.MOD1_MASK) and cp.backward_visible_cursor_position() and not cp.get_char().isspace():
+            if (event.state & Gdk.ModifierType.MOD1_MASK) and cp.backward_visible_cursor_position() and not cp.get_char().isspace():
                 moffset += 1
 
             if moffset > maxoffset:
@@ -642,7 +636,7 @@ class DocumentHelper(Signals):
 
         return True
 
-    def _draw_column_mode(self, event):
+    def _draw_column_mode(self, cr):
         if not self._column_mode:
             return False
 
@@ -650,15 +644,11 @@ class DocumentHelper(Signals):
         end = self._column_mode[1]
         buf = self._buffer
 
-        col = self._view.get_style().base[gtk.STATE_SELECTED]
+        col = self._view.get_style().base[Gtk.StateType.SELECTED]
         layout = self._view.create_pango_layout('W')
         width = layout.get_pixel_extents()[1][2]
 
-        ctx = event.window.cairo_create()
-        ctx.rectangle(event.area)
-        ctx.clip()
-
-        ctx.set_source_color(col)
+        cr.set_source_color(col)
 
         cstart = self._column_mode[2]
         cend = self._column_mode[3]
@@ -669,13 +659,8 @@ class DocumentHelper(Signals):
             piter = buf.get_iter_at_line(start)
             y, height = self._view.get_line_yrange(piter)
 
-            x_, y = self._view.buffer_to_window_coords(gtk.TEXT_WINDOW_TEXT, 0, y)
+            x_, y = self._view.buffer_to_window_coords(Gtk.TextWindowType.TEXT, 0, y)
             start += 1
-
-            # Check in visible area
-            if y >= event.area.y + event.area.height or \
-               y + height <= event.area.y:
-                continue
 
             # Check where to possible draw fake selection
             start_iter, soff = self.get_visible_iter(start - 1, cstart)
@@ -690,8 +675,8 @@ class DocumentHelper(Signals):
             if rw == 0:
                 rw = 1
 
-            ctx.rectangle(rx, y, rw, height)
-            ctx.fill()
+            cr.rectangle(rx, y, rw, height)
+            cr.fill()
 
         return False
 
@@ -763,7 +748,7 @@ class DocumentHelper(Signals):
         return True
 
     def on_key_press_event(self, view, event):
-        defmod = gtk.accelerator_get_default_mod_mask() & event.state
+        defmod = Gtk.accelerator_get_default_mod_mask() & event.state
 
         for handler in self._event_handlers:
             if (not handler[3] or self._in_mode) and event.keyval in handler[0] and (defmod == handler[1]):
@@ -969,7 +954,7 @@ class DocumentHelper(Signals):
 
         text = self._column_text()
 
-        clipboard = gtk.Clipboard(self._view.get_display())
+        clipboard = Gtk.Clipboard(self._view.get_display())
         clipboard.set_text(text)
 
         view.stop_emission('copy-clipboard')
@@ -979,7 +964,7 @@ class DocumentHelper(Signals):
             return
 
         text = self._column_text()
-        clipboard = gtk.Clipboard(self._view.get_display())
+        clipboard = Gtk.Clipboard(self._view.get_display())
         clipboard.set_text(text)
 
         view.stop_emission('cut-clipboard')
@@ -1034,7 +1019,7 @@ class DocumentHelper(Signals):
         if not self._edit_points:
             return
 
-        clipboard = gtk.Clipboard(self._view.get_display())
+        clipboard = Gtk.Clipboard(self._view.get_display())
         self._paste_mark = self._buffer.create_mark(None, self._buffer.get_iter_at_mark(self._buffer.get_insert()), True)
 
         clipboard.request_text(self.on_clipboard_text)
@@ -1169,14 +1154,14 @@ class DocumentHelper(Signals):
 
     def _move_edit_points_by_cursor(self, buf, where):
         actions = {
-            gtk.MOVEMENT_LOGICAL_POSITIONS: self._move_edit_point_logical_positions,
-            gtk.MOVEMENT_VISUAL_POSITIONS: self._move_edit_point_visual_positions,
-            gtk.MOVEMENT_WORDS: self._move_edit_point_words,
-            gtk.MOVEMENT_DISPLAY_LINES: self._move_edit_point_display_lines,
-            gtk.MOVEMENT_DISPLAY_LINE_ENDS: self._move_edit_point_display_line_ends,
-            gtk.MOVEMENT_PARAGRAPHS: self._move_edit_point_paragraphs,
-            gtk.MOVEMENT_PARAGRAPH_ENDS: self._move_edit_point_paragraph_ends,
-            gtk.MOVEMENT_HORIZONTAL_PAGES: self._move_edit_point_horizontal_pages,
+            Gtk.MovementStep.LOGICAL_POSITIONS: self._move_edit_point_logical_positions,
+            Gtk.MovementStep.VISUAL_POSITIONS: self._move_edit_point_visual_positions,
+            Gtk.MovementStep.WORDS: self._move_edit_point_words,
+            Gtk.MovementStep.DISPLAY_LINES: self._move_edit_point_display_lines,
+            Gtk.MovementStep.DISPLAY_LINE_ENDS: self._move_edit_point_display_line_ends,
+            Gtk.MovementStep.PARAGRAPHS: self._move_edit_point_paragraphs,
+            Gtk.MovementStep.PARAGRAPH_ENDS: self._move_edit_point_paragraph_ends,
+            Gtk.MovementStep.HORIZONTAL_PAGES: self._move_edit_point_horizontal_pages,
         }
 
         typ = self._move_cursor[0]
@@ -1218,7 +1203,7 @@ class DocumentHelper(Signals):
         self.remove_edit_points()
 
     def make_label(self, text, use_markup=True):
-        lbl = gtk.Label(text)
+        lbl = Gtk.Label(text)
         lbl.set_use_markup(use_markup)
         lbl.set_alignment(0, 0.5)
         lbl.show()
@@ -1229,33 +1214,67 @@ class DocumentHelper(Signals):
         if not self._in_mode:
             return False
 
-        geom = view.get_window(gtk.TEXT_WINDOW_TOP).get_geometry()
+        geom = view.get_window(Gtk.TextWindowType.TOP).get_geometry()
 
         if x < geom[0] or x > geom[0] + geom[2] or y < geom[1] or y > geom[1] + geom[3]:
             return False
 
-        table = gtk.Table(13, 2)
+        table = Gtk.Table(13, 2)
         table.set_row_spacings(3)
         table.set_col_spacings(12)
 
-        table.attach(self.make_label('<b>Selection</b>', True), 0, 2, 0, 1, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(self.make_label('<b>Selection</b>', True),
+                     0, 2, 0, 1,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<Enter>', False),
+                     0, 1, 1, 2,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<Ctrl><Enter>', False),
+                     0, 1, 2, 3,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<Ctrl><Shift><Enter>', False),
+                     0, 1, 3, 4,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<Ctrl><Alt><Shift><Enter>', False),
+                     0, 1, 4, 5,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
 
-        table.attach(self.make_label('<Enter>', False), 0, 1, 1, 2, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Enter>', False), 0, 1, 2, 3, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Shift><Enter>', False), 0, 1, 3, 4, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Alt><Shift><Enter>', False), 0, 1, 4, 5, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-
-        sep = gtk.HSeparator()
+        sep = Gtk.HSeparator()
         sep.show()
 
-        table.attach(sep, 0, 2, 5, 6, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-
-        table.attach(self.make_label('<b>Edit points</b>', True), 0, 2, 6, 7, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl>+E', False), 0, 1, 7, 8, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Home>', False), 0, 1, 8, 9, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><End>', False), 0, 1, 9, 10, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Shift><Enter>', False), 0, 1, 10, 11, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
-        table.attach(self.make_label('<Ctrl><Alt><Shift><Enter>', False), 0, 1, 11, 12, gtk.SHRINK | gtk.FILL, gtk.SHRINK | gtk.FILL)
+        table.attach(sep,
+                     0, 2, 5, 6,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<b>Edit points</b>', True),
+                     0, 2, 6, 7,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<Ctrl>+E', False),
+                     0, 1, 7, 8,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<Ctrl><Home>', False),
+                     0, 1, 8, 9,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<Ctrl><End>', False),
+                     0, 1, 9, 10,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<Ctrl><Shift><Enter>', False),
+                     0, 1, 10, 11,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
+        table.attach(self.make_label('<Ctrl><Alt><Shift><Enter>', False),
+                     0, 1, 11, 12,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL,
+                     Gtk.AttachOptions.SHRINK | Gtk.AttachOptions.FILL)
 
         table.attach(self.make_label(_('Enter column edit mode using selection')), 1, 2, 1, 2)
         table.attach(self.make_label(_('Enter <b>smart</b> column edit mode using selection')), 1, 2, 2, 3)
@@ -1276,7 +1295,9 @@ class DocumentHelper(Signals):
         return [col.red / float(0x10000), col.green / float(0x10000), col.blue / float(0x10000)]
 
     def _background_color(self):
-        col = self.from_color(self._view.get_style().base[self._view.state])
+# FIXME
+#        col = self.from_color(self._view.get_style().base[self._view.get_state()])
+        col = self.from_color(Gdk.Color(1, 1, 1))
         if col[2] > 0.8:
             col[2] -= 0.2
         else:
@@ -1284,44 +1305,49 @@ class DocumentHelper(Signals):
 
         return col
 
-    def on_view_expose_event(self, view, event):
-        if event.window == view.get_window(gtk.TEXT_WINDOW_TEXT):
-            return self._draw_column_mode(event)
+    def on_view_draw(self, view, cr):
+        window = view.get_window(Gtk.TextWindowType.TEXT)
+        if Gtk.cairo_should_draw_window (cr, window):
+            return self._draw_column_mode(cr)
 
-        if event.window != view.get_window(gtk.TEXT_WINDOW_TOP):
+        window = view.get_window(Gtk.TextWindowType.TOP)
+        if window is None or not Gtk.cairo_should_draw_window (cr, window):
             return False
 
         if not self._in_mode:
             return False
 
-        ctx = event.window.cairo_create()
         col = self._background_color()
 
-        ctx.set_source_rgb(col[0], col[1], col[2])
-        ctx.rectangle(event.area)
-        ctx.fill_preserve()
-        ctx.clip()
+        print view
+        print cr
+
+        cr.set_source_rgb(col[0], col[1], col[2])
+        cr.fill_preserve()
 
         layout = view.create_pango_layout(_('Multi Edit Mode'))
 
-        layout.set_font_description(pango.FontDescription('Sans 10'))
+        layout.set_font_description(Pango.FontDescription('Sans 10'))
         extents = layout.get_pixel_extents()
 
-        geom = event.window.get_geometry()
+        w = window.get_width()
+        h = window.get_heigth()
 
-        ctx.translate(0.5, 0.5)
-        ctx.set_line_width(1)
+        Gtk.cairo_transform_to_window (cr, view, window)
 
-        col = self.from_color(view.get_style().text[view.state])
+        cr.translate(0.5, 0.5)
+        cr.set_line_width(1)
 
-        ctx.set_source_rgba(col[0], col[1], col[2], 0.6)
-        ctx.move_to(geom[0], geom[1] + geom[3] - 1)
-        ctx.rel_line_to(geom[2], 0)
-        ctx.stroke()
+        col = self.from_color(view.get_style().text[view.get_state()])
 
-        ctx.set_source_rgb(col[0], col[1], col[2])
-        ctx.move_to(geom[2] - extents[1][2] - 3, (geom[3] - extents[1][3]) / 2)
-        ctx.show_layout(layout)
+        cr.set_source_rgba(col[0], col[1], col[2], 0.6)
+        cr.move_to(0, h - 1)
+        cr.rel_line_to(w, 0)
+        cr.stroke()
+
+        cr.set_source_rgb(col[0], col[1], col[2])
+        cr.move_to(w - extents[1][2] - 3, (h - extents[1][3]) / 2)
+        cr.show_layout(layout)
 
         if not self._status:
             status = ''
@@ -1331,8 +1357,8 @@ class DocumentHelper(Signals):
         if status:
             layout.set_markup(status)
 
-            ctx.move_to(3, (geom[3] - extents[1][3]) / 2)
-            ctx.show_layout(layout)
+            cr.move_to(3, (h - extents[1][3]) / 2)
+            cr.show_layout(layout)
 
         return False
 
@@ -1345,7 +1371,7 @@ class DocumentHelper(Signals):
         if not ins.equal(iter):
             return
 
-        if self._previous_move_cursor[0] == gtk.MOVEMENT_DISPLAY_LINE_ENDS:
+        if self._previous_move_cursor[0] == Gtk.MovementStep.DISPLAY_LINE_ENDS:
             cb = self._move_edit_point_smart_display_line_ends
         else:
             cb = self._move_edit_point_smart_paragraph_ends
