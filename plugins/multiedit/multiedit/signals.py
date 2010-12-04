@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#  signals.py - Multi Edit
+#  signals.py
 #
 #  Copyright (C) 2009 - Jesse van den Kieboom
 #
@@ -38,7 +38,7 @@ class Signals:
         return self._connect(obj, name, handler, obj.connect_after)
 
     def disconnect_signals(self, obj):
-        if not obj in self._signals:
+        if obj not in self._signals:
             return False
 
         for name in self._signals[obj]:
@@ -49,10 +49,10 @@ class Signals:
         return True
 
     def block_signal(self, obj, name):
-        if not obj in self._signals:
+        if obj not in self._signals:
             return False
 
-        if not name in self._signals[obj]:
+        if name not in self._signals[obj]:
             return False
 
         for hid in self._signals[obj][name]:
@@ -61,10 +61,10 @@ class Signals:
         return True
 
     def unblock_signal(self, obj, name):
-        if not obj in self._signals:
+        if obj not in self._signals:
             return False
 
-        if not name in self._signals[obj]:
+        if name not in self._signals[obj]:
             return False
 
         for hid in self._signals[obj][name]:
@@ -73,10 +73,10 @@ class Signals:
         return True
 
     def disconnect_signal(self, obj, name):
-        if not obj in self._signals:
+        if obj not in self._signals:
             return False
 
-        if not name in self._signals[obj]:
+        if name not in self._signals[obj]:
             return False
 
         for hid in self._signals[obj][name]:

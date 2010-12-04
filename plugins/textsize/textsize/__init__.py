@@ -26,7 +26,6 @@ from gettext import gettext as _
 from gi.repository import GObject, Gtk, Gdk, Gedit
 import constants
 from documenthelper import DocumentHelper
-from gi.overrides import keysyms
 
 # UI manager snippet to add menu items to the View menu
 ui_str = """
@@ -46,25 +45,26 @@ ui_str = """
 class TextSizePlugin(GObject.Object, Gedit.WindowActivatable):
     __gtype_name__ = "TextSizePlugin"
 
+    window = GObject.property(type=GObject.Object)
+
     def __init__(self):
         GObject.Object.__init__(self)
 
-    def do_activate(self, window):
-        self._window = window
+    def do_activate(self):
         self._views  = {}
 
         # Insert menu items
         self._insert_menu()
 
         # Insert document helpers
-        for view in window.get_views():
+        for view in self.window.get_views():
             self.add_document_helper(view)
 
-        window.connect('tab-added', self.on_tab_added)
-        window.connect('tab-removed', self.on_tab_removed)
+        self.window.connect('tab-added', self.on_tab_added)
+        self.window.connect('tab-removed', self.on_tab_removed)
 
         self._accel_group = Gtk.AccelGroup()
-        self._window.add_accel_group(self._accel_group)
+        self.window.add_accel_group(self._accel_group)
 
         self._proxy_callback_map = {
             'IncreaseFontSizeAction': self.on_increase_font_accel,
@@ -89,12 +89,12 @@ class TextSizePlugin(GObject.Object, Gedit.WindowActivatable):
             return
 
         mapping = {
-            Gdk.plus: Gdk.KP_Add,
-            Gdk.KP_Add: Gdk.plus,
-            Gdk.minus: Gdk.KP_Subtract,
-            Gdk.KP_Subtract: Gdk.minus,
-            keysyms._0: Gdk.KP_0,
-            Gdk.KP_0: keysyms._0
+            Gdk.KEY_plus: Gdk.KEY_KP_Add,
+            Gdk.KEY_KP_Add: Gdk.KEY_plus,
+            Gdk.KEY_minus: Gdk.KEY_KP_Subtract,
+            Gdk.KEY_KP_Subtract: Gdk.KEY_minus,
+            Gdk.KEY_0: Gdk.KEY_KP_0,
+            Gdk.KEY_KP_0: Gdk.KEY_0
         }
 
         if entry[0] in mapping:
@@ -111,27 +111,26 @@ class TextSizePlugin(GObject.Object, Gedit.WindowActivatable):
         self._install_proxy('DecreaseFontSizeAction')
         self._install_proxy('ResetFontSizeAction')
 
-    def do_deactivate(self, window):
+    def do_deactivate(self):
         # Remove any installed menu items
         self._remove_menu()
 
-        for view in self._window.get_views():
+        for view in self.window.get_views():
             self.remove_document_helper(view)
 
-        window.remove_accel_group(self._accel_group)
+        self.window.remove_accel_group(self._accel_group)
 
         Gtk.AccelMap.get().disconnect(self._accel_map_handler_id)
 
-        self._window = None
         self._accel_group = None
         self._action_group = None
 
     def _insert_menu(self):
         # Get the GtkUIManager
-        manager = self._window.get_ui_manager()
+        manager = self.window.get_ui_manager()
 
         # Create a new action group
-        self._action_group = Gtk.ActionGroup()
+        self._action_group = Gtk.ActionGroup("GeditTextSizePluginActions")
         self._action_group.add_actions([("IncreaseFontSizeAction", None, _("_Increase font size"),
                                          "<Ctrl>plus", None,
                                          self.on_increase_font_size_activate),
@@ -143,14 +142,14 @@ class TextSizePlugin(GObject.Object, Gedit.WindowActivatable):
                                          self.on_reset_font_size_activate)])
 
         # Insert the action group
-        manager.insert_action_group(self._action_group, -1)
+        manager.insert_action_group(self._action_group)
 
         # Merge the UI
         self._ui_id = manager.add_ui_from_string(ui_str)
 
     def _remove_menu(self):
         # Get the GtkUIManager
-        manager = self._window.get_ui_manager()
+        manager = self.window.get_ui_manager()
 
         # Remove the ui
         manager.remove_ui(self._ui_id)
@@ -161,8 +160,8 @@ class TextSizePlugin(GObject.Object, Gedit.WindowActivatable):
         # Make sure the manager updates
         manager.ensure_update()
 
-    def do_update_state(self, window):
-        self._action_group.set_sensitive(self._window.get_active_document() != None)
+    def do_update_state(self):
+        self._action_group.set_sensitive(self.window.get_active_document() != None)
 
     def get_helper(self, view):
         return view.get_data(constants.DOCUMENT_HELPER_KEY)
@@ -180,7 +179,7 @@ class TextSizePlugin(GObject.Object, Gedit.WindowActivatable):
             helper.stop()
 
     def call_helper(self, cb):
-        view = self._window.get_active_view()
+        view = self.window.get_active_view()
 
         if view:
             cb(self.get_helper(view))
