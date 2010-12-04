@@ -223,9 +223,9 @@ fi
 plugin_defined charmap
 if test "$?" = 1
 then
-	GUCHARMAP2_REQUIRED=2.23.0
+	GUCHARMAP_REQUIRED=2.33.0
 	PKG_CHECK_MODULES([GUCHARMAP],
-		[gucharmap-2 >= $GUCHARMAP2_REQUIRED],
+		[gucharmap-2.90 >= $GUCHARMAP_REQUIRED],
 		[have_gucharmap=yes],[have_gucharmap=no])
 
 	AC_SUBST([GUCHARMAP_CFLAGS])
