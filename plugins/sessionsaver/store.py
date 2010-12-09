@@ -3,6 +3,7 @@
 # This file is part of gedit Session Saver Plugin
 #
 # Copyright (C) 2006-2007 - Steve Frécinaux <code@istique.net>
+# Copyright (C) 2010 - Kenny Meyer <knny.myer@gmail.com>
 #
 # gedit Session Saver Plugin is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as published by
@@ -21,7 +22,8 @@
 
 import os.path
 from xml.parsers import expat
-import gobject
+from gi.repository import GObject
+import glib
 
 class Session(object):
     def __init__(self, name, files = None):
@@ -35,22 +37,22 @@ class Session(object):
         return cmp(self.name.lower(), session.name.lower())
 
     def add_file(self, filename):
-        self.files.append(filename)
+        self.files.append(Gio.file_new_for_path(filename))
 
-class SessionStore(gobject.GObject):
+class SessionStore(GObject.Object):
     __gsignals__ = {
-        "session-added":    (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE,
-                             (gobject.TYPE_PYOBJECT,)),
-        "session-changed":  (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE,
-                             (gobject.TYPE_PYOBJECT,)),
-        "session-removed":  (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE,
-                            (gobject.TYPE_PYOBJECT,))
+        "session-added":    (GObject.SIGNAL_RUN_LAST, GObject.TYPE_NONE,
+                             (GObject.TYPE_PYOBJECT,)),
+        "session-changed":  (GObject.SIGNAL_RUN_LAST, GObject.TYPE_NONE,
+                             (GObject.TYPE_PYOBJECT,)),
+        "session-removed":  (GObject.SIGNAL_RUN_LAST, GObject.TYPE_NONE,
+                            (GObject.TYPE_PYOBJECT,))
     }
 
     _instance = None
     def __new__(cls):
         if cls._instance is None:
-            cls._instance = gobject.GObject.__new__(cls)
+            cls._instance = GObject.Object.__new__(cls)
         return cls._instance
 
     def __init__(self):
@@ -99,7 +101,7 @@ class SessionStore(gobject.GObject):
 class XMLSessionStore(SessionStore):
     def __init__(self):
         super(XMLSessionStore, self).__init__()
-        self.filename = os.path.expanduser('~/.gnome2/gedit/saved-sessions.xml')
+        self.filename = os.path.join(glib.get_user_config_dir(), 'gedit/saved-sessions.xml')
         self.load()
 
     def _escape(self, string):
@@ -155,4 +157,3 @@ class XMLSessionStore(SessionStore):
             self._current_session = None
 
 # ex:ts=4:et:
-

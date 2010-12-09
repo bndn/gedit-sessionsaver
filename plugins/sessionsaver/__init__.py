@@ -3,6 +3,7 @@
 # This file is part of gedit Session Saver Plugin
 #
 # Copyright (C) 2006-2007 - Steve Frécinaux <code@istique.net>
+# Copyright (C) 2010 - Kenny Meyer <knny.myer@gmail.com>
 #
 # gedit Session Saver Plugin is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as published by
@@ -19,74 +20,108 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor,
 # Boston, MA  02110-1301  USA
 
-import gobject
-import gtk
-import gedit
+from gi.repository import GObject, Gio, Gtk, Gedit
 import os.path
 import gettext
 from store import XMLSessionStore
 from dialogs import SaveSessionDialog, SessionManagerDialog
+from gpdefs import *
 
 try:
-    from gpdefs import *
     gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
     _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
 except:
     _ = lambda s: s
 
-class SessionSaverWindowHelper(object):
+ui_str = """
+<ui>
+  <menubar name="MenuBar">
+    <menu name="FileMenu" action="File">
+      <placeholder name="FileOps_2">
+        <separator/>
+        <menu name="FileSessionMenu" action="FileSession">
+          <placeholder name="SessionPluginPlaceHolder"/>
+          <separator/>
+          <menuitem name="FileSessionSaveMenu" action="FileSessionSave"/>
+          <menuitem name="FileSessionManageMenu" action="FileSessionManage"/>
+        </menu>
+      </placeholder>
+    </menu>
+  </menubar>
+</ui>
+"""
+
+class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
+    __gtype_name__ = "SessionSaverPlugin"
+
+    window = GObject.property(type = Gedit.Window)
+
     ACTION_HANDLER_DATA_KEY = "SessionSaverActionHandlerData"
     SESSION_MENU_PATH = '/MenuBar/FileMenu/FileOps_2/FileSessionMenu/SessionPluginPlaceHolder'
-    SESSION_MENU_UI_STRING = """
-        <ui>
-          <menubar name="MenuBar">
-            <menu name="FileMenu" action="File">
-              <placeholder name="FileOps_2">
-                <separator/>
-                <menu name="FileSessionMenu" action="FileSession">
-                  <placeholder name="SessionPluginPlaceHolder"/>
-                  <separator/>
-                  <menuitem name="FileSessionSaveMenu" action="FileSessionSave"/>
-                  <menuitem name="FileSessionManageMenu" action="FileSessionManage"/>
-                </menu>
-              </placeholder>
-            </menu>
-          </menubar>
-        </ui>"""
 
-    def __init__(self, plugin, window):
-        self.plugin = plugin
-        self.window = window
-        manager = window.get_ui_manager()
+    def __init__(self):
+        GObject.Object.__init__(self)
+        self.sessions = XMLSessionStore()
 
-        self._menu_action_group = gtk.ActionGroup("SessionSaverPluginActions")
+    def do_activate(self):
+        self._insert_menu()
+
+    def do_deactivate(self):
+        self._remove_menu()
+
+    def do_update_state(self):
+        pass
+
+    def _update_session_menu(self):
+        manager = self.window.get_ui_manager()
+
+        self._menu_ui_id = manager.new_merge_id()
+
+        for i, session in enumerate(self.sessions):
+            action_name = 'SessionSaver%X' % i
+            action = Gtk.Action(action_name,
+                                session.name,
+                                _("Recover '%s' session") % session.name,
+                                "")
+            handler = action.connect("activate", self.session_menu_action, session)
+
+            action.set_data(self.ACTION_HANDLER_DATA_KEY, handler)
+            # Add an action to the session list items.
+            self._action_group.add_action(action)
+
+            manager.add_ui(self._ui_id,
+                           self.SESSION_MENU_PATH,
+                           action_name,
+                           action_name,
+                           Gtk.UIManagerItemType.MENUITEM,
+                           False)
+
+    def _insert_menu(self):
+        manager = self.window.get_ui_manager()
+        self._menu_action_group = Gtk.ActionGroup("SessionSaverPluginActions")
         self._menu_action_group.add_actions(
-            (("FileSession", None, _("Sa_ved sessions")),
-             ("FileSessionSave", gtk.STOCK_SAVE_AS, _("_Save current session"), None, _("Save the current document list as a new session"), self.on_save_session_action),
-             ("FileSessionManage", None, _("_Manage saved sessions..."), None, _("Open the saved session manager"), self.on_manage_sessions_action)))
-        manager.insert_action_group(self._menu_action_group, -1)
-        self._menu_ui_id = manager.add_ui_from_string(self.SESSION_MENU_UI_STRING)
+            [("FileSession", None, _("Sa_ved sessions"), None, None),
+             ("FileSessionSave", Gtk.STOCK_SAVE_AS,
+              _("_Save current session"), None,
+              _("Save the current document list as a new session"),
+              self.on_save_session_action),
+             ("FileSessionManage", None, _("_Manage saved sessions..."),
+              None, _("Open the saved session manager"),
+              self.on_manage_sessions_action)
+            ], self.window)
+        manager.insert_action_group(self._menu_action_group)
 
-        self._ui_id = 0
-        self._action_group = gtk.ActionGroup("SessionSaverPluginSessionActions")
-        manager.insert_action_group(self._action_group, -1)
-        self.update_session_menu()
+        self._ui_id = manager.add_ui_from_string(ui_str)
+        self._action_group = Gtk.ActionGroup(name="SessionSaverPluginSessionActions")
+        manager.insert_action_group(self._action_group)
+
+        self._update_session_menu()
 
         manager.ensure_update()
 
-    def on_save_session_action(self, action):
-        SaveSessionDialog(self.window, self.plugin).run()
-
-    def on_manage_sessions_action(self, action):
-        SessionManagerDialog(self.plugin).run()
-
-    def session_menu_action(self, action, session):
-        self.plugin.load_session(session, self.window)
-
-    def remove_session_menu(self):
-        if self._ui_id != 0:
-            self.window.get_ui_manager().remove_ui(self._ui_id)
-            self._ui_id = 0
+    def _remove_session_menu(self):
+        manager = self.window.get_ui_manager()
+        manager.remove_ui(self._menu_ui_id)
 
         for action in self._action_group.list_actions():
             handler = action.get_data(self.ACTION_HANDLER_DATA_KEY)
@@ -94,74 +129,37 @@ class SessionSaverWindowHelper(object):
                 action.disconnect(handler)
             self._action_group.remove_action(action)
 
-    def update_session_menu(self):
-        manager = self.window.get_ui_manager()
-
-        self.remove_session_menu()
-        self._ui_id = manager.new_merge_id()
-
-        i = 0
-        for session in self.plugin.sessions:
-            action_name = 'SessionSaver%X' % i
-            action = gtk.Action(action_name, session.name, _("Recover '%s' session") % session.name, None)
-            handler = action.connect("activate", self.session_menu_action, session)
-
-            action.set_data(self.ACTION_HANDLER_DATA_KEY, handler)
-            self._action_group.add_action(action)
-
-            manager.add_ui(self._ui_id, self.SESSION_MENU_PATH,
-                           action_name, action_name,
-                           gtk.UI_MANAGER_MENUITEM, False)
-            i += 1
-
-    def update_ui(self):
-        pass
-
-    def deactivate(self):
-        manager = self.window.get_ui_manager()
-        manager.remove_ui(self._menu_ui_id)
-        manager.remove_action_group(self._menu_action_group)
-        self.remove_session_menu()
         manager.remove_action_group(self._action_group)
 
+    def _remove_menu(self):
+        manager = self.window.get_ui_manager()
 
-class SessionSaverPlugin(gedit.Plugin):
-    WINDOW_DATA_KEY = "SessionSaverWindowData"
+        self._remove_session_menu()
 
-    def __init__(self):
-        super(SessionSaverPlugin, self).__init__()
-        self.sessions = XMLSessionStore()
+        manager.remove_ui(self._ui_id)
+        manager.remove_action_group(self._menu_action_group)
 
-    def activate(self, window):
-        helper = SessionSaverWindowHelper(self, window)
-        window.set_data(self.WINDOW_DATA_KEY, helper)
+        manager.ensure_update()
 
-    def deactivate(self, window):
-        window.get_data(self.WINDOW_DATA_KEY).deactivate()
-        window.set_data(self.WINDOW_DATA_KEY, None)
-
-    def update_ui(self, window):
-        window.get_data(self.WINDOW_DATA_KEY).update_ui()
-
-    def update_session_menu(self):
-        for window in gedit.app_get_default().get_windows():
-            window.get_data(self.WINDOW_DATA_KEY).update_session_menu()
-
-    def load_session(self, session, window = None):
+    def _load_session(self, session, window):
         # Note: a session has to stand on its own window.
-        app = gedit.app_get_default()
-
-        if window is None:
-            window = app.get_active_window()
-
         tab = window.get_active_tab()
         if tab is not None and \
            not (tab.get_document().is_untouched() and \
-                tab.get_state() == gedit.TAB_STATE_NORMAL):
-            window = app.create_window()
+                tab.get_state() == Gedit.TabState.STATE_NORMAL):
+            # Create a new gedit window
+            window = Gedit.App.get_default().create_window(None)
             window.show()
 
-        gedit.commands.load_uris(window, session.files, None, 0)
+        Gedit.commands_load_locations(window, session.files, None, 0, 0)
+
+    def on_save_session_action(self, action, window):
+        SaveSessionDialog(window, self.plugin_info, self.sessions, self).run()
+
+    def on_manage_sessions_action(self, action, window):
+        SessionManagerDialog(self.plugin_info, self.sessions).run()
+
+    def session_menu_action(self, action, session):
+        self._load_session(session, self.window)
 
 # ex:ts=4:et:
-

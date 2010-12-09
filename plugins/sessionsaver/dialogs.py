@@ -1,27 +1,26 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2007 - Steve Frécinaux <code@istique.net>
+# Copyright (c) 2010 - Kenny Meyer <knny.myer@gmail.com>
 # Licence: GPL2 or later
 
-import gobject
-import gedit
-import gtk
+from gi.repository import GObject, Gtk, Gedit
 import os.path
 import gettext
+
 from store import Session
 
 try:
     from gpdefs import *
     gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-    gtk.glade.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
     _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
 except:
     _ = lambda s: s
 
-class SessionModel(gtk.GenericTreeModel):
+class SessionModel(Gtk.ListStore):
     OBJECT_COLUMN = 0
     NAME_COLUMN = 1
     N_COLUMNS = 2
-    column_types = (gobject.TYPE_PYOBJECT, gobject.TYPE_STRING)
+    column_types = (GObject.TYPE_PYOBJECT, GObject.TYPE_STRING)
 
     def __init__(self, store):
         super(SessionModel, self).__init__()
@@ -43,7 +42,7 @@ class SessionModel(gtk.GenericTreeModel):
         self.row_deleted(self.on_get_path(piter))
 
     def on_get_flags(self):
-        return gtk.TREE_MODEL_LIST_ONLY
+        return Gtk.TREE_MODEL_LIST_ONLY
 
     def on_get_n_columns(self):
         return self.N_COLUMNS
@@ -102,12 +101,12 @@ class Dialog(object):
         super(Dialog, self).__init__()
 
         if parent_window is None:
-            parent_window = gedit.app_get_default().get_active_window()
+            parent_window = Gedit.App.get_default().get_active_window()
         self.parent = parent_window
 
-        self.ui = gtk.Builder()
+        self.ui = Gtk.Builder()
+        self.ui.set_translation_domain(GETTEXT_PACKAGE)
         self.ui.add_from_file(os.path.join(datadir, self.UI_FILE))
-        self.ui.set_translation_domain(domain=GETTEXT_PACKAGE)
         self.dialog = self.ui.get_object(main_widget)
         self.dialog.connect('delete-event', self.on_delete_event)
 
@@ -130,41 +129,48 @@ class Dialog(object):
         self.__del__()
 
 class SaveSessionDialog(Dialog):
-    def __init__(self, window, plugin):
-        super(SaveSessionDialog, self).__init__('save-session-dialog', plugin.get_data_dir(), window)
+    def __init__(self, window, plugin, sessions, sessionsaver):
+        super(SaveSessionDialog, self).__init__('save-session-dialog',
+                                                plugin.get_data_dir(),
+                                                window)
         self.plugin = plugin
+        self.sessions = sessions
+        self.sessionsaver = sessionsaver
 
-        model = SessionModel(plugin.sessions)
+        model = SessionModel(sessions)
 
         combobox = self['session-name']
         combobox.set_model(model)
-        combobox.set_text_column(1)
+        combobox.set_entry_text_column(1)
 
         self.dialog.connect('response', self.on_response)
 
     def on_response(self, dialog, response_id):
-        if response_id == gtk.RESPONSE_OK:
-            files = [doc.get_uri()
+        if response_id == Gtk.ResponseType.OK:
+            files = [doc.get_location()
                         for doc in self.parent.get_documents()
-                        if doc.get_uri() is not None]
-            name = self['session-name'].child.get_text()
-            self.plugin.sessions.add(Session(name, files))
-            self.plugin.sessions.save()
-        self.plugin.update_session_menu()
+                        if doc.get_location() is not None]
+            name = self['session-name'].get_child().get_text()
+            self.sessions.add(Session(name, files))
+            self.sessions.save()
+            self.sessionsaver.sessions = self.sessions
+            self.sessionsaver._update_session_menu()
         self.destroy()
 
 class SessionManagerDialog(Dialog):
-    def __init__(self, plugin):
-        super(SessionManagerDialog, self).__init__('session-manager-dialog', plugin.get_data_dir())
+    def __init__(self, plugin, sessions):
+        super(SessionManagerDialog, self).__init__('session-manager-dialog',
+                                                   plugin.get_data_dir())
         self.plugin = plugin
+        self.sessions = sessions
 
-        model = SessionModel(plugin.sessions)
+        model = SessionModel(sessions)
 
         self.view = self['session-view']
         self.view.set_model(model)
 
-        renderer = gtk.CellRendererText()
-        column = gtk.TreeViewColumn(_("Session Name"), renderer, text = model.NAME_COLUMN)
+        renderer = Gtk.CellRendererText()
+        column = Gtk.TreeViewColumn(_("Session Name"), renderer, text = model.NAME_COLUMN)
         self.view.append_column(column)
 
         handlers = {
@@ -176,7 +182,7 @@ class SessionManagerDialog(Dialog):
 
     def on_delete_event(self, dialog, event):
         dialog.hide()
-        self.plugin.sessions.save()
+        self.sessions.save()
         return True
 
     def get_current_session(self):
@@ -193,12 +199,11 @@ class SessionManagerDialog(Dialog):
 
     def on_delete_button_clicked(self, button):
         session = self.get_current_session()
-        self.plugin.sessions.remove(session)
+        self.sessions.remove(session)
         self.plugin.update_session_menu()
 
     def on_close_button_clicked(self, button):
-        self.plugin.sessions.save()
+        self.sessions.save()
         self.destroy()
 
 # ex:ts=4:et:
-
