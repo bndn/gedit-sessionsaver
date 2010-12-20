@@ -130,14 +130,9 @@ class CharmapPlugin(GObject.Object, Gedit.WindowActivatable):
         document.begin_user_action()
         iters = document.get_selection_bounds()
         if iters:
-            document.delete_interactive(iters[0], iters[1], True)
-            start = iters[0]
-        else:
-            insert = document.get_insert()
-            start = document.get_iter_at_mark(insert)
+            document.delete_interactive(iters[0], iters[1], view.get_editable())
 
-        if start.editable(True):
-            document.insert(start, uc)
+        document.insert_interactive_at_cursor(uc, -1, view.get_editable())
 
         document.end_user_action()
 
