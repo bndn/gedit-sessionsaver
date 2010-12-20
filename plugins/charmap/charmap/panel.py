@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2010 Ignacio Casal Quinteiro <icq@gnome.org>
+# Copyright (C) 2006 Steve Frécinaux <steve@istique.net>
+#               2010 Ignacio Casal Quinteiro <icq@gnome.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
