@@ -88,13 +88,13 @@ GEDIT_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="bookmarks charmap drawspaces wordcompletion taglist"
-USEFUL_PLUGINS="bookmarks charmap drawspaces wordcompletion taglist"
-DEFAULT_PLUGINS="bookmarks charmap drawspaces wordcompletion taglist"
+ALL_PLUGINS="bookmarks drawspaces wordcompletion taglist"
+USEFUL_PLUGINS="bookmarks drawspaces wordcompletion taglist"
+DEFAULT_PLUGINS="bookmarks drawspaces wordcompletion taglist"
 
-PYTHON_ALL_PLUGINS="bracketcompletion codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
-PYTHON_USEFUL_PLUGINS="bracketcompletion codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
-PYTHON_DEFAULT_PLUGINS="bracketcompletion codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
+PYTHON_ALL_PLUGINS="bracketcompletion charmap codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
+PYTHON_USEFUL_PLUGINS="bracketcompletion charmap codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
+PYTHON_DEFAULT_PLUGINS="bracketcompletion charmap codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
@@ -228,9 +228,6 @@ then
 		[gucharmap-2.90 >= $GUCHARMAP_REQUIRED],
 		[have_gucharmap=yes],[have_gucharmap=no])
 
-	AC_SUBST([GUCHARMAP_CFLAGS])
-	AC_SUBST([GUCHARMAP_LIBS])
-
 	if test "$have_gucharmap" = "no"; then
 		plugin_defined_explicit charmap
 		if test "$?" = 1
@@ -350,6 +347,7 @@ plugins/bracketcompletion/bracketcompletion.plugin.desktop.in
 plugins/bracketcompletion/Makefile
 plugins/charmap/charmap.plugin.desktop.in
 plugins/charmap/Makefile
+plugins/charmap/charmap/Makefile
 plugins/codecomment/codecomment.plugin.desktop.in
 plugins/codecomment/Makefile
 plugins/colorpicker/colorpicker.plugin.desktop.in
