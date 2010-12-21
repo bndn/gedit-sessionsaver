@@ -218,29 +218,6 @@ then
 fi
 
 # ================================================================
-# gucharmap
-# ================================================================
-plugin_defined charmap
-if test "$?" = 1
-then
-	GUCHARMAP_REQUIRED=2.33.0
-	PKG_CHECK_MODULES([GUCHARMAP],
-		[gucharmap-2.90 >= $GUCHARMAP_REQUIRED],
-		[have_gucharmap=yes],[have_gucharmap=no])
-
-	if test "$have_gucharmap" = "no"; then
-		plugin_defined_explicit charmap
-		if test "$?" = 1
-		then
-			AC_MSG_ERROR([gucharmap could not be found, needed to built charmap plugin])
-		else
-			AC_MSG_WARN([gucharmap could not be found, charmap plugin will be disabled])
-			undef_plugin charmap "libgucharmap not found"
-		fi
-	fi
-fi
-
-# ================================================================
 # Synctex (dbus-python)
 # ================================================================
 plugin_defined synctex
