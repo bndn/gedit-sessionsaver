@@ -37,12 +37,7 @@ class CharmapPlugin(GObject.Object, Gedit.WindowActivatable):
         self.system_settings.connect("changed::monospace-font-name", self.font_changed)
 
         panel = self.window.get_side_panel()
-        theme = Gtk.IconTheme.get_default()
-
-        if theme.has_icon("accessories-character-map"):
-            image = Gtk.Image.new_from_icon_name("accessories-character-map", Gtk.IconSize.MENU)
-        else:
-            image = Gtk.Image.new_from_icon_name("gucharmap", Gtk.IconSize.MENU)
+        image = Gtk.Image.new_from_icon_name("accessories-character-map", Gtk.IconSize.MENU)
 
         self.create_charmap_panel()
         panel.add_item(self.panel, "GeditCharmapPanel", _("Character Map"), image)
@@ -55,7 +50,7 @@ class CharmapPlugin(GObject.Object, Gedit.WindowActivatable):
         panel.remove_item(self.panel)
 
     def do_update_state(self):
-        pass
+        self.panel.set_sensitive(len(self.window.get_documents()) >= 1)
 
     def get_document_font(self):
         if self.editor_settings.get_boolean("use-default-font"):
