@@ -333,9 +333,9 @@ update_background_color (GtkSourceMarkCategory *category, GtkSourceBuffer *buffe
 
 		if (bgset)
 		{
-			GdkColor color;
+			GdkRGBA color;
 
-			gdk_color_parse (bg, &color);
+			gdk_rgba_parse (&color, bg);
 			gtk_source_mark_category_set_background (category, &color);
 			g_free (bg);
 
