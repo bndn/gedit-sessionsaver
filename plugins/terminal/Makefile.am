@@ -8,9 +8,14 @@ plugin_in_files = terminal.plugin.desktop.in
 
 plugin_DATA = $(plugin_in_files:.plugin.desktop.in=.plugin)
 
-EXTRA_DIST = $(plugin_in_files)
+gsettings_SCHEMAS = org.gnome.gedit.plugins.terminal.gschema.xml
 
-CLEANFILES = $(plugin_DATA)
-DISTCLEANFILES = $(plugin_DATA)
+@INTLTOOL_XML_NOMERGE_RULE@
+@GSETTINGS_RULES@
+
+EXTRA_DIST = $(plugin_in_files) org.gnome.gedit.plugins.terminal.gschema.xml.in.in
+
+CLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk

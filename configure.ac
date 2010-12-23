@@ -243,32 +243,6 @@ then
 	fi
 fi
 
-# ================================================================
-# Terminal plugin vte check
-# ================================================================
-plugin_defined terminal
-if test "$?" = 1
-then
-	PYVTE_REQUIRED=0.19.4
-	PKG_CHECK_MODULES([PYVTE],
-		[pyvte >= $PYVTE_REQUIRED],
-		[have_pyvte=yes],[have_pyvte=no])
-
-	AC_SUBST([PYVTE_CFLAGS])
-	AC_SUBST([PYVTE_LIBS])
-
-	if test "x$have_pyvte" = "xno";	then
-		plugin_defined_explicit terminal
-		if test "$?" = 1
-		then
-			AC_MSG_ERROR([pyvte could not be found, needed to built terminal plugin])
-		else
-			AC_MSG_WARN([pyvte could not be found, terminal plugin will be disabled])
-			undef_plugin terminal "pyvte not found"
-		fi
-	fi
-fi
-
 if test -z "$disabled_plugins"
 then
 	disabled_plugins="none"
@@ -353,6 +327,7 @@ plugins/synctex/synctex/Makefile
 plugins/taglist/taglist.plugin.desktop.in
 plugins/taglist/Makefile
 plugins/terminal/Makefile
+plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in
 plugins/terminal/terminal.plugin.desktop.in
 plugins/textsize/Makefile
 plugins/textsize/textsize.plugin.desktop.in
