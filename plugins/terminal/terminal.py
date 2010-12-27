@@ -65,7 +65,7 @@ class GeditTerminal(Gtk.Box):
         self._vte.show()
         self.pack_start(self._vte, True, True, 0)
 
-        scrollbar = Gtk.VScrollbar.new(self._vte.get_vadjustment())
+        scrollbar = Gtk.Scrollbar.new(Gtk.Orientation.VERTICAL, self._vte.get_vadjustment())
         scrollbar.show()
         self.pack_start(scrollbar, False, False, 0)
 
