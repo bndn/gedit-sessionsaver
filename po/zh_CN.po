@@ -16,10 +16,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:13+0100\n"
-"PO-Revision-Date: 2010-07-24 13:24+0800\n"
-"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&component=Plugins\n"
+"POT-Creation-Date: 2010-12-04 11:24+0000\n"
+"PO-Revision-Date: 2010-12-30 20:31+0800\n"
+"Last-Translator: Yinghua Wang <wantinghard@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,39 +35,33 @@ msgstr "书签"
 msgid "Easy document navigation with bookmarks"
 msgstr "使用书签的简单文件导航"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-#, fuzzy
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:196
 msgid "Toggle Bookmark"
-msgstr "书签"
+msgstr "切换书签"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
 msgid "Toggle bookmark status of the current line"
-msgstr "在当前窗口中显示或隐藏显示状态栏"
+msgstr "切换当前行的书签状态"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
 msgid "Goto Next Bookmark"
 msgstr "转到下一个书签"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto the next bookmark"
-msgstr "转到浏览的下一个位置"
+msgstr "转到下一个书签位置"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
+msgid "Goto Previous Bookmark"
+msgstr "转到上一个书签"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
-msgid "Goto Previous Bookmark"
-msgstr "转到上一个位置"
-
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
 msgid "Goto the previous bookmark"
-msgstr "显示上一页"
+msgstr "转到上一个书签位置"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "自动检测的编码"
+msgstr "自动添加闭合括号。"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
 msgid "Bracket Completion"
@@ -74,66 +69,59 @@ msgstr "括号补全"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
 #: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
 msgid "Character Map"
-msgstr "字符数(不含空格)"
+msgstr "字符表"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "只需单击即可插入特殊字符。"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "注释"
+msgstr "代码注释"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "添加或取消选中代码段的注释。"
 
-#: ../plugins/codecomment/codecomment.py:90
-#, fuzzy
+#: ../plugins/codecomment/codecomment.py:88
 msgid "Co_mment Code"
-msgstr "注释"
+msgstr "注释代码(_M)"
 
-#: ../plugins/codecomment/codecomment.py:92
-#, fuzzy
+#: ../plugins/codecomment/codecomment.py:90
 msgid "Comment the selected code"
-msgstr "删除选中的文本"
+msgstr "注释掉选择的代码"
 
-#: ../plugins/codecomment/codecomment.py:96
+#: ../plugins/codecomment/codecomment.py:94
 msgid "U_ncomment Code"
 msgstr "取消注释(_N)"
 
-#: ../plugins/codecomment/codecomment.py:98
-#, fuzzy
+#: ../plugins/codecomment/codecomment.py:96
 msgid "Uncomment the selected code"
-msgstr "删除选中的文本"
+msgstr "取消注释选择的代码"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Color Picker"
-msgstr "配色方案"
+msgstr "颜色拾取器"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "从对话框中拾取一种颜色，然后插入其十六进制代码。"
 
-#: ../plugins/colorpicker/colorpicker.py:77
+#: ../plugins/colorpicker/colorpicker.py:76
 msgid "Pick _Color..."
 msgstr "拾取颜色(_C)..."
 
-#: ../plugins/colorpicker/colorpicker.py:78
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick a color from a dialog"
 msgstr "从对话框中拾取一种颜色"
 
-#: ../plugins/colorpicker/colorpicker.py:188
-#, fuzzy
+#: ../plugins/colorpicker/colorpicker.py:185
 msgid "Pick Color"
-msgstr "链接颜色"
+msgstr "拾取颜色"
 
-#: ../plugins/colorpicker/colorpicker.py:195
+#: ../plugins/colorpicker/colorpicker.py:192
 msgid "_Insert"
 msgstr "插入(_I)"
 
@@ -143,62 +131,54 @@ msgid "Command line interface for advanced editing"
 msgstr "高级编辑的命令行接口"
 
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Commander"
-msgstr "命令颜色(_O)："
+msgstr "命令工具"
 
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
 msgid "Draw Spaces"
-msgstr "使用空格"
+msgstr "绘制空白"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
-msgstr "绘制空格和跳格"
+msgstr "绘制空格和制表符"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
 msgid "Draw leading spaces"
-msgstr "无间距空格"
+msgstr "绘制前导空白"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
-msgstr "绘制新行"
+msgstr "绘制换行符"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "无间距空格"
+msgstr "绘制不间断空格"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
 msgid "Draw spaces"
-msgstr "插入空格"
+msgstr "绘制空格"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
 msgid "Draw spaces in text"
-msgstr "在文本中绘制空格"
+msgstr "绘制文本中的空白字符"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
-msgstr "绘制跳格"
+msgstr "绘制制表符"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "删除尾随空格"
+msgstr "绘制尾随空格"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
 msgid "Show _White Space"
-msgstr "显示下一页"
+msgstr "显示空白(_W)"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "插入空格代替制表符(_S)"
+msgstr "显示空格和制表符"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
@@ -206,11 +186,11 @@ msgstr "已启用"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "If TRUE drawing will be enabled."
-msgstr ""
+msgstr "如果为 TRUE 将启用绘制。"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
 msgid "The type of spaces to be drawn."
-msgstr ""
+msgstr "要绘制的空白类型。"
 
 #: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
@@ -220,24 +200,21 @@ msgstr "合并多行或拆分长行"
 msgid "Join/Split Lines"
 msgstr "合并/拆分行"
 
-#: ../plugins/joinlines/joinlines.py:56
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:75
 msgid "_Join Lines"
-msgstr "行数"
+msgstr "合并行(_J)"
 
-#: ../plugins/joinlines/joinlines.py:57
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:76
 msgid "Join the selected lines"
-msgstr "选中链接的颜色"
+msgstr "合并选择的行"
 
-#: ../plugins/joinlines/joinlines.py:59
+#: ../plugins/joinlines/joinlines.py:78
 msgid "_Split Lines"
 msgstr "拆分行(_S)"
 
-#: ../plugins/joinlines/joinlines.py:60
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:79
 msgid "Split the selected lines"
-msgstr "删除选中的文本"
+msgstr "拆分选择的行"
 
 #. ex:ts=4:et:
 #: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
@@ -246,7 +223,7 @@ msgstr "一次编辑多个地方的文档"
 
 #: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
 msgid "Multi Edit"
-msgstr "多编辑"
+msgstr "多文件编辑"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
@@ -266,21 +243,19 @@ msgstr "取消的列模式..."
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1260
 msgid "Enter column edit mode using selection"
-msgstr "使用选择进入列编辑模式"
+msgstr "通过选择进入列编辑模式"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1261
-#, fuzzy
 msgid "Enter <b>smart</b> column edit mode using selection"
-msgstr "使用选择进入列编辑模式"
+msgstr "通过选择进入<b>智能</b>列编辑模式"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1262
-#, fuzzy
 msgid "<b>Smart</b> column align mode using selection"
-msgstr "使用选择进入列编辑模式"
+msgstr "通过选择进入<b>智能</b>列编辑模式"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1263
 msgid "<b>Smart</b> column align mode with additional space using selection"
-msgstr ""
+msgstr "通过选择进入带额外空白的<b>智能</b>列对齐模式"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1265
 msgid "Toggle edit point"
@@ -295,56 +270,50 @@ msgid "Add edit point at end of line/selection"
 msgstr "在行或选中区的末尾增加编辑点"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1268
-#, fuzzy
 msgid "Align edit points"
-msgstr "切换编辑点"
+msgstr "对齐编辑点"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1269
 msgid "Align edit points with additional space"
-msgstr ""
+msgstr "通过填充额外的空格对齐编辑点"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:1305
 #: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Multi Edit Mode"
-msgstr "多编辑模式"
+msgstr "多文件编辑模式"
 
 #: ../plugins/multiedit/multiedit/windowhelper.py:70
 msgid "Start multi edit mode"
-msgstr "启动多编辑模式"
+msgstr "启动多文件编辑模式"
 
 #. ex:ts=4:et:
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
 msgid "Easily increase and decrease the text size"
-msgstr ""
+msgstr "方便地增大或减小文本"
 
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Text Size"
-msgstr "制表符宽度"
+msgstr "文本大小"
 
 #: ../plugins/sessionsaver/__init__.py:64
-#, fuzzy
 msgid "Sa_ved sessions"
-msgstr "启用压缩保存(_S)"
+msgstr "保存的会话(_V)"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "_Save current session"
-msgstr "替换选中区域"
+msgstr "保存当前会话(_S)"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "Save the current document list as a new session"
-msgstr "将当前文档移动到新窗口"
+msgstr "将当前文档列表保存为新会话"
 
 #: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
 msgstr "管理已保存的会话(_M)..."
 
 #: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
 msgid "Open the saved session manager"
-msgstr "打开 gedit 手册"
+msgstr "打开保存会话管理器"
 
 #: ../plugins/sessionsaver/__init__.py:106
 #, python-format
@@ -365,9 +334,8 @@ msgid "Session Saver"
 msgstr "会话保存"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:1
-#, fuzzy
 msgid "Save session"
-msgstr "启用压缩保存(_S)"
+msgstr "保存会话"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
@@ -379,36 +347,31 @@ msgstr "会话名称："
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
-msgstr "忘记使用跳格的年代。"
+msgstr "忘记使用制表符的年代。"
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Smart Spaces"
-msgstr "插入空格"
+msgstr "智能空格"
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "在文档位置中打开终端"
+msgstr "在底部面板中嵌入一个终端。"
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Embedded Terminal"
-msgstr "嵌入对象"
+msgstr "嵌入终端"
 
 #: ../plugins/terminal/terminal.py:307
 msgid "Terminal"
 msgstr "终端"
 
 #: ../plugins/terminal/terminal.py:329
-#, fuzzy
 msgid "C_hange Directory"
-msgstr "更改为(_T)："
+msgstr "切换目录(_H)"
 
 #: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
-#, fuzzy
 msgid "Document Words"
-msgstr "文档主体"
+msgstr "文档中的词"
 
 #: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
 msgid "Word Completion"
@@ -420,17 +383,16 @@ msgstr "使用补全框架的单词补全"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
 msgid "SyncTeX"
-msgstr ""
+msgstr "SyncTeX"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
-msgstr ""
+msgstr "使用 gedit 和 evince 在 LaTeX 与 PDF 之间同步。"
 
-#: ../plugins/synctex/synctex/synctex.py:280
-#: ../plugins/synctex/synctex/synctex.py:281
-#, fuzzy
+#: ../plugins/synctex/synctex/synctex.py:283
+#: ../plugins/synctex/synctex/synctex.py:284
 msgid "Forward Search"
-msgstr "转发链接"
+msgstr "向前搜索"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
@@ -506,7 +468,7 @@ msgstr "数组"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:15
 msgid "Associated information"
-msgstr "关联的新ch"
+msgstr "关联的信息"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:16
 msgid "Author info"
@@ -1142,12 +1104,12 @@ msgstr "无阴影(已废弃)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:191
 msgid "No word wrap"
-msgstr "无换行"
+msgstr "无单词换行"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:193
 msgid "No word wrap (deprecated)"
-msgstr "无换行(已废弃)"
+msgstr "无单词换行(已废弃)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:194
 msgid "Non-breaking space"
@@ -1765,7 +1727,7 @@ msgstr "带标签的项目"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:37
 msgid "Latex — Tags"
-msgstr "Latex - 标记"
+msgstr "Latex — 标记"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:38
 msgid "List description"
