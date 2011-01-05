@@ -1,5 +1,5 @@
 # Hungarian translation of gedit.
-# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
 #
 # Szabolcs Ban <shooby at gnome dot hu>, 2000.
 # Emese Kovacs <emese at gnome dot hu>, 2000, 2001.
@@ -7,14 +7,14 @@
 # Andras Timar <timar at gnome dot hu>, 2001, 2002, 2003.
 # Gabor Sari <saga at gnome dot hu>, 2003.
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011.
 # Mate Ory <orymate at gmail dot com>, 2006, 2007, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:10+0100\n"
-"PO-Revision-Date: 2010-11-07 14:08+0100\n"
+"POT-Creation-Date: 2011-01-06 00:58+0100\n"
+"PO-Revision-Date: 2011-01-06 00:56+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "MIME-Version: 1.0\n"
@@ -31,27 +31,27 @@ msgstr "Könyvjelzők"
 msgid "Easy document navigation with bookmarks"
 msgstr "Egyszerű dokumentumnavigáció könyvjelzőkkel"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:196
 msgid "Toggle Bookmark"
 msgstr "Könyvjelző be/ki"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
 msgid "Toggle bookmark status of the current line"
 msgstr "Könyvjelző állapotának átváltása a jelenlegi sorban"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
 msgid "Goto Next Bookmark"
 msgstr "Következő könyvjelző"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto the next bookmark"
 msgstr "Ugrás a következő könyvjelzőre"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
 msgid "Goto Previous Bookmark"
 msgstr "Előző könyvjelző"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
 msgid "Goto the previous bookmark"
 msgstr "Ugrás az előző könyvjelzőre"
 
@@ -64,7 +64,7 @@ msgid "Bracket Completion"
 msgstr "Zárójel-kiegészítés"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:337
+#: ../plugins/charmap/charmap/__init__.py:43
 msgid "Character Map"
 msgstr "Karaktertábla"
 
@@ -72,6 +72,7 @@ msgstr "Karaktertábla"
 msgid "Insert special characters just by clicking on them."
 msgstr "Speciális karakterek beszúrása egy kattintással"
 
+#. ex:et:ts=4:
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
 msgid "Code comment"
 msgstr "Kód megjegyzésbe"
@@ -80,19 +81,19 @@ msgstr "Kód megjegyzésbe"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Kijelölt kódblokk megjegyzésbe tétele vagy kivétele onnan"
 
-#: ../plugins/codecomment/codecomment.py:90
+#: ../plugins/codecomment/codecomment.py:88
 msgid "Co_mment Code"
 msgstr "Kó_d megjegyzésbe"
 
-#: ../plugins/codecomment/codecomment.py:92
+#: ../plugins/codecomment/codecomment.py:90
 msgid "Comment the selected code"
 msgstr "A kijelölt kód kerüljön megjegyzésbe"
 
-#: ../plugins/codecomment/codecomment.py:96
+#: ../plugins/codecomment/codecomment.py:94
 msgid "U_ncomment Code"
 msgstr "A kód _nem megjegyzés"
 
-#: ../plugins/codecomment/codecomment.py:98
+#: ../plugins/codecomment/codecomment.py:96
 msgid "Uncomment the selected code"
 msgstr "A kijelölt kód kerüljön ki a megjegyzésből"
 
@@ -103,21 +104,22 @@ msgstr "Színpipetta"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr "Szín választása párbeszédablakból, és hexadecimális ábrázolásának beszúrása"
+msgstr ""
+"Szín választása párbeszédablakból, és hexadecimális ábrázolásának beszúrása"
 
-#: ../plugins/colorpicker/colorpicker.py:77
+#: ../plugins/colorpicker/colorpicker.py:76
 msgid "Pick _Color..."
 msgstr "_Válasszon színt…"
 
-#: ../plugins/colorpicker/colorpicker.py:78
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick a color from a dialog"
 msgstr "Válasszon egy színt egy párbeszédablakból"
 
-#: ../plugins/colorpicker/colorpicker.py:188
+#: ../plugins/colorpicker/colorpicker.py:185
 msgid "Pick Color"
 msgstr "Válasszon színt"
 
-#: ../plugins/colorpicker/colorpicker.py:195
+#: ../plugins/colorpicker/colorpicker.py:192
 msgid "_Insert"
 msgstr "_Beszúrás"
 
@@ -196,19 +198,19 @@ msgstr "Több sor egyesítése, vagy hosszúak szétvágása"
 msgid "Join/Split Lines"
 msgstr "Sorok egyesítése/szétvágása"
 
-#: ../plugins/joinlines/joinlines.py:56
+#: ../plugins/joinlines/joinlines.py:75
 msgid "_Join Lines"
 msgstr "S_orok egyesítése"
 
-#: ../plugins/joinlines/joinlines.py:57
+#: ../plugins/joinlines/joinlines.py:76
 msgid "Join the selected lines"
 msgstr "Kijelölt sorok egyesítése"
 
-#: ../plugins/joinlines/joinlines.py:59
+#: ../plugins/joinlines/joinlines.py:78
 msgid "_Split Lines"
 msgstr "Sorok szét_vágása"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:79
 msgid "Split the selected lines"
 msgstr "A kijelölt sorok szétvágása"
 
@@ -221,70 +223,65 @@ msgstr "Dokumentum szerkesztése egyszerre több helyen"
 msgid "Multi Edit"
 msgstr "Párhuzamos szerkesztés"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:301
+#: ../plugins/multiedit/multiedit/documenthelper.py:295
 msgid "Added edit point..."
 msgstr "Szerkesztési pont hozzáadása…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:637
+#: ../plugins/multiedit/multiedit/documenthelper.py:631
 msgid "Column Mode..."
 msgstr "Oszlopos mód…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:759
+#: ../plugins/multiedit/multiedit/documenthelper.py:744
 msgid "Removed edit point..."
 msgstr "Szerkesztési pont eltávolítva…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:922
+#: ../plugins/multiedit/multiedit/documenthelper.py:907
 msgid "Cancelled column mode..."
 msgstr "Oszlopos mód megszakítva…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+#: ../plugins/multiedit/multiedit/documenthelper.py:1279
 msgid "Enter column edit mode using selection"
 msgstr "Belépés az oszlopos szerkesztési módba a kijelölés használatával"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+#: ../plugins/multiedit/multiedit/documenthelper.py:1280
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
 "Belépés az <b>intelligens</b> oszlopszerkesztési módba a kijelölés "
 "használatával"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+#: ../plugins/multiedit/multiedit/documenthelper.py:1281
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "<b>Intelligens</b> oszlopigazítási mód a kijelölés használatával"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+#: ../plugins/multiedit/multiedit/documenthelper.py:1282
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 "<b>Intelligens</b> oszlopigazítási mód további hellyel a kijelölés "
 "használatával"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+#: ../plugins/multiedit/multiedit/documenthelper.py:1284
 msgid "Toggle edit point"
 msgstr "Szerkesztési pont bekapcsolása"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+#: ../plugins/multiedit/multiedit/documenthelper.py:1285
 msgid "Add edit point at beginning of line/selection"
 msgstr "Szerkesztési pont hozzáadása a sor vagy kijelölés elején"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+#: ../plugins/multiedit/multiedit/documenthelper.py:1286
 msgid "Add edit point at end of line/selection"
 msgstr "Szerkesztési pont hozzáadása a sor vagy kijelölés végén"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+#: ../plugins/multiedit/multiedit/documenthelper.py:1287
 msgid "Align edit points"
 msgstr "Szerkesztési pontok igazítása"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Align edit points with additional space"
 msgstr "Szerkesztési pontok igazítása további hellyel"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1305
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
+#: ../plugins/multiedit/multiedit/documenthelper.py:1328
 msgid "Multi Edit Mode"
 msgstr "Párhuzamos szerkesztési mód"
-
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
-msgid "Start multi edit mode"
-msgstr "Párhuzamos szerkesztés megkezdése"
 
 #. ex:ts=4:et:
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
@@ -353,6 +350,183 @@ msgstr "Felejtse el, hogy nem használ tabokat"
 msgid "Smart Spaces"
 msgstr "Intelligens szóközök"
 
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:1
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Egy Pango betűkészletnév. Például: „Sans 12” vagy „Monospace Bold 14”."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:2
+msgid "Characters that are considered \"part of a word\""
+msgstr "Karakterek, amelyek részei lehetnek egy szónak"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:3
+msgid "Default color of terminal background"
+msgstr "A terminálháttér alapértelmezett színe"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:4
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"A terminál hátterének alapértelmezett színe, színmegadásként (Lehet HTML-"
+"stílusú hexa számjegyekkel vagy színnévvel, például „red” = vörös)."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:5
+msgid "Default color of text in the terminal"
+msgstr "A terminál szövegének alapértelmezett színe"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:6
+msgid ""
+"Default color of text in the terminal, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"A terminál szövegének alapértelmezett színe, színmegadásként (Lehet HTML-"
+"stílusú hexa számjegyekkel vagy színnévvel, például „red” = vörös)."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:7
+msgid "Font"
+msgstr "Betűkészlet"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:8
+msgid "If true, allow applications in the terminal to make text boldface."
+msgstr ""
+"Ha be van állítva, az alkalmazások a terminálban használhatnak félkövér "
+"szöveget."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:9
+msgid ""
+"If true, don't make a noise when applications send the escape sequence for "
+"the terminal bell."
+msgstr ""
+"Ha be van állítva, nem szólal meg a terminálcsengő, ha az alkalmazások "
+"megszólaltatnák."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:10
+msgid "If true, pressing a key jumps the scrollbar to the bottom."
+msgstr "Ha be van állítva, gombnyomásra a gördítősáv aljára ugrik."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:11
+msgid ""
+"If true, scrollback lines will never be discarded. The scrollback history is "
+"stored on disk temporarily, so this may cause the system to run out of disk "
+"space if there is a lot of output to the terminal."
+msgstr ""
+"Ha igazra van állítva, akkor a visszagörgetési sorok soha nem lesznek "
+"eldobva. A visszagörgetési előzmények ideiglenesen a lemezen lesznek "
+"tárolva, így emiatt a rendszeren elfogyhat a szabad hely, ha túl sok a "
+"kimenet a terminálon."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:12
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Ha be van állítva, a terminál az asztal globális szabvány betűkészletét "
+"fogja használni, ha az monospace (és a hozzá leginkább hasonlót egyébként)."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:13
+msgid ""
+"If true, the theme color scheme used for text entry boxes will be used for "
+"the terminal, instead of colors provided by the user."
+msgstr ""
+"Ha be van állítva, a téma szövegbeviteli dobozokra használt színsémáját "
+"használja a terminálra a felhasználó által megadottak helyett."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:14
+msgid ""
+"If true, whenever there's new output the terminal will scroll to the bottom."
+msgstr "Ha be van állítva, a terminál új kimenet kiírásakor az aljára gördül."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:15
+msgid "Number of lines to keep in scrollback"
+msgstr "A visszagörgetendő sorok száma"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:16
+msgid ""
+"Number of scrollback lines to keep around. You can scroll back in the "
+"terminal by this number of lines; lines that don't fit in the scrollback are "
+"discarded. If scrollback-unlimited is true, this value is ignored."
+msgstr ""
+"A visszagörgetéshez megtartandó sorok száma. Ennyi sort görgethet vissza a "
+"terminálban; azon sorok, amik nem férnek bele ebbe, el lesznek dobva. Ha a "
+"scrollback-unlimited kulcs értéke igaz, akkor figyelmen kívül marad."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:17
+msgid "Palette for terminal applications"
+msgstr "Paletta a terminálalkalmazásokhoz"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:18
+msgid ""
+"Terminals have a 16-color palette that applications inside the terminal can "
+"use. This is that palette, in the form of a colon-separated list of color "
+"names. Color names should be in hex format e.g. \"#FF00FF\""
+msgstr ""
+"A terminálnak van egy 16 színű palettája, amit az alkalmazások a terminálon "
+"belül használhatnak. Ez az a paletta, színnevek vesszővel elválasztott "
+"listája formájában. A színnevek hexa alakban kell legyenek, például „#FF00FF”"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:19
+msgid "The cursor appearance"
+msgstr "A kurzor megjelenése"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:20
+msgid ""
+"The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
+"vertical line cursor, or \"underline\" to use an underline cursor."
+msgstr ""
+"A lehetséges értékek: „block” (tömör kurzor), „ibeam” (függőleges vonal "
+"kurzor), „underline” (aláhúzás kurzor)."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:21
+msgid ""
+"The possible values are \"system\" to use the global cursor blinking "
+"settings, or \"on\" or \"off\" to set the mode explicitly."
+msgstr ""
+"A lehetséges értékek: „system” (globális kurzorvillogási beállítás "
+"használata), illetve „on” (be) vagy „off” (ki) a mód explicit beállításához."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:22
+msgid ""
+"When selecting text by word, sequences of these characters are considered "
+"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing "
+"a range) should be the first character given."
+msgstr ""
+"Amikor szavanként jelöli ki a szöveget, akkor a következő karakterek "
+"számítanak egy szónak. Tartományok megadhatók „A-Z” alakban. Ha a kötőjelet "
+"literálként, és nem a tartomány jelölésére szeretné megadni, akkor az legyen "
+"az első megadott karakter."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:23
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr "Végtelen számú sor tárolása a visszagörgetéshez"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:24
+msgid "Whether to allow bold text"
+msgstr "Félkövér betűk engedélyezése"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:25
+msgid "Whether to blink the cursor"
+msgstr "Villogjon-e a kurzor"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:26
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr "Billentyűleütésre görgessen-e a terminál aljára"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:27
+msgid "Whether to scroll to the bottom when there's new output"
+msgstr "Görgessen-e a terminál aljára ha új kimenet jelenik meg"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:28
+msgid "Whether to silence terminal bell"
+msgstr "Elnémítsa-e a terminálcsengőt"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:29
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr "Használja-e a terminálelem témájának színeit"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:30
+msgid "Whether to use the system font"
+msgstr "Használja-e a rendszer betűkészletet"
+
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
 msgid "Embed a terminal in the bottom pane."
 msgstr "Terminál beágyazása az alsó ablaktáblába."
@@ -361,11 +535,11 @@ msgstr "Terminál beágyazása az alsó ablaktáblába."
 msgid "Embedded Terminal"
 msgstr "Beágyazott terminál"
 
-#: ../plugins/terminal/terminal.py:307
+#: ../plugins/terminal/terminal.py:258
 msgid "Terminal"
 msgstr "Terminál"
 
-#: ../plugins/terminal/terminal.py:329
+#: ../plugins/terminal/terminal.py:280
 msgid "C_hange Directory"
 msgstr "Könyvtár_váltás"
 
@@ -389,8 +563,8 @@ msgstr "SyncTeX"
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr "Szinkronizálás LaTeX és PDF között a gedit és evince használatával."
 
-#: ../plugins/synctex/synctex/synctex.py:280
-#: ../plugins/synctex/synctex/synctex.py:281
+#: ../plugins/synctex/synctex/synctex.py:283
+#: ../plugins/synctex/synctex/synctex.py:284
 msgid "Forward Search"
 msgstr "Keresés előre"
 
@@ -1954,4 +2128,3 @@ msgstr "self"
 #: ../plugins/taglist/XUL.tags.xml.in.h:1
 msgid "XUL — Tags"
 msgstr "XUL – Címkék"
-
