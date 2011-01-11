@@ -1,36 +1,32 @@
 # Czech translation of gedit.
-# Copyright (C) 2002, 2003, 2006, 2007, 2008, 2009 the author(s) of gedit.
+# Copyright (C) 2002, 2003, 2006, 2007, 2008, 2009, 2010, 2011 the author(s) of gedit.
 # Copyright (C) 2003, 2004, 2005, 2006 Miloslav Trmac <mitr@volny.cz>.
 # Copyright (C) 2006 Lukas Novotny <lukasnov@cvs.gnome.org>.
 # This file is distributed under the same license as the gedit package.
-#
 # Michal Bukovjan <michal.bukovjan@openone.cz>, 2002.
 # Michal Bukovjan <bukm@centrum.cz>, 2003.
-# Miloslav Trmac <mitr@volny.cz>, 2003, 2004, 2005, 2006.
+# Miloslav Trmac <mitr@volny.cz>, 2003 – 2006.
 # Lukas Novotny <lukasnov@cvs.gnome.org>, 2006.
 # Petr Tomeš <ptomes@gmail.com>, 2006.
 # Jakub Friedl <jfriedl@suse.cz>, 2006, 2007.
 # Jiří Eischmann <jiri@eischmann.cz>, 2008, 2009.
 # Kamil Páral <ripper42@gmail.com>, 2009.
 # Lucas Lommer <llommer@svn.gnome.org>, 2009. (just one fix).
-# Petr Kovar <pknbe@volny.cz>, 2008, 2009, 2010.
-# Marek Černocký <marek@manet.cz>, 2009, 2010.
-#
+# Petr Kovar <pknbe@volny.cz>, 2008 – 2010.
+# Marek Černocký <marek@manet.cz>, 2009 – 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-21 22:16+0100\n"
-"PO-Revision-Date: 2010-11-08 10:48+0100\n"
-"Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
+"POT-Creation-Date: 2011-01-11 23:53+0100\n"
+"PO-Revision-Date: 2011-01-06 13:44+0100\n"
+"Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Poedit-Language: Czech\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
 msgid "Bookmarks"
@@ -40,27 +36,27 @@ msgstr "Záložky"
 msgid "Easy document navigation with bookmarks"
 msgstr "Jednoduché procházení dokumentem pomocí záložek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:196
 msgid "Toggle Bookmark"
 msgstr "Přepnout záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
 msgid "Toggle bookmark status of the current line"
 msgstr "Přepnout stav záložky na současném řádku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
 msgid "Goto Next Bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Goto the next bookmark"
 msgstr "Přejít na následující záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
 msgid "Goto Previous Bookmark"
 msgstr "Přejít na předchozí záložku"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
 msgid "Goto the previous bookmark"
 msgstr "Přejít na předchozí záložku"
 
@@ -73,7 +69,7 @@ msgid "Bracket Completion"
 msgstr "Dokončování závorek"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:337
+#: ../plugins/charmap/charmap/__init__.py:43
 msgid "Character Map"
 msgstr "Mapa znaků"
 
@@ -81,6 +77,7 @@ msgstr "Mapa znaků"
 msgid "Insert special characters just by clicking on them."
 msgstr "Vkládání speciálních znaků pouhým kliknutím."
 
+#. ex:et:ts=4:
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
 msgid "Code comment"
 msgstr "Komentování kódu"
@@ -89,19 +86,19 @@ msgstr "Komentování kódu"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Zakomentovat nebo odkomentovat vybraný blok kódu."
 
-#: ../plugins/codecomment/codecomment.py:90
+#: ../plugins/codecomment/codecomment.py:88
 msgid "Co_mment Code"
 msgstr "Zako_mentovat kód"
 
-#: ../plugins/codecomment/codecomment.py:92
+#: ../plugins/codecomment/codecomment.py:90
 msgid "Comment the selected code"
 msgstr "Zakomentovat vybraný kód"
 
-#: ../plugins/codecomment/codecomment.py:96
+#: ../plugins/codecomment/codecomment.py:94
 msgid "U_ncomment Code"
 msgstr "_Odkomentovat kód"
 
-#: ../plugins/codecomment/codecomment.py:98
+#: ../plugins/codecomment/codecomment.py:96
 msgid "Uncomment the selected code"
 msgstr "Odkomentovat vybraný kód"
 
@@ -114,19 +111,19 @@ msgstr "Barevná pipeta"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Vybrat barvu z dialogu a vložit její šestnáctkové vyjádření."
 
-#: ../plugins/colorpicker/colorpicker.py:77
+#: ../plugins/colorpicker/colorpicker.py:76
 msgid "Pick _Color..."
 msgstr "Vybrat _barvu…"
 
-#: ../plugins/colorpicker/colorpicker.py:78
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick a color from a dialog"
 msgstr "Vybrat barvu z dialogu"
 
-#: ../plugins/colorpicker/colorpicker.py:188
+#: ../plugins/colorpicker/colorpicker.py:185
 msgid "Pick Color"
 msgstr "Výběr barvy"
 
-#: ../plugins/colorpicker/colorpicker.py:195
+#: ../plugins/colorpicker/colorpicker.py:192
 msgid "_Insert"
 msgstr "_Vložit"
 
@@ -205,19 +202,19 @@ msgstr "Spojit několik řádků nebo rozdělit dlouhé řádky"
 msgid "Join/Split Lines"
 msgstr "Spojit/Rozdělit řádky"
 
-#: ../plugins/joinlines/joinlines.py:56
+#: ../plugins/joinlines/joinlines.py:75
 msgid "_Join Lines"
 msgstr "Spo_jit řádky"
 
-#: ../plugins/joinlines/joinlines.py:57
+#: ../plugins/joinlines/joinlines.py:76
 msgid "Join the selected lines"
 msgstr "Spojit vybrané řádky"
 
-#: ../plugins/joinlines/joinlines.py:59
+#: ../plugins/joinlines/joinlines.py:78
 msgid "_Split Lines"
 msgstr "_Rozdělit řádky"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:79
 msgid "Split the selected lines"
 msgstr "Rozdělit vybrané řádky"
 
@@ -230,67 +227,62 @@ msgstr "Úprava dokumentu na více místech současně"
 msgid "Multi Edit"
 msgstr "Vícenásobná úprava"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:301
+#: ../plugins/multiedit/multiedit/documenthelper.py:295
 msgid "Added edit point..."
 msgstr "Přidat editační bod…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:637
+#: ../plugins/multiedit/multiedit/documenthelper.py:631
 msgid "Column Mode..."
 msgstr "Sloupcový režim…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:759
+#: ../plugins/multiedit/multiedit/documenthelper.py:744
 msgid "Removed edit point..."
 msgstr "Odebrat editační bod…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:922
+#: ../plugins/multiedit/multiedit/documenthelper.py:907
 msgid "Cancelled column mode..."
 msgstr "Sloupcový režim zrušen…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+#: ../plugins/multiedit/multiedit/documenthelper.py:1279
 msgid "Enter column edit mode using selection"
 msgstr "Vstoupit do režimu úpravy sloupců pomocí výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+#: ../plugins/multiedit/multiedit/documenthelper.py:1280
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr "Vstoupit do <b>chytrého</b> režimu úpravy sloupců pomocí výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+#: ../plugins/multiedit/multiedit/documenthelper.py:1281
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "<b>Chytrý</b> režim zarovnání sloupců pomocí výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+#: ../plugins/multiedit/multiedit/documenthelper.py:1282
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 "<b>Chytrý</b> režim zarovnání sloupců s doplňujícím místem pomocí výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+#: ../plugins/multiedit/multiedit/documenthelper.py:1284
 msgid "Toggle edit point"
 msgstr "Přepnout editační bod"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+#: ../plugins/multiedit/multiedit/documenthelper.py:1285
 msgid "Add edit point at beginning of line/selection"
 msgstr "Přidat editační bod na začátek řádku/výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+#: ../plugins/multiedit/multiedit/documenthelper.py:1286
 msgid "Add edit point at end of line/selection"
 msgstr "Přidat editační bod na konec řádku/výběru"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+#: ../plugins/multiedit/multiedit/documenthelper.py:1287
 msgid "Align edit points"
 msgstr "Editační body zarovnání"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Align edit points with additional space"
 msgstr "Editační body zarovnání s doplňujícím místem"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1305
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
+#: ../plugins/multiedit/multiedit/documenthelper.py:1328
 msgid "Multi Edit Mode"
 msgstr "Režim vícenásobné úpravy"
-
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
-msgid "Start multi edit mode"
-msgstr "Začít režim vícenásobné úpravy"
 
 #. ex:ts=4:et:
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
@@ -359,19 +351,200 @@ msgstr "Zapomeňte, že nepoužíváte tabulace."
 msgid "Smart Spaces"
 msgstr "Inteligentní mezery"
 
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:1
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+"Název písma systému Pango. Například „Sans 12“ nebo „Monospace Bold 14“."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:2
+msgid "Characters that are considered \"part of a word\""
+msgstr "Znaky považované za „část slova“"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:3
+msgid "Default color of terminal background"
+msgstr "Výchozí barva pozadí terminálu"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:4
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Výchozí barva pozadí terminálu v podobě specifikace barvy (což může být "
+"šestnáctkový zápis ve stylu HTML nebo anglický název barvy, např. „red“)"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:5
+msgid "Default color of text in the terminal"
+msgstr "Výchozí barva textu v terminálu"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:6
+msgid ""
+"Default color of text in the terminal, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Výchozí barva textu v terminálu v podobě specifikace barvy (což může být "
+"šestnáctkový zápis ve stylu HTML nebo anglický název barvy, např. „red“)"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:7
+msgid "Font"
+msgstr "Písmo"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:8
+msgid "If true, allow applications in the terminal to make text boldface."
+msgstr ""
+"Pokud je zapnuto, dovoluje aplikacím v terminálu použít text v tučném písmu."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:9
+msgid ""
+"If true, don't make a noise when applications send the escape sequence for "
+"the terminal bell."
+msgstr ""
+"Pokud je zapnuto, nebude vás rušit zvuk, když aplikace odešle sekvenci "
+"escape pro terminálový zvonek."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:10
+msgid "If true, pressing a key jumps the scrollbar to the bottom."
+msgstr ""
+"Pokud je zapnuto, způsobí stisk klávesy skok posuvníku do spodní části."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:11
+msgid ""
+"If true, scrollback lines will never be discarded. The scrollback history is "
+"stored on disk temporarily, so this may cause the system to run out of disk "
+"space if there is a lot of output to the terminal."
+msgstr ""
+"Pokud je zapnuto, nebudou se řádky pro zpětné rolování zahazovat. Historie "
+"pro rolování zpět se uchovává dočasně na disku, takže eventuálně může při "
+"velkém množství výstupů na terminál způsobit, že se místo na disku vyčerpá."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:12
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Pokud je zapnuto, bude terminál používat standardní písmo globálně nastavené "
+"pro pracovní prostředí, za předpokladu že jde o monospace (a většina "
+"podobných písem může použít alias)."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:13
+msgid ""
+"If true, the theme color scheme used for text entry boxes will be used for "
+"the terminal, instead of colors provided by the user."
+msgstr ""
+"Pokud je zapnuto, bude pro terminál namísto barvy zadané uživatelem použita "
+"barva, která se v barveném schématu používá pro textové vstupní pole."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:14
+msgid ""
+"If true, whenever there's new output the terminal will scroll to the bottom."
+msgstr ""
+"Pokud je zapnuto, kdykoliv se objeví nějaký nový výstup, terminál odroluje "
+"na spodní část."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:15
+msgid "Number of lines to keep in scrollback"
+msgstr "Počet řádků udržovaných pro rolování zpět"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:16
+msgid ""
+"Number of scrollback lines to keep around. You can scroll back in the "
+"terminal by this number of lines; lines that don't fit in the scrollback are "
+"discarded. If scrollback-unlimited is true, this value is ignored."
+msgstr ""
+"Počet řádků, který se má pamatovat pro rolování zpět. V terminálu můžete "
+"rolovat zpět o tento počet řádků, řádky které jsou za tímto rozsahem se "
+"zahazují. V případě, že není počet řádků omezen (zapnuto scrollback-"
+"unlimited), tato hodnota se ignoruje."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:17
+msgid "Palette for terminal applications"
+msgstr "Paleta pro terminálové aplikace"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:18
+msgid ""
+"Terminals have a 16-color palette that applications inside the terminal can "
+"use. This is that palette, in the form of a colon-separated list of color "
+"names. Color names should be in hex format e.g. \"#FF00FF\""
+msgstr ""
+"Terminál má 16barevnou paletu, kterou mohou aplikace uvnitř terminálu "
+"použít. Toto je paleta v podobě seznamu názvů barev oddělených dvojtečkou. "
+"Názvy barev mohou být v šestnáctkovém formátu, např. „#FF00FF“"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:19
+msgid "The cursor appearance"
+msgstr "Vzhled kurzoru"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:20
+msgid ""
+"The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
+"vertical line cursor, or \"underline\" to use an underline cursor."
+msgstr ""
+"Možné hodnoty jsou „block“ pro použití blokového kurzoru, „ibeam“ pro "
+"použití kurzoru v podobě svislé čárky nebo „underline“ pro použití podtržení "
+"jako kurzoru"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:21
+msgid ""
+"The possible values are \"system\" to use the global cursor blinking "
+"settings, or \"on\" or \"off\" to set the mode explicitly."
+msgstr ""
+"Možné hodnoty jsou „system“ pro použití globálního nastavení blikání kurzoru "
+"a nebo „on“ (zapnuto) nebo „off“ (vypnuto) pro přímé nastavení režimu"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:22
+msgid ""
+"When selecting text by word, sequences of these characters are considered "
+"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing "
+"a range) should be the first character given."
+msgstr ""
+"Když je prováděn výběr podle slov, je za slovo považována sekvence právě "
+"těchto znaků. Rozsahy lze zadávat jako „A-Z“. Znak pomlčky (který nemá "
+"vyjadřovat rozsah) by měl být uveden jako první znak."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:23
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr "Zda by se mělo pro rolování zpět udržovat neomezené množství řádků"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:24
+msgid "Whether to allow bold text"
+msgstr "Zda povolit tučný text"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:25
+msgid "Whether to blink the cursor"
+msgstr "Zda blikat kurzorem"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:26
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr "Zda odrolovat na spodní část, když je stisknuta klávesa"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:27
+msgid "Whether to scroll to the bottom when there's new output"
+msgstr "Zda odrolovat na spodní část, když se objeví nový výstup"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:28
+msgid "Whether to silence terminal bell"
+msgstr "Zda ztišit terminálový zvonek"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:29
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr "Zda používat barvy z motivu pro terminálový widget"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:30
+msgid "Whether to use the system font"
+msgstr "Zda používat systémové písmo"
+
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
 msgid "Embed a terminal in the bottom pane."
-msgstr "Vložit terminál do dolního panelu."
+msgstr "Vložení terminálu do dolního panelu."
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
 msgid "Embedded Terminal"
 msgstr "Vestavěný terminál"
 
-#: ../plugins/terminal/terminal.py:307
+#: ../plugins/terminal/terminal.py:258
 msgid "Terminal"
 msgstr "Terminál"
 
-#: ../plugins/terminal/terminal.py:329
+#: ../plugins/terminal/terminal.py:280
 msgid "C_hange Directory"
 msgstr "Z_měnit složku"
 
@@ -1962,3 +2135,6 @@ msgstr "self"
 #: ../plugins/taglist/XUL.tags.xml.in.h:1
 msgid "XUL — Tags"
 msgstr "XUL — značky"
+
+#~ msgid "Start multi edit mode"
+#~ msgstr "Začít režim vícenásobné úpravy"
