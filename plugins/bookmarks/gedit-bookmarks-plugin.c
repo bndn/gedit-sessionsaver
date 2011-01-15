@@ -37,6 +37,8 @@
 				GeditBookmarksPluginPrivate))
 
 #define BOOKMARK_CATEGORY "GeditBookmarksPluginBookmark"
+#define BOOKMARK_PRIORITY 1
+
 #define INSERT_DATA_KEY "GeditBookmarksInsertData"
 #define METADATA_ATTR "metadata::gedit-bookmarks"
 
@@ -292,12 +294,6 @@ disable_bookmarks (GeditView *view)
 	g_object_set_data (G_OBJECT (buffer), INSERT_DATA_KEY, NULL);
 }
 
-static GtkSourceMarkCategory *
-get_bookmark_category (GtkSourceView *view)
-{
-	return gtk_source_view_get_mark_category (view, BOOKMARK_CATEGORY);
-}
-
 static GdkPixbuf *
 get_bookmark_pixbuf (GeditBookmarksPlugin *plugin)
 {
@@ -316,7 +312,7 @@ get_bookmark_pixbuf (GeditBookmarksPlugin *plugin)
 }
 
 static void
-update_background_color (GtkSourceMarkCategory *category, GtkSourceBuffer *buffer)
+update_background_color (GtkSourceMarkAttributes *attrs, GtkSourceBuffer *buffer)
 {
 	GtkSourceStyleScheme *scheme;
 	GtkSourceStyle *style;
@@ -336,14 +332,14 @@ update_background_color (GtkSourceMarkCategory *category, GtkSourceBuffer *buffe
 			GdkRGBA color;
 
 			gdk_rgba_parse (&color, bg);
-			gtk_source_mark_category_set_background (category, &color);
+			gtk_source_mark_attributes_set_background (attrs, &color);
 			g_free (bg);
 
 			return;
 		}
 	}
 
-	gtk_source_mark_category_set_background (category, NULL);
+	gtk_source_mark_attributes_set_background (attrs, NULL);
 }
 
 static void
@@ -357,16 +353,22 @@ enable_bookmarks (GeditView            *view,
 	/* Make sure the category pixbuf is set */
 	if (pixbuf)
 	{
-		GtkSourceMarkCategory *category;
 		GtkTextBuffer *buffer;
+		GtkSourceMarkAttributes *attrs;
 		InsertData *data;
 
-		category = get_bookmark_category (GTK_SOURCE_VIEW (view));
 		buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
 
-		update_background_color (category, GTK_SOURCE_BUFFER (buffer));
-		gtk_source_mark_category_set_pixbuf (category, pixbuf);
+		attrs = gtk_source_mark_attributes_new ();
+
+		update_background_color (attrs, GTK_SOURCE_BUFFER (buffer));
+		gtk_source_mark_attributes_set_pixbuf (attrs, pixbuf);
 		g_object_unref (pixbuf);
+
+		gtk_source_view_set_mark_attributes (GTK_SOURCE_VIEW (view),
+						     BOOKMARK_CATEGORY,
+						     attrs,
+						     BOOKMARK_PRIORITY);
 
 		gtk_source_view_set_show_line_marks (GTK_SOURCE_VIEW (view), TRUE);
 
@@ -877,11 +879,13 @@ on_style_scheme_notify (GObject     *object,
 			GParamSpec  *pspec,
 			GeditView   *view)
 {
-	GtkSourceMarkCategory *category;
+	GtkSourceMarkAttributes *attrs;
 
-	category = get_bookmark_category (GTK_SOURCE_VIEW (view));
+	attrs = gtk_source_view_get_mark_attributes (GTK_SOURCE_VIEW (view),
+						     BOOKMARK_CATEGORY,
+						     NULL);
 
-	update_background_color (category, GTK_SOURCE_BUFFER (object));
+	update_background_color (attrs, GTK_SOURCE_BUFFER (object));
 }
 
 static void
