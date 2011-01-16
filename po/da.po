@@ -1,37 +1,31 @@
-# Danish translations of gedit.
-# Copyright (C) 1999-2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gedit package.
-#
-# Husk at tilføje dig i credit-listen (besked id "translator_credits")
-#
-# Konventioner:
-#
-#   plugin -> udvidelsesmodul
-#   snippet -> tekststump
-#
+# Danish translations of gedit-plugins.
+# Copyright (C) 2010 Free Software Foundation, Inc.
 # Birger Langkjer <birger.langkjer@image.dk>, 1999.
 # Kenneth Christiansen <kenneth@gnome.org>, 1999, 2000.
 # Keld Simonsen <keld@dkuug.dk>, 2000, 01.
-# Ole Laursen <olau@hardworking.dk>, 2002, 03, 04, 05, 06.
-# Marie Lund <marielund@post.cybercity.dk>, 2004.
-# Martin Willemoes Hansen <mwh@sysrq.dk>, 2004.
-# Kenneth Nielsen <k.nielsen81@gmail.com>, 2006-2007, 2009.
-# M.P. Rommedahl <lhademmor@gmail.com>, 2008
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007, 09, 10.
+# Ole Laursen <olau@hardworking.dk>, 2002, 03, 04.
+# Niels Rasmussen <nielsrasmus@gmail.com>, 2008
+# Joe Hansen (joedalton2@yahoo.dk), 2010.
+#
+# Konventioner:
+#
+#  draw -> vis (tingene vises på skærmen, derfor ikke tegn).
+#  gedit -> tekstredigering
+#  plugin -> udvidelsesmodul
+#  white space -> blanktegn
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit.gnome-2-16\n"
+"Project-Id-Version: gedit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:10+0100\n"
-"PO-Revision-Date: 2010-03-27 22:13+0100\n"
-"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"POT-Creation-Date: 2011-01-16 12:36+0100\n"
+"PO-Revision-Date: 2010-12-27 10:23+0100\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
 msgid "Bookmarks"
@@ -39,182 +33,159 @@ msgstr "Bogmærker"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
 msgid "Easy document navigation with bookmarks"
-msgstr ""
-
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-#, fuzzy
-msgid "Toggle Bookmark"
-msgstr "Bogmærker"
+msgstr "Nem dokumentnavigering med bogmærker"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
-msgid "Toggle bookmark status of the current line"
-msgstr "Vis eller skjul statuslinjen i det aktuelle vindue"
+msgid "Toggle Bookmark"
+msgstr "Skift bogmærke"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
-msgid "Goto Next Bookmark"
-msgstr ""
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
+msgid "Toggle bookmark status of the current line"
+msgstr "Skift bogmærkestatus på den aktuelle linje"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
-msgid "Goto the next bookmark"
-msgstr "Gå til det næste besøgte sted"
+msgid "Goto Next Bookmark"
+msgstr "Gå til næste bogmærke"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
-msgid "Goto Previous Bookmark"
-msgstr "Gå til det forrige sted"
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
+msgid "Goto the next bookmark"
+msgstr "Gå til det næste bogmærke"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
+msgid "Goto Previous Bookmark"
+msgstr "Gå til forrige bogmærke"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:205
 msgid "Goto the previous bookmark"
-msgstr "Vis den foregående side"
+msgstr "Gå til det forrige bogmærke"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "Automatisk gættede kodninger"
+msgstr "Tilføjer automatisk afsluttende klammer."
 
-# dækker vist nogenlunde
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Bracket Completion"
-msgstr "Parantesfremhævning"
+msgstr "Klammefuldførelse"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
+#: ../plugins/charmap/charmap/__init__.py:43
 msgid "Character Map"
-msgstr "Tegnkodninger"
+msgstr "Tegnoversigt"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Indsæt speicaltegn ved at klikke på dem."
 
+#. ex:et:ts=4:
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "Kommentar"
+msgstr "Kodekommentar"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
-msgstr "Kommentér eller udkommentér den valgte kodeblok."
+msgstr "Kommenter eller udkommenter den valgte kodeblok."
+
+#: ../plugins/codecomment/codecomment.py:88
+msgid "Co_mment Code"
+msgstr "Ko_mmenter kode"
 
 #: ../plugins/codecomment/codecomment.py:90
-#, fuzzy
-msgid "Co_mment Code"
-msgstr "Kommentar"
-
-#: ../plugins/codecomment/codecomment.py:92
-#, fuzzy
 msgid "Comment the selected code"
-msgstr "Slet det markerede tekst"
+msgstr "Kommenter den valgte kode"
+
+#: ../plugins/codecomment/codecomment.py:94
+msgid "U_ncomment Code"
+msgstr "U_dkommenter kode"
 
 #: ../plugins/codecomment/codecomment.py:96
-msgid "U_ncomment Code"
-msgstr "U_dkommentér Kode"
-
-#: ../plugins/codecomment/codecomment.py:98
-#, fuzzy
 msgid "Uncomment the selected code"
-msgstr "Slet det markerede tekst"
+msgstr "Udkommenter den valgte kode"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Color Picker"
-msgstr "Farveskema"
+msgstr "Farvevælger"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Vælg en farve fra dialogvinduet og indsæt dens hexadecimale værdi."
 
-#: ../plugins/colorpicker/colorpicker.py:77
-#, fuzzy
+#: ../plugins/colorpicker/colorpicker.py:76
 msgid "Pick _Color..."
-msgstr "Vælg en farve"
+msgstr "Vælg _farve..."
 
-#: ../plugins/colorpicker/colorpicker.py:78
-#, fuzzy
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick a color from a dialog"
-msgstr "Vælg en farve"
+msgstr "Vælg en farve fra et dialogvindue"
 
-#: ../plugins/colorpicker/colorpicker.py:188
-#, fuzzy
+#: ../plugins/colorpicker/colorpicker.py:185
 msgid "Pick Color"
-msgstr "Vælg en farve"
+msgstr "Vælg farve"
 
-#: ../plugins/colorpicker/colorpicker.py:195
+#: ../plugins/colorpicker/colorpicker.py:192
 msgid "_Insert"
 msgstr "_Indsæt"
 
 #. ex:ts=4:et:
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:1
 msgid "Command line interface for advanced editing"
-msgstr ""
+msgstr "Grænseflade for kommandolinje til avanceret redigering"
 
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Commander"
-msgstr "K_ommandofarve:"
+msgstr "Commander"
 
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
 msgid "Draw Spaces"
-msgstr "Brug mellemrum"
+msgstr "Vis mellemrum"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
-msgstr "Tegn mellemrum og indrykninger"
+msgstr "Vis mellemrum og indrykninger"
 
+# indledende
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
 msgid "Draw leading spaces"
-msgstr "Ikke-brydende mellemrum"
+msgstr "Vis foranstillet mellemrum"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
-msgstr ""
+msgstr "Vis nye linjer"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "Ikke-brydende mellemrum"
+msgstr "Vis ikke-ombrydelige mellemrum"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
 msgid "Draw spaces"
-msgstr "Indsæt mellemrum"
+msgstr "Vis mellemrum"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
-#, fuzzy
 msgid "Draw spaces in text"
-msgstr "Indsæt mellemrum"
+msgstr "Vis mellemrum i tekst"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
-msgstr "Tegn indryk"
+msgstr "Vis indryk"
 
+# afsluttende
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "Fjern efterfølgende mellemrum"
+msgstr "Vis efterfølgende mellemrum"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
 msgid "Show _White Space"
-msgstr "Vis den næste side"
+msgstr "Vis _blanktegn"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "Indsæt _mellemrum i stedet for tabulatorer"
+msgstr "Vis mellemrum og indrykninger"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
-msgstr "Aktiveret"
+msgstr ""
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "If TRUE drawing will be enabled."
@@ -232,136 +203,127 @@ msgstr "Sammenføj flere linjer eller del de lange"
 msgid "Join/Split Lines"
 msgstr "Sammenføj/Del linjer"
 
-#: ../plugins/joinlines/joinlines.py:56
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:75
 msgid "_Join Lines"
-msgstr "Linjer"
+msgstr "_Sammenføj Linjer"
 
-#: ../plugins/joinlines/joinlines.py:57
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:76
 msgid "Join the selected lines"
-msgstr "Fjerner indrykningen fra de markerede linjer"
+msgstr "Sammenføj de valgte linjer"
 
-#: ../plugins/joinlines/joinlines.py:59
+#: ../plugins/joinlines/joinlines.py:78
 msgid "_Split Lines"
 msgstr "_Del Linjer"
 
-#: ../plugins/joinlines/joinlines.py:60
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:79
 msgid "Split the selected lines"
-msgstr "Fjerner indrykningen fra de markerede linjer"
+msgstr "Del den valgte linje"
 
 #. ex:ts=4:et:
 #: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
 msgid "Edit document in multiple places at once"
-msgstr ""
+msgstr "Rediger dokument flere steder på en gang"
 
 #: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
 msgid "Multi Edit"
-msgstr ""
+msgstr "Multiredigering"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:301
+#: ../plugins/multiedit/multiedit/documenthelper.py:295
 msgid "Added edit point..."
-msgstr ""
+msgstr "Tilføjede redigeringspunkt..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:637
+#: ../plugins/multiedit/multiedit/documenthelper.py:631
 msgid "Column Mode..."
-msgstr ""
+msgstr "Kolonnetilstand..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:759
+#: ../plugins/multiedit/multiedit/documenthelper.py:744
 msgid "Removed edit point..."
-msgstr ""
+msgstr "Fjernede redigeringspunkt..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:922
+#: ../plugins/multiedit/multiedit/documenthelper.py:907
 msgid "Cancelled column mode..."
-msgstr ""
+msgstr "Kolonnetilstand blev afbrudt..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+#: ../plugins/multiedit/multiedit/documenthelper.py:1279
 msgid "Enter column edit mode using selection"
-msgstr ""
+msgstr "Skift til kolonneredigeringstilstand ved brug af markering"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+#: ../plugins/multiedit/multiedit/documenthelper.py:1280
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
+"Skift til kolonneredigeringstilstanden <b>smart</b> med brug af markering"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+#: ../plugins/multiedit/multiedit/documenthelper.py:1281
 msgid "<b>Smart</b> column align mode using selection"
-msgstr ""
+msgstr "Kolonnejusteringstilstanden <b>Smart</b> med brug af markering"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+#: ../plugins/multiedit/multiedit/documenthelper.py:1282
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
+"Kolonnejusteringstilstanden <b>Smart</b> med yderligere mellemrum og brug af "
+"markering"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+#: ../plugins/multiedit/multiedit/documenthelper.py:1284
 msgid "Toggle edit point"
-msgstr ""
+msgstr "Skift redigeringspunkt"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+#: ../plugins/multiedit/multiedit/documenthelper.py:1285
 msgid "Add edit point at beginning of line/selection"
-msgstr ""
+msgstr "Tilføj redigeringspunkt i begyndelsen af linjen eller markeringen"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+#: ../plugins/multiedit/multiedit/documenthelper.py:1286
 msgid "Add edit point at end of line/selection"
-msgstr ""
+msgstr "Tilføj redigeringspunkt ved slutningen på linjen eller markeringen"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+#: ../plugins/multiedit/multiedit/documenthelper.py:1287
 msgid "Align edit points"
-msgstr ""
+msgstr "Juster redigeringspunkter"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Align edit points with additional space"
-msgstr ""
+msgstr "Juster redigeringspunkter med yderligere mellemrum"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1305
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
+#: ../plugins/multiedit/multiedit/documenthelper.py:1328
 msgid "Multi Edit Mode"
-msgstr ""
-
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
-msgid "Start multi edit mode"
-msgstr ""
+msgstr "Multiredigeringstilstand"
 
 #. ex:ts=4:et:
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
 msgid "Easily increase and decrease the text size"
-msgstr ""
+msgstr "Øg og formindsk nemt tekststørrelsen"
 
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Text Size"
-msgstr "Tabulatorstørrelse"
+msgstr "Tekststørrelse"
 
 #: ../plugins/sessionsaver/__init__.py:64
 msgid "Sa_ved sessions"
-msgstr ""
+msgstr "_Gemte sessioner"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "_Save current session"
-msgstr "Erstat aktuel markering"
+msgstr "_Gem aktuel session"
 
 #: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
 msgid "Save the current document list as a new session"
-msgstr "Flyt det aktuelle dokument til et nyt vindue"
+msgstr "Gem den aktuelle dokumentliste som en ny session"
 
 #: ../plugins/sessionsaver/__init__.py:66
 msgid "_Manage saved sessions..."
-msgstr ""
+msgstr "_Håndter gemte sessioner..."
 
 #: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
 msgid "Open the saved session manager"
-msgstr "Vis brugervejledningen"
+msgstr "Åbn håndtering af gemte sessioner"
 
 #: ../plugins/sessionsaver/__init__.py:106
 #, python-format
 msgid "Recover '%s' session"
-msgstr ""
+msgstr "Genopret sessionen »%s«"
 
 #: ../plugins/sessionsaver/dialogs.py:167
 msgid "Session Name"
-msgstr "Session Navn"
+msgstr "Sessionsnavn"
 
 #. ex:ts=4:et:
 #: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:1
@@ -370,1670 +332,1837 @@ msgstr "Gem og gendan dine aktuelle sessioner"
 
 #: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
 msgid "Session Saver"
-msgstr "Gem Sessioner"
+msgstr "Gem sessioner"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:1
 msgid "Save session"
-msgstr ""
+msgstr "Gem session"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:2
 msgid "Saved Sessions"
-msgstr ""
+msgstr "Gemte sessioner"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
-msgstr "Session navn:"
+msgstr "Sessionsnavn:"
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
 msgid "Forget you're not using tabulations."
 msgstr "Glem ikke at du bruger tabulatorer."
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Smart Spaces"
-msgstr "Indsæt mellemrum"
+msgstr "Smarte mellemrum"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:1
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:2
+msgid "Characters that are considered \"part of a word\""
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:3
+msgid "Default color of terminal background"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:4
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:5
+msgid "Default color of text in the terminal"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:6
+msgid ""
+"Default color of text in the terminal, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:7
+msgid "Font"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:8
+msgid "If true, allow applications in the terminal to make text boldface."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:9
+msgid ""
+"If true, don't make a noise when applications send the escape sequence for "
+"the terminal bell."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:10
+msgid "If true, pressing a key jumps the scrollbar to the bottom."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:11
+msgid ""
+"If true, scrollback lines will never be discarded. The scrollback history is "
+"stored on disk temporarily, so this may cause the system to run out of disk "
+"space if there is a lot of output to the terminal."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:12
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:13
+msgid ""
+"If true, the theme color scheme used for text entry boxes will be used for "
+"the terminal, instead of colors provided by the user."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:14
+msgid ""
+"If true, whenever there's new output the terminal will scroll to the bottom."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:15
+msgid "Number of lines to keep in scrollback"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:16
+msgid ""
+"Number of scrollback lines to keep around. You can scroll back in the "
+"terminal by this number of lines; lines that don't fit in the scrollback are "
+"discarded. If scrollback-unlimited is true, this value is ignored."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:17
+msgid "Palette for terminal applications"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:18
+msgid ""
+"Terminals have a 16-color palette that applications inside the terminal can "
+"use. This is that palette, in the form of a colon-separated list of color "
+"names. Color names should be in hex format e.g. \"#FF00FF\""
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:19
+msgid "The cursor appearance"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:20
+msgid ""
+"The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
+"vertical line cursor, or \"underline\" to use an underline cursor."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:21
+msgid ""
+"The possible values are \"system\" to use the global cursor blinking "
+"settings, or \"on\" or \"off\" to set the mode explicitly."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:22
+msgid ""
+"When selecting text by word, sequences of these characters are considered "
+"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing "
+"a range) should be the first character given."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:23
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:24
+msgid "Whether to allow bold text"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:25
+msgid "Whether to blink the cursor"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:26
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:27
+msgid "Whether to scroll to the bottom when there's new output"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:28
+msgid "Whether to silence terminal bell"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:29
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:30
+msgid "Whether to use the system font"
+msgstr ""
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "Åben en terminal der hvor filen er gemt"
+msgstr "Indlejr en terminal i nederste felt."
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Embedded Terminal"
-msgstr "Indlejret objekt"
+msgstr "Indlejret terminalvindue"
 
-#: ../plugins/terminal/terminal.py:307
-#, fuzzy
+#: ../plugins/terminal/terminal.py:258
 msgid "Terminal"
-msgstr "Tamilsk"
+msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:329
-#, fuzzy
+#: ../plugins/terminal/terminal.py:280
 msgid "C_hange Directory"
-msgstr "_Ny mappe"
+msgstr "S_kift filkatalog"
 
 #: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
-#, fuzzy
 msgid "Document Words"
-msgstr "Dokumentkrop"
+msgstr "Ord i dokumentet"
 
-# dækker vist nogenlunde
 #: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Word Completion"
-msgstr "Parantesfremhævning"
+msgstr "Ordfuldførelse"
 
 #: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
-msgstr ""
+msgstr "Ordfuldførelse med brug af fuldførelsesramme"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
 msgid "SyncTeX"
-msgstr ""
+msgstr "SyncTeX"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
-msgstr ""
+msgstr "Synkroniser mellem LaTeX og PDF med gedit og evince."
 
-#: ../plugins/synctex/synctex/synctex.py:280
-#: ../plugins/synctex/synctex/synctex.py:281
-#, fuzzy
+#: ../plugins/synctex/synctex/synctex.py:283
+#: ../plugins/synctex/synctex/synctex.py:284
 msgid "Forward Search"
-msgstr "Fremad-henvisning"
+msgstr "Søg fremad"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
 msgid "Tags"
-msgstr "Mærker"
+msgstr ""
 
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:608
 msgid "Select the group of tags you want to use"
-msgstr "Vælg den gruppe af mærker du ønsker at bruge"
+msgstr ""
 
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:627
 msgid "_Preview"
-msgstr "_Udskriftsvisning"
+msgstr ""
 
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
 msgid "Available Tag Lists"
-msgstr "Tilgængelige mærkelister"
+msgstr ""
 
 #. ex:ts=8:noet:
 #: ../plugins/taglist/HTML.tags.xml.in.h:1
 msgid "Abbreviated form"
-msgstr "Forkortet form"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:2
 msgid "Abbreviation"
-msgstr "Forkortelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:3
 msgid "Above"
-msgstr "Over"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:4
 msgid "Accessibility key character"
-msgstr "Tilgængeligheds-nøgletegn"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:5
 msgid "Acronym"
-msgstr "Akronym"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:6
 msgid "Align"
-msgstr "Justér"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:7
 msgid "Alignment character"
-msgstr "Justeringstegn"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:8
 msgid "Alternative"
-msgstr "Alternativ"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:9
 msgid "Anchor"
-msgstr "Anker"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:10
 msgid "Anchor URI"
-msgstr "Anker-URI"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:11
 msgid "Applet class file code"
-msgstr "Kode for programklassefil"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:13
 msgid "Applet class file code (deprecated)"
-msgstr "Kode for programklassefil (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:14
 msgid "Array"
-msgstr "Tabel"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:15
 msgid "Associated information"
-msgstr "Associerede oplysninger"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:16
 msgid "Author info"
-msgstr "Forfatteroplysninger"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:17
 msgid "Axis related headers"
-msgstr "Akse-relateret tekst"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:18
 msgid "Background color"
-msgstr "Baggrundsfarve"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:20
 msgid "Background color (deprecated)"
-msgstr "Baggrundsfarve (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:21
 msgid "Background texture tile"
-msgstr "Baggrundsteksturflise"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:23
 msgid "Background texture tile (deprecated)"
-msgstr "Baggrundsteksturflise (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:24
 msgid "Base URI"
-msgstr "Stam-URI"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:25
 msgid "Base font"
-msgstr "Stamskrifttype"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:27
 msgid "Base font (deprecated)"
-msgstr "Basis skrifttype (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:28
 msgid "Bold"
-msgstr "Fed"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:29
 msgid "Border"
-msgstr "Kant"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:31
 msgid "Border (deprecated)"
-msgstr "Kant (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:32
 msgid "Border color"
-msgstr "Kantfarve"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:33
 msgid "Cell rowspan"
-msgstr "Cellerækkespænd"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:34
 msgid "Center"
-msgstr "Centrér"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:36
 msgid "Center (deprecated)"
-msgstr "Centrér (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:37
 msgid "Character encoding of linked resource"
-msgstr "Tegnkodning for kædet resurse"
+msgstr ""
 
-# drejer sig om den tilstand en afkrydsningsknap/radioknap skal være i
 #: ../plugins/taglist/HTML.tags.xml.in.h:38
 msgid "Checked (state)"
-msgstr "Afkrydset (tilstand)"
+msgstr ""
 
-# drejer sig om den tilstand en afkrydsningsknap/radioknap skal være i
 #: ../plugins/taglist/HTML.tags.xml.in.h:39
 msgid "Checked state"
-msgstr "Afkrydset tilstand"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:40
 msgid "Citation"
-msgstr "Citering"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:41
 msgid "Cite reason for change"
-msgstr "Citér begrundelse for ændring"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:42
 msgid "Class implementation ID"
-msgstr "Klasseimplementerings-id"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:43
 msgid "Class list"
-msgstr "Klasseliste"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:44
 msgid "Clear text flow control"
-msgstr "Ryd tekststrøm"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:45
+#, fuzzy
 msgid "Code content type"
-msgstr "Kodeindholdstype"
+msgstr "Kodekommentar"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:46
+#, fuzzy
 msgid "Color of selected links"
-msgstr "Farve for markerede henvisninger"
+msgstr "Sammenføj de valgte linjer"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:48
 msgid "Color of selected links (deprecated)"
-msgstr "Farve for markerede henvisninger  (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:49
 msgid "Column span"
-msgstr "Kolonnespænd"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:50
 msgid "Columns"
-msgstr "Kolonner"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:51
+#, fuzzy
 msgid "Comment"
-msgstr "Kommentar"
+msgstr "Kodekommentar"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:52
 msgid "Computer code fragment"
-msgstr "Kodefragment"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:53
 msgid "Content scheme"
-msgstr "Indholdsskema"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:54
 msgid "Content type"
-msgstr "Indholdstype"
+msgstr ""
 
 #. The "type" attribute is deprecated for the "ol" tag only,
 #. since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:57
+#, fuzzy
 msgid "Content type (deprecated)"
-msgstr "Indholdstype  (forældet)"
+msgstr "Kommenter den valgte kode"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:58
 msgid "Coordinates"
-msgstr "Koordinater"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:59
 msgid "DIV Style container"
-msgstr "DIV-stilindeholder"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:60
 msgid "DIV container"
-msgstr "DIV-indeholder"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:61
 msgid "Date and time of change"
-msgstr "Dato og tid for ændring"
+msgstr ""
 
 #. NOTE: used in "object" tag
 #: ../plugins/taglist/HTML.tags.xml.in.h:63
 msgid "Declare flag"
-msgstr "Erklæringstilvalg"
+msgstr ""
 
 #. Translators: DEFER is an optional attribute of the <script> tag.
 #. It indicates that the script is not going to generate any document
 #. content. The browser can continue parsing and drawing the page.
 #: ../plugins/taglist/HTML.tags.xml.in.h:67
 msgid "Defer attribute"
-msgstr "Udskydelsesegenskab"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:68
 msgid "Definition description"
-msgstr "Definitionsbeskrivelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:69
 msgid "Definition list"
-msgstr "Definitionsliste"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:70
 msgid "Definition term"
-msgstr "Definitions-ord"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:71
 msgid "Deleted text"
-msgstr "Slettet tekst"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:72
 msgid "Direction"
-msgstr "Retning"
+msgstr ""
 
-# svær eftersom "retning" lige er taget
 #: ../plugins/taglist/HTML.tags.xml.in.h:73
 msgid "Directionality"
-msgstr "Rettethed"
+msgstr ""
 
-# svær eftersom "retning" lige er taget
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:75
 msgid "Directionality (deprecated)"
-msgstr "Rettethed (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:76
 msgid "Directory list"
-msgstr "Mappeliste"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:77
 msgid "Disabled"
-msgstr "Deaktiveret"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:78
+#, fuzzy
 msgid "Document base"
-msgstr "Dokumentbasis"
+msgstr "Ord i dokumentet"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:79
+#, fuzzy
 msgid "Document body"
-msgstr "Dokumentkrop"
+msgstr "Ord i dokumentet"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:80
+#, fuzzy
 msgid "Document head"
-msgstr "Dokumenthoved"
+msgstr "Ord i dokumentet"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:81
+#, fuzzy
 msgid "Document title"
-msgstr "Dokumenttitel"
+msgstr "Ord i dokumentet"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:82
+#, fuzzy
 msgid "Document type"
-msgstr "Dokumenttype"
+msgstr "Ord i dokumentet"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:83
 msgid "Element ID"
-msgstr "Element-id"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:84
+#, fuzzy
 msgid "Embedded object"
-msgstr "Indlejret objekt"
+msgstr "Indlejret terminalvindue"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:85
 #: ../plugins/taglist/Latex.tags.xml.in.h:9
 msgid "Emphasis"
-msgstr "Fremhævning"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:86
 msgid "Encode type"
-msgstr "Kodningstype"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:87
 msgid "Figure"
-msgstr "Figur"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:88
 msgid "Font face"
-msgstr "Skrifttype"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:90
 msgid "Font face (deprecated)"
-msgstr "Skrifttype (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:91
 msgid "For label"
-msgstr "For-etiket"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:92
 msgid "Forced line break"
-msgstr "Tvunget linjeskift"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:93
 msgid "Form"
-msgstr "Formular"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:94
 msgid "Form action handler"
-msgstr "Formularhandlingshåndtering"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:95
 msgid "Form control group"
-msgstr "Formularkontrolgruppe"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:96
 msgid "Form field label text"
-msgstr "Formularetikettekst"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:97
 msgid "Form input"
-msgstr "Formularindtastningsfelt"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:98
 msgid "Form input type"
-msgstr "Formularindtastningstype"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:99
 msgid "Form method"
-msgstr "Formularmetode"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:100
+#, fuzzy
 msgid "Forward link"
-msgstr "Fremad-henvisning"
+msgstr "Søg fremad"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:101
 msgid "Frame"
-msgstr "Ramme"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:102
 msgid "Frame border"
-msgstr "Rammekant"
+msgstr ""
 
-# FIXME: betydning?
 #: ../plugins/taglist/HTML.tags.xml.in.h:103
 msgid "Frame render parts"
-msgstr "Rammerenderingsdele"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:104
 msgid "Frame source"
-msgstr "Rammekilde"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:105
 msgid "Frame spacing"
-msgstr "Rammemellemrum"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:106
 msgid "Frame target"
-msgstr "Rammemål"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:107
 msgid "Frameborder"
-msgstr "Rammekant"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:108
 msgid "Frameset"
-msgstr "Rammesæt"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:109
 msgid "Frameset columns"
-msgstr "Rammesætkolonner"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:110
 msgid "Frameset rows"
-msgstr "Rammesætrækker"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:111
 msgid "Framespacing"
-msgstr "Rammemellemrum"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:112
 msgid "Generic embedded object"
-msgstr "Generelt indlejret objekt"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:113
 msgid "Generic metainformation"
-msgstr "Generelle metaoplysninger"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:114
 msgid "Generic span"
-msgstr "Generelt spænd"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:115
 msgid "HREF URI"
-msgstr "HREF URI"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:116
 msgid "HTML root element"
-msgstr "HTML-rodelement"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:117
 msgid "HTML version"
-msgstr "HTML-version"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:118
-#, fuzzy
 msgid "HTML — Special Characters"
-msgstr "HTML - specialtegn"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:119
-#, fuzzy
 msgid "HTML — Tags"
-msgstr "HTML - mærker"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:120
 msgid "HTTP header name"
-msgstr "HTTP-hovednavn"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:121
 msgid "Header cell IDs"
-msgstr "Id'er for tabeloverskriftsceller"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:122
 msgid "Heading"
-msgstr "Overskrift"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:123
 msgid "Heading 1"
-msgstr "Overskrift 1"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:124
 msgid "Heading 2"
-msgstr "Overskrift 2"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:125
 msgid "Heading 3"
-msgstr "Overskrift 3"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:126
 msgid "Heading 4"
-msgstr "Overskrift 4"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:127
 msgid "Heading 5"
-msgstr "Overskrift 5"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:128
 msgid "Heading 6"
-msgstr "Overskrift 6"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:129
 msgid "Height"
-msgstr "Højde"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:130
 msgid "Horizontal rule"
-msgstr "Vandret linje"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:131
 msgid "Horizontal space"
-msgstr "Vandret mellemrum"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:133
 msgid "Horizontal space (deprecated)"
-msgstr "Vandret mellemrum  (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:134
 msgid "I18N BiDi override"
-msgstr "I18N BiDi-tilsidesættelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:135
 msgid "Image"
-msgstr "Billede"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:136
 msgid "Image map"
-msgstr "Billedkort"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:137
 msgid "Image map area"
-msgstr "Billedkortområde"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:138
 msgid "Image map name"
-msgstr "Billedkortnavn"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:139
 msgid "Image source"
-msgstr "Billedkilde"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:140
 msgid "Inline frame"
-msgstr "Indlejret ramme"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:141
 msgid "Inline layer"
-msgstr "Indlejret lag"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:142
+#, fuzzy
 msgid "Inserted text"
-msgstr "Indsat tekst"
+msgstr "_Indsæt"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:143
 msgid "Instance definition"
-msgstr "Instansdefinition"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:144
 msgid "Italic text"
-msgstr "Kursiv tekst"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:145
 msgid "Java applet"
-msgstr "Java-program"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:147
 msgid "Java applet (deprecated)"
-msgstr "Java-program (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:148
 msgid "Label"
-msgstr "Etiket"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:149
 msgid "Language code"
-msgstr "Sprogkode"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:150
 msgid "Large text style"
-msgstr "Stor tekst-stil"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:151
 msgid "Layer"
-msgstr "Lag"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:152
+#, fuzzy
 msgid "Link color"
-msgstr "Henvisningsfarve"
+msgstr "Vælg farve"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:154
 msgid "Link color (deprecated)"
-msgstr "Henvisningsfarve (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:155
 msgid "List item"
-msgstr "Listepunkt"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:156
 msgid "List of MIME types for file upload"
-msgstr "Liste af MIME-typer til filoverføring"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:157
 msgid "List of supported character sets"
-msgstr "Liste af understøttede tegnkodninger"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:158
 msgid "Listing"
-msgstr "Liste"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:159
 msgid "Local change to font"
-msgstr "Lokal ændring af skrifttype"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:160
 msgid "Long description link"
-msgstr "Lang beskrivelse-henvisning"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:161
 msgid "Long quotation"
-msgstr "Langt citat"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:162
 msgid "Mail link"
-msgstr "Posthenvisning"
+msgstr ""
 
 #. Supported in XHTML 1.0 Frameset DTD only.
 #: ../plugins/taglist/HTML.tags.xml.in.h:164
 msgid "Margin pixel height"
-msgstr "Marginpunkthøjde"
+msgstr ""
 
 #. Supported in XHTML 1.0 Frameset DTD only.
 #: ../plugins/taglist/HTML.tags.xml.in.h:166
 msgid "Margin pixel width"
-msgstr "Marginpunktbredde"
+msgstr ""
 
-# "marque" betyder mærke/varemærke, men i HTML er det (vistnok?) når
-# teksten flyver forbi ligesom en reklame på led-skærm med begrænset plads
 #: ../plugins/taglist/HTML.tags.xml.in.h:167
 msgid "Marquee"
-msgstr "Flyvende tekst"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:168
 msgid "Maximum length of text field"
-msgstr "Maksimal længde af tekstfelt"
+msgstr ""
 
 #. Here I take some liberties: There's no mandatory attributes,
 #. but those are most common, and will likely be used.
 #: ../plugins/taglist/HTML.tags.xml.in.h:171
 msgid "Media-independent link"
-msgstr "Medie-uafhængig henvisning"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:172
 msgid "Menu list"
-msgstr "Menuliste"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:174
 msgid "Menu list (deprecated)"
-msgstr "Menuliste (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:175
 msgid "Multi-line text field"
-msgstr "Flerlinje-tekstfelt"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:176
 msgid "Multicolumn"
-msgstr "Multikolonne"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:177
 msgid "Multiple"
-msgstr "Flere"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:178
 msgid "Name"
-msgstr "Navn"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:179
 msgid "Named property value"
-msgstr "Navngiven egenskabsværdi"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:180
 msgid "Next ID"
-msgstr "Næste id"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:181
 msgid "No URI"
-msgstr "Ingen URI"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:182
 msgid "No embedded objects"
-msgstr "Ingen indlejrede objekter"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:183
 msgid "No frames"
-msgstr "Ingen rammer"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:184
 msgid "No layers"
-msgstr "Ingen lag"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:185
 msgid "No line break"
-msgstr "Ingen linjeskift"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:186
 msgid "No resize"
-msgstr "Ingen størrelsesændring"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:187
 msgid "No script"
-msgstr "Ingen programmer"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:188
 msgid "No shade"
-msgstr "Ingen skygge"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:190
 msgid "No shade (deprecated)"
-msgstr "Ingen skygge (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:191
 msgid "No word wrap"
-msgstr "Ingen tekstombrydning"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:193
 msgid "No word wrap (deprecated)"
-msgstr "Ingen tekstombrydning (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:194
+#, fuzzy
 msgid "Non-breaking space"
-msgstr "Ikke-brydende mellemrum"
+msgstr "Vis ikke-ombrydelige mellemrum"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:195
 msgid "Note"
-msgstr "Note"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:196
 msgid "Object applet file"
-msgstr "Objektprogramfil"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:198
 msgid "Object applet file (deprecated)"
-msgstr "Objektprogramfil (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:199
 msgid "Object data reference"
-msgstr "Objektdatareference"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:200
 msgid "Offset for alignment character"
-msgstr "Forskydning for justeringstegn"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:201
 msgid "OnBlur event"
-msgstr "OnBlur-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:202
 msgid "OnChange event"
-msgstr "OnChange-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:203
 msgid "OnClick event"
-msgstr "OnClick-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:204
 msgid "OnDblClick event"
-msgstr "OnDblClick-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:205
 msgid "OnFocus event"
-msgstr "OnFocus-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:206
 msgid "OnKeyDown event"
-msgstr "OnKeyDown-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:207
 msgid "OnKeyPress event"
-msgstr "OnKeyPress-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:208
 msgid "OnKeyUp event"
-msgstr "OnKeyUp-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:209
 msgid "OnLoad event"
-msgstr "OnLoad-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:210
 msgid "OnMouseDown event"
-msgstr "OnMouseDown-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:211
 msgid "OnMouseMove event"
-msgstr "OnMouseMove-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:212
 msgid "OnMouseOut event"
-msgstr "OnMouseOut-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:213
 msgid "OnMouseOver event"
-msgstr "OnMouseOver-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:214
 msgid "OnMouseUp event"
-msgstr "OnMouseUp-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:215
 msgid "OnReset event"
-msgstr "OnReset-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:216
 msgid "OnSelect event"
-msgstr "OnSelect-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:217
 msgid "OnSubmit event"
-msgstr "OnSubmit-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:218
 msgid "OnUnload event"
-msgstr "OnUnload-hændelse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:219
 msgid "Option group"
-msgstr "Valggruppe"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:220
 msgid "Option selector"
-msgstr "Valgvælger"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:221
 msgid "Ordered list"
-msgstr "Ordnet liste"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:222
 msgid "Output media"
-msgstr "Uddatamedium"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:223
 msgid "Paragraph"
-msgstr "Paragraf"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:224
 msgid "Paragraph class"
-msgstr "Paragrafklasse"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:225
 msgid "Paragraph style"
-msgstr "Paragrafstil"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:226
 msgid "Preformatted listing"
-msgstr "Præformateret liste"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:227
 msgid "Preformatted text"
-msgstr "Præformateret tekst"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:228
 msgid "Profile metainfo dictionary"
-msgstr "Profilmetainfo-ordbog"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:229
 msgid "Prompt message"
-msgstr "Prompt-besked"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:230
 msgid "Push button"
-msgstr "Trykknap"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:231
 msgid "Quote"
-msgstr "Citat"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:232
 msgid "Range"
-msgstr "Interval"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:233
 msgid "ReadOnly text and password"
-msgstr "Skrivebeskyttet tekst og adgangskode"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:234
 msgid "Reduced spacing"
-msgstr "Reduceret mellemrum"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:236
 msgid "Reduced spacing (deprecated)"
-msgstr "Reduceret mellemrum (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:237
 msgid "Reverse link"
-msgstr "Omvendt henvisning"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:238
 msgid "Root"
-msgstr "Rod"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:239
 msgid "Rows"
-msgstr "Rækker"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:240
 msgid "Rulings between rows and columns"
-msgstr "Linjer mellem rækker og kolonner"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:241
 msgid "Sample program output, scripts"
-msgstr "Eksempel på programuddata, programmer"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:242
 msgid "Scope covered by header cells"
-msgstr "Virkefelt dækket af hovedceller"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:244
 msgid "Script language name"
-msgstr "Navn på programmeringssprog"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:245
 msgid "Script statements"
-msgstr "Sætninger i programmeringssprog"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:246
 msgid "Scrollbar"
-msgstr "Rullebjælke"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:247
 msgid "Selectable option"
-msgstr "Valgmulighed"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:248
 msgid "Selected"
-msgstr "Valgt"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:249
 msgid "Server-side image map"
-msgstr "Billedkort på serversiden"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:250
 msgid "Shape"
-msgstr "Form"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:251
 msgid "Short inline quotation"
-msgstr "Kort indlejret citat"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:252
 msgid "Single line prompt"
-msgstr "Enkeltlinje-prompt"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:253
+#, fuzzy
 msgid "Size"
-msgstr "Størrelse"
+msgstr "Tekststørrelse"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:255
 msgid "Size (deprecated)"
-msgstr "Størrelse (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:256
 msgid "Small text style"
-msgstr "Lille tekst-stil"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:257
 msgid "Soft line break"
-msgstr "Blødt linjeskift"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:258
 msgid "Sound"
-msgstr "Lyd"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:259
 msgid "Source"
-msgstr "Kildekode"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:260
 msgid "Space-separated archive list"
-msgstr "Mellemrumsadskilt arkivliste"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:261
 msgid "Spacer"
-msgstr "Mellemrumselement"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:262
 msgid "Spacing between cells"
-msgstr "Mellemrum mellem celler"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:263
 msgid "Spacing within cells"
-msgstr "Mellemrum inden i celler"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:264
 msgid "Span"
-msgstr "Spænd"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:265
 msgid "Square root"
-msgstr "Kvadratrod"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:266
 msgid "Standby load message"
-msgstr "Afvent indlæsningsbesked"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:267
 msgid "Starting sequence number"
-msgstr "Startsekvensnummer"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:269
 msgid "Starting sequence number (deprecated)"
-msgstr "Startsekvensnummer (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:270
 msgid "Strike-through text"
-msgstr "Gennemstreget tekst"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:272
 msgid "Strike-through text (deprecated)"
-msgstr "Gennemstreget tekst (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:273
 msgid "Strike-through text style"
-msgstr "Gennemstreget tekst-stil"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:275
 msgid "Strike-through text style (deprecated)"
-msgstr "Gennemstreget tekst-stil (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:276
 msgid "Strong emphasis"
-msgstr "Stærk fremhævning"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:277
 msgid "Style info"
-msgstr "Stiloplysninger"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:278
 msgid "Subscript"
-msgstr "Sænket skrift"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:279
 msgid "Superscript"
-msgstr "Hævet skrift"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:280
 msgid "Tab order position"
-msgstr "Tabulatorordensposition"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:281
 msgid "Table"
-msgstr "Tabel"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:282
 msgid "Table body"
-msgstr "Tabelkrop"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:283
 msgid "Table caption"
-msgstr "Tabeltekst"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:284
 msgid "Table column group properties"
-msgstr "Egenskaber for tabelkolonnegruppe"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:285
 msgid "Table column properties"
-msgstr "Egenskaber for tabelkolonne"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:286
 msgid "Table data cell"
-msgstr "Tabeldatacelle"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:287
 msgid "Table footer"
-msgstr "Tabelfod"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:288
 msgid "Table header"
-msgstr "Tabeloverskrift"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:289
 msgid "Table header cell"
-msgstr "Tabeloverskriftscelle"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:290
 msgid "Table row"
-msgstr "Tabelrække"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:291
 msgid "Table summary"
-msgstr "Tabelresumé"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:292
-#, fuzzy
 msgid "Target — Blank"
-msgstr "Mål - blank"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:293
-#, fuzzy
 msgid "Target — Parent"
-msgstr "Mål - ophav"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:294
-#, fuzzy
 msgid "Target — Self"
-msgstr "Mål - selv"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:295
-#, fuzzy
 msgid "Target — Top"
-msgstr "Mål - top"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:296
 msgid "Teletype or monospace text style"
-msgstr "Fastbredde tekst-stil"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:297
+#, fuzzy
 msgid "Text"
-msgstr "Tekst"
+msgstr "Tekststørrelse"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:298
 msgid "Text color"
-msgstr "Tekstfarve"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:300
 msgid "Text color (deprecated)"
-msgstr "Tekstfarve (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:301
 msgid "Text entered by user"
-msgstr "Tekst indtastet af brugeren"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:302
 msgid "Title"
-msgstr "Titel"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:303
 msgid "Top margin in pixels"
-msgstr "Topmargen i punkter"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:304
 msgid "URL"
-msgstr "URL"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:305
 msgid "Underlined text style"
-msgstr "Understreget tekst-stil"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:306
 msgid "Unordered list"
-msgstr "Uordnet liste"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:307
 msgid "Use image map"
-msgstr "Benyt billedkort"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:308
 msgid "Value"
-msgstr "Værdi"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:309
 msgid "Value interpretation"
-msgstr "Værdifortolkning"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:310
 msgid "Variable or program argument"
-msgstr "Variabel eller programparameter"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:311
 msgid "Vertical cell alignment"
-msgstr "Lodret cellejustering"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:312
+#, fuzzy
 msgid "Vertical space"
-msgstr "Lodret mellemrum"
+msgstr "Vis mellemrum"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:314
 msgid "Vertical space (deprecated)"
-msgstr "Lodret mellemrum (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:315
 msgid "Visited link color"
-msgstr "Farve for besøgt henvisning"
+msgstr ""
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:317
 msgid "Visited link color (deprecated)"
-msgstr "Farve for besøgt henvisning (forældet)"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:318
 msgid "Width"
-msgstr "Bredde"
+msgstr ""
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:319
-#, fuzzy
 msgid "XHTML 1.0 — Tags"
-msgstr "XHTML 1.0 - mærker"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:1
 msgid "Bibliography (cite)"
-msgstr "Litteraturliste (citering)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:2
 msgid "Bibliography (item)"
-msgstr "Litteraturliste (punkt)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:3
 msgid "Bibliography (shortcite)"
-msgstr "Litteraturliste (kort citering)"
+msgstr ""
 
-# forårsager indsættelse af litteraturlisten
 #: ../plugins/taglist/Latex.tags.xml.in.h:4
 msgid "Bibliography (thebibliography)"
-msgstr "Litteraturliste (thebibliography)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:5
 msgid "Brackets ()"
-msgstr "Parenteser ()"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:6
 msgid "Brackets <>"
-msgstr "Parenteser <>"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:7
 msgid "Brackets []"
-msgstr "Paranteser []"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:8
 msgid "Brackets {}"
-msgstr "Paranteser {}"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:10
 msgid "File input"
-msgstr "Filinddata"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:11
 msgid "Footnote"
-msgstr "Fodnote"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:12
 msgid "Function cosine"
-msgstr "Funktionen cosinus"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:13
 msgid "Function e^"
-msgstr "Funktionen e^"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:14
 msgid "Function exp"
-msgstr "Funktionen exp"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:15
 msgid "Function log"
-msgstr "Funktionen log"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:16
 msgid "Function log10"
-msgstr "Funktionen log10"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:17
 msgid "Function sine"
-msgstr "Funktionen sinus"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:18
 msgid "Greek alpha"
-msgstr "Græsk alfa"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:19
 msgid "Greek beta"
-msgstr "Græsk beta"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:20
 msgid "Greek epsilon"
-msgstr "Græsk epsilon"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:21
 msgid "Greek gamma"
-msgstr "Græsk gamma"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:22
 msgid "Greek lambda"
-msgstr "Græsk lambda"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:23
 msgid "Greek rho"
-msgstr "Græsk rho"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:24
 msgid "Greek tau"
-msgstr "Græsk tau"
+msgstr ""
 
-# Det er latex, så vi bibeholder ordene chapter, section, subsection, subsubsection
 #: ../plugins/taglist/Latex.tags.xml.in.h:25
 msgid "Header 0 (chapter)"
-msgstr "Overskrift 0 (chapter)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:26
 msgid "Header 0 (chapter*)"
-msgstr "Overskrift 0 (chapter*)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:27
 msgid "Header 1 (section)"
-msgstr "Overskrift 1 (section)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:28
 msgid "Header 1 (section*)"
-msgstr "Overskrift 1 (section*)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:29
 msgid "Header 2 (subsection)"
-msgstr "Overskrift 2 (subsection)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:30
 msgid "Header 2 (subsection*)"
-msgstr "Overskrift 2 (subsection*)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:31
 msgid "Header 3 (subsubsection)"
-msgstr "Overskrift 3 (subsubsection)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:32
 msgid "Header 3 (subsubsection*)"
-msgstr "Overskrift 3 (subsubsection*)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:33
 msgid "Header 4 (paragraph)"
-msgstr "Overskrift 4 (paragraph)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:34
 msgid "Header appendix"
-msgstr "Overskrift til appendiks"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:35
 msgid "Item"
-msgstr "Punkt"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:36
 msgid "Item with label"
-msgstr "Punkt med etiket"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:37
-#, fuzzy
 msgid "Latex — Tags"
-msgstr "Latex - mærker"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:38
 msgid "List description"
-msgstr "Liste med beskrivelser"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:39
 msgid "List enumerate"
-msgstr "Liste med tal"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:40
 msgid "List itemize"
-msgstr "Liste med punkter"
+msgstr ""
 
-# "display" er mystik LaTeX-betegnelse der dækker over at det havner på
-# en separat linje
 #: ../plugins/taglist/Latex.tags.xml.in.h:41
 msgid "Maths (display)"
-msgstr "Matematik (displaymath)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:42
 msgid "Maths (inline)"
-msgstr "Matematik (indlejret)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:43
 msgid "Operator fraction"
-msgstr "Operator til brøk"
+msgstr ""
 
-# "display" er mystik LaTeX-betegnelse der dækker over at det havner på
-# en separat linje
 #: ../plugins/taglist/Latex.tags.xml.in.h:44
 msgid "Operator integral (display)"
-msgstr "Operator til integral (displaymath)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:45
 msgid "Operator integral (inline)"
-msgstr "Operator til integral (indlejret)"
+msgstr ""
 
-# "display" er mystik LaTeX-betegnelse der dækker over at det havner på
-# en separat linje
 #: ../plugins/taglist/Latex.tags.xml.in.h:46
 msgid "Operator sum (display)"
-msgstr "Operator til sum (displaymath)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:47
 msgid "Operator sum (inline)"
-msgstr "Operator til sum (indlejret)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:48
 msgid "Reference label"
-msgstr "Referenceetiket"
+msgstr ""
 
-# "ref" giver bare en reference så det er lidt dobbeltkonfekt
 #: ../plugins/taglist/Latex.tags.xml.in.h:49
 msgid "Reference ref"
-msgstr "Reference"
+msgstr ""
 
-# laver teksten "and"
 #: ../plugins/taglist/Latex.tags.xml.in.h:50
 msgid "Symbol <<"
-msgstr "Symbol <<"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:51
 msgid "Symbol <="
-msgstr "Symbol <="
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:52
 msgid "Symbol >="
-msgstr "Symbol >="
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:53
 msgid "Symbol >>"
-msgstr "Symbol >>"
+msgstr ""
 
-# laver teksten "and"
 #: ../plugins/taglist/Latex.tags.xml.in.h:54
 msgid "Symbol and"
-msgstr "Symbol and"
+msgstr ""
 
-# laver teksten const
 #: ../plugins/taglist/Latex.tags.xml.in.h:55
 msgid "Symbol const"
-msgstr "Symbol const"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:56
 msgid "Symbol d-by-dt"
-msgstr "Symbol d/dt"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:57
 msgid "Symbol d-by-dt-partial"
-msgstr "Symbol d/dt (partielt)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:58
 msgid "Symbol d2-by-dt2-partial"
-msgstr "Symbol d2/dt2 (partielt)"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:59
 msgid "Symbol dagger"
-msgstr "Symbol daggert"
+msgstr ""
 
-# http://www.public.asu.edu/~arrows/tidbits/dashes.html
 #: ../plugins/taglist/Latex.tags.xml.in.h:60
 msgid "Symbol em-dash ---"
-msgstr "Symbol m-streg ---"
+msgstr ""
 
-# http://www.public.asu.edu/~arrows/tidbits/dashes.html
 #: ../plugins/taglist/Latex.tags.xml.in.h:61
 msgid "Symbol en-dash --"
-msgstr "Symbol n-streg --"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:62
 msgid "Symbol equiv"
-msgstr "Symbol ækvivalent"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:63
 msgid "Symbol infinity"
-msgstr "Symbol uendelig"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:64
 msgid "Symbol mathspace ,"
-msgstr "Symbol matematikmellemrum ,"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:65
 msgid "Symbol mathspace ."
-msgstr "Symbol matematikmellemrum ."
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:66
 msgid "Symbol mathspace _"
-msgstr "Symbol matematikmellemrum _"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:67
 msgid "Symbol mathspace __"
-msgstr "Symbol matematikmellemrum __"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:68
 msgid "Symbol simeq"
-msgstr "Symbol simeq"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:69
 msgid "Symbol star"
-msgstr "Symbol stjerne"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:70
 msgid "Typeface bold"
-msgstr "Typografi fed"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:71
 msgid "Typeface italic"
-msgstr "Typografi kursiv"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:72
 msgid "Typeface slanted"
-msgstr "Typografi skæv"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:73
 msgid "Typeface type"
-msgstr "Typografi fast bredde"
+msgstr ""
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:74
 msgid "Unbreakable text"
-msgstr "Tekst uden ombrydning"
+msgstr ""
 
 #: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
 msgid ""
 "Provides a method to easily insert commonly used tags/strings into a "
 "document without having to type them."
 msgstr ""
-"Gør det muligt hurtigt at indsætte ofte benyttet tekst i et dokument uden at "
-"indtaste det hver gang."
 
 #: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
 msgid "Tag list"
-msgstr "Mærkeliste"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:1
-#, fuzzy
 msgid "XSLT — Axes"
-msgstr "XSLT - akser"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:2
-#, fuzzy
 msgid "XSLT — Elements"
-msgstr "XSLT - elementer"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:3
-#, fuzzy
 msgid "XSLT — Functions"
-msgstr "XSLT - funktioner"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:4
 msgid "ancestor"
-msgstr "forfader"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:5
 msgid "ancestor-or-self"
-msgstr "forfader eller selv"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:6
 msgid "attribute"
-msgstr "egenskab"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:7
 msgid "child"
-msgstr "barn"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:8
 msgid "descendant"
-msgstr "efterkommer"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:9
 msgid "descendant-or-self"
-msgstr "efterkommer eller selv"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:10
 msgid "following"
-msgstr "efterfølgende"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:11
 msgid "following-sibling"
-msgstr "efterfølgende søskende"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:12
+#, fuzzy
 msgid "namespace"
-msgstr "navnerum"
+msgstr "Vis mellemrum"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:13
 msgid "parent"
-msgstr "forælder"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:14
 msgid "preceding"
-msgstr "foregående"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:15
 msgid "preceding-sibling"
-msgstr "foregående søskende"
+msgstr ""
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:16
 msgid "self"
-msgstr "selv"
+msgstr ""
 
 #: ../plugins/taglist/XUL.tags.xml.in.h:1
-#, fuzzy
 msgid "XUL — Tags"
-msgstr "XUL - mærker"
+msgstr ""
+
+#~ msgid "Draw Leading Spaces"
+#~ msgstr "Vis foranstillet mellemrum"
+
+#~ msgid "Draw New lines"
+#~ msgstr "Vis tegn for linjeskift"
+
+#~ msgid "Draw Non-Breaking Spaces"
+#~ msgstr "Vis ikke-ombrydelige mellemrum"
+
+#~ msgid "Draw Spaces in Text"
+#~ msgstr "Vis mellemrum i tekst"
+
+# evt. "Vis indrykning"
+#~ msgid "Draw Tabs"
+#~ msgstr "Vis indryk"
+
+#~ msgid "Draw Trailing Spaces"
+#~ msgstr "Vis efterfølgende mellemrum"
+
+#~ msgid "Show White Spaces"
+#~ msgstr "Vis blanktegn"
+
+#~ msgid "Error dialog"
+#~ msgstr "Fejldialog"
+
+#~ msgid "Start multi edit mode"
+#~ msgstr "Skift til multiredigeringstilstand"
+
+#~ msgid "Tab_bar"
+#~ msgstr "Faneblads_linje"
+
+#~ msgid "Show or hide the tabbar in the current window"
+#~ msgstr "Vis eller skjul fanebladslinjen i det aktive vindue"
+
+#~ msgid "Tabbar is Visible"
+#~ msgstr "Fanebladslinjen er synlig"
+
+#~ msgid "Whether the tabbar should be visible in editing windows."
+#~ msgstr "Vælg om fanebladslinjen skal være synlig i redigeringsvinduer."
+
+#~ msgid "Add a menu entry to show/hide the tabbar."
+#~ msgstr "Tilføj et menupunkt til at vise/skjule fanebladslinjen."
+
+#~ msgid "Show/Hide Tabbar"
+#~ msgstr "Vis/skjul fanebladslinjen"
