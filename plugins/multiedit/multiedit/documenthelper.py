@@ -22,12 +22,17 @@
 import re
 import time
 import xml.sax.saxutils
-from gettext import gettext as _
 from gi.repository import GLib, Pango, Gdk, Gtk, Gedit
 from signals import Signals
 import constants
-
+import gettext
 from gpdefs import *
+
+try:
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+    _ = lambda s: s
 
 class DocumentHelper(Signals):
     def __init__(self, view):
@@ -83,14 +88,15 @@ class DocumentHelper(Signals):
         return self._in_mode
 
     def _update_selection_tag(self):
-        style = self._view.get_style()
+        context = self._view.get_style_context()
+        state = context.get_state()
 
-# TODO: this is broken in pygi, but since style are going to change in
-# gtk it is not worth fixing
-#        fg = style.text[Gtk.StateType.SELECTED]
-#        bg = style.base[Gtk.StateType.SELECTED]
-        fg = Gdk.Color(0, 0, 0)
-        bg = Gdk.Color(1, 0, 0)
+        fg_rgba = context.get_color(state)
+        bg_rgba = context.get_background_color(state)
+
+        # TODO: Use GdkRGBA directly when possible
+        fg = Gdk.Color(fg_rgba.red * 65535, fg_rgba.green * 65535, fg_rgba.blue * 65535)
+        bg = Gdk.Color(bg_rgba.red * 65535, bg_rgba.green * 65535, bg_rgba.blue * 65535)
 
         self._selection_tag.props.foreground_gdk = fg
         self._selection_tag.props.background_gdk = bg
@@ -1295,9 +1301,10 @@ class DocumentHelper(Signals):
         return [col.red / float(0x10000), col.green / float(0x10000), col.blue / float(0x10000)]
 
     def _background_color(self):
-# FIXME
-#        col = self.from_color(self._view.get_style().base[self._view.get_state()])
-        col = self.from_color(Gdk.Color(1, 1, 1))
+        #TODO: use GdkRGBA directly
+        context = self._view.get_style_context()
+        col_rgba = context.get_background_color(context.get_state())
+        col = self.from_color(Gdk.Color(col_rgba.red * 65535, col_rgba.green * 65535, col_rgba.blue * 65535))
         if col[2] > 0.8:
             col[2] -= 0.2
         else:
@@ -1319,6 +1326,7 @@ class DocumentHelper(Signals):
 
         col = self._background_color()
 
+        #FIXME: waiting for bug in pygobject
         print view
         print cr
 
