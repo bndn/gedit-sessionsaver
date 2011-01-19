@@ -15,7 +15,7 @@ libbookmarks_la_SOURCES = \
 	gedit-bookmarks-plugin.c	
 
 libbookmarks_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
-libbookmarks_la_LDADD =	$(GEDIT_LIBS)
+libbookmarks_la_LIBADD = $(GEDIT_LIBS)
 
 support_DATA = bookmark.png
 

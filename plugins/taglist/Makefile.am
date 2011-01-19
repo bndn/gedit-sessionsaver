@@ -27,8 +27,8 @@ libtaglist_la_SOURCES =				\
 	gedit-taglist-plugin.c			\
 	gedit-taglist-plugin.h
 
-libdrawspaces_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
-libdrawspaces_la_LIBADD = $(GEDIT_LIBS)
+libtaglist_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+libtaglist_la_LIBADD = $(GEDIT_LIBS)
 
 # Plugin Info
 
