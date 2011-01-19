@@ -22,10 +22,17 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-from gettext import gettext as _
 from gi.repository import GObject, Gtk, Gdk, Gedit
 import constants
 from documenthelper import DocumentHelper
+import gettext
+from gpdefs import *
+
+try:
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+    _ = lambda s: s
 
 # UI manager snippet to add menu items to the View menu
 ui_str = """

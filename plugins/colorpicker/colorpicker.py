@@ -20,8 +20,8 @@
 #  Boston, MA 02111-1307, USA.
 
 from gi.repository import GObject, Gtk, Gedit
-import gettext
 import re
+import gettext
 from gpdefs import *
 
 try:

@@ -20,6 +20,14 @@
 from gi.repository import GObject, Gio, Pango, Gtk, Gedit, Gucharmap
 from panel import CharmapPanel
 import sys
+import gettext
+from gpdefs import *
+
+try:
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+    _ = lambda s: s
 
 class CharmapPlugin(GObject.Object, Gedit.WindowActivatable):
     __gtype_name__ = "CharmapPlugin"

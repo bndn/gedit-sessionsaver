@@ -21,10 +21,8 @@
 # Boston, MA  02110-1301  USA
 
 from gi.repository import GObject, GLib, Gio, Pango, Gdk, Gtk, Gedit, Vte
-import gettext
 import os
-
-"""
+import gettext
 from gpdefs import *
 
 try:
@@ -32,7 +30,6 @@ try:
     _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
 except:
     _ = lambda s: s
-"""
 
 class GeditTerminal(Gtk.Box):
     """VTE terminal which follows gnome-terminal default profile options"""

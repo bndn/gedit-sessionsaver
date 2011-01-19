@@ -19,13 +19,18 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-from gettext import gettext as _
 from gi.repository import GObject, Gtk, Gedit
 import constants
 from signals import Signals
 from documenthelper import DocumentHelper
-
+import gettext
 from gpdefs import *
+
+try:
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+    _ = lambda s: s
 
 ui_str = """
 <ui>

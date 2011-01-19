@@ -20,13 +20,19 @@
 #  Boston, MA 02111-1307, USA.
 
 from gi.repository import GObject, Gtk, Gedit, Peas, PeasGtk, Gio, Gdk
-from gettext import gettext as _
 from evince_dbus import EvinceWindowProxy
 import dbus.mainloop.glib
 import logging
+import gettext
+from gpdefs import *
+
+try:
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+except:
+    _ = lambda s: s
 
 dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
-
 
 ui_str = """<ui>
   <menubar name="MenuBar">
