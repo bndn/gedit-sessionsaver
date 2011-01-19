@@ -302,7 +302,7 @@ class SynctexWindowHelper:
 class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
     __gtype_name__ = "SynctexPlugin"
 
-    window = GObject.property(type=GObject.Object)
+    window = GObject.property(type=Gedit.Window)
     view_dict = {}
     _proxy_dict = {}
 

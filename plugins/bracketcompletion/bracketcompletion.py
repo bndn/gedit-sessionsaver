@@ -48,7 +48,7 @@ language_brackets = {
 class BracketCompletionPlugin(GObject.Object, Gedit.ViewActivatable):
     __gtype_name__ = "BracketCompletion"
 
-    view = GObject.property(type=GObject.Object)
+    view = GObject.property(type=Gedit.View)
 
     def __init__(self):
         GObject.Object.__init__(self)

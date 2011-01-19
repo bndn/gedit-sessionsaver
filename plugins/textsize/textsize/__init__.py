@@ -52,7 +52,7 @@ ui_str = """
 class TextSizePlugin(GObject.Object, Gedit.WindowActivatable):
     __gtype_name__ = "TextSizePlugin"
 
-    window = GObject.property(type=GObject.Object)
+    window = GObject.property(type=Gedit.Window)
 
     def __init__(self):
         GObject.Object.__init__(self)

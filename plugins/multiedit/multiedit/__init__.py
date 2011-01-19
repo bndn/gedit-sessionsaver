@@ -47,7 +47,7 @@ ui_str = """
 class MultiEditPlugin(GObject.Object, Gedit.WindowActivatable, Signals):
     __gtype_name__ = "MultiEditPlugin"
 
-    window = GObject.property(type=GObject.Object)
+    window = GObject.property(type=Gedit.Window)
 
     def __init__(self):
         GObject.Object.__init__(self)
