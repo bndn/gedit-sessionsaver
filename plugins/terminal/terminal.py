@@ -20,7 +20,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor,
 # Boston, MA  02110-1301  USA
 
-from gi.repository import GObject, GLib, Gio, Pango, Gdk, Gtk, Gedit, Vte
+from gi.repository import GObject, Gio, Pango, Gdk, Gtk, Gedit, Vte
 import os
 import gettext
 from gpdefs import *
@@ -88,11 +88,11 @@ class GeditTerminal(Gtk.Box):
                  Gtk.AccelMap.add_entry(path, self._accels[name][0], self._accels[name][1])
 
         #FIXME
-        #self._vte.fork_command_full(Vte.PtyFlags.DEFAULT, None, [], None, GLib.SpawnFlags.CHILD_INHERITS_STDIN | GLib.SpawnFlags.SEARCH_PATH, None, None)
+        #self._vte.fork_command_full(Vte.PtyFlags.DEFAULT, None, [], None, glib.SpawnFlags.CHILD_INHERITS_STDIN | glib.SpawnFlags.SEARCH_PATH, None, None)
 
     def on_child_exited(self):
         return None
-        #self._vte.fork_command_full(Vte.PtyFlags.DEFAULT, None, [], None, GLib.SpawnFlags.CHILD_INHERITS_STDIN | GLib.SpawnFlags.SEARCH_PATH, None, None)
+        #self._vte.fork_command_full(Vte.PtyFlags.DEFAULT, None, [], None, glib.SpawnFlags.CHILD_INHERITS_STDIN | glib.SpawnFlags.SEARCH_PATH, None, None)
 
     def do_grab_focus(self):
         self._vte.grab_focus()

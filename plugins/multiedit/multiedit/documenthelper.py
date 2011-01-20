@@ -22,7 +22,7 @@
 import re
 import time
 import xml.sax.saxutils
-from gi.repository import GLib, Pango, Gdk, Gtk, Gedit
+from gi.repository import Pango, Gdk, Gtk, Gedit
 from signals import Signals
 import constants
 import gettext
@@ -141,11 +141,11 @@ class DocumentHelper(Signals):
         self._view = None
 
         if self._status_timeout != 0:
-            GLib.source_remove(self._status_timeout)
+            GObject.source_remove(self._status_timeout)
             self._status_timeout = 0
 
         if self._delete_mode_id != 0:
-            GLib.source_remove(self._delete_mode_id)
+            GObject.source_remove(self._delete_mode_id)
             self._delete_mode_id = 0
 
     def initialize_event_handlers(self):
@@ -348,9 +348,9 @@ class DocumentHelper(Signals):
         self._invalidate_status()
 
         if self._status_timeout != 0:
-            glib.source_remove(self._status_timeout)
+            GObject.source_remove(self._status_timeout)
 
-        self._status_timeout = glib.timeout_add(3000, self._remove_status)
+        self._status_timeout = GObject.timeout_add(3000, self._remove_status)
 
     def _apply_column_mode(self):
         mode = self._column_mode
@@ -859,7 +859,7 @@ class DocumentHelper(Signals):
             # Ooooh, what a hack to be able to work with the undo manager
             self._view.set_editable(False)
             mark = buf.create_mark(None, start, True)
-            self._delete_mode_id = glib.timeout_add(0, self.handle_column_mode_delete, mark)
+            self._delete_mode_id = GObject.timeout_add(0, self.handle_column_mode_delete, mark)
         elif self._edit_points:
             if start.equal(buf.get_iter_at_mark(buf.get_insert())):
                 self.block_signal(buf, 'delete-range')
