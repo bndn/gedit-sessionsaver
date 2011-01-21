@@ -650,11 +650,12 @@ class DocumentHelper(Signals):
         end = self._column_mode[1]
         buf = self._buffer
 
-        col = self._view.get_style().base[Gtk.StateType.SELECTED]
         layout = self._view.create_pango_layout('W')
         width = layout.get_pixel_extents()[1][2]
 
-        cr.set_source_color(col)
+        context = self._view.get_style_context()
+        col = context.get_background_color(Gtk.StateType.SELECTED)
+        Gdk.cairo_set_source_rgba(cr, col)
 
         cstart = self._column_mode[2]
         cend = self._column_mode[3]
@@ -1297,18 +1298,13 @@ class DocumentHelper(Signals):
         tooltip.set_custom(table)
         return True
 
-    def from_color(self, col):
-        return [col.red / float(0x10000), col.green / float(0x10000), col.blue / float(0x10000)]
-
     def _background_color(self):
-        #TODO: use GdkRGBA directly
         context = self._view.get_style_context()
-        col_rgba = context.get_background_color(context.get_state())
-        col = self.from_color(Gdk.Color(col_rgba.red * 65535, col_rgba.green * 65535, col_rgba.blue * 65535))
-        if col[2] > 0.8:
-            col[2] -= 0.2
+        col = context.get_background_color(context.get_state())
+        if col.green > 0.8:
+            col.green -= 0.2
         else:
-            col[2] += 0.2
+            col.green += 0.2
 
         return col
 
@@ -1330,7 +1326,7 @@ class DocumentHelper(Signals):
         print view
         print cr
 
-        cr.set_source_rgb(col[0], col[1], col[2])
+        Gdk.cairo_set_source_rgba(cr, col)
         cr.fill_preserve()
 
         layout = view.create_pango_layout(_('Multi Edit Mode'))
@@ -1346,14 +1342,17 @@ class DocumentHelper(Signals):
         cr.translate(0.5, 0.5)
         cr.set_line_width(1)
 
-        col = self.from_color(view.get_style().text[view.get_state()])
+        context = view.get_style_context()
+        col = context.get_color(context.get_state())
+        col.alpha = 0.6
+        Gdk.cairo_set_source_rgba(cr, col)
 
-        cr.set_source_rgba(col[0], col[1], col[2], 0.6)
         cr.move_to(0, h - 1)
         cr.rel_line_to(w, 0)
         cr.stroke()
 
-        cr.set_source_rgb(col[0], col[1], col[2])
+        col.alpha = 1.0
+        Gdk.cairo_set_source_rgba(cr, col)
         cr.move_to(w - extents[1][2] - 3, (h - extents[1][3]) / 2)
         cr.show_layout(layout)
 
