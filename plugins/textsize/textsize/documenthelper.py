@@ -40,7 +40,7 @@ class DocumentHelper(Signals):
 
     def stop(self):
         if self._default_font:
-            self._view.modify_font(self._default_font)
+            self._view.override_font(self._default_font)
 
         self.remove_font_tags()
         self.disconnect_signals(self._view)
@@ -57,7 +57,8 @@ class DocumentHelper(Signals):
         self._font_tags = {}
 
     def update_default_font(self):
-        description = self._view.get_style().font_desc
+        context = self._view.get_style_context()
+        description = context.get_font(context.get_state())
 
         if not self._last_font or description.hash() != self._last_font.hash():
             self._default_font = description.copy()
@@ -82,7 +83,8 @@ class DocumentHelper(Signals):
     def set_font_size(self, amount):
         self.update_default_font()
 
-        description = self._view.get_style().font_desc
+        context = self._view.get_style_context()
+        description = context.get_font(context.get_state())
 
         buf = self._view.get_buffer()
         bounds = buf.get_selection_bounds()
@@ -91,7 +93,7 @@ class DocumentHelper(Signals):
         if not bounds:
             description.set_size(max(1, (size + amount)) * Pango.SCALE)
 
-            self._view.modify_font(description)
+            self._view.override_font(description)
             self._last_font = description
         else:
             start = bounds[0]
@@ -146,7 +148,7 @@ class DocumentHelper(Signals):
         if not bounds:
             self.remove_font_tags()
 
-            self._view.modify_font(self._default_font)
+            self._view.override_font(self._default_font)
             self._last_font = self._default_font
         else:
             tags = self.get_font_tags(bounds[0], bounds[1])
