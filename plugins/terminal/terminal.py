@@ -121,8 +121,8 @@ class GeditTerminal(Gtk.Box):
 
         # colors
         context = self._vte.get_style_context()
-        fg = context.get_color(0)
-        bg = context.get_background_color(0)
+        fg = context.get_color(Gtk.StateFlags.NORMAL)
+        bg = context.get_background_color(Gtk.StateFlags.NORMAL)
         palette = []
 
         if not self.profile_settings.get_boolean("use-theme-colors"):
