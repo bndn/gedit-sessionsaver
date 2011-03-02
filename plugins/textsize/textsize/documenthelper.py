@@ -157,24 +157,24 @@ class DocumentHelper(Signals):
                 buf.remove_tag(tag, bounds[0], bounds[1])
 
     def on_scroll_event(self, view, event):
-        state = event.scroll.state & Gtk.accelerator_get_default_mod_mask()
+        state = event.state & Gtk.accelerator_get_default_mod_mask()
 
         if state != Gdk.ModifierType.CONTROL_MASK:
             return False
 
-        if event.scroll.direction == Gdk.ScrollDirection.UP:
+        if event.direction == Gdk.ScrollDirection.UP:
             self.increase_font_size()
             return True
-        elif event.scroll.direction == Gdk.ScrollDirection.DOWN:
+        elif event.direction == Gdk.ScrollDirection.DOWN:
             self.decrease_font_size()
             return True
 
         return False
 
     def on_button_press_event(self, view, event):
-        state = event.button.state & Gtk.accelerator_get_default_mod_mask()
+        state = event.state & Gtk.accelerator_get_default_mod_mask()
 
-        if state == Gdk.ModifierType.CONTROL_MASK and event.button.button == 2:
+        if state == Gdk.ModifierType.CONTROL_MASK and event.button == 2:
             self.reset_font_size()
             return True
         else:

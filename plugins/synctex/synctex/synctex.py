@@ -103,8 +103,8 @@ class SynctexViewHelper:
 
     def on_button_release(self, view, event):
         modifier_mask = Gtk.accelerator_get_default_mod_mask()
-        event_state = event.button.state & modifier_mask
-        if event.button.button == 1 and event_state == Gdk.ModifierType.CONTROL_MASK:
+        event_state = event.state & modifier_mask
+        if event.button == 1 and event_state == Gdk.ModifierType.CONTROL_MASK:
             self.sync_view()
 
     def on_saved_or_loaded(self, doc, data):
