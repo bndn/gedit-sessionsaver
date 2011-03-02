@@ -69,8 +69,8 @@ class SmartSpacesPlugin(GObject.Object, Gedit.ViewActivatable):
         # Only take care of backspace and shift+backspace
         mods = Gtk.accelerator_get_default_mod_mask()
 
-        if event.key.keyval != Gdk.KEY_BackSpace or \
-           event.key.state & mods != 0 and event.key.state & mods != Gdk.ModifierType.SHIFT_MASK:
+        if event.keyval != Gdk.KEY_BackSpace or \
+           event.state & mods != 0 and event.state & mods != Gdk.ModifierType.SHIFT_MASK:
             return False
 
         doc = view.get_buffer()
