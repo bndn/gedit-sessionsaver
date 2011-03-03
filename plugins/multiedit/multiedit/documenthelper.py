@@ -22,7 +22,7 @@
 import re
 import time
 import xml.sax.saxutils
-from gi.repository import Pango, Gdk, Gtk, Gedit
+from gi.repository import GObject, Pango, PangoCairo, Gdk, Gtk, Gedit
 from signals import Signals
 import constants
 import gettext
@@ -330,7 +330,11 @@ class DocumentHelper(Signals):
 
         window = self._view.get_window(Gtk.TextWindowType.TOP)
         geom = window.get_geometry()
-        window.invalidate_rect(Gdk.Rectangle(0, 0, geom[2], geom[3]), False)
+        #FIXME: there should be some override in pygobject to create the rectangle with values
+        rect = Gdk.Rectangle()
+        rect.width = geom[2]
+        rect.height = geom[3]
+        window.invalidate_rect(rect, False)
 
     def _remove_status(self):
         self._status = None
@@ -651,10 +655,11 @@ class DocumentHelper(Signals):
         buf = self._buffer
 
         layout = self._view.create_pango_layout('W')
+        #FIXME
         width = layout.get_pixel_extents()[1][2]
 
         context = self._view.get_style_context()
-        col = context.get_background_color(Gtk.StateType.SELECTED)
+        col = context.get_background_color(Gtk.StateFlags.SELECTED)
         Gdk.cairo_set_source_rgba(cr, col)
 
         cstart = self._column_mode[2]
@@ -1322,20 +1327,17 @@ class DocumentHelper(Signals):
 
         col = self._background_color()
 
-        #FIXME: waiting for bug in pygobject
-        print view
-        print cr
-
         Gdk.cairo_set_source_rgba(cr, col)
         cr.fill_preserve()
 
         layout = view.create_pango_layout(_('Multi Edit Mode'))
 
         layout.set_font_description(Pango.FontDescription('Sans 10'))
+        #FIXME extens do not work
         extents = layout.get_pixel_extents()
 
         w = window.get_width()
-        h = window.get_heigth()
+        h = window.get_height()
 
         Gtk.cairo_transform_to_window (cr, view, window)
 
@@ -1353,8 +1355,10 @@ class DocumentHelper(Signals):
 
         col.alpha = 1.0
         Gdk.cairo_set_source_rgba(cr, col)
-        cr.move_to(w - extents[1][2] - 3, (h - extents[1][3]) / 2)
-        cr.show_layout(layout)
+        #FIXME: can't we use the x, y from the top window to place the text?
+        #cr.move_to(w - extents[1][2] - 3, (h - extents[1][3]) / 2)
+        cr.move_to(w - 3, h / 2)
+        PangoCairo.show_layout(cr, layout)
 
         if not self._status:
             status = ''
@@ -1362,10 +1366,12 @@ class DocumentHelper(Signals):
             status = str(self._status)
 
         if status:
-            layout.set_markup(status)
+            layout.set_markup(status, -1)
 
-            cr.move_to(3, (h - extents[1][3]) / 2)
-            cr.show_layout(layout)
+            #FIXME
+            #cr.move_to(3, (h - extents[1][3]) / 2)
+            cr.move_to(3, h / 2)
+            PangoCairo.show_layout(cr, layout)
 
         return False
 
