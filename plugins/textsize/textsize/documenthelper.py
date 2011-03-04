@@ -58,7 +58,7 @@ class DocumentHelper(Signals):
 
     def update_default_font(self):
         context = self._view.get_style_context()
-        description = context.get_font(context.get_state())
+        description = context.get_font(context.get_state()).copy()
 
         if not self._last_font or description.hash() != self._last_font.hash():
             self._default_font = description.copy()
