@@ -61,7 +61,7 @@ class DocumentHelper(Signals):
         description = context.get_font(context.get_state()).copy()
 
         if not self._last_font or description.hash() != self._last_font.hash():
-            self._default_font = description.copy()
+            self._default_font = description
 
     def get_font_tags(self, start, end):
         tags = set()
@@ -84,7 +84,7 @@ class DocumentHelper(Signals):
         self.update_default_font()
 
         context = self._view.get_style_context()
-        description = context.get_font(context.get_state())
+        description = context.get_font(context.get_state()).copy()
 
         buf = self._view.get_buffer()
         bounds = buf.get_selection_bounds()
@@ -94,7 +94,7 @@ class DocumentHelper(Signals):
             description.set_size(max(1, (size + amount)) * Pango.SCALE)
 
             self._view.override_font(description)
-            self._last_font = description.copy()
+            self._last_font = description
         else:
             start = bounds[0]
             end = bounds[1]
@@ -119,7 +119,7 @@ class DocumentHelper(Signals):
             if not newsize in self._font_tags:
                 newtag = buf.create_tag(None)
 
-                desc = description.copy()
+                desc = description
                 desc.set_size(newsize * Pango.SCALE)
 
                 newtag.props.font_desc = desc
