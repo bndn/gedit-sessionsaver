@@ -94,7 +94,7 @@ class DocumentHelper(Signals):
             description.set_size(max(1, (size + amount)) * Pango.SCALE)
 
             self._view.override_font(description)
-            self._last_font = description
+            self._last_font = description.copy()
         else:
             start = bounds[0]
             end = bounds[1]
