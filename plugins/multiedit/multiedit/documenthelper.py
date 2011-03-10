@@ -332,6 +332,8 @@ class DocumentHelper(Signals):
         geom = window.get_geometry()
         #FIXME: there should be some override in pygobject to create the rectangle with values
         rect = Gdk.Rectangle()
+        rect.x = 0
+        rect.y = 0
         rect.width = geom[2]
         rect.height = geom[3]
         window.invalidate_rect(rect, False)
@@ -655,8 +657,7 @@ class DocumentHelper(Signals):
         buf = self._buffer
 
         layout = self._view.create_pango_layout('W')
-        #FIXME
-        width = layout.get_pixel_extents()[1][2]
+        width = layout.get_pixel_extents()[1].width
 
         context = self._view.get_style_context()
         col = context.get_background_color(Gtk.StateFlags.SELECTED)
@@ -1333,7 +1334,6 @@ class DocumentHelper(Signals):
         layout = view.create_pango_layout(_('Multi Edit Mode'))
 
         layout.set_font_description(Pango.FontDescription('Sans 10'))
-        #FIXME extens do not work
         extents = layout.get_pixel_extents()
 
         w = window.get_width()
@@ -1355,9 +1355,7 @@ class DocumentHelper(Signals):
 
         col.alpha = 1.0
         Gdk.cairo_set_source_rgba(cr, col)
-        #FIXME: can't we use the x, y from the top window to place the text?
-        #cr.move_to(w - extents[1][2] - 3, (h - extents[1][3]) / 2)
-        cr.move_to(w - 3, h / 2)
+        cr.move_to(w - extents[1].width - 3, (h - extents[1].height) / 2)
         PangoCairo.show_layout(cr, layout)
 
         if not self._status:
@@ -1368,9 +1366,7 @@ class DocumentHelper(Signals):
         if status:
             layout.set_markup(status, -1)
 
-            #FIXME
-            #cr.move_to(3, (h - extents[1][3]) / 2)
-            cr.move_to(3, h / 2)
+            cr.move_to(3, (h - extents[1].height) / 2)
             PangoCairo.show_layout(cr, layout)
 
         return False
