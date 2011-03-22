@@ -809,6 +809,8 @@ class DocumentHelper(Signals):
 
         if hasattr(where, 'assign'):
             where.assign(iterwas)
+        elif hasattr(Gedit, 'utils_text_iter_assign'):
+            Gedit.utils_text_iter_assign(where, iterwas)
 
         if atinsert:
             buf.move_mark(buf.get_insert(), iterwas)
