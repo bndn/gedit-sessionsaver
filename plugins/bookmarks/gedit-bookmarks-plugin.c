@@ -699,7 +699,7 @@ install_messages (GeditWindow *window)
 	                            MESSAGE_OBJECT_PATH,
 	                           "toggle",
 	                            2,
-	                            "view", GTK_TYPE_SOURCE_VIEW,
+	                            "view", GTK_SOURCE_TYPE_VIEW,
 	                            "iter", GTK_TYPE_TEXT_ITER,
 				    NULL);
 
@@ -707,7 +707,7 @@ install_messages (GeditWindow *window)
 	                            MESSAGE_OBJECT_PATH,
 	                            "add",
 	                            2,
-	                            "view", GTK_TYPE_SOURCE_VIEW,
+	                            "view", GTK_SOURCE_TYPE_VIEW,
 	                            "iter", GTK_TYPE_TEXT_ITER,
 				    NULL);
 
@@ -715,7 +715,7 @@ install_messages (GeditWindow *window)
 	                            MESSAGE_OBJECT_PATH,
 	                            "remove",
 	                            2,
-	                            "view", GTK_TYPE_SOURCE_VIEW,
+	                            "view", GTK_SOURCE_TYPE_VIEW,
 	                            "iter", GTK_TYPE_TEXT_ITER,
 				    NULL);
 
@@ -723,7 +723,7 @@ install_messages (GeditWindow *window)
 	                            MESSAGE_OBJECT_PATH,
 	                            "goto_next",
 	                            2,
-	                            "view", GTK_TYPE_SOURCE_VIEW,
+	                            "view", GTK_SOURCE_TYPE_VIEW,
 	                            "iter", GTK_TYPE_TEXT_ITER,
 				    NULL);
 
@@ -731,7 +731,7 @@ install_messages (GeditWindow *window)
 	                            MESSAGE_OBJECT_PATH,
 	                            "goto_previous",
 	                            2,
-	                            "view", GTK_TYPE_SOURCE_VIEW,
+	                            "view", GTK_SOURCE_TYPE_VIEW,
 	                            "iter", GTK_TYPE_TEXT_ITER,
 				    NULL);
 
