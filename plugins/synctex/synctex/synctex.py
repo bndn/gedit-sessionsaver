@@ -105,7 +105,7 @@ class SynctexViewHelper:
         modifier_mask = Gtk.accelerator_get_default_mod_mask()
         event_state = event.state & modifier_mask
         if event.button == 1 and event_state == Gdk.ModifierType.CONTROL_MASK:
-            self.sync_view()
+            self.sync_view(event.time)
 
     def on_saved_or_loaded(self, doc, data):
         self.update_location()
@@ -173,23 +173,23 @@ class SynctexViewHelper:
                                  self.last_iters[0], self.last_iters[1])
         self.last_iters = None
 
-    def goto_line (self, line):
+    def goto_line (self, line, time):
         self._doc.goto_line(line) 
         self._view.scroll_to_cursor()
         self._window.set_active_tab(self._tab)
         self._highlight()
-        self._window.present()
+        self._window.present_with_time (time)
 
     def goto_line_after_load(self, a, line):
         self.goto_line(line)
         self._doc.disconnect(self._goto_handler)
 
-    def sync_view(self):
+    def sync_view(self, time):
         if self.active:
             cursor_iter =  self._doc.get_iter_at_mark(self._doc.get_insert())
             line = cursor_iter.get_line() + 1
             col = cursor_iter.get_line_offset()
-            self.window_proxy.SyncView(self.gfile.get_path(), (line, col))
+            self.window_proxy.SyncView(self.gfile.get_path(), (line, col), time)
 
     def update_active(self):
         # Activate the plugin only if the doc is a LaTeX file.
@@ -296,8 +296,7 @@ class SynctexWindowHelper:
         self._ui_id = manager.add_ui_from_string(ui_str)
 
     def forward_search_cb(self, action, what):
-        print self, action, what
-        self._window.get_active_view().get_data(VIEW_DATA_KEY).sync_view()
+        self._window.get_active_view().get_data(VIEW_DATA_KEY).sync_view(Gtk.get_current_event_time())
 
 class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
     __gtype_name__ = "SynctexPlugin"
@@ -320,9 +319,9 @@ class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
         window.get_data(WINDOW_DATA_KEY).deactivate()
         window.set_data(WINDOW_DATA_KEY, None)
 
-    def source_view_handler(self, out_gfile, input_file, source_link):
-        uri_input = out_gfile.get_parent().get_child(str(input_file)).get_uri()
-        
+    def source_view_handler(self, out_gfile, input_file, source_link, time):
+        uri_input = input_file
+
         if uri_input not in SynctexPlugin.view_dict:
             window = SynctexPlugin._proxy_dict[out_gfile.get_uri()][2]
             tab = window.create_tab_from_uri(uri_input,
@@ -330,9 +329,9 @@ class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
             helper =  tab.get_view().get_data(VIEW_DATA_KEY)
             helper._goto_handler = tab.get_document().connect_object("loaded", 
                                                 SynctexViewHelper.goto_line_after_load, 
-                                                helper, source_link[0] - 1) 
+                                                helper, source_link[0] - 1, time)
         else:
-            SynctexPlugin.view_dict[uri_input].goto_line(source_link[0] - 1)
+            SynctexPlugin.view_dict[uri_input].goto_line(source_link[0] - 1, time)
 
     def ref_evince_proxy(self, gfile, window):
         uri = gfile.get_uri()
@@ -340,7 +339,7 @@ class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
         if uri not in SynctexPlugin._proxy_dict:
             proxy = EvinceWindowProxy (uri, True, _logger)
             SynctexPlugin._proxy_dict[uri] = [1, proxy, window]
-            proxy.set_source_handler (lambda i, s: self.source_view_handler(Gio.file_new_for_uri(uri), i, s))
+            proxy.set_source_handler (lambda i, s, time: self.source_view_handler(Gio.file_new_for_uri(uri), i, s, time))
         else:
             SynctexPlugin._proxy_dict[uri][0]+=1
             proxy = SynctexPlugin._proxy_dict[uri][1]

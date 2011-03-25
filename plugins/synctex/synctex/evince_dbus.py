@@ -114,25 +114,25 @@ class EvinceWindowProxy:
         self.window = None
         self.status = CLOSED
 
-    def on_sync_source(self, input_file, source_link):
+    def on_sync_source(self, input_file, source_link, timestamp):
         if self.source_handler is not None:
-            self.source_handler(input_file, source_link)
+            self.source_handler(input_file, source_link, timestamp)
 
-    def SyncView(self, input_file, data):
+    def SyncView(self, input_file, data, time):
         if self.status == CLOSED:
             if self.spawn:
-                self._tmp_syncview = [input_file, data];
+                self._tmp_syncview = [input_file, data, time];
                 self._handler = self._syncview_handler
                 self._get_dbus_name(True)
         else:
-            self.window.SyncView(input_file, data, dbus_interface = "org.gnome.evince.Window")
+            self.window.SyncView(input_file, data, time,  dbus_interface = "org.gnome.evince.Window")
 
     def _syncview_handler(self, window_list):
         self.handle_get_window_list_reply(window_list)
 
         if self.status == CLOSED: 
             return False
-        self.window.SyncView(self._tmp_syncview[0],self._tmp_syncview[1], dbus_interface="org.gnome.evince.Window")
+        self.window.SyncView(self._tmp_syncview[0],self._tmp_syncview[1], self._tmp_syncview[2], dbus_interface="org.gnome.evince.Window")
         del self._tmp_syncview
         self._handler = None
         return True
