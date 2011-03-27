@@ -30,9 +30,6 @@ AC_PROG_MAKE_SET
 
 AM_PATH_PYTHON
 
-# make sure we keep ACLOCAL_FLAGS around for maintainer builds to work
-AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS -I m4")
-
 dnl check for win32 platform
 AC_MSG_CHECKING([for some Win32 platform])
 case "$host" in
@@ -256,8 +253,6 @@ AC_SUBST([BUILD_PLUGINS],[$PLUGINS])
 # Misc
 # ================================================================
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
-
-#GNOME_COMPILE_WARNINGS(yes)
 
 AC_ARG_ENABLE(deprecations,
               [AC_HELP_STRING([--enable-deprecations],
