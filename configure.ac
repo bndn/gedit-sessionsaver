@@ -1,34 +1,38 @@
 dnl Process this file with autoconf to produce a configure script.
 
-AC_PREREQ(2.59)
+AC_PREREQ([2.63])
  
 m4_define(gedit_plugins_major_version,  2)
 m4_define(gedit_plugins_minor_version, 91)
 m4_define(gedit_plugins_micro_version,  2)
 m4_define(gedit_plugins_version, gedit_plugins_major_version.gedit_plugins_minor_version.gedit_plugins_micro_version)
 
-AC_INIT(gedit-plugins, gedit_plugins_version, http://bugzilla.gnome.org/enter_bug.cgi?product=gedit)
-
-AC_CONFIG_SRCDIR([plugins])
-AC_CONFIG_MACRO_DIR([m4])
-AC_PREFIX_PROGRAM([gedit])
-
-AM_INIT_AUTOMAKE([1.8 dist-bzip2 no-dist-gzip])
-
-AM_MAINTAINER_MODE
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+AC_INIT([gedit-plugins],
+        [gedit_plugins_version],
+        [http://bugzilla.gnome.org/enter_bug.cgi?product=gedit],
+        [gedit-plugins])
 
 AC_CONFIG_HEADERS([config.h])
-AC_DISABLE_STATIC
+AC_CONFIG_SRCDIR([plugins])
+AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_AUX_DIR([build-aux])
+AC_PREFIX_PROGRAM([gedit])
 
-AC_PROG_LIBTOOL
+AM_INIT_AUTOMAKE([1.10 dist-bzip2 no-dist-gzip])
+AM_MAINTAINER_MODE([enable])
 
-AC_ISC_POSIX
+m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+
+# Check for programs
 AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 
 AM_PATH_PYTHON
+
+# Initialize libtool
+LT_PREREQ([2.2])
+LT_INIT([disable-static])
 
 dnl check for win32 platform
 AC_MSG_CHECKING([for some Win32 platform])
@@ -255,7 +259,7 @@ AC_SUBST([BUILD_PLUGINS],[$PLUGINS])
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 
 AC_ARG_ENABLE(deprecations,
-              [AC_HELP_STRING([--enable-deprecations],
+              [AS_HELP_STRING([--enable-deprecations],
                               [warn about deprecated usages [default=no]])],,
               [enable_deprecations=no])
 
