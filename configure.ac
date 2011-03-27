@@ -4,7 +4,7 @@ AC_PREREQ([2.63])
  
 m4_define(gedit_plugins_major_version,  2)
 m4_define(gedit_plugins_minor_version, 91)
-m4_define(gedit_plugins_micro_version,  2)
+m4_define(gedit_plugins_micro_version,  3)
 m4_define(gedit_plugins_version, gedit_plugins_major_version.gedit_plugins_minor_version.gedit_plugins_micro_version)
 
 AC_INIT([gedit-plugins],
@@ -68,9 +68,9 @@ PKG_CHECK_MODULES(GEDIT, [
 	gio-2.0 >= 2.26.0
 	gtk+-3.0 >= 3.0.0
 	gtksourceview-3.0 >= 2.91.9
-	libpeas-1.0 >= 0.7.1
-	libpeas-gtk-1.0 >= 0.7.1
-	gedit >= 2.91.6
+	libpeas-1.0 >= 0.7.3
+	libpeas-gtk-1.0 >= 0.7.3
+	gedit >= 2.91.11
 ])
 
 dnl ================================================================
