@@ -23,6 +23,7 @@
 #endif
 
 #include "gedit-bookmarks-plugin.h"
+#include "messages/messages.h"
 
 #include <gtk/gtk.h>
 #include <glib/gi18n-lib.h>
@@ -562,11 +563,8 @@ message_get_view_iter (GeditWindow    *window,
                        GtkSourceView **view,
                        GtkTextIter    *iter)
 {
-	if (gedit_message_has_key (message, "view"))
-	{
-		gedit_message_get (message, "view", view, NULL);
-	}
-	else
+	g_object_get (message, "view", view, NULL);
+	if (!*view)
 	{
 		*view = GTK_SOURCE_VIEW (gedit_window_get_active_view (window));
 	}
@@ -576,11 +574,8 @@ message_get_view_iter (GeditWindow    *window,
 		return;
 	}
 
-	if (gedit_message_has_key (message, "iter"))
-	{
-		gedit_message_get (message, "iter", iter, NULL);
-	}
-	else
+	g_object_get (message, "iter", iter, NULL);
+	if (iter)
 	{
 		GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (*view));
 		gtk_text_buffer_get_iter_at_mark (buffer,
@@ -696,44 +691,29 @@ install_messages (GeditWindow *window)
 	GeditMessageBus *bus = gedit_window_get_message_bus (window);
 
 	gedit_message_bus_register (bus,
+	                            GEDIT_TYPE_BOOKMARKS_MESSAGE_TOGGLE,
 	                            MESSAGE_OBJECT_PATH,
-	                           "toggle",
-	                            2,
-	                            "view", GTK_SOURCE_TYPE_VIEW,
-	                            "iter", GTK_TYPE_TEXT_ITER,
-				    NULL);
+	                            "toggle");
 
 	gedit_message_bus_register (bus,
+	                            GEDIT_TYPE_BOOKMARKS_MESSAGE_ADD,
 	                            MESSAGE_OBJECT_PATH,
-	                            "add",
-	                            2,
-	                            "view", GTK_SOURCE_TYPE_VIEW,
-	                            "iter", GTK_TYPE_TEXT_ITER,
-				    NULL);
+	                            "add");
 
 	gedit_message_bus_register (bus,
+	                            GEDIT_TYPE_BOOKMARKS_MESSAGE_REMOVE,
 	                            MESSAGE_OBJECT_PATH,
-	                            "remove",
-	                            2,
-	                            "view", GTK_SOURCE_TYPE_VIEW,
-	                            "iter", GTK_TYPE_TEXT_ITER,
-				    NULL);
+	                            "remove");
 
 	gedit_message_bus_register (bus,
+	                            GEDIT_TYPE_BOOKMARKS_MESSAGE_GOTO_NEXT,
 	                            MESSAGE_OBJECT_PATH,
-	                            "goto_next",
-	                            2,
-	                            "view", GTK_SOURCE_TYPE_VIEW,
-	                            "iter", GTK_TYPE_TEXT_ITER,
-				    NULL);
+	                            "goto-next");
 
 	gedit_message_bus_register (bus,
+	                            GEDIT_TYPE_BOOKMARKS_MESSAGE_GOTO_PREVIOUS,
 	                            MESSAGE_OBJECT_PATH,
-	                            "goto_previous",
-	                            2,
-	                            "view", GTK_SOURCE_TYPE_VIEW,
-	                            "iter", GTK_TYPE_TEXT_ITER,
-				    NULL);
+	                            "goto-previous");
 
 	BUS_CONNECT (bus, toggle, window);
 	BUS_CONNECT (bus, add, window);

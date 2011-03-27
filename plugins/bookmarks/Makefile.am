@@ -11,8 +11,19 @@ INCLUDES = \
 plugin_LTLIBRARIES = libbookmarks.la
 
 libbookmarks_la_SOURCES = \
-	gedit-bookmarks-plugin.h			\
-	gedit-bookmarks-plugin.c	
+	gedit-bookmarks-plugin.h				\
+	gedit-bookmarks-plugin.c				\
+	messages/gedit-bookmarks-message-add.c			\
+	messages/gedit-bookmarks-message-add.h			\
+	messages/gedit-bookmarks-message-goto-next.c		\
+	messages/gedit-bookmarks-message-goto-next.h		\
+	messages/gedit-bookmarks-message-goto-previous.c	\
+	messages/gedit-bookmarks-message-goto-previous.h	\
+	messages/gedit-bookmarks-message-remove.c		\
+	messages/gedit-bookmarks-message-remove.h		\
+	messages/gedit-bookmarks-message-toggle.c		\
+	messages/gedit-bookmarks-message-toggle.h		\
+	messages/messages.h
 
 libbookmarks_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 libbookmarks_la_LIBADD = $(GEDIT_LIBS)
