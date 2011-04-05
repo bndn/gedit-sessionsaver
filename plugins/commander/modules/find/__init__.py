@@ -20,7 +20,7 @@
 #  Boston, MA 02111-1307, USA.
 
 import commander.commands as commands
-import gedit
+from gi.repository import Gedit
 import re
 import regex
 from xml.sax import saxutils
@@ -52,7 +52,7 @@ def __default__(entry, argstr):
     """Find in document: find &lt;text&gt;
 
 Quickly find phrases in the document"""
-    fd = TextFinder(entry, gedit.SEARCH_CASE_SENSITIVE)
+    fd = TextFinder(entry, Gedit.SearchFlags.CASE_SENSITIVE)
     yield fd.find(argstr)
 
 def _find_insensitive(entry, argstr):
@@ -66,7 +66,7 @@ def replace(entry, findstr, replstr=None):
     """Find/replace in document: find.replace &lt;find&gt; [&lt;replace&gt;]
 
 Quickly find and replace phrases in the document"""
-    fd = TextFinder(entry, gedit.SEARCH_CASE_SENSITIVE)
+    fd = TextFinder(entry, Gedit.SearchFlags.CASE_SENSITIVE)
     yield fd.replace(findstr, False, replstr)
 
 def replace_i(entry, findstr, replstr=None):
@@ -80,7 +80,7 @@ def replace_all(entry, findstr, replstr=None):
     """Find/replace all in document: find.replace-all &lt;find&gt; [&lt;replace&gt;]
 
 Quickly find and replace all phrases in the document"""
-    fd = TextFinder(entry, gedit.SEARCH_CASE_SENSITIVE)
+    fd = TextFinder(entry, Gedit.SearchFlags.CASE_SENSITIVE)
     yield fd.replace(findstr, True, replstr)
 
 def replace_all_i(entry, findstr, replstr=None):

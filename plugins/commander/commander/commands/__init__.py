@@ -20,7 +20,7 @@
 #  Boston, MA 02111-1307, USA.
 
 import os
-import gio
+from gi.repository import GObject, Gio
 import sys
 import bisect
 import types
@@ -156,7 +156,7 @@ class Commands(Singleton):
 		self._modules = None
 
 		for k in self._timeouts:
-			glib.source_remove(self._timeouts[k])
+			GObject.source_remove(self._timeouts[k])
 
 		self._timeouts = {}
 
@@ -193,12 +193,12 @@ class Commands(Singleton):
 		return list(self._modules)
 
 	def add_monitor(self, d):
-		gfile = gio.File(d)
+		gfile = Gio.file_new_for_path(d)
 		monitor = None
 
 		try:
-			monitor = gfile.monitor_directory(gio.FILE_MONITOR_NONE, None)
-		except gio.Error, e:
+			monitor = gfile.monitor_directory(Gio.FileMonitorFlags.NONE, None)
+		except Gio.Error, e:
 			# Could not create monitor, this happens on systems where file monitoring is
 			# not supported, but we don't really care
 			pass
@@ -433,10 +433,10 @@ class Commands(Singleton):
 		return False
 
 	def on_monitor_changed(self, monitor, gfile1, gfile2, evnt):
-		if evnt == gio.FILE_MONITOR_EVENT_CHANGED:
+		if evnt == Gio.FileMonitorEvent.CHANGED:
 			# Reload the module
 			self.reload_module(gfile1.get_path())
-		elif evnt == gio.FILE_MONITOR_EVENT_DELETED:
+		elif evnt == Gio.FileMonitorEvent.DELETED:
 			path = gfile1.get_path()
 			mod = self.resolve_module(path, False)
 
@@ -444,17 +444,17 @@ class Commands(Singleton):
 				return
 
 			if path in self._timeouts:
-				glib.source_remove(self._timeouts[path])
+				GObject.source_remove(self._timeouts[path])
 
 			# We add a timeout because a common save strategy causes a
 			# DELETE/CREATE event chain
-			self._timeouts[path] = glib.timeout_add(500, self.on_timeout_delete, path, mod)
-		elif evnt == gio.FILE_MONITOR_EVENT_CREATED:
+			self._timeouts[path] = GObject.timeout_add(500, self.on_timeout_delete, path, mod)
+		elif evnt == Gio.FileMonitorEvent.CREATED:
 			path = gfile1.get_path()
 
 			# Check if this CREATE followed a previous DELETE
 			if path in self._timeouts:
-				glib.source_remove(self._timeouts[path])
+				GObject.source_remove(self._timeouts[path])
 				del self._timeouts[path]
 
 			# Reload the module

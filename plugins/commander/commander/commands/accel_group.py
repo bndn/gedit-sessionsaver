@@ -19,7 +19,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gtk
+from gi.repository import Gtk
 
 class Accelerator:
 	def __init__(self, accelerators, arguments={}):
@@ -49,12 +49,12 @@ class AccelGroup:
 		mapping = self.accelerators
 
 		for i in range(num):
-			parsed = gtk.accelerator_parse(accel.accelerators[i])
+			parsed = Gtk.accelerator_parse(accel.accelerators[i])
 
-			if not gtk.accelerator_valid(*parsed):
+			if not Gtk.accelerator_valid(*parsed):
 				return
 
-			named = gtk.accelerator_name(*parsed)
+			named = Gtk.accelerator_name(*parsed)
 			inmap = named in mapping
 
 			if i == num - 1 and inmap:
@@ -76,12 +76,12 @@ class AccelGroup:
 		if not accels:
 			return
 
-		parsed = gtk.accelerator_parse(accels[0])
+		parsed = Gtk.accelerator_parse(accels[0])
 
-		if not gtk.accelerator_valid(*parsed):
+		if not Gtk.accelerator_valid(*parsed):
 			return
 
-		named = gtk.accelerator_name(*parsed)
+		named = Gtk.accelerator_name(*parsed)
 
 		if not named in accelerators:
 			return
@@ -98,7 +98,7 @@ class AccelGroup:
 		self.remove_real(self.accelerators, accel.accelerators)
 
 	def activate(self, key, mod):
-		named = gtk.accelerator_name(key, mod)
+		named = Gtk.accelerator_name(key, mod)
 
 		if not named in self.accelerators:
 			return None

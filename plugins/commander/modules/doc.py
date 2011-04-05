@@ -90,9 +90,11 @@ class Documenter:
         self.view = view
         self.iter = iter
 
-        bus = self.window.get_message_bus()
+        bus = self.get_window().get_message_bus()
+        self.canplaceholder = (bus.lookup('/plugins/snippets', 'parse-and-activate').name != 'invalid')
 
-        self.canplaceholder = bus.lookup('/plugins/snippets', 'parse-and-activate') != None
+        self.canplaceholder = False
+
         self.placeholder = 1
         self.text = ''
 

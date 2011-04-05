@@ -25,7 +25,7 @@ import fcntl
 import os
 import tempfile
 import signal
-import gio
+from gi.repository import GObject, Gio
 
 import commander.commands as commands
 import commander.commands.exceptions
@@ -107,7 +107,7 @@ class Process:
         if hasattr(self.pipe, 'kill'):
             self.pipe.kill()
 
-        glib.source_remove(self.watch)
+        GObject.source_remove(self.watch)
 
         if self.replace:
             self.entry.view().set_editable(True)

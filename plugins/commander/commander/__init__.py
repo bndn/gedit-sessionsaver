@@ -27,37 +27,32 @@ path = os.path.dirname(__file__)
 if not path in sys.path:
 	sys.path.insert(0, path)
 
-import gedit
-from windowhelper import WindowHelper
+from windowactivatable import WindowActivatable
 import commander.commands as commands
+from gi.repository import GObject, Gedit
+import glib
 
-class Commander(gedit.Plugin):
+class CommanderPlugin(GObject.Object, Gedit.AppActivatable):
+	__gtype_name__ = "CommanderPlugin"
+
+	app = GObject.property(type=Gedit.App)
+
 	def __init__(self):
-		gedit.Plugin.__init__(self)
+		GObject.Object.__init__(self)
 
-		self._instances = {}
+	def do_activate(self):
 		self._path = os.path.dirname(__file__)
 
 		if not self._path in sys.path:
 			sys.path.insert(0, self._path)
 
 		commands.Commands().set_dirs([
-			os.path.expanduser('~/.gnome2/gedit/commander/modules'),
-			os.path.join(self.get_data_dir(), 'modules')
+			os.path.join(glib.get_user_config_dir(), 'gedit/commander/modules'),
+			os.path.join(self.plugin_info.get_data_dir(), 'modules')
 		])
 
-	def activate(self, window):
-		self._instances[window] = WindowHelper(self, window)
+	def deactivate(self):
+		commands.Commands().stop()
 
-	def deactivate(self, window):
-		self._instances[window].deactivate()
-		del self._instances[window]
-
-		if len(self._instances) == 0:
-			commands.Commands().stop()
-
-			if self._path in sys.path:
-				sys.path.remove(self._path)
-
-	def update_ui(self, window):
-		self._instances[window].update_ui()
+		if self._path in sys.path:
+			sys.path.remove(self._path)

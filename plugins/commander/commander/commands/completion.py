@@ -24,7 +24,6 @@ import bisect
 import sys
 import os
 import re
-import gio
 
 from xml.sax import saxutils
 

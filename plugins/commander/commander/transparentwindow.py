@@ -19,73 +19,61 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gtk
+from gi.repository import GObject, Gdk, Gtk, Gedit
 import cairo
 
-class TransparentWindow(gtk.Window):
-	def __init__(self, lvl=gtk.WINDOW_TOPLEVEL):
-		gtk.Window.__init__(self, lvl)
+class TransparentWindow(Gtk.Window):
+	__gtype_name__ = "CommanderTransparentWindow"
 
-		self.set_decorated(False)
-		self.set_app_paintable(True)
-		self.set_skip_pager_hint(True)
-		self.set_skip_taskbar_hint(True)
-		self.set_events(gtk.gdk.ALL_EVENTS_MASK)
+	def __init__(self, lvl=Gtk.WindowType.TOPLEVEL):
+		Gtk.Window.__init__(self,
+							type=lvl,
+							decorated=False,
+							app_paintable=True,
+							skip_pager_hint=True,
+							skip_taskbar_hint=True)
 
+		self.set_events(Gdk.EventMask.ALL_EVENTS_MASK)
 		self.set_rgba()
 
 	def set_rgba(self):
-		cmap = self.get_screen().get_rgba_colormap()
+		visual = self.get_screen().get_rgba_visual()
 
-		if not cmap:
-			return
+		if not visual:
+			visual = self.get_screen().get_system_visual()
 
-		self.set_colormap(cmap)
-		self.connect('realize', self.on_realize)
-		self.connect('expose-event', self.on_expose)
+		self.set_visual(visual)
 
-	def on_realize(self, widget):
-		self.window.set_back_pixmap(None, False)
+	def do_screen_changed(self, prev):
+		super(TransparentWindow, self).do_screen_changed(prev)
+
+		self.set_rgba()
 
 	def background_color(self):
-		return [0, 0, 0, 0.8]
+		return Gdk.RGBA(0, 0, 0, 0.8)
 
-	def background_shape(self, ct):
-		ct.rectangle(0, 0, self.allocation.width, self.allocation.height)
+	def background_shape(self, ct, alloc):
+		ct.rectangle(0, 0, alloc.width, alloc.height)
 
-	def draw_background(self, ct, widget=None, shape=True):
+	def draw_background(self, ct, widget=None):
 		if widget == None:
 			widget = self
 
 		ct.set_operator(cairo.OPERATOR_SOURCE)
-		ct.rectangle(0, 0, widget.allocation.width, widget.allocation.height)
+		alloc = widget.get_allocation()
+
+		ct.rectangle(0, 0, alloc.width, alloc.height)
 		ct.set_source_rgba(0, 0, 0, 0)
-
-		if not shape:
-			ct.fill_preserve()
-		else:
-			ct.fill()
-
-		color = self.background_color()
-
-		if shape:
-			self.background_shape(ct)
-
-		ct.set_source_rgba(color[0], color[1], color[2], color[3])
 		ct.fill()
 
-	def on_expose(self, widget, evnt):
-		if not self.window:
-			return
+		color = self.background_color()
+		self.background_shape(ct, alloc)
 
-		ct = evnt.window.cairo_create()
-		ct.save()
+		ct.set_source_rgba(color.red, color.green, color.blue, color.alpha)
+		ct.fill()
 
-		area = evnt.area
-		ct.rectangle(area.x, area.y, area.width, area.height)
-		ct.clip()
-
+	def do_draw(self, ct):
 		self.draw_background(ct)
-
-		ct.restore()
 		return False
+
+# vi:ex:ts=4:et

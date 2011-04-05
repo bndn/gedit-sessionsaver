@@ -20,13 +20,12 @@
 #  Boston, MA 02111-1307, USA.
 
 import os
-import gio
-import gedit
 import glob
 import sys
 import types
 import inspect
-import gio
+
+from gi.repository import Gio, Gedit
 
 import commander.commands as commands
 import commander.commands.completion
@@ -55,13 +54,13 @@ def __default__(filename, view):
 
     if matches:
         for match in matches:
-            files.append(gio.File(match))
+            files.append(Gio.File.new_for_path(match))
     else:
-        files.append(gio.File(filename))
+        files.append(Gio.File.new_for_path(filename))
 
     if files:
         window = view.get_toplevel()
-        gedit.commands.load_locations(window, files)
+        Gedit.commands_load_locations(window, files)
 
     return commander.commands.result.HIDE
 
@@ -92,7 +91,7 @@ def rename(view, newfile):
         raise commander.commands.exceptions.Execute('Current document file does not exist')
 
     if os.path.isabs(newfile):
-        dest = gio.File(newfile)
+        dest = Gio.File.new_for_path(newfile)
     else:
         dest = f.get_parent().resolve_relative_path(newfile)
 
@@ -119,7 +118,7 @@ def rename(view, newfile):
             yield commander.commands.result.HIDE
 
     try:
-        f.move(dest, _dummy_cb, flags=gio.FILE_COPY_OVERWRITE)
+        f.move(dest, _dummy_cb, flags=Gio.FileCopyFlags.OVERWRITE)
 
         doc.set_location(dest)
         yield commander.commands.result.HIDE
@@ -134,12 +133,12 @@ def _mod_has_alias(mod, alias):
 
 def _edit_command(view, mod, func=None):
     try:
-        location = gio.File(inspect.getsourcefile(mod))
+        location = Gio.File.new_for_path(inspect.getsourcefile(mod))
     except:
         return False
 
     if not func:
-        gedit.commands.load_location(view.get_toplevel(), location)
+        Gedit.commands_load_location(view.get_toplevel(), location)
     else:
         try:
             lines = inspect.getsourcelines(func)
@@ -147,7 +146,7 @@ def _edit_command(view, mod, func=None):
         except:
             line = 0
 
-        gedit.commands.load_location(view.get_toplevel(), location, None, line)
+        Gedit.commands_load_location(view.get_toplevel(), location, None, line)
 
     return True
 
@@ -206,7 +205,7 @@ Use this to apply the cool new feature\"\"\"
 def new_command(view, entry, name):
     """Create a new commander command module: edit.new-command &lt;command&gt;"""
 
-    filename = os.path.expanduser('~/.gnome2/gedit/commander/modules/' + name + '.py')
+    filename = os.path.join(glib.get_user_config_dir(), 'gedit/commander/modules/' + name + '.py')
 
     if os.path.isfile(filename):
         raise commander.commands.exceptions.Execute('Commander module `' + name + '\' already exists')
@@ -224,13 +223,13 @@ def new_command(view, entry, name):
 
 def save(view):
     window = view.get_toplevel()
-    gedit.commands.save_document(window, view.get_buffer())
+    Gedit.commands_save_document(window, view.get_buffer())
 
     return commander.commands.result.HIDE
 
 def save_all(view):
     window = view.get_toplevel()
-    gedit.commands.save_all_documents(window)
+    Gedit.commands_save_all_documents(window)
 
     return commander.commands.result.HIDE
 

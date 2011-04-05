@@ -53,5 +53,3 @@ class RollbackImporter:
 
 		self._new_modules = []
 
-
-

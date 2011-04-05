@@ -19,8 +19,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gedit
-import gtk
+from gi.repository import GObject, Gtk, Gedit
 from entry import Entry
 from info import Info
 from gpdefs import *
@@ -43,42 +42,46 @@ ui_str = """
 </ui>
 """
 
-class WindowHelper:
-	def __init__(self, plugin, window):
-		self._window = window
-		self._plugin = plugin
+class WindowActivatable(GObject.Object, Gedit.WindowActivatable):
+	__gtype_name__ = "CommanderWindowActivatable"
+
+	window = GObject.property(type=Gedit.Window)
+
+	def __init__(self):
+		GObject.Object.__init__(self)
+
+	def do_activate(self):
 		self._entry = None
 		self._view = None
 
 		self.install_ui()
 
-	def install_ui(self):
-		manager = self._window.get_ui_manager()
+	def do_deactivate(self):
+		self.uninstall_ui()
 
-		self._action_group = gtk.ActionGroup("GeditCommanderPluginActions")
-		self._action_group.add_toggle_actions([('CommanderModeAction', None, _('Commander Mode'), '<Ctrl>period', _('Start commander mode'), self.on_commander_mode)])
+	def do_update_state(self):
+		pass
+
+	def install_ui(self):
+		manager = self.window.get_ui_manager()
+
+		self._action_group = Gtk.ActionGroup("GeditCommanderPluginActions")
+		self._action_group.add_toggle_actions([('CommanderModeAction', None,
+		                                       _('Commander Mode'), '<Ctrl>period',
+		                                       _('Start commander mode'), self.on_commander_mode)])
 
 		manager.insert_action_group(self._action_group, -1)
 		self._merge_id = manager.add_ui_from_string(ui_str)
 
 	def uninstall_ui(self):
-		manager = self._window.get_ui_manager()
+		manager = self.window.get_ui_manager()
 		manager.remove_ui(self._merge_id)
 		manager.remove_action_group(self._action_group)
 
 		manager.ensure_update()
 
-	def deactivate(self):
-		self.uninstall_ui()
-
-		self._window = None
-		self._plugin = None
-
-	def update_ui(self):
-		pass
-
-	def on_commander_mode(self, action):
-		view = self._window.get_active_view()
+	def on_commander_mode(self, action, user_data=None):
+		view = self.window.get_active_view()
 
 		if not view:
 			return False
@@ -96,6 +99,6 @@ class WindowHelper:
 
 		return True
 
-	def on_entry_destroy(self, widget):
+	def on_entry_destroy(self, widget, user_data=None):
 		self._entry = None
 		self._action_group.get_action('CommanderModeAction').set_active(False)

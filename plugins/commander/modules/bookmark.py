@@ -36,6 +36,7 @@ If installed and active, you can add/remove/toggle bookmarks using the
 commander."""
 
     check_bookmark_plugin(window)
+
     window.get_message_bus().send('/plugins/bookmarks', 'toggle', view=view)
 
 def add(view, window):
@@ -45,6 +46,7 @@ Add bookmark on the current line. If there already is a bookmark on the current
 line, nothing happens."""
 
     check_bookmark_plugin(window)
+
     window.get_message_bus().send('/plugins/bookmarks', 'add', view=view)
 
 def remove(view, window):
@@ -54,6 +56,7 @@ Remove bookmark from the current line. If there is no bookmark on the current
 line, nothing happens."""
 
     check_bookmark_plugin(window)
+
     window.get_message_bus().send('/plugins/bookmarks', 'remove', view=view)
 
 def toggle(view, window):
@@ -62,6 +65,7 @@ def toggle(view, window):
 Toggle bookmark on the current line."""
 
     check_bookmark_plugin(window)
+
     window.get_message_bus().send('/plugins/bookmarks', 'toggle', view=view)
 
 def next(view, window):

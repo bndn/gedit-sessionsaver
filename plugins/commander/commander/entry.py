@@ -19,7 +19,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-import gtk
+from gi.repository import GObject, Gdk, Gtk
 import cairo
 import glib
 import os
@@ -40,44 +40,54 @@ from info import Info
 from xml.sax import saxutils
 import traceback
 
-class Entry(gtk.EventBox):
+class Entry(Gtk.EventBox):
+	__gtype_name__ = "CommanderEntry"
+
 	def __init__(self, view):
-		gtk.EventBox.__init__(self)
+		Gtk.EventBox.__init__(self)
 		self._view = view
 
-		hbox = gtk.HBox(False, 3)
+		self.set_visible_window(False)
+
+		hbox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 3)
 		hbox.show()
 		hbox.set_border_width(3)
 
-		self._entry = gtk.Entry()
-		self._entry.modify_font(self._view.style.font_desc)
+		# context for the view
+		self._entry = Gtk.Entry()
 		self._entry.set_has_frame(False)
-		self._entry.set_name('command-bar')
-		self._entry.modify_text(gtk.STATE_NORMAL, self._view.style.text[gtk.STATE_NORMAL])
-		self._entry.set_app_paintable(True)
-
-		self._entry.connect('realize', self.on_realize)
-		self._entry.connect('expose-event', self.on_entry_expose)
-
+		self._entry.set_name('gedit-commander-entry')
 		self._entry.show()
 
-		self._prompt_label = gtk.Label('<b>&gt;&gt;&gt;</b>')
-		self._prompt_label.set_use_markup(True)
-		self._prompt_label.modify_font(self._view.style.font_desc)
-		self._prompt_label.show()
-		self._prompt_label.modify_fg(gtk.STATE_NORMAL, self._view.style.text[gtk.STATE_NORMAL])
+		css = Gtk.CssProvider()
+		css.load_from_data("""
+@binding-set terminal-like-bindings {
+	unbind "<Control>A";
 
-		self.modify_bg(gtk.STATE_NORMAL, self.background_gdk())
-		self._entry.modify_base(gtk.STATE_NORMAL, self.background_gdk())
+	bind "<Control>W" { "delete-from-cursor" (word-ends, -1) };
+	bind "<Control>A" { "move-cursor" (buffer-ends, -1, 0) };
+	bind "<Control>U" { "delete-from-cursor" (display-line-ends, -1) };
+	bind "<Control>K" { "delete-from-cursor" (display-line-ends, 1) };
+	bind "<Control>E" { "move-cursor" (buffer-ends, 1, 0) };
+	bind "Escape" { "delete-from-cursor" (display-lines, 1) };
+};
+
+GtkEntry#gedit-commander-entry {
+	gtk-key-bindings: terminal-like-bindings
+}
+""", -1)
+
+		# FIXME: remove hardcopy of 600 (GTK_STYLE_PROVIDER_PRIORITY_APPLICATION)
+		# https://bugzilla.gnome.org/show_bug.cgi?id=646860
+		self._entry.get_style_context().add_provider(css, 600)
+
+		self._prompt_label = Gtk.Label(label='<b>&gt;&gt;&gt;</b>', use_markup=True)
+		self._prompt_label.show()
 
 		self._entry.connect('focus-out-event', self.on_entry_focus_out)
 		self._entry.connect('key-press-event', self.on_entry_key_press)
 
-		self.connect_after('size-allocate', self.on_size_allocate)
-		self.connect_after('expose-event', self.on_expose)
-		self.connect_after('realize', self.on_realize)
-
-		self._history = History(os.path.expanduser('~/.gnome2/gedit/commander/history'))
+		self._history = History(os.path.join(glib.get_user_config_dir(), 'gedit/commander/history'))
 		self._prompt = None
 
 		self._accel_group = None
@@ -85,112 +95,114 @@ class Entry(gtk.EventBox):
 		hbox.pack_start(self._prompt_label, False, False, 0)
 		hbox.pack_start(self._entry, True, True, 0)
 
+		self.copy_style_from_view()
+		self.view_style_updated_id = self._view.connect('style-updated', self.on_view_style_updated)
+
 		self.add(hbox)
 		self.attach()
-
 		self._entry.grab_focus()
+
 		self._wait_timeout = 0
 		self._info_window = None
 
 		self.connect('destroy', self.on_destroy)
+		self.connect_after('size-allocate', self.on_size_allocate)
+		self.view_draw_id = self._view.connect_after('draw', self.on_draw)
 
 		self._history_prefix = None
 		self._suspended = None
 		self._handlers = [
-			[0, gtk.keysyms.Up, self.on_history_move, -1],
-			[0, gtk.keysyms.Down, self.on_history_move, 1],
-			[None, gtk.keysyms.Return, self.on_execute, None],
-			[None, gtk.keysyms.KP_Enter, self.on_execute, None],
-			[0, gtk.keysyms.Tab, self.on_complete, None],
-			[0, gtk.keysyms.ISO_Left_Tab, self.on_complete, None]
+			[0, Gdk.KEY_Up, self.on_history_move, -1],
+			[0, Gdk.KEY_Down, self.on_history_move, 1],
+			[None, Gdk.KEY_Return, self.on_execute, None],
+			[None, Gdk.KEY_KP_Enter, self.on_execute, None],
+			[0, Gdk.KEY_Tab, self.on_complete, None],
+			[0, Gdk.KEY_ISO_Left_Tab, self.on_complete, None]
 		]
 
 		self._re_complete = re.compile('("((?:\\\\"|[^"])*)"?|\'((?:\\\\\'|[^\'])*)\'?|[^\s]+)')
 		self._command_state = commands.Commands.State()
 
+	def on_view_style_updated(self, widget):
+		self.copy_style_from_view()
+
+	def get_border_color(self):
+		color = self.get_background_color().copy()
+		color.red = 1 - color.red
+		color.green = 1 - color.green
+		color.blue = 1 - color.blue
+		color.alpha = 0.5
+
+		return color
+
+	def get_background_color(self):
+		context = self._view.get_style_context()
+		return context.get_background_color(Gtk.StateFlags.NORMAL)
+	
+	def get_foreground_color(self):
+		context = self._view.get_style_context()
+		return context.get_color(Gtk.StateFlags.NORMAL)
+
+	def get_font(self):
+		context = self._view.get_style_context()
+		return context.get_font(Gtk.StateFlags.NORMAL)
+
+	def copy_style_from_view(self, widget=None):
+		if widget != None:
+			context = self._view.get_style_context()
+			font = context.get_font(Gtk.StateFlags.NORMAL)
+
+			widget.override_color(Gtk.StateFlags.NORMAL, self.get_foreground_color())
+			widget.override_background_color(Gtk.StateFlags.NORMAL, self.get_background_color())
+			widget.override_font(self.get_font())
+		else:
+			if self._entry:
+				self.copy_style_from_view(self._entry)
+
+			if self._prompt_label:
+				self.copy_style_from_view(self._prompt_label)
+
 	def view(self):
 		return self._view
 
-	def on_realize(self, widget):
-		widget.window.set_back_pixmap(None, False)
-
-	def on_entry_expose(self, widget, evnt):
-		ct = evnt.window.cairo_create()
-		ct.rectangle(evnt.area.x, evnt.area.y, evnt.area.width, evnt.area.height)
-
-		bg = self.background_color()
-		ct.set_source_rgb(bg[0], bg[1], bg[2])
-		ct.fill()
-
-		return False
-
-	def on_expose(self, widget, evnt):
-		ct = evnt.window.cairo_create()
-		color = self.background_color()
-
-		ct.rectangle(evnt.area.x, evnt.area.y, evnt.area.width, evnt.area.height)
-		ct.clip()
-
-		# Draw separator line
-		ct.move_to(0, 0)
-		ct.set_line_width(1)
-		ct.line_to(self.allocation.width, 0)
-
-		ct.set_source_rgb(1 - color[0], 1 - color[1], 1 - color[2])
-		ct.stroke()
-		return False
-
 	def on_size_allocate(self, widget, alloc):
-		vwwnd = self._view.get_window(gtk.TEXT_WINDOW_BOTTOM).get_parent()
-		size = vwwnd.get_size()
-		position = vwwnd.get_position()
+		alloc = self.get_allocation()
+		self._view.set_border_window_size(Gtk.TextWindowType.BOTTOM, alloc.height)
 
-		self._view.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, alloc.height)
+		# NOTE: we need to do this explicitly somehow, otherwise the window
+		# size will not be updated unless something else happens, not exactly
+		# sure what. This might be caused by the multi notebook, or custom
+		# animation layouting?
+		self._view.get_parent().resize_children()
 
 	def attach(self):
 		# Attach ourselves in the text view, and position just above the
 		# text window
-		self._view.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 1)
-		alloc = self._view.allocation
+		win = self._view.get_window(Gtk.TextWindowType.TEXT)
+		alloc = self.get_allocation()
+
+		self._view.set_border_window_size(Gtk.TextWindowType.BOTTOM, max(alloc.height, 1))
+		self._view.add_child_in_window(self, Gtk.TextWindowType.BOTTOM, 0, 0)
+
+		win = self._view.get_window(Gtk.TextWindowType.BOTTOM)
+
+		# Set same color as gutter, i.e. bg color of the view
+		context = self._view.get_style_context()
+		color = context.get_background_color(Gtk.StateFlags.NORMAL)
+		win.set_background_rgba(color)
 
 		self.show()
-		self._view.add_child_in_window(self, gtk.TEXT_WINDOW_BOTTOM, 0, 0)
-		self.set_size_request(alloc.width, -1)
-
-	def background_gdk(self):
-		bg = self.background_color()
-
-		bg = map(lambda x: int(x * 65535), bg)
-		return gtk.gdk.Color(bg[0], bg[1], bg[2])
-
-	def background_color(self):
-		bg = self._view.get_style().base[self._view.state]
-
-		vals = [bg.red, bg.green, bg.blue, 1]
-
-		for i in range(3):
-			val = vals[i] / 65535.0
-
-			if val < 0.0001:
-				vals[i] = 0.1
-			elif val > 0.9999:
-				vals[i] = 0.9
-			elif val < 0.1:
-				vals[i] = val * 1.2
-			else:
-				vals[i] = val * 0.8
-
-		return vals
+		self.set_size_request(win.get_width(), -1)
 
 	def on_entry_focus_out(self, widget, evnt):
-		if self._entry.flags() & gtk.SENSITIVE:
+		if self._entry.get_sensitive():
 			self.destroy()
 
 	def on_entry_key_press(self, widget, evnt):
-		state = evnt.state & gtk.accelerator_get_default_mod_mask()
+		state = evnt.state & Gtk.accelerator_get_default_mod_mask()
 		text = self._entry.get_text()
 
-		if evnt.keyval == gtk.keysyms.Escape:
+		if evnt.keyval == Gdk.KEY_Escape:
 			if self._info_window:
 				if self._suspended:
 					self._suspended.resume()
@@ -329,7 +341,7 @@ class Entry(gtk.EventBox):
 			self._entry.set_sensitive(True)
 
 	def _show_wait_cancel(self):
-		self._cancel_button = self.info_add_action(gtk.STOCK_STOP, self.on_wait_cancel)
+		self._cancel_button = self.info_add_action(Gtk.STOCK_STOP, self.on_wait_cancel)
 		self.info_status('<i>Waiting to finish...</i>')
 
 		self._wait_timeout = 0
@@ -342,7 +354,7 @@ class Entry(gtk.EventBox):
 
 	def on_suspend_resume(self):
 		if self._wait_timeout:
-			glib.source_remove(self._wait_timeout)
+			GObject.source_remove(self._wait_timeout)
 			self._wait_timeout = 0
 		else:
 			self._cancel_button.destroy()
@@ -366,7 +378,7 @@ class Entry(gtk.EventBox):
 
 	def destroy(self):
 		self.hide()
-		gtk.EventBox.destroy(self)
+		Gtk.EventBox.destroy(self)
 
 	def run_command(self, cb):
 		self._suspended = None
@@ -392,7 +404,7 @@ class Entry(gtk.EventBox):
 			self._suspended = ret
 			ret.register(self.on_suspend_resume)
 
-			self._wait_timeout = glib.timeout_add(500, self._show_wait_cancel)
+			self._wait_timeout = GObject.timeout_add(500, self._show_wait_cancel)
 			self._entry.set_sensitive(False)
 		else:
 			self.command_history_done()
@@ -604,47 +616,32 @@ class Entry(gtk.EventBox):
 
 		return True
 
+	def on_draw(self, widget, ct):
+		win = widget.get_window(Gtk.TextWindowType.BOTTOM)
+
+		if not Gtk.cairo_should_draw_window(ct, win):
+			return False
+
+		Gtk.cairo_transform_to_window(ct, widget, win)
+
+		color = self.get_border_color()
+		width = win.get_width()
+
+		ct.set_source_rgba(color.red, color.green, color.blue, color.alpha)
+		ct.move_to(0, 0)
+		ct.line_to(width, 0)
+		ct.stroke()
+
+		return False
+
 	def on_destroy(self, widget):
-		self._view.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 0)
+		self._view.set_border_window_size(Gtk.TextWindowType.BOTTOM, 0)
+		self._view.disconnect(self.view_style_updated_id)
+		self._view.disconnect(self.view_draw_id)
 
 		if self._info_window:
 			self._info_window.destroy()
 
 		self._history.save()
 
-gtk.rc_parse_string("""
-binding "TerminalLike" {
-	unbind "<Control>A"
-
-	bind "<Control>W" {
-		"delete-from-cursor" (word-ends, -1)
-	}
-	bind "<Control>A" {
-		"move-cursor" (buffer-ends, -1, 0)
-	}
-	bind "<Control>U" {
-		"delete-from-cursor" (display-line-ends, -1)
-	}
-	bind "<Control>K" {
-		"delete-from-cursor" (display-line-ends, 1)
-	}
-	bind "<Control>E" {
-		"move-cursor" (buffer-ends, 1, 0)
-	}
-	bind "Escape" {
-		"delete-from-cursor" (display-lines, 1)
-	}
-}
-
-style "NoBackground" {
-	engine "pixmap" {
-		image {
-			function = FLAT_BOX
-			detail = "entry_bg"
-		}
-	}
-}
-
-widget "*.command-bar" binding "TerminalLike"
-widget "*.command-bar" style "NoBackground"
-""")
+# vi:ex:ts=4:et

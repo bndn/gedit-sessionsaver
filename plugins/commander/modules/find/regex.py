@@ -22,7 +22,6 @@
 import commander.commands as commands
 import finder
 
-import gedit
 import re
 
 __commander_module__ = True

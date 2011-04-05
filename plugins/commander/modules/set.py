@@ -23,7 +23,7 @@ import commander.commands as commands
 import commander.commands.exceptions
 
 import types
-import gtksourceview2 as gsv
+from gi.repository import GtkSource
 
 __commander_module__ = True
 
@@ -40,7 +40,7 @@ def _complete_options(words, idx):
     return commands.completion.words(ret)(words, idx)
 
 def _complete_language(words, idx):
-    manager = gsv.language_manager_get_default()
+    manager = GtkSource.LanguageManager.get_default()
     ids = manager.get_language_ids()
     ids.append('none')
     ids.sort()
@@ -92,7 +92,7 @@ Set the document language to the language with the specified id"""
         view.get_buffer().set_language(None)
         return False
 
-    manager = gsv.language_manager_get_default()
+    manager = GtkSource.LanguageManager.get_default()
     lang = manager.get_language(language)
 
     if lang:
@@ -138,11 +138,11 @@ Set what kind of spaces should be drawn. Multiple options can be defined, e.g.
 for drawing spaces and tabs: <i>set.draw-spaces space tab</i>"""
     m = {
         'none': 0,
-        'all': gsv.DRAW_SPACES_ALL,
-        'tabs': gsv.DRAW_SPACES_TAB,
-        'newlines': gsv.DRAW_SPACES_NEWLINE,
-        'nbsp': gsv.DRAW_SPACES_NBSP,
-        'spaces': gsv.DRAW_SPACES_SPACE
+        'all': GtkSource.DrawSpacesFlags.ALL,
+        'tabs': GtkSource.DrawSpacesFlags.TAB,
+        'newlines': GtkSource.DrawSpacesFlags.NEWLINE,
+        'nbsp': GtkSource.DrawSpacesFlags.NBSP,
+        'spaces': GtkSource.DrawSpacesFlags.SPACE
     }
 
     flags = 0

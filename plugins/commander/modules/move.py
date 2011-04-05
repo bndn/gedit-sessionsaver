@@ -20,7 +20,7 @@
 #  Boston, MA 02111-1307, USA.
 
 import commander.commands as commands
-import gtk
+from gi.repository import Gdk, Gtk
 import re
 
 __commander_module__ = True
@@ -31,32 +31,32 @@ def _move(view, what, num, modifier):
     except:
         raise commands.exceptions.Execute('Invalid number: ' + str(num))
 
-    view.emit('move-cursor', what, num, modifier & gtk.gdk.CONTROL_MASK)
+    view.emit('move-cursor', what, num, modifier & Gdk.EventMask.CONTROL_MASK)
     return commands.result.HIDE
 
 def word(view, modifier, num=1):
     """Move cursor per word: move.word &lt;num&gt;
 
 Move the cursor per word (use negative num to move backwards)"""
-    return _move(view, gtk.MOVEMENT_WORDS, num, modifier)
+    return _move(view, Gtk.MovementStep.WORDS, num, modifier)
 
 def line(view, modifier, num=1):
     """Move cursor per line: move.line &lt;num&gt;
 
 Move the cursor per line (use negative num to move backwards)"""
-    return _move(view, gtk.MOVEMENT_DISPLAY_LINES, num, modifier)
+    return _move(view, Gtk.MovementStep.DISPLAY_LINES, num, modifier)
 
 def char(view, modifier, num=1):
     """Move cursor per char: move.char &lt;num&gt;
 
 Move the cursor per char (use negative num to move backwards)"""
-    return _move(view, gtk.MOVEMENT_VISUAL_POSITIONS, num, modifier)
+    return _move(view, Gtk.MovementStep.VISUAL_POSITIONS, num, modifier)
 
 def paragraph(view, modifier, num=1):
     """Move cursor per paragraph: move.paragraph &lt;num&gt;
 
 Move the cursor per paragraph (use negative num to move backwards)"""
-    return _move(view, gtk.MOVEMENT_PARAGRAPHS, num, modifier)
+    return _move(view, Gtk.MovementStep.PARAGRAPHS, num, modifier)
 
 def regex(view, modifier, regex, num=1):
     """Move cursor per regex: move.regex &lt;num&gt;
@@ -98,7 +98,7 @@ Move the cursor per regex (use negative num to move backwards)"""
         else:
             start.forward_chars(found.start(0))
 
-        if modifier & gtk.gdk.CONTROL_MASK:
+        if modifier & Gdk.EventMask.CONTROL_MASK:
             buf.move_mark(buf.get_selection_bound(), start)
         else:
             buf.move_mark(buf.get_insert(), start)

@@ -20,28 +20,35 @@
 #  Boston, MA 02111-1307, USA.
 
 from transparentwindow import TransparentWindow
-import gtk
+from gi.repository import Pango, Gdk, Gtk
 import math
-import pango
 
 class Info(TransparentWindow):
+	__gtype_name__ = "CommanderInfo"
+
 	def __init__(self, entry):
-		TransparentWindow.__init__(self, gtk.WINDOW_POPUP)
+		super(Info, self).__init__(Gtk.WindowType.POPUP)
 
 		self._entry = entry
-		self._vbox = gtk.VBox(False, 3)
+		self._vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=3)
 
 		self.set_transient_for(entry.get_toplevel())
 
-		self._vw = gtk.ScrolledWindow()
-		self._vw.set_policy(gtk.POLICY_NEVER, gtk.POLICY_NEVER)
+		self._vw = Gtk.ScrolledWindow()
+		self._vw.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.NEVER)
 		self._vw.show()
 
-		self._text = gtk.TextView()
-		self._text.modify_font(entry._view.style.font_desc)
-		self._text.modify_text(gtk.STATE_NORMAL, entry._entry.style.text[gtk.STATE_NORMAL])
-		self._text.connect('expose-event', self.on_text_expose)
-		self._text.set_wrap_mode(gtk.WRAP_WORD_CHAR)
+		self._text = Gtk.TextView()
+
+		font = self._entry.get_font()
+		fgcolor = self._entry.get_foreground_color()
+		bgcolor = self.background_color()
+
+		self._text.override_font(font)
+		self._text.override_color(Gtk.StateFlags.NORMAL, fgcolor)
+		self._text.override_background_color(Gtk.StateFlags.NORMAL, bgcolor)
+
+		self._text.set_wrap_mode(Gtk.WrapMode.WORD_CHAR)
 
 		buf = self._text.get_buffer()
 
@@ -51,7 +58,7 @@ class Info(TransparentWindow):
 		self._text.set_editable(False)
 
 		self._vw.add(self._text)
-		self._vbox.pack_end(self._vw, expand=False, fill=False)
+		self._vbox.pack_end(self._vw, False, False, 0)
 		self._vbox.show()
 		self._button_bar = None
 
@@ -62,28 +69,26 @@ class Info(TransparentWindow):
 		self.props.can_focus = False
 		self.set_border_width(8)
 
-		self._text.connect('realize', self.on_text_realize)
-
 		self.attach()
 		self.show()
 
-		self.connect_after('size-allocate', self.on_size_allocate)
-		self._vw.connect_after('size-allocate', self.on_text_size_allocate)
-
 		self.max_lines = 10
 
+		self.connect_after('size-allocate', self.on_size_allocate)
+		self.connect_after('draw', self.on_draw)
+
 		self._attr_map = {
-			pango.ATTR_STYLE: 'style',
-			pango.ATTR_WEIGHT: 'weight',
-			pango.ATTR_VARIANT: 'variant',
-			pango.ATTR_STRETCH: 'stretch',
-			pango.ATTR_SIZE: 'size',
-			pango.ATTR_FOREGROUND: 'foreground',
-			pango.ATTR_BACKGROUND: 'background',
-			pango.ATTR_UNDERLINE: 'underline',
-			pango.ATTR_STRIKETHROUGH: 'strikethrough',
-			pango.ATTR_RISE: 'rise',
-			pango.ATTR_SCALE: 'scale'
+			Pango.AttrType.STYLE: 'style',
+			Pango.AttrType.WEIGHT: 'weight',
+			Pango.AttrType.VARIANT: 'variant',
+			Pango.AttrType.STRETCH: 'stretch',
+			Pango.AttrType.SIZE: 'size',
+			Pango.AttrType.FOREGROUND: 'foreground',
+			Pango.AttrType.BACKGROUND: 'background',
+			Pango.AttrType.UNDERLINE: 'underline',
+			Pango.AttrType.STRIKETHROUGH: 'strikethrough',
+			Pango.AttrType.RISE: 'rise',
+			Pango.AttrType.SCALE: 'scale'
 		}
 
 	def empty(self):
@@ -92,9 +97,15 @@ class Info(TransparentWindow):
 
 	def status(self, text=None):
 		if self._status_label == None and text != None:
-			self._status_label = gtk.Label('')
-			self._status_label.modify_font(self._text.style.font_desc)
-			self._status_label.modify_fg(gtk.STATE_NORMAL, self._text.style.text[gtk.STATE_NORMAL])
+			self._status_label = Gtk.Label()
+
+			context = self._text.get_style_context()
+			state = context.get_state()
+			font_desc = context.get_font(state)
+
+			self._status_label.override_font(font_desc)
+
+			self._status_label.override_color(Gtk.StateFlags.NORMAL, context.get_color(Gtk.StateFlags.NORMAL))
 			self._status_label.show()
 			self._status_label.set_alignment(0, 0.5)
 			self._status_label.set_padding(10, 0)
@@ -120,7 +131,7 @@ class Info(TransparentWindow):
 			if not attr.type in self._attr_map:
 				continue
 
-			if attr.type == pango.ATTR_FOREGROUND or attr.type == pango.ATTR_BACKGROUND:
+			if attr.type == Pango.AttrType.FOREGROUND or attr.type == Pango.AttrType.BACKGROUND:
 				value = attr.color
 			else:
 				value = attr.value
@@ -148,14 +159,19 @@ class Info(TransparentWindow):
 			return
 
 		try:
-			ret = pango.parse_markup(line)
+			ret = Pango.parse_markup(line, -1, u'\x00')
 		except Exception, e:
 			print 'Could not parse markup:', e
 			buf.insert(buf.get_end_iter(), line)
 			return
 
-		piter = ret[0].get_iterator()
-		text = ret[1]
+		# TODO: fix this when pango supports get_iterator
+		text = ret[2]
+		buf.insert(buf.get_end_iter(), text)
+
+		return
+
+		piter = ret[1].get_iterator()
 
 		while piter:
 			attrs = piter.get_attrs()
@@ -183,16 +199,16 @@ class Info(TransparentWindow):
 	def contents_changed(self):
 		buf = self._text.get_buffer()
 
-		if self.toomany_lines() and (self._vw.get_policy()[1] != gtk.POLICY_ALWAYS):
-			self._vw.set_policy(gtk.POLICY_NEVER, gtk.POLICY_ALWAYS)
+		if self.toomany_lines() and (self._vw.get_policy()[1] != Gtk.PolicyType.ALWAYS):
+			self._vw.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.ALWAYS)
 
 			layout = self._text.create_pango_layout('Some text to measure')
 			extents = layout.get_pixel_extents()
 
-			self._text.set_size_request(-1, extents[1][3] * self.max_lines)
-		elif not self.toomany_lines() and (self._vw.get_policy()[1] == gtk.POLICY_ALWAYS):
-			self._vw.set_policy(gtk.POLICY_NEVER, gtk.POLICY_NEVER)
-			self._text.set_size_request(-1, -1)
+			self._vw.set_min_content_height(extents[1].height * self.max_lines)
+		elif not self.toomany_lines() and (self._vw.get_policy()[1] == Gtk.PolicyType.ALWAYS):
+			self._vw.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.NEVER)
+			self._vw.set_min_content_height(0)
 
 		if not self.toomany_lines():
 			size = self.get_size()
@@ -200,19 +216,19 @@ class Info(TransparentWindow):
 
 	def ensure_button_bar(self):
 		if not self._button_bar:
-			self._button_bar = gtk.HBox(False, 3)
+			self._button_bar = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=3)
 			self._button_bar.show()
 			self._vbox.pack_start(self._button_bar, False, False, 0)
 
 	def add_action(self, stock, callback, data=None):
-		image = gtk.image_new_from_stock(stock, gtk.ICON_SIZE_MENU)
+		image = Gtk.Image.new_from_stock(stock, Gtk.IconSize.MENU)
 		image.show()
 
-		image.set_data('COMMANDER_ACTION_STOCK_ITEM', [stock, gtk.ICON_SIZE_MENU])
+		image.set_data('COMMANDER_ACTION_STOCK_ITEM', [stock, Gtk.IconSize.MENU])
 
 		self.ensure_button_bar()
 
-		ev = gtk.EventBox()
+		ev = Gtk.EventBox()
 		ev.set_visible_window(False)
 		ev.add(image)
 		ev.show()
@@ -233,8 +249,8 @@ class Info(TransparentWindow):
 
 	def on_action_enter_notify(self, widget, evnt):
 		img = widget.get_child()
-		img.set_state(gtk.STATE_PRELIGHT)
-		widget.window.set_cursor(gtk.gdk.Cursor(gtk.gdk.HAND2))
+		img.set_state(Gtk.StateType.PRELIGHT)
+		widget.get_window().set_cursor(Gdk.Cursor.new(Gdk.HAND2))
 
 		stock = img.get_data('COMMANDER_ACTION_STOCK_ITEM')
 		pix = img.render_icon(stock[0], stock[1])
@@ -242,8 +258,8 @@ class Info(TransparentWindow):
 
 	def on_action_leave_notify(self, widget, evnt):
 		img = widget.get_child()
-		img.set_state(gtk.STATE_NORMAL)
-		widget.window.set_cursor(None)
+		img.set_state(Gtk.StateType.NORMAL)
+		widget.get_window().set_cursor(None)
 
 		stock = img.get_data('COMMANDER_ACTION_STOCK_ITEM')
 		pix = img.render_icon(stock[0], stock[1])
@@ -258,27 +274,8 @@ class Info(TransparentWindow):
 	def clear(self):
 		self._text.get_buffer().set_text('')
 
-	def on_text_expose(self, widget, evnt):
-		if evnt.window != widget.get_window(gtk.TEXT_WINDOW_TEXT):
-			return False
-
-		ct = evnt.window.cairo_create()
-		ct.save()
-
-		area = evnt.area
-		ct.rectangle(area.x, area.y, area.width, area.height)
-		ct.clip()
-
-		self.draw_background(ct, self._text, False)
-
-		ct.restore()
-		return False
-
-	def on_text_realize(self, widget):
-		self._text.get_window(gtk.TEXT_WINDOW_TEXT).set_back_pixmap(None, False)
-
 	def attach(self):
-		vwwnd = self._entry._view.get_window(gtk.TEXT_WINDOW_TEXT)
+		vwwnd = self._entry._view.get_window(Gtk.TextWindowType.TEXT)
 		origin = vwwnd.get_origin()
 		geom = vwwnd.get_geometry()
 
@@ -286,8 +283,10 @@ class Info(TransparentWindow):
 
 		self.realize()
 
-		self.move(origin[0], origin[1] + geom[3] - self.allocation.height)
-		self.resize(geom[2] - margin * 2, self.allocation.height)
+		alloc = self.get_allocation()
+
+		self.move(origin[1], origin[2] + geom[3] - alloc.height)
+		self.resize(geom[2] - margin * 2, alloc.height)
 
 	def on_text_insert_text(self, buf, piter, text, length):
 		self.contents_changed()
@@ -296,38 +295,27 @@ class Info(TransparentWindow):
 		self.contents_changed()
 
 	def on_size_allocate(self, widget, allocation):
-		vwwnd = self._entry._view.get_window(gtk.TEXT_WINDOW_TEXT)
+		vwwnd = self._entry.view().get_window(Gtk.TextWindowType.TEXT)
 		origin = vwwnd.get_origin()
 		geom = vwwnd.get_geometry()
 
-		self.move(origin[0] + (geom[2] - self.allocation.width) / 2, origin[1] + geom[3] - self.allocation.height)
+		alloc = self.get_allocation()
 
-	def on_expose(self, widget, evnt):
-		ret = TransparentWindow.on_expose(self, widget, evnt)
+		self.move(origin[1] + (geom[2] - alloc.width) / 2, origin[2] + geom[3] - alloc.height)
 
-		if ret:
-			return True
+	def on_draw(self, widget, ct):
+		color = self._entry.get_border_color()
 
-		ct = evnt.window.cairo_create()
-		ct.save()
+		self.background_shape(ct, self.get_allocation())
 
-		area = evnt.area
-		ct.rectangle(area.x, area.y, area.width, area.height)
-		ct.clip()
-
-		color = self.background_color()
-
-		self.background_shape(ct)
-
-		ct.set_source_rgba(1 - color[0], 1 - color[1], 1 - color[2], 0.3)
+		ct.set_source_rgba(color.red, color.green, color.blue, color.alpha)
 		ct.stroke()
 
-		ct.restore()
 		return False
 
-	def background_shape(self, ct):
-		w = self.allocation.width
-		h = self.allocation.height
+	def background_shape(self, ct, alloc):
+		w = alloc.width
+		h = alloc.height
 
 		ct.set_line_width(1)
 		radius = 10
@@ -335,8 +323,8 @@ class Info(TransparentWindow):
 		ct.move_to(0.5, h)
 
 		if self.is_composited():
-			ct.arc(radius + 0.5, radius, radius, math.pi, math.pi * 1.5)
-			ct.arc(w - radius - 0.5, radius, radius, math.pi * 1.5, math.pi * 2)
+			ct.arc(radius + 0.5, radius + 0.5, radius, math.pi, math.pi * 1.5)
+			ct.arc(w - radius - 0.5, radius + 0.5, radius, math.pi * 1.5, math.pi * 2)
 		else:
 			ct.line_to(0.5, 0)
 			ct.line_to(w - 0.5, 0)
@@ -344,8 +332,12 @@ class Info(TransparentWindow):
 		ct.line_to(w - 0.5, h)
 
 	def background_color(self):
-		return self._entry.background_color()
+		color = self._entry.get_background_color().copy()
+		color.alpha = 0.9
+
+		return color
 
 	def on_text_size_allocate(self, widget, alloc):
 		pass
 
+# vi:ex:ts=4:et
