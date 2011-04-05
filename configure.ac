@@ -2,9 +2,9 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.63])
  
-m4_define(gedit_plugins_major_version,  2)
-m4_define(gedit_plugins_minor_version, 91)
-m4_define(gedit_plugins_micro_version,  3)
+m4_define(gedit_plugins_major_version,  3)
+m4_define(gedit_plugins_minor_version,  0)
+m4_define(gedit_plugins_micro_version,  0)
 m4_define(gedit_plugins_version, gedit_plugins_major_version.gedit_plugins_minor_version.gedit_plugins_micro_version)
 
 AC_INIT([gedit-plugins],
