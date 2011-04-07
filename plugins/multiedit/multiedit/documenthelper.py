@@ -1309,57 +1309,51 @@ class DocumentHelper(Signals):
         tooltip.set_custom(table)
         return True
 
-    def _background_color(self):
+    def get_border_color(self):
         context = self._view.get_style_context()
-        col = context.get_background_color(context.get_state())
-        if col.green > 0.8:
-            col.green -= 0.2
-        else:
-            col.green += 0.2
+        color = context.get_background_color(Gtk.StateFlags.NORMAL).copy()
 
-        return col
+        color.red = 1 - color.red
+        color.green = 1 - color.green
+        color.blue = 1 - color.blue
+        color.alpha = 0.5
+
+        return color
 
     def on_view_draw(self, view, cr):
         window = view.get_window(Gtk.TextWindowType.TEXT)
+
         if Gtk.cairo_should_draw_window (cr, window):
             return self._draw_column_mode(cr)
 
         window = view.get_window(Gtk.TextWindowType.TOP)
+
         if window is None or not Gtk.cairo_should_draw_window (cr, window):
             return False
 
         if not self._in_mode:
             return False
 
-        col = self._background_color()
-
-        Gdk.cairo_set_source_rgba(cr, col)
-        cr.fill_preserve()
-
         layout = view.create_pango_layout(_('Multi Edit Mode'))
-
-        layout.set_font_description(Pango.FontDescription('Sans 10'))
         extents = layout.get_pixel_extents()
 
         w = window.get_width()
         h = window.get_height()
 
-        Gtk.cairo_transform_to_window (cr, view, window)
+        Gtk.cairo_transform_to_window(cr, view, window)
 
         cr.translate(0.5, 0.5)
         cr.set_line_width(1)
 
-        context = view.get_style_context()
-        col = context.get_color(context.get_state())
-        col.alpha = 0.6
+        col = self.get_border_color()
         Gdk.cairo_set_source_rgba(cr, col)
 
         cr.move_to(0, h - 1)
         cr.rel_line_to(w, 0)
         cr.stroke()
 
-        col.alpha = 1.0
-        Gdk.cairo_set_source_rgba(cr, col)
+        context = self._view.get_style_context()
+        Gdk.cairo_set_source_rgba(cr, context.get_color(Gtk.StateFlags.NORMAL))
         cr.move_to(w - extents[1].width - 3, (h - extents[1].height) / 2)
         PangoCairo.show_layout(cr, layout)
 
