@@ -79,12 +79,12 @@ class GeditTerminal(Gtk.Box):
             'copy-clipboard': [Gdk.KEY_C, Gdk.ModifierType.CONTROL_MASK | Gdk.ModifierType.SHIFT_MASK, self.copy_clipboard],
             'paste-clipboard': [Gdk.KEY_V, Gdk.ModifierType.CONTROL_MASK | Gdk.ModifierType.SHIFT_MASK, self.paste_clipboard]
         }
-
+        
         for name in self._accels:
             path = self._accel_base + '/' + name
             accel = Gtk.AccelMap.lookup_entry(path)
 
-            if accel == None:
+            if not accel[0]:
                  Gtk.AccelMap.add_entry(path, self._accels[name][0], self._accels[name][1])
 
         self._vte.fork_command_full(Vte.PtyFlags.DEFAULT, None, [Vte.get_user_shell()], None, GLib.SpawnFlags.SEARCH_PATH, None, None)
@@ -178,7 +178,7 @@ class GeditTerminal(Gtk.Box):
             path = self._accel_base + '/' + name
             entry = Gtk.AccelMap.lookup_entry(path)
 
-            if entry and entry[0] == event.keyval and entry[1] == modifiers:
+            if entry and entry[0] and entry[1].accel_key == event.keyval and entry[1].accel_mods == modifiers:
                 self._accels[name][2]()
                 return True
 
@@ -187,22 +187,24 @@ class GeditTerminal(Gtk.Box):
     def on_vte_button_press(self, term, event):
         if event.button == 3:
             self._vte.grab_focus()
-            self.do_popup(event)
+            self.make_popup(event)
             return True
 
+        return False
+
     def on_vte_popup_menu(self, term):
-        self.do_popup()
+        self.make_popup()
 
     def create_popup_menu(self):
         menu = Gtk.Menu()
 
-        item = Gtk.ImageMenuItem(Gtk.Stock.COPY)
+        item = Gtk.ImageMenuItem.new_from_stock(Gtk.STOCK_COPY, None)
         item.connect("activate", lambda menu_item: self.copy_clipboard())
         item.set_accel_path(self._accel_base + '/copy-clipboard')
         item.set_sensitive(self._vte.get_has_selection())
         menu.append(item)
 
-        item = Gtk.ImageMenuItem(Gtk.Stock.PASTE)
+        item = Gtk.ImageMenuItem.new_from_stock(Gtk.STOCK_PASTE, None)
         item.connect("activate", lambda menu_item: self.paste_clipboard())
         item.set_accel_path(self._accel_base + '/paste-clipboard')
         menu.append(item)
@@ -211,14 +213,16 @@ class GeditTerminal(Gtk.Box):
         menu.show_all()
         return menu
 
-    def do_popup(self, event = None):
+    def make_popup(self, event = None):
         menu = self.create_popup_menu()
+        menu.attach_to_widget(self, None)
 
         if event is not None:
-            menu.popup(None, None, None, event.button, event.time)
+            menu.popup(None, None, None, None, event.button, event.time)
         else:
             menu.popup(None, None,
                        lambda m: Gedit.utils_menu_position_under_widget(m, self),
+                       None,
                        0, Gtk.get_current_event_time())
             menu.select_first(False)
 
@@ -232,7 +236,7 @@ class GeditTerminal(Gtk.Box):
 
     def change_directory(self, path):
         path = path.replace('\\', '\\\\').replace('"', '\\"')
-        self._vte.feed_child('cd "%s"\n' % path)
+        self._vte.feed_child('cd "%s"\n' % path, -1)
         self._vte.grab_focus()
 
 class TerminalPlugin(GObject.Object, Gedit.WindowActivatable):
@@ -273,7 +277,7 @@ class TerminalPlugin(GObject.Object, Gedit.WindowActivatable):
     def on_panel_populate_popup(self, panel, menu):
         menu.prepend(Gtk.SeparatorMenuItem())
         path = self.get_active_document_directory()
-        item = Gtk.MenuItem(_("C_hange Directory"))
+        item = Gtk.MenuItem.new_with_mnemonic(_("C_hange Directory"))
         item.connect("activate", lambda menu_item: panel.change_directory(path))
         item.set_sensitive(path is not None)
         menu.prepend(item)
