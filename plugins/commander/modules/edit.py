@@ -54,9 +54,9 @@ def __default__(filename, view):
 
     if matches:
         for match in matches:
-            files.append(Gio.File.new_for_path(match))
+            files.append(Gio.file_new_for_path(match))
     else:
-        files.append(Gio.File.new_for_path(filename))
+        files.append(Gio.file_new_for_path(filename))
 
     if files:
         window = view.get_toplevel()
@@ -91,7 +91,7 @@ def rename(view, newfile):
         raise commander.commands.exceptions.Execute('Current document file does not exist')
 
     if os.path.isabs(newfile):
-        dest = Gio.File.new_for_path(newfile)
+        dest = Gio.file_new_for_path(newfile)
     else:
         dest = f.get_parent().resolve_relative_path(newfile)
 
@@ -133,7 +133,7 @@ def _mod_has_alias(mod, alias):
 
 def _edit_command(view, mod, func=None):
     try:
-        location = Gio.File.new_for_path(inspect.getsourcefile(mod))
+        location = Gio.file_new_for_path(inspect.getsourcefile(mod))
     except:
         return False
 
