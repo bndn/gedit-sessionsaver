@@ -905,6 +905,9 @@ class DocumentHelper(Signals):
                 if hasattr(start, 'assign'):
                     start.assign(piter)
                     end.assign(piter)
+                elif hasattr(Gedit, 'utils_text_iter_assign'):
+                    Gedit.utils_text_iter_assign(start, piter)
+                    Gedit.utils_text_iter_assign(end, piter)
             else:
                 self.remove_edit_points()
 
