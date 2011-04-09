@@ -169,6 +169,9 @@ GtkEntry#gedit-commander-entry {
 		alloc = self.get_allocation()
 		self._view.set_border_window_size(Gtk.TextWindowType.BOTTOM, alloc.height)
 
+		win = self._view.get_window(Gtk.TextWindowType.BOTTOM)
+		self.set_size_request(win.get_width(), -1)
+
 		# NOTE: we need to do this explicitly somehow, otherwise the window
 		# size will not be updated unless something else happens, not exactly
 		# sure what. This might be caused by the multi notebook, or custom
