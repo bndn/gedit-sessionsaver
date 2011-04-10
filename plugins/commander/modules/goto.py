@@ -56,7 +56,7 @@ def __default__(view, line, column=1):
     citer.forward_chars(column)
 
     buf.place_cursor(citer)
-    view.scroll_to_iter(citer, 0.0, True)
+    view.scroll_to_iter(citer, 0.0, True, 0, 0.5)
 
     return commander.commands.result.HIDE
 
