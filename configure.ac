@@ -178,12 +178,14 @@ disabled_plugins=
 # Plugin specific checks
 # ================================================================
 check_plugin_defined() {
-	if echo "$2" | egrep "\b($1)\b" > /dev/null;
-	then
-		return 1
-	else
-		return 0
-	fi
+	for p in $2
+	do
+		if test "$p" = "$1"
+		then
+			return 1
+		fi
+	done
+	return 0
 }
 
 plugin_defined() {
