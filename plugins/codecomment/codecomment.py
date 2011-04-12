@@ -114,7 +114,6 @@ class CodeCommentPlugin(GObject.Object, Gedit.WindowActivatable):
         return (None, None)
 
     def get_comment_tags(self, lang):
-        print lang
         if lang.get_id() in block_comment_languages:
             (s, e) = self.get_block_comment_tags(lang)
             if (s, e) == (None, None):
