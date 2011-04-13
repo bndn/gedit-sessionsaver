@@ -48,7 +48,7 @@ G_DEFINE_DYNAMIC_TYPE_EXTENDED (GeditWordCompletionPlugin,
 
 struct _GeditWordCompletionPluginPrivate
 {
-	GtkWindow *window;
+	GtkWidget *window;
 	GeditView *view;
 	GtkSourceCompletionProvider *provider;
 };
