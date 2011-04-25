@@ -1,5 +1,5 @@
 # gedit ja.po.
-# Copyright (C) 1999,2000,2002-2010 Free Software Foundation, Inc.
+# Copyright (C) 1999,2000,2002-2011 gedit-plugins' COPYRIGHT HOLDER
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999
 # Yuusuke Tahara <tahara@gnome.gr.jp>
 # Yukihiro Nakai <nakai@gnome.gr.jp>
@@ -9,19 +9,21 @@
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Hideki Yamane (Debian-JP) <henrich@debian.or.jp>, 2009.
 # Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2010.
+# Jiro Matsuzawa <matsuzawa.jr@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:11+0100\n"
-"PO-Revision-Date: 2010-10-04 20:59+0900\n"
-"Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&keywords=I18N+L10N&component=Plugins\n"
+"POT-Creation-Date: 2011-04-20 10:16+0000\n"
+"PO-Revision-Date: 2011-04-24 22:49+0900\n"
+"Last-Translator: Jiro Matsuzawa <matsuzawa.jr@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
@@ -30,33 +32,33 @@ msgstr "ブックマーク"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
 msgid "Easy document navigation with bookmarks"
-msgstr "ブックマークを使って簡単にドキュメントを閲覧できるようにします。"
+msgstr "ブックマークを使って簡単にドキュメントを閲覧できるようにします"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
 #, fuzzy
 msgid "Toggle Bookmark"
 msgstr "ブックマーク"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 #, fuzzy
 msgid "Toggle bookmark status of the current line"
 msgstr "このウィンドウでステータスバーの表示/非表示を切り替えます"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
 msgid "Goto Next Bookmark"
 msgstr "次のブックマーク"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
 #, fuzzy
 msgid "Goto the next bookmark"
 msgstr "次に表示した場所へ進みます"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:205
 #, fuzzy
 msgid "Goto Previous Bookmark"
 msgstr "前の場所へ戻ります"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:206
 #, fuzzy
 msgid "Goto the previous bookmark"
 msgstr "前のページに戻ります"
@@ -72,7 +74,7 @@ msgid "Bracket Completion"
 msgstr "バックアップコピーの拡張子"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:337
+#: ../plugins/charmap/charmap/__init__.py:51
 #, fuzzy
 msgid "Character Map"
 msgstr "エンコーディング"
@@ -81,6 +83,7 @@ msgstr "エンコーディング"
 msgid "Insert special characters just by clicking on them."
 msgstr "特殊な文字をクリックしながら挿入していきます。"
 
+#. ex:et:ts=4:
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
 #, fuzzy
 msgid "Code comment"
@@ -90,21 +93,21 @@ msgstr "<!--  --> (コメント) あるいは comment 要素"
 msgid "Comment out or uncomment a selected block of code."
 msgstr "選択した範囲をコメントアウトしたり解除します。"
 
-#: ../plugins/codecomment/codecomment.py:90
+#: ../plugins/codecomment/codecomment.py:88
 #, fuzzy
 msgid "Co_mment Code"
 msgstr "<!--  --> (コメント) あるいは comment 要素"
 
-#: ../plugins/codecomment/codecomment.py:92
+#: ../plugins/codecomment/codecomment.py:90
 #, fuzzy
 msgid "Comment the selected code"
 msgstr "選択したテキストを削除します"
 
-#: ../plugins/codecomment/codecomment.py:96
+#: ../plugins/codecomment/codecomment.py:94
 msgid "U_ncomment Code"
 msgstr "コメント・アウトの解除(_N)"
 
-#: ../plugins/codecomment/codecomment.py:98
+#: ../plugins/codecomment/codecomment.py:96
 #, fuzzy
 msgid "Uncomment the selected code"
 msgstr "選択したテキストを削除します"
@@ -119,20 +122,20 @@ msgstr "色のスキーム"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "色選択ダイアログから色を取得して 16進形式の文字列として挿入します。"
 
-#: ../plugins/colorpicker/colorpicker.py:77
+#: ../plugins/colorpicker/colorpicker.py:76
 msgid "Pick _Color..."
 msgstr "色の取得(_C)..."
 
-#: ../plugins/colorpicker/colorpicker.py:78
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick a color from a dialog"
 msgstr "色選択ダイアログからいろを取得します"
 
-#: ../plugins/colorpicker/colorpicker.py:188
+#: ../plugins/colorpicker/colorpicker.py:185
 #, fuzzy
 msgid "Pick Color"
 msgstr "link 属性 (未訪問のリンクの色)"
 
-#: ../plugins/colorpicker/colorpicker.py:195
+#: ../plugins/colorpicker/colorpicker.py:192
 msgid "_Insert"
 msgstr "挿入する(_I)"
 
@@ -149,56 +152,48 @@ msgstr "コマンドの色(_O):"
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
 msgid "Draw Spaces"
-msgstr "空白にする"
+msgstr "空白の表示"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
-msgstr "空白やタブ文字を描画します。"
+msgstr "空白やタブ文字を表示します"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
 msgid "Draw leading spaces"
-msgstr "ノーブレークスペース"
+msgstr "行頭のスペースを表示"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
-msgstr "改行を表示する"
+msgstr "改行を表示"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "ノーブレークスペース"
+msgstr "ノーブレークスペースを表示"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
 msgid "Draw spaces"
-msgstr "空白の挿入"
+msgstr "スペースを表示"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
-#, fuzzy
 msgid "Draw spaces in text"
-msgstr "空白の挿入"
+msgstr "テキスト中のスペースを表示"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
-msgstr "タブ文字を表示する"
+msgstr "タブを表示"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "末尾の空白を削除する"
+msgstr "行末のスペースを表示"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
 msgid "Show _White Space"
-msgstr "次のページに進みます"
+msgstr "空白を表示する(_W)"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "タブの代わりにスペースを挿入する(_S)"
+msgstr "空白やタブ文字を表示する"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
@@ -214,27 +209,27 @@ msgstr ""
 
 #: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
 msgid "Join several lines or split long ones"
-msgstr "複数の行と結合したり一行を分割したりします。"
+msgstr "複数の行と結合したり一行を分割したりします"
 
 #: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "行の結合・分割"
 
-#: ../plugins/joinlines/joinlines.py:56
+#: ../plugins/joinlines/joinlines.py:74
 #, fuzzy
 msgid "_Join Lines"
 msgstr "行"
 
-#: ../plugins/joinlines/joinlines.py:57
+#: ../plugins/joinlines/joinlines.py:75
 #, fuzzy
 msgid "Join the selected lines"
 msgstr "指定した行のインデントを解除します"
 
-#: ../plugins/joinlines/joinlines.py:59
+#: ../plugins/joinlines/joinlines.py:77
 msgid "_Split Lines"
 msgstr "行の分割(_S)"
 
-#: ../plugins/joinlines/joinlines.py:60
+#: ../plugins/joinlines/joinlines.py:78
 #, fuzzy
 msgid "Split the selected lines"
 msgstr "指定した行のインデントを解除します"
@@ -252,61 +247,56 @@ msgstr ""
 msgid "Added edit point..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:637
+#: ../plugins/multiedit/multiedit/documenthelper.py:643
 msgid "Column Mode..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:759
+#: ../plugins/multiedit/multiedit/documenthelper.py:757
 msgid "Removed edit point..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:922
+#: ../plugins/multiedit/multiedit/documenthelper.py:925
 msgid "Cancelled column mode..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+#: ../plugins/multiedit/multiedit/documenthelper.py:1297
 msgid "Enter column edit mode using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+#: ../plugins/multiedit/multiedit/documenthelper.py:1298
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+#: ../plugins/multiedit/multiedit/documenthelper.py:1299
 msgid "<b>Smart</b> column align mode using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+#: ../plugins/multiedit/multiedit/documenthelper.py:1300
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+#: ../plugins/multiedit/multiedit/documenthelper.py:1302
 msgid "Toggle edit point"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+#: ../plugins/multiedit/multiedit/documenthelper.py:1303
 msgid "Add edit point at beginning of line/selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+#: ../plugins/multiedit/multiedit/documenthelper.py:1304
 msgid "Add edit point at end of line/selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
 msgid "Align edit points"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+#: ../plugins/multiedit/multiedit/documenthelper.py:1306
 msgid "Align edit points with additional space"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1305
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
+#: ../plugins/multiedit/multiedit/documenthelper.py:1337
 msgid "Multi Edit Mode"
-msgstr ""
-
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
-msgid "Start multi edit mode"
 msgstr ""
 
 #. ex:ts=4:et:
@@ -319,35 +309,35 @@ msgstr ""
 msgid "Text Size"
 msgstr "タブのサイズ"
 
-#: ../plugins/sessionsaver/__init__.py:64
-msgid "Sa_ved sessions"
-msgstr "保存したセッション(_V)"
-
-#: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
-msgid "_Save current session"
-msgstr "現在の選択範囲を置き換える"
-
-#: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
-msgid "Save the current document list as a new session"
-msgstr "このドキュメントを新しいウィンドウへ移動します"
-
-#: ../plugins/sessionsaver/__init__.py:66
-msgid "_Manage saved sessions..."
-msgstr "セッションの管理(_M)..."
-
-#: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
-msgid "Open the saved session manager"
-msgstr "gedit のマニュアルを開きます"
-
-#: ../plugins/sessionsaver/__init__.py:106
+#: ../plugins/sessionsaver/__init__.py:84
 #, python-format
 msgid "Recover '%s' session"
 msgstr "'%s' というセッションに復帰します"
 
-#: ../plugins/sessionsaver/dialogs.py:167
+#: ../plugins/sessionsaver/__init__.py:103
+msgid "Sa_ved sessions"
+msgstr "保存したセッション(_V)"
+
+#: ../plugins/sessionsaver/__init__.py:105
+#, fuzzy
+msgid "_Save current session"
+msgstr "現在の選択範囲を置き換える"
+
+#: ../plugins/sessionsaver/__init__.py:106
+#, fuzzy
+msgid "Save the current document list as a new session"
+msgstr "このドキュメントを新しいウィンドウへ移動します"
+
+#: ../plugins/sessionsaver/__init__.py:108
+msgid "_Manage saved sessions..."
+msgstr "セッションの管理(_M)..."
+
+#: ../plugins/sessionsaver/__init__.py:109
+#, fuzzy
+msgid "Open the saved session manager"
+msgstr "gedit のマニュアルを開きます"
+
+#: ../plugins/sessionsaver/dialogs.py:173
 msgid "Session Name"
 msgstr "セッション名"
 
@@ -378,30 +368,175 @@ msgid "Forget you're not using tabulations."
 msgstr "作表を使っていないことを忘れて下さい。"
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Smart Spaces"
-msgstr "空白の挿入"
+msgstr "スマートスペース"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:1
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:2
+msgid "Characters that are considered \"part of a word\""
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:3
+msgid "Default color of terminal background"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:4
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:5
+msgid "Default color of text in the terminal"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:6
+msgid ""
+"Default color of text in the terminal, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:7
+#, fuzzy
+msgid "Font"
+msgstr "注釈"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:8
+msgid "If true, allow applications in the terminal to make text boldface."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:9
+msgid ""
+"If true, don't make a noise when applications send the escape sequence for "
+"the terminal bell."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:10
+msgid "If true, pressing a key jumps the scrollbar to the bottom."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:11
+msgid ""
+"If true, scrollback lines will never be discarded. The scrollback history is "
+"stored on disk temporarily, so this may cause the system to run out of disk "
+"space if there is a lot of output to the terminal."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:12
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:13
+msgid ""
+"If true, the theme color scheme used for text entry boxes will be used for "
+"the terminal, instead of colors provided by the user."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:14
+msgid ""
+"If true, whenever there's new output the terminal will scroll to the bottom."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:15
+msgid "Number of lines to keep in scrollback"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:16
+msgid ""
+"Number of scrollback lines to keep around. You can scroll back in the "
+"terminal by this number of lines; lines that don't fit in the scrollback are "
+"discarded. If scrollback-unlimited is true, this value is ignored."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:17
+msgid "Palette for terminal applications"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:18
+msgid ""
+"Terminals have a 16-color palette that applications inside the terminal can "
+"use. This is that palette, in the form of a colon-separated list of color "
+"names. Color names should be in hex format e.g. \"#FF00FF\""
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:19
+msgid "The cursor appearance"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:20
+msgid ""
+"The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
+"vertical line cursor, or \"underline\" to use an underline cursor."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:21
+msgid ""
+"The possible values are \"system\" to use the global cursor blinking "
+"settings, or \"on\" or \"off\" to set the mode explicitly."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:22
+msgid ""
+"When selecting text by word, sequences of these characters are considered "
+"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing "
+"a range) should be the first character given."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:23
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:24
+msgid "Whether to allow bold text"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:25
+msgid "Whether to blink the cursor"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:26
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:27
+msgid "Whether to scroll to the bottom when there's new output"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:28
+msgid "Whether to silence terminal bell"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:29
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:30
+msgid "Whether to use the system font"
+msgstr ""
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "ドキュメントのあるフォルダで端末を開きます"
+msgstr "ボトム・ペインに端末を配置します。"
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Embedded Terminal"
-msgstr "embed 要素 (埋め込みオブジェクト)"
+msgstr "組み込み端末"
 
-#: ../plugins/terminal/terminal.py:307
+#: ../plugins/terminal/terminal.py:258
 msgid "Terminal"
 msgstr "端末"
 
-#: ../plugins/terminal/terminal.py:329
-#, fuzzy
+#: ../plugins/terminal/terminal.py:280
 msgid "C_hange Directory"
-msgstr "変更先(_T):"
+msgstr "ディレクトリ変更(_H)"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:153
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:200
 #, fuzzy
 msgid "Document Words"
 msgstr "body 要素 (ドキュメントの本文)"
@@ -423,8 +558,8 @@ msgstr ""
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr ""
 
-#: ../plugins/synctex/synctex/synctex.py:280
-#: ../plugins/synctex/synctex/synctex.py:281
+#: ../plugins/synctex/synctex/synctex.py:289
+#: ../plugins/synctex/synctex/synctex.py:290
 #, fuzzy
 msgid "Forward Search"
 msgstr "rel 属性 (正方向リンクの関係性)"
