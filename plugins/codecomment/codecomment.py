@@ -195,7 +195,7 @@ class CodeCommentPlugin(GObject.Object, Gedit.WindowActivatable):
                     iter = document.get_iter_at_mark(dmark)
                     head_iter = iter.copy()
                     self.forward_tag(head_iter, end_tag)
-                    if get_tag_position_in_line(end_tag, head_iter, iter):
+                    if self.get_tag_position_in_line(end_tag, head_iter, iter):
                         document.delete(iter, head_iter)
                 document.delete_mark(dmark)
             iter = document.get_iter_at_mark(smark)
