@@ -21,7 +21,7 @@ AC_PREFIX_PROGRAM([gedit])
 AM_INIT_AUTOMAKE([1.11 tar-pax dist-xz no-dist-gzip])
 AM_MAINTAINER_MODE([enable])
 
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+AM_SILENT_RULES([yes])
 
 # Check for programs
 AC_PROG_CC
