@@ -141,7 +141,7 @@ class EvinceWindowProxy:
 ## It should be easy to adapt to other editors. 
 ##  evince_dbus  pdf_file  line_source input_file
 if __name__ == '__main__':
-    import dbus.mainloop.glib, gobject, glib, sys, os
+    import dbus.mainloop.glib, gobject, glib, sys, os, logging
 
     def print_usage():
         print '''
@@ -165,10 +165,20 @@ The usage is evince_dbus output_file line_number input_file from the directory o
         print_usage()
 
     dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
-    a = EvinceWindowProxy('file://' + path_output, True )
+    logger = logging.getLogger("evince_dbus")
+    logger.setLevel(logging.DEBUG)
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.DEBUG)
+
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+    ch.setFormatter(formatter)
+
+    logger.addHandler(ch)    
+    a = EvinceWindowProxy('file://' + path_output, True,logger=logger)
     
     def sync_view(ev_window, path_input, line_number):
-        ev_window.SyncView (path_input, (line_number, 1))
+        ev_window.SyncView (path_input, (line_number, 1),0)
 
     glib.timeout_add(400, sync_view, a, path_input, line_number)
     loop = gobject.MainLoop()
