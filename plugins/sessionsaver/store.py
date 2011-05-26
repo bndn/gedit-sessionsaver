@@ -111,8 +111,8 @@ class XMLSessionStore(SessionStore):
                      .replace('"', '&quot;')
 
     def _dump_session(self, session):
-        files = ''.join(['  <file path="%s"/>\n' % self._escape(filename)
-                            for filename in session.files])
+        files = ''.join(['  <file path="%s"/>\n' % self._escape(location.get_uri())
+                            for location in session.files])
         session_name = self._escape(session.name)
         return '<session name="%s">\n%s</session>\n' % (session_name, files)
 
@@ -140,7 +140,10 @@ class XMLSessionStore(SessionStore):
         parser.EndElementHandler = self._expat_end_handler
 
         self._current_session = None
-        parser.ParseFile(open(self.filename, 'rb'))
+        try:
+            parser.ParseFile(open(self.filename, 'rb'))
+        except:
+            return
         del self._current_session
 
     def _expat_start_handler(self, tag, attr):
