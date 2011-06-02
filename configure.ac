@@ -52,6 +52,9 @@ AM_CONDITIONAL(PLATFORM_WIN32, test "$platform_win32" = "yes")
 # ================================================================
 IT_PROG_INTLTOOL([0.40.0])
 
+AM_GNU_GETTEXT_VERSION([0.17])
+AM_GNU_GETTEXT([external])
+
 GETTEXT_PACKAGE=gedit-plugins
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
