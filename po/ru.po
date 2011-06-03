@@ -16,16 +16,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:12+0100\n"
-"PO-Revision-Date: 2010-03-15 20:29+0300\n"
-"Last-Translator: Alexander Saprykin <xelfium@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&keywords=I18N+L10N&component=Plugins\n"
+"POT-Creation-Date: 2011-06-02 09:04+0000\n"
+"PO-Revision-Date: 2011-06-03 16:33+0300\n"
+"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
@@ -34,84 +33,73 @@ msgstr "Закладки"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
 msgid "Easy document navigation with bookmarks"
-msgstr ""
+msgstr "Простое перемещение по документу с помощью закладок"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-#, fuzzy
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
 msgid "Toggle Bookmark"
-msgstr "Закладки"
-
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
-msgid "Toggle bookmark status of the current line"
-msgstr "Показать или скрыть строку состояния текущего окна"
+msgstr "Добавить/удалить закладку"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
-msgid "Goto Next Bookmark"
-msgstr ""
+msgid "Toggle bookmark status of the current line"
+msgstr "Добавить или удалить закладку в текущей строке"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
-msgid "Goto the next bookmark"
-msgstr "Перейти к следующему посещенному адресу"
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
+msgid "Goto Next Bookmark"
+msgstr "Перейти к следующей закладке"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
-msgid "Goto Previous Bookmark"
-msgstr "Перейти к предыдущему адресу"
+msgid "Goto the next bookmark"
+msgstr "Перейти к следующей закладке"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:205
+msgid "Goto Previous Bookmark"
+msgstr "Перейти к предыдущей закладке"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:206
 msgid "Goto the previous bookmark"
-msgstr "Показать предыдущую страницу"
+msgstr "Перейти к предыдущей закладке"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Automatically adds closing brackets."
-msgstr "Кодировки, определяемые автоматически"
+msgstr "Автоматически добавляет закрывающуюся скобку."
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Bracket Completion"
-msgstr "Соответствие скобок"
+msgstr "Дополнение скобок"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
+#: ../plugins/charmap/charmap/__init__.py:51
 msgid "Character Map"
-msgstr "Символов (без пробелов)"
+msgstr "Карта символов"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Вставка специальных символов по щелчку."
 
+#. ex:et:ts=4:
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "Комментарий"
+msgstr "Комментирование кода"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
 msgstr "Комментирование или раскомментирование выбранного блока кода."
 
-#: ../plugins/codecomment/codecomment.py:90
-#, fuzzy
+#: ../plugins/codecomment/codecomment.py:88
 msgid "Co_mment Code"
-msgstr "Комментарий"
+msgstr "_Комментировать код"
 
-#: ../plugins/codecomment/codecomment.py:92
-#, fuzzy
+#: ../plugins/codecomment/codecomment.py:90
 msgid "Comment the selected code"
-msgstr "Удалить выделенный текст"
+msgstr "Закомментировать выделенный код"
 
-#: ../plugins/codecomment/codecomment.py:96
+#: ../plugins/codecomment/codecomment.py:94
 msgid "U_ncomment Code"
 msgstr "Рас_комментировать код"
 
-#: ../plugins/codecomment/codecomment.py:98
-#, fuzzy
+#: ../plugins/codecomment/codecomment.py:96
 msgid "Uncomment the selected code"
-msgstr "Удалить выделенный текст"
+msgstr "Раскомментировать выделенный код"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
@@ -123,86 +111,77 @@ msgstr "Цветовая схема"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Выбор цвета и вставка его шестнадцатиричного представления."
 
-#: ../plugins/colorpicker/colorpicker.py:77
+#: ../plugins/colorpicker/colorpicker.py:76
 msgid "Pick _Color..."
 msgstr "Вставить _цвет..."
 
-#: ../plugins/colorpicker/colorpicker.py:78
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick a color from a dialog"
 msgstr "Выбрать цвет в диалоге"
 
-#: ../plugins/colorpicker/colorpicker.py:188
+#: ../plugins/colorpicker/colorpicker.py:185
 #, fuzzy
 msgid "Pick Color"
 msgstr "Цвет ссылки"
 
-#: ../plugins/colorpicker/colorpicker.py:195
+#: ../plugins/colorpicker/colorpicker.py:192
 msgid "_Insert"
 msgstr "Вст_авить символ"
 
 #. ex:ts=4:et:
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:1
 msgid "Command line interface for advanced editing"
-msgstr ""
+msgstr "Интерфейс командной строки для редактирования"
 
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Commander"
-msgstr "Цвет _команд:"
+msgstr "Командный интерпретатор"
 
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
 msgid "Draw Spaces"
-msgstr "Вставлять пробелы"
+msgstr "Отображение пробелов"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Показать пробелы и символы табуляции"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
 msgid "Draw leading spaces"
-msgstr "Неразрывный пробел"
+msgstr "Отображение предшествующих пробелов"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
 msgid "Draw new lines"
 msgstr "Показать переводы строки"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-#, fuzzy
 msgid "Draw non-breaking spaces"
-msgstr "Неразрывный пробел"
+msgstr "Отображение неразрывных пробелов"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
 msgid "Draw spaces"
-msgstr "Вставлять пробелы"
+msgstr "Отображение пробелов"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
-#, fuzzy
 msgid "Draw spaces in text"
-msgstr "Вставлять пробелы"
+msgstr "Отображение пробелов в тексте"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "Показать табуляцию"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "Удалить пробелы"
+msgstr "Отображение замыкающих пробелов"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
 msgid "Show _White Space"
-msgstr "Показать следующую страницу"
+msgstr "_Показывать пробелы"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "Вставлять про_белы вместо табуляций"
+msgstr "Показывать пробелы и отступы"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "Enabled"
@@ -224,24 +203,21 @@ msgstr "Объединение или разбивка длинных строк
 msgid "Join/Split Lines"
 msgstr "Объединение/разбивка строк"
 
-#: ../plugins/joinlines/joinlines.py:56
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:74
 msgid "_Join Lines"
-msgstr "Строк"
+msgstr "_Объединить строки"
 
-#: ../plugins/joinlines/joinlines.py:57
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:75
 msgid "Join the selected lines"
-msgstr "Цвет выбранных ссылок"
+msgstr "Объединить выделенные строки"
 
-#: ../plugins/joinlines/joinlines.py:59
+#: ../plugins/joinlines/joinlines.py:77
 msgid "_Split Lines"
 msgstr "Ра_збить строки"
 
-#: ../plugins/joinlines/joinlines.py:60
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:78
 msgid "Split the selected lines"
-msgstr "Удалить выделенный текст"
+msgstr "Разбить выделенные строки"
 
 #. ex:ts=4:et:
 #: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
@@ -256,62 +232,58 @@ msgstr ""
 msgid "Added edit point..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:637
+#: ../plugins/multiedit/multiedit/documenthelper.py:643
 msgid "Column Mode..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:759
+#: ../plugins/multiedit/multiedit/documenthelper.py:757
 msgid "Removed edit point..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:922
+#: ../plugins/multiedit/multiedit/documenthelper.py:925
 msgid "Cancelled column mode..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+#: ../plugins/multiedit/multiedit/documenthelper.py:1297
 msgid "Enter column edit mode using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+#: ../plugins/multiedit/multiedit/documenthelper.py:1298
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+#: ../plugins/multiedit/multiedit/documenthelper.py:1299
 msgid "<b>Smart</b> column align mode using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+#: ../plugins/multiedit/multiedit/documenthelper.py:1300
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+#: ../plugins/multiedit/multiedit/documenthelper.py:1302
 msgid "Toggle edit point"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+#: ../plugins/multiedit/multiedit/documenthelper.py:1303
 msgid "Add edit point at beginning of line/selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+#: ../plugins/multiedit/multiedit/documenthelper.py:1304
 msgid "Add edit point at end of line/selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+#: ../plugins/multiedit/multiedit/documenthelper.py:1305
 msgid "Align edit points"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+#: ../plugins/multiedit/multiedit/documenthelper.py:1306
 msgid "Align edit points with additional space"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1305
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
+#: ../plugins/multiedit/multiedit/documenthelper.py:1337
+#, fuzzy
 msgid "Multi Edit Mode"
-msgstr ""
-
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
-msgid "Start multi edit mode"
-msgstr ""
+msgstr "Режим мультиредакторирования"
 
 #. ex:ts=4:et:
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
@@ -319,39 +291,35 @@ msgid "Easily increase and decrease the text size"
 msgstr ""
 
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Text Size"
-msgstr "Размер табуляции"
+msgstr "Размер текста"
 
-#: ../plugins/sessionsaver/__init__.py:64
-msgid "Sa_ved sessions"
-msgstr "Сох_ранённые сеансы"
-
-#: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
-msgid "_Save current session"
-msgstr "Заменить выделенный текст"
-
-#: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
-msgid "Save the current document list as a new session"
-msgstr "Переместить текущий документ в новое окно"
-
-#: ../plugins/sessionsaver/__init__.py:66
-msgid "_Manage saved sessions..."
-msgstr "_Управление сеансами..."
-
-#: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
-msgid "Open the saved session manager"
-msgstr "Открыть руководство gedit"
-
-#: ../plugins/sessionsaver/__init__.py:106
+#: ../plugins/sessionsaver/__init__.py:84
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Восстановить сеанс «%s»"
 
-#: ../plugins/sessionsaver/dialogs.py:167
+#: ../plugins/sessionsaver/__init__.py:103
+msgid "Sa_ved sessions"
+msgstr "Сох_ранённые сеансы"
+
+#: ../plugins/sessionsaver/__init__.py:105
+msgid "_Save current session"
+msgstr "_Сохранить текущий сеанс"
+
+#: ../plugins/sessionsaver/__init__.py:106
+msgid "Save the current document list as a new session"
+msgstr "Сохранить список текущих документов как новый сеанс"
+
+#: ../plugins/sessionsaver/__init__.py:108
+msgid "_Manage saved sessions..."
+msgstr "_Управление сеансами..."
+
+#: ../plugins/sessionsaver/__init__.py:109
+msgid "Open the saved session manager"
+msgstr "Открыть диспетчер сохранённых сеансов"
+
+#: ../plugins/sessionsaver/dialogs.py:173
 msgid "Session Name"
 msgstr "Имя сеанса"
 
@@ -385,49 +353,167 @@ msgstr "Забудьте о том, что вы не пользуетесь та
 msgid "Smart Spaces"
 msgstr "Вставлять пробелы"
 
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:1
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Название Pango-шрифта. Примеры: «Sans 12» или «Monospace Bold 14»."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:2
+msgid "Characters that are considered \"part of a word\""
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:3
+msgid "Default color of terminal background"
+msgstr "Цвет фона по умолчанию для терминала"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:4
+msgid "Default color of terminal background, as a color specification (can be HTML-style hex digits, or a color name such as \"red\")."
+msgstr "Цвет фона по умолчанию для терминала, цвет можно указывать в HTML-стиле шестнадцатиричными цифрами или указать название цвета, например «red»."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:5
+msgid "Default color of text in the terminal"
+msgstr "Цвет текста по умолчанию для терминала"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:6
+msgid "Default color of text in the terminal, as a color specification (can be HTML-style hex digits, or a color name such as \"red\")."
+msgstr "Цвет текста по умолчанию для терминала, цвет можно указывать в HTML-стиле шестнадцатиричными цифрами или указать название цвета, например «red»."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:7
+#| msgid "Footnote"
+msgid "Font"
+msgstr "Шрифт"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:8
+msgid "If true, allow applications in the terminal to make text boldface."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:9
+msgid "If true, don't make a noise when applications send the escape sequence for the terminal bell."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:10
+msgid "If true, pressing a key jumps the scrollbar to the bottom."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:11
+msgid "If true, scrollback lines will never be discarded. The scrollback history is stored on disk temporarily, so this may cause the system to run out of disk space if there is a lot of output to the terminal."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:12
+msgid "If true, the terminal will use the desktop-global standard font if it's monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:13
+msgid "If true, the theme color scheme used for text entry boxes will be used for the terminal, instead of colors provided by the user."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:14
+msgid "If true, whenever there's new output the terminal will scroll to the bottom."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:15
+msgid "Number of lines to keep in scrollback"
+msgstr "Количество строк в области прокрутки"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:16
+msgid "Number of scrollback lines to keep around. You can scroll back in the terminal by this number of lines; lines that don't fit in the scrollback are discarded. If scrollback-unlimited is true, this value is ignored."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:17
+msgid "Palette for terminal applications"
+msgstr "Палитра для приложений терминала"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:18
+msgid "Terminals have a 16-color palette that applications inside the terminal can use. This is that palette, in the form of a colon-separated list of color names. Color names should be in hex format e.g. \"#FF00FF\""
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:19
+msgid "The cursor appearance"
+msgstr "Внешний вид курсора"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:20
+msgid "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a vertical line cursor, or \"underline\" to use an underline cursor."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:21
+msgid "The possible values are \"system\" to use the global cursor blinking settings, or \"on\" or \"off\" to set the mode explicitly."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:22
+msgid "When selecting text by word, sequences of these characters are considered single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing a range) should be the first character given."
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:23
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr ""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:24
+msgid "Whether to allow bold text"
+msgstr "Разрешить ли полужирный текст"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:25
+msgid "Whether to blink the cursor"
+msgstr "Использовать ли мигающий курсор"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:26
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr "Прокручивать ли экран вниз при нажатии на клавишу"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:27
+msgid "Whether to scroll to the bottom when there's new output"
+msgstr "Прокручивать ли экран вниз при поступлении нового вывода"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:28
+msgid "Whether to silence terminal bell"
+msgstr "Приглушать ли звуковые сигналы терминала"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:29
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr "Использовать ли цвета из темы оформления для виджета терминала"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:30
+msgid "Whether to use the system font"
+msgstr "Использовать ли системный шрифт"
+
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Embed a terminal in the bottom pane."
-msgstr "Открыть терминал в каталоге документа"
+msgstr "Вставить терминал в нижнюю панель."
 
 #: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Embedded Terminal"
-msgstr "Встроенные объект"
+msgstr "Встроенный терминал"
 
-#: ../plugins/terminal/terminal.py:307
+#: ../plugins/terminal/terminal.py:258
 msgid "Terminal"
 msgstr "Терминал"
 
-#: ../plugins/terminal/terminal.py:329
+#: ../plugins/terminal/terminal.py:280
 #, fuzzy
 msgid "C_hange Directory"
 msgstr "З_аменить на:"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
-#, fuzzy
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:153
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:200
 msgid "Document Words"
-msgstr "Тело документа"
+msgstr "Слова документа"
 
 #: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Word Completion"
-msgstr "Соответствие скобок"
+msgstr "Дополнение слов"
 
 #: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
 msgid "Word completion using the completion framework"
-msgstr ""
+msgstr "Дополнение слов с помощью каркаса дополнений"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
 msgid "SyncTeX"
-msgstr ""
+msgstr "SyncTeX"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
-msgstr ""
+msgstr "Синхронизация между LaTeX и PDF с помощью gedit и evince."
 
-#: ../plugins/synctex/synctex/synctex.py:280
-#: ../plugins/synctex/synctex/synctex.py:281
+#: ../plugins/synctex/synctex/synctex.py:289
+#: ../plugins/synctex/synctex/synctex.py:290
 #, fuzzy
 msgid "Forward Search"
 msgstr "Ссылка вперёд"
@@ -876,14 +962,12 @@ msgid "HTML version"
 msgstr "Версия HTML"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:118
-#, fuzzy
 msgid "HTML — Special Characters"
-msgstr "HTML - Специальные символы"
+msgstr "HTML — Специальные символы"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:119
-#, fuzzy
 msgid "HTML — Tags"
-msgstr "HTML - Теги"
+msgstr "HTML — Теги"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:120
 msgid "HTTP header name"
@@ -1523,24 +1607,20 @@ msgid "Table summary"
 msgstr "Описание таблицы"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:292
-#, fuzzy
 msgid "Target — Blank"
-msgstr "Цель - пусто"
+msgstr "Цель — пусто"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:293
-#, fuzzy
 msgid "Target — Parent"
-msgstr "Цель - родитель"
+msgstr "Цель — родитель"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:294
-#, fuzzy
 msgid "Target — Self"
-msgstr "Цель - текущий"
+msgstr "Цель — текущий"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:295
-#, fuzzy
 msgid "Target — Top"
-msgstr "Цель - верх"
+msgstr "Цель — верх"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:296
 msgid "Teletype or monospace text style"
@@ -1626,9 +1706,8 @@ msgid "Width"
 msgstr "Ширина"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:319
-#, fuzzy
 msgid "XHTML 1.0 — Tags"
-msgstr "XHTML 1.0 - Теги"
+msgstr "XHTML 1.0 — Теги"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:1
 msgid "Bibliography (cite)"
@@ -1771,9 +1850,8 @@ msgid "Item with label"
 msgstr "Элемент списка с меткой"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:37
-#, fuzzy
 msgid "Latex — Tags"
-msgstr "Latex - Теги"
+msgstr "Latex — Теги"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:38
 msgid "List description"
@@ -1924,31 +2002,24 @@ msgid "Unbreakable text"
 msgstr "Неразрывный текст"
 
 #: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
-msgid ""
-"Provides a method to easily insert commonly used tags/strings into a "
-"document without having to type them."
-msgstr ""
-"Предоставляет простой способ вставки в документ часто используемых тегов или "
-"строк без необходимости набирать их вручную."
+msgid "Provides a method to easily insert commonly used tags/strings into a document without having to type them."
+msgstr "Предоставляет простой способ вставки в документ часто используемых тегов или строк без необходимости набирать их вручную."
 
 #: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
 msgid "Tag list"
 msgstr "Список тегов"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:1
-#, fuzzy
 msgid "XSLT — Axes"
-msgstr "XSLT - Направления"
+msgstr "XSLT — Направления"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:2
-#, fuzzy
 msgid "XSLT — Elements"
-msgstr "XSLT - Элементы"
+msgstr "XSLT — Элементы"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:3
-#, fuzzy
 msgid "XSLT — Functions"
-msgstr "XSLT - Функции"
+msgstr "XSLT — Функции"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:4
 msgid "ancestor"
@@ -2003,6 +2074,6 @@ msgid "self"
 msgstr "текущий"
 
 #: ../plugins/taglist/XUL.tags.xml.in.h:1
-#, fuzzy
 msgid "XUL — Tags"
-msgstr "XUL - Теги"
+msgstr "XUL — Теги"
+
