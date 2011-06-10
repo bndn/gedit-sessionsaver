@@ -20,74 +20,33 @@ class SessionModel(Gtk.ListStore):
     OBJECT_COLUMN = 0
     NAME_COLUMN = 1
     N_COLUMNS = 2
-    column_types = (GObject.TYPE_PYOBJECT, GObject.TYPE_STRING)
 
     def __init__(self, store):
-        super(SessionModel, self).__init__()
+        super(SessionModel, self).__init__(GObject.TYPE_PYOBJECT, str)
         self.store = store
+        for session in store:
+            row = { self.OBJECT_COLUMN : session,
+                    self.NAME_COLUMN: session.name }
+            self.append(row.values())
         self.store.connect_after('session-added', self.on_session_added)
-        self.store.connect('session-changed', self.on_session_changed)
         self.store.connect('session-removed', self.on_session_removed)
 
     def on_session_added(self, store, session):
-        piter = store.index(session)
-        self.row_inserted(self.on_get_path(piter), piter)
-
-    def on_session_changed(self, store, session):
-        piter = store.index(session)
-        self.row_changed(self.on_get_path(piter), piter)
+        row = { self.OBJECT_COLUMN : session,
+                self.NAME_COLUMN: session.name }
+        self.append(row.values())
 
     def on_session_removed(self, store, session):
-        piter = store.index(session)
-        self.row_deleted(self.on_get_path(piter))
-
-    def on_get_flags(self):
-        return Gtk.TREE_MODEL_LIST_ONLY
-
-    def on_get_n_columns(self):
-        return self.N_COLUMNS
-
-    def on_get_column_type(self, index):
-        assert index < self.N_COLUMNS
-        return self.column_types[index]
-
-    def on_get_iter(self, path):
-        return path[0]
-
-    def on_get_path(self, piter):
-        return (piter, )
-
-    def on_get_value(self, piter, column):
-        obj = self.store[piter]
-        if column == self.OBJECT_COLUMN:
-            return obj
-        elif column == self.NAME_COLUMN:
-            return obj.name
-
-    def on_iter_next(self, piter):
-        if piter + 1 < len(self.store):
-            return piter + 1
-        return None
-
-    def on_iter_children(self, piter):
-        if piter is None and len(self.store) > 0: return 0
-        return None
-
-    def on_iter_has_child(self, piter):
-        return False
-
-    def on_iter_n_children(self, piter):
-        if piter is None:
-            return len(self.store)
-        return 0
-
-    def on_iter_nth_child(self, piter, n):
-        if piter is None and n >= 0 and n < len(self.store):
-            return n
-        return None
-
-    def on_iter_parent(self, piter):
-        return None
+        it = self.get_iter_first()
+        if it is not None:
+            while True:
+                stored_session = self.get_value(it, self.OBJECT_COLUMN)
+                if stored_session == session:
+                    self.remove(it)
+                    break
+                it = self.next(it)
+                if not it:
+                    break
 
 class Dialog(object):
     UI_FILE = "sessionsaver.ui"
@@ -131,7 +90,7 @@ class Dialog(object):
 class SaveSessionDialog(Dialog):
     def __init__(self, window, plugin, sessions, sessionsaver):
         super(SaveSessionDialog, self).__init__('save-session-dialog',
-                                                plugin.get_data_dir(),
+                                                plugin.plugin_info.get_data_dir(),
                                                 window)
         self.plugin = plugin
         self.sessions = sessions
@@ -160,7 +119,7 @@ class SaveSessionDialog(Dialog):
 class SessionManagerDialog(Dialog):
     def __init__(self, plugin, sessions):
         super(SessionManagerDialog, self).__init__('session-manager-dialog',
-                                                   plugin.get_data_dir())
+                                                   plugin.plugin_info.get_data_dir())
         self.plugin = plugin
         self.sessions = sessions
 
@@ -186,16 +145,15 @@ class SessionManagerDialog(Dialog):
         return True
 
     def get_current_session(self):
-        selected = self.view.get_selection().get_selected()
+        (model, selected) = self.view.get_selection().get_selected()
         if selected is None:
             return None
-        model, selected = selected
         return model.get_value(selected, SessionModel.OBJECT_COLUMN)
 
     def on_open_button_clicked(self, button):
         session = self.get_current_session()
         if session is not None:
-            self.plugin.load_session(session, self.parent)
+            self.plugin._load_session(session, self.parent)
 
     def on_delete_button_clicked(self, button):
         session = self.get_current_session()

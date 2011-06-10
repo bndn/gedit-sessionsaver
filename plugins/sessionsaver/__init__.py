@@ -154,10 +154,10 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
         Gedit.commands_load_locations(window, session.files, None, 0, 0)
 
     def on_save_session_action(self, action, window):
-        SaveSessionDialog(window, self.plugin_info, self.sessions, self).run()
+        SaveSessionDialog(window, self, self.sessions, self).run()
 
     def on_manage_sessions_action(self, action, window):
-        SessionManagerDialog(self.plugin_info, self.sessions).run()
+        SessionManagerDialog(self, self.sessions).run()
 
     def session_menu_action(self, action, session):
         self._load_session(session, self.window)
