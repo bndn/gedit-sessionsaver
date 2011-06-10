@@ -113,7 +113,7 @@ class XMLSessionStore(SessionStore):
     def _dump_session(self, session):
         files = ''.join(['  <file path="%s"/>\n' % self._escape(location.get_uri())
                             for location in session.files])
-        session_name = self._escape(session.name)
+        session_name = self._escape(str(session.name))
         return '<session name="%s">\n%s</session>\n' % (session_name, files)
 
     def dump(self):

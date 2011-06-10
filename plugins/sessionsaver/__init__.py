@@ -120,6 +120,9 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
         manager.ensure_update()
 
     def _remove_session_menu(self):
+        if not self._menu_ui_id:
+            return
+
         manager = self.window.get_ui_manager()
         manager.remove_ui(self._menu_ui_id)
 
@@ -154,7 +157,7 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
         Gedit.commands_load_locations(window, session.files, None, 0, 0)
 
     def on_save_session_action(self, action, window):
-        SaveSessionDialog(window, self, self.sessions, self).run()
+        SaveSessionDialog(window, self, self.sessions).run()
 
     def on_manage_sessions_action(self, action, window):
         SessionManagerDialog(self, self.sessions).run()
