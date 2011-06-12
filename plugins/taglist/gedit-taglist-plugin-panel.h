@@ -49,7 +49,7 @@ typedef struct _GeditTaglistPluginPanelClass	GeditTaglistPluginPanelClass;
 
 struct _GeditTaglistPluginPanel 
 {
-	GtkVBox vbox;
+	GtkBox vbox;
 
 	/*< private > */
 	GeditTaglistPluginPanelPrivate *priv;
@@ -57,7 +57,7 @@ struct _GeditTaglistPluginPanel
 
 struct _GeditTaglistPluginPanelClass 
 {
-	GtkVBoxClass parent_class;
+	GtkBoxClass parent_class;
 };
 
 GType 		 gedit_taglist_plugin_panel_get_type		(void) G_GNUC_CONST;

@@ -67,7 +67,7 @@ struct _GeditTaglistPluginPanelPrivate
 	gchar *data_dir;
 };
 
-G_DEFINE_DYNAMIC_TYPE (GeditTaglistPluginPanel, gedit_taglist_plugin_panel, GTK_TYPE_VBOX)
+G_DEFINE_DYNAMIC_TYPE (GeditTaglistPluginPanel, gedit_taglist_plugin_panel, GTK_TYPE_BOX)
 
 enum
 {
@@ -664,6 +664,9 @@ gedit_taglist_plugin_panel_init (GeditTaglistPluginPanel *panel)
 
 	panel->priv = GEDIT_TAGLIST_PLUGIN_PANEL_GET_PRIVATE (panel);
 	panel->priv->data_dir = NULL;
+
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (panel),
+					GTK_ORIENTATION_VERTICAL);
 
 	/* Build the window content */
 	panel->priv->tag_groups_combo = gtk_combo_box_text_new ();
