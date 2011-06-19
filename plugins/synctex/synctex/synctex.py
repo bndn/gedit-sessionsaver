@@ -218,7 +218,7 @@ class SynctexViewHelper:
             for handler in self._view_active_handlers:
                 self._view.disconnect(handler)
 
-            self._window.get_data(WINDOW_DATA_KEY)._action_group.get_sensitive(False)
+            self._window.get_data(WINDOW_DATA_KEY)._action_group.set_sensitive(False)
             self._plugin.unref_evince_proxy(self.out_gfile)
             self.window_proxy = None
 
