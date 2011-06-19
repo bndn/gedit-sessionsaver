@@ -324,8 +324,8 @@ class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
 
         if uri_input not in SynctexPlugin.view_dict:
             window = SynctexPlugin._proxy_dict[out_gfile.get_uri()][2]
-            tab = window.create_tab_from_uri(uri_input,
-                                                 None, source_link[0] - 1, False, True)
+            tab = window.create_tab_from_location(input_file,
+                                                  None, source_link[0] - 1, 0, False, True)
             helper =  tab.get_view().get_data(VIEW_DATA_KEY)
             helper._goto_handler = tab.get_document().connect_object("loaded", 
                                                 SynctexViewHelper.goto_line_after_load, 
@@ -339,7 +339,7 @@ class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
         if uri not in SynctexPlugin._proxy_dict:
             proxy = EvinceWindowProxy (uri, True, _logger)
             SynctexPlugin._proxy_dict[uri] = [1, proxy, window]
-            proxy.set_source_handler (lambda i, s, time: self.source_view_handler(Gio.file_new_for_uri(uri), i, s, time))
+            proxy.set_source_handler (lambda i, s, time: self.source_view_handler(gfile, i, s, time))
         else:
             SynctexPlugin._proxy_dict[uri][0]+=1
             proxy = SynctexPlugin._proxy_dict[uri][1]
