@@ -1037,7 +1037,7 @@ class DocumentHelper(Signals):
         if not self._edit_points:
             return
 
-        clipboard = Gtk.Clipboard(self._view.get_display())
+        clipboard = Gtk.Clipboard.get_for_display(self._view.get_display())
         self._paste_mark = self._buffer.create_mark(None, self._buffer.get_iter_at_mark(self._buffer.get_insert()), True)
 
         clipboard.request_text(self.on_clipboard_text)

@@ -19,7 +19,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-from gi.repository import GObject, Gtk, Gedit, Peas, PeasGtk, Gio, Gdk
+from gi.repository import GObject, Pango, Gtk, Gedit, Peas, PeasGtk, Gio, Gdk
 from evince_dbus import EvinceWindowProxy
 import dbus.mainloop.glib
 import logging
@@ -52,7 +52,6 @@ WINDOW_DATA_KEY = "SynctexPluginWindowData"
 _logger = logging.getLogger("SynctexPlugin")
 
 def apply_style (style, tag):
-    import pango
     def apply_style_prop(tag, style, prop):
         if style.get_property(prop + "-set"):
             tag.set_property(prop, style.get_property(prop))
@@ -66,10 +65,10 @@ def apply_style (style, tag):
     apply_style_prop(tag, style, "foreground")
     apply_style_prop(tag, style, "background")
 
-    apply_style_prop_bool(tag, style, "bold", pango.WEIGHT_BOLD, pango.WEIGHT_NORMAL)
-    apply_style_prop_bool(tag, style, "italic", pango.STYLE_ITALIC, pango.STYLE_NORMAL)
-    apply_style_prop_bool(tag, style, "underline", pango.UNDERLINE_SINGLE,
-                                pango.UNDERLINE_NONE)
+    apply_style_prop_bool(tag, style, "bold", Pango.Weight.BOLD, Pango.Weight.NORMAL)
+    apply_style_prop_bool(tag, style, "italic", Pango.Style.ITALIC, Pango.Style.NORMAL)
+    apply_style_prop_bool(tag, style, "underline", Pango.Underline.SINGLE,
+                          Pango.Underline.NONE)
     apply_style_prop(tag, style, "strikethrough")
 
 def parse_modeline(line):
@@ -308,7 +307,6 @@ class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
     def __init__(self):
         GObject.Object.__init__(self)
 
-
     def do_activate(self):
         window = self.window
         helper = SynctexWindowHelper(self, window)
@@ -351,7 +349,5 @@ class SynctexPlugin(GObject.Object, Gedit.WindowActivatable):
             SynctexPlugin._proxy_dict[uri][0]-=1
             if SynctexPlugin._proxy_dict[uri][0] == 0:
                 del SynctexPlugin._proxy_dict[uri]
-     
-    def update_ui(self, window):
-        pass
+
 # ex:ts=4:et:
