@@ -57,6 +57,7 @@ def apply_style (style, tag):
             tag.set_property(prop, style.get_property(prop))
         else:
             tag.set_property(prop, None)
+
     def apply_style_prop_bool(tag, style, prop, whentrue, whenfalse):
         if style.get_property(prop + "-set"):
             prop_value = whentrue if style.get_property(prop) else whenfalse
@@ -73,9 +74,11 @@ def apply_style (style, tag):
 
 def parse_modeline(line):
     index = line.find("mainfile:")
+
     if line.startswith("%") and index > 0:
         # Parse the modeline.
         return line[index + len("mainfile:"):].strip()
+
     return None
 
 class SynctexViewHelper:
@@ -86,6 +89,7 @@ class SynctexViewHelper:
         self._plugin = plugin
         self._doc = view.get_buffer()
         self.window_proxy = None
+
         self._handlers = [
             self._doc.connect('saved', self.on_saved_or_loaded),
             self._doc.connect('loaded', self.on_saved_or_loaded)
@@ -103,6 +107,7 @@ class SynctexViewHelper:
     def on_button_release(self, view, event):
         modifier_mask = Gtk.accelerator_get_default_mod_mask()
         event_state = event.state & modifier_mask
+
         if event.button == 1 and event_state == Gdk.ModifierType.CONTROL_MASK:
             self.sync_view(event.time)
 
@@ -112,6 +117,7 @@ class SynctexViewHelper:
     def get_output_file(self):
         file_output = None
         line_count = self._doc.get_line_count()
+
         for i in range(min(3,line_count)) + range(max(0,line_count - 3), line_count):
             start = self._doc.get_iter_at_line(i)
             end = start.copy()
@@ -119,23 +125,29 @@ class SynctexViewHelper:
             file_output = parse_modeline(self._doc.get_text(start, end, False))
             if file_output is not None:
                 break
+
         return file_output
 
     def on_key_press(self, a, b):
         self._unhighlight()
+
     def on_cursor_moved(self, cur):
         self._unhighlight()
 
     def deactivate(self):
         self._unhighlight()
+
         for h in self._handlers:
             self._doc.disconnect(h)
+
         del self._highlight_tag
 
     def update_location(self):
         gfile = self._doc.get_location()
+
         if gfile is None:
             return
+
         if self.gfile is None or gfile.get_uri() != self.gfile.get_uri():
             SynctexWindowActivatable.view_dict[gfile.get_uri()] = self
             self.gfile = gfile
@@ -150,6 +162,7 @@ class SynctexViewHelper:
         out_path = self.gfile.get_parent().get_child(filename).get_path()
         out_path = os.path.splitext(out_path)
         out_gfile = Gio.file_new_for_path(out_path[0] + ".pdf")
+
         if out_gfile.query_exists(None):
             self.out_gfile = out_gfile
         else:
@@ -161,6 +174,7 @@ class SynctexViewHelper:
         iter = self._doc.get_iter_at_mark(self._doc.get_insert())
         end_iter = iter.copy()
         end_iter.forward_to_line_end()
+
         self._doc.apply_tag(self._highlight_tag, iter, end_iter)
         self.last_iters = [iter, end_iter];
 
@@ -190,7 +204,7 @@ class SynctexViewHelper:
 
     def update_active(self):
         # Activate the plugin only if the doc is a LaTeX file.
-        lang = self._doc.get_language() 
+        lang = self._doc.get_language()
         self.active = (lang is not None and lang.get_id() == 'latex' and
                         self.out_gfile is not None)
 
@@ -245,16 +259,20 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
     def do_deactivate(self):
         for h in self.handlers:
             self.window.disconnect(h)
+
         for view in self.window.get_views():
             self.remove_helper(view)
+
         self._remove_menu()
 
     def on_active_tab_changed(self, window,  tab):
         view_helper = tab.get_view().get_data(VIEW_DATA_KEY)
+
         if view_helper is None:
             active = False
         else:
-            active = view_helper.active 
+            active = view_helper.active
+
         self._action_group.set_sensitive(active)
 
     def add_helper(self, view, window, tab):
@@ -267,8 +285,10 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
 
     def remove_helper(self, view):
         helper = view.get_data(VIEW_DATA_KEY)
+
         if helper.gfile is not None:
             del self.view_dict[helper.gfile.get_uri()]
+
         helper.deactivate()
         view.set_data(VIEW_DATA_KEY, None)
 
@@ -314,6 +334,7 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
     def ref_evince_proxy(self, gfile, window):
         uri = gfile.get_uri()
         proxy = None
+
         if uri not in self._proxy_dict:
             proxy = EvinceWindowProxy (uri, True, _logger)
             self._proxy_dict[uri] = [1, proxy, window]
@@ -321,12 +342,14 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
         else:
             self._proxy_dict[uri][0]+=1
             proxy = self._proxy_dict[uri][1]
+
         return proxy
 
     def unref_evince_proxy(self, gfile):
         uri = gfile.get_uri()
+
         if uri in self._proxy_dict:
-            self._proxy_dict[uri][0]-=1
+            self._proxy_dict[uri][0] -= 1
             if self._proxy_dict[uri][0] == 0:
                 del self._proxy_dict[uri]
 
