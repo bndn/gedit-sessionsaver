@@ -1,1 +1,1 @@
-from synctex import SynctexPlugin
+from synctex import SynctexWindowActivatable
