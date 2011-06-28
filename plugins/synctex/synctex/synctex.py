@@ -191,8 +191,8 @@ class SynctexViewHelper:
         self._highlight()
         self._window.present_with_time (time)
 
-    def goto_line_after_load(self, a, line):
-        self.goto_line(line)
+    def goto_line_after_load(self, a, line, time):
+        self.goto_line(line, time)
         self._doc.disconnect(self._goto_handler)
 
     def sync_view(self, time):
@@ -317,13 +317,14 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
     def forward_search_cb(self, action, what):
         self.window.get_active_view().get_data(VIEW_DATA_KEY).sync_view(Gtk.get_current_event_time())
 
-    def source_view_handler(self, out_gfile, input_file, source_link, time):
-        uri_input = input_file
+    def source_view_handler(self, out_gfile, uri_input, source_link, time):
 
         if uri_input not in self.view_dict:
             window = self._proxy_dict[out_gfile.get_uri()][2]
-            tab = window.create_tab_from_location(input_file,
+
+            tab = window.create_tab_from_location(Gio.file_new_for_uri(uri_input),
                                                   None, source_link[0] - 1, 0, False, True)
+
             helper =  tab.get_view().get_data(VIEW_DATA_KEY)
             helper._goto_handler = tab.get_document().connect_object("loaded", 
                                                 SynctexViewHelper.goto_line_after_load,
