@@ -191,7 +191,7 @@ class SynctexViewHelper:
         self._window.present_with_time (time)
 
     def goto_line_after_load(self, a, line, time):
-        self.goto_line(line, time)
+        GObject.idle_add (lambda : self.goto_line(line, time))
         self._doc.disconnect(self._goto_handler)
 
     def sync_view(self, time):
