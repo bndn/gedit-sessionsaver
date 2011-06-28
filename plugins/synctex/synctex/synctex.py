@@ -82,10 +82,9 @@ def parse_modeline(line):
     return None
 
 class SynctexViewHelper:
-    def __init__(self, view, window, tab, plugin):
+    def __init__(self, view, window, plugin):
         self._view = view
         self._window = window
-        self._tab = tab
         self._plugin = plugin
         self._doc = view.get_buffer()
         self.window_proxy = None
@@ -187,7 +186,7 @@ class SynctexViewHelper:
     def goto_line (self, line, time):
         self._doc.goto_line(line) 
         self._view.scroll_to_cursor()
-        self._window.set_active_tab(self._tab)
+        self._window.set_active_tab(Gedit.Tab.get_from_document(self._doc))
         self._highlight()
         self._window.present_with_time (time)
 
@@ -248,11 +247,11 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
         self._insert_menu()
 
         for view in self.window.get_views():
-            self.add_helper(view, self.window, view.get_parent().get_parent())
+            self.add_helper(view, self.window)
 
         self.handlers = [
-            self.window.connect("tab-added", lambda w, t: self.add_helper(t.get_view(),w, t)),
-            self.window.connect("tab-removed", lambda w, t: self.remove_helper(t.get_view())),
+            self.window.connect("tab-added", lambda window, tab: self.add_helper(tab.get_view(), window)),
+            self.window.connect("tab-removed", lambda window, tab: self.remove_helper(tab.get_view())),
             self.window.connect("active-tab-changed", self.on_active_tab_changed)
         ]
 
@@ -275,8 +274,8 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
 
         self._action_group.set_sensitive(active)
 
-    def add_helper(self, view, window, tab):
-        helper = SynctexViewHelper(view, window, tab, self)
+    def add_helper(self, view, window):
+        helper = SynctexViewHelper(view, window, self)
         location = view.get_buffer().get_location()
 
         if location is not None:
