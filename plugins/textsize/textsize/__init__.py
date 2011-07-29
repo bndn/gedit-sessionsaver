@@ -40,9 +40,11 @@ ui_str = """
   <menubar name="MenuBar">
     <menu name="ViewMenu" action="View">
       <placeholder name="ViewOps_2">
+        <separator/>
         <menuitem name="IncreaseFontSize" action="IncreaseFontSizeAction"/>
         <menuitem name="DecreaseFontSize" action="DecreaseFontSizeAction"/>
         <menuitem name="ResetFontSize" action="ResetFontSizeAction"/>
+        <separator/>
       </placeholder>
     </menu>
   </menubar>
