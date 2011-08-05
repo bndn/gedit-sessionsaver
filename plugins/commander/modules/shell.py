@@ -20,12 +20,11 @@
 #  Boston, MA 02111-1307, USA.
 
 import subprocess
-import glib
 import fcntl
 import os
 import tempfile
 import signal
-from gi.repository import GObject, Gio
+from gi.repository import GLib, GObject, Gio
 
 import commander.commands as commands
 import commander.commands.exceptions
@@ -47,9 +46,9 @@ class Process:
 
         if not background:
             fcntl.fcntl(stdout, fcntl.F_SETFL, os.O_NONBLOCK)
-            conditions = glib.IO_IN | glib.IO_PRI | glib.IO_ERR | glib.IO_HUP
+            conditions = GLib.IOCondition.IN | GLib.IOCondition.PRI | GLib.IOCondition.ERR | GLib.IOCondition.HUP
 
-            self.watch = glib.io_add_watch(stdout, conditions, self.collect_output)
+            self.watch = GLib.io_add_watch(stdout, conditions, self.collect_output)
             self._buffer = ''
         else:
             stdout.close()
@@ -63,13 +62,13 @@ class Process:
         self._buffer = parts[-1]
 
     def collect_output(self, fd, condition):
-        if condition & (glib.IO_IN | glib.IO_PRI):
+        if condition & (GLib.IOCondition.IN | GLib.IOCondition.PRI):
             try:
                 ret = fd.read()
 
                 # This seems to happen on OS X...
                 if ret == '':
-                    condition = condition | glib.IO_HUP
+                    condition = condition | GLib.IOConditiom.HUP
                 else:
                     self._buffer += ret
 
@@ -80,7 +79,7 @@ class Process:
                 self.stop()
                 return False
 
-        if condition & (glib.IO_ERR | glib.IO_HUP):
+        if condition & (GLib.IOCondition.ERR | GLib.IOCondition.HUP):
             if self.replace:
                 buf = self.entry.view().get_buffer()
                 buf.begin_user_action()

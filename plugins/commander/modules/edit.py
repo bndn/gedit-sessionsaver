@@ -25,7 +25,7 @@ import sys
 import types
 import inspect
 
-from gi.repository import Gio, Gedit
+from gi.repository import GLib, Gio, Gedit
 
 import commander.commands as commands
 import commander.commands.completion
@@ -205,7 +205,7 @@ Use this to apply the cool new feature\"\"\"
 def new_command(view, entry, name):
     """Create a new commander command module: edit.new-command &lt;command&gt;"""
 
-    filename = os.path.join(glib.get_user_config_dir(), 'gedit/commander/modules/' + name + '.py')
+    filename = os.path.join(GLib.get_user_config_dir(), 'gedit/commander/modules/' + name + '.py')
 
     if os.path.isfile(filename):
         raise commander.commands.exceptions.Execute('Commander module `' + name + '\' already exists')
