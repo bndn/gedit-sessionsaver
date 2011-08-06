@@ -126,12 +126,14 @@ class GeditTerminal(Gtk.Box):
         if not self.profile_settings.get_boolean("use-theme-colors"):
             fg_color = self.profile_settings.get_string("foreground-color")
             if fg_color != "":
-                parsed, fg = Gdk.RGBA().parse (fg_color)
+                fg = Gdk.RGBA()
+                parsed = fg.parse(fg_color)
             bg_color = self.profile_settings.get_string("background-color")
-            if (bg_color != ""):
-                parsed, bg = Gdk.RGBA().parse (bg_color)
+            if bg_color != "":
+                bg = Gdk.RGBA()
+                parsed = bg.parse(bg_color)
         str_colors = self.profile_settings.get_string("palette")
-        if (str_colors != ""):
+        if str_colors != "":
             for str_color in str_colors.split(':'):
                 try:
                     rgba = Gdk.RGBA()
