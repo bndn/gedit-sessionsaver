@@ -22,7 +22,7 @@
 
 import os.path
 from xml.parsers import expat
-from gi.repository import GObject
+from gi.repository import GObject, Gio
 import glib
 
 class Session(object):
@@ -37,7 +37,7 @@ class Session(object):
         return cmp(self.name.lower(), session.name.lower())
 
     def add_file(self, filename):
-        self.files.append(Gio.file_new_for_path(filename))
+        self.files.append(Gio.file_new_for_uri(filename))
 
 class SessionStore(GObject.Object):
     __gsignals__ = {
