@@ -19,9 +19,8 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-from gi.repository import GObject, Gdk, Gtk
+from gi.repository import GObject, GLib, Gdk, Gtk
 import cairo
-import glib
 import os
 import re
 import inspect
@@ -87,7 +86,7 @@ GtkEntry#gedit-commander-entry {
 		self._entry.connect('focus-out-event', self.on_entry_focus_out)
 		self._entry.connect('key-press-event', self.on_entry_key_press)
 
-		self._history = History(os.path.join(glib.get_user_config_dir(), 'gedit/commander/history'))
+		self._history = History(os.path.join(GLib.get_user_config_dir(), 'gedit/commander/history'))
 		self._prompt = None
 
 		self._accel_group = None

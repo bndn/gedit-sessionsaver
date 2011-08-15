@@ -25,7 +25,6 @@ import sys
 import bisect
 import types
 import shlex
-import glib
 import re
 import os
 

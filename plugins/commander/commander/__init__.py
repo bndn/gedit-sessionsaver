@@ -29,8 +29,7 @@ if not path in sys.path:
 
 from windowactivatable import WindowActivatable
 import commander.commands as commands
-from gi.repository import GObject, Gedit
-import glib
+from gi.repository import GObject, GLib, Gedit
 
 class CommanderPlugin(GObject.Object, Gedit.AppActivatable):
 	__gtype_name__ = "CommanderPlugin"
@@ -47,7 +46,7 @@ class CommanderPlugin(GObject.Object, Gedit.AppActivatable):
 			sys.path.insert(0, self._path)
 
 		commands.Commands().set_dirs([
-			os.path.join(glib.get_user_config_dir(), 'gedit/commander/modules'),
+			os.path.join(GLib.get_user_config_dir(), 'gedit/commander/modules'),
 			os.path.join(self.plugin_info.get_data_dir(), 'modules')
 		])
 

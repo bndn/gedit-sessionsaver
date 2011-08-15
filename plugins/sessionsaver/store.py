@@ -22,8 +22,7 @@
 
 import os.path
 from xml.parsers import expat
-from gi.repository import GObject, Gio
-import glib
+from gi.repository import GObject, GLib, Gio
 
 class Session(object):
     def __init__(self, name, files = None):
@@ -101,7 +100,7 @@ class SessionStore(GObject.Object):
 class XMLSessionStore(SessionStore):
     def __init__(self):
         super(XMLSessionStore, self).__init__()
-        self.filename = os.path.join(glib.get_user_config_dir(), 'gedit/saved-sessions.xml')
+        self.filename = os.path.join(GLib.get_user_config_dir(), 'gedit/saved-sessions.xml')
         self.load()
 
     def _escape(self, string):
