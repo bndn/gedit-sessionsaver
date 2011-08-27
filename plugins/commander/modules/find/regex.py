@@ -31,7 +31,7 @@ class RegexFinder(finder.Finder):
     def __init__(self, entry, flags = 0):
         finder.Finder.__init__(self, entry)
 
-        self.flags = re.UNICODE | re.MULTILINE | re.DOTALL | flags
+        self.flags = re.UNICODE | re.MULTILINE | flags
         self.groupre = re.compile('(\\\\)?\\$([0-9]+|{(([0-9]+):([^}]+))})')
 
     def set_find(self, findstr):
