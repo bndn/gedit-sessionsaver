@@ -176,28 +176,68 @@ expression syntax is that of python regular expressions. Matching dicards case."
 def replace(entry, findre, replstr=None):
     """Find/replace regex in document: find.replace &lt;find&gt; [&lt;replace&gt;]
 
-Quickly find and replace phrases in the document using regular expressions"""
+Quickly find and replace phrases in the document using regular expressions.
+The &lt;replace&gt; may contain backreferences to groups in the regular
+expression using $0, $1, etc. In addition, a set of simple transformations
+on these backreferences can be performed using instead the syntax ${n:t1[,t2,...]} where
+&lt;n&gt is the backreference number and &lt;t1&gt;, &lt;t2&gt; are transformations:
+
+u: upper case first character
+U: upper case match
+l: lower case first character
+L: lower case match
+t: title case match"""
     fd = RegexFinder(entry)
     yield fd.replace(findre, False, replstr)
 
 def replace_i(entry, findre, replstr=None):
     """Find/replace regex in document (case insensitive): find.replace-i &lt;find&gt; [&lt;replace&gt;]
 
-Quickly find and replace phrases in the document using regular expressions"""
+Quickly find and replace phrases in the document using regular expression.
+The &lt;replace&gt; may contain backreferences to groups in the regular
+expression using $0, $1, etc. In addition, a set of simple transformations
+on these backreferences can be performed using instead the syntax ${n:t1[,t2,...]} where
+&lt;n&gt is the backreference number and &lt;t1&gt;, &lt;t2&gt; are transformations:
+
+u: upper case first character
+U: upper case match
+l: lower case first character
+L: lower case match
+t: title case matchs"""
     fd = RegexFinder(entry, re.IGNORECASE)
     yield fd.replace(findre, False, replstr)
 
 def replace_all(entry, findre, replstr=None):
     """Find/replace all regex in document: find.regex.replace-all &lt;find&gt; [&lt;replace&gt;]
 
-Quickly find and replace all phrases in the document using regular expressions"""
+Quickly find and replace all phrases in the document using regular expressions.
+The &lt;replace&gt; may contain backreferences to groups in the regular
+expression using $0, $1, etc. In addition, a set of simple transformations
+on these backreferences can be performed using instead the syntax ${n:t1[,t2,...]} where
+&lt;n&gt is the backreference number and &lt;t1&gt;, &lt;t2&gt; are transformations:
+
+u: upper case first character
+U: upper case match
+l: lower case first character
+L: lower case match
+t: title case match"""
     fd = RegexFinder(entry, 0)
     yield fd.replace(findre, True, replstr)
 
 def replace_all_i(entry, findre, replstr=None):
     """Find/replace all regex in document: find.regex.replace-all-i &lt;find&gt; [&lt;replace&gt;]
 
-Quickly find and replace all phrases in the document using regular expressions"""
+Quickly find and replace all phrases in the document using regular expressions.
+The &lt;replace&gt; may contain backreferences to groups in the regular
+expression using $0, $1, etc. In addition, a set of simple transformations
+on these backreferences can be performed using instead the syntax ${n:t1[,t2,...]} where
+&lt;n&gt is the backreference number and &lt;t1&gt;, &lt;t2&gt; are transformations:
+
+u: upper case first character
+U: upper case match
+l: lower case first character
+L: lower case match
+t: title case match"""
     fd = RegexFinder(entry, re.IGNORECASE)
     yield fd.replace(findre, True, replstr)
 
