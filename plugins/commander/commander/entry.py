@@ -24,6 +24,7 @@ import cairo
 import os
 import re
 import inspect
+import sys
 
 import commander.commands as commands
 import commands.completion
@@ -397,7 +398,7 @@ GtkEntry#gedit-commander-entry {
 			self.info_show('<b><span color="#f66">Error:</span></b> ' + saxutils.escape(str(e)), True)
 
 			if not isinstance(e, commands.exceptions.Execute):
-				self.info_show(traceback.format_exc(), False)
+				self.info_show(self.format_trace(), False)
 
 			return None
 
@@ -422,6 +423,33 @@ GtkEntry#gedit-commander-entry {
 				self._entry.grab_focus()
 
 		return ret
+
+	def format_trace(self):
+		tp, val, tb = sys.exc_info()
+
+		origtb = tb
+
+		thisdir = os.path.dirname(__file__)
+
+		# Skip frames up until after the last entry.py...
+		while True:
+			filename = tb.tb_frame.f_code.co_filename
+
+			dname = os.path.dirname(filename)
+
+			if not dname.startswith(thisdir):
+				break
+
+			tb = tb.tb_next
+
+		msg = traceback.format_exception(tp, val, tb)
+		r = ''.join(msg[0:-1])
+
+		# This is done to prevent cyclic references, see python
+		# documentation on sys.exc_info
+		del origtb
+
+		return r
 
 	def on_execute(self, dummy, modifier):
 		if self._info_window and not self._suspended:
@@ -646,4 +674,4 @@ GtkEntry#gedit-commander-entry {
 
 		self._history.save()
 
-# vi:ex:ts=4:et
+# vi:ex:ts=4
