@@ -75,7 +75,7 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
         self._action_group.add_actions(
                 [("ColorPicker", None, _("Pick _Color..."), None,
                  _("Pick a color from a dialog"),
-                 lambda a, b: self.on_color_picker_activate())])
+                 lambda a: self.on_color_picker_activate())])
 
         manager.insert_action_group(self._action_group)
         self._ui_id = manager.add_ui_from_string(ui_str)
