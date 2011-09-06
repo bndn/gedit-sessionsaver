@@ -129,7 +129,7 @@ class MultiEditPlugin(GObject.Object, Gedit.WindowActivatable, Signals):
 
         self.get_action().set_active(helper != None and helper.enabled())
 
-    def on_multi_edit_mode(self, action, data):
+    def on_multi_edit_mode(self, action):
         view = self.window.get_active_view()
         helper = view.get_data(constants.DOCUMENT_HELPER_KEY)
 
