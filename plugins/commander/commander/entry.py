@@ -75,7 +75,7 @@ class Entry(Gtk.EventBox):
 GtkEntry#gedit-commander-entry {
 	gtk-key-bindings: terminal-like-bindings
 }
-""", -1)
+""")
 
 		# FIXME: remove hardcopy of 600 (GTK_STYLE_PROVIDER_PRIORITY_APPLICATION)
 		# https://bugzilla.gnome.org/show_bug.cgi?id=646860
