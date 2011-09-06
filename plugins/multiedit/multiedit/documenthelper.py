@@ -806,11 +806,7 @@ class DocumentHelper(Signals):
             self.remove_edit_points()
 
         iterwas = buf.get_iter_at_mark(wasat)
-
-        if hasattr(where, 'assign'):
-            where.assign(iterwas)
-        elif hasattr(Gedit, 'utils_text_iter_assign'):
-            Gedit.utils_text_iter_assign(where, iterwas)
+        where.assign(iterwas)
 
         if atinsert:
             buf.move_mark(buf.get_insert(), iterwas)
@@ -901,13 +897,8 @@ class DocumentHelper(Signals):
                 piter = buf.get_iter_at_mark(orig)
                 buf.delete_mark(orig)
 
-                # To be able to have it not crash with old pygtk
-                if hasattr(start, 'assign'):
-                    start.assign(piter)
-                    end.assign(piter)
-                elif hasattr(Gedit, 'utils_text_iter_assign'):
-                    Gedit.utils_text_iter_assign(start, piter)
-                    Gedit.utils_text_iter_assign(end, piter)
+                start.assign(piter)
+                end.assign(piter)
             else:
                 self.remove_edit_points()
 
