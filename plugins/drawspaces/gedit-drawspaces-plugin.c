@@ -506,18 +506,19 @@ get_configuration_widget (GeditDrawspacesPlugin *plugin)
 	datadir = peas_extension_base_get_data_dir (PEAS_EXTENSION_BASE (plugin));
 	filename = g_build_filename (datadir, UI_FILE, NULL);
 
-	ret = gedit_utils_get_ui_objects (filename,
-					  root_objects,
-					  &error_widget,
-					  "content", &widget->content,
-					  "check_button_draw_tabs", &widget->draw_tabs,
-					  "check_button_draw_spaces", &widget->draw_spaces,
-					  "check_button_draw_new_lines", &widget->draw_newline,
-					  "check_button_draw_nbsp", &widget->draw_nbsp,
-					  "check_button_draw_leading", &widget->draw_leading,
-					  "check_button_draw_text", &widget->draw_text,
-					  "check_button_draw_trailing", &widget->draw_trailing,
-					  NULL);
+	ret = gedit_utils_get_ui_objects_with_translation_domain (filename,
+	                                                          GETTEXT_PACKAGE,
+					                          root_objects,
+					                          &error_widget,
+					                          "content", &widget->content,
+					                          "check_button_draw_tabs", &widget->draw_tabs,
+					                          "check_button_draw_spaces", &widget->draw_spaces,
+					                          "check_button_draw_new_lines", &widget->draw_newline,
+					                          "check_button_draw_nbsp", &widget->draw_nbsp,
+					                          "check_button_draw_leading", &widget->draw_leading,
+					                          "check_button_draw_text", &widget->draw_text,
+					                          "check_button_draw_trailing", &widget->draw_trailing,
+					                          NULL);
 
 	g_free (datadir);
 	g_free (filename);
