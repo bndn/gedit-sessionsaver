@@ -41,7 +41,7 @@
 #include <gedit/gedit-debug.h>
 
 #include <gdk/gdkkeysyms.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #define GEDIT_TAGLIST_PLUGIN_PANEL_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), \
 						       GEDIT_TYPE_TAGLIST_PLUGIN_PANEL, \

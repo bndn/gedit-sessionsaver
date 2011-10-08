@@ -35,7 +35,7 @@
 #include "gedit-taglist-plugin-panel.h"
 #include "gedit-taglist-plugin-parser.h"
 
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include <gedit/gedit-window.h>
 #include <gedit/gedit-window-activatable.h>
