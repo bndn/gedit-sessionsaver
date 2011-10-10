@@ -92,8 +92,6 @@ class Documenter:
 
         bus = self.get_window().get_message_bus()
         self.canplaceholder = bus.is_registered('/plugins/snippets', 'parse-and-activate')
-        #FIXME: fix when we can set the iter
-        self.canplaceholder = False
 
         self.placeholder = 1
         self.text = ''
