@@ -93,9 +93,9 @@ ALL_PLUGINS="bookmarks drawspaces wordcompletion taglist"
 USEFUL_PLUGINS="bookmarks drawspaces wordcompletion taglist"
 DEFAULT_PLUGINS="bookmarks drawspaces wordcompletion taglist"
 
-PYTHON_ALL_PLUGINS="bracketcompletion charmap codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
-PYTHON_USEFUL_PLUGINS="bracketcompletion charmap codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
-PYTHON_DEFAULT_PLUGINS="bracketcompletion charmap codecomment colorpicker commander joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
+PYTHON_ALL_PLUGINS="bracketcompletion charmap codecomment colorpicker commander dashboard joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
+PYTHON_USEFUL_PLUGINS="bracketcompletion charmap codecomment colorpicker commander dashboard joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
+PYTHON_DEFAULT_PLUGINS="bracketcompletion charmap codecomment colorpicker commander dashboard joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
@@ -310,6 +310,9 @@ plugins/commander/commander/Makefile
 plugins/commander/Makefile
 plugins/commander/modules/find/Makefile
 plugins/commander/modules/Makefile
+plugins/dashboard/dashboard/Makefile
+plugins/dashboard/dashboard.plugin.desktop.in
+plugins/dashboard/Makefile
 plugins/drawspaces/drawspaces.plugin.desktop.in
 plugins/drawspaces/Makefile
 plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in
