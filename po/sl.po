@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2011-01-15 14:03+0000\n"
-"PO-Revision-Date: 2011-01-27 20:30+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gedit&keywords=I18N+L10N&component=Plugins\n"
+"POT-Creation-Date: 2011-12-01 12:16+0000\n"
+"PO-Revision-Date: 2011-12-02 16:42+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: Slovenian\n"
@@ -30,27 +30,27 @@ msgstr "Zaznamki"
 msgid "Easy document navigation with bookmarks"
 msgstr "Enostavno upravljanje dokumentov z zaznamki"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
 msgid "Toggle Bookmark"
 msgstr "Preklopi zaznamek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Toggle bookmark status of the current line"
 msgstr "Preklopi stanje zaznamka v trenutni vrstici"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
 msgid "Goto Next Bookmark"
 msgstr "Pojdi na naslednji zaznamek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
 msgid "Goto the next bookmark"
 msgstr "Pojdi na naslednji zaznamek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:205
 msgid "Goto Previous Bookmark"
 msgstr "Pojdi na predhodni zaznamek"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:205
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:206
 msgid "Goto the previous bookmark"
 msgstr "Pojdi na predhodni zaznamek"
 
@@ -63,7 +63,7 @@ msgid "Bracket Completion"
 msgstr "Dopolnjevanje oklepajev"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
-#: ../plugins/charmap/charmap/__init__.py:43
+#: ../plugins/charmap/charmap/__init__.py:51
 msgid "Character Map"
 msgstr "Nabor znakov"
 
@@ -130,6 +130,31 @@ msgstr "Vmesnik ukaznega okna za napredno urejanje"
 msgid "Commander"
 msgstr "Upravljalnik ukazov"
 
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:1
+msgid "A Dashboard for new tabs"
+msgstr "Nadzorna plošča novih zavihkov"
+
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:2
+msgid "Dashboard"
+msgstr "Nadzorna plošča"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:110
+msgid "Empty Document"
+msgstr "Prazen dokument"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:218
+msgid "Type here to search..."
+msgstr "Vnos besedila za iskanje ..."
+
+#: ../plugins/dashboard/dashboard/dashboard.py:345
+msgid "Most Used"
+msgstr "Največ uporabljeno"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:346
+msgid "Recently Used"
+msgstr "Nedavno uporabljeno"
+
+#. ex:ts=4:et:
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
@@ -196,19 +221,19 @@ msgstr "Združi več vrstic ali razdeli predolge vrstice"
 msgid "Join/Split Lines"
 msgstr "Združi/razdeli vrstice"
 
-#: ../plugins/joinlines/joinlines.py:75
+#: ../plugins/joinlines/joinlines.py:74
 msgid "_Join Lines"
 msgstr "_Združi vrstice"
 
-#: ../plugins/joinlines/joinlines.py:76
+#: ../plugins/joinlines/joinlines.py:75
 msgid "Join the selected lines"
 msgstr "Združi izbrane vrstice"
 
-#: ../plugins/joinlines/joinlines.py:78
+#: ../plugins/joinlines/joinlines.py:77
 msgid "_Split Lines"
 msgstr "_Razdeli vrstice"
 
-#: ../plugins/joinlines/joinlines.py:79
+#: ../plugins/joinlines/joinlines.py:78
 msgid "Split the selected lines"
 msgstr "Razdeli izbrane vrstice"
 
@@ -221,55 +246,55 @@ msgstr "Uredi dokument na več mestih hkrati"
 msgid "Multi Edit"
 msgstr "Hkratno urejanje"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:295
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
 msgstr "Dodana točka urejanja ..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:631
+#: ../plugins/multiedit/multiedit/documenthelper.py:643
 msgid "Column Mode..."
 msgstr "Stolpični način ..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:744
+#: ../plugins/multiedit/multiedit/documenthelper.py:757
 msgid "Removed edit point..."
 msgstr "Odstranjena točka urejanja ..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:907
+#: ../plugins/multiedit/multiedit/documenthelper.py:916
 msgid "Cancelled column mode..."
 msgstr "Preklican stolpični način ..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1279
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Enter column edit mode using selection"
 msgstr "Način urejanja stolpcev z izbiro"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1280
+#: ../plugins/multiedit/multiedit/documenthelper.py:1289
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr "Uporabi <b>pametni</b> način urejanja stolpcev z izbiro"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1281
+#: ../plugins/multiedit/multiedit/documenthelper.py:1290
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "<b>Pametni</b> način poravnave stolpcev z uporabo izbire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1282
+#: ../plugins/multiedit/multiedit/documenthelper.py:1291
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr "<b>Pametni</b> način poravnave stolpcev z dodatnimi presledki z uporabo izbire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1284
+#: ../plugins/multiedit/multiedit/documenthelper.py:1293
 msgid "Toggle edit point"
 msgstr "Preklopi točko urejanja"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1285
+#: ../plugins/multiedit/multiedit/documenthelper.py:1294
 msgid "Add edit point at beginning of line/selection"
 msgstr "Dodaj točko urejanja na začetek vrstice oziroma izbire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1286
+#: ../plugins/multiedit/multiedit/documenthelper.py:1295
 msgid "Add edit point at end of line/selection"
 msgstr "Dodaj točko urejanja na konec vrstice oziroma izbire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1287
+#: ../plugins/multiedit/multiedit/documenthelper.py:1296
 msgid "Align edit points"
 msgstr "Poravnaj točke urejanja"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1288
+#: ../plugins/multiedit/multiedit/documenthelper.py:1297
 msgid "Align edit points with additional space"
 msgstr "Poravnaj točke urejanja z dodatnim presledkom"
 
@@ -286,32 +311,32 @@ msgstr "Enostavno prilagajanje velikosti besedila"
 msgid "Text Size"
 msgstr "Velikost besedila"
 
-#: ../plugins/sessionsaver/__init__.py:64
-msgid "Sa_ved sessions"
-msgstr "_Shranjene seje"
-
-#: ../plugins/sessionsaver/__init__.py:65
-msgid "_Save current session"
-msgstr "_Shrani trenutno sejo"
-
-#: ../plugins/sessionsaver/__init__.py:65
-msgid "Save the current document list as a new session"
-msgstr "Shrani trenutni seznam dokumentov kot novo sejo"
-
-#: ../plugins/sessionsaver/__init__.py:66
-msgid "_Manage saved sessions..."
-msgstr "_Upravljanje s shranjenimi sejami ..."
-
-#: ../plugins/sessionsaver/__init__.py:66
-msgid "Open the saved session manager"
-msgstr "Odpri upravljalnik shranjenih sej"
-
-#: ../plugins/sessionsaver/__init__.py:106
+#: ../plugins/sessionsaver/__init__.py:84
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Obnovi sejo '%s'"
 
-#: ../plugins/sessionsaver/dialogs.py:167
+#: ../plugins/sessionsaver/__init__.py:103
+msgid "Sa_ved sessions"
+msgstr "_Shranjene seje"
+
+#: ../plugins/sessionsaver/__init__.py:105
+msgid "_Save current session"
+msgstr "_Shrani trenutno sejo"
+
+#: ../plugins/sessionsaver/__init__.py:106
+msgid "Save the current document list as a new session"
+msgstr "Shrani trenutni seznam dokumentov kot novo sejo"
+
+#: ../plugins/sessionsaver/__init__.py:108
+msgid "_Manage saved sessions..."
+msgstr "_Upravljanje s shranjenimi sejami ..."
+
+#: ../plugins/sessionsaver/__init__.py:109
+msgid "Open the saved session manager"
+msgstr "Odpri upravljalnik shranjenih sej"
+
+#: ../plugins/sessionsaver/dialogs.py:132
 msgid "Session Name"
 msgstr "Ime seje"
 
@@ -472,15 +497,16 @@ msgstr "Vgradi terminal v spodnji pladenj"
 msgid "Embedded Terminal"
 msgstr "Vgrajen terminal"
 
-#: ../plugins/terminal/terminal.py:258
+#: ../plugins/terminal/terminal.py:260
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:280
+#: ../plugins/terminal/terminal.py:282
 msgid "C_hange Directory"
 msgstr "Spremeni _mapo"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:153
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:200
 msgid "Document Words"
 msgstr "Besedilo dokumenta"
 
@@ -500,14 +526,14 @@ msgstr "SyncTeX"
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr "Usklajevanje med LaTeX in PDF datotekami s programoma gedit in evince."
 
-#: ../plugins/synctex/synctex/synctex.py:283
-#: ../plugins/synctex/synctex/synctex.py:284
+#: ../plugins/synctex/synctex/synctex.py:307
+#: ../plugins/synctex/synctex/synctex.py:308
 msgid "Forward Search"
 msgstr "Iskanje naprej"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:700
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:716
 msgid "Tags"
 msgstr "Oznake"
 
@@ -519,7 +545,7 @@ msgstr "Izbor skupine oznak za uporabo"
 msgid "_Preview"
 msgstr "_Predogled"
 
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
 msgid "Available Tag Lists"
 msgstr "Seznam oznak, ki so na voljo"
 
@@ -2066,4 +2092,3 @@ msgstr "XUL — Oznake"
 
 #~ msgid "Start multi edit mode"
 #~ msgstr "Začni način hkratnega urejanja"
-
