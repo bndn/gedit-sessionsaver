@@ -90,7 +90,7 @@ class Documenter:
         self.view = view
         self.iter = iter
 
-        bus = self.get_window().get_message_bus()
+        bus = self.window.get_message_bus()
         self.canplaceholder = bus.is_registered('/plugins/snippets', 'parse-and-activate')
 
         self.placeholder = 1
@@ -115,7 +115,7 @@ class Documenter:
     def insert(self):
         if self.canplaceholder:
             bus = self.window.get_message_bus()
-            bus.send('/plugins/snippets', 'parse-and-activate', trigger=self.text, iter=self.iter, view=self.view)
+            bus.send('/plugins/snippets', 'parse-and-activate', snippet=self.text, iter=self.iter, view=self.view)
 
 def _make_documenter(window, view):
     buf = view.get_buffer()
@@ -173,7 +173,7 @@ for it to work."""
 
         doc.append("\n")
 
-    doc.append(" * \n * ").append_placeholder("Description").append(".\n")
+    doc.append(" *\n * ").append_placeholder("Description").append(".\n")
 
     if func.return_type:
         sm = structp.match(func.return_type_name)
