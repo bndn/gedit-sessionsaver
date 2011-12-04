@@ -25,8 +25,9 @@
 #include "gedit-bookmarks-plugin.h"
 #include "messages/messages.h"
 
-#include <gtk/gtk.h>
+#include <stdlib.h>
 #include <glib/gi18n-lib.h>
+#include <gtk/gtk.h>
 #include <gedit/gedit-debug.h>
 #include <gedit/gedit-window.h>
 #include <gedit/gedit-window-activatable.h>
