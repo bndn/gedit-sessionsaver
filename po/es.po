@@ -20,8 +20,8 @@ msgstr ""
 "Project-Id-Version: gedit.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gedit&keywords=I18N+L10N&component=Plugins\n"
-"POT-Creation-Date: 2011-06-02 09:04+0000\n"
-"PO-Revision-Date: 2011-09-15 12:18+0200\n"
+"POT-Creation-Date: 2011-11-30 23:35+0000\n"
+"PO-Revision-Date: 2011-12-05 18:05+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -138,6 +138,31 @@ msgstr "Interfaz de edición avanzada para la línea de comandos"
 msgid "Commander"
 msgstr "Commander"
 
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:1
+msgid "A Dashboard for new tabs"
+msgstr "Un tablero para las pestañas nuevas"
+
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:2
+msgid "Dashboard"
+msgstr "Tablero"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:110
+msgid "Empty Document"
+msgstr "Documento vacío"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:218
+msgid "Type here to search..."
+msgstr "Escribir aquí para buscar…"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:345
+msgid "Most Used"
+msgstr "Más usados"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:346
+msgid "Recently Used"
+msgstr "Usados recientemente"
+
+#. ex:ts=4:et:
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
@@ -241,51 +266,51 @@ msgstr "Modo columna…"
 msgid "Removed edit point..."
 msgstr "Punto de edición quitado…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:925
+#: ../plugins/multiedit/multiedit/documenthelper.py:916
 msgid "Cancelled column mode..."
 msgstr "Modo columna cancelado…"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1297
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Enter column edit mode using selection"
 msgstr "Entrar en el modo de edición de columna usando la selección"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1298
+#: ../plugins/multiedit/multiedit/documenthelper.py:1289
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
 "Entrar en el modo de edición de columna <b>inteligente</b> usando la "
 "selección"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1299
+#: ../plugins/multiedit/multiedit/documenthelper.py:1290
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "Modo de alineación de columna <b>inteligente</b> usando la selección"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1300
+#: ../plugins/multiedit/multiedit/documenthelper.py:1291
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 "Modo de alineación de columna <b>inteligente</b> con espacio adicional "
 "usando la selección"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1302
+#: ../plugins/multiedit/multiedit/documenthelper.py:1293
 msgid "Toggle edit point"
 msgstr "Conmutar el modo edición"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1303
+#: ../plugins/multiedit/multiedit/documenthelper.py:1294
 msgid "Add edit point at beginning of line/selection"
 msgstr "Punto de edición añadido al principio de la selección de línea"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1304
+#: ../plugins/multiedit/multiedit/documenthelper.py:1295
 msgid "Add edit point at end of line/selection"
 msgstr "Punto de edición añadido al final de la selección de línea"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/documenthelper.py:1296
 msgid "Align edit points"
 msgstr "Alinear puntos de edición"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1306
+#: ../plugins/multiedit/multiedit/documenthelper.py:1297
 msgid "Align edit points with additional space"
 msgstr "Alinear los puntos de edición con espacio adicional"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1337
+#: ../plugins/multiedit/multiedit/documenthelper.py:1328
 msgid "Multi Edit Mode"
 msgstr "Modo multiedición"
 
@@ -323,7 +348,7 @@ msgstr "_Gestionar las sesiones guardadas…"
 msgid "Open the saved session manager"
 msgstr "Abrir el gestor de sesiones guardadas"
 
-#: ../plugins/sessionsaver/dialogs.py:173
+#: ../plugins/sessionsaver/dialogs.py:132
 msgid "Session Name"
 msgstr "Nombre de la sesión"
 
@@ -555,11 +580,11 @@ msgstr "Empotre un terminal en el panel inferior."
 msgid "Embedded Terminal"
 msgstr "Terminal empotrado"
 
-#: ../plugins/terminal/terminal.py:258
+#: ../plugins/terminal/terminal.py:260
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:280
+#: ../plugins/terminal/terminal.py:282
 msgid "C_hange Directory"
 msgstr "_Cambiar de carpeta"
 
@@ -584,14 +609,14 @@ msgstr "SyncTeX"
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr "Sincronizar entre LaTeX y PDF con gedit y evince."
 
-#: ../plugins/synctex/synctex/synctex.py:289
-#: ../plugins/synctex/synctex/synctex.py:290
+#: ../plugins/synctex/synctex/synctex.py:307
+#: ../plugins/synctex/synctex/synctex.py:308
 msgid "Forward Search"
 msgstr "Búsqueda hacia adelante"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:700
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:716
 msgid "Tags"
 msgstr "Etiquetas"
 
@@ -603,7 +628,7 @@ msgstr "Seleccione el grupo de etiquetas que quiere usar"
 msgid "_Preview"
 msgstr "Vista _previa"
 
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
 msgid "Available Tag Lists"
 msgstr "Listas de etiquetas disponibles"
 
