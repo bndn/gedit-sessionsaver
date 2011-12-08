@@ -9,21 +9,23 @@
 # Andre Klapper <ak-47@gmx.net>, 2008, 2009.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2008-2010.
 # Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>, 2010.
-# Mario Blättermann <mariobl@gnome.org>, 2009-2011.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2009-2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2011-01-02 11:59+0000\n"
-"PO-Revision-Date: 2011-01-04 16:38+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"product=gedit&keywords=I18N+L10N&component=Plugins\n"
+"POT-Creation-Date: 2011-11-30 23:35+0000\n"
+"PO-Revision-Date: 2011-12-08 12:14+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
 msgid "Bookmarks"
@@ -33,27 +35,27 @@ msgstr "Lesezeichen"
 msgid "Easy document navigation with bookmarks"
 msgstr "Einfache Navigation im Dokument mittels Lesezeichen"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:196
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
 msgid "Toggle Bookmark"
 msgstr "Lesezeichen ein-/ausschalten"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Toggle bookmark status of the current line"
 msgstr "Lesezeichenstatus der aktuellen Zeile ändern"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
 msgid "Goto Next Bookmark"
 msgstr "Nächstes Lesezeichen"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
 msgid "Goto the next bookmark"
 msgstr "Zum nächsten Lesezeichen gehen"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:205
 msgid "Goto Previous Bookmark"
 msgstr "Zum vorherigen Lesezeichen gehen"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:206
 msgid "Goto the previous bookmark"
 msgstr "Zum vorherigen Lesezeichen gehen"
 
@@ -66,7 +68,7 @@ msgid "Bracket Completion"
 msgstr "Klammern schließen"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
-#: ../plugins/charmap/charmap/__init__.py:43
+#: ../plugins/charmap/charmap/__init__.py:51
 msgid "Character Map"
 msgstr "Zeichentabelle"
 
@@ -136,6 +138,31 @@ msgstr "Befehlszeilenschnittstelle für erweiterte Bearbeitung"
 msgid "Commander"
 msgstr "Commander"
 
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:1
+msgid "A Dashboard for new tabs"
+msgstr ""
+
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:2
+msgid "Dashboard"
+msgstr ""
+
+#: ../plugins/dashboard/dashboard/dashboard.py:110
+msgid "Empty Document"
+msgstr "Leeres Dokument"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:218
+msgid "Type here to search..."
+msgstr "Zum Suchen hier eingeben …"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:345
+msgid "Most Used"
+msgstr "Am meisten verwendet"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:346
+msgid "Recently Used"
+msgstr "Zuletzt verwendet"
+
+#. ex:ts=4:et:
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
@@ -202,19 +229,19 @@ msgstr "Mehrere Zeilen zusammenfügen oder lange Zeilen umbrechen"
 msgid "Join/Split Lines"
 msgstr "Zeilen zusammenfügen/umbrechen"
 
-#: ../plugins/joinlines/joinlines.py:75
+#: ../plugins/joinlines/joinlines.py:74
 msgid "_Join Lines"
 msgstr "_Zeilen zusammenfügen"
 
-#: ../plugins/joinlines/joinlines.py:76
+#: ../plugins/joinlines/joinlines.py:75
 msgid "Join the selected lines"
 msgstr "Die markierten Zeilen zusammenfügen"
 
-#: ../plugins/joinlines/joinlines.py:78
+#: ../plugins/joinlines/joinlines.py:77
 msgid "_Split Lines"
 msgstr "Zeilen umbrechen"
 
-#: ../plugins/joinlines/joinlines.py:79
+#: ../plugins/joinlines/joinlines.py:78
 msgid "Split the selected lines"
 msgstr "Die markierten Zeilen umbrechen"
 
@@ -227,59 +254,59 @@ msgstr "Dokument an mehreren Stellen gleichzeitig bearbeiten"
 msgid "Multi Edit"
 msgstr "Mehrfachbearbeitung"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:295
+#: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
 msgstr "Hinzugefügter Bearbeitungspunkt …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:631
+#: ../plugins/multiedit/multiedit/documenthelper.py:643
 msgid "Column Mode..."
 msgstr "Spaltenmodus …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:744
+#: ../plugins/multiedit/multiedit/documenthelper.py:757
 msgid "Removed edit point..."
 msgstr "Gelöschter Bearbeitungspunkt …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:907
+#: ../plugins/multiedit/multiedit/documenthelper.py:916
 msgid "Cancelled column mode..."
 msgstr "Abgebrochener Spaltenmodus …"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1279
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Enter column edit mode using selection"
 msgstr "Mit dieser Auswahl in den Spalten-Bearbeitungsmodus wechseln"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1280
+#: ../plugins/multiedit/multiedit/documenthelper.py:1289
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
 "Mit dieser Auswahl in den <b>intelligenten</b> Spalten-Bearbeitungsmodus "
 "wechseln"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1281
+#: ../plugins/multiedit/multiedit/documenthelper.py:1290
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "<b>Intelligenter</b> Spalten-Bearbeitungsmodus mit dieser Auswahl"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1282
+#: ../plugins/multiedit/multiedit/documenthelper.py:1291
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 "<b>Intelligenter</b> Spalten-Bearbeitungsmodus mit zusätzlichem mit dieser "
 "Auswahl"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1284
+#: ../plugins/multiedit/multiedit/documenthelper.py:1293
 msgid "Toggle edit point"
 msgstr "Bearbeitungspunkt umschalten"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1285
+#: ../plugins/multiedit/multiedit/documenthelper.py:1294
 msgid "Add edit point at beginning of line/selection"
 msgstr "Bearbeitungspunkt am Beginn der Zeile/Auswahl hinzufügen"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1286
+#: ../plugins/multiedit/multiedit/documenthelper.py:1295
 msgid "Add edit point at end of line/selection"
 msgstr "Bearbeitungspunkt am Ende der Zeile/Auswahl hinzufügen"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1287
+#: ../plugins/multiedit/multiedit/documenthelper.py:1296
 msgid "Align edit points"
 msgstr "Bearbeitungspunkte ausrichten"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1288
+#: ../plugins/multiedit/multiedit/documenthelper.py:1297
 msgid "Align edit points with additional space"
 msgstr "Bearbeitungspunkte mit zusätzlichem Abstand ausrichten"
 
@@ -296,32 +323,32 @@ msgstr "Die Textgröße einfach ändern"
 msgid "Text Size"
 msgstr "Textgröße"
 
-#: ../plugins/sessionsaver/__init__.py:64
-msgid "Sa_ved sessions"
-msgstr "_Gespeicherte Sitzungen"
-
-#: ../plugins/sessionsaver/__init__.py:65
-msgid "_Save current session"
-msgstr "Die aktuelle Sitzung _speichern"
-
-#: ../plugins/sessionsaver/__init__.py:65
-msgid "Save the current document list as a new session"
-msgstr "Die aktuelle Dokumentenliste als neue Sitzung speichern"
-
-#: ../plugins/sessionsaver/__init__.py:66
-msgid "_Manage saved sessions..."
-msgstr "Gespeicherte Sitzungen _verwalten …"
-
-#: ../plugins/sessionsaver/__init__.py:66
-msgid "Open the saved session manager"
-msgstr "Gespeicherte Sitzungen verwalten"
-
-#: ../plugins/sessionsaver/__init__.py:106
+#: ../plugins/sessionsaver/__init__.py:84
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Sitzung »%s« wiederherstellen"
 
-#: ../plugins/sessionsaver/dialogs.py:167
+#: ../plugins/sessionsaver/__init__.py:103
+msgid "Sa_ved sessions"
+msgstr "_Gespeicherte Sitzungen"
+
+#: ../plugins/sessionsaver/__init__.py:105
+msgid "_Save current session"
+msgstr "Die aktuelle Sitzung _speichern"
+
+#: ../plugins/sessionsaver/__init__.py:106
+msgid "Save the current document list as a new session"
+msgstr "Die aktuelle Dokumentenliste als neue Sitzung speichern"
+
+#: ../plugins/sessionsaver/__init__.py:108
+msgid "_Manage saved sessions..."
+msgstr "Gespeicherte Sitzungen _verwalten …"
+
+#: ../plugins/sessionsaver/__init__.py:109
+msgid "Open the saved session manager"
+msgstr "Gespeicherte Sitzungen verwalten"
+
+#: ../plugins/sessionsaver/dialogs.py:132
 msgid "Session Name"
 msgstr "Sitzungsname"
 
@@ -546,15 +573,16 @@ msgstr "Terminal in die untere Leiste einbetten."
 msgid "Embedded Terminal"
 msgstr "Eingebettetes Terminal"
 
-#: ../plugins/terminal/terminal.py:258
+#: ../plugins/terminal/terminal.py:260
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:280
+#: ../plugins/terminal/terminal.py:282
 msgid "C_hange Directory"
 msgstr "_Ordner wechseln"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:153
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:200
 msgid "Document Words"
 msgstr "Wörter im Dokument"
 
@@ -574,14 +602,14 @@ msgstr "SyncTeX"
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr "Abgleich zwischen LaTeX and PDF mit gedit und Evince."
 
-#: ../plugins/synctex/synctex/synctex.py:283
-#: ../plugins/synctex/synctex/synctex.py:284
+#: ../plugins/synctex/synctex/synctex.py:307
+#: ../plugins/synctex/synctex/synctex.py:308
 msgid "Forward Search"
 msgstr "Vorwärtssuche"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:700
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:716
 msgid "Tags"
 msgstr "Floskeln"
 
@@ -593,7 +621,7 @@ msgstr "Wählen Sie die zu verwendende Floskelgruppe"
 msgid "_Preview"
 msgstr "_Vorschau"
 
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
 msgid "Available Tag Lists"
 msgstr "Verfügbare Floskellisten"
 
@@ -2142,5 +2170,3 @@ msgstr "Selbst"
 msgid "XUL — Tags"
 msgstr "XUL — Kennzeichnungen"
 
-#~ msgid "Start multi edit mode"
-#~ msgstr "In den Mehrfachbearbeitungsmodus wechseln"
