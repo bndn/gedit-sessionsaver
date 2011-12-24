@@ -2,21 +2,22 @@
 # Copyright (C) 1998-2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gedit-plugins package.
 #
+#
 # Christophe Merlet <redfox@redfoxcenter.org>, 2000-2006.
 # Jonathan Ernst <jonathan@ernstfamily.ch>, 2006.
 # Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.
 # Robert-André Mauchin <zebob.m@pengzone.org>, 2007.
 # Claude Paroz <claude@2xlibre.net>, 2008-2011.
 # Laurent Coudeur <laurentc@iol.ie>, 2009.
-#
+# Bruno Brouard <annoa.b@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit-plugins HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=gedit&component=Plugins\n"
-"POT-Creation-Date: 2011-01-27 19:50+0000\n"
-"PO-Revision-Date: 2011-01-28 14:09+0100\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"product=gedit&keywords=I18N+L10N&component=Plugins\n"
+"POT-Creation-Date: 2011-12-08 11:18+0000\n"
+"PO-Revision-Date: 2011-12-17 18:18+0100\n"
+"Last-Translator: Bruno Brouard <annoa.b@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,27 +32,27 @@ msgstr "Signets"
 msgid "Easy document navigation with bookmarks"
 msgstr "Navigation aisée dans vos documents avec des signets"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
 msgid "Toggle Bookmark"
 msgstr "Activer/désactiver le signet"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
 msgid "Toggle bookmark status of the current line"
 msgstr "Inverse l'état de signet de la ligne actuelle"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
 msgid "Goto Next Bookmark"
 msgstr "Aller au signet suivant"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
 msgid "Goto the next bookmark"
 msgstr "Va au signet suivant"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:205
 msgid "Goto Previous Bookmark"
 msgstr "Aller au signet précédent"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:205
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:206
 msgid "Goto the previous bookmark"
 msgstr "Va au signet précédent"
 
@@ -133,6 +134,31 @@ msgstr "Interface en ligne de commande pour l'édition avancée"
 msgid "Commander"
 msgstr "Ligne de commande"
 
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:1
+msgid "A Dashboard for new tabs"
+msgstr "Un tableau de bord pour les nouveaux onglets"
+
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:2
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:110
+msgid "Empty Document"
+msgstr "Document vide"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:218
+msgid "Type here to search..."
+msgstr "Saisissez ici pour rechercher..."
+
+#: ../plugins/dashboard/dashboard/dashboard.py:345
+msgid "Most Used"
+msgstr "Utilisé fréquemment"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:346
+msgid "Recently Used"
+msgstr "Utilisé récemment"
+
+#. ex:ts=4:et:
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
@@ -173,7 +199,7 @@ msgstr "Indiquer les espaces de fin"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
 msgid "Show _White Space"
-msgstr "Afficher les _espaces"
+msgstr "Afficher les _espaces vides"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
 msgid "Show spaces and tabs"
@@ -185,7 +211,7 @@ msgstr "Activé"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "If TRUE drawing will be enabled."
-msgstr "Si VRAI (TRUE), l'affichage des caractères blancs est activé."
+msgstr "Si VRAI (TRUE), l'affichage est activé."
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
 msgid "The type of spaces to be drawn."
@@ -228,60 +254,60 @@ msgstr "Édition multiple"
 msgid "Added edit point..."
 msgstr "Point d'édition ajouté..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:637
+#: ../plugins/multiedit/multiedit/documenthelper.py:643
 msgid "Column Mode..."
 msgstr "Mode colonne..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:751
+#: ../plugins/multiedit/multiedit/documenthelper.py:757
 msgid "Removed edit point..."
 msgstr "Point d'édition supprimé..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:914
+#: ../plugins/multiedit/multiedit/documenthelper.py:916
 msgid "Cancelled column mode..."
 msgstr "Mode colonne annulé..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1286
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Enter column edit mode using selection"
 msgstr "Démarre le mode d'édition en colonne en utilisant la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1287
+#: ../plugins/multiedit/multiedit/documenthelper.py:1289
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
 "Démarre le mode d'édition en colonne <b>intelligent</b> en utilisant la "
 "sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1288
+#: ../plugins/multiedit/multiedit/documenthelper.py:1290
 msgid "<b>Smart</b> column align mode using selection"
 msgstr ""
 "Mode d'alignement de colonne <b>intelligent</b> en utilisant la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1289
+#: ../plugins/multiedit/multiedit/documenthelper.py:1291
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 "Mode d'alignement de colonne <b>intelligent</b> avec espace supplémentaire "
 "en utilisant la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1291
+#: ../plugins/multiedit/multiedit/documenthelper.py:1293
 msgid "Toggle edit point"
 msgstr "Basculer le point d'édition"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1292
+#: ../plugins/multiedit/multiedit/documenthelper.py:1294
 msgid "Add edit point at beginning of line/selection"
 msgstr "Ajoute un point d'édition au début de la ligne ou de la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1293
+#: ../plugins/multiedit/multiedit/documenthelper.py:1295
 msgid "Add edit point at end of line/selection"
 msgstr "Ajoute un point d'édition à la fin de la ligne ou de la sélection"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1294
+#: ../plugins/multiedit/multiedit/documenthelper.py:1296
 msgid "Align edit points"
 msgstr "Aligner les points d'édition"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1295
+#: ../plugins/multiedit/multiedit/documenthelper.py:1297
 msgid "Align edit points with additional space"
 msgstr "Aligner les points d'édition avec espace supplémentaire"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1332
+#: ../plugins/multiedit/multiedit/documenthelper.py:1328
 msgid "Multi Edit Mode"
 msgstr "Mode d'édition multiple"
 
@@ -319,7 +345,7 @@ msgstr "_Gérer les sessions enregistrées..."
 msgid "Open the saved session manager"
 msgstr "Ouvre le gestionnaire des sessions enregistrées"
 
-#: ../plugins/sessionsaver/dialogs.py:173
+#: ../plugins/sessionsaver/dialogs.py:132
 msgid "Session Name"
 msgstr "Nom de session"
 
@@ -551,15 +577,16 @@ msgstr "Intègre un terminal dans le panneau du bas."
 msgid "Embedded Terminal"
 msgstr "Terminal intégré"
 
-#: ../plugins/terminal/terminal.py:255
+#: ../plugins/terminal/terminal.py:260
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugins/terminal/terminal.py:277
+#: ../plugins/terminal/terminal.py:282
 msgid "C_hange Directory"
 msgstr "C_hanger de répertoire"
 
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:153
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:200
 msgid "Document Words"
 msgstr "Mots du document"
 
@@ -579,14 +606,14 @@ msgstr "SyncTeX"
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr "Synchroniser entre LaTeX et PDF avec gedit et evince."
 
-#: ../plugins/synctex/synctex/synctex.py:289
-#: ../plugins/synctex/synctex/synctex.py:290
+#: ../plugins/synctex/synctex/synctex.py:307
+#: ../plugins/synctex/synctex/synctex.py:308
 msgid "Forward Search"
 msgstr "Recherche en avant"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:700
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:716
 msgid "Tags"
 msgstr "Balises"
 
@@ -598,7 +625,7 @@ msgstr "Sélectionne le groupe de balises que vous souhaitez utiliser"
 msgid "_Preview"
 msgstr "_Aperçu"
 
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
 msgid "Available Tag Lists"
 msgstr "Listes de balises disponibles"
 
