@@ -73,7 +73,7 @@ class Entry(Gtk.EventBox):
 };
 
 GtkEntry#gedit-commander-entry {
-	gtk-key-bindings: terminal-like-bindings
+	gtk-key-bindings: terminal-like-bindings;
 }
 """)
 
