@@ -9,21 +9,21 @@
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Hideki Yamane (Debian-JP) <henrich@debian.or.jp>, 2009.
 # Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2010.
-# Jiro Matsuzawa <matsuzawa.jr@gmail.com>, 2011.
+# Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gedit master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gedit&keywords=I18N+L10N&component=Plugins\n"
-"POT-Creation-Date: 2011-04-20 10:16+0000\n"
-"PO-Revision-Date: 2011-04-24 22:49+0900\n"
-"Last-Translator: Jiro Matsuzawa <matsuzawa.jr@gmail.com>\n"
+"POT-Creation-Date: 2011-12-24 17:05+0000\n"
+"PO-Revision-Date: 2012-01-11 21:27+0900\n"
+"Last-Translator: Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
@@ -149,6 +149,31 @@ msgstr ""
 msgid "Commander"
 msgstr "コマンドの色(_O):"
 
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:1
+msgid "A Dashboard for new tabs"
+msgstr ""
+
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:2
+msgid "Dashboard"
+msgstr ""
+
+#: ../plugins/dashboard/dashboard/dashboard.py:110
+msgid "Empty Document"
+msgstr ""
+
+#: ../plugins/dashboard/dashboard/dashboard.py:218
+msgid "Type here to search..."
+msgstr ""
+
+#: ../plugins/dashboard/dashboard/dashboard.py:345
+msgid "Most Used"
+msgstr ""
+
+#: ../plugins/dashboard/dashboard/dashboard.py:346
+msgid "Recently Used"
+msgstr ""
+
+#. ex:ts=4:et:
 #. ex:set ts=8 noet:
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
@@ -255,47 +280,47 @@ msgstr ""
 msgid "Removed edit point..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:925
+#: ../plugins/multiedit/multiedit/documenthelper.py:916
 msgid "Cancelled column mode..."
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1297
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Enter column edit mode using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1298
+#: ../plugins/multiedit/multiedit/documenthelper.py:1289
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1299
+#: ../plugins/multiedit/multiedit/documenthelper.py:1290
 msgid "<b>Smart</b> column align mode using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1300
+#: ../plugins/multiedit/multiedit/documenthelper.py:1291
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1302
+#: ../plugins/multiedit/multiedit/documenthelper.py:1293
 msgid "Toggle edit point"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1303
+#: ../plugins/multiedit/multiedit/documenthelper.py:1294
 msgid "Add edit point at beginning of line/selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1304
+#: ../plugins/multiedit/multiedit/documenthelper.py:1295
 msgid "Add edit point at end of line/selection"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1305
+#: ../plugins/multiedit/multiedit/documenthelper.py:1296
 msgid "Align edit points"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1306
+#: ../plugins/multiedit/multiedit/documenthelper.py:1297
 msgid "Align edit points with additional space"
 msgstr ""
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1337
+#: ../plugins/multiedit/multiedit/documenthelper.py:1328
 msgid "Multi Edit Mode"
 msgstr ""
 
@@ -337,7 +362,7 @@ msgstr "セッションの管理(_M)..."
 msgid "Open the saved session manager"
 msgstr "gedit のマニュアルを開きます"
 
-#: ../plugins/sessionsaver/dialogs.py:173
+#: ../plugins/sessionsaver/dialogs.py:132
 msgid "Session Name"
 msgstr "セッション名"
 
@@ -527,11 +552,11 @@ msgstr "ボトム・ペインに端末を配置します。"
 msgid "Embedded Terminal"
 msgstr "組み込み端末"
 
-#: ../plugins/terminal/terminal.py:258
+#: ../plugins/terminal/terminal.py:260
 msgid "Terminal"
 msgstr "端末"
 
-#: ../plugins/terminal/terminal.py:280
+#: ../plugins/terminal/terminal.py:282
 msgid "C_hange Directory"
 msgstr "ディレクトリ変更(_H)"
 
@@ -558,15 +583,15 @@ msgstr ""
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr ""
 
-#: ../plugins/synctex/synctex/synctex.py:289
-#: ../plugins/synctex/synctex/synctex.py:290
+#: ../plugins/synctex/synctex/synctex.py:307
+#: ../plugins/synctex/synctex/synctex.py:308
 #, fuzzy
 msgid "Forward Search"
 msgstr "rel 属性 (正方向リンクの関係性)"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:700
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:716
 msgid "Tags"
 msgstr "タグ"
 
@@ -578,7 +603,7 @@ msgstr "使用するタグのグループを選択してください"
 msgid "_Preview"
 msgstr "プレビュー(_P)"
 
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
 msgid "Available Tag Lists"
 msgstr "利用可能なタグの一覧"
 
@@ -747,12 +772,12 @@ msgstr "codetype 属性 (classid 属性で指定したオブジェクトの型)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:46
 msgid "Color of selected links"
-msgstr "alink 属性 (ユーザが選択したリンクの色)"
+msgstr "alink 属性 (ユーザーが選択したリンクの色)"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:48
 msgid "Color of selected links (deprecated)"
-msgstr "alink 属性 (ユーザが選択したリンクの色 [非推奨])"
+msgstr "alink 属性 (ユーザーが選択したリンクの色 [非推奨])"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:49
 msgid "Column span"
@@ -768,7 +793,7 @@ msgstr "<!--  --> (コメント) あるいは comment 要素"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:52
 msgid "Computer code fragment"
-msgstr "code 要素 (コンピュータのコード断片)"
+msgstr "code 要素 (コンピューターのコード断片)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:53
 msgid "Content scheme"
@@ -790,11 +815,11 @@ msgstr "coords 属性 (座標)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:59
 msgid "DIV Style container"
-msgstr "div 要素 style 属性付き (コンテナ)"
+msgstr "div 要素 style 属性付き (コンテナー)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:60
 msgid "DIV container"
-msgstr "div 要素 (コンテナ)"
+msgstr "div 要素 (コンテナー)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:61
 msgid "Date and time of change"
@@ -847,7 +872,7 @@ msgstr "dir 要素 (ディレクトリリスト)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:77
 msgid "Disabled"
-msgstr "disabled 属性 (ユーザ入力を受け付けない)"
+msgstr "disabled 属性 (ユーザー入力を受け付けない)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:78
 msgid "Document base"
@@ -859,7 +884,7 @@ msgstr "body 要素 (ドキュメントの本文)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:80
 msgid "Document head"
-msgstr "head 要素 (ドキュメントのヘッダ)"
+msgstr "head 要素 (ドキュメントのヘッダー)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:81
 msgid "Document title"
@@ -913,7 +938,7 @@ msgstr "form 要素 (フォーム)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:94
 msgid "Form action handler"
-msgstr "action 属性 (フォームのアクションハンドラ)"
+msgstr "action 属性 (フォームのアクションハンドラー)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:95
 msgid "Form control group"
@@ -1019,7 +1044,7 @@ msgstr "HTML - タグ"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:120
 msgid "HTTP header name"
-msgstr "http-equiv 属性 (HTTP 応答ヘッダ名)"
+msgstr "http-equiv 属性 (HTTP 応答ヘッダー名)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:121
 msgid "Header cell IDs"
@@ -1159,7 +1184,7 @@ msgstr "accept 属性 (アップロードで受け付けることのできるフ
 #: ../plugins/taglist/HTML.tags.xml.in.h:157
 msgid "List of supported character sets"
 msgstr ""
-"accept-charset 属性 (フォーム処理サーバが受け付け能な文字符号化のリスト)"
+"accept-charset 属性 (フォーム処理サーバーが受け付け能な文字符号化のリスト)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:158
 msgid "Listing"
@@ -1472,7 +1497,7 @@ msgstr "samp 要素 (プログラムやスクリプトの出力例)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:242
 msgid "Scope covered by header cells"
-msgstr "scope 属性 (ヘッダセルでカバーするスコープ)"
+msgstr "scope 属性 (ヘッダーセルでカバーするスコープ)"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:244
@@ -1497,7 +1522,7 @@ msgstr "selected 属性 (選択肢が選択済み)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:249
 msgid "Server-side image map"
-msgstr "ismap 属性 (サーバサイドイメージマップ)"
+msgstr "ismap 属性 (サーバーサイドイメージマップ)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:250
 msgid "Shape"
@@ -1638,11 +1663,11 @@ msgstr "td 要素 (表のデータセル)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:287
 msgid "Table footer"
-msgstr "tfoot 要素 (表のフッタ)"
+msgstr "tfoot 要素 (表のフッター)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:288
 msgid "Table header"
-msgstr "thead 要素 (表のヘッダ)"
+msgstr "thead 要素 (表のヘッダー)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:289
 msgid "Table header cell"
@@ -1650,7 +1675,7 @@ msgstr "th 要素 (表の見出しセル)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:290
 msgid "Table row"
-msgstr "tr 要素 (th および td から構成される行のコンテナ)"
+msgstr "tr 要素 (th および td から構成される行のコンテナー)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:291
 msgid "Table summary"
@@ -1695,7 +1720,7 @@ msgstr "text または color 属性 (テキストの文字色 [非推奨])"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:301
 msgid "Text entered by user"
-msgstr "kbd 要素 (ユーザが入力すべきテキスト)"
+msgstr "kbd 要素 (ユーザーが入力すべきテキスト)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:302
 msgid "Title"
@@ -1723,7 +1748,7 @@ msgstr "usemap 属性 (要素とクライアント側イメージマップの関
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:308
 msgid "Value"
-msgstr "value 属性 (コントロールの初期値、パラメータの値)"
+msgstr "value 属性 (コントロールの初期値、パラメーターの値)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:309
 msgid "Value interpretation"
@@ -1858,43 +1883,43 @@ msgstr "ギリシア文字 τ"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:25
 msgid "Header 0 (chapter)"
-msgstr "ヘッダ 0 (chapter)"
+msgstr "ヘッダー 0 (chapter)"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:26
 msgid "Header 0 (chapter*)"
-msgstr "ヘッダ 0 (chpter*)"
+msgstr "ヘッダー 0 (chpter*)"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:27
 msgid "Header 1 (section)"
-msgstr "ヘッダ 1 (section)"
+msgstr "ヘッダー 1 (section)"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:28
 msgid "Header 1 (section*)"
-msgstr "ヘッダ 1 (section*)"
+msgstr "ヘッダー 1 (section*)"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:29
 msgid "Header 2 (subsection)"
-msgstr "ヘッダ 2 (subsection)"
+msgstr "ヘッダー 2 (subsection)"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:30
 msgid "Header 2 (subsection*)"
-msgstr "ヘッダ 2 (subsection*)"
+msgstr "ヘッダー 2 (subsection*)"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:31
 msgid "Header 3 (subsubsection)"
-msgstr "ヘッダ 3 (subsubsection)"
+msgstr "ヘッダー 3 (subsubsection)"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:32
 msgid "Header 3 (subsubsection*)"
-msgstr "ヘッダ 3 (subsubsection*)"
+msgstr "ヘッダー 3 (subsubsection*)"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:33
 msgid "Header 4 (paragraph)"
-msgstr "ヘッダ 4 (paragraph)"
+msgstr "ヘッダー 4 (paragraph)"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:34
 msgid "Header appendix"
-msgstr "ヘッダの目次"
+msgstr "ヘッダーの目次"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:35
 msgid "Item"
