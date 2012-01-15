@@ -246,6 +246,27 @@ then
 	fi
 fi
 
+# ================================================================
+# Terminal (vte)
+# ================================================================
+plugin_defined terminal
+
+if test "$?" = 1
+then
+    AC_CHECK_LIB([vte], [vte_terminal_new], [have_vte=yes], [have_vte=no])
+
+	if test "x$have_vte" = "xno"; then
+		plugin_defined_explicit terminal
+		if test "$?" = 1
+		then
+			AC_MSG_ERROR([vte could not be found, needed for terminal plugin])
+		else
+			AC_MSG_WARN([vte could not be found, terminal plugin will be disabled])
+			undef_plugin terminal "vte not found"
+		fi
+	fi
+fi
+
 if test -z "$disabled_plugins"
 then
 	disabled_plugins="none"
