@@ -167,11 +167,11 @@ for it to work."""
         doc.append(" * @", arg.name, ": ")
 
         if sm:
-            doc.append_placeholder("A #%s" % (sm.group(1) or sm.group(2),))
+            doc.append_placeholder("a #%s" % (sm.group(1) or sm.group(2),))
         else:
             doc.append_placeholder("Description")
 
-        doc.append("\n")
+        doc.append(".\n")
 
     doc.append(" *\n * ").append_placeholder("Description").append(".\n")
 
@@ -180,11 +180,11 @@ for it to work."""
         doc.append(" *\n * Returns: ")
 
         if sm:
-            doc.append_placeholder("A #%s" % (sm.group(1) or sm.group(2),))
+            doc.append_placeholder("a #%s" % (sm.group(1) or sm.group(2),))
         else:
             doc.append_placeholder("Description")
 
-        doc.append("\n")
+        doc.append(".\n")
 
     doc.append(" *\n **/\n")
     doc.insert()
