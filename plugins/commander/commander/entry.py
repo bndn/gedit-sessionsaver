@@ -70,7 +70,7 @@ class Entry(Gtk.EventBox):
 	bind "<Control>K" { "delete-from-cursor" (display-line-ends, 1) };
 	bind "<Control>E" { "move-cursor" (buffer-ends, 1, 0) };
 	bind "Escape" { "delete-from-cursor" (display-lines, 1) };
-};
+}
 
 GtkEntry#gedit-commander-entry {
 	gtk-key-bindings: terminal-like-bindings;
