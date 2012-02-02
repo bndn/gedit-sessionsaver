@@ -87,7 +87,7 @@ def rename(view, newfile):
 
     f = doc.get_location()
 
-    if not f.query_exists():
+    if not f.query_exists(None):
         raise commander.commands.exceptions.Execute('Current document file does not exist')
 
     if os.path.isabs(newfile):
@@ -98,7 +98,7 @@ def rename(view, newfile):
     if f.equal(dest):
         yield commander.commands.result.HIDE
 
-    if not dest.get_parent().query_exists():
+    if not dest.get_parent().query_exists(None):
         # Check to create parent directory
         fstr, words, modifierret = (yield commands.result.Prompt('Directory does not exist, create? [Y/n] '))
 
@@ -111,14 +111,14 @@ def rename(view, newfile):
         else:
             yield commander.commands.result.HIDE
 
-    if dest.query_exists():
+    if dest.query_exists(None):
         fstr, words, modifierret = (yield commands.result.Prompt('Destination already exists, overwrite? [Y/n]'))
 
         if not fstr.strip().lower() in ['y', 'ye', 'yes', '']:
             yield commander.commands.result.HIDE
 
     try:
-        f.move(dest, _dummy_cb, flags=Gio.FileCopyFlags.OVERWRITE)
+        f.move(dest, Gio.FileCopyFlags.OVERWRITE, None, _dummy_cb, None)
 
         doc.set_location(dest)
         yield commander.commands.result.HIDE
