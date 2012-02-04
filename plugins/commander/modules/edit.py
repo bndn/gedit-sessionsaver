@@ -60,7 +60,7 @@ def __default__(filename, view):
 
     if files:
         window = view.get_toplevel()
-        Gedit.commands_load_locations(window, files)
+        Gedit.commands_load_locations(window, files, None, 0, 0)
 
     return commander.commands.result.HIDE
 
@@ -138,7 +138,7 @@ def _edit_command(view, mod, func=None):
         return False
 
     if not func:
-        Gedit.commands_load_location(view.get_toplevel(), location)
+        Gedit.commands_load_location(view.get_toplevel(), location, None, 0, 0)
     else:
         try:
             lines = inspect.getsourcelines(func)
@@ -146,7 +146,7 @@ def _edit_command(view, mod, func=None):
         except:
             line = 0
 
-        Gedit.commands_load_location(view.get_toplevel(), location, None, line)
+        Gedit.commands_load_location(view.get_toplevel(), location, None, line, 0)
 
     return True
 
