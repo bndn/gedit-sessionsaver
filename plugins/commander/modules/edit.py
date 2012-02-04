@@ -200,6 +200,8 @@ def __default__(view, entry):
 
 Use this to apply the cool new feature\"\"\"
     pass
+
+# vi:ts=4:et
 """
 
 def new_command(view, entry, name):
