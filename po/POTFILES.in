@@ -8,27 +8,23 @@ plugins/codecomment/codecomment.py
 plugins/colorpicker/colorpicker.plugin.desktop.in.in
 plugins/colorpicker/colorpicker.py
 plugins/commander/commander.plugin.desktop.in.in
-plugins/dashboard/dashboard.plugin.desktop.in.in
+plugins/commander/commander/windowactivatable.py
 plugins/dashboard/dashboard/dashboard.py
+plugins/dashboard/dashboard.plugin.desktop.in.in
 plugins/drawspaces/drawspaces.plugin.desktop.in.in
-[type: gettext/glade]plugins/drawspaces/gedit-drawspaces-plugin.ui
 plugins/drawspaces/gedit-drawspaces-plugin.c
+[type: gettext/glade]plugins/drawspaces/gedit-drawspaces-plugin.ui
 plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in
 plugins/joinlines/joinlines.plugin.desktop.in.in
 plugins/joinlines/joinlines.py
-plugins/multiedit/multiedit.plugin.desktop.in.in
 plugins/multiedit/multiedit/documenthelper.py
-plugins/textsize/textsize.plugin.desktop.in.in
-plugins/sessionsaver/__init__.py
+plugins/multiedit/multiedit/__init__.py
+plugins/multiedit/multiedit.plugin.desktop.in.in
 plugins/sessionsaver/dialogs.py
+plugins/sessionsaver/__init__.py
 plugins/sessionsaver/sessionsaver.plugin.desktop.in.in
 [type: gettext/glade]plugins/sessionsaver/sessionsaver.ui
 plugins/smartspaces/smartspaces.plugin.desktop.in.in
-plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in
-plugins/terminal/terminal.plugin.desktop.in.in
-plugins/terminal/terminal.py
-plugins/wordcompletion/gedit-word-completion-plugin.c
-plugins/wordcompletion/wordcompletion.plugin.desktop.in.in
 plugins/synctex/synctex.plugin.desktop.in.in
 plugins/synctex/synctex/synctex.py
 plugins/taglist/gedit-taglist-plugin.c
@@ -39,3 +35,10 @@ plugins/taglist/Latex.tags.xml.in
 plugins/taglist/taglist.plugin.desktop.in.in
 plugins/taglist/XSLT.tags.xml.in
 plugins/taglist/XUL.tags.xml.in
+plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in
+plugins/terminal/terminal.plugin.desktop.in.in
+plugins/terminal/terminal.py
+plugins/textsize/textsize/__init__.py
+plugins/textsize/textsize.plugin.desktop.in.in
+plugins/wordcompletion/gedit-word-completion-plugin.c
+plugins/wordcompletion/wordcompletion.plugin.desktop.in.in
