@@ -253,7 +253,7 @@ plugin_defined terminal
 
 if test "$?" = 1
 then
-    AC_CHECK_LIB([vte], [vte_terminal_new], [have_vte=yes], [have_vte=no])
+    AC_CHECK_LIB([vte2_90], [vte_terminal_new], [have_vte=yes], [have_vte=no])
 
 	if test "x$have_vte" = "xno"; then
 		plugin_defined_explicit terminal
