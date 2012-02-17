@@ -52,8 +52,6 @@ class CharmapPanel(Gtk.Box):
         scrolled_window.add(self.chartable)
         paned.pack2(scrolled_window, True, True)
 
-        self.view.select_locale()
-
         paned.set_position(150)
         paned.show_all()
 
