@@ -19,7 +19,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-from gi.repository import GObject, Gtk, Gedit
+from gi.repository import GObject, Gtk, Gdk, Gedit
 import re
 import gettext
 from gpdefs import *
@@ -101,7 +101,7 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
             if not next_char(iter):
                 return
 
-    def get_color_position(self, buf):
+    def get_rgba_position(self, buf):
         bounds = buf.get_selection_bounds()
         if bounds == ():
             # No selection, find color in the current cursor position
@@ -142,7 +142,7 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
         doc.begin_user_action()
 
         # Get the color
-        bounds = self.get_color_position(doc)
+        bounds = self.get_rgba_position(doc)
 
         if not bounds:
             doc.delete_selection(False, True)
@@ -154,12 +154,7 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
         doc.end_user_action()
 
     def scale_color_component(self, component):
-        return min(max(int(round(component * 255. / 65535.)), 0), 255)
-
-    def scale_color(self, color):
-        color.red = self.scale_color_component(color.red)
-        color.green = self.scale_color_component(color.green)
-        color.blue = self.scale_color_component(color.blue)
+        return min(max(int(round(component * 255.)), 0), 255)
 
     def get_current_color(self):
         doc = self.window.get_active_document()
@@ -167,56 +162,40 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
         if not doc:
             return None
 
-        bounds = self.get_color_position(doc)
+        bounds = self.get_rgba_position(doc)
 
         if bounds:
-            return doc.get_text(bounds[0], bounds[1])
+            return doc.get_text(bounds[0], bounds[1], False)
         else:
             return None
-
-    def dialog_transient_for(self, window):
-        if self._dialog:
-            self._dialog.set_transient_for(window)
 
     # Signal handlers
 
     def on_color_picker_activate(self):
         if not self._dialog:
-            self._dialog = Gtk.ColorSelectionDialog(_('Pick Color'))
-            self._dialog.get_color_selection().set_has_palette(True)
-
-            image = Gtk.Image()
-            image.set_from_stock(Gtk.STOCK_SELECT_COLOR, Gtk.IconSize.BUTTON)
-
-            ok_button = self._dialog.get_property("ok-button")
-            ok_button.set_label(_('_Insert'))
-            ok_button.set_image(image)
-
-            cancel_button = self._dialog.get_property("cancel-button")
-            cancel_button.set_use_stock(True)
-            cancel_button.set_label(Gtk.STOCK_CLOSE)
+            self._dialog = Gtk.ColorChooserDialog(_('Pick Color'), self.window)
 
             self._dialog.connect('response', self.on_dialog_response)
 
-        color_str = self.get_current_color()
+        rgba_str = self.get_current_color()
 
-        if color_str:
-            parsed, color = Gdk.color_parse(color_str)
+        if rgba_str:
+            rgba = Gdk.RGBA()
+            parsed = rgba.parse(rgba_str)
 
             if parsed:
-                self._dialog.colorsel.set_current_color(color)
+                self._dialog.set_rgba(rgba)
 
-        self._dialog.set_transient_for(self.window)
         self._dialog.present()
 
     def on_dialog_response(self, dialog, response):
         if response == Gtk.ResponseType.OK:
-            color = dialog.get_color_selection().get_current_color()
+            rgba = Gdk.RGBA()
+            dialog.get_rgba(rgba)
 
-            self.scale_color(color)
-
-            self.insert_color("%02x%02x%02x" % (color.red, \
-                                                color.green, color.blue))
+            self.insert_color("%02x%02x%02x" % (self.scale_color_component(rgba.red), \
+                                                self.scale_color_component(rgba.green), \
+                                                self.scale_color_component(rgba.blue)))
         else:
             self._dialog.destroy()
             self._dialog = None
