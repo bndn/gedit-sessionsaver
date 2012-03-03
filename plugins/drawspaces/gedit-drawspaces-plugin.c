@@ -488,10 +488,7 @@ static DrawspacesConfigureWidget *
 get_configuration_widget (GeditDrawspacesPlugin *plugin)
 {
 	DrawspacesConfigureWidget *widget = NULL;
-	gboolean ret;
-	GtkWidget *error_widget;
-	gchar *datadir;
-	gchar *filename;
+	GtkBuilder *builder;
 
 	gchar *root_objects[] = {
 		"content",
@@ -503,31 +500,20 @@ get_configuration_widget (GeditDrawspacesPlugin *plugin)
 	widget->flags = g_settings_get_flags (widget->settings,
 					      SETTINGS_KEY_DRAW_SPACES);
 
-	datadir = peas_extension_base_get_data_dir (PEAS_EXTENSION_BASE (plugin));
-	filename = g_build_filename (datadir, UI_FILE, NULL);
-
-	ret = gedit_utils_get_ui_objects_with_translation_domain (filename,
-	                                                          GETTEXT_PACKAGE,
-					                          root_objects,
-					                          &error_widget,
-					                          "content", &widget->content,
-					                          "check_button_draw_tabs", &widget->draw_tabs,
-					                          "check_button_draw_spaces", &widget->draw_spaces,
-					                          "check_button_draw_new_lines", &widget->draw_newline,
-					                          "check_button_draw_nbsp", &widget->draw_nbsp,
-					                          "check_button_draw_leading", &widget->draw_leading,
-					                          "check_button_draw_text", &widget->draw_text,
-					                          "check_button_draw_trailing", &widget->draw_trailing,
-					                          NULL);
-
-	g_free (datadir);
-	g_free (filename);
-
-	if (!ret)
-	{
-		widget->content = error_widget;
-		return widget;
-	}
+	builder = gtk_builder_new ();
+	gtk_builder_set_translation_domain (builder, GETTEXT_PACKAGE);
+	gtk_builder_add_objects_from_resource (builder, "/org/gnome/gedit/plugins/drawspaces/ui/gedit-drawspaces-plugin.ui",
+	                                       root_objects, NULL);
+	widget->content = GTK_WIDGET (gtk_builder_get_object (builder, "content"));
+	g_object_ref (widget->content);
+	widget->draw_tabs = GTK_WIDGET (gtk_builder_get_object (builder, "check_button_draw_tabs"));
+	widget->draw_spaces = GTK_WIDGET (gtk_builder_get_object (builder, "check_button_draw_spaces"));
+	widget->draw_newline = GTK_WIDGET (gtk_builder_get_object (builder, "check_button_draw_new_lines"));
+	widget->draw_nbsp = GTK_WIDGET (gtk_builder_get_object (builder, "check_button_draw_nbsp"));
+	widget->draw_leading = GTK_WIDGET (gtk_builder_get_object (builder, "check_button_draw_leading"));
+	widget->draw_text = GTK_WIDGET (gtk_builder_get_object (builder, "check_button_draw_text"));
+	widget->draw_trailing = GTK_WIDGET (gtk_builder_get_object (builder, "check_button_draw_trailing"));
+	g_object_unref (builder);
 
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget->draw_tabs),
 				      widget->flags & GTK_SOURCE_DRAW_SPACES_TAB);

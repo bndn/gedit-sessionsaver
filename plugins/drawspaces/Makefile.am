@@ -9,15 +9,19 @@ INCLUDES = \
 
 plugin_LTLIBRARIES = libdrawspaces.la
 
+BUILT_SOURCES = \
+	gedit-drawspaces-resources.c
+
 libdrawspaces_la_SOURCES = \
 	gedit-drawspaces-plugin.h				\
-	gedit-drawspaces-plugin.c				
+	gedit-drawspaces-plugin.c				\
+	$(BUILT_SOURCES)
 
 libdrawspaces_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 libdrawspaces_la_LIBADD = $(GEDIT_LIBS)
 
-uidir = $(GEDIT_PLUGINS_DATA_DIR)/drawspaces
-ui_DATA = gedit-drawspaces-plugin.ui
+gedit-drawspaces-resources.c: gedit-drawspaces.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/gedit-drawspaces.gresource.xml)
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source $(srcdir)/gedit-drawspaces.gresource.xml
 
 # Plugin Info
 
@@ -32,7 +36,10 @@ gsettings_SCHEMAS = org.gnome.gedit.plugins.drawspaces.gschema.xml
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-EXTRA_DIST = $(plugin_in_files) $(ui_DATA) org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in
+EXTRA_DIST = \
+	$(plugin_in_files) \
+	org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in \
+	gedit-drawspaces-plugin.ui
 
 CLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
 DISTCLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
