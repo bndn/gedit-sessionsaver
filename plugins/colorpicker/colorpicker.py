@@ -175,7 +175,7 @@ class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
         if not self._dialog:
             self._dialog = Gtk.ColorChooserDialog(_('Pick Color'), self.window)
 
-            self._dialog.connect('response', self.on_dialog_response)
+            self._dialog.connect_after('response', self.on_dialog_response)
 
         rgba_str = self.get_current_color()
 
