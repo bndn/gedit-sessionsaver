@@ -39,6 +39,7 @@ gsettings_SCHEMAS = org.gnome.gedit.plugins.drawspaces.gschema.xml
 EXTRA_DIST = \
 	$(plugin_in_files) \
 	org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in \
+	gedit-drawspaces.gresource.xml \
 	gedit-drawspaces-plugin.ui
 
 CLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
