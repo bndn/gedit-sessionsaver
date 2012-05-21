@@ -1,459 +1,423 @@
-# translation of gedit.HEAD.po to Slovak
-# translation of sk.po to Slovak
-# Slovak translation of sk.po
-# gedit sk.po
-# Copyright (C) 2000-2002, 2003, 2004, 2005, 2009 Free Software Foundation, Inc.
-# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000-2002,2003.
-# Stanislav Višňovský <visnovsky@nenya.ms.mff.cuni.cz>, 2002.
+# translation of gedit-plugins to Slovak
+# Copyright (C) 2000-2005, 2009, 2011, 2012 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gedit-plugins package.
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000-2003.
 # Stanislav Visnovsky <visnovsky@kde.org>, 2003, 2004.
 # Marcel Telka <marcel@telka.sk>, 2005, 2009.
+# Ivan Masár <helix84@centrum.sk>, 2011, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:12+0100\n"
-"PO-Revision-Date: 2009-01-17 23:45+0100\n"
-"Last-Translator: Marcel Telka <marcel@telka.sk>\n"
-"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"Project-Id-Version: gedit-plugins\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&keywords=I18N+L10N&component=Plugins\n"
+"POT-Creation-Date: 2012-03-18 14:42+0000\n"
+"PO-Revision-Date: 2012-05-21 09:22+0200\n"
+"Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
+"Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural= (n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
 msgid "Bookmarks"
-msgstr ""
+msgstr "Záložky"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
 msgid "Easy document navigation with bookmarks"
-msgstr ""
-
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-msgid "Toggle Bookmark"
-msgstr ""
-
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
-msgid "Toggle bookmark status of the current line"
-msgstr "Zobraziť alebo skryť stavovú lištu v aktuálnom okne"
+msgstr "Jednoduchá navigácia v dokumente pomocou záložiek"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
-msgid "Goto Next Bookmark"
-msgstr ""
+msgid "Toggle Bookmark"
+msgstr "Prepnúť záložku"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
-msgid "Goto the next bookmark"
-msgstr "Zobraziť nasledujúcu stranu"
+msgid "Toggle bookmark status of the current line"
+msgstr "Prepnúť stav záložky na aktuálnom riadku"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
-msgid "Goto Previous Bookmark"
-msgstr "Zobraziť predchádzajúcu stranu"
+msgid "Goto Next Bookmark"
+msgstr "Prejsť na ďalšiu záložku"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
+msgid "Goto the next bookmark"
+msgstr "Prejde na ďalšiu záložku"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:206
+msgid "Goto Previous Bookmark"
+msgstr "Prejsť na predchádzajúcu záložku"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:207
 msgid "Goto the previous bookmark"
-msgstr "Zobraziť predchádzajúcu stranu"
+msgstr "Prejde na predchádzajúcu záložku"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-msgid "Automatically adds closing brackets."
-msgstr ""
+msgid "Bracket Completion"
+msgstr "Dopĺňanie pravých zátvoriek"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
-#, fuzzy
-msgid "Bracket Completion"
-msgstr "Prípona záložnej kópie"
+msgid "Automatically adds closing brackets."
+msgstr "Automatické pridávanie pravých zátvoriek."
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
+#: ../plugins/charmap/charmap/__init__.py:51
 msgid "Character Map"
-msgstr "Kódovania znakov"
+msgstr "Mapa znakov"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
-msgstr ""
+msgstr "Špeciálne znaky vložíte jednoducho kliknutím na ne."
 
+#. ex:et:ts=4:
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "Komentár"
+msgstr "Komentár kódu"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
-msgstr ""
+msgstr "Zakomentovanie alebo odkomentovanie vybraného bloku kódu."
+
+#: ../plugins/codecomment/codecomment.py:88
+msgid "Co_mment Code"
+msgstr "Ko_mentovať kód"
 
 #: ../plugins/codecomment/codecomment.py:90
-#, fuzzy
-msgid "Co_mment Code"
-msgstr "Komentár"
-
-#: ../plugins/codecomment/codecomment.py:92
-#, fuzzy
 msgid "Comment the selected code"
-msgstr "Odstráni vybraný text"
+msgstr "Zakomentuje vybraný kód"
+
+#: ../plugins/codecomment/codecomment.py:94
+msgid "U_ncomment Code"
+msgstr "Odkome_ntovať kód"
 
 #: ../plugins/codecomment/codecomment.py:96
-msgid "U_ncomment Code"
-msgstr ""
-
-#: ../plugins/codecomment/codecomment.py:98
-#, fuzzy
 msgid "Uncomment the selected code"
-msgstr "Odstráni vybraný text"
+msgstr "Odstráni komentár z vybraného kódu"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
 msgid "Color Picker"
-msgstr ""
+msgstr "Výber farieb"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
-msgstr ""
+msgstr "Výber farby z dialógu a vloženie jej kódu v šestnástkovej sústave."
+
+#: ../plugins/colorpicker/colorpicker.py:76
+msgid "Pick _Color..."
+msgstr "Vybrať _farbu..."
 
 #: ../plugins/colorpicker/colorpicker.py:77
-msgid "Pick _Color..."
-msgstr ""
-
-#: ../plugins/colorpicker/colorpicker.py:78
 msgid "Pick a color from a dialog"
-msgstr ""
+msgstr "Výber farby z dialógového okna"
 
-#: ../plugins/colorpicker/colorpicker.py:188
-#, fuzzy
+#: ../plugins/colorpicker/colorpicker.py:176
 msgid "Pick Color"
-msgstr "Farba odkazu"
-
-#: ../plugins/colorpicker/colorpicker.py:195
-msgid "_Insert"
-msgstr "V_ložiť"
+msgstr "Vybrať farbu"
 
 #. ex:ts=4:et:
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:1
-msgid "Command line interface for advanced editing"
-msgstr ""
+msgid "Commander"
+msgstr "Commander"
 
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:2
-#, fuzzy
-msgid "Commander"
-msgstr "_Príkaz:"
+msgid "Command line interface for advanced editing"
+msgstr "Rozhranie príkazového riadka na pokročilé úpravy"
 
-#. ex:set ts=8 noet:
-#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
+#: ../plugins/commander/commander/windowactivatable.py:70
 #, fuzzy
+#| msgid "Commander"
+msgid "Commander Mode"
+msgstr "Commander"
+
+#: ../plugins/commander/commander/windowactivatable.py:71
+msgid "Start commander mode"
+msgstr ""
+
+#: ../plugins/dashboard/dashboard/dashboard.py:110
+msgid "Empty Document"
+msgstr "Prázdny dokument"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:218
+msgid "Type here to search..."
+msgstr "Hľadanie začnete písaním sem..."
+
+#: ../plugins/dashboard/dashboard/dashboard.py:345
+msgid "Most Used"
+msgstr "Najpoužívanejšie"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:346
+msgid "Recently Used"
+msgstr "Nedávno použité"
+
+#. ex:ts=4:et:
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:1
+msgid "Dashboard"
+msgstr "Tabuľa"
+
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:2
+msgid "A Dashboard for new tabs"
+msgstr "Tabuľa ako miesto pre nové karty"
+
+#: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "Draw Spaces"
-msgstr "Vložiť medzery"
+msgstr "Vykresľovať medzery"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
-msgstr ""
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
-msgid "Draw leading spaces"
-msgstr "O_dstrániť duplikáty"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
-msgid "Draw new lines"
-msgstr ""
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-msgid "Draw non-breaking spaces"
-msgstr ""
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
-msgid "Draw spaces"
-msgstr "Vložiť medzery"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
-msgid "Draw spaces in text"
-msgstr ""
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
-msgid "Draw tabs"
-msgstr ""
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
-msgid "Draw trailing spaces"
-msgstr "O_dstrániť duplikáty"
+msgstr "Vykresľovanie medzier a tabulátorov"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
 msgid "Show _White Space"
-msgstr "Zobraziť nasledujúcu stranu"
+msgstr "Zobrazovať _netlačiteľné znaky"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
 msgid "Show spaces and tabs"
-msgstr "Vložiť _medzery miesto tabulátorov"
+msgstr "Zobrazí medzery a tabulátory"
 
-#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
+#. ex:set ts=8 noet:
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
+msgid "Draw spaces"
+msgstr "Vykresľovať medzery"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
+msgid "Draw tabs"
+msgstr "Vykresľovať tabulátory"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
+msgid "Draw new lines"
+msgstr "Vykresľovať nové riadky"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
+msgid "Draw non-breaking spaces"
+msgstr "Vykresľovať nezalomiteľné medzery"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
+msgid "Draw leading spaces"
+msgstr "Vykresľovať medzery na začiatku riadka"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
+msgid "Draw spaces in text"
+msgstr "Vykresľovať medzery v texte"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
+msgid "Draw trailing spaces"
+msgstr "Vykresľovať medzery na konci riadka"
+
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
 msgid "Enabled"
 msgstr "Povolené"
 
-#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
 msgid "If TRUE drawing will be enabled."
-msgstr ""
+msgstr "Ak je voľba zapnutá, kreslenie bude povolené."
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
 msgid "The type of spaces to be drawn."
-msgstr ""
+msgstr "Typ medzier, ktoré sa majú vykresliť."
 
 #: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
-msgid "Join several lines or split long ones"
-msgstr ""
+msgid "Join/Split Lines"
+msgstr "Spojenie/rozdelenie riadkov"
 
 #: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
-msgid "Join/Split Lines"
-msgstr ""
+msgid "Join several lines or split long ones"
+msgstr "Spojenie niekoľkých riadkov alebo rozdelenie dlhých"
 
-#: ../plugins/joinlines/joinlines.py:56
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:74
 msgid "_Join Lines"
-msgstr "Riadky"
+msgstr "Spo_jiť riadky"
 
-#: ../plugins/joinlines/joinlines.py:57
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:75
 msgid "Join the selected lines"
-msgstr "Zrušiť odsadenie vybraných riadkov"
+msgstr "Spojí vybrané riadky"
 
-#: ../plugins/joinlines/joinlines.py:59
+#: ../plugins/joinlines/joinlines.py:77
 msgid "_Split Lines"
-msgstr ""
+msgstr "_Rozdelenie riadkov"
 
-#: ../plugins/joinlines/joinlines.py:60
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:78
 msgid "Split the selected lines"
-msgstr "Zrušiť odsadenie vybraných riadkov"
-
-#. ex:ts=4:et:
-#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
-msgid "Edit document in multiple places at once"
-msgstr ""
-
-#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
-msgid "Multi Edit"
-msgstr ""
+msgstr "Rozdelí vybrané riadky"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
-msgstr ""
+msgstr "Pridané miesto úpravy..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:637
+#: ../plugins/multiedit/multiedit/documenthelper.py:643
 msgid "Column Mode..."
-msgstr ""
+msgstr "Stĺpcový režim..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:759
+#: ../plugins/multiedit/multiedit/documenthelper.py:757
 msgid "Removed edit point..."
-msgstr ""
+msgstr "Odstránené miesto úpravy..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:922
+#: ../plugins/multiedit/multiedit/documenthelper.py:916
 msgid "Cancelled column mode..."
-msgstr ""
+msgstr "Zrušený stĺpcový režim..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Enter column edit mode using selection"
-msgstr ""
+msgstr "Vstúpiť do režimu úpravy stĺpcov pomocou výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1261
+#: ../plugins/multiedit/multiedit/documenthelper.py:1289
 msgid "Enter <b>smart</b> column edit mode using selection"
-msgstr ""
+msgstr "Vstúpiť do režimu <b>inteligentnej</b> úpravy stĺpcov pomocou výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1262
+#: ../plugins/multiedit/multiedit/documenthelper.py:1290
 msgid "<b>Smart</b> column align mode using selection"
-msgstr ""
+msgstr "<b>Inteligentný</b> režim zarovnania stĺpcov pomocou výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+#: ../plugins/multiedit/multiedit/documenthelper.py:1291
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
+"<b>Inteligentný</b> režim zarovnania stĺpcov s medzerou naviac pomocou výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+#: ../plugins/multiedit/multiedit/documenthelper.py:1293
 msgid "Toggle edit point"
-msgstr ""
+msgstr "Prepnúť miesto úpravy"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+#: ../plugins/multiedit/multiedit/documenthelper.py:1294
 msgid "Add edit point at beginning of line/selection"
-msgstr ""
+msgstr "Pridať miesto úpravy na začiatok riadka/výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+#: ../plugins/multiedit/multiedit/documenthelper.py:1295
 msgid "Add edit point at end of line/selection"
-msgstr ""
+msgstr "Pridať miesto úpravy na koniec riadka/výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1268
+#: ../plugins/multiedit/multiedit/documenthelper.py:1296
 msgid "Align edit points"
-msgstr ""
+msgstr "Zarovnať miesta úprav"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+#: ../plugins/multiedit/multiedit/documenthelper.py:1297
 msgid "Align edit points with additional space"
-msgstr ""
+msgstr "Zarovnať miesta úprav s medzerou naviac"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1305
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
+#: ../plugins/multiedit/multiedit/documenthelper.py:1328
+#: ../plugins/multiedit/multiedit/__init__.py:80
 msgid "Multi Edit Mode"
-msgstr ""
+msgstr "Režim multiúprav"
 
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
+#: ../plugins/multiedit/multiedit/__init__.py:82
+#| msgid "Multi Edit Mode"
 msgid "Start multi edit mode"
-msgstr ""
+msgstr "Spustiť režim multiúprav"
 
 #. ex:ts=4:et:
-#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
-msgid "Easily increase and decrease the text size"
-msgstr ""
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
+msgid "Multi Edit"
+msgstr "Multiúpravy"
 
-#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
-msgid "Text Size"
-msgstr "Veľkosť tabulátora"
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
+msgid "Edit document in multiple places at once"
+msgstr "Upravovanie dokumentu na viacerých miestach súčasne"
 
-#: ../plugins/sessionsaver/__init__.py:64
-msgid "Sa_ved sessions"
-msgstr ""
+#: ../plugins/sessionsaver/dialogs.py:132
+msgid "Session Name"
+msgstr "Názov relácie"
 
-#: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
-msgid "_Save current session"
-msgstr "Skopíruje výber do schránky"
-
-#: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
-msgid "Save the current document list as a new session"
-msgstr "Presunúť aktuálny dokument do nového okna"
-
-#: ../plugins/sessionsaver/__init__.py:66
-msgid "_Manage saved sessions..."
-msgstr ""
-
-#: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
-msgid "Open the saved session manager"
-msgstr "Zobraziť manuál pre gedit"
-
-#: ../plugins/sessionsaver/__init__.py:106
+#: ../plugins/sessionsaver/__init__.py:84
 #, python-format
 msgid "Recover '%s' session"
-msgstr ""
+msgstr "Obnoviť reláciu „%s“"
 
-#: ../plugins/sessionsaver/dialogs.py:167
-msgid "Session Name"
-msgstr ""
+#: ../plugins/sessionsaver/__init__.py:103
+msgid "Sa_ved sessions"
+msgstr "_Uložené relácie"
+
+#: ../plugins/sessionsaver/__init__.py:105
+msgid "_Save current session"
+msgstr "_Uložiť aktuálnu reláciu"
+
+#: ../plugins/sessionsaver/__init__.py:106
+msgid "Save the current document list as a new session"
+msgstr "Uloží aktuálny zoznam dokumentov ako novú reláciu"
+
+#: ../plugins/sessionsaver/__init__.py:108
+msgid "_Manage saved sessions..."
+msgstr "_Spravovať uložené relácie..."
+
+#: ../plugins/sessionsaver/__init__.py:109
+msgid "Open the saved session manager"
+msgstr "Otvorí správcu uložených relácií"
 
 #. ex:ts=4:et:
 #: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:1
-msgid "Save and restore your working sessions"
-msgstr ""
+msgid "Session Saver"
+msgstr "Ukladanie relácií"
 
 #: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
-msgid "Session Saver"
-msgstr ""
+msgid "Save and restore your working sessions"
+msgstr "Uloženie a obnovenie vašich pracovných relácií"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:1
 msgid "Save session"
-msgstr ""
+msgstr "Uložiť reláciu"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:2
-msgid "Saved Sessions"
-msgstr ""
+msgid "Session name:"
+msgstr "Názov relácie:"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:3
-msgid "Session name:"
-msgstr ""
+msgid "Saved Sessions"
+msgstr "Uložené relácie"
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
-msgid "Forget you're not using tabulations."
-msgstr ""
+msgid "Smart Spaces"
+msgstr "Inteligentné medzery"
 
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
-msgid "Smart Spaces"
-msgstr "Vložiť medzery"
-
-#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
-msgid "Embed a terminal in the bottom pane."
-msgstr "Otvorí súbor zo zadaného miesta"
-
-#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
-msgid "Embedded Terminal"
-msgstr "Vložený objekt"
-
-#: ../plugins/terminal/terminal.py:307
-msgid "Terminal"
-msgstr ""
-
-#: ../plugins/terminal/terminal.py:329
-#, fuzzy
-msgid "C_hange Directory"
-msgstr "Zmeniť _na:"
-
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
-#, fuzzy
-msgid "Document Words"
-msgstr "Telo dokumentu"
-
-#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
-msgid "Word Completion"
-msgstr ""
-
-#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
-msgid "Word completion using the completion framework"
-msgstr ""
+msgid "Forget you're not using tabulations."
+msgstr "Zabudnite, že nepoužívate tabulátory."
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
 msgid "SyncTeX"
-msgstr ""
+msgstr "SyncTeX"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
-msgstr ""
+msgstr "Synchronizácia medzi LaTeXom a PDF pomocou programov gedit a evince."
 
-#: ../plugins/synctex/synctex/synctex.py:280
-#: ../plugins/synctex/synctex/synctex.py:281
-#, fuzzy
+#: ../plugins/synctex/synctex/synctex.py:307
+#: ../plugins/synctex/synctex/synctex.py:308
 msgid "Forward Search"
-msgstr "Dopredný odkaz"
+msgstr "Hľdanie dopredu"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:700
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:716
 msgid "Tags"
 msgstr "Značky"
 
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:608
 msgid "Select the group of tags you want to use"
-msgstr "Vyberte skupinu tagov, ktoré chcete používať"
+msgstr "Vyberte skupinu značiek, ktoré chcete používať"
 
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:627
-#, fuzzy
 msgid "_Preview"
-msgstr "Náhľad strany"
+msgstr "_Náhľad"
 
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
 msgid "Available Tag Lists"
 msgstr "Dostupné zoznamy značiek"
 
 #. ex:ts=8:noet:
 #: ../plugins/taglist/HTML.tags.xml.in.h:1
+msgid "XHTML 1.0 — Tags"
+msgstr "XHTML 1.0 — značky"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:2
 msgid "Abbreviated form"
 msgstr "Skrátené tvary"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:2
+#: ../plugins/taglist/HTML.tags.xml.in.h:3
 msgid "Abbreviation"
 msgstr "Skrátenie"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:3
-msgid "Above"
-msgstr "Nad"
-
 #: ../plugins/taglist/HTML.tags.xml.in.h:4
 msgid "Accessibility key character"
-msgstr "Kľúčový znak prístupnosti"
+msgstr "Znak klávesu prístupnosti"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:5
 msgid "Acronym"
@@ -472,1202 +436,1171 @@ msgid "Alternative"
 msgstr "Alternatíva"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:9
-msgid "Anchor"
-msgstr "Kotva"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:10
 msgid "Anchor URI"
 msgstr "URI kotvy"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:11
-msgid "Applet class file code"
-msgstr "Kód súboru triedy apletu"
+#: ../plugins/taglist/HTML.tags.xml.in.h:10
+msgid "Anchor"
+msgstr "Kotva"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:13
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:12
 msgid "Applet class file code (deprecated)"
-msgstr "Kód súboru triedy apletu"
+msgstr "Kód súboru triedy apletu (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:14
-msgid "Array"
-msgstr "Pole"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:15
+#: ../plugins/taglist/HTML.tags.xml.in.h:13
 msgid "Associated information"
 msgstr "Pridružená informácia"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:16
+#: ../plugins/taglist/HTML.tags.xml.in.h:14
 msgid "Author info"
 msgstr "Informácie o autorovi"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:17
+#: ../plugins/taglist/HTML.tags.xml.in.h:15
 msgid "Axis related headers"
-msgstr "Hlavičky podľa osi"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:18
-msgid "Background color"
-msgstr "Farba pozadia"
+msgstr "Hlavičky týkajúce sa osí"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:20
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:17
 msgid "Background color (deprecated)"
-msgstr "Farba pozadia"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:21
-msgid "Background texture tile"
-msgstr "Súbor textúry pozadia"
+msgstr "Farba pozadia (zavrhované)"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:23
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:19
 msgid "Background texture tile (deprecated)"
-msgstr "Súbor textúry pozadia"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:24
-msgid "Base URI"
-msgstr "Základné URI"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:25
-msgid "Base font"
-msgstr "Základné písmo"
+msgstr "Súbor textúry pozadia (zavrhované)"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:27
+#: ../plugins/taglist/HTML.tags.xml.in.h:21
 msgid "Base font (deprecated)"
-msgstr ""
+msgstr "Základné písmo (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:28
+#: ../plugins/taglist/HTML.tags.xml.in.h:22
+msgid "Base URI"
+msgstr "Základný URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:23
 msgid "Bold"
 msgstr "Tučné"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:29
-msgid "Border"
-msgstr "Okraj"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:31
+#: ../plugins/taglist/HTML.tags.xml.in.h:25
 msgid "Border (deprecated)"
-msgstr ""
+msgstr "Okraj (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:32
-msgid "Border color"
-msgstr "Farba okraja"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:33
+#: ../plugins/taglist/HTML.tags.xml.in.h:26
 msgid "Cell rowspan"
-msgstr "Rozpätie riadku bunky"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:34
-msgid "Center"
-msgstr "Vystredené"
+msgstr "Rozpätie riadkov bunky"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:36
+#: ../plugins/taglist/HTML.tags.xml.in.h:28
 msgid "Center (deprecated)"
-msgstr ""
+msgstr "Vystredené (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:37
+#: ../plugins/taglist/HTML.tags.xml.in.h:29
 msgid "Character encoding of linked resource"
-msgstr "Kódovanie znakov zviazaného zdroja"
+msgstr "Kódovanie znakov odkazovaného zdroja"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:38
-msgid "Checked (state)"
-msgstr "Označený (stav)"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:39
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:30
 msgid "Checked state"
-msgstr "Označený (stav)"
+msgstr "Označený stav"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:40
+#: ../plugins/taglist/HTML.tags.xml.in.h:31
 msgid "Citation"
 msgstr "Citácia"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:41
+#: ../plugins/taglist/HTML.tags.xml.in.h:32
 msgid "Cite reason for change"
 msgstr "Citovať dôvod na zmenu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:42
+#: ../plugins/taglist/HTML.tags.xml.in.h:33
 msgid "Class implementation ID"
-msgstr "ID implementácie triedy"
+msgstr "Identifikátor implementácie triedy"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:43
+#: ../plugins/taglist/HTML.tags.xml.in.h:34
 msgid "Class list"
 msgstr "Zoznam tried"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:44
+#: ../plugins/taglist/HTML.tags.xml.in.h:35
 msgid "Clear text flow control"
 msgstr "Riadenie toku čistého textu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:45
+#: ../plugins/taglist/HTML.tags.xml.in.h:36
 msgid "Code content type"
 msgstr "Typ obsahu kódu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:46
-msgid "Color of selected links"
-msgstr "Farba zvoleného odkazu"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:48
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:38
 msgid "Color of selected links (deprecated)"
-msgstr "Farba zvoleného odkazu"
+msgstr "Farba vybraných odkazov (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:49
+#: ../plugins/taglist/HTML.tags.xml.in.h:39
 msgid "Column span"
-msgstr "Rozpätie stĺpca"
+msgstr "Rozpätie stĺpcov"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:50
+#: ../plugins/taglist/HTML.tags.xml.in.h:40
 msgid "Columns"
 msgstr "Stĺpce"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:51
+#: ../plugins/taglist/HTML.tags.xml.in.h:41
 msgid "Comment"
 msgstr "Komentár"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:52
+#: ../plugins/taglist/HTML.tags.xml.in.h:42
 msgid "Computer code fragment"
 msgstr "Úryvok počítačového kódu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:53
-msgid "Content scheme"
-msgstr "Schéma obsahu"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:54
-msgid "Content type"
-msgstr "Typ obsahu"
-
 #. The "type" attribute is deprecated for the "ol" tag only,
 #. since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:57
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:45
 msgid "Content type (deprecated)"
-msgstr "Typ obsahu"
+msgstr "Typ obsahu (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:58
+#: ../plugins/taglist/HTML.tags.xml.in.h:46
 msgid "Coordinates"
 msgstr "Súradnice"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:59
-msgid "DIV Style container"
-msgstr "Kontajner štýlu DIV"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:60
-msgid "DIV container"
-msgstr "Kontajner DIV"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:61
+#: ../plugins/taglist/HTML.tags.xml.in.h:47
 msgid "Date and time of change"
 msgstr "Dátum a čas zmeny"
 
 #. NOTE: used in "object" tag
-#: ../plugins/taglist/HTML.tags.xml.in.h:63
+#: ../plugins/taglist/HTML.tags.xml.in.h:49
 msgid "Declare flag"
 msgstr "Deklarovať príznak"
 
 #. Translators: DEFER is an optional attribute of the <script> tag.
 #. It indicates that the script is not going to generate any document
 #. content. The browser can continue parsing and drawing the page.
-#: ../plugins/taglist/HTML.tags.xml.in.h:67
+#: ../plugins/taglist/HTML.tags.xml.in.h:53
 msgid "Defer attribute"
 msgstr "Odložená vlastnosť"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:68
+#: ../plugins/taglist/HTML.tags.xml.in.h:54
 msgid "Definition description"
 msgstr "Popis definície"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:69
+#: ../plugins/taglist/HTML.tags.xml.in.h:55
 msgid "Definition list"
 msgstr "Zoznam definícií"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:70
+#: ../plugins/taglist/HTML.tags.xml.in.h:56
 msgid "Definition term"
 msgstr "Výraz definície"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:71
+#: ../plugins/taglist/HTML.tags.xml.in.h:57
 msgid "Deleted text"
 msgstr "Odstránený text"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:72
-msgid "Direction"
-msgstr "Smer"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:73
+#: ../plugins/taglist/HTML.tags.xml.in.h:58
 msgid "Directionality"
 msgstr "Smerovosť"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:75
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:60
 msgid "Directionality (deprecated)"
-msgstr "Smerovosť"
+msgstr "Smer textu (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:76
-msgid "Directory list"
-msgstr "Zoznam priečinkov"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:77
+#: ../plugins/taglist/HTML.tags.xml.in.h:61
 msgid "Disabled"
-msgstr "Zablokované"
+msgstr "Zakázané"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:78
+#: ../plugins/taglist/HTML.tags.xml.in.h:62
+msgid "DIV container"
+msgstr "Kontajner DIV"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:63
+msgid "DIV Style container"
+msgstr "Kontajner štýlu DIV"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:64
 msgid "Document base"
 msgstr "Základ dokumentu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:79
+#: ../plugins/taglist/HTML.tags.xml.in.h:65
 msgid "Document body"
 msgstr "Telo dokumentu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:80
+#: ../plugins/taglist/HTML.tags.xml.in.h:66
 msgid "Document head"
-msgstr "Hlavička okumentu"
+msgstr "Hlavička dokumentu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:81
+#: ../plugins/taglist/HTML.tags.xml.in.h:67
+msgid "Element ID"
+msgstr "Identifikátor prvku"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:68
 msgid "Document title"
 msgstr "Nadpis dokumentu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:82
+#: ../plugins/taglist/HTML.tags.xml.in.h:69
 msgid "Document type"
 msgstr "Typ dokumentu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:83
-msgid "Element ID"
-msgstr "ID elementu"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:84
-msgid "Embedded object"
-msgstr "Vložený objekt"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:85
-#: ../plugins/taglist/Latex.tags.xml.in.h:9
+#: ../plugins/taglist/HTML.tags.xml.in.h:70
+#: ../plugins/taglist/Latex.tags.xml.in.h:72
 msgid "Emphasis"
 msgstr "Zdôraznenie"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:86
+#: ../plugins/taglist/HTML.tags.xml.in.h:71
 msgid "Encode type"
 msgstr "Typ kódovania"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:87
-msgid "Figure"
-msgstr "Obrázok"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:88
-msgid "Font face"
-msgstr "Typ písma"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:90
+#: ../plugins/taglist/HTML.tags.xml.in.h:73
 msgid "Font face (deprecated)"
-msgstr ""
+msgstr "Typ písma (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:91
+#: ../plugins/taglist/HTML.tags.xml.in.h:74
 msgid "For label"
 msgstr "Pre popis"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:92
+#: ../plugins/taglist/HTML.tags.xml.in.h:75
 msgid "Forced line break"
 msgstr "Vynútený koniec riadku"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:93
-msgid "Form"
-msgstr "Formulár"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:94
+#: ../plugins/taglist/HTML.tags.xml.in.h:76
 msgid "Form action handler"
 msgstr "Obsluha akcie formulára"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:95
+#: ../plugins/taglist/HTML.tags.xml.in.h:77
 msgid "Form control group"
 msgstr "Riadiaca skupina formulára"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:96
+#: ../plugins/taglist/HTML.tags.xml.in.h:78
 msgid "Form field label text"
 msgstr "Text popisu poľa formulára"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:97
-msgid "Form input"
-msgstr "Vstup formulára"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:98
+#: ../plugins/taglist/HTML.tags.xml.in.h:79
 msgid "Form input type"
 msgstr "Typ vstupu formulára"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:99
+#: ../plugins/taglist/HTML.tags.xml.in.h:80
+msgid "Form input"
+msgstr "Vstup formulára"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:81
 msgid "Form method"
 msgstr "Metóda formulára"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:100
+#: ../plugins/taglist/HTML.tags.xml.in.h:82
+msgid "Form"
+msgstr "Formulár"
+
+# odkaz s atribútom rel
+#: ../plugins/taglist/HTML.tags.xml.in.h:83
 msgid "Forward link"
 msgstr "Dopredný odkaz"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:101
-msgid "Frame"
-msgstr "Rámec"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:102
-#, fuzzy
-msgid "Frame border"
-msgstr "Okraj rámca"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:103
+#: ../plugins/taglist/HTML.tags.xml.in.h:84
 msgid "Frame render parts"
 msgstr "Časti vykreslenia rámca"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:104
+#: ../plugins/taglist/HTML.tags.xml.in.h:85
 msgid "Frame source"
 msgstr "Zdroj rámca"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:105
-#, fuzzy
-msgid "Frame spacing"
-msgstr "Rámcová medzera"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:106
+#: ../plugins/taglist/HTML.tags.xml.in.h:86
 msgid "Frame target"
 msgstr "Cieľ rámca"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:107
-msgid "Frameborder"
+#: ../plugins/taglist/HTML.tags.xml.in.h:87
+msgid "Frame"
+msgstr "Rámec"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:88
+msgid "Frame border"
 msgstr "Okraj rámca"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:108
-msgid "Frameset"
-msgstr "Množina rámcov"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:109
+#: ../plugins/taglist/HTML.tags.xml.in.h:89
 msgid "Frameset columns"
-msgstr "Stľpce množiny rámcov"
+msgstr "Stĺpce množiny rámcov"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:110
+#: ../plugins/taglist/HTML.tags.xml.in.h:90
 msgid "Frameset rows"
 msgstr "Riadky množiny rámcov"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:111
-msgid "Framespacing"
-msgstr "Rámcová medzera"
+#: ../plugins/taglist/HTML.tags.xml.in.h:91
+msgid "Frameset"
+msgstr "Množina rámcov"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:112
+#: ../plugins/taglist/HTML.tags.xml.in.h:92
+msgid "Frame spacing"
+msgstr "Rozostupy medzi rámcami"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:93
 msgid "Generic embedded object"
 msgstr "Všeobecný vložený objekt"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:113
+#: ../plugins/taglist/HTML.tags.xml.in.h:94
 msgid "Generic metainformation"
 msgstr "Všeobecné metainformácie"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:114
+#: ../plugins/taglist/HTML.tags.xml.in.h:95
 msgid "Generic span"
 msgstr "Všeobecné rozpätie"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:115
-msgid "HREF URI"
-msgstr "HREF URI"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:116
-msgid "HTML root element"
-msgstr "Koreňový element HTML"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:117
-msgid "HTML version"
-msgstr "Verzia HTML"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:118
-#, fuzzy
-msgid "HTML — Special Characters"
-msgstr "HTML - Špeciálne znaky"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:119
-#, fuzzy
-msgid "HTML — Tags"
-msgstr "HTML - značky"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:120
-msgid "HTTP header name"
-msgstr "Názov hlavičky HTML"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:121
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:96
 msgid "Header cell IDs"
-msgstr "ID bunky hlavičky"
+msgstr "Identifikátory bunky hlavičky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:122
-msgid "Heading"
-msgstr "Nadpis"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:123
+#: ../plugins/taglist/HTML.tags.xml.in.h:97
 msgid "Heading 1"
 msgstr "Nadpis 1"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:124
+#: ../plugins/taglist/HTML.tags.xml.in.h:98
 msgid "Heading 2"
 msgstr "Nadpis 2"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:125
+#: ../plugins/taglist/HTML.tags.xml.in.h:99
 msgid "Heading 3"
 msgstr "Nadpis 3"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:126
+#: ../plugins/taglist/HTML.tags.xml.in.h:100
 msgid "Heading 4"
 msgstr "Nadpis 4"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:127
+#: ../plugins/taglist/HTML.tags.xml.in.h:101
 msgid "Heading 5"
 msgstr "Nadpis 5"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:128
+#: ../plugins/taglist/HTML.tags.xml.in.h:102
 msgid "Heading 6"
 msgstr "Nadpis 6"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:129
+#: ../plugins/taglist/HTML.tags.xml.in.h:103
 msgid "Height"
 msgstr "Výška"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:130
+#: ../plugins/taglist/HTML.tags.xml.in.h:104
 msgid "Horizontal rule"
-msgstr "Horizontálne pravidlo"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:131
-msgid "Horizontal space"
-msgstr "Vodorovná medzera"
+msgstr "Vodorovná čiara"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:133
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:106
 msgid "Horizontal space (deprecated)"
-msgstr "Vodorovná medzera"
+msgstr "Vodorovná medzera (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:134
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:107
+msgid "HREF URI"
+msgstr "HREF URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:108
+msgid "HTML root element"
+msgstr "Koreňový element HTML"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:109
+msgid "HTTP header name"
+msgstr "Názov hlavičky HTML"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:110
 msgid "I18N BiDi override"
-msgstr "Obojsmerné nahradenie I18N"
+msgstr "Nahradenie smerovosti"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:135
-msgid "Image"
-msgstr "Obrázok"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:136
-msgid "Image map"
-msgstr "Obrazová mapa"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:137
+#: ../plugins/taglist/HTML.tags.xml.in.h:111
 msgid "Image map area"
 msgstr "Oblasť obrazovej mapy"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:138
+#: ../plugins/taglist/HTML.tags.xml.in.h:112
 msgid "Image map name"
 msgstr "Názov obrazovej mapy"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:139
-msgid "Image source"
-msgstr "Zdroj obrázka"
+#: ../plugins/taglist/HTML.tags.xml.in.h:113
+msgid "Image map"
+msgstr "Obrazová mapa"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:140
+#: ../plugins/taglist/HTML.tags.xml.in.h:114
+msgid "Image"
+msgstr "Obrázok"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:115
 msgid "Inline frame"
 msgstr "Vložený rámec"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:141
-msgid "Inline layer"
-msgstr "Vložená vrstva"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:142
+#: ../plugins/taglist/HTML.tags.xml.in.h:116
 msgid "Inserted text"
 msgstr "Vložený text"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:143
+#: ../plugins/taglist/HTML.tags.xml.in.h:117
 msgid "Instance definition"
 msgstr "Definícia inštancie"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:144
+#: ../plugins/taglist/HTML.tags.xml.in.h:118
 msgid "Italic text"
 msgstr "Text kurzívou"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:145
-msgid "Java applet"
-msgstr "Java applet"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:147
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:120
 msgid "Java applet (deprecated)"
-msgstr "Java applet"
+msgstr "Java aplet (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:148
+#: ../plugins/taglist/HTML.tags.xml.in.h:121
 msgid "Label"
 msgstr "Popis"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:149
+#: ../plugins/taglist/HTML.tags.xml.in.h:122
 msgid "Language code"
 msgstr "Kód jazyka"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:150
+#: ../plugins/taglist/HTML.tags.xml.in.h:123
 msgid "Large text style"
 msgstr "Štýl veľkého textu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:151
-msgid "Layer"
-msgstr "Vrstva"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:152
-msgid "Link color"
-msgstr "Farba odkazu"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:154
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:125
 msgid "Link color (deprecated)"
-msgstr "Farba odkazu"
+msgstr "Farba odkazu (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:155
+#: ../plugins/taglist/HTML.tags.xml.in.h:126
 msgid "List item"
 msgstr "Položka zoznamu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:156
+#: ../plugins/taglist/HTML.tags.xml.in.h:127
 msgid "List of MIME types for file upload"
 msgstr "Zoznam typov MIME pre odoslanie súboru"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:157
+#: ../plugins/taglist/HTML.tags.xml.in.h:128
 msgid "List of supported character sets"
 msgstr "Zoznam podporovaných znakových sád"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:158
-msgid "Listing"
-msgstr "Výpis"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:159
+#: ../plugins/taglist/HTML.tags.xml.in.h:129
 msgid "Local change to font"
 msgstr "Miestna zmena písma"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:160
+#: ../plugins/taglist/HTML.tags.xml.in.h:130
 msgid "Long description link"
 msgstr "Dlhý popis odkazu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:161
+#: ../plugins/taglist/HTML.tags.xml.in.h:131
 msgid "Long quotation"
 msgstr "Dlhá citácia"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:162
-msgid "Mail link"
-msgstr "Poštový odkaz"
-
 #. Supported in XHTML 1.0 Frameset DTD only.
-#: ../plugins/taglist/HTML.tags.xml.in.h:164
+#: ../plugins/taglist/HTML.tags.xml.in.h:133
 msgid "Margin pixel height"
 msgstr "Výška okraja v bodoch"
 
 #. Supported in XHTML 1.0 Frameset DTD only.
-#: ../plugins/taglist/HTML.tags.xml.in.h:166
+#: ../plugins/taglist/HTML.tags.xml.in.h:135
 msgid "Margin pixel width"
 msgstr "Šírka okraja v bodoch"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:167
-msgid "Marquee"
-msgstr "Markíza"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:168
+#: ../plugins/taglist/HTML.tags.xml.in.h:136
 msgid "Maximum length of text field"
 msgstr "Maximálna dĺžka textového poľa"
 
-#. Here I take some liberties: There's no mandatory attributes,
-#. but those are most common, and will likely be used.
-#: ../plugins/taglist/HTML.tags.xml.in.h:171
-msgid "Media-independent link"
-msgstr "Odkaz nezávislý od média"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:172
-msgid "Menu list"
-msgstr "Zoznam menu"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:174
-msgid "Menu list (deprecated)"
-msgstr ""
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:175
-msgid "Multi-line text field"
-msgstr "Viacriadkové textové pole"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:176
-msgid "Multicolumn"
-msgstr "Viacstĺpcové"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:177
-msgid "Multiple"
-msgstr "Viacnásobné"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:178
-msgid "Name"
-msgstr "Meno"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:179
-msgid "Named property value"
-msgstr "Pomenovaná hodnota vlastnosti"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:180
-msgid "Next ID"
-msgstr "Nasledujúce ID"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:181
-msgid "No URI"
-msgstr "Bez URI"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:182
-msgid "No embedded objects"
-msgstr "Bez vložených objektov"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:183
-msgid "No frames"
-msgstr "Bez rámcov"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:184
-msgid "No layers"
-msgstr "Bez vrstiev"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:185
-msgid "No line break"
-msgstr "Bez konca riadku"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:186
-msgid "No resize"
-msgstr "Bez zmeny veľkosti"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:187
-msgid "No script"
-msgstr "Bez skriptu"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:188
-msgid "No shade"
-msgstr "Bez tieňa"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:190
-msgid "No shade (deprecated)"
-msgstr ""
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:191
-msgid "No word wrap"
-msgstr "Nezalamovať riadky"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:193
-#, fuzzy
-msgid "No word wrap (deprecated)"
-msgstr "Nezalamovať riadky"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:194
-msgid "Non-breaking space"
-msgstr ""
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:195
-msgid "Note"
-msgstr "Poznámka"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:196
-msgid "Object applet file"
-msgstr "Súbor appletu objektu"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:198
-#, fuzzy
-msgid "Object applet file (deprecated)"
-msgstr "Súbor appletu objektu"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:199
-msgid "Object data reference"
-msgstr "Odkaz údajov objektu"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:200
-msgid "Offset for alignment character"
-msgstr "Posun pre zarovnanie znaku"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:201
-msgid "OnBlur event"
-msgstr "Udalosť OnBlur"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:202
-msgid "OnChange event"
-msgstr "Udalosť OnChange"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:203
-msgid "OnClick event"
-msgstr "Udalosť OnClick"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:204
-msgid "OnDblClick event"
-msgstr "Udalosť OnDblClick"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:205
-msgid "OnFocus event"
-msgstr "Udalosť OnFocus"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:206
-msgid "OnKeyDown event"
-msgstr "Udalosť OnKeyDown"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:207
-msgid "OnKeyPress event"
-msgstr "Udalosť OnKeyPress"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:208
-msgid "OnKeyUp event"
-msgstr "Udalosť OnKeyUp"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:209
-msgid "OnLoad event"
-msgstr "Udalosť OnLoad"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:210
-msgid "OnMouseDown event"
-msgstr "Udalosť OnMouseDown"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:211
-msgid "OnMouseMove event"
-msgstr "Udalosť OnMouseMove"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:212
-msgid "OnMouseOut event"
-msgstr "Udalosť OnMouseOut"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:213
-msgid "OnMouseOver event"
-msgstr "Udalosť OnMouseOver"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:214
-msgid "OnMouseUp event"
-msgstr "Udalosť OnMouseUp"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:215
-msgid "OnReset event"
-msgstr "Udalosť OnReset"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:216
-msgid "OnSelect event"
-msgstr "Udalosť OnSelect"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:217
-msgid "OnSubmit event"
-msgstr "Udalosť OnSubmit"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:218
-msgid "OnUnload event"
-msgstr "Udalosť OnUnload"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:219
-msgid "Option group"
-msgstr "Skupina volieb"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:220
-msgid "Option selector"
-msgstr "Výber voľby"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:221
-msgid "Ordered list"
-msgstr "Usporiadaný zoznam"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:222
+#: ../plugins/taglist/HTML.tags.xml.in.h:137
 msgid "Output media"
 msgstr "Výstupné médium"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:223
-msgid "Paragraph"
-msgstr "Odstavec"
+#. Here I take some liberties: There's no mandatory attributes,
+#. but those are most common, and will likely be used.
+#: ../plugins/taglist/HTML.tags.xml.in.h:140
+msgid "Media-independent link"
+msgstr "Odkaz nezávislý od média"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:224
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:142
+msgid "Menu list (deprecated)"
+msgstr "Zoznam ponuky (zavrhované)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:143
+msgid "Multi-line text field"
+msgstr "Viacriadkové textové pole"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:144
+msgid "Multiple"
+msgstr "Viacnásobné"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:145
+msgid "Name"
+msgstr "Názov"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:146
+msgid "Named property value"
+msgstr "Pomenovaná hodnota vlastnosti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:147
+msgid "No frames"
+msgstr "Bez rámcov"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:148
+msgid "No resize"
+msgstr "Bez zmeny veľkosti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:149
+msgid "No script"
+msgstr "Bez skriptu"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:151
+msgid "No shade (deprecated)"
+msgstr "Bez tieňa (zavrhované)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:152
+msgid "No URI"
+msgstr "Bez URI"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:154
+msgid "No word wrap (deprecated)"
+msgstr "Nezalamovať riadky (zavrhované)"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:156
+msgid "Object applet file (deprecated)"
+msgstr "Súbor apletu objektu (zavrhované)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:157
+msgid "Object data reference"
+msgstr "Referencia údajov objektu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:158
+msgid "Offset for alignment character"
+msgstr "Posun pre zarovnanie znaku"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:159
+msgid "OnBlur event"
+msgstr "Udalosť OnBlur"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:160
+msgid "OnChange event"
+msgstr "Udalosť OnChange"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:161
+msgid "OnClick event"
+msgstr "Udalosť OnClick"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:162
+msgid "OnDblClick event"
+msgstr "Udalosť OnDblClick"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:163
+msgid "OnFocus event"
+msgstr "Udalosť OnFocus"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:164
+msgid "OnKeyDown event"
+msgstr "Udalosť OnKeyDown"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:165
+msgid "OnKeyPress event"
+msgstr "Udalosť OnKeyPress"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:166
+msgid "OnKeyUp event"
+msgstr "Udalosť OnKeyUp"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:167
+msgid "OnLoad event"
+msgstr "Udalosť OnLoad"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:168
+msgid "OnMouseDown event"
+msgstr "Udalosť OnMouseDown"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:169
+msgid "OnMouseMove event"
+msgstr "Udalosť OnMouseMove"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:170
+msgid "OnMouseOut event"
+msgstr "Udalosť OnMouseOut"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:171
+msgid "OnMouseOver event"
+msgstr "Udalosť OnMouseOver"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:172
+msgid "OnMouseUp event"
+msgstr "Udalosť OnMouseUp"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:173
+msgid "OnReset event"
+msgstr "Udalosť OnReset"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:174
+msgid "OnSelect event"
+msgstr "Udalosť OnSelect"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:175
+msgid "OnSubmit event"
+msgstr "Udalosť OnSubmit"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:176
+msgid "OnUnload event"
+msgstr "Udalosť OnUnload"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:177
+msgid "Option group"
+msgstr "Skupina volieb"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:178
+msgid "Option selector"
+msgstr "Výber voľby"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:179
+msgid "Ordered list"
+msgstr "Usporiadaný zoznam"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:180
 msgid "Paragraph class"
 msgstr "Trieda odstavca"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:225
+#: ../plugins/taglist/HTML.tags.xml.in.h:181
 msgid "Paragraph style"
 msgstr "Štýl odstavca"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:226
-msgid "Preformatted listing"
-msgstr "Predformátovaný výpis"
+#: ../plugins/taglist/HTML.tags.xml.in.h:182
+msgid "Paragraph"
+msgstr "Odstavec"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:227
+#: ../plugins/taglist/HTML.tags.xml.in.h:183
 msgid "Preformatted text"
 msgstr "Predformátovaný text"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:228
+#: ../plugins/taglist/HTML.tags.xml.in.h:184
 msgid "Profile metainfo dictionary"
 msgstr "Slovník metainformácií profilu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:229
-msgid "Prompt message"
-msgstr "Správa výzvy"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:230
+#: ../plugins/taglist/HTML.tags.xml.in.h:185
 msgid "Push button"
 msgstr "Tlačidlo"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:231
-msgid "Quote"
-msgstr "Citát"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:232
-msgid "Range"
-msgstr "Rozsah"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:233
+#: ../plugins/taglist/HTML.tags.xml.in.h:186
 msgid "ReadOnly text and password"
 msgstr "Text a heslo len na čítanie"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:234
-msgid "Reduced spacing"
-msgstr "Redukovaná medzera"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:236
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:188
 msgid "Reduced spacing (deprecated)"
-msgstr "Redukovaná medzera"
+msgstr "Zmenšené rozostupy (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:237
+# odkaz s atribútom rev
+#: ../plugins/taglist/HTML.tags.xml.in.h:189
 msgid "Reverse link"
-msgstr "Opačný odkaz"
+msgstr "Spätný odkaz"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:238
-msgid "Root"
-msgstr "Koreň"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:239
+#: ../plugins/taglist/HTML.tags.xml.in.h:190
 msgid "Rows"
 msgstr "Riadky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:240
+#: ../plugins/taglist/HTML.tags.xml.in.h:191
 msgid "Rulings between rows and columns"
 msgstr "Vedenie medzi riadkami a stĺpcami"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:241
+#: ../plugins/taglist/HTML.tags.xml.in.h:192
 msgid "Sample program output, scripts"
 msgstr "Ukážkový výstup z programu, skripty"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:242
+#: ../plugins/taglist/HTML.tags.xml.in.h:193
 msgid "Scope covered by header cells"
 msgstr "Rozsah pokrytý bunkami hlavičky"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:244
+#: ../plugins/taglist/HTML.tags.xml.in.h:195
 msgid "Script language name"
 msgstr "Názov jazyka skriptu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:245
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:196
 msgid "Script statements"
-msgstr "Riadky skriptu"
+msgstr "Príkazy skriptu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:246
+#: ../plugins/taglist/HTML.tags.xml.in.h:197
 msgid "Scrollbar"
-msgstr "Posuvná lišta"
+msgstr "Posuvník"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:247
+#: ../plugins/taglist/HTML.tags.xml.in.h:198
 msgid "Selectable option"
 msgstr "Označiteľná voľba"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:248
+#: ../plugins/taglist/HTML.tags.xml.in.h:199
 msgid "Selected"
 msgstr "Označené"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:249
+#: ../plugins/taglist/HTML.tags.xml.in.h:200
 msgid "Server-side image map"
 msgstr "Obrazová mapa na serveri"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:250
+#: ../plugins/taglist/HTML.tags.xml.in.h:201
 msgid "Shape"
 msgstr "Tvar"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:251
+#: ../plugins/taglist/HTML.tags.xml.in.h:202
 msgid "Short inline quotation"
 msgstr "Krátka vložená citácia"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:252
-msgid "Single line prompt"
-msgstr "Jednoriadková výzva"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:253
-msgid "Size"
-msgstr "Veľkosť"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:255
+#: ../plugins/taglist/HTML.tags.xml.in.h:204
 msgid "Size (deprecated)"
-msgstr ""
+msgstr "Veľkosť (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:256
+#: ../plugins/taglist/HTML.tags.xml.in.h:205
 msgid "Small text style"
 msgstr "Štýl malého textu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:257
-msgid "Soft line break"
-msgstr "Mäkký nový riadok"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:258
-msgid "Sound"
-msgstr "Zvuk"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:259
+#: ../plugins/taglist/HTML.tags.xml.in.h:206
 msgid "Source"
 msgstr "Zdroj"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:260
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:207
 msgid "Space-separated archive list"
 msgstr "Zoznam archívov oddelený medzerami"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:261
-msgid "Spacer"
-msgstr "Medzerník"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:262
+#: ../plugins/taglist/HTML.tags.xml.in.h:208
 msgid "Spacing between cells"
 msgstr "Medzera medzi bunkami"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:263
+#: ../plugins/taglist/HTML.tags.xml.in.h:209
 msgid "Spacing within cells"
 msgstr "Medzera vnútri buniek"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:264
+#: ../plugins/taglist/HTML.tags.xml.in.h:210
 msgid "Span"
 msgstr "Rozpätie"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:265
-msgid "Square root"
-msgstr "Druhá odmocnina"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:266
+#: ../plugins/taglist/HTML.tags.xml.in.h:211
 #, fuzzy
 msgid "Standby load message"
 msgstr "Správa pozastavenia načítavania"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:267
-msgid "Starting sequence number"
-msgstr "Začiatočné číslo postupnosti"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:269
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:213
 msgid "Starting sequence number (deprecated)"
-msgstr "Začiatočné číslo postupnosti"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:270
-msgid "Strike-through text"
-msgstr "Prečiarknutý text"
+msgstr "Začiatočné číslo postupnosti (zavrhované)"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:272
-#, fuzzy
-msgid "Strike-through text (deprecated)"
-msgstr "Prečiarknutý štýl textu"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:273
-msgid "Strike-through text style"
-msgstr "Prečiarknutý štýl textu"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:275
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:215
 msgid "Strike-through text style (deprecated)"
-msgstr "Prečiarknutý štýl textu"
+msgstr "Štýl prečiarknutého textu (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:276
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:217
+msgid "Strike-through text (deprecated)"
+msgstr "Prečiarknutý text (zavrhované)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:218
 msgid "Strong emphasis"
 msgstr "Silné zdôraznenie"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:277
+#: ../plugins/taglist/HTML.tags.xml.in.h:219
 msgid "Style info"
 msgstr "Informácie o štýle"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:278
+#: ../plugins/taglist/HTML.tags.xml.in.h:220
 msgid "Subscript"
 msgstr "Dolný index"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:279
+#: ../plugins/taglist/HTML.tags.xml.in.h:221
 msgid "Superscript"
 msgstr "Horný index"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:280
-msgid "Tab order position"
-msgstr "Poloha poradia tabulátorov"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:281
-msgid "Table"
-msgstr "Tabuľka"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:282
+#: ../plugins/taglist/HTML.tags.xml.in.h:222
 msgid "Table body"
 msgstr "Telo tabuľky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:283
+#: ../plugins/taglist/HTML.tags.xml.in.h:223
 msgid "Table caption"
 msgstr "Titulok tabuľky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:284
+#: ../plugins/taglist/HTML.tags.xml.in.h:224
 msgid "Table column group properties"
 msgstr "Vlastnosti skupiny stĺpcov tabuľky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:285
+#: ../plugins/taglist/HTML.tags.xml.in.h:225
 msgid "Table column properties"
 msgstr "Vlastnosti stĺpca tabuľky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:286
+#: ../plugins/taglist/HTML.tags.xml.in.h:226
 msgid "Table data cell"
-msgstr "Dátová bunka tabuľky"
+msgstr "Bunka tabuľky s údajmi"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:287
+#: ../plugins/taglist/HTML.tags.xml.in.h:227
 msgid "Table footer"
 msgstr "Päta tabuľky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:288
-msgid "Table header"
-msgstr "Hlavička tabuľky"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:289
+#: ../plugins/taglist/HTML.tags.xml.in.h:228
 msgid "Table header cell"
 msgstr "Bunka hlavičky tabuľky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:290
+#: ../plugins/taglist/HTML.tags.xml.in.h:229
+msgid "Table header"
+msgstr "Hlavička tabuľky"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:230
 msgid "Table row"
 msgstr "Riadok tabuľky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:291
+#: ../plugins/taglist/HTML.tags.xml.in.h:231
 msgid "Table summary"
 msgstr "Súhrn tabuľky"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:292
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:232
+msgid "Table"
+msgstr "Tabuľka"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:233
 msgid "Target — Blank"
-msgstr "Cieľ - prázdny"
+msgstr "Cieľ — prázdny"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:293
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:234
 msgid "Target — Parent"
-msgstr "Cieľ - rodič"
+msgstr "Cieľ — nadradený"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:294
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:235
 msgid "Target — Self"
-msgstr "Cieľ - vlastný"
+msgstr "Cieľ — na seba"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:295
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:236
 msgid "Target — Top"
-msgstr "Cieľ - vrch"
+msgstr "Cieľ — vrch"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:296
+#: ../plugins/taglist/HTML.tags.xml.in.h:237
 msgid "Teletype or monospace text style"
 msgstr "Štýl textu ďalekopisu alebo s rovnakým odstupom"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:297
-msgid "Text"
-msgstr "Text"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:298
-msgid "Text color"
-msgstr "Farba textu"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:300
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:239
 msgid "Text color (deprecated)"
-msgstr "Farba textu"
+msgstr "Farba textu (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:301
+#: ../plugins/taglist/HTML.tags.xml.in.h:240
 msgid "Text entered by user"
 msgstr "Text zadaný používateľom"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:302
+#: ../plugins/taglist/HTML.tags.xml.in.h:241
 msgid "Title"
 msgstr "Titulok"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:303
-#, fuzzy
-msgid "Top margin in pixels"
-msgstr "Horný okraj v bodoch"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:304
-msgid "URL"
-msgstr "URL"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:305
+#: ../plugins/taglist/HTML.tags.xml.in.h:242
 msgid "Underlined text style"
-msgstr "Podčiarknutý štýl textu"
+msgstr "Štýl podčiarknutého textu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:306
+#: ../plugins/taglist/HTML.tags.xml.in.h:243
 msgid "Unordered list"
 msgstr "Neusporiadaný zoznam"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:307
+#: ../plugins/taglist/HTML.tags.xml.in.h:244
 msgid "Use image map"
 msgstr "Použiť obrazovú mapu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:308
-msgid "Value"
-msgstr "Hodnota"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:309
+#: ../plugins/taglist/HTML.tags.xml.in.h:245
 msgid "Value interpretation"
 msgstr "Interpretácia hodnoty"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:310
+#: ../plugins/taglist/HTML.tags.xml.in.h:246
+msgid "Value"
+msgstr "Hodnota"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:247
 msgid "Variable or program argument"
 msgstr "Premenná alebo parameter programu"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:311
+#: ../plugins/taglist/HTML.tags.xml.in.h:248
 msgid "Vertical cell alignment"
 msgstr "Zvislé zarovnanie buniek"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:312
-msgid "Vertical space"
-msgstr "Zvislá medzera"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:314
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:250
 msgid "Vertical space (deprecated)"
-msgstr "Zvislá medzera"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:315
-msgid "Visited link color"
-msgstr "Farba navštíveního odkazu"
+msgstr "Zvislá medzera (zavrhované)"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:317
-#, fuzzy
+#: ../plugins/taglist/HTML.tags.xml.in.h:252
 msgid "Visited link color (deprecated)"
-msgstr "Farba navštíveního odkazu"
+msgstr "Farba navštíveního odkazu (zavrhované)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:318
+#: ../plugins/taglist/HTML.tags.xml.in.h:253
 msgid "Width"
 msgstr "Šírka"
 
+#: ../plugins/taglist/HTML.tags.xml.in.h:254
+msgid "HTML — Tags"
+msgstr "HTML — značky"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:255
+msgid "Above"
+msgstr "Nad"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:256
+msgid "Applet class file code"
+msgstr "Kód súboru triedy apletu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:257
+msgid "Array"
+msgstr "Pole"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:258
+msgid "Background color"
+msgstr "Farba pozadia"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:259
+msgid "Background texture tile"
+msgstr "Súbor textúry pozadia"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:260
+msgid "Base font"
+msgstr "Základné písmo"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:261
+msgid "Border color"
+msgstr "Farba okraja"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:262
+msgid "Border"
+msgstr "Okraj"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:263
+msgid "Center"
+msgstr "Vystredené"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:264
+msgid "Checked (state)"
+msgstr "Označený (stav)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:265
+msgid "Color of selected links"
+msgstr "Farba zvoleného odkazu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:266
+msgid "Content scheme"
+msgstr "Schéma obsahu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:267
+msgid "Content type"
+msgstr "Typ obsahu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:268
+msgid "Direction"
+msgstr "Smer"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:269
+msgid "Directory list"
+msgstr "Zoznam adresárov"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:270
+msgid "HTML version"
+msgstr "Verzia HTML"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:271
+msgid "Embedded object"
+msgstr "Vložený objekt"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:272
+msgid "Figure"
+msgstr "Obrazec"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:273
+msgid "Font face"
+msgstr "Typ písma"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:274
+msgid "Frameborder"
+msgstr "Okraj rámca"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:275
+msgid "Framespacing"
+msgstr "Rámcová medzera"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:276
+msgid "Heading"
+msgstr "Nadpis"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:277
+msgid "Horizontal space"
+msgstr "Vodorovná medzera"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:278
+msgid "Image source"
+msgstr "Zdroj obrázka"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:279
+msgid "Inline layer"
+msgstr "Vložená vrstva"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:280
+msgid "Java applet"
+msgstr "Java aplet"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:281
+msgid "Layer"
+msgstr "Vrstva"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:282
+msgid "Link color"
+msgstr "Farba odkazu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:283
+msgid "Listing"
+msgstr "Výpis"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:284
+msgid "Mail link"
+msgstr "Poštový odkaz"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:285
+msgid "Marquee"
+msgstr "Markíza"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:286
+msgid "Menu list"
+msgstr "Zoznam ponuky"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:287
+msgid "Multicolumn"
+msgstr "Viacstĺpcové"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:288
+msgid "Next ID"
+msgstr "Nasledujúci identifikátor"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:289
+msgid "No embedded objects"
+msgstr "Bez vložených objektov"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:290
+msgid "No layers"
+msgstr "Bez vrstiev"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:291
+msgid "No line break"
+msgstr "Bez konca riadka"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:292
+msgid "No shade"
+msgstr "Bez tieňa"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:293
+msgid "No word wrap"
+msgstr "Nezalamovať riadky"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:294
+msgid "Note"
+msgstr "Poznámka"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:295
+msgid "Object applet file"
+msgstr "Súbor apletu objektu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:296
+msgid "Preformatted listing"
+msgstr "Predformátovaný výpis"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:297
+msgid "Prompt message"
+msgstr "Správa výzvy"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:298
+msgid "Quote"
+msgstr "Citácia"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:299
+msgid "Range"
+msgstr "Rozsah"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:300
+msgid "Reduced spacing"
+msgstr "Zmenšené rozostupy"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:301
+msgid "Root"
+msgstr "Koreň"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:302
+msgid "Single line prompt"
+msgstr "Jednoriadková výzva"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:303
+msgid "Size"
+msgstr "Veľkosť"
+
+# IM: http://en.wikipedia.org/wiki/Soft_return
+#: ../plugins/taglist/HTML.tags.xml.in.h:304
+msgid "Soft line break"
+msgstr "Mäkký nový riadok"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:305
+msgid "Sound"
+msgstr "Zvuk"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:306
+msgid "Spacer"
+msgstr "Medzerník"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:307
+msgid "Square root"
+msgstr "Druhá odmocnina"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:308
+msgid "Starting sequence number"
+msgstr "Začiatočné číslo postupnosti"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:309
+msgid "Strike-through text style"
+msgstr "Štýl prečiarknutého textu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:310
+msgid "Strike-through text"
+msgstr "Prečiarknutý text"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:311
+msgid "Tab order position"
+msgstr "Poloha poradia tabulátorov"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:312
+msgid "Text color"
+msgstr "Farba textu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:313
+msgid "Text"
+msgstr "Text"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:314
+msgid "Top margin in pixels"
+msgstr "Horný okraj v pixeloch"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:315
+msgid "URL"
+msgstr "URL"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:316
+msgid "Vertical space"
+msgstr "Zvislá medzera"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:317
+msgid "Visited link color"
+msgstr "Farba navštíveného odkazu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:318
+msgid "HTML — Special Characters"
+msgstr "HTML — špeciálne znaky"
+
 #: ../plugins/taglist/HTML.tags.xml.in.h:319
-#, fuzzy
-msgid "XHTML 1.0 — Tags"
-msgstr "HTML - značky"
+msgid "Non-breaking space"
+msgstr "Nezalomiteľná medzera"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:1
+msgid "Latex — Tags"
+msgstr "Latex — značky"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:2
 msgid "Bibliography (cite)"
 msgstr "Literatúra (citácia)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:2
+#: ../plugins/taglist/Latex.tags.xml.in.h:3
 msgid "Bibliography (item)"
 msgstr "Literatúra (položka)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:3
+#: ../plugins/taglist/Latex.tags.xml.in.h:4
 msgid "Bibliography (shortcite)"
 msgstr "Literatúra (krátka citácia)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:4
+#: ../plugins/taglist/Latex.tags.xml.in.h:5
 msgid "Bibliography (thebibliography)"
 msgstr "Literatúra (thebibliography)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:5
-msgid "Brackets ()"
-msgstr "Zátvorky ()"
-
 #: ../plugins/taglist/Latex.tags.xml.in.h:6
-#, fuzzy
-msgid "Brackets <>"
+msgid "Brackets ()"
 msgstr "Zátvorky ()"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:7
@@ -1676,197 +1609,196 @@ msgstr "Zátvorky []"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:8
 msgid "Brackets {}"
-msgstr "Zátovrky {}"
+msgstr "Zátvorky {}"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:9
+msgid "Brackets <>"
+msgstr "Zátvorky <>"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:10
 msgid "File input"
 msgstr "Súborový vstup"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:11
-msgid "Footnote"
-msgstr "Poznámka pod čiarou"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:12
-#, fuzzy
 msgid "Function cosine"
 msgstr "Funkcia kosínus"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:13
+#: ../plugins/taglist/Latex.tags.xml.in.h:12
 msgid "Function e^"
 msgstr "Funkcia e^"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:14
+#: ../plugins/taglist/Latex.tags.xml.in.h:13
 msgid "Function exp"
 msgstr "Funkcia exp"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:15
+#: ../plugins/taglist/Latex.tags.xml.in.h:14
 msgid "Function log"
 msgstr "Funkcia log"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:16
+#: ../plugins/taglist/Latex.tags.xml.in.h:15
 msgid "Function log10"
 msgstr "Funkcia log10"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:17
+#: ../plugins/taglist/Latex.tags.xml.in.h:16
 msgid "Function sine"
 msgstr "Funkcia sínus"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:18
+#: ../plugins/taglist/Latex.tags.xml.in.h:17
 msgid "Greek alpha"
 msgstr "Grécka alfa"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:19
+#: ../plugins/taglist/Latex.tags.xml.in.h:18
 msgid "Greek beta"
 msgstr "Grécka beta"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:20
+#: ../plugins/taglist/Latex.tags.xml.in.h:19
 msgid "Greek epsilon"
 msgstr "Grácky epsilon"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:21
+#: ../plugins/taglist/Latex.tags.xml.in.h:20
 msgid "Greek gamma"
 msgstr "Grécka gama"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:22
+#: ../plugins/taglist/Latex.tags.xml.in.h:21
 msgid "Greek lambda"
 msgstr "Grécka lambda"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:23
+#: ../plugins/taglist/Latex.tags.xml.in.h:22
 msgid "Greek rho"
 msgstr "Grécke ró"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:24
+#: ../plugins/taglist/Latex.tags.xml.in.h:23
 msgid "Greek tau"
 msgstr "Grécke tau"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:25
+#: ../plugins/taglist/Latex.tags.xml.in.h:24
 msgid "Header 0 (chapter)"
 msgstr "Záhlavie 0 (hlava)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:26
+#: ../plugins/taglist/Latex.tags.xml.in.h:25
 msgid "Header 0 (chapter*)"
-msgstr "Záhlavie 0 (hlavaa*)"
+msgstr "Záhlavie 0 (hlava*)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:27
+#: ../plugins/taglist/Latex.tags.xml.in.h:26
 msgid "Header 1 (section)"
 msgstr "Záhlavie 1 (kapitola)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:28
+#: ../plugins/taglist/Latex.tags.xml.in.h:27
 msgid "Header 1 (section*)"
 msgstr "Záhlavie 1 (kapitola*)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:29
+#: ../plugins/taglist/Latex.tags.xml.in.h:28
 msgid "Header 2 (subsection)"
 msgstr "Záhlavie 2 (podkapitola)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:30
+#: ../plugins/taglist/Latex.tags.xml.in.h:29
 msgid "Header 2 (subsection*)"
 msgstr "Záhlavie 2 (podkapitola*)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:31
+#: ../plugins/taglist/Latex.tags.xml.in.h:30
 msgid "Header 3 (subsubsection)"
 msgstr "Záhlavie 3 (podpodkapitola)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:32
+#: ../plugins/taglist/Latex.tags.xml.in.h:31
 msgid "Header 3 (subsubsection*)"
 msgstr "Záhlavie 3 (podpodkapitola*)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:33
+#: ../plugins/taglist/Latex.tags.xml.in.h:32
 msgid "Header 4 (paragraph)"
 msgstr "Záhlavie 4 (odstavec)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:34
+#: ../plugins/taglist/Latex.tags.xml.in.h:33
 msgid "Header appendix"
 msgstr "Záhlavie prílohy"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:35
-msgid "Item"
-msgstr "Položka"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:36
-msgid "Item with label"
-msgstr "Položka s popisom"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:37
-#, fuzzy
-msgid "Latex — Tags"
-msgstr "Latex - značky"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:38
+#: ../plugins/taglist/Latex.tags.xml.in.h:34
 msgid "List description"
 msgstr "Popis zoznamu"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:39
+#: ../plugins/taglist/Latex.tags.xml.in.h:35
 msgid "List enumerate"
 msgstr "Vymenovať zoznam"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:40
+#: ../plugins/taglist/Latex.tags.xml.in.h:36
 msgid "List itemize"
 msgstr "Rozviesť zoznam"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:41
+#: ../plugins/taglist/Latex.tags.xml.in.h:37
+msgid "Item with label"
+msgstr "Položka s popisom"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:38
+msgid "Item"
+msgstr "Položka"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:39
 msgid "Maths (display)"
 msgstr "Matematika (zobraziť)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:42
+#: ../plugins/taglist/Latex.tags.xml.in.h:40
 msgid "Maths (inline)"
-msgstr "MAtematika (včleniť)"
+msgstr "Matematika (včleniť)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:43
+#: ../plugins/taglist/Latex.tags.xml.in.h:41
 msgid "Operator fraction"
 msgstr "Operátor zlomku"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:44
+#: ../plugins/taglist/Latex.tags.xml.in.h:42
 msgid "Operator integral (display)"
 msgstr "Operátor integrálu (zobraziť)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:45
+#: ../plugins/taglist/Latex.tags.xml.in.h:43
 msgid "Operator integral (inline)"
 msgstr "Operátor integrálu (včleniť)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:46
+#: ../plugins/taglist/Latex.tags.xml.in.h:44
 msgid "Operator sum (display)"
 msgstr "Operátor sumy (zobraziť)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:47
+#: ../plugins/taglist/Latex.tags.xml.in.h:45
 msgid "Operator sum (inline)"
 msgstr "Operátor sumy (včleniť)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:48
+# PK: ??
+#: ../plugins/taglist/Latex.tags.xml.in.h:46
 msgid "Reference label"
 msgstr "Odkaz návestie"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:49
+#: ../plugins/taglist/Latex.tags.xml.in.h:47
 msgid "Reference ref"
 msgstr "Odkaz ref"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:50
-#, fuzzy
+#: ../plugins/taglist/Latex.tags.xml.in.h:48
 msgid "Symbol <<"
-msgstr "Symbol and"
+msgstr "Symbol <<"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:49
+msgid "Symbol <="
+msgstr "Symbol <="
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:50
+msgid "Symbol >="
+msgstr "Symbol >="
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:51
-#, fuzzy
-msgid "Symbol <="
-msgstr "Symbol &gt;="
+msgid "Symbol >>"
+msgstr "Symbol >>"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:52
-#, fuzzy
-msgid "Symbol >="
-msgstr "Symbol &gt;="
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:53
-#, fuzzy
-msgid "Symbol >>"
-msgstr "Symbol and"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:54
 msgid "Symbol and"
 msgstr "Symbol and"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:55
+#: ../plugins/taglist/Latex.tags.xml.in.h:53
 msgid "Symbol const"
 msgstr "Symbol const"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:54
+msgid "Symbol d2-by-dt2-partial"
+msgstr "Symbol d2-by-dt2-partial"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:55
+msgid "Symbol dagger"
+msgstr "Symbol dagger"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:56
 msgid "Symbol d-by-dt"
@@ -1877,102 +1809,92 @@ msgid "Symbol d-by-dt-partial"
 msgstr "Symbol d-by-dt-partial"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:58
-msgid "Symbol d2-by-dt2-partial"
-msgstr "Symbol d2-by-dt2-partial"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:59
-msgid "Symbol dagger"
-msgstr "Symbol dagger"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:60
-#, fuzzy
-msgid "Symbol em-dash ---"
-msgstr "Symbol pomlčka ---"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:61
-#, fuzzy
-msgid "Symbol en-dash --"
-msgstr "Symbol pomlčka --"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:62
 msgid "Symbol equiv"
 msgstr "Symbol equiv"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:63
+#: ../plugins/taglist/Latex.tags.xml.in.h:59
+msgid "Symbol en-dash --"
+msgstr "Symbol pomlčka s šírkou n --"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:60
+msgid "Symbol em-dash ---"
+msgstr "Symbol pomlčka s šírkou m ---"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:61
 msgid "Symbol infinity"
 msgstr "Symbol nekonečno"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:64
+#: ../plugins/taglist/Latex.tags.xml.in.h:62
 msgid "Symbol mathspace ,"
 msgstr "Matematický symbol ,"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:65
+#: ../plugins/taglist/Latex.tags.xml.in.h:63
 msgid "Symbol mathspace ."
 msgstr "Matematický symbol ."
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:66
+#: ../plugins/taglist/Latex.tags.xml.in.h:64
 msgid "Symbol mathspace _"
 msgstr "Matematický symbol _"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:67
+#: ../plugins/taglist/Latex.tags.xml.in.h:65
 msgid "Symbol mathspace __"
 msgstr "Matematický symbol __"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:68
+#: ../plugins/taglist/Latex.tags.xml.in.h:66
 msgid "Symbol simeq"
 msgstr "Symbol simeq"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:69
+#: ../plugins/taglist/Latex.tags.xml.in.h:67
 msgid "Symbol star"
 msgstr "Symbol hviezda"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:70
+#: ../plugins/taglist/Latex.tags.xml.in.h:68
 msgid "Typeface bold"
-msgstr "Typ písma plnotučný"
+msgstr "Rez písma - tučné"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:69
+msgid "Typeface type"
+msgstr "Rodina písma"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:70
+msgid "Typeface italic"
+msgstr "Rez písma - kurzíva"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:71
-msgid "Typeface italic"
-msgstr "Typ písma kurzíva"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:72
 msgid "Typeface slanted"
-msgstr "Typ písma šikmý"
+msgstr "Rez písma - šikmé"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:73
-msgid "Typeface type"
-msgstr "Typ typu písma"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:74
 msgid "Unbreakable text"
 msgstr "Nezalomiteľný text"
 
+#: ../plugins/taglist/Latex.tags.xml.in.h:74
+msgid "Footnote"
+msgstr "Poznámka pod čiarou"
+
 #: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
-#, fuzzy
+msgid "Tag list"
+msgstr "Zoznam značiek"
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
 msgid ""
 "Provides a method to easily insert commonly used tags/strings into a "
 "document without having to type them."
 msgstr ""
-"Poskytuje metódu pre jednoduché vkladanie často používaných značiek/textov "
-"do dokumentu bez zbytočného písania."
-
-#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
-msgid "Tag list"
-msgstr "Zoznam značiek"
+"Poskytuje metódu na jednoduché vkladanie často používaných značiek/textov do "
+"dokumentu bez nutnosti ich písať."
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:1
-#, fuzzy
-msgid "XSLT — Axes"
-msgstr "XSLT - Osi"
+msgid "XSLT — Elements"
+msgstr "XSLT — prvky"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:2
-#, fuzzy
-msgid "XSLT — Elements"
-msgstr "XSLT - Elementy"
+msgid "XSLT — Functions"
+msgstr "XSLT — funkcie"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:3
-#, fuzzy
-msgid "XSLT — Functions"
-msgstr "XSLT - Funkcie"
+msgid "XSLT — Axes"
+msgstr "XSLT — osi"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:4
 msgid "ancestor"
@@ -2027,6 +1949,241 @@ msgid "self"
 msgstr "vlastný"
 
 #: ../plugins/taglist/XUL.tags.xml.in.h:1
-#, fuzzy
 msgid "XUL — Tags"
-msgstr "HTML - značky"
+msgstr "HTML — značky"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:1
+msgid "Whether to silence terminal bell"
+msgstr "Či sa má umlčať zvonček terminálu"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:2
+msgid ""
+"If true, don't make a noise when applications send the escape sequence for "
+"the terminal bell."
+msgstr ""
+"Ak je voľba zapnutá, nevydáva zvuk, keď aplikácie pošlú špeciálnu (escape) "
+"sekvenciu zvončeka terminálu."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:3
+msgid "Number of lines to keep in scrollback"
+msgstr "Počet riadkov, ktoré sa majú zachovať v histórii terminálu"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:4
+msgid ""
+"Number of scrollback lines to keep around. You can scroll back in the "
+"terminal by this number of lines; lines that don't fit in the scrollback are "
+"discarded. If scrollback-unlimited is true, this value is ignored."
+msgstr ""
+"Počet riadkov, ktoré sa majú zachovať v histórii terminálu. V histórii "
+"terminálu sa môžete posunúť späť o tento počet riadkov. Riadky, ktoré sa "
+"nezmestia do histórie, budú zahodené. Ak je voľba scrollback-unlimited "
+"zapnutá, táto hodnota sa ignoruje."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:5
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr "Či sa má v histórii terminálu uchovávať neobmedzený počet riadkov"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:6
+msgid ""
+"If true, scrollback lines will never be discarded. The scrollback history is "
+"stored on disk temporarily, so this may cause the system to run out of disk "
+"space if there is a lot of output to the terminal."
+msgstr ""
+"Ak je voľba zapnutá, riadky histórie terminálu sa nikdy nezahodia. História "
+"terminálu sa ukladá dočasne na disk, takže to môže spôsobiť, že systém "
+"nebude mať dostatok miesta na disku v prípade množstva textového výstupu na "
+"terminál."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:7
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr "Či sa má terminál posunúť na spodok pri stlačení klávesu"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:8
+msgid "If true, pressing a key jumps the scrollbar to the bottom."
+msgstr ""
+"Ak je voľba zapnutá, stlačenie klávesu spôsobí preskočenie posuvníka na "
+"spodok."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:9
+msgid "Whether to scroll to the bottom when there's new output"
+msgstr "Či sa má terminál posunúť na spodok pri novom výstupe"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:10
+msgid ""
+"If true, whenever there's new output the terminal will scroll to the bottom."
+msgstr ""
+"Ak je voľba zapnutá, terminál sa posunie na spodok vždy, keď v ňom pribudne "
+"textový výstup."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:11
+msgid "Whether to allow bold text"
+msgstr "Či sa má povoliť tučný text"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:12
+msgid "If true, allow applications in the terminal to make text boldface."
+msgstr ""
+"Ak je voľba zapnutá, umožniť aplikáciám v termináli používať tučný text."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:13
+msgid "Characters that are considered \"part of a word\""
+msgstr "Znaky, ktoré sa považujú za „súčasť slova“"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:14
+msgid ""
+"When selecting text by word, sequences of these characters are considered "
+"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing "
+"a range) should be the first character given."
+msgstr ""
+"Pri vyberaní textu po slove sa postupnosti týchto znakov považujú za "
+"jednotlivé slová. Rozsahy možno uviesť ako „A-Z“. Doslovná pomlčka "
+"(nevyjadrujúca rozsah) by mala byť prvý zadaný znak."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:15
+msgid "Default color of text in the terminal"
+msgstr "Predvolená farba popredia terminálu"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:16
+msgid ""
+"Default color of text in the terminal, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Predvolená farba popredia terminálu ako kód farby (môžu to byť hexadecimálne "
+"čísla v štýle HTML alebo anglický názov farby ako „red“)"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:17
+msgid "Default color of terminal background"
+msgstr "Predvolená farba pozadia terminálu"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:18
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Predvolená farba pozadia terminálu ako kód farby (môžu to byť hexadecimálne "
+"čísla v štýle HTML alebo anglický názov farby ako „red“)"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:19
+msgid "Palette for terminal applications"
+msgstr "Paleta terminálových aplikácií"
+
+# PK: v originali chyba bodka na konci vety
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:20
+msgid ""
+"Terminals have a 16-color palette that applications inside the terminal can "
+"use. This is that palette, in the form of a colon-separated list of color "
+"names. Color names should be in hex format e.g. \"#FF00FF\""
+msgstr ""
+"Terminály majú 16-farebnú paletu, ktorú môžu aplikácie v termináli využiť. "
+"Toto je paleta v tvare zoznamu farieb oddelenom dvojbodkami. Názvy farieb by "
+"mali byť v šestnástkovom tvare, napr. „#FF00FF“."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:21
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr "Či sa majú použiť farby z témy vzhľadu ovládacieho prvku terminálu"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:22
+msgid ""
+"If true, the theme color scheme used for text entry boxes will be used for "
+"the terminal, instead of colors provided by the user."
+msgstr ""
+"Ak je voľba zapnutá, farebná schéma témy vzhľadu použitá pre textové polia "
+"sa použije pre terminál, v opačnom prípade farby, ktoré poskytol používateľ."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:23
+msgid "Whether to blink the cursor"
+msgstr "Či má kurzor blikať"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:24
+msgid ""
+"The possible values are \"system\" to use the global cursor blinking "
+"settings, or \"on\" or \"off\" to set the mode explicitly."
+msgstr ""
+"Možné hodnoty sú „system“ na použitie globálnych nastavení blikania "
+"kurzora, „on“ alebo „off“ na explicitné nastavenie režimu."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:25
+msgid "The cursor appearance"
+msgstr "Vzhľad kurzora"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:26
+msgid ""
+"The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
+"vertical line cursor, or \"underline\" to use an underline cursor."
+msgstr ""
+"Možné hodnoty sú „block“ pre blokový kurzor, „ibeam“ pre zvislú čiaru alebo "
+"„underline“ pre podčiarkovník."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:27
+msgid "Whether to use the system font"
+msgstr "Či sa má použiť systémové písmo"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:28
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Ak je voľba zapnutá, terminál použije predvolené písmo platné pre celé "
+"pracovné prostredie, ak je to písmo s pevnou šírkou znaku (a v opačnom "
+"prípade najpodobnejšie písmo, ktoré dokáže nájsť)."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:29
+msgid "Font"
+msgstr "Písmo"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:30
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+"Názov písma sústému Pango. Napríklad „Sans 12“ alebo „Monospace Bold 14“."
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
+msgid "Embedded Terminal"
+msgstr "Vložený terminál"
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
+msgid "Embed a terminal in the bottom pane."
+msgstr "Vložiť terminál do spodného panelu."
+
+#: ../plugins/terminal/terminal.py:260
+msgid "Terminal"
+msgstr "Terminál"
+
+#: ../plugins/terminal/terminal.py:282
+msgid "C_hange Directory"
+msgstr "_Zmeniť adresár"
+
+#: ../plugins/textsize/textsize/__init__.py:143
+msgid "_Increase font size"
+msgstr ""
+
+#: ../plugins/textsize/textsize/__init__.py:146
+msgid "_Decrease font size"
+msgstr ""
+
+#: ../plugins/textsize/textsize/__init__.py:149
+msgid "_Reset font size"
+msgstr ""
+
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
+msgid "Text Size"
+msgstr "Veľkosť textu"
+
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
+msgid "Easily increase and decrease the text size"
+msgstr "Jednoduché zväčšenie a zmenšenie veľkosti textu"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:153
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:200
+msgid "Document Words"
+msgstr "Slová dokumentu"
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
+msgid "Word Completion"
+msgstr "Dopĺňanie slov"
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr "Dopĺňanie slov pomocou platformy na dopĺňanie"
+
+#~ msgid "_Insert"
+#~ msgstr "V_ložiť"
