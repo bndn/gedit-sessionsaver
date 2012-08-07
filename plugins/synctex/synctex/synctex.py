@@ -47,8 +47,6 @@ ui_str = """<ui>
 </ui>
 """
 
-VIEW_DATA_KEY = "SynctexPluginViewData"
-
 _logger = logging.getLogger("SynctexPlugin")
 
 def apply_style (style, tag):
@@ -265,7 +263,7 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
         self._remove_menu()
 
     def on_active_tab_changed(self, window,  tab):
-        view_helper = tab.get_view().get_data(VIEW_DATA_KEY)
+        view_helper = self.get_helper(tab.get_view())
 
         if view_helper is None:
             active = False
@@ -280,16 +278,21 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
 
         if location is not None:
             self.view_dict[location.get_uri()] = helper
-        view.set_data (VIEW_DATA_KEY, helper)
+        view.synctex_view_helper = helper
 
     def remove_helper(self, view):
-        helper = view.get_data(VIEW_DATA_KEY)
+        helper = self.get_helper(view)
 
         if helper.gfile is not None:
             del self.view_dict[helper.gfile.get_uri()]
 
         helper.deactivate()
-        view.set_data(VIEW_DATA_KEY, None)
+        del view.synctex_view_helper
+
+    def get_helper(self, view):
+        if not hasattr(view, 'synctex_view_helper'):
+            return None
+        return view.synctex_view_helper
 
     def _remove_menu(self):
         manager = self.window.get_ui_manager()
@@ -314,7 +317,7 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
         self._ui_id = manager.add_ui_from_string(ui_str)
 
     def forward_search_cb(self, action, what):
-        self.window.get_active_view().get_data(VIEW_DATA_KEY).sync_view(Gtk.get_current_event_time())
+        self.get_helper(self.window.get_active_view()).sync_view(Gtk.get_current_event_time())
 
     def source_view_handler(self, out_gfile, uri_input, source_link, time):
 
@@ -324,7 +327,7 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
             tab = window.create_tab_from_location(Gio.file_new_for_uri(uri_input),
                                                   None, source_link[0] - 1, 0, False, True)
 
-            helper =  tab.get_view().get_data(VIEW_DATA_KEY)
+            helper = self.get_helper(tab.get_view())
             helper._goto_handler = tab.get_document().connect_object("loaded", 
                                                 SynctexViewHelper.goto_line_after_load,
                                                 helper, source_link[0] - 1, time)
