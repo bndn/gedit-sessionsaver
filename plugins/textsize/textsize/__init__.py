@@ -23,7 +23,6 @@
 #  Boston, MA 02111-1307, USA.
 
 from gi.repository import GObject, Gtk, Gdk, Gedit
-import constants
 from documenthelper import DocumentHelper
 import gettext
 from gpdefs import *
@@ -173,7 +172,9 @@ class TextSizePlugin(GObject.Object, Gedit.WindowActivatable):
         self._action_group.set_sensitive(self.window.get_active_document() != None)
 
     def get_helper(self, view):
-        return view.get_data(constants.DOCUMENT_HELPER_KEY)
+        if not hasattr(view, "textsize_document_helper"):
+            return None
+        return view.textsize_document_helper
 
     def add_document_helper(self, view):
         if self.get_helper(view) != None:

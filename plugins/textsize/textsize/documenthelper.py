@@ -20,7 +20,6 @@
 #  Boston, MA 02111-1307, USA.
 
 from signals import Signals
-import constants
 from gi.repository import Gtk, Gdk, Pango
 
 class DocumentHelper(Signals):
@@ -32,7 +31,7 @@ class DocumentHelper(Signals):
         self.connect_signal(self._view, 'scroll-event', self.on_scroll_event)
         self.connect_signal(self._view, 'button-press-event', self.on_button_press_event)
 
-        self._view.set_data(constants.DOCUMENT_HELPER_KEY, self)
+        self._view.textsize_document_helper = self
 
         self._default_font = None
         self._last_font = None
@@ -44,6 +43,8 @@ class DocumentHelper(Signals):
 
         self.remove_font_tags()
         self.disconnect_signals(self._view)
+
+        self._view.textsize_document_helper = None
 
     def remove_font_tags(self):
         buf = self._view.get_buffer()

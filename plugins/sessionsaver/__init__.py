@@ -56,7 +56,6 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
 
     window = GObject.property(type = Gedit.Window)
 
-    ACTION_HANDLER_DATA_KEY = "SessionSaverActionHandlerData"
     SESSION_MENU_PATH = '/MenuBar/FileMenu/FileOps_2/FileSessionMenu/SessionPluginPlaceHolder'
 
     def __init__(self):
@@ -85,7 +84,6 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
                                 "")
             handler = action.connect("activate", self.session_menu_action, session)
 
-            action.set_data(self.ACTION_HANDLER_DATA_KEY, handler)
             # Add an action to the session list items.
             self._action_group.add_action(action)
 
@@ -127,9 +125,7 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
         manager.remove_ui(self._menu_ui_id)
 
         for action in self._action_group.list_actions():
-            handler = action.get_data(self.ACTION_HANDLER_DATA_KEY)
-            if handler is not None:
-                action.disconnect(handler)
+            action.disconnect_by_func(self.session_menu_action)
             self._action_group.remove_action(action)
 
         manager.remove_action_group(self._action_group)

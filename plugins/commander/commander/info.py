@@ -224,7 +224,7 @@ class Info(TransparentWindow):
 		image = Gtk.Image.new_from_stock(stock, Gtk.IconSize.MENU)
 		image.show()
 
-		image.set_data('COMMANDER_ACTION_STOCK_ITEM', [stock, Gtk.IconSize.MENU])
+		image.commander_action_stock_item = (stock, Gtk.IconSize.MENU)
 
 		self.ensure_button_bar()
 
@@ -252,8 +252,7 @@ class Info(TransparentWindow):
 		img.set_state(Gtk.StateType.PRELIGHT)
 		widget.get_window().set_cursor(Gdk.Cursor.new(Gdk.HAND2))
 
-		stock = img.get_data('COMMANDER_ACTION_STOCK_ITEM')
-		pix = img.render_icon(stock[0], stock[1])
+		pix = img.render_icon(*img.commander_action_stock_item)
 		img.set_from_pixbuf(pix)
 
 	def on_action_leave_notify(self, widget, evnt):
@@ -261,8 +260,7 @@ class Info(TransparentWindow):
 		img.set_state(Gtk.StateType.NORMAL)
 		widget.get_window().set_cursor(None)
 
-		stock = img.get_data('COMMANDER_ACTION_STOCK_ITEM')
-		pix = img.render_icon(stock[0], stock[1])
+		pix = img.render_icon(*img.commander_action_stock_item)
 		img.set_from_pixbuf(pix)
 
 	def on_action_activate(self, widget, evnt, callback, data):

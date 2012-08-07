@@ -20,7 +20,6 @@
 #  Boston, MA 02111-1307, USA.
 
 from gi.repository import GObject, Gtk, Gedit
-import constants
 from signals import Signals
 from documenthelper import DocumentHelper
 import gettext
@@ -95,7 +94,9 @@ class MultiEditPlugin(GObject.Object, Gedit.WindowActivatable, Signals):
         pass
 
     def get_helper(self, view):
-        return view.get_data(constants.DOCUMENT_HELPER_KEY)
+        if not hasattr(view, "multiedit_document_helper"):
+            return None
+        return view.multiedit_document_helper
 
     def add_document_helper(self, view):
         if self.get_helper(view) != None:
@@ -125,13 +126,13 @@ class MultiEditPlugin(GObject.Object, Gedit.WindowActivatable, Signals):
 
     def on_active_tab_changed(self, window, tab):
         view = tab.get_view()
-        helper = view.get_data(constants.DOCUMENT_HELPER_KEY)
+        helper = self.get_helper(view)
 
         self.get_action().set_active(helper != None and helper.enabled())
 
     def on_multi_edit_mode(self, action):
         view = self.window.get_active_view()
-        helper = view.get_data(constants.DOCUMENT_HELPER_KEY)
+        helper = self.get_helper(view)
 
         if helper != None:
             helper.toggle_multi_edit(self.get_action().get_active())

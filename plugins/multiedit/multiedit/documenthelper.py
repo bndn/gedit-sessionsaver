@@ -24,7 +24,6 @@ import time
 import xml.sax.saxutils
 from gi.repository import GObject, Pango, PangoCairo, Gdk, Gtk, Gedit
 from signals import Signals
-import constants
 import gettext
 from gpdefs import *
 
@@ -38,7 +37,7 @@ class DocumentHelper(Signals):
     def __init__(self, view):
         Signals.__init__(self)
 
-        view.set_data(constants.DOCUMENT_HELPER_KEY, self)
+        view.multiedit_document_helper = self
 
         self._view = view
         self._buffer = None
@@ -135,7 +134,7 @@ class DocumentHelper(Signals):
         self._cancel_column_mode()
         self.reset_buffer(None)
 
-        self._view.set_data(constants.DOCUMENT_HELPER_KEY, None)
+        self._view.multiedit_document_helper = None
 
         self.disconnect_signals(self._view)
         self._view = None
