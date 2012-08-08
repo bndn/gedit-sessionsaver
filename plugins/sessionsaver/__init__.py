@@ -28,8 +28,10 @@ from dialogs import SaveSessionDialog, SessionManagerDialog
 from gpdefs import *
 
 try:
-    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
-    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
+    t = gettext.translation(GETTEXT_PACKAGE,
+                            gettext._localedirs.get(GP_LOCALEDIR),
+                            codeset=gettext._localecodesets.get(GETTEXT_PACKAGE))
+    _ = lambda s: t.ugettext(s);
 except:
     _ = lambda s: s
 
