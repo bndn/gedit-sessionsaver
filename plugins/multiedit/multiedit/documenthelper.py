@@ -157,7 +157,7 @@ class DocumentHelper(Signals):
             [('Return',), Gdk.ModifierType.CONTROL_MASK | Gdk.ModifierType.SHIFT_MASK | Gdk.ModifierType.MOD1_MASK, self.do_smart_column_align, True],
             [('Home',), Gdk.ModifierType.CONTROL_MASK, self.do_mark_start, True],
             [('End',), Gdk.ModifierType.CONTROL_MASK, self.do_mark_end, True],
-            [('e',), Gdk.ModifierType.CONTROL_MASK, self.do_toggle_edit_point, True]
+            [('e', 'E'), Gdk.ModifierType.CONTROL_MASK, self.do_toggle_edit_point, True]
         ]
 
         for handler in self._event_handlers:
