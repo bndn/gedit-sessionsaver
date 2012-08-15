@@ -967,8 +967,8 @@ class DocumentHelper(Signals):
 
         text = self._column_text()
 
-        clipboard = Gtk.Clipboard(self._view.get_display())
-        clipboard.set_text(text)
+        clipboard = Gtk.Clipboard.get_for_display(self._view.get_display(), Gdk.SELECTION_CLIPBOARD)
+        clipboard.set_text(text, -1)
 
         view.stop_emission('copy-clipboard')
 
@@ -977,8 +977,9 @@ class DocumentHelper(Signals):
             return
 
         text = self._column_text()
-        clipboard = Gtk.Clipboard(self._view.get_display())
-        clipboard.set_text(text)
+
+        clipboard = Gtk.Clipboard.get_for_display(self._view.get_display(), Gdk.SELECTION_CLIPBOARD)
+        clipboard.set_text(text, -1)
 
         view.stop_emission('cut-clipboard')
 
@@ -1035,7 +1036,7 @@ class DocumentHelper(Signals):
         clipboard = Gtk.Clipboard.get_for_display(self._view.get_display(), Gdk.SELECTION_CLIPBOARD)
         self._paste_mark = self._buffer.create_mark(None, self._buffer.get_iter_at_mark(self._buffer.get_insert()), True)
 
-        clipboard.request_text(self.on_clipboard_text)
+        clipboard.request_text(self.on_clipboard_text, None)
         view.stop_emission('paste-clipboard')
 
     def _move_edit_points(self, buf, where):
