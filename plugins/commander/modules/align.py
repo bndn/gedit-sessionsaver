@@ -197,13 +197,14 @@ def _regex(view, reg, group, additional_ws, add_ws_group, flags=0):
     if not end.ends_line():
         end.forward_to_line_end()
 
-    lines = start.get_text(end).splitlines()
+    lines = unicode(start.get_text(end), 'utf-8').splitlines()
     newlines = []
     num = 0
     tabwidth = view.get_tab_width()
 
     for line in lines:
         ln = Line(line, reg, tabwidth)
+
         newlines.append(ln)
 
         if len(ln.matches) > num:
@@ -216,7 +217,7 @@ def _regex(view, reg, group, additional_ws, add_ws_group, flags=0):
             line.append(i, al + additional_ws, group, add_ws_group)
 
     # Replace lines
-    aligned = '\n'.join([str(x) for x in newlines])
+    aligned = unicode.join(u'\n', [x.newline for x in newlines])
 
     buf.begin_user_action()
     buf.delete(bounds[0], bounds[1])
