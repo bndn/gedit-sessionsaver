@@ -114,6 +114,7 @@ class DocumentHelper(Signals):
             return
 
         if newbuf != None:
+            self.connect_signal(newbuf, 'insert-text', self.on_insert_text_before)
             self.connect_signal_after(newbuf, 'insert-text', self.on_insert_text)
 
             self.connect_signal(newbuf, 'delete-range', self.on_delete_range_before)
@@ -777,11 +778,15 @@ class DocumentHelper(Signals):
     def on_notify_buffer(self, view, spec):
         self.reset_buffer(view.get_buffer())
 
-    def on_insert_text(self, buf, where, text, length):
+    def on_insert_text_before(self, buf, where, text, length):
         if not self._in_mode:
             return
 
         self._remove_duplicate_edit_points()
+
+    def on_insert_text(self, buf, where, text, length):
+        if not self._in_mode:
+            return
 
         self.block_signal(buf, 'insert-text')
         buf.begin_user_action()
