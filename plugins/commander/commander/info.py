@@ -32,11 +32,16 @@ class Info(TransparentWindow):
         self._entry = entry
         self._vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=3)
 
+        ev = Gtk.EventBox()
+        ev.show()
+
         self.set_transient_for(entry.get_toplevel())
 
         self._vw = Gtk.ScrolledWindow()
         self._vw.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.NEVER)
         self._vw.show()
+
+        ev.add(self._vw)
 
         self._text = Gtk.TextView()
 
@@ -48,6 +53,8 @@ class Info(TransparentWindow):
         self._text.override_color(Gtk.StateFlags.NORMAL, fgcolor)
         self._text.override_background_color(Gtk.StateFlags.NORMAL, bgcolor)
 
+        ev.override_background_color(Gtk.StateFlags.NORMAL, bgcolor)
+
         self._text.set_wrap_mode(Gtk.WrapMode.WORD_CHAR)
 
         buf = self._text.get_buffer()
@@ -58,7 +65,7 @@ class Info(TransparentWindow):
         self._text.set_editable(False)
 
         self._vw.add(self._text)
-        self._vbox.pack_end(self._vw, False, False, 0)
+        self._vbox.pack_end(ev, False, False, 0)
         self._vbox.show()
         self._button_bar = None
 
@@ -90,6 +97,15 @@ class Info(TransparentWindow):
             Pango.AttrType.RISE: 'rise',
             Pango.AttrType.SCALE: 'scale'
         }
+
+        css = Gtk.CssProvider()
+        css.load_from_data("""
+.trough {
+    background: transparent;
+}
+""")
+
+        self._vw.get_vscrollbar().get_style_context().add_provider(css, 600)
 
     def empty(self):
         buf = self._text.get_buffer()

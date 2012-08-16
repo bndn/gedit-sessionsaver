@@ -74,6 +74,8 @@ class TransparentWindow(Gtk.Window):
 
     def do_draw(self, ct):
         self.draw_background(ct)
+        Gtk.Window.do_draw(self, ct)
+
         return False
 
 # vi:ex:ts=4:et
