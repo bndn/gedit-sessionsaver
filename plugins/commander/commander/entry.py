@@ -74,6 +74,13 @@ class Entry(Gtk.EventBox):
 
 GtkEntry#gedit-commander-entry {
     gtk-key-bindings: terminal-like-bindings;
+
+    /* Override background to anything. This is weird, but doing this we can
+       then in code use widget.override_background to set the color dynamically
+       to the same color as the gedit view */
+    background: transparent;
+    border-width: 0;
+    box-shadow: 0 0 transparent;
 }
 """)
 
@@ -153,7 +160,6 @@ GtkEntry#gedit-commander-entry {
             font = context.get_font(Gtk.StateFlags.NORMAL)
 
             widget.override_color(Gtk.StateFlags.NORMAL, self.get_foreground_color())
-            widget.override_background_color(Gtk.StateFlags.NORMAL, self.get_background_color())
             widget.override_font(self.get_font())
         else:
             if self._entry:
@@ -188,11 +194,6 @@ GtkEntry#gedit-commander-entry {
         self._view.add_child_in_window(self, Gtk.TextWindowType.BOTTOM, 0, 0)
 
         win = self._view.get_window(Gtk.TextWindowType.BOTTOM)
-
-        # Set same color as gutter, i.e. bg color of the view
-        context = self._view.get_style_context()
-        color = context.get_background_color(Gtk.StateFlags.NORMAL)
-        win.set_background_rgba(color)
 
         self.show()
         self.set_size_request(win.get_width(), -1)
