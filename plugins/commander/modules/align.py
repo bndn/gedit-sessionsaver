@@ -244,13 +244,13 @@ def _regex(view, reg, group, additional_ws, add_ws_group, flags=0):
     yield commander.commands.result.DONE
 
 def __default__(view, reg='\s+', align_group=1, padding=1, padding_group=-1):
-    """Align selected in columns using a regular expression: align.regex [&lt;regex&gt;=<strong>\s+</strong>] [&lt;align-group&gt;] [&lt;padding&gt;] [&lt;padding-group&gt;=<strong>&lt;align-group&gt;</strong>]
+    """Align selected in columns using a regular expression: align.regex [&lt;regex&gt;=<i>\s+</i>] [&lt;align-group&gt;] [&lt;padding&gt;] [&lt;padding-group&gt;=<i>&lt;align-group&gt;</i>]
 
 Align the selected text in columns separated by the specified regular expression.
 
 The optional &lt;align-group&gt; argument specifies on which group in the regular expression
 the text should be aligned and defaults to 1 (or 0 in the case that there is
-no explicit group specified). The &lt;align-group&gt; will be <em>replaced</em>
+no explicit group specified). The &lt;align-group&gt; will be <b>replaced</b>
 with whitespace to align the columns. The optional &lt;padding&gt; argument can
 be used to add additional whitespace to the column separation. The last
 optional argument (&lt;padding-group&gt;) can be used to specify a separate
@@ -262,13 +262,13 @@ The regular expression will be matched in case-sensitive mode"""
     yield _regex(view, reg, align_group, padding, padding_group)
 
 def i(view, reg='\s+', align_group=1, padding=1, padding_group=-1):
-    """Align selected in columns using a regular expression: align.regex [&lt;regex&gt;=<strong>\s+</strong>] [&lt;align-group&gt;] [&lt;padding&gt;] [&lt;padding-group&gt;=<strong>&lt;align-group&gt;</strong>]
+    """Align selected in columns using a regular expression: align.regex [&lt;regex&gt;=<i>\s+</i>] [&lt;align-group&gt;] [&lt;padding&gt;] [&lt;padding-group&gt;=<i>&lt;align-group&gt;</i>]
 
 Align the selected text in columns separated by the specified regular expression.
 
 The optional &lt;align-group&gt; argument specifies on which group in the regular expression
 the text should be aligned and defaults to 1 (or 0 in the case that there is
-no explicit group specified). The &lt;align-group&gt; will be <em>replaced</em>
+no explicit group specified). The &lt;align-group&gt; will be <b>replaced</b>
 with whitespace to align the columns. The optional &lt;padding&gt; argument can
 be used to add additional whitespace to the column separation. The last
 optional argument (&lt;padding-group&gt;) can be used to specify a separate
