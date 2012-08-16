@@ -169,6 +169,11 @@ class DocumentHelper(Signals):
         elif event.direction == Gdk.ScrollDirection.DOWN:
             self.decrease_font_size()
             return True
+        elif event.direction == Gdk.ScrollDirection.SMOOTH:
+            if event.delta_y > 0:
+                self.decrease_font_size()
+            elif event.delta_y < 0:
+                self.increase_font_size()
 
         return False
 
