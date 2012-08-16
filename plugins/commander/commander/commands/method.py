@@ -28,6 +28,7 @@ import commander.utils as utils
 class Method:
     def __init__(self, method, name, parent):
         self.method = method
+        self.real_name = name
         self.name = name.replace('_', '-')
         self.parent = parent
         self._func_props = None

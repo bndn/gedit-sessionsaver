@@ -119,7 +119,7 @@ class Module(method.Method):
         if not self.unload():
             return
 
-        if self.name in sys.modules:
+        if self.real_name in sys.modules:
             raise Exception('Module already exists...')
 
         oldpath = list(sys.path)
@@ -128,7 +128,7 @@ class Module(method.Method):
             sys.path.insert(0, self._dirname)
 
             self._rollback.monitor()
-            self.mod = __import__(self.name, globals(), locals(), [], 0)
+            self.mod = __import__(self.real_name, globals(), locals(), [], 0)
             self._rollback.cancel()
 
             if not utils.is_commander_module(self.mod):
@@ -144,8 +144,8 @@ class Module(method.Method):
             sys.path = oldpath
             self._rollback.uninstall()
 
-            if self.name in sys.modules:
-                del sys.modules[self.name]
+            if self.real_name in sys.modules:
+                del sys.modules[self.real_name]
             raise
 
         sys.path = oldpath
