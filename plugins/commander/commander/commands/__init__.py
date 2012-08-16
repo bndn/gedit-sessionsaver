@@ -32,6 +32,7 @@ import module
 import method
 import result
 import exceptions
+import metamodule
 
 from accel_group import AccelGroup
 from accel_group import Accelerator
@@ -415,7 +416,7 @@ class Commands(Singleton):
         for r in mod.roots():
             bisect.insort(self._modules, r)
 
-        commander.modules.__dict__[mod.name] = mod.mod
+        commander.modules.__dict__[mod.name] = metamodule.MetaModule(mod.mod)
 
         if self._accel_group:
             self.scan_accelerators([mod])

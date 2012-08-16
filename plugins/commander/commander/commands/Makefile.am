@@ -9,6 +9,7 @@ plugin_PYTHON =	\
 	__init__.py \
 	method.py \
 	module.py \
+	metamodule.py \
 	result.py \
 	rollbackimporter.py
 
