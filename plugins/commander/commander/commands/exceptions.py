@@ -20,8 +20,10 @@
 #  Boston, MA 02111-1307, USA.
 
 class Execute(Exception):
-	def __init__(self, msg):
-		self.msg = msg
+    def __init__(self, msg):
+        self.msg = msg
 
-	def __str__(self):
-		return self.msg
+    def __str__(self):
+        return self.msg
+
+# vi:ex:ts=4:et
