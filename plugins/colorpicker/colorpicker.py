@@ -42,8 +42,7 @@ ui_str = """
 </ui>
 """
 
-class ColorPickerPlugin(GObject.Object, Gedit.WindowActivatable):
-    __gtype_name__ = "ColorPickerPlugin"
+class ColorPickerWindowActivatable(GObject.Object, Gedit.WindowActivatable):
 
     window = GObject.property(type=Gedit.Window)
 
