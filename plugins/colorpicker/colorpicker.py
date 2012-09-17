@@ -3,6 +3,7 @@
 #  This file is part of gedit-plugins
 #
 #  Copyright (C) 2006 Jesse van den Kieboom
+#  Copyright (C) 2012 Ignacio Casal Quinteiro
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -42,48 +43,10 @@ ui_str = """
 </ui>
 """
 
-class ColorPickerWindowActivatable(GObject.Object, Gedit.WindowActivatable):
+class ColorHelper:
 
-    window = GObject.property(type=Gedit.Window)
-
-    def __init__(self):
-        GObject.Object.__init__(self)
-        self._dialog = None
-
-    def do_activate(self):
-        self._insert_menu()
-        self._update()
-
-    def do_deactivate(self):
-        self._remove_menu()
-
-    def do_update_state(self):
-        self._update()
-
-    def _update(self):
-        tab = self.window.get_active_tab()
-        self._action_group.set_sensitive(tab != None)
-
-        if not tab and self._dialog and \
-                self._dialog.get_transient_for() == self.window:
-            self._dialog.response(Gtk.ResponseType.CLOSE)
-
-    def _insert_menu(self):
-        manager = self.window.get_ui_manager()
-        self._action_group = Gtk.ActionGroup(name="GeditColorPickerPluginActions")
-        self._action_group.add_actions(
-                [("ColorPicker", None, _("Pick _Color..."), None,
-                 _("Pick a color from a dialog"),
-                 lambda a: self.on_color_picker_activate())])
-
-        manager.insert_action_group(self._action_group)
-        self._ui_id = manager.add_ui_from_string(ui_str)
-
-    def _remove_menu(self):
-        manager = self.window.get_ui_manager()
-        manager.remove_ui(self._ui_id)
-        manager.remove_action_group(self._action_group)
-        manager.ensure_update()
+    def scale_color_component(self, component):
+        return min(max(int(round(component * 255.)), 0), 255)
 
     def skip_hex(self, buf, iter, next_char):
         while True:
@@ -127,9 +90,7 @@ class ColorPickerWindowActivatable(GObject.Object, Gedit.WindowActivatable):
 
         return start, end
 
-    def insert_color(self, text):
-        view = self.window.get_active_view()
-
+    def insert_color(self, view, text):
         if not view or not view.get_editable():
             return
 
@@ -152,12 +113,7 @@ class ColorPickerWindowActivatable(GObject.Object, Gedit.WindowActivatable):
 
         doc.end_user_action()
 
-    def scale_color_component(self, component):
-        return min(max(int(round(component * 255.)), 0), 255)
-
-    def get_current_color(self):
-        doc = self.window.get_active_document()
-
+    def get_current_color(self, doc):
         if not doc:
             return None
 
@@ -168,6 +124,50 @@ class ColorPickerWindowActivatable(GObject.Object, Gedit.WindowActivatable):
         else:
             return None
 
+class ColorPickerWindowActivatable(GObject.Object, Gedit.WindowActivatable):
+
+    window = GObject.property(type=Gedit.Window)
+
+    def __init__(self):
+        GObject.Object.__init__(self)
+        self._dialog = None
+        self._color_helper = ColorHelper()
+
+    def do_activate(self):
+        self._insert_menu()
+        self._update()
+
+    def do_deactivate(self):
+        self._remove_menu()
+
+    def do_update_state(self):
+        self._update()
+
+    def _update(self):
+        tab = self.window.get_active_tab()
+        self._action_group.set_sensitive(tab != None)
+
+        if not tab and self._dialog and \
+                self._dialog.get_transient_for() == self.window:
+            self._dialog.response(Gtk.ResponseType.CLOSE)
+
+    def _insert_menu(self):
+        manager = self.window.get_ui_manager()
+        self._action_group = Gtk.ActionGroup(name="GeditColorPickerPluginActions")
+        self._action_group.add_actions(
+                [("ColorPicker", None, _("Pick _Color..."), None,
+                 _("Pick a color from a dialog"),
+                 lambda a: self.on_color_picker_activate())])
+
+        manager.insert_action_group(self._action_group)
+        self._ui_id = manager.add_ui_from_string(ui_str)
+
+    def _remove_menu(self):
+        manager = self.window.get_ui_manager()
+        manager.remove_ui(self._ui_id)
+        manager.remove_action_group(self._action_group)
+        manager.ensure_update()
+
     # Signal handlers
 
     def on_color_picker_activate(self):
@@ -176,7 +176,7 @@ class ColorPickerWindowActivatable(GObject.Object, Gedit.WindowActivatable):
 
             self._dialog.connect_after('response', self.on_dialog_response)
 
-        rgba_str = self.get_current_color()
+        rgba_str = self._color_helper.get_current_color(self.window.get_active_document())
 
         if rgba_str:
             rgba = Gdk.RGBA()
@@ -192,11 +192,81 @@ class ColorPickerWindowActivatable(GObject.Object, Gedit.WindowActivatable):
             rgba = Gdk.RGBA()
             dialog.get_rgba(rgba)
 
-            self.insert_color("%02x%02x%02x" % (self.scale_color_component(rgba.red), \
-                                                self.scale_color_component(rgba.green), \
-                                                self.scale_color_component(rgba.blue)))
+            self._color_helper.insert_color(self.window.get_active_view(),
+                                            "%02x%02x%02x" % (self._color_helper.scale_color_component(rgba.red), \
+                                                              self._color_helper.scale_color_component(rgba.green), \
+                                                              self._color_helper.scale_color_component(rgba.blue)))
         else:
             self._dialog.destroy()
             self._dialog = None
+
+
+class ColorPickerViewActivatable(GObject.Object, Gedit.ViewActivatable):
+
+    view = GObject.property(type=Gedit.View)
+
+    def __init__(self):
+        GObject.Object.__init__(self)
+        self._color_button = None
+        self._color_helper = ColorHelper()
+
+    def do_activate(self):
+        # we do not have a direct accessor to the overlay
+        self.overlay = self.view.get_parent().get_parent()
+        self.overlay.connect('get-child-position', self.on_get_child_position)
+
+        buf = self.view.get_buffer()
+        buf.connect('notify::has-selection', self.on_buffer_has_selection)
+
+    def do_deactivate(self):
+        pass
+
+    def on_get_child_position(self, overlay, widget, alloc):
+        if widget == self._color_button:
+            buf = self.view.get_buffer()
+            selection = buf.get_selection_bound()
+            insert = buf.get_insert()
+            first = buf.get_iter_at_mark(insert)
+            second = buf.get_iter_at_mark(selection)
+            Gtk.TextIter.order(first, second)
+            location = self.view.get_iter_location(first)
+            x, y = self.view.buffer_to_window_coords(Gtk.TextWindowType.TEXT, location.x, location.y)
+            min_width, nat_width = widget.get_preferred_width()
+            min_height, nat_height = widget.get_preferred_height()
+            alloc.x = x
+            if y - nat_height > 0:
+                alloc.y = y - nat_height
+            else:
+                alloc.y = y + location.height
+            alloc.width = nat_width
+            alloc.height = nat_height
+
+            return True
+
+        return False
+
+    def on_buffer_has_selection(self, buf, pspec):
+        rgba_str = self._color_helper.get_current_color(self.view.get_buffer())
+        if rgba_str is not None and buf.get_has_selection() and self._color_button is None:
+            rgba = Gdk.RGBA()
+            parsed = rgba.parse(rgba_str)
+            if parsed:
+                self._color_button = Gtk.ColorButton.new_with_rgba(rgba)
+                self._color_button.show()
+                self._color_button.connect('color-set', self.on_color_set)
+
+                self.overlay.add_overlay(self._color_button)
+        elif self._color_button is not None:
+            self._color_button.destroy()
+            self._color_button = None
+
+    def on_color_set(self, color_button):
+        rgba = Gdk.RGBA()
+        color_button.get_rgba(rgba)
+
+        self._color_helper.insert_color(self.view,
+                                        "%02x%02x%02x" % (self._color_helper.scale_color_component(rgba.red), \
+                                                          self._color_helper.scale_color_component(rgba.green), \
+                                                          self._color_helper.scale_color_component(rgba.blue)))
 
 # ex:ts=4:et:
