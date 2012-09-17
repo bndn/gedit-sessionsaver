@@ -63,9 +63,12 @@ class ColorHelper:
             if not next_char(iter):
                 return
 
-    def get_rgba_position(self, buf):
+    def get_rgba_position(self, buf, use_bounds):
         bounds = buf.get_selection_bounds()
         if bounds == ():
+            if use_bounds:
+                return None
+
             # No selection, find color in the current cursor position
             start = buf.get_iter_at_mark(buf.get_insert())
 
@@ -102,7 +105,7 @@ class ColorHelper:
         doc.begin_user_action()
 
         # Get the color
-        bounds = self.get_rgba_position(doc)
+        bounds = self.get_rgba_position(doc, False)
 
         if not bounds:
             doc.delete_selection(False, True)
@@ -113,11 +116,11 @@ class ColorHelper:
 
         doc.end_user_action()
 
-    def get_current_color(self, doc):
+    def get_current_color(self, doc, use_bounds):
         if not doc:
             return None
 
-        bounds = self.get_rgba_position(doc)
+        bounds = self.get_rgba_position(doc, use_bounds)
 
         if bounds:
             return doc.get_text(bounds[0], bounds[1], False)
@@ -176,7 +179,7 @@ class ColorPickerWindowActivatable(GObject.Object, Gedit.WindowActivatable):
 
             self._dialog.connect_after('response', self.on_dialog_response)
 
-        rgba_str = self._color_helper.get_current_color(self.window.get_active_document())
+        rgba_str = self._color_helper.get_current_color(self.window.get_active_document(), False)
 
         if rgba_str:
             rgba = Gdk.RGBA()
@@ -216,47 +219,59 @@ class ColorPickerViewActivatable(GObject.Object, Gedit.ViewActivatable):
         self.overlay.connect('get-child-position', self.on_get_child_position)
 
         buf = self.view.get_buffer()
-        buf.connect('notify::has-selection', self.on_buffer_has_selection)
+        buf.connect_after('mark-set', self.on_buffer_mark_set)
 
     def do_deactivate(self):
-        pass
+        if self._color_button is not None:
+            self._color_button.destroy()
+            self._color_button = None
 
     def on_get_child_position(self, overlay, widget, alloc):
         if widget == self._color_button:
             buf = self.view.get_buffer()
-            selection = buf.get_selection_bound()
-            insert = buf.get_insert()
-            first = buf.get_iter_at_mark(insert)
-            second = buf.get_iter_at_mark(selection)
-            Gtk.TextIter.order(first, second)
-            location = self.view.get_iter_location(first)
-            x, y = self.view.buffer_to_window_coords(Gtk.TextWindowType.TEXT, location.x, location.y)
-            min_width, nat_width = widget.get_preferred_width()
-            min_height, nat_height = widget.get_preferred_height()
-            alloc.x = x
-            if y - nat_height > 0:
-                alloc.y = y - nat_height
-            else:
-                alloc.y = y + location.height
-            alloc.width = nat_width
-            alloc.height = nat_height
+            bounds = buf.get_selection_bounds()
+            if bounds != ():
+                start, end = bounds
+                location = self.view.get_iter_location(start)
+                x, y = self.view.buffer_to_window_coords(Gtk.TextWindowType.TEXT, location.x, location.y)
+                min_width, nat_width = widget.get_preferred_width()
+                min_height, nat_height = widget.get_preferred_height()
+                alloc.x = x
+                if y - nat_height > 0:
+                    alloc.y = y - nat_height
+                else:
+                    alloc.y = y + location.height
+                alloc.width = nat_width
+                alloc.height = nat_height
 
-            return True
+                return True
 
         return False
 
-    def on_buffer_has_selection(self, buf, pspec):
-        rgba_str = self._color_helper.get_current_color(self.view.get_buffer())
-        if rgba_str is not None and buf.get_has_selection() and self._color_button is None:
+    def on_buffer_mark_set(self, buf, location, mark):
+
+        if not buf.get_has_selection():
+            if self._color_button:
+                self._color_button.destroy()
+                self._color_button = None
+            return
+
+        if mark != buf.get_insert() and mark != buf.get_selection_bound():
+            return
+
+        rgba_str = self._color_helper.get_current_color(self.view.get_buffer(), True)
+        if rgba_str is not None and self._color_button is None:
             rgba = Gdk.RGBA()
             parsed = rgba.parse(rgba_str)
             if parsed:
                 self._color_button = Gtk.ColorButton.new_with_rgba(rgba)
+                self._color_button.set_halign(Gtk.Align.START)
+                self._color_button.set_valign(Gtk.Align.START)
                 self._color_button.show()
                 self._color_button.connect('color-set', self.on_color_set)
 
                 self.overlay.add_overlay(self._color_button)
-        elif self._color_button is not None:
+        elif not rgba_str and self._color_button is not None:
             self._color_button.destroy()
             self._color_button = None
 
