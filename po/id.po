@@ -1,440 +1,394 @@
-# translation of gedit.master.po to Indonesian
-# Indonesia translation of gedit.
-# Copyright (C) 2004 THE gedit'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the gedit package.
+# Indonesia translation of gedit-plugins.
+# Copyright (C) 2004 THE gedit-plugins' COPYRIGHT HOLDER
+# This file is distributed under the same license as the gedit-plugins package.
+#
 # Mohammad DAMT <mdamt@bisnisweb.com>
-#
-#
 # Ahmad Riza H Nst <ari@160c.afraid.org>, 20040508.
+# Imam Musthaqim, 2010.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2010.
+# Andika Triwidada <andika@gmail.com>, 2010, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gedit.master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 13:11+0100\n"
-"PO-Revision-Date: 2010-08-31 10:07+0700\n"
-"Last-Translator: Dirgita <dirgitadevina@yahoo.co.id>\n"
-"Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
+"Project-Id-Version: gedit-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&keywords=I18N+L10N&component=Plugins\n"
+"POT-Creation-Date: 2012-03-03 08:56+0000\n"
+"PO-Revision-Date: 2012-09-17 22:54+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <gnome@i15n.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Poedit-Language: Indonesian\n"
-"X-Poedit-Country: Indonesia\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Poedit 1.5.3\n"
+"Language: id_ID\n"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:1
 msgid "Bookmarks"
-msgstr "Tanda buku"
+msgstr "Tanda taut"
 
 #: ../plugins/bookmarks/bookmarks.plugin.desktop.in.in.h:2
 msgid "Easy document navigation with bookmarks"
-msgstr "Navigasi dokumen yang mudah dengan bookmark"
+msgstr "Navigasi dokumen yang mudah dengan tanda taut"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:197
-#, fuzzy
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:199
 msgid "Toggle Bookmark"
-msgstr "Tanda buku"
-
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:198
-#, fuzzy
-msgid "Toggle bookmark status of the current line"
-msgstr "Tampil atau sembunyikan batang status pada jendela saat ini"
+msgstr "Jungkitkan Tanda Taut"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:200
-msgid "Goto Next Bookmark"
-msgstr "Ke Bookmark Berikutnya"
+msgid "Toggle bookmark status of the current line"
+msgstr "Jungkitkan tanda taut pada posisi baris kini"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:201
-#, fuzzy
-msgid "Goto the next bookmark"
-msgstr "Ke lokasi selanjutnya"
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:202
+msgid "Goto Next Bookmark"
+msgstr "Ke Tanda Taut Berikutnya"
 
 #: ../plugins/bookmarks/gedit-bookmarks-plugin.c:203
-#, fuzzy
-msgid "Goto Previous Bookmark"
-msgstr "Ke lokasi sebelumnya"
+msgid "Goto the next bookmark"
+msgstr "Ke tanda taut selanjutnya"
 
-#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:204
-#, fuzzy
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:205
+msgid "Goto Previous Bookmark"
+msgstr "Ke Tanda Taut Sebelumnya"
+
+#: ../plugins/bookmarks/gedit-bookmarks-plugin.c:206
 msgid "Goto the previous bookmark"
-msgstr "Tampilkan halaman sebelumnya"
+msgstr "Ke tanda taut sebelumnya"
 
 #: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:1
-#, fuzzy
-msgid "Automatically adds closing brackets."
-msgstr "Encoding Yang Terdeteksi Secara Otomatis"
-
-#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
 msgid "Bracket Completion"
 msgstr "Penyelesaian Tanda Kurung"
 
+#: ../plugins/bracketcompletion/bracketcompletion.plugin.desktop.in.in.h:2
+msgid "Automatically adds closing brackets."
+msgstr "Otomatis menambah kurung tutup."
+
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:1
-#: ../plugins/charmap/gedit-charmap-plugin.c:337
-#, fuzzy
+#: ../plugins/charmap/charmap/__init__.py:51
 msgid "Character Map"
-msgstr "Karakter (tanpa spasi)"
+msgstr "Tabel Karakter"
 
 #: ../plugins/charmap/charmap.plugin.desktop.in.in.h:2
 msgid "Insert special characters just by clicking on them."
 msgstr "Sisipkan karakter khusus hanya dengan mengkliknya."
 
+#. ex:et:ts=4:
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Code comment"
-msgstr "Komentar"
+msgstr "Komentarkan kode"
 
 #: ../plugins/codecomment/codecomment.plugin.desktop.in.in.h:2
 msgid "Comment out or uncomment a selected block of code."
-msgstr "Beri komentar atau jangan beri komentar pada blok kode yang dipilih."
+msgstr "Jadikan komentar atau jangan jadikan komentar blok kode yang dipilih."
+
+#: ../plugins/codecomment/codecomment.py:88
+msgid "Co_mment Code"
+msgstr "Ko_mentarkan Kode"
 
 #: ../plugins/codecomment/codecomment.py:90
-#, fuzzy
-msgid "Co_mment Code"
-msgstr "Komentar"
-
-#: ../plugins/codecomment/codecomment.py:92
-#, fuzzy
 msgid "Comment the selected code"
-msgstr "Menghapus teks yang dipilih"
+msgstr "Ubah blok teks yang dipilih menjadi komentar"
 
-#: ../plugins/codecomment/codecomment.py:96
+#: ../plugins/codecomment/codecomment.py:94
 msgid "U_ncomment Code"
 msgstr "Kode Jangan_beri Komentar"
 
-#: ../plugins/codecomment/codecomment.py:98
-#, fuzzy
+#: ../plugins/codecomment/codecomment.py:96
 msgid "Uncomment the selected code"
-msgstr "Menghapus teks yang dipilih"
+msgstr "Kode yang dipilih dijadikan bukan komentar"
 
 #. ex:ts=4:et:
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Color Picker"
-msgstr "Skema Warna"
+msgstr "Pemilih Warna"
 
 #: ../plugins/colorpicker/colorpicker.plugin.desktop.in.in.h:2
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 "Memilih warna dari dialog dan menyisipkan representasi heksadesimalnya."
 
-#: ../plugins/colorpicker/colorpicker.py:77
+#: ../plugins/colorpicker/colorpicker.py:76
 msgid "Pick _Color..."
 msgstr "Pilih _Warna..."
 
-#: ../plugins/colorpicker/colorpicker.py:78
+#: ../plugins/colorpicker/colorpicker.py:77
 msgid "Pick a color from a dialog"
 msgstr "Pilih warna dari dialog"
 
-#: ../plugins/colorpicker/colorpicker.py:188
-#, fuzzy
+#: ../plugins/colorpicker/colorpicker.py:176
 msgid "Pick Color"
-msgstr "Warna sambungan"
-
-#: ../plugins/colorpicker/colorpicker.py:195
-msgid "_Insert"
-msgstr "S_isip"
+msgstr "Pilih Warna"
 
 #. ex:ts=4:et:
 #: ../plugins/commander/commander.plugin.desktop.in.in.h:1
+msgid "Commander"
+msgstr "Komandan"
+
+#: ../plugins/commander/commander.plugin.desktop.in.in.h:2
 msgid "Command line interface for advanced editing"
 msgstr "Antar muka baris perintah bagi penyuntingan tingkat lanjut"
 
-#: ../plugins/commander/commander.plugin.desktop.in.in.h:2
-#, fuzzy
-msgid "Commander"
-msgstr "Warn_a perintah:"
+#: ../plugins/commander/commander/windowactivatable.py:70
+msgid "Commander Mode"
+msgstr "Moda Komandan"
 
-#. ex:set ts=8 noet:
+#: ../plugins/commander/commander/windowactivatable.py:71
+msgid "Start commander mode"
+msgstr "Mulai pada moda komandan"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:110
+msgid "Empty Document"
+msgstr "Dokumen Kosong"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:218
+msgid "Type here to search..."
+msgstr "Ketik di sini untuk mencari..."
+
+#: ../plugins/dashboard/dashboard/dashboard.py:345
+msgid "Most Used"
+msgstr "Paling Banyak Dipakai"
+
+#: ../plugins/dashboard/dashboard/dashboard.py:346
+msgid "Recently Used"
+msgstr "Baru Digunakan"
+
+#. ex:ts=4:et:
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:1
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:2
+msgid "A Dashboard for new tabs"
+msgstr "Dashboard bagi tab baru"
+
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:1
-#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
-#, fuzzy
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "Draw Spaces"
-msgstr "Gunakan Spasi"
+msgstr "Gambar Spasi"
 
 #: ../plugins/drawspaces/drawspaces.plugin.desktop.in.in.h:2
 msgid "Draw Spaces and Tabs"
 msgstr "Gambar Spasi dan Tab"
 
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
+msgid "Show _White Space"
+msgstr "Tampilkan _White Space"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
+msgid "Show spaces and tabs"
+msgstr "Tunjukkan spasi dan tab"
+
+#. ex:set ts=8 noet:
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:1
-#, fuzzy
-msgid "Draw leading spaces"
-msgstr "Spasi tak-pecah"
+msgid "Draw spaces"
+msgstr "Gambar spasi"
 
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:2
-msgid "Draw new lines"
-msgstr "Menggambar garis baru"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
-#, fuzzy
-msgid "Draw non-breaking spaces"
-msgstr "Spasi tak-pecah"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
-#, fuzzy
-msgid "Draw spaces"
-msgstr "Masukkan spasi"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
-msgid "Draw spaces in text"
-msgstr "Menggambar spasi dalam teks"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
 msgid "Draw tabs"
 msgstr "Menggambar tab"
 
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:3
+msgid "Draw new lines"
+msgstr "Menggambar garis baru"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:4
+msgid "Draw non-breaking spaces"
+msgstr "Gambar spasi tak-pecah"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:5
+msgid "Draw leading spaces"
+msgstr "Gambar spasi awal"
+
+#: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:6
+msgid "Draw spaces in text"
+msgstr "Menggambar spasi dalam teks"
+
 #: ../plugins/drawspaces/gedit-drawspaces-plugin.ui.h:7
-#, fuzzy
 msgid "Draw trailing spaces"
-msgstr "Buang spasi di ekor baris"
+msgstr "Gambar spasi di ekor baris"
 
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:134
-#, fuzzy
-msgid "Show _White Space"
-msgstr "Tampilkan halaman selanjutnya"
-
-#: ../plugins/drawspaces/gedit-drawspaces-plugin.c:135
-#, fuzzy
-msgid "Show spaces and tabs"
-msgstr "Gunakan _spasi, jangan tab"
+#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:1
+msgid "Enabled"
+msgstr "Difungsikan"
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:2
-#, fuzzy
-msgid "Enabled"
-msgstr "Tidak aktif"
-
-#: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:3
 msgid "If TRUE drawing will be enabled."
-msgstr ""
+msgstr "Bila TRUE maka menggambar akan difungsikan."
 
 #: ../plugins/drawspaces/org.gnome.gedit.plugins.drawspaces.gschema.xml.in.in.h:4
 msgid "The type of spaces to be drawn."
-msgstr ""
+msgstr "Tipe spasi yang akan digambar."
 
 #: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:1
-msgid "Join several lines or split long ones"
-msgstr "Menggabungkan beberapa garis atau memutuskan garis yang panjang"
-
-#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
 msgid "Join/Split Lines"
 msgstr "Gabungkan/Putuskan Garis"
 
-#: ../plugins/joinlines/joinlines.py:56
-#, fuzzy
+#: ../plugins/joinlines/joinlines.plugin.desktop.in.in.h:2
+msgid "Join several lines or split long ones"
+msgstr "Menggabungkan beberapa garis atau memutuskan garis yang panjang"
+
+#: ../plugins/joinlines/joinlines.py:74
 msgid "_Join Lines"
-msgstr "Baris"
+msgstr "_Gabungkan Baris"
 
-#: ../plugins/joinlines/joinlines.py:57
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:75
 msgid "Join the selected lines"
-msgstr "Warna dari sambungan terpilih"
+msgstr "Menggabung baris terpilih"
 
-#: ../plugins/joinlines/joinlines.py:59
+#: ../plugins/joinlines/joinlines.py:77
 msgid "_Split Lines"
 msgstr "_Putuskan Garis"
 
-#: ../plugins/joinlines/joinlines.py:60
-#, fuzzy
+#: ../plugins/joinlines/joinlines.py:78
 msgid "Split the selected lines"
-msgstr "Menghapus teks yang dipilih"
-
-#. ex:ts=4:et:
-#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
-msgid "Edit document in multiple places at once"
-msgstr "Sunting dokumen di beberapa tempat sekaligus"
-
-#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
-msgid "Multi Edit"
-msgstr "Sunting Ganda"
+msgstr "Memecah baris terpilih"
 
 #: ../plugins/multiedit/multiedit/documenthelper.py:301
 msgid "Added edit point..."
 msgstr "Titik sunting ditambahkan..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:637
+#: ../plugins/multiedit/multiedit/documenthelper.py:643
 msgid "Column Mode..."
 msgstr "Moda Kolom..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:759
+#: ../plugins/multiedit/multiedit/documenthelper.py:757
 msgid "Removed edit point..."
 msgstr "Titik sunting dihapus..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:922
+#: ../plugins/multiedit/multiedit/documenthelper.py:916
 msgid "Cancelled column mode..."
 msgstr "Membatalkan moda kolom..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1260
+#: ../plugins/multiedit/multiedit/documenthelper.py:1288
 msgid "Enter column edit mode using selection"
 msgstr "Masuk moda sunting kolom memakai piliah"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1261
-#, fuzzy
+#: ../plugins/multiedit/multiedit/documenthelper.py:1289
 msgid "Enter <b>smart</b> column edit mode using selection"
-msgstr "Masuk moda sunting kolom memakai piliah"
+msgstr "Masuk moda sunting kolom <b>cerdas</b> memakai pilihan"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1262
-#, fuzzy
+#: ../plugins/multiedit/multiedit/documenthelper.py:1290
 msgid "<b>Smart</b> column align mode using selection"
-msgstr "Masuk moda sunting kolom memakai piliah"
+msgstr "Mode perataan kolom <b>cerdas</b> memakai pilihan"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1263
+#: ../plugins/multiedit/multiedit/documenthelper.py:1291
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
+"Mode perataan kolom <b>cerdas</b> dengan spasi tambahan memakai pilihan"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1265
+#: ../plugins/multiedit/multiedit/documenthelper.py:1293
 msgid "Toggle edit point"
 msgstr "Jungkit titik sunting"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1266
+#: ../plugins/multiedit/multiedit/documenthelper.py:1294
 msgid "Add edit point at beginning of line/selection"
 msgstr "Tambah titik sunting di awal baris/pilihan"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1267
+#: ../plugins/multiedit/multiedit/documenthelper.py:1295
 msgid "Add edit point at end of line/selection"
 msgstr "Tambah titik sunting di akhir baris/pilihan"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1268
-#, fuzzy
+#: ../plugins/multiedit/multiedit/documenthelper.py:1296
 msgid "Align edit points"
-msgstr "Jungkit titik sunting"
+msgstr "Ratakan titik sunting"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1269
+#: ../plugins/multiedit/multiedit/documenthelper.py:1297
 msgid "Align edit points with additional space"
-msgstr ""
+msgstr "Ratakan titik sunting dengan spasi tambahan"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1305
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
+#: ../plugins/multiedit/multiedit/documenthelper.py:1328
+#: ../plugins/multiedit/multiedit/__init__.py:80
 msgid "Multi Edit Mode"
 msgstr "Moda Sunting Ganda"
 
-#: ../plugins/multiedit/multiedit/windowhelper.py:70
+#: ../plugins/multiedit/multiedit/__init__.py:82
 msgid "Start multi edit mode"
 msgstr "Mulai moda sunting ganda"
 
 #. ex:ts=4:et:
-#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
-msgid "Easily increase and decrease the text size"
-msgstr ""
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:1
+msgid "Multi Edit"
+msgstr "Sunting Ganda"
 
-#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
-#, fuzzy
-msgid "Text Size"
-msgstr "Ukuran Tab"
+#: ../plugins/multiedit/multiedit.plugin.desktop.in.in.h:2
+msgid "Edit document in multiple places at once"
+msgstr "Sunting dokumen di beberapa tempat sekaligus"
 
-#: ../plugins/sessionsaver/__init__.py:64
-#, fuzzy
-msgid "Sa_ved sessions"
-msgstr "_Simpan Dengan Kompresi"
+#: ../plugins/sessionsaver/dialogs.py:132
+msgid "Session Name"
+msgstr "Nama Sesi"
 
-#: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
-msgid "_Save current session"
-msgstr "Ganti bagian terpilih"
-
-#: ../plugins/sessionsaver/__init__.py:65
-#, fuzzy
-msgid "Save the current document list as a new session"
-msgstr "Pindahkan dokumen ini ke jendela baru"
-
-#: ../plugins/sessionsaver/__init__.py:66
-msgid "_Manage saved sessions..."
-msgstr "_Kelola sesi tersimpan..."
-
-#: ../plugins/sessionsaver/__init__.py:66
-#, fuzzy
-msgid "Open the saved session manager"
-msgstr "Membuka manual gedit"
-
-#: ../plugins/sessionsaver/__init__.py:106
+#: ../plugins/sessionsaver/__init__.py:84
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Pulihkan sesi '%s'"
 
-#: ../plugins/sessionsaver/dialogs.py:167
-msgid "Session Name"
-msgstr "Nama Sesi"
+#: ../plugins/sessionsaver/__init__.py:103
+msgid "Sa_ved sessions"
+msgstr "Sesi yang _disimpan"
+
+#: ../plugins/sessionsaver/__init__.py:105
+msgid "_Save current session"
+msgstr "_Simpan sesi saat ini"
+
+#: ../plugins/sessionsaver/__init__.py:106
+msgid "Save the current document list as a new session"
+msgstr "Simpan daftar dokumen kini sebagai sesi baru"
+
+#: ../plugins/sessionsaver/__init__.py:108
+msgid "_Manage saved sessions..."
+msgstr "_Kelola sesi tersimpan..."
+
+#: ../plugins/sessionsaver/__init__.py:109
+msgid "Open the saved session manager"
+msgstr "Buka manajer sesi yang disimpan"
 
 #. ex:ts=4:et:
 #: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:1
-msgid "Save and restore your working sessions"
-msgstr "Simpan dan pulihkan sesi kerja Anda"
-
-#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
 msgid "Session Saver"
 msgstr "Penyimpan Sesi"
 
+#: ../plugins/sessionsaver/sessionsaver.plugin.desktop.in.in.h:2
+msgid "Save and restore your working sessions"
+msgstr "Simpan dan pulihkan sesi kerja Anda"
+
 #: ../plugins/sessionsaver/sessionsaver.ui.h:1
-#, fuzzy
 msgid "Save session"
-msgstr "_Simpan Dengan Kompresi"
+msgstr "Simpan sesi"
 
 #: ../plugins/sessionsaver/sessionsaver.ui.h:2
-msgid "Saved Sessions"
-msgstr "Sesi Tersimpan"
-
-#: ../plugins/sessionsaver/sessionsaver.ui.h:3
 msgid "Session name:"
 msgstr "Nama sesi:"
 
+#: ../plugins/sessionsaver/sessionsaver.ui.h:3
+msgid "Saved Sessions"
+msgstr "Sesi Tersimpan"
+
 #: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:1
+msgid "Smart Spaces"
+msgstr "Spasi Cerdas"
+
+#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
 msgid "Forget you're not using tabulations."
 msgstr "Lupa bahwa Anda tidak menggunakan tabulasi."
 
-#: ../plugins/smartspaces/smartspaces.plugin.desktop.in.in.h:2
-#, fuzzy
-msgid "Smart Spaces"
-msgstr "Masukkan spasi"
-
-#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
-#, fuzzy
-msgid "Embed a terminal in the bottom pane."
-msgstr "Buka terminal pada lokasi dokumen"
-
-#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
-#, fuzzy
-msgid "Embedded Terminal"
-msgstr "Objek yang dilengketkan"
-
-#: ../plugins/terminal/terminal.py:307
-msgid "Terminal"
-msgstr "Terminal"
-
-#: ../plugins/terminal/terminal.py:329
-#, fuzzy
-msgid "C_hange Directory"
-msgstr "Ubah _ke:"
-
-#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:146
-#, fuzzy
-msgid "Document Words"
-msgstr "Tubuh dokumen"
-
-#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
-msgid "Word Completion"
-msgstr "Penyelesaian Kata"
-
-#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
-msgid "Word completion using the completion framework"
-msgstr "Penyelesaian kata memakai kerangka kerja penyelesaian"
-
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:1
 msgid "SyncTeX"
-msgstr ""
+msgstr "SyncTeX"
 
 #: ../plugins/synctex/synctex.plugin.desktop.in.in.h:2
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
-msgstr ""
+msgstr "Selaraskan antara LaTeX dan PDF dengan gedit dan evince."
 
-#: ../plugins/synctex/synctex/synctex.py:280
-#: ../plugins/synctex/synctex/synctex.py:281
-#, fuzzy
+#: ../plugins/synctex/synctex/synctex.py:307
+#: ../plugins/synctex/synctex/synctex.py:308
 msgid "Forward Search"
-msgstr "Sambungan terusan"
+msgstr "Cari Maju"
 
 #: ../plugins/taglist/gedit-taglist-plugin.c:165
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:713
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:700
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:716
 msgid "Tags"
 msgstr "Tag"
 
@@ -446,22 +400,22 @@ msgstr "Pilih kelompok tag yang ingin digunakan"
 msgid "_Preview"
 msgstr "_Pratinjau"
 
-#: ../plugins/taglist/gedit-taglist-plugin-panel.c:694
+#: ../plugins/taglist/gedit-taglist-plugin-panel.c:697
 msgid "Available Tag Lists"
 msgstr "Daftar Tag Tersedia"
 
 #. ex:ts=8:noet:
 #: ../plugins/taglist/HTML.tags.xml.in.h:1
+msgid "XHTML 1.0 — Tags"
+msgstr "XHTML 1.0 — Tag"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:2
 msgid "Abbreviated form"
 msgstr "Formulir singkat"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:2
+#: ../plugins/taglist/HTML.tags.xml.in.h:3
 msgid "Abbreviation"
 msgstr "Singkat"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:3
-msgid "Above"
-msgstr "Atas"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:4
 msgid "Accessibility key character"
@@ -484,1168 +438,1168 @@ msgid "Alternative"
 msgstr "Alternatif"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:9
-msgid "Anchor"
-msgstr "Jangkar"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:10
 msgid "Anchor URI"
 msgstr "Jangkar URI"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:11
-msgid "Applet class file code"
-msgstr "Kode berkas kelas applet"
+#: ../plugins/taglist/HTML.tags.xml.in.h:10
+msgid "Anchor"
+msgstr "Jangkar"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:13
+#: ../plugins/taglist/HTML.tags.xml.in.h:12
 msgid "Applet class file code (deprecated)"
 msgstr "Kode berkas kelas aplet (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:14
-msgid "Array"
-msgstr "Larik"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:15
+#: ../plugins/taglist/HTML.tags.xml.in.h:13
 msgid "Associated information"
 msgstr "Informasi yang berhubungan"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:16
+#: ../plugins/taglist/HTML.tags.xml.in.h:14
 msgid "Author info"
 msgstr "Informasi Penulis"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:17
+#: ../plugins/taglist/HTML.tags.xml.in.h:15
 msgid "Axis related headers"
 msgstr "Judul berhubungan poros"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:18
-msgid "Background color"
-msgstr "Warna latar belakang"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:20
+#: ../plugins/taglist/HTML.tags.xml.in.h:17
 msgid "Background color (deprecated)"
 msgstr "Warna latar (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:21
-msgid "Background texture tile"
-msgstr "Latar belakang tekstur ubin"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:23
+#: ../plugins/taglist/HTML.tags.xml.in.h:19
 msgid "Background texture tile (deprecated)"
 msgstr "Latar belakang tekstur ubin (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:24
-msgid "Base URI"
-msgstr "Basis URI"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:25
-msgid "Base font"
-msgstr "Basis Jenis Huruf"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:27
+#: ../plugins/taglist/HTML.tags.xml.in.h:21
 msgid "Base font (deprecated)"
 msgstr "Fonta dasar (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:28
+#: ../plugins/taglist/HTML.tags.xml.in.h:22
+msgid "Base URI"
+msgstr "Basis URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:23
 msgid "Bold"
 msgstr "Tebal"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:29
-msgid "Border"
-msgstr "Garis"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:31
+#: ../plugins/taglist/HTML.tags.xml.in.h:25
 msgid "Border (deprecated)"
 msgstr "Tepi (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:32
-msgid "Border color"
-msgstr "Warna garis"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:33
+#: ../plugins/taglist/HTML.tags.xml.in.h:26
 msgid "Cell rowspan"
 msgstr "Jarak baris Cell"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:34
-msgid "Center"
-msgstr "Tengah"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:36
+#: ../plugins/taglist/HTML.tags.xml.in.h:28
 msgid "Center (deprecated)"
 msgstr "Tengah (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:37
+#: ../plugins/taglist/HTML.tags.xml.in.h:29
 msgid "Character encoding of linked resource"
 msgstr "Pengkodean karakter sumber yang disambungkan"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:38
-msgid "Checked (state)"
-msgstr "Diperiksa (kondisi)"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:39
+#: ../plugins/taglist/HTML.tags.xml.in.h:30
 msgid "Checked state"
 msgstr "Kondisi diperiksa"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:40
+#: ../plugins/taglist/HTML.tags.xml.in.h:31
 msgid "Citation"
 msgstr "Kutipan"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:41
+#: ../plugins/taglist/HTML.tags.xml.in.h:32
 msgid "Cite reason for change"
 msgstr "Nyatakan alasan bagi perubahan"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:42
+#: ../plugins/taglist/HTML.tags.xml.in.h:33
 msgid "Class implementation ID"
 msgstr "ID penerapan Class"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:43
+#: ../plugins/taglist/HTML.tags.xml.in.h:34
 msgid "Class list"
 msgstr "Daftar kelas"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:44
+#: ../plugins/taglist/HTML.tags.xml.in.h:35
 msgid "Clear text flow control"
 msgstr "Kendali aliran teks"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:45
+#: ../plugins/taglist/HTML.tags.xml.in.h:36
 msgid "Code content type"
 msgstr "Tipe isi code"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:46
-msgid "Color of selected links"
-msgstr "Warna dari sambungan terpilih"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:48
+#: ../plugins/taglist/HTML.tags.xml.in.h:38
 msgid "Color of selected links (deprecated)"
 msgstr "Warna dari taut terpilih (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:49
+#: ../plugins/taglist/HTML.tags.xml.in.h:39
 msgid "Column span"
 msgstr "Jarak kolom"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:50
+#: ../plugins/taglist/HTML.tags.xml.in.h:40
 msgid "Columns"
 msgstr "Kolom"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:51
+#: ../plugins/taglist/HTML.tags.xml.in.h:41
 msgid "Comment"
 msgstr "Komentar"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:52
+#: ../plugins/taglist/HTML.tags.xml.in.h:42
 msgid "Computer code fragment"
 msgstr "Pecahan kode komputer"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:53
-msgid "Content scheme"
-msgstr "Bagan Isi"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:54
-msgid "Content type"
-msgstr "Jenis Isi"
-
 #. The "type" attribute is deprecated for the "ol" tag only,
 #. since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:57
+#: ../plugins/taglist/HTML.tags.xml.in.h:45
 msgid "Content type (deprecated)"
 msgstr "Jenis isi (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:58
+#: ../plugins/taglist/HTML.tags.xml.in.h:46
 msgid "Coordinates"
 msgstr "Koordinat"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:59
-msgid "DIV Style container"
-msgstr "Mengandung gaya DIV"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:60
-msgid "DIV container"
-msgstr "Mengandung DIV"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:61
+#: ../plugins/taglist/HTML.tags.xml.in.h:47
 msgid "Date and time of change"
 msgstr "Tanggal dan waktu perubahan"
 
 #. NOTE: used in "object" tag
-#: ../plugins/taglist/HTML.tags.xml.in.h:63
+#: ../plugins/taglist/HTML.tags.xml.in.h:49
 msgid "Declare flag"
 msgstr "Umumkan bendera"
 
 #. Translators: DEFER is an optional attribute of the <script> tag.
 #. It indicates that the script is not going to generate any document
 #. content. The browser can continue parsing and drawing the page.
-#: ../plugins/taglist/HTML.tags.xml.in.h:67
+#: ../plugins/taglist/HTML.tags.xml.in.h:53
 msgid "Defer attribute"
 msgstr "Atribut defer"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:68
+#: ../plugins/taglist/HTML.tags.xml.in.h:54
 msgid "Definition description"
 msgstr "Penjelasan definisi"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:69
+#: ../plugins/taglist/HTML.tags.xml.in.h:55
 msgid "Definition list"
 msgstr "Senarai definisi"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:70
+#: ../plugins/taglist/HTML.tags.xml.in.h:56
 msgid "Definition term"
 msgstr "Istilah definisi"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:71
+#: ../plugins/taglist/HTML.tags.xml.in.h:57
 msgid "Deleted text"
 msgstr "Teks terhapus"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:72
-msgid "Direction"
-msgstr "Arah"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:73
+#: ../plugins/taglist/HTML.tags.xml.in.h:58
 msgid "Directionality"
 msgstr "Arah pengetikan"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:75
+#: ../plugins/taglist/HTML.tags.xml.in.h:60
 msgid "Directionality (deprecated)"
 msgstr "Keberarahan (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:76
-msgid "Directory list"
-msgstr "Daftar direktori"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:77
+#: ../plugins/taglist/HTML.tags.xml.in.h:61
 msgid "Disabled"
 msgstr "Tidak aktif"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:78
+#: ../plugins/taglist/HTML.tags.xml.in.h:62
+msgid "DIV container"
+msgstr "Mengandung DIV"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:63
+msgid "DIV Style container"
+msgstr "Mengandung gaya DIV"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:64
 msgid "Document base"
 msgstr "Basis dokumen"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:79
+#: ../plugins/taglist/HTML.tags.xml.in.h:65
 msgid "Document body"
 msgstr "Tubuh dokumen"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:80
+#: ../plugins/taglist/HTML.tags.xml.in.h:66
 msgid "Document head"
 msgstr "Kepala dokumen"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:81
-msgid "Document title"
-msgstr "Judul dokumen"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:82
-msgid "Document type"
-msgstr "Jenis dokumen"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:83
+#: ../plugins/taglist/HTML.tags.xml.in.h:67
 msgid "Element ID"
 msgstr "ID Bagian"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:84
-msgid "Embedded object"
-msgstr "Objek yang dilengketkan"
+#: ../plugins/taglist/HTML.tags.xml.in.h:68
+msgid "Document title"
+msgstr "Judul dokumen"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:85
-#: ../plugins/taglist/Latex.tags.xml.in.h:9
+#: ../plugins/taglist/HTML.tags.xml.in.h:69
+msgid "Document type"
+msgstr "Jenis dokumen"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:70
+#: ../plugins/taglist/Latex.tags.xml.in.h:72
 msgid "Emphasis"
 msgstr "Tekanan"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:86
+#: ../plugins/taglist/HTML.tags.xml.in.h:71
 msgid "Encode type"
 msgstr "Jenis encode"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:87
-msgid "Figure"
-msgstr "Gambar"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:88
-msgid "Font face"
-msgstr "Nama jenis huruf"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:90
+#: ../plugins/taglist/HTML.tags.xml.in.h:73
 msgid "Font face (deprecated)"
 msgstr "Muka fonta (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:91
+#: ../plugins/taglist/HTML.tags.xml.in.h:74
 msgid "For label"
 msgstr "Untuk nama"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:92
+#: ../plugins/taglist/HTML.tags.xml.in.h:75
 msgid "Forced line break"
 msgstr "Paksa pemotongan baris"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:93
-msgid "Form"
-msgstr "Formulir"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:94
+#: ../plugins/taglist/HTML.tags.xml.in.h:76
 msgid "Form action handler"
 msgstr "Pengendali formulis aksi"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:95
+#: ../plugins/taglist/HTML.tags.xml.in.h:77
 msgid "Form control group"
 msgstr "Formulis kendali kelompok"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:96
+#: ../plugins/taglist/HTML.tags.xml.in.h:78
 msgid "Form field label text"
 msgstr "Formulis tempat nama teks"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:97
-msgid "Form input"
-msgstr "Formulis masukan"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:98
+#: ../plugins/taglist/HTML.tags.xml.in.h:79
 msgid "Form input type"
 msgstr "Formulis jenis masukan"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:99
+#: ../plugins/taglist/HTML.tags.xml.in.h:80
+msgid "Form input"
+msgstr "Formulis masukan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:81
 msgid "Form method"
 msgstr "Formulis metode"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:100
+#: ../plugins/taglist/HTML.tags.xml.in.h:82
+msgid "Form"
+msgstr "Formulir"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:83
 msgid "Forward link"
 msgstr "Sambungan terusan"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:101
-msgid "Frame"
-msgstr "Bingkai"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:102
-msgid "Frame border"
-msgstr "Batas bingkai"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:103
+#: ../plugins/taglist/HTML.tags.xml.in.h:84
 msgid "Frame render parts"
 msgstr "Bagian render bingkai"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:104
+#: ../plugins/taglist/HTML.tags.xml.in.h:85
 msgid "Frame source"
 msgstr "Sumber bingkai"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:105
-msgid "Frame spacing"
-msgstr "Jarak bingkai"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:106
+#: ../plugins/taglist/HTML.tags.xml.in.h:86
 msgid "Frame target"
 msgstr "Target bingkai"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:107
-msgid "Frameborder"
-msgstr "Garis bingkai"
+#: ../plugins/taglist/HTML.tags.xml.in.h:87
+msgid "Frame"
+msgstr "Bingkai"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:108
-msgid "Frameset"
-msgstr "Set bingkai"
+#: ../plugins/taglist/HTML.tags.xml.in.h:88
+msgid "Frame border"
+msgstr "Batas bingkai"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:109
+#: ../plugins/taglist/HTML.tags.xml.in.h:89
 msgid "Frameset columns"
 msgstr "Kolom set bingkai"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:110
+#: ../plugins/taglist/HTML.tags.xml.in.h:90
 msgid "Frameset rows"
 msgstr "Baris set bingkai"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:111
-msgid "Framespacing"
-msgstr "Spasi bingkai"
+#: ../plugins/taglist/HTML.tags.xml.in.h:91
+msgid "Frameset"
+msgstr "Set bingkai"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:112
+#: ../plugins/taglist/HTML.tags.xml.in.h:92
+msgid "Frame spacing"
+msgstr "Jarak bingkai"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:93
 msgid "Generic embedded object"
 msgstr "Objek tempelan yang generic"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:113
+#: ../plugins/taglist/HTML.tags.xml.in.h:94
 msgid "Generic metainformation"
 msgstr "Informasi meta generic"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:114
+#: ../plugins/taglist/HTML.tags.xml.in.h:95
 msgid "Generic span"
 msgstr "Jarak generic"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:115
-msgid "HREF URI"
-msgstr "HREF URI"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:116
-msgid "HTML root element"
-msgstr "Bagian akar HTML"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:117
-msgid "HTML version"
-msgstr "Versi HTML"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:118
-msgid "HTML — Special Characters"
-msgstr "HTML — Karakter Istimewa"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:119
-msgid "HTML — Tags"
-msgstr "HTML — Tags"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:120
-msgid "HTTP header name"
-msgstr "Nama judul HTTP"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:121
+#: ../plugins/taglist/HTML.tags.xml.in.h:96
 msgid "Header cell IDs"
 msgstr "ID sel judul"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:122
-msgid "Heading"
-msgstr "Tajuk"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:123
+#: ../plugins/taglist/HTML.tags.xml.in.h:97
 msgid "Heading 1"
 msgstr "Tajuk 1"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:124
+#: ../plugins/taglist/HTML.tags.xml.in.h:98
 msgid "Heading 2"
 msgstr "Tajuk 2"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:125
+#: ../plugins/taglist/HTML.tags.xml.in.h:99
 msgid "Heading 3"
 msgstr "Tajuk 3"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:126
+#: ../plugins/taglist/HTML.tags.xml.in.h:100
 msgid "Heading 4"
 msgstr "Tajuk 4"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:127
+#: ../plugins/taglist/HTML.tags.xml.in.h:101
 msgid "Heading 5"
 msgstr "Tajuk 5"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:128
+#: ../plugins/taglist/HTML.tags.xml.in.h:102
 msgid "Heading 6"
 msgstr "Tajuk 6"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:129
+#: ../plugins/taglist/HTML.tags.xml.in.h:103
 msgid "Height"
 msgstr "Tinggi"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:130
+#: ../plugins/taglist/HTML.tags.xml.in.h:104
 msgid "Horizontal rule"
 msgstr "Aturan horizontal"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:131
-msgid "Horizontal space"
-msgstr "Ruang horizontal"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:133
+#: ../plugins/taglist/HTML.tags.xml.in.h:106
 msgid "Horizontal space (deprecated)"
 msgstr "Ruang horizontal (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:134
+#: ../plugins/taglist/HTML.tags.xml.in.h:107
+msgid "HREF URI"
+msgstr "HREF URI"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:108
+msgid "HTML root element"
+msgstr "Bagian akar HTML"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:109
+msgid "HTTP header name"
+msgstr "Nama judul HTTP"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:110
 msgid "I18N BiDi override"
 msgstr "Timpaan BiDi I18N"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:135
-msgid "Image"
-msgstr "Gambar"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:136
-msgid "Image map"
-msgstr "Peta gambar"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:137
+#: ../plugins/taglist/HTML.tags.xml.in.h:111
 msgid "Image map area"
 msgstr "Daerah peta gambar"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:138
+#: ../plugins/taglist/HTML.tags.xml.in.h:112
 msgid "Image map name"
 msgstr "Nama peta gambar"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:139
-msgid "Image source"
-msgstr "Sumber gambar"
+#: ../plugins/taglist/HTML.tags.xml.in.h:113
+msgid "Image map"
+msgstr "Peta gambar"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:140
+#: ../plugins/taglist/HTML.tags.xml.in.h:114
+msgid "Image"
+msgstr "Gambar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:115
 msgid "Inline frame"
 msgstr "Bingkai segaris"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:141
-msgid "Inline layer"
-msgstr "Lapisan segaris"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:142
+#: ../plugins/taglist/HTML.tags.xml.in.h:116
 msgid "Inserted text"
 msgstr "Teks yang telah dimasukkan"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:143
+#: ../plugins/taglist/HTML.tags.xml.in.h:117
 msgid "Instance definition"
 msgstr "Definisi instance"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:144
+#: ../plugins/taglist/HTML.tags.xml.in.h:118
 msgid "Italic text"
 msgstr "Teks miring"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:145
-msgid "Java applet"
-msgstr "Applet Java"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:147
+#: ../plugins/taglist/HTML.tags.xml.in.h:120
 msgid "Java applet (deprecated)"
 msgstr "Applet Java (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:148
+#: ../plugins/taglist/HTML.tags.xml.in.h:121
 msgid "Label"
 msgstr "Nama"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:149
+#: ../plugins/taglist/HTML.tags.xml.in.h:122
 msgid "Language code"
 msgstr "Kode bahasa"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:150
+#: ../plugins/taglist/HTML.tags.xml.in.h:123
 msgid "Large text style"
 msgstr "Gaya huruf besar"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:151
-msgid "Layer"
-msgstr "Lapisan"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:152
-msgid "Link color"
-msgstr "Warna sambungan"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:154
+#: ../plugins/taglist/HTML.tags.xml.in.h:125
 msgid "Link color (deprecated)"
 msgstr "Warna taut (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:155
+#: ../plugins/taglist/HTML.tags.xml.in.h:126
 msgid "List item"
 msgstr "Daftar benda"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:156
+#: ../plugins/taglist/HTML.tags.xml.in.h:127
 msgid "List of MIME types for file upload"
 msgstr "Daftar jenis MIME untuk upload berkas"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:157
+#: ../plugins/taglist/HTML.tags.xml.in.h:128
 msgid "List of supported character sets"
 msgstr "Daftar ketetapan karakter yang telah di dukung"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:158
-msgid "Listing"
-msgstr "Daftar"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:159
+#: ../plugins/taglist/HTML.tags.xml.in.h:129
 msgid "Local change to font"
 msgstr "Perubahan lokal terhadap jenis huruf"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:160
+#: ../plugins/taglist/HTML.tags.xml.in.h:130
 msgid "Long description link"
 msgstr "Sambungan penjelasan panjang"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:161
+#: ../plugins/taglist/HTML.tags.xml.in.h:131
 msgid "Long quotation"
 msgstr "Kutipan panjang"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:162
-msgid "Mail link"
-msgstr "Sambungan surat"
-
 #. Supported in XHTML 1.0 Frameset DTD only.
-#: ../plugins/taglist/HTML.tags.xml.in.h:164
+#: ../plugins/taglist/HTML.tags.xml.in.h:133
 msgid "Margin pixel height"
 msgstr "Tinggi batas piksel"
 
 #. Supported in XHTML 1.0 Frameset DTD only.
-#: ../plugins/taglist/HTML.tags.xml.in.h:166
+#: ../plugins/taglist/HTML.tags.xml.in.h:135
 msgid "Margin pixel width"
 msgstr "Lebar batas piksel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:167
-msgid "Marquee"
-msgstr "Teks berjalan"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:168
+#: ../plugins/taglist/HTML.tags.xml.in.h:136
 msgid "Maximum length of text field"
 msgstr "Panjang maksimal dari daerah teks"
 
-#. Here I take some liberties: There's no mandatory attributes,
-#. but those are most common, and will likely be used.
-#: ../plugins/taglist/HTML.tags.xml.in.h:171
-msgid "Media-independent link"
-msgstr "Sambungan media bebas"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:172
-msgid "Menu list"
-msgstr "Daftar menu"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:174
-msgid "Menu list (deprecated)"
-msgstr "Daftar menu (tak berlaku lagi)"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:175
-msgid "Multi-line text field"
-msgstr "Daerah teks banyak baris"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:176
-msgid "Multicolumn"
-msgstr "Banyak kolom"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:177
-msgid "Multiple"
-msgstr "Banyak"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:178
-msgid "Name"
-msgstr "Nama"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:179
-msgid "Named property value"
-msgstr "Nilai properti yang telah di namai"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:180
-msgid "Next ID"
-msgstr "ID Selanjutnya"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:181
-msgid "No URI"
-msgstr "Tidak ada URI"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:182
-msgid "No embedded objects"
-msgstr "Tidak ada objek tempel"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:183
-msgid "No frames"
-msgstr "Tidak ada bingkai"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:184
-msgid "No layers"
-msgstr "Tidak ada lapisan"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:185
-msgid "No line break"
-msgstr "Tidak ada pemotongan baris"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:186
-msgid "No resize"
-msgstr "Tidak ada ubah ukuran"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:187
-msgid "No script"
-msgstr "Tidak script"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:188
-msgid "No shade"
-msgstr "Tidak ada bayang"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:190
-msgid "No shade (deprecated)"
-msgstr "Tak ada bayangan (tak berlaku lagi)"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:191
-msgid "No word wrap"
-msgstr "Tidak ada pemotongan kata"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:193
-msgid "No word wrap (deprecated)"
-msgstr "Tak ada pelipatan kata (tak berlaku lagi)"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:194
-msgid "Non-breaking space"
-msgstr "Spasi tak-pecah"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:195
-msgid "Note"
-msgstr "Catat"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:196
-msgid "Object applet file"
-msgstr "Buka berkas applet"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:198
-msgid "Object applet file (deprecated)"
-msgstr "Berkas aplet objek (tak berlaku lagi)"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:199
-msgid "Object data reference"
-msgstr "Referensi objek data"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:200
-msgid "Offset for alignment character"
-msgstr "Offset untuk karakter alinea"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:201
-msgid "OnBlur event"
-msgstr "Kejadian OnBlur"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:202
-msgid "OnChange event"
-msgstr "Kejadian OnChange"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:203
-msgid "OnClick event"
-msgstr "Kejadian OnClick"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:204
-msgid "OnDblClick event"
-msgstr "Kejadian OnDblClick"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:205
-msgid "OnFocus event"
-msgstr "Kejadian OnFocus"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:206
-msgid "OnKeyDown event"
-msgstr "Kejadian OnKeyDown"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:207
-msgid "OnKeyPress event"
-msgstr "Kejadian OnKeyPress"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:208
-msgid "OnKeyUp event"
-msgstr "Kejadian OnKeyUp"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:209
-msgid "OnLoad event"
-msgstr "Kejadian OnLoad"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:210
-msgid "OnMouseDown event"
-msgstr "Kejadian OnMouseDown"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:211
-msgid "OnMouseMove event"
-msgstr "Kejadian OnMouseMove"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:212
-msgid "OnMouseOut event"
-msgstr "Kejadian OnMouseOut"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:213
-msgid "OnMouseOver event"
-msgstr "Kejadian OnMouseOver"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:214
-msgid "OnMouseUp event"
-msgstr "Kejadian OnMouseUp"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:215
-msgid "OnReset event"
-msgstr "Kejadian OnReset"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:216
-msgid "OnSelect event"
-msgstr "Kejadian OnSelect"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:217
-msgid "OnSubmit event"
-msgstr "Kejadian OnSubmit"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:218
-msgid "OnUnload event"
-msgstr "Kejadian OnUnload"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:219
-msgid "Option group"
-msgstr "Pilihan kelompok"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:220
-msgid "Option selector"
-msgstr "Pemilih pilihan"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:221
-msgid "Ordered list"
-msgstr "Daftar berurut"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:222
+#: ../plugins/taglist/HTML.tags.xml.in.h:137
 msgid "Output media"
 msgstr "Media keluaran"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:223
-msgid "Paragraph"
-msgstr "Paragraf"
+#. Here I take some liberties: There's no mandatory attributes,
+#. but those are most common, and will likely be used.
+#: ../plugins/taglist/HTML.tags.xml.in.h:140
+msgid "Media-independent link"
+msgstr "Sambungan media bebas"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:224
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:142
+msgid "Menu list (deprecated)"
+msgstr "Daftar menu (tak berlaku lagi)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:143
+msgid "Multi-line text field"
+msgstr "Daerah teks banyak baris"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:144
+msgid "Multiple"
+msgstr "Banyak"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:145
+msgid "Name"
+msgstr "Nama"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:146
+msgid "Named property value"
+msgstr "Nilai properti yang telah di namai"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:147
+msgid "No frames"
+msgstr "Tidak ada bingkai"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:148
+msgid "No resize"
+msgstr "Tidak ada ubah ukuran"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:149
+msgid "No script"
+msgstr "Tidak script"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:151
+msgid "No shade (deprecated)"
+msgstr "Tak ada bayangan (tak berlaku lagi)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:152
+msgid "No URI"
+msgstr "Tidak ada URI"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:154
+msgid "No word wrap (deprecated)"
+msgstr "Tak ada pelipatan kata (tak berlaku lagi)"
+
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:156
+msgid "Object applet file (deprecated)"
+msgstr "Berkas aplet objek (tak berlaku lagi)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:157
+msgid "Object data reference"
+msgstr "Referensi objek data"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:158
+msgid "Offset for alignment character"
+msgstr "Offset untuk karakter alinea"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:159
+msgid "OnBlur event"
+msgstr "Kejadian OnBlur"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:160
+msgid "OnChange event"
+msgstr "Kejadian OnChange"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:161
+msgid "OnClick event"
+msgstr "Kejadian OnClick"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:162
+msgid "OnDblClick event"
+msgstr "Kejadian OnDblClick"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:163
+msgid "OnFocus event"
+msgstr "Kejadian OnFocus"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:164
+msgid "OnKeyDown event"
+msgstr "Kejadian OnKeyDown"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:165
+msgid "OnKeyPress event"
+msgstr "Kejadian OnKeyPress"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:166
+msgid "OnKeyUp event"
+msgstr "Kejadian OnKeyUp"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:167
+msgid "OnLoad event"
+msgstr "Kejadian OnLoad"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:168
+msgid "OnMouseDown event"
+msgstr "Kejadian OnMouseDown"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:169
+msgid "OnMouseMove event"
+msgstr "Kejadian OnMouseMove"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:170
+msgid "OnMouseOut event"
+msgstr "Kejadian OnMouseOut"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:171
+msgid "OnMouseOver event"
+msgstr "Kejadian OnMouseOver"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:172
+msgid "OnMouseUp event"
+msgstr "Kejadian OnMouseUp"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:173
+msgid "OnReset event"
+msgstr "Kejadian OnReset"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:174
+msgid "OnSelect event"
+msgstr "Kejadian OnSelect"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:175
+msgid "OnSubmit event"
+msgstr "Kejadian OnSubmit"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:176
+msgid "OnUnload event"
+msgstr "Kejadian OnUnload"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:177
+msgid "Option group"
+msgstr "Pilihan kelompok"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:178
+msgid "Option selector"
+msgstr "Pemilih pilihan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:179
+msgid "Ordered list"
+msgstr "Daftar berurut"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:180
 msgid "Paragraph class"
 msgstr "Kelas paragraf"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:225
+#: ../plugins/taglist/HTML.tags.xml.in.h:181
 msgid "Paragraph style"
 msgstr "Gaya paragraf"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:226
-msgid "Preformatted listing"
-msgstr "Daftar preformatted"
+#: ../plugins/taglist/HTML.tags.xml.in.h:182
+msgid "Paragraph"
+msgstr "Paragraf"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:227
+#: ../plugins/taglist/HTML.tags.xml.in.h:183
 msgid "Preformatted text"
 msgstr "Teks preformatted"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:228
+#: ../plugins/taglist/HTML.tags.xml.in.h:184
 msgid "Profile metainfo dictionary"
 msgstr "Kamus proberkas metainfo"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:229
-msgid "Prompt message"
-msgstr "Prompt pesan"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:230
+#: ../plugins/taglist/HTML.tags.xml.in.h:185
 msgid "Push button"
 msgstr "Tekan tombol"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:231
-msgid "Quote"
-msgstr "Kutip"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:232
-msgid "Range"
-msgstr "Cakupan"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:233
+#: ../plugins/taglist/HTML.tags.xml.in.h:186
 msgid "ReadOnly text and password"
 msgstr "Teks dan password Hanya Bisa Dibaca"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:234
-msgid "Reduced spacing"
-msgstr "Kurangi ruang"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:236
+#: ../plugins/taglist/HTML.tags.xml.in.h:188
 msgid "Reduced spacing (deprecated)"
 msgstr "Antara yang dikurangi (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:237
+#: ../plugins/taglist/HTML.tags.xml.in.h:189
 msgid "Reverse link"
 msgstr "Taut balik"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:238
-msgid "Root"
-msgstr "Akar"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:239
+#: ../plugins/taglist/HTML.tags.xml.in.h:190
 msgid "Rows"
 msgstr "Baris"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:240
+#: ../plugins/taglist/HTML.tags.xml.in.h:191
 msgid "Rulings between rows and columns"
 msgstr "Pengukuran antara baris dan kolom"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:241
+#: ../plugins/taglist/HTML.tags.xml.in.h:192
 msgid "Sample program output, scripts"
 msgstr "Contoh keluaran progam, script"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:242
+#: ../plugins/taglist/HTML.tags.xml.in.h:193
 msgid "Scope covered by header cells"
 msgstr "Daerah yang dicakupi oleh judul sel"
 
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:244
+#: ../plugins/taglist/HTML.tags.xml.in.h:195
 msgid "Script language name"
 msgstr "Script nama bahasa"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:245
+#: ../plugins/taglist/HTML.tags.xml.in.h:196
 msgid "Script statements"
 msgstr "Pernyataan skrip"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:246
+#: ../plugins/taglist/HTML.tags.xml.in.h:197
 msgid "Scrollbar"
 msgstr "Batang gulung"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:247
+#: ../plugins/taglist/HTML.tags.xml.in.h:198
 msgid "Selectable option"
 msgstr "Pilihan yang dapat dipilih"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:248
+#: ../plugins/taglist/HTML.tags.xml.in.h:199
 msgid "Selected"
 msgstr "Terpilih"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:249
+#: ../plugins/taglist/HTML.tags.xml.in.h:200
 msgid "Server-side image map"
 msgstr "Peta gambar sisi server"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:250
+#: ../plugins/taglist/HTML.tags.xml.in.h:201
 msgid "Shape"
 msgstr "Bentuk"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:251
+#: ../plugins/taglist/HTML.tags.xml.in.h:202
 msgid "Short inline quotation"
 msgstr "Kutipan sebaris pendek"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:252
-msgid "Single line prompt"
-msgstr "Prompt baris tunggal"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:253
-msgid "Size"
-msgstr "Ukuran"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:255
+#: ../plugins/taglist/HTML.tags.xml.in.h:204
 msgid "Size (deprecated)"
 msgstr "Ukuran (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:256
+#: ../plugins/taglist/HTML.tags.xml.in.h:205
 msgid "Small text style"
 msgstr "Gaya teks kecil"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:257
-msgid "Soft line break"
-msgstr "Putus baris lembut"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:258
-msgid "Sound"
-msgstr "Suara"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:259
+#: ../plugins/taglist/HTML.tags.xml.in.h:206
 msgid "Source"
 msgstr "Sumber"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:260
+#: ../plugins/taglist/HTML.tags.xml.in.h:207
 msgid "Space-separated archive list"
 msgstr "Daftar arsip yang dipisahkan spasi"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:261
-msgid "Spacer"
-msgstr "Pembatas"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:262
+#: ../plugins/taglist/HTML.tags.xml.in.h:208
 msgid "Spacing between cells"
 msgstr "Ruang antar cells"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:263
+#: ../plugins/taglist/HTML.tags.xml.in.h:209
 msgid "Spacing within cells"
 msgstr "Ruang di cell"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:264
+#: ../plugins/taglist/HTML.tags.xml.in.h:210
 msgid "Span"
 msgstr "Jarak"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:265
-msgid "Square root"
-msgstr "Akar pangkat"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:266
+#: ../plugins/taglist/HTML.tags.xml.in.h:211
 msgid "Standby load message"
 msgstr "Pesan muat standby"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:267
-msgid "Starting sequence number"
-msgstr "Nomor awal urutan"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:269
+#: ../plugins/taglist/HTML.tags.xml.in.h:213
 msgid "Starting sequence number (deprecated)"
 msgstr "Nomor awal urutan (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:270
-msgid "Strike-through text"
-msgstr "Teks dicoret"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:272
-msgid "Strike-through text (deprecated)"
-msgstr "Teks yang dicoret (tak berlaku lagi)"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:273
-msgid "Strike-through text style"
-msgstr "Gaya teks dicoret"
-
-#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:275
+#: ../plugins/taglist/HTML.tags.xml.in.h:215
 msgid "Strike-through text style (deprecated)"
 msgstr "Gaya teks yang dicoret (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:276
+#. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
+#: ../plugins/taglist/HTML.tags.xml.in.h:217
+msgid "Strike-through text (deprecated)"
+msgstr "Teks yang dicoret (tak berlaku lagi)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:218
 msgid "Strong emphasis"
 msgstr "Tekanan yang kuat"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:277
+#: ../plugins/taglist/HTML.tags.xml.in.h:219
 msgid "Style info"
 msgstr "Info gaya"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:278
+#: ../plugins/taglist/HTML.tags.xml.in.h:220
 msgid "Subscript"
 msgstr "Subscript"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:279
+#: ../plugins/taglist/HTML.tags.xml.in.h:221
 msgid "Superscript"
 msgstr "Superscript"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:280
-msgid "Tab order position"
-msgstr "Posisi urutan tab"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:281
-msgid "Table"
-msgstr "Tabel"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:282
+#: ../plugins/taglist/HTML.tags.xml.in.h:222
 msgid "Table body"
 msgstr "Badan tabel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:283
+#: ../plugins/taglist/HTML.tags.xml.in.h:223
 msgid "Table caption"
 msgstr "Judul tabel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:284
+#: ../plugins/taglist/HTML.tags.xml.in.h:224
 msgid "Table column group properties"
 msgstr "Informasi kelompok kelompok tabel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:285
+#: ../plugins/taglist/HTML.tags.xml.in.h:225
 msgid "Table column properties"
 msgstr "Informasi kolom tabel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:286
+#: ../plugins/taglist/HTML.tags.xml.in.h:226
 msgid "Table data cell"
 msgstr "Cell data tabel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:287
+#: ../plugins/taglist/HTML.tags.xml.in.h:227
 msgid "Table footer"
 msgstr "Catatan kaki tabel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:288
-msgid "Table header"
-msgstr "Judul tabel"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:289
+#: ../plugins/taglist/HTML.tags.xml.in.h:228
 msgid "Table header cell"
 msgstr "Judul cell tabel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:290
+#: ../plugins/taglist/HTML.tags.xml.in.h:229
+msgid "Table header"
+msgstr "Judul tabel"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:230
 msgid "Table row"
 msgstr "Baris tabel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:291
+#: ../plugins/taglist/HTML.tags.xml.in.h:231
 msgid "Table summary"
 msgstr "Ringkasan tabel"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:292
+#: ../plugins/taglist/HTML.tags.xml.in.h:232
+msgid "Table"
+msgstr "Tabel"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:233
 msgid "Target — Blank"
 msgstr "Target — Kosong"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:293
+#: ../plugins/taglist/HTML.tags.xml.in.h:234
 msgid "Target — Parent"
 msgstr "Target — Induk"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:294
+#: ../plugins/taglist/HTML.tags.xml.in.h:235
 msgid "Target — Self"
 msgstr "Target — Diri Sendiri"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:295
+#: ../plugins/taglist/HTML.tags.xml.in.h:236
 msgid "Target — Top"
 msgstr "Target — Puncak"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:296
+#: ../plugins/taglist/HTML.tags.xml.in.h:237
 msgid "Teletype or monospace text style"
 msgstr "Gaya teks Teletype ataupun monospace"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:297
-msgid "Text"
-msgstr "Teks"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:298
-msgid "Text color"
-msgstr "Warna teks"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:300
+#: ../plugins/taglist/HTML.tags.xml.in.h:239
 msgid "Text color (deprecated)"
 msgstr "Warna teks (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:301
+#: ../plugins/taglist/HTML.tags.xml.in.h:240
 msgid "Text entered by user"
 msgstr "Teks di masukkan oleh pengguna"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:302
+#: ../plugins/taglist/HTML.tags.xml.in.h:241
 msgid "Title"
 msgstr "Judul"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:303
-msgid "Top margin in pixels"
-msgstr "Marjin atas dalam piksel"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:304
-msgid "URL"
-msgstr "URL"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:305
+#: ../plugins/taglist/HTML.tags.xml.in.h:242
 msgid "Underlined text style"
 msgstr "Gaya teks bergaris bawah"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:306
+#: ../plugins/taglist/HTML.tags.xml.in.h:243
 msgid "Unordered list"
 msgstr "Daftar tak urut"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:307
+#: ../plugins/taglist/HTML.tags.xml.in.h:244
 msgid "Use image map"
 msgstr "Gunakan peta gambar"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:308
-msgid "Value"
-msgstr "Nilai"
-
-#: ../plugins/taglist/HTML.tags.xml.in.h:309
+#: ../plugins/taglist/HTML.tags.xml.in.h:245
 msgid "Value interpretation"
 msgstr "Penafsiran nilai"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:310
+#: ../plugins/taglist/HTML.tags.xml.in.h:246
+msgid "Value"
+msgstr "Nilai"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:247
 msgid "Variable or program argument"
 msgstr "Variabel ataupun argumen program"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:311
+#: ../plugins/taglist/HTML.tags.xml.in.h:248
 msgid "Vertical cell alignment"
 msgstr "Perataan sel vertikal"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:312
-msgid "Vertical space"
-msgstr "Spasi vertikal"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:314
+#: ../plugins/taglist/HTML.tags.xml.in.h:250
 msgid "Vertical space (deprecated)"
 msgstr "Ruang vertikal (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:315
-msgid "Visited link color"
-msgstr "Warna taut yang telah dikunjungi"
-
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
-#: ../plugins/taglist/HTML.tags.xml.in.h:317
+#: ../plugins/taglist/HTML.tags.xml.in.h:252
 msgid "Visited link color (deprecated)"
 msgstr "Warna taut yang telah dikunjungi (tak berlaku lagi)"
 
-#: ../plugins/taglist/HTML.tags.xml.in.h:318
+#: ../plugins/taglist/HTML.tags.xml.in.h:253
 msgid "Width"
 msgstr "Lebar"
 
+#: ../plugins/taglist/HTML.tags.xml.in.h:254
+msgid "HTML — Tags"
+msgstr "HTML — Tags"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:255
+msgid "Above"
+msgstr "Atas"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:256
+msgid "Applet class file code"
+msgstr "Kode berkas kelas applet"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:257
+msgid "Array"
+msgstr "Larik"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:258
+msgid "Background color"
+msgstr "Warna latar belakang"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:259
+msgid "Background texture tile"
+msgstr "Latar belakang tekstur ubin"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:260
+msgid "Base font"
+msgstr "Basis Jenis Huruf"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:261
+msgid "Border color"
+msgstr "Warna garis"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:262
+msgid "Border"
+msgstr "Garis"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:263
+msgid "Center"
+msgstr "Tengah"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:264
+msgid "Checked (state)"
+msgstr "Diperiksa (kondisi)"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:265
+msgid "Color of selected links"
+msgstr "Warna dari sambungan terpilih"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:266
+msgid "Content scheme"
+msgstr "Bagan Isi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:267
+msgid "Content type"
+msgstr "Jenis Isi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:268
+msgid "Direction"
+msgstr "Arah"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:269
+msgid "Directory list"
+msgstr "Daftar direktori"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:270
+msgid "HTML version"
+msgstr "Versi HTML"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:271
+msgid "Embedded object"
+msgstr "Objek yang dilengketkan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:272
+msgid "Figure"
+msgstr "Gambar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:273
+msgid "Font face"
+msgstr "Nama jenis huruf"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:274
+msgid "Frameborder"
+msgstr "Garis bingkai"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:275
+msgid "Framespacing"
+msgstr "Spasi bingkai"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:276
+msgid "Heading"
+msgstr "Tajuk"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:277
+msgid "Horizontal space"
+msgstr "Ruang horizontal"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:278
+msgid "Image source"
+msgstr "Sumber gambar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:279
+msgid "Inline layer"
+msgstr "Lapisan segaris"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:280
+msgid "Java applet"
+msgstr "Applet Java"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:281
+msgid "Layer"
+msgstr "Lapisan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:282
+msgid "Link color"
+msgstr "Warna sambungan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:283
+msgid "Listing"
+msgstr "Daftar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:284
+msgid "Mail link"
+msgstr "Sambungan surat"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:285
+msgid "Marquee"
+msgstr "Teks berjalan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:286
+msgid "Menu list"
+msgstr "Daftar menu"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:287
+msgid "Multicolumn"
+msgstr "Banyak kolom"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:288
+msgid "Next ID"
+msgstr "ID Selanjutnya"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:289
+msgid "No embedded objects"
+msgstr "Tidak ada objek tempel"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:290
+msgid "No layers"
+msgstr "Tidak ada lapisan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:291
+msgid "No line break"
+msgstr "Tidak ada pemotongan baris"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:292
+msgid "No shade"
+msgstr "Tidak ada bayang"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:293
+msgid "No word wrap"
+msgstr "Tidak ada pemotongan kata"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:294
+msgid "Note"
+msgstr "Catat"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:295
+msgid "Object applet file"
+msgstr "Buka berkas applet"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:296
+msgid "Preformatted listing"
+msgstr "Daftar preformatted"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:297
+msgid "Prompt message"
+msgstr "Prompt pesan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:298
+msgid "Quote"
+msgstr "Kutip"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:299
+msgid "Range"
+msgstr "Cakupan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:300
+msgid "Reduced spacing"
+msgstr "Kurangi ruang"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:301
+msgid "Root"
+msgstr "Akar"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:302
+msgid "Single line prompt"
+msgstr "Prompt baris tunggal"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:303
+msgid "Size"
+msgstr "Ukuran"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:304
+msgid "Soft line break"
+msgstr "Putus baris lembut"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:305
+msgid "Sound"
+msgstr "Suara"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:306
+msgid "Spacer"
+msgstr "Pembatas"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:307
+msgid "Square root"
+msgstr "Akar pangkat"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:308
+msgid "Starting sequence number"
+msgstr "Nomor awal urutan"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:309
+msgid "Strike-through text style"
+msgstr "Gaya teks dicoret"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:310
+msgid "Strike-through text"
+msgstr "Teks dicoret"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:311
+msgid "Tab order position"
+msgstr "Posisi urutan tab"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:312
+msgid "Text color"
+msgstr "Warna teks"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:313
+msgid "Text"
+msgstr "Teks"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:314
+msgid "Top margin in pixels"
+msgstr "Marjin atas dalam piksel"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:315
+msgid "URL"
+msgstr "URL"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:316
+msgid "Vertical space"
+msgstr "Spasi vertikal"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:317
+msgid "Visited link color"
+msgstr "Warna taut yang telah dikunjungi"
+
+#: ../plugins/taglist/HTML.tags.xml.in.h:318
+msgid "HTML — Special Characters"
+msgstr "HTML — Karakter Istimewa"
+
 #: ../plugins/taglist/HTML.tags.xml.in.h:319
-msgid "XHTML 1.0 — Tags"
-msgstr "XHTML 1.0 — Tag"
+msgid "Non-breaking space"
+msgstr "Spasi tak-pecah"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:1
+msgid "Latex — Tags"
+msgstr "Latex — Tag"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:2
 msgid "Bibliography (cite)"
 msgstr "Bibliografi (cite)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:2
+#: ../plugins/taglist/Latex.tags.xml.in.h:3
 msgid "Bibliography (item)"
 msgstr "Bibliography (objek)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:3
+#: ../plugins/taglist/Latex.tags.xml.in.h:4
 msgid "Bibliography (shortcite)"
 msgstr "Bibliography (cite pendek)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:4
+#: ../plugins/taglist/Latex.tags.xml.in.h:5
 msgid "Bibliography (thebibliography)"
 msgstr "Bibliography (thebibliography)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:5
+#: ../plugins/taglist/Latex.tags.xml.in.h:6
 msgid "Brackets ()"
 msgstr "Kurung ()"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:6
-msgid "Brackets <>"
-msgstr "Kurung <>"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:7
 msgid "Brackets []"
@@ -1655,189 +1609,193 @@ msgstr "Kurung []"
 msgid "Brackets {}"
 msgstr "Kurung {}"
 
+#: ../plugins/taglist/Latex.tags.xml.in.h:9
+msgid "Brackets <>"
+msgstr "Kurung <>"
+
 #: ../plugins/taglist/Latex.tags.xml.in.h:10
 msgid "File input"
 msgstr "Berkas masuk"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:11
-msgid "Footnote"
-msgstr "Catatan kaki"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:12
 msgid "Function cosine"
 msgstr "Fungsi cosinus"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:13
+#: ../plugins/taglist/Latex.tags.xml.in.h:12
 msgid "Function e^"
 msgstr "Fungsi e^"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:14
+#: ../plugins/taglist/Latex.tags.xml.in.h:13
 msgid "Function exp"
 msgstr "Fungsi exp"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:15
+#: ../plugins/taglist/Latex.tags.xml.in.h:14
 msgid "Function log"
 msgstr "Fungsi log"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:16
+#: ../plugins/taglist/Latex.tags.xml.in.h:15
 msgid "Function log10"
 msgstr "Fungsi log10"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:17
+#: ../plugins/taglist/Latex.tags.xml.in.h:16
 msgid "Function sine"
 msgstr "Fungsi sine"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:18
+#: ../plugins/taglist/Latex.tags.xml.in.h:17
 msgid "Greek alpha"
 msgstr "Alpha Yunani"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:19
+#: ../plugins/taglist/Latex.tags.xml.in.h:18
 msgid "Greek beta"
 msgstr "Beta Yunani"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:20
+#: ../plugins/taglist/Latex.tags.xml.in.h:19
 msgid "Greek epsilon"
 msgstr "Epsilon Yunani"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:21
+#: ../plugins/taglist/Latex.tags.xml.in.h:20
 msgid "Greek gamma"
 msgstr "Gamma Yunani"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:22
+#: ../plugins/taglist/Latex.tags.xml.in.h:21
 msgid "Greek lambda"
 msgstr "Lambda Yunani"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:23
+#: ../plugins/taglist/Latex.tags.xml.in.h:22
 msgid "Greek rho"
 msgstr "Rho Yunani"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:24
+#: ../plugins/taglist/Latex.tags.xml.in.h:23
 msgid "Greek tau"
 msgstr "Tau Yunani"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:25
+#: ../plugins/taglist/Latex.tags.xml.in.h:24
 msgid "Header 0 (chapter)"
 msgstr "Judul 0 (bab)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:26
+#: ../plugins/taglist/Latex.tags.xml.in.h:25
 msgid "Header 0 (chapter*)"
 msgstr "Judul 0 (bab*)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:27
+#: ../plugins/taglist/Latex.tags.xml.in.h:26
 msgid "Header 1 (section)"
 msgstr "Judul 1 (bagian)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:28
+#: ../plugins/taglist/Latex.tags.xml.in.h:27
 msgid "Header 1 (section*)"
 msgstr "Judul 1 (bagian*)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:29
+#: ../plugins/taglist/Latex.tags.xml.in.h:28
 msgid "Header 2 (subsection)"
 msgstr "Judul 2 (sub bagian)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:30
+#: ../plugins/taglist/Latex.tags.xml.in.h:29
 msgid "Header 2 (subsection*)"
 msgstr "Judul 2 (sub bagian*)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:31
+#: ../plugins/taglist/Latex.tags.xml.in.h:30
 msgid "Header 3 (subsubsection)"
 msgstr "Judul 3 (sub dari sub bagian)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:32
+#: ../plugins/taglist/Latex.tags.xml.in.h:31
 msgid "Header 3 (subsubsection*)"
 msgstr "Judul 3 (sub dari sub bagian*)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:33
+#: ../plugins/taglist/Latex.tags.xml.in.h:32
 msgid "Header 4 (paragraph)"
 msgstr "Judul 4 (paragraf)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:34
+#: ../plugins/taglist/Latex.tags.xml.in.h:33
 msgid "Header appendix"
 msgstr "Judul lampiran"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:35
-msgid "Item"
-msgstr "Benda"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:36
-msgid "Item with label"
-msgstr "Benda dengan nama"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:37
-msgid "Latex — Tags"
-msgstr "Latex — Tag"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:38
+#: ../plugins/taglist/Latex.tags.xml.in.h:34
 msgid "List description"
 msgstr "Daftar penjelasan"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:39
+#: ../plugins/taglist/Latex.tags.xml.in.h:35
 msgid "List enumerate"
 msgstr "Enumerasi daftar"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:40
+#: ../plugins/taglist/Latex.tags.xml.in.h:36
 msgid "List itemize"
 msgstr "Daftar benda"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:41
+#: ../plugins/taglist/Latex.tags.xml.in.h:37
+msgid "Item with label"
+msgstr "Benda dengan nama"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:38
+msgid "Item"
+msgstr "Benda"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:39
 msgid "Maths (display)"
 msgstr "Matematika (tampil)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:42
+#: ../plugins/taglist/Latex.tags.xml.in.h:40
 msgid "Maths (inline)"
 msgstr "Matematika (segaris)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:43
+#: ../plugins/taglist/Latex.tags.xml.in.h:41
 msgid "Operator fraction"
 msgstr "Operator pecahan"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:44
+#: ../plugins/taglist/Latex.tags.xml.in.h:42
 msgid "Operator integral (display)"
 msgstr "Operator integral (tampil)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:45
+#: ../plugins/taglist/Latex.tags.xml.in.h:43
 msgid "Operator integral (inline)"
 msgstr "Operator integral (segaris)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:46
+#: ../plugins/taglist/Latex.tags.xml.in.h:44
 msgid "Operator sum (display)"
 msgstr "Operator sum (tampil)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:47
+#: ../plugins/taglist/Latex.tags.xml.in.h:45
 msgid "Operator sum (inline)"
 msgstr "Operator sum (inline)"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:48
+#: ../plugins/taglist/Latex.tags.xml.in.h:46
 msgid "Reference label"
 msgstr "Tabel referensi"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:49
+#: ../plugins/taglist/Latex.tags.xml.in.h:47
 msgid "Reference ref"
 msgstr "Referensi ref"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:50
+#: ../plugins/taglist/Latex.tags.xml.in.h:48
 msgid "Symbol <<"
 msgstr "Simbol <<"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:51
+#: ../plugins/taglist/Latex.tags.xml.in.h:49
 msgid "Symbol <="
 msgstr "Simbol <="
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:52
+#: ../plugins/taglist/Latex.tags.xml.in.h:50
 msgid "Symbol >="
 msgstr "Simbol >="
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:53
+#: ../plugins/taglist/Latex.tags.xml.in.h:51
 msgid "Symbol >>"
 msgstr "Simbol >>"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:54
+#: ../plugins/taglist/Latex.tags.xml.in.h:52
 msgid "Symbol and"
 msgstr "Simbol dan"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:55
+#: ../plugins/taglist/Latex.tags.xml.in.h:53
 msgid "Symbol const"
 msgstr "Simbol konstanta"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:54
+msgid "Symbol d2-by-dt2-partial"
+msgstr "Simbol bagian d2-by-dt2"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:55
+msgid "Symbol dagger"
+msgstr "Simbol belati"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:56
 msgid "Symbol d-by-dt"
@@ -1848,74 +1806,74 @@ msgid "Symbol d-by-dt-partial"
 msgstr "Simbol bagian d-by-dt"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:58
-msgid "Symbol d2-by-dt2-partial"
-msgstr "Simbol bagian d2-by-dt2"
+msgid "Symbol equiv"
+msgstr "Simbol equiv"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:59
-msgid "Symbol dagger"
-msgstr "Simbol belati"
+msgid "Symbol en-dash --"
+msgstr "Simbol en-dash --"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:60
 msgid "Symbol em-dash ---"
 msgstr "Simbol em-dash ---"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:61
-msgid "Symbol en-dash --"
-msgstr "Simbol en-dash --"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:62
-msgid "Symbol equiv"
-msgstr "Simbol equiv"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:63
 msgid "Symbol infinity"
 msgstr "Simbol tak berhingga"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:64
+#: ../plugins/taglist/Latex.tags.xml.in.h:62
 msgid "Symbol mathspace ,"
 msgstr "Simbol mathspace ,"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:65
+#: ../plugins/taglist/Latex.tags.xml.in.h:63
 msgid "Symbol mathspace ."
 msgstr "Simbol mathspace ."
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:66
+#: ../plugins/taglist/Latex.tags.xml.in.h:64
 msgid "Symbol mathspace _"
 msgstr "Simbol mathspace _"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:67
+#: ../plugins/taglist/Latex.tags.xml.in.h:65
 msgid "Symbol mathspace __"
 msgstr "Simbol mathspace __"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:68
+#: ../plugins/taglist/Latex.tags.xml.in.h:66
 msgid "Symbol simeq"
 msgstr "Simbol simeq"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:69
+#: ../plugins/taglist/Latex.tags.xml.in.h:67
 msgid "Symbol star"
 msgstr "Simbol bintang"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:70
+#: ../plugins/taglist/Latex.tags.xml.in.h:68
 msgid "Typeface bold"
 msgstr "Typeface tebal"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:71
+#: ../plugins/taglist/Latex.tags.xml.in.h:69
+msgid "Typeface type"
+msgstr "Jenis Typeface"
+
+#: ../plugins/taglist/Latex.tags.xml.in.h:70
 msgid "Typeface italic"
 msgstr "Typeface miring"
 
-#: ../plugins/taglist/Latex.tags.xml.in.h:72
+#: ../plugins/taglist/Latex.tags.xml.in.h:71
 msgid "Typeface slanted"
 msgstr "Typeface miring"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:73
-msgid "Typeface type"
-msgstr "Jenis Typeface"
-
-#: ../plugins/taglist/Latex.tags.xml.in.h:74
 msgid "Unbreakable text"
 msgstr "Teks yang tidak dapat dipotong"
 
+#: ../plugins/taglist/Latex.tags.xml.in.h:74
+msgid "Footnote"
+msgstr "Catatan kaki"
+
 #: ../plugins/taglist/taglist.plugin.desktop.in.in.h:1
+msgid "Tag list"
+msgstr "Daftar tag"
+
+#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
 msgid ""
 "Provides a method to easily insert commonly used tags/strings into a "
 "document without having to type them."
@@ -1923,21 +1881,17 @@ msgstr ""
 "Menyediakan metoda untuk menyisipkan secara mudah tag/kata-kata yang sering "
 "digunakan ke dalam dokumen tanpa harus mengetikkannya."
 
-#: ../plugins/taglist/taglist.plugin.desktop.in.in.h:2
-msgid "Tag list"
-msgstr "Daftar tag"
-
 #: ../plugins/taglist/XSLT.tags.xml.in.h:1
-msgid "XSLT — Axes"
-msgstr "XSLT — Poros"
-
-#: ../plugins/taglist/XSLT.tags.xml.in.h:2
 msgid "XSLT — Elements"
 msgstr "XSLT — Elemen"
 
-#: ../plugins/taglist/XSLT.tags.xml.in.h:3
+#: ../plugins/taglist/XSLT.tags.xml.in.h:2
 msgid "XSLT — Functions"
 msgstr "XSLT — Fungsi"
+
+#: ../plugins/taglist/XSLT.tags.xml.in.h:3
+msgid "XSLT — Axes"
+msgstr "XSLT — Poros"
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:4
 msgid "ancestor"
@@ -1994,3 +1948,239 @@ msgstr "diri sendiri"
 #: ../plugins/taglist/XUL.tags.xml.in.h:1
 msgid "XUL — Tags"
 msgstr "XUL — Tag"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:1
+msgid "Whether to silence terminal bell"
+msgstr "Apakah membisukan bel terminal"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:2
+msgid ""
+"If true, don't make a noise when applications send the escape sequence for "
+"the terminal bell."
+msgstr ""
+"Bila true, jangan bunyikan suara saat aplikasi mengirim urutan escape untuk "
+"bel terminal."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:3
+msgid "Number of lines to keep in scrollback"
+msgstr "Cacah baris yang disimpan pada singgahan gulung layar"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:4
+msgid ""
+"Number of scrollback lines to keep around. You can scroll back in the "
+"terminal by this number of lines; lines that don't fit in the scrollback are "
+"discarded. If scrollback-unlimited is true, this value is ignored."
+msgstr ""
+"Cacah baris yang disimpan pada saat menggulung layar ke belakang. Anda dapat "
+"menggulung layar terminal ke belakang sebanyak cacah baris ini; baris yang "
+"tidak dapat dimuat di dalam singgahan akan dibuang. Bila "
+"scrollback_unlimited berisi true, nilai ini diabaikan."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:5
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr "Apakah sejumlah tak terbatas baris gulung mundur mesti dipertahankan"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:6
+msgid ""
+"If true, scrollback lines will never be discarded. The scrollback history is "
+"stored on disk temporarily, so this may cause the system to run out of disk "
+"space if there is a lot of output to the terminal."
+msgstr ""
+"Bila bernilai true, baris gulung mundur tidak akan pernah dibuang. Riwayat "
+"gulung mundur disimpan sementara di cakram, sehingga ini bisa menyebabkan "
+"sistem kehabisan ruang cakram bila ada banyak keluaran ke terminal."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:7
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr "Apakah menggulung layar hingga ke bawah saat tombol ditekan"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:8
+msgid "If true, pressing a key jumps the scrollbar to the bottom."
+msgstr ""
+"Bila berisi true, bilah penggulung akan dikembalikan ke bawah bila ada "
+"tombol ditekan."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:9
+msgid "Whether to scroll to the bottom when there's new output"
+msgstr "Apakah menggulung layar ke bawah saat ada keluaran baru"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:10
+msgid ""
+"If true, whenever there's new output the terminal will scroll to the bottom."
+msgstr ""
+"Bila berisi true, ketika ada keluaran baru tampilan terminal akan digulung "
+"ke bawah."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:11
+msgid "Whether to allow bold text"
+msgstr "Apakah memperbolehkan teks tebal"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:12
+msgid "If true, allow applications in the terminal to make text boldface."
+msgstr ""
+"Bila berisi true, aplikasi dalam terminal diperbolehkan mencetak huruf tebal "
+"dalam teksnya."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:13
+msgid "Characters that are considered \"part of a word\""
+msgstr "Karakter yang dianggap sebagai \"bagian dari kata\""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:14
+msgid ""
+"When selecting text by word, sequences of these characters are considered "
+"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing "
+"a range) should be the first character given."
+msgstr ""
+"Saat memilih teks berdasarkan kata, urutan karakter-karakter ini akan "
+"dianggap sebagai satu kesatuan pada kata. Jangkauan karakter dapat ditulis "
+"dalam bentuk \"A-Z\". Tanda minus (yang bukan melambangkan jangkauan) bila "
+"ingin dipakai maka harus ditulis pertama kali."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:15
+msgid "Default color of text in the terminal"
+msgstr "Warna teks bawaan dalam terminal"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:16
+msgid ""
+"Default color of text in the terminal, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Warna teks bawaan terminal, yang ditulis dalam bentuk spesifikasi warna "
+"(boleh berupa kode heksa HTML, atau nama warna misalnya \"red\")."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:17
+msgid "Default color of terminal background"
+msgstr "Warna utama latar terminal"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:18
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Warna latar bawaan terminal, yang ditulis dalam bentuk spesifikasi warna "
+"(boleh berupa kode heksa HTML, atau nama warna misalnya \"red\")."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:19
+msgid "Palette for terminal applications"
+msgstr "Palet untuk aplikasi terminal"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:20
+msgid ""
+"Terminals have a 16-color palette that applications inside the terminal can "
+"use. This is that palette, in the form of a colon-separated list of color "
+"names. Color names should be in hex format e.g. \"#FF00FF\""
+msgstr ""
+"Terminal memiliki palet 16-warna yang dapat digunakan oleh aplikasi yang "
+"jalan dalam terminal. Palet ini ditulis dalam bentuk daftar warna yang "
+"dibatasi dengan karakter titik dua. Nama warna harus dalam bentuk heksa, "
+"misalnya \"#FF00FF\""
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:21
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr "Apakah menggunakan warna dari tema sistem untuk widget terminal"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:22
+msgid ""
+"If true, the theme color scheme used for text entry boxes will be used for "
+"the terminal, instead of colors provided by the user."
+msgstr ""
+"Jika berisi true, terminal akan menggunakan skema warna tema untuk kotak "
+"isian teks alih-alih warna yang ditentukan oleh pemakai."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:23
+msgid "Whether to blink the cursor"
+msgstr "Apakah kursor harus berkedip"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:24
+msgid ""
+"The possible values are \"system\" to use the global cursor blinking "
+"settings, or \"on\" or \"off\" to set the mode explicitly."
+msgstr ""
+"Nilai yang mungkin adalah \"system\" untuk memakai pengaturan kedipan kursor "
+"global, atau \"on\" atau \"off\" untuk menata mode secara eksplisit."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:25
+msgid "The cursor appearance"
+msgstr "Penampilan kursor"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:26
+msgid ""
+"The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
+"vertical line cursor, or \"underline\" to use an underline cursor."
+msgstr ""
+"Nilai yang mungkin adalah \"block\" untuk memakai kursor kotak, \"ibeam\" "
+"untuk memakai kursor garis tegak, atau \"underline\" untuk kursor garis "
+"bawah."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:27
+msgid "Whether to use the system font"
+msgstr "Menentukan memakai fonta sistem"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:28
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Jika bernilai true, maka terminal akan memakai fonta yang diterapkan oleh "
+"desktop secara global jika berjenis monospace (dan fonta lainnya yang "
+"sejenis)."
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:29
+#| msgid "Footnote"
+msgid "Font"
+msgstr "Fonta"
+
+#: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:30
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+"Nama fonta Pango. Sebagai contoh \"Sans 12\" atau \"Monospace Bold 14\"."
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:1
+msgid "Embedded Terminal"
+msgstr "Terminal Tertanam"
+
+#: ../plugins/terminal/terminal.plugin.desktop.in.in.h:2
+msgid "Embed a terminal in the bottom pane."
+msgstr "Tanamkan terminal dalam panel bawah."
+
+#: ../plugins/terminal/terminal.py:260
+msgid "Terminal"
+msgstr "Terminal"
+
+#: ../plugins/terminal/terminal.py:282
+msgid "C_hange Directory"
+msgstr "Uba_h Direktori"
+
+#: ../plugins/textsize/textsize/__init__.py:143
+msgid "_Increase font size"
+msgstr "_Besarkan ukuran fonta"
+
+#: ../plugins/textsize/textsize/__init__.py:146
+msgid "_Decrease font size"
+msgstr "_Kecilkan ukuran fonta"
+
+#: ../plugins/textsize/textsize/__init__.py:149
+msgid "_Reset font size"
+msgstr "_Reset ukuran fonta"
+
+#. ex:ts=4:et:
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
+msgid "Text Size"
+msgstr "Ukuran Teks"
+
+#: ../plugins/textsize/textsize.plugin.desktop.in.in.h:2
+msgid "Easily increase and decrease the text size"
+msgstr "Memperbesar dan memperkecil ukuran teks secara mudah"
+
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:153
+#: ../plugins/wordcompletion/gedit-word-completion-plugin.c:200
+msgid "Document Words"
+msgstr "Kata Dokumen"
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:1
+msgid "Word Completion"
+msgstr "Penyelesaian Kata"
+
+#: ../plugins/wordcompletion/wordcompletion.plugin.desktop.in.in.h:2
+msgid "Word completion using the completion framework"
+msgstr "Penyelesaian kata memakai kerangka kerja penyelesaian"
