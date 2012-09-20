@@ -210,6 +210,7 @@ class ColorPickerViewActivatable(GObject.Object, Gedit.ViewActivatable):
 
     def __init__(self):
         GObject.Object.__init__(self)
+        self._rgba_str = None
         self._color_button = None
         self._color_helper = ColorHelper()
 
@@ -235,10 +236,18 @@ class ColorPickerViewActivatable(GObject.Object, Gedit.ViewActivatable):
             return
 
         rgba_str = self._color_helper.get_current_color(self.view.get_buffer(), True)
-        if rgba_str is not None and self._color_button is None:
+        if rgba_str is not None and rgba_str != self._rgba_str and self._color_button is not None:
             rgba = Gdk.RGBA()
             parsed = rgba.parse(rgba_str)
             if parsed:
+                self._rgba_str = rgba_str
+                self._color_button.set_rgba(rgba)
+        elif rgba_str is not None and self._color_button is None:
+            rgba = Gdk.RGBA()
+            parsed = rgba.parse(rgba_str)
+            if parsed:
+                self._rgba_str = rgba_str
+
                 bounds = buf.get_selection_bounds()
                 if bounds != ():
                     self._color_button = Gtk.ColorButton.new_with_rgba(rgba)
