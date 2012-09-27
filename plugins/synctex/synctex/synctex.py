@@ -316,7 +316,7 @@ class SynctexWindowActivatable(GObject.Object, Gedit.WindowActivatable):
         # Merge the UI
         self._ui_id = manager.add_ui_from_string(ui_str)
 
-    def forward_search_cb(self, action, what):
+    def forward_search_cb(self, action, what=None):
         self.get_helper(self.window.get_active_view()).sync_view(Gtk.get_current_event_time())
 
     def source_view_handler(self, out_gfile, uri_input, source_link, time):
