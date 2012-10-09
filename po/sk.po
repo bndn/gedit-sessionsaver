@@ -11,10 +11,11 @@ msgstr ""
 "Project-Id-Version: gedit-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gedit&keywords=I18N+L10N&component=Plugins\n"
-"POT-Creation-Date: 2012-03-18 14:42+0000\n"
-"PO-Revision-Date: 2012-05-21 09:22+0200\n"
+"POT-Creation-Date: 2012-09-18 00:15+0000\n"
+"PO-Revision-Date: 2012-10-09 22:23+0100\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -103,15 +104,15 @@ msgstr "Výber farieb"
 msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr "Výber farby z dialógu a vloženie jej kódu v šestnástkovej sústave."
 
-#: ../plugins/colorpicker/colorpicker.py:76
+#: ../plugins/colorpicker/colorpicker.py:161
 msgid "Pick _Color..."
 msgstr "Vybrať _farbu..."
 
-#: ../plugins/colorpicker/colorpicker.py:77
+#: ../plugins/colorpicker/colorpicker.py:162
 msgid "Pick a color from a dialog"
 msgstr "Výber farby z dialógového okna"
 
-#: ../plugins/colorpicker/colorpicker.py:176
+#: ../plugins/colorpicker/colorpicker.py:178
 msgid "Pick Color"
 msgstr "Vybrať farbu"
 
@@ -125,14 +126,13 @@ msgid "Command line interface for advanced editing"
 msgstr "Rozhranie príkazového riadka na pokročilé úpravy"
 
 #: ../plugins/commander/commander/windowactivatable.py:70
-#, fuzzy
-#| msgid "Commander"
 msgid "Commander Mode"
-msgstr "Commander"
+msgstr "Režim commander"
 
+# tooltip
 #: ../plugins/commander/commander/windowactivatable.py:71
 msgid "Start commander mode"
-msgstr ""
+msgstr "Spustí režim commander"
 
 #: ../plugins/dashboard/dashboard/dashboard.py:110
 msgid "Empty Document"
@@ -253,54 +253,53 @@ msgstr "Stĺpcový režim..."
 msgid "Removed edit point..."
 msgstr "Odstránené miesto úpravy..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:916
+#: ../plugins/multiedit/multiedit/documenthelper.py:920
 msgid "Cancelled column mode..."
 msgstr "Zrušený stĺpcový režim..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1288
+#: ../plugins/multiedit/multiedit/documenthelper.py:1293
 msgid "Enter column edit mode using selection"
 msgstr "Vstúpiť do režimu úpravy stĺpcov pomocou výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1289
+#: ../plugins/multiedit/multiedit/documenthelper.py:1294
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr "Vstúpiť do režimu <b>inteligentnej</b> úpravy stĺpcov pomocou výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1290
+#: ../plugins/multiedit/multiedit/documenthelper.py:1295
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "<b>Inteligentný</b> režim zarovnania stĺpcov pomocou výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1291
+#: ../plugins/multiedit/multiedit/documenthelper.py:1296
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 "<b>Inteligentný</b> režim zarovnania stĺpcov s medzerou naviac pomocou výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1293
+#: ../plugins/multiedit/multiedit/documenthelper.py:1298
 msgid "Toggle edit point"
 msgstr "Prepnúť miesto úpravy"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1294
+#: ../plugins/multiedit/multiedit/documenthelper.py:1299
 msgid "Add edit point at beginning of line/selection"
 msgstr "Pridať miesto úpravy na začiatok riadka/výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1295
+#: ../plugins/multiedit/multiedit/documenthelper.py:1300
 msgid "Add edit point at end of line/selection"
 msgstr "Pridať miesto úpravy na koniec riadka/výberu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1296
+#: ../plugins/multiedit/multiedit/documenthelper.py:1301
 msgid "Align edit points"
 msgstr "Zarovnať miesta úprav"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1297
+#: ../plugins/multiedit/multiedit/documenthelper.py:1302
 msgid "Align edit points with additional space"
 msgstr "Zarovnať miesta úprav s medzerou naviac"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1328
-#: ../plugins/multiedit/multiedit/__init__.py:80
+#: ../plugins/multiedit/multiedit/documenthelper.py:1333
+#: ../plugins/multiedit/multiedit/__init__.py:79
 msgid "Multi Edit Mode"
 msgstr "Režim multiúprav"
 
-#: ../plugins/multiedit/multiedit/__init__.py:82
-#| msgid "Multi Edit Mode"
+#: ../plugins/multiedit/multiedit/__init__.py:81
 msgid "Start multi edit mode"
 msgstr "Spustiť režim multiúprav"
 
@@ -317,7 +316,7 @@ msgstr "Upravovanie dokumentu na viacerých miestach súčasne"
 msgid "Session Name"
 msgstr "Názov relácie"
 
-#: ../plugins/sessionsaver/__init__.py:84
+#: ../plugins/sessionsaver/__init__.py:85
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Obnoviť reláciu „%s“"
@@ -379,12 +378,12 @@ msgstr "SyncTeX"
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr "Synchronizácia medzi LaTeXom a PDF pomocou programov gedit a evince."
 
-#: ../plugins/synctex/synctex/synctex.py:307
-#: ../plugins/synctex/synctex/synctex.py:308
+#: ../plugins/synctex/synctex/synctex.py:310
+#: ../plugins/synctex/synctex/synctex.py:311
 msgid "Forward Search"
 msgstr "Hľdanie dopredu"
 
-#: ../plugins/taglist/gedit-taglist-plugin.c:165
+#: ../plugins/taglist/gedit-taglist-plugin.c:163
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:700
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:716
 msgid "Tags"
@@ -1160,7 +1159,6 @@ msgid "Span"
 msgstr "Rozpätie"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:211
-#, fuzzy
 msgid "Standby load message"
 msgstr "Správa pozastavenia načítavania"
 
@@ -2098,8 +2096,8 @@ msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
 msgstr ""
-"Možné hodnoty sú „system“ na použitie globálnych nastavení blikania "
-"kurzora, „on“ alebo „off“ na explicitné nastavenie režimu."
+"Možné hodnoty sú „system“ na použitie globálnych nastavení blikania kurzora, "
+"„on“ alebo „off“ na explicitné nastavenie režimu."
 
 #: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:25
 msgid "The cursor appearance"
@@ -2151,17 +2149,17 @@ msgstr "Terminál"
 msgid "C_hange Directory"
 msgstr "_Zmeniť adresár"
 
-#: ../plugins/textsize/textsize/__init__.py:143
+#: ../plugins/textsize/textsize/__init__.py:142
 msgid "_Increase font size"
-msgstr ""
+msgstr "Zväčš_iť veľkosť písma"
 
-#: ../plugins/textsize/textsize/__init__.py:146
+#: ../plugins/textsize/textsize/__init__.py:145
 msgid "_Decrease font size"
-msgstr ""
+msgstr "_Zmenšiť veľkosť písma"
 
-#: ../plugins/textsize/textsize/__init__.py:149
+#: ../plugins/textsize/textsize/__init__.py:148
 msgid "_Reset font size"
-msgstr ""
+msgstr "_Obnoviť veľkosť písma"
 
 #. ex:ts=4:et:
 #: ../plugins/textsize/textsize.plugin.desktop.in.in.h:1
