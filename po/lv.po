@@ -8,16 +8,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=gedit&keywords=I18N+L10N&component=Plugins\n"
-"POT-Creation-Date: 2012-03-25 13:33+0000\n"
-"PO-Revision-Date: 2012-05-22 23:27+0300\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-14 01:44+0300\n"
+"PO-Revision-Date: 2012-10-14 01:45+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lv\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 "X-Generator: Lokalize 1.4\n"
@@ -106,15 +105,15 @@ msgid "Pick a color from a dialog and insert its hexadecimal representation."
 msgstr ""
 "Izvēlēties krāsu dialoglodziņā un ievietot tekstā tās heksadecimālo kodu."
 
-#: ../plugins/colorpicker/colorpicker.py:76
+#: ../plugins/colorpicker/colorpicker.py:161
 msgid "Pick _Color..."
 msgstr "Izvēlēties _krāsu..."
 
-#: ../plugins/colorpicker/colorpicker.py:77
+#: ../plugins/colorpicker/colorpicker.py:162
 msgid "Pick a color from a dialog"
 msgstr "Izvēlieties krāsu dialoglodziņā"
 
-#: ../plugins/colorpicker/colorpicker.py:176
+#: ../plugins/colorpicker/colorpicker.py:178
 msgid "Pick Color"
 msgstr "Izvēlieties krāsu"
 
@@ -154,7 +153,7 @@ msgstr "Nesen lietotie"
 #. ex:ts=4:et:
 #: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:1
 msgid "Dashboard"
-msgstr "Failu panelis"
+msgstr "Datņu panelis"
 
 #: ../plugins/dashboard/dashboard.plugin.desktop.in.in.h:2
 msgid "A Dashboard for new tabs"
@@ -254,54 +253,54 @@ msgstr "Kolonnas režīms..."
 msgid "Removed edit point..."
 msgstr "Izņemtais rediģēšanas punkts..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:916
+#: ../plugins/multiedit/multiedit/documenthelper.py:920
 msgid "Cancelled column mode..."
 msgstr "Atceltais kolonnas režīms..."
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1288
+#: ../plugins/multiedit/multiedit/documenthelper.py:1293
 msgid "Enter column edit mode using selection"
 msgstr "Ieiet kolonnu rediģēšanas režīmā, lietojot izvēli"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1289
+#: ../plugins/multiedit/multiedit/documenthelper.py:1294
 msgid "Enter <b>smart</b> column edit mode using selection"
 msgstr "Ieiet <b>gudrajā</b> kolonnu rediģēšanas režīmā, lietojot izvēli"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1290
+#: ../plugins/multiedit/multiedit/documenthelper.py:1295
 msgid "<b>Smart</b> column align mode using selection"
 msgstr "<b>Gudrais</b> kolonu līdzināšanas režīms, lietojot izvēli"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1291
+#: ../plugins/multiedit/multiedit/documenthelper.py:1296
 msgid "<b>Smart</b> column align mode with additional space using selection"
 msgstr ""
 "<b>Gudrais</b> kolonu līdzināšanas režīms ar papildu atstarpēm, lietojot "
 "izvēli"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1293
+#: ../plugins/multiedit/multiedit/documenthelper.py:1298
 msgid "Toggle edit point"
 msgstr "Pārslēgt rediģēšanas punktu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1294
+#: ../plugins/multiedit/multiedit/documenthelper.py:1299
 msgid "Add edit point at beginning of line/selection"
 msgstr "Rindas / izvēles sākumā pievienot rediģēšanas punktu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1295
+#: ../plugins/multiedit/multiedit/documenthelper.py:1300
 msgid "Add edit point at end of line/selection"
 msgstr "Rindas / izvēles beigās pievienot rediģēšanas punktu"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1296
+#: ../plugins/multiedit/multiedit/documenthelper.py:1301
 msgid "Align edit points"
 msgstr "Līdzināt rediģēšanas punktus"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1297
+#: ../plugins/multiedit/multiedit/documenthelper.py:1302
 msgid "Align edit points with additional space"
 msgstr "Līdzināt rediģēšanas punktus ar papildu atstarpēm"
 
-#: ../plugins/multiedit/multiedit/documenthelper.py:1328
-#: ../plugins/multiedit/multiedit/__init__.py:80
+#: ../plugins/multiedit/multiedit/documenthelper.py:1333
+#: ../plugins/multiedit/multiedit/__init__.py:79
 msgid "Multi Edit Mode"
 msgstr "Multirediģēšanas režīms"
 
-#: ../plugins/multiedit/multiedit/__init__.py:82
+#: ../plugins/multiedit/multiedit/__init__.py:81
 msgid "Start multi edit mode"
 msgstr "Sākt multirediģēšanas režīmu"
 
@@ -318,7 +317,7 @@ msgstr "Rediģēt dokumentu vairākās vietās vienlaicīgi"
 msgid "Session Name"
 msgstr "Sesijas nosaukums"
 
-#: ../plugins/sessionsaver/__init__.py:84
+#: ../plugins/sessionsaver/__init__.py:85
 #, python-format
 msgid "Recover '%s' session"
 msgstr "Atgūt sesiju “%s”"
@@ -380,12 +379,12 @@ msgstr "SyncTeX"
 msgid "Synchronize between LaTeX and PDF with gedit and evince."
 msgstr "Sinhronizēt starp LaTeX un PDF ar gedit un evince."
 
-#: ../plugins/synctex/synctex/synctex.py:307
-#: ../plugins/synctex/synctex/synctex.py:308
+#: ../plugins/synctex/synctex/synctex.py:310
+#: ../plugins/synctex/synctex/synctex.py:311
 msgid "Forward Search"
 msgstr "Meklēt uz priekšu"
 
-#: ../plugins/taglist/gedit-taglist-plugin.c:165
+#: ../plugins/taglist/gedit-taglist-plugin.c:163
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:700
 #: ../plugins/taglist/gedit-taglist-plugin-panel.c:716
 msgid "Tags"
@@ -447,7 +446,7 @@ msgstr "Enkurs"
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:12
 msgid "Applet class file code (deprecated)"
-msgstr "Sīklietotnes klases faila kods (novecojis)"
+msgstr "Sīklietotnes klases datnes kods (novecojis)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:13
 msgid "Associated information"
@@ -857,7 +856,7 @@ msgstr "Saraksta elements"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:127
 msgid "List of MIME types for file upload"
-msgstr "Failu augšupielādes MIME tipu saraksts"
+msgstr "Datņu augšupielādes MIME tipu saraksts"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:128
 msgid "List of supported character sets"
@@ -949,7 +948,7 @@ msgstr "Nav vārdu aplaušanas (novecojis)"
 #. Deprecated since HTML 4.01, not supported in XHTML 1.0 Strict DTD.
 #: ../plugins/taglist/HTML.tags.xml.in.h:156
 msgid "Object applet file (deprecated)"
-msgstr "Objekta sīklietotnes fails (novecojis)"
+msgstr "Objekta sīklietotnes datne (novecojis)"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:157
 msgid "Object data reference"
@@ -1322,7 +1321,7 @@ msgstr "Virs"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:256
 msgid "Applet class file code"
-msgstr "Sīklietotnes klases faila kods"
+msgstr "Sīklietotnes klases datnes kods"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:257
 msgid "Array"
@@ -1478,7 +1477,7 @@ msgstr "Piezīme"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:295
 msgid "Object applet file"
-msgstr "Objekta sīklietotnes fails"
+msgstr "Objekta sīklietotnes datne"
 
 #: ../plugins/taglist/HTML.tags.xml.in.h:296
 msgid "Preformatted listing"
@@ -1614,7 +1613,7 @@ msgstr "Iekavas <>"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:10
 msgid "File input"
-msgstr "Ievietojamais fails"
+msgstr "Ievietojamā datne"
 
 #: ../plugins/taglist/Latex.tags.xml.in.h:11
 msgid "Function cosine"
@@ -1878,8 +1877,7 @@ msgid ""
 "document without having to type them."
 msgstr ""
 "Piedāvā veidu, kā ērti ievietot dokumentā biežāk lietotos birkas / virknes "
-"bez "
-"vajadzības tās rakstīt."
+"bez vajadzības tās rakstīt."
 
 #: ../plugins/taglist/XSLT.tags.xml.in.h:1
 msgid "XSLT — Elements"
@@ -1971,9 +1969,9 @@ msgid ""
 "terminal by this number of lines; lines that don't fit in the scrollback are "
 "discarded. If scrollback-unlimited is true, this value is ignored."
 msgstr ""
-"Ritināšanas rindu daudzums, ko paturēt. Jūs varat ritināt atpakaļ tieši "
-"tik daudz reižu. Rindas, kas neietilpst rindu atpakaļritināšanā, tiek "
-"izmestas. Ja scrollback-unlimited ir patiess, šī vērtība tiek ignorēta."
+"Ritināšanas rindu daudzums, ko paturēt. Jūs varat ritināt atpakaļ tieši tik "
+"daudz reižu. Rindas, kas neietilpst rindu atpakaļritināšanā, tiek izmestas. "
+"Ja scrollback-unlimited ir patiess, šī vērtība tiek ignorēta."
 
 #: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:5
 msgid "Whether an unlimited number of lines should be kept in scrollback"
@@ -2042,9 +2040,8 @@ msgid ""
 "Default color of text in the terminal, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
 msgstr ""
-"Noklusējuma termināļa teksta krāsa, kā krāsu specifikācija (var būt "
-"HTML-stila "
-"heksadecimāli cipari vai krāsas vārds, piemēram, “red”)."
+"Noklusējuma termināļa teksta krāsa, kā krāsu specifikācija (var būt HTML-"
+"stila heksadecimāli cipari vai krāsas vārds, piemēram, “red”)."
 
 #: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:17
 msgid "Default color of terminal background"
@@ -2068,8 +2065,8 @@ msgid ""
 "use. This is that palette, in the form of a colon-separated list of color "
 "names. Color names should be in hex format e.g. \"#FF00FF\""
 msgstr ""
-"Termināļos ir 16 krāsu palete, kuru var izmantot termināļa lietotnes. Šī "
-"ir tā palete krāsu nosaukumu, kas atdalīti ar kolu, saraksta veidā. Krāsu "
+"Termināļos ir 16 krāsu palete, kuru var izmantot termināļa lietotnes. Šī ir "
+"tā palete krāsu nosaukumu, kas atdalīti ar kolu, saraksta veidā. Krāsu "
 "nosaukumiem vajadzētu būt pierakstītiem heksadecimālā formā, piem., “#FF00FF”"
 
 #: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:21
@@ -2105,8 +2102,8 @@ msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
 msgstr ""
-"Iespējamās vērtības ir “block”, lai izmantotu bloka kursoru, “ibeam”, "
-"lai izmantotu vertikālu līniju, vai “underline”, lai izmantotu pasvītrojuma "
+"Iespējamās vērtības ir “block”, lai izmantotu bloka kursoru, “ibeam”, lai "
+"izmantotu vertikālu līniju, vai “underline”, lai izmantotu pasvītrojuma "
 "kursoru."
 
 #: ../plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in.in.h:27
@@ -2145,15 +2142,15 @@ msgstr "Terminālis"
 msgid "C_hange Directory"
 msgstr "_Mainīt direktoriju"
 
-#: ../plugins/textsize/textsize/__init__.py:143
+#: ../plugins/textsize/textsize/__init__.py:142
 msgid "_Increase font size"
 msgstr "Pal_ielināt fonta izmēru"
 
-#: ../plugins/textsize/textsize/__init__.py:146
+#: ../plugins/textsize/textsize/__init__.py:145
 msgid "_Decrease font size"
 msgstr "_Samazināt fonta izmēru"
 
-#: ../plugins/textsize/textsize/__init__.py:149
+#: ../plugins/textsize/textsize/__init__.py:148
 msgid "_Reset font size"
 msgstr "Nesenais fonta izmē_rs"
 
