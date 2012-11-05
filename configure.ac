@@ -88,9 +88,9 @@ GEDIT_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="bookmarks drawspaces wordcompletion taglist"
-USEFUL_PLUGINS="bookmarks drawspaces wordcompletion taglist"
-DEFAULT_PLUGINS="bookmarks drawspaces wordcompletion taglist"
+ALL_PLUGINS="bookmarks drawspaces wordcompletion"
+USEFUL_PLUGINS="bookmarks drawspaces wordcompletion"
+DEFAULT_PLUGINS="bookmarks drawspaces wordcompletion"
 
 PYTHON_ALL_PLUGINS="bracketcompletion charmap codecomment colorpicker commander dashboard joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
 PYTHON_USEFUL_PLUGINS="bracketcompletion charmap codecomment colorpicker commander dashboard joinlines multiedit textsize sessionsaver smartspaces terminal synctex"
@@ -116,7 +116,7 @@ AC_ARG_WITH([plugins],
 			  build the specified plugins. Available:
 			  bracketcompletion, charmap, codecomment,
 			  colorpicker, drawspaces, joinlines, multiedit,
-			  textsize, sessionsaver, smartspaces, taglist,
+			  textsize, sessionsaver, smartspaces,
 			  terminal, wordcompletion, as well as the aliases
 			  default, all, and really-all],
 			  [plugins=$with_plugins],
@@ -349,8 +349,6 @@ plugins/smartspaces/smartspaces.plugin.desktop.in
 plugins/synctex/Makefile
 plugins/synctex/synctex.plugin.desktop.in
 plugins/synctex/synctex/Makefile
-plugins/taglist/taglist.plugin.desktop.in
-plugins/taglist/Makefile
 plugins/terminal/Makefile
 plugins/terminal/org.gnome.gedit.plugins.terminal.gschema.xml.in
 plugins/terminal/terminal.plugin.desktop.in
