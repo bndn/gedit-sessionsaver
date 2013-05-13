@@ -44,7 +44,7 @@ class SessionModel(Gtk.ListStore):
                 if stored_session == session:
                     self.remove(it)
                     break
-                it = self.next(it)
+                it = self.iter_next(it)
                 if not it:
                     break
 
