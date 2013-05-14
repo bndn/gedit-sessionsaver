@@ -20,8 +20,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor,
 # Boston, MA  02110-1301  USA
 
-from gi.repository import GObject, Gio, Gtk, Gedit
-import os.path
+from gi.repository import GObject, Gtk, Gedit
 import gettext
 from store import XMLSessionStore
 from dialogs import SaveSessionDialog, SessionManagerDialog
