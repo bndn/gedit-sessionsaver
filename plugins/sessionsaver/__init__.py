@@ -89,7 +89,7 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
 
         self._ui_id = manager.add_ui_from_string(ui_str)
 
-        self._update_session_menu()
+        self._insert_session_menu()
 
         manager.ensure_update()
 
@@ -103,10 +103,8 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
 
         manager.ensure_update()
 
-    def _update_session_menu(self):
+    def _insert_session_menu(self):
         manager = self.window.get_ui_manager()
-
-        self._remove_session_menu()
         self._menu_ui_id = manager.new_merge_id()
 
         self._action_group = Gtk.ActionGroup(name="SessionSaverPluginSessionActions")
@@ -120,7 +118,6 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
                                 "")
             handler = action.connect("activate", self.session_menu_action, session)
 
-            # Add an action to the session list items.
             self._action_group.add_action(action)
 
             manager.add_ui(self._menu_ui_id,
@@ -131,9 +128,6 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
                            False)
 
     def _remove_session_menu(self):
-        if not hasattr(self, '_menu_ui_id'):
-            return
-
         manager = self.window.get_ui_manager()
         manager.remove_ui(self._menu_ui_id)
 
@@ -142,6 +136,10 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
             self._action_group.remove_action(action)
 
         manager.remove_action_group(self._action_group)
+
+    def _update_session_menu(self):
+        self._remove_session_menu()
+        self._insert_session_menu()
 
     def _load_session(self, session, window):
         # Note: a session has to stand on its own window.
