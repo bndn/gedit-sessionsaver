@@ -70,7 +70,7 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
         self._remove_menu()
 
     def do_update_state(self):
-        pass
+        self._menu_action_group.get_action("FileSessionSave").set_sensitive(self.window.get_active_document() != None)
 
     def _insert_menu(self):
         manager = self.window.get_ui_manager()
