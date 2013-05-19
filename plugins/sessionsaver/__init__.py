@@ -133,7 +133,6 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
 
         for action in self._action_group.list_actions():
             action.disconnect_by_func(self.session_menu_action)
-            self._action_group.remove_action(action)
 
         manager.remove_action_group(self._action_group)
 
