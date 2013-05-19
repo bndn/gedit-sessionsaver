@@ -153,7 +153,7 @@ class SessionManagerDialog(Dialog):
     def on_open_button_clicked(self, button):
         session = self.get_current_session()
         if session is not None:
-            self.plugin._load_session(session, self.parent)
+            self.plugin._load_session(session)
 
     def on_delete_button_clicked(self, button):
         session = self.get_current_session()

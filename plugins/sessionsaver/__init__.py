@@ -84,7 +84,7 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
              ("FileSessionManage", None, _("_Manage saved sessions..."),
               None, _("Open the saved session manager"),
               self.on_manage_sessions_action)
-            ], self.window)
+            ])
         manager.insert_action_group(self._menu_action_group)
 
         self._ui_id = manager.add_ui_from_string(ui_str)
@@ -140,25 +140,27 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
         self._remove_session_menu()
         self._insert_session_menu()
 
-    def _load_session(self, session, window):
+    def _load_session(self, session):
         # Note: a session has to stand on its own window.
-        tab = window.get_active_tab()
+        tab = self.window.get_active_tab()
         if tab is not None and \
            not (tab.get_document().is_untouched() and \
                 tab.get_state() == Gedit.TabState.STATE_NORMAL):
             # Create a new gedit window
             window = Gedit.App.get_default().create_window(None)
             window.show()
+        else:
+            window = self.window
 
         Gedit.commands_load_locations(window, session.files, None, 0, 0)
 
-    def on_save_session_action(self, action, window):
-        SaveSessionDialog(window, self, self.sessions).run()
+    def on_save_session_action(self, action):
+        SaveSessionDialog(self.window, self, self.sessions).run()
 
-    def on_manage_sessions_action(self, action, window):
+    def on_manage_sessions_action(self, action):
         SessionManagerDialog(self, self.sessions).run()
 
     def session_menu_action(self, action, session):
-        self._load_session(session, self.window)
+        self._load_session(session)
 
 # ex:ts=4:et:
