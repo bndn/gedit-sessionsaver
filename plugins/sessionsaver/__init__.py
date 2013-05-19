@@ -34,7 +34,7 @@ try:
 except:
     _ = lambda s: s
 
-ui_str = """
+ui_string = """
 <ui>
   <menubar name="MenuBar">
     <menu name="FileMenu" action="File">
@@ -55,7 +55,7 @@ ui_str = """
 class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
     __gtype_name__ = "SessionSaverPlugin"
 
-    window = GObject.property(type = Gedit.Window)
+    window = GObject.property(type=Gedit.Window)
 
     SESSION_MENU_PATH = '/MenuBar/FileMenu/FileOps_2/FileSessionMenu/SessionPluginPlaceHolder'
 
@@ -70,71 +70,76 @@ class SessionSaverPlugin(GObject.Object, Gedit.WindowActivatable):
         self._remove_menu()
 
     def do_update_state(self):
-        self._menu_action_group.get_action("FileSessionSave").set_sensitive(self.window.get_active_document() != None)
+        self._action_group.get_action("FileSessionSave").set_sensitive(self.window.get_active_document() != None)
 
     def _insert_menu(self):
-        manager = self.window.get_ui_manager()
-        self._menu_action_group = Gtk.ActionGroup("SessionSaverPluginActions")
-        self._menu_action_group.add_actions(
+        ui_manager = self.window.get_ui_manager()
+
+        self._action_group = Gtk.ActionGroup("SessionSaverPluginActions")
+        self._action_group.add_actions(
             [("FileSession", None, _("Sa_ved sessions"), None, None),
              ("FileSessionSave", Gtk.STOCK_SAVE_AS,
               _("_Save current session"), None,
               _("Save the current document list as a new session"),
               self.on_save_session_action),
-             ("FileSessionManage", None, _("_Manage saved sessions..."),
-              None, _("Open the saved session manager"),
+             ("FileSessionManage", None,
+              _("_Manage saved sessions..."), None,
+              _("Open the saved session manager"),
               self.on_manage_sessions_action)
             ])
-        manager.insert_action_group(self._menu_action_group)
+        ui_manager.insert_action_group(self._action_group)
 
-        self._ui_id = manager.add_ui_from_string(ui_str)
+        self._ui_id = ui_manager.add_ui_from_string(ui_string)
 
         self._insert_session_menu()
 
-        manager.ensure_update()
+        ui_manager.ensure_update()
 
     def _remove_menu(self):
-        manager = self.window.get_ui_manager()
+        ui_manager = self.window.get_ui_manager()
 
         self._remove_session_menu()
 
-        manager.remove_ui(self._ui_id)
-        manager.remove_action_group(self._menu_action_group)
+        ui_manager.remove_ui(self._ui_id)
+        ui_manager.remove_action_group(self._action_group)
 
-        manager.ensure_update()
+        ui_manager.ensure_update()
 
     def _insert_session_menu(self):
-        manager = self.window.get_ui_manager()
-        self._menu_ui_id = manager.new_merge_id()
+        ui_manager = self.window.get_ui_manager()
 
-        self._action_group = Gtk.ActionGroup(name="SessionSaverPluginSessionActions")
-        manager.insert_action_group(self._action_group)
+        self._merge_id = ui_manager.new_merge_id()
+
+        self._session_action_group = Gtk.ActionGroup(name="SessionSaverPluginSessionActions")
+        ui_manager.insert_action_group(self._session_action_group)
 
         for i, session in enumerate(self.sessions):
             action_name = 'SessionSaver%X' % i
             action = Gtk.Action(action_name,
                                 session.name,
                                 _("Recover '%s' session") % session.name,
-                                "")
+                                None)
             handler = action.connect("activate", self.session_menu_action, session)
 
-            self._action_group.add_action(action)
+            self._session_action_group.add_action(action)
 
-            manager.add_ui(self._menu_ui_id,
-                           self.SESSION_MENU_PATH,
-                           action_name,
-                           action_name,
-                           Gtk.UIManagerItemType.MENUITEM,
-                           False)
+            ui_manager.add_ui(self._merge_id,
+                              self.SESSION_MENU_PATH,
+                              action_name,
+                              action_name,
+                              Gtk.UIManagerItemType.MENUITEM,
+                              False)
 
     def _remove_session_menu(self):
-        manager = self.window.get_ui_manager()
-        manager.remove_ui(self._menu_ui_id)
+        ui_manager = self.window.get_ui_manager()
 
-        for action in self._action_group.list_actions():
+        for action in self._session_action_group.list_actions():
             action.disconnect_by_func(self.session_menu_action)
 
-        manager.remove_action_group(self._action_group)
+        ui_manager.remove_ui(self._merge_id)
+        ui_manager.remove_action_group(self._session_action_group)
+
+        ui_manager.ensure_update()
 
     def _update_session_menu(self):
         self._remove_session_menu()
