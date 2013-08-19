@@ -4,12 +4,15 @@ This is a plugin for [gedit][1], the official text editor of the GNOME desktop e
 
 This plugin is for gedit versions 3 and above. **This plugin is NOT compatible with gedit 2.x**.
 
+If python 3 is not installed or not available on your distribution, you should use the [python 2.x version of this plugin][5]. The Python 3 version requires python3-gobject or python3-gi depending of your distribution.
+
 The translation of the plugin is not available in this repository, but it is always available in the package _gedit-plugins_ from your distribution. If this package is installed on your system, the translation should works.
 
 [1]: https://projects.gnome.org/gedit/ "gedit text editor"
 [2]: https://git.gnome.org/browse/gedit-plugins/commit/?id=7abf46cf9c6e3f12798e813ffeac28e3594167f0 "commit of the drop of the session saver plugin"
 [3]: https://git.gnome.org/browse/gedit-plugins/commit/?id=b4b1601b8bc21c43db7b0142ace22040a24b31d2 "commit of the gedit-plugins 3.7.1 release"
 [4]: https://github.com/sphax3d/gedit-plugins "sessionsaver-plugin branch in my gedit-plugins repository"
+[5]: https://github.com/sphax3d/gedit-sessionsaver/tree/python2.x "python2.x branch of the session saver plugin"
 
 ## Installation
 
