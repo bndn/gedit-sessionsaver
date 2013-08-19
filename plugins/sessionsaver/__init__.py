@@ -22,15 +22,13 @@
 
 from gi.repository import GObject, Gtk, Gedit
 import gettext
-from store import XMLSessionStore
-from dialogs import SaveSessionDialog, SessionManagerDialog
+from .store import XMLSessionStore
+from .dialogs import SaveSessionDialog, SessionManagerDialog
 from gpdefs import *
 
 try:
-    t = gettext.translation(GETTEXT_PACKAGE,
-                            gettext._localedirs.get(GP_LOCALEDIR),
-                            codeset=gettext._localecodesets.get(GETTEXT_PACKAGE))
-    _ = lambda s: t.ugettext(s);
+    gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
+    _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
 except:
     _ = lambda s: s
 

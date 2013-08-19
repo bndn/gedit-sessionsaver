@@ -7,7 +7,7 @@ from gi.repository import GObject, Gtk, Gedit
 import os.path
 import gettext
 
-from store import Session
+from .store import Session
 
 try:
     from gpdefs import *
@@ -52,7 +52,7 @@ class Dialog(object):
     UI_FILE = "sessionsaver.ui"
 
     def __new__(cls, *args):
-        if not cls.__dict__.has_key('_instance') or cls._instance is None:
+        if not ('_instance' in cls.__dict__) or cls._instance is None:
             cls._instance = object.__new__(cls, *args)
         return cls._instance
 

@@ -32,8 +32,8 @@ class Session(object):
             files = []
         self.files = files
 
-    def __cmp__(self, session):
-        return cmp(self.name.lower(), session.name.lower())
+    def __lt__(self, session):
+        return (self.name.lower() < session.name.lower())
 
     def add_file(self, filename):
         self.files.append(Gio.file_new_for_uri(filename))
@@ -124,9 +124,9 @@ class XMLSessionStore(SessionStore):
         if not os.path.isdir(dirname):
             os.makedirs(dirname)
 
-        fp = file(self.filename, "wb")
-        fp.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-        fp.write(self.dump())
+        fp = open(self.filename, "wb")
+        fp.write(bytes('<?xml version="1.0" encoding="UTF-8"?>\n','UTF-8'))
+        fp.write(bytes(self.dump(),'UTF-8'))
         fp.close()
 
     def load(self):
