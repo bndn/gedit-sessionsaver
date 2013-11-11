@@ -24,7 +24,7 @@ from gi.repository import GObject, Gtk, Gedit
 import gettext
 from .store import XMLSessionStore
 from .dialogs import SaveSessionDialog, SessionManagerDialog
-from gpdefs import *
+from .gpdefs import *
 
 try:
     gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)

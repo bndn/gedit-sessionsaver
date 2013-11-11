@@ -10,7 +10,7 @@ import gettext
 from .store import Session
 
 try:
-    from gpdefs import *
+    from .gpdefs import *
     gettext.bindtextdomain(GETTEXT_PACKAGE, GP_LOCALEDIR)
     _ = lambda s: gettext.dgettext(GETTEXT_PACKAGE, s);
 except:
