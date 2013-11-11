@@ -51,9 +51,9 @@ class SessionModel(Gtk.ListStore):
 class Dialog(object):
     UI_FILE = "sessionsaver.ui"
 
-    def __new__(cls, *args):
+    def __new__(cls):
         if not ('_instance' in cls.__dict__) or cls._instance is None:
-            cls._instance = object.__new__(cls, *args)
+            cls._instance = object.__new__(cls)
         return cls._instance
 
     def __init__(self, main_widget, datadir, parent_window = None):
